@@ -30,7 +30,12 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. No secret or credential is visible in the client JavaScript bundle (no `VITE_PUBLIC_` prefix on DB or email keys)
   4. Every page renders inside the root layout with a consistent header and footer shell
   5. The route tree uses the optional locale prefix pattern so `/en/about` and `/about` both resolve without a future rewrite
-**Plans**: TBD
+**Plans**: 3 plans
+
+Plans:
+- [ ] 01-01-PLAN.md — Scaffold TanStack Start + Tailwind v4 + shadcn/ui, env security convention, src/content/ stubs, Vercel deploy
+- [ ] 01-02-PLAN.md — Supabase connection (transaction pooler), Drizzle schema, inquiries table migration
+- [ ] 01-03-PLAN.md — i18n-ready route tree, root layout, SiteHeader + SiteFooter + PageShell, route stubs for all pages
 
 ### Phase 2: Core Pages
 **Goal**: A visiting buyer can read the landing page, learn about the company and process, understand what Wischos Gift offers versus commodity suppliers, and find contact information — the site reads as a professional trading company at every point
@@ -86,7 +91,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 0/TBD | Not started | - |
+| 1. Foundation | 0/3 | Not started | - |
 | 2. Core Pages | 0/TBD | Not started | - |
 | 3. Products | 0/TBD | Not started | - |
 | 4. Inquiry | 0/TBD | Not started | - |
