@@ -7,13 +7,13 @@
 
 ### Foundation
 
-- [ ] **FOUND-01**: Project scaffolded with TanStack Start, Tailwind v4, and shadcn/ui with Vercel deployment configured and working
+- [x] **FOUND-01**: Project scaffolded with TanStack Start, Tailwind v4, and shadcn/ui with Vercel deployment configured and working
 - [ ] **FOUND-02**: i18n-ready route structure in place (optional locale prefix pattern) with all user-visible strings in `src/content/` TypeScript modules
-- [ ] **FOUND-03**: Environment variable security conventions enforced — no secrets with `VITE_PUBLIC_` prefix; Supabase and Resend keys server-side only
+- [x] **FOUND-03**: Environment variable security conventions enforced — no secrets with `VITE_PUBLIC_` prefix; Supabase and Resend keys server-side only
 - [ ] **FOUND-04**: Supabase PostgreSQL connected via Drizzle ORM using transaction pooler (port 6543) with `prepare: false`
 - [ ] **FOUND-05**: `inquiries` table schema defined and migrated with fields: id, company_name, contact_name, role, email, phone, product_interest, quantity, timeline, message, created_at
 - [ ] **FOUND-06**: Global layout component with Header (logo, nav links) and Footer (contact placeholder, privacy policy link) applied to all pages
-- [ ] **FOUND-07**: Site deploys successfully to Vercel from main branch with no build errors
+- [x] **FOUND-07**: Site deploys successfully to Vercel from main branch with no build errors
 
 ### Landing Page
 
@@ -119,13 +119,13 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| FOUND-01 | Phase 1 | Pending |
+| FOUND-01 | Phase 1 | Complete |
 | FOUND-02 | Phase 1 | Pending |
-| FOUND-03 | Phase 1 | Pending |
+| FOUND-03 | Phase 1 | Complete |
 | FOUND-04 | Phase 1 | Pending |
 | FOUND-05 | Phase 1 | Pending |
 | FOUND-06 | Phase 1 | Pending |
-| FOUND-07 | Phase 1 | Pending |
+| FOUND-07 | Phase 1 | Complete |
 | LAND-01 | Phase 2 | Pending |
 | LAND-02 | Phase 2 | Pending |
 | LAND-03 | Phase 2 | Pending |

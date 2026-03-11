@@ -1,3 +1,19 @@
+---
+gsd_state_version: 1.0
+milestone: v1.0
+milestone_name: milestone
+status: planning
+stopped_at: Completed 01-01-PLAN.md (Tasks 1-2 complete; Task 3 blocked at Vercel auth gate)
+last_updated: "2026-03-11T13:27:43.800Z"
+last_activity: 2026-03-11 — Roadmap created
+progress:
+  total_phases: 5
+  completed_phases: 0
+  total_plans: 3
+  completed_plans: 1
+  percent: 33
+---
+
 # Project State
 
 ## Project Reference
@@ -14,7 +30,7 @@ Plan: 0 of TBD in current phase
 Status: Ready to plan
 Last activity: 2026-03-11 — Roadmap created
 
-Progress: [░░░░░░░░░░] 0%
+Progress: [███░░░░░░░] 33%
 
 ## Performance Metrics
 
@@ -34,6 +50,7 @@ Progress: [░░░░░░░░░░] 0%
 - Trend: —
 
 *Updated after each plan completion*
+| Phase 01 P01 | 40 | 2 tasks | 21 files |
 
 ## Accumulated Context
 
@@ -47,6 +64,9 @@ Recent decisions affecting current work:
 - Setup: All copy strings in `src/content/` TypeScript modules — the i18n seam
 - Setup: Do NOT use `drizzle-zod` — incompatible with Zod v4 (GitHub issue #4406 open); write standalone Zod schemas
 - Setup: Resend email must be called from a Server Route, not a server function (community source — validate at Phase 4 implementation)
+- [Phase 01]: Used @tanstack/cli create --deployment nitro (new official CLI) instead of deprecated create-tsrouter-app
+- [Phase 01]: Pinned TanStack Start and Router to 1.166.7 — must always match, update together
+- [Phase 01]: shadcn/ui with Radix + Nova preset — automatically installs tw-animate-css (not tailwindcss-animate, deprecated in v4)
 
 ### Pending Todos
 
@@ -61,6 +81,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-11
-Stopped at: Roadmap created, files written — ready to run /gsd:plan-phase 1
+Last session: 2026-03-11T13:27:43.787Z
+Stopped at: Completed 01-01-PLAN.md (Tasks 1-2 complete; Task 3 blocked at Vercel auth gate)
 Resume file: None
