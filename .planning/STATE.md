@@ -2,16 +2,16 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: planning
-stopped_at: Completed 01-01-PLAN.md (Tasks 1-2 complete; Task 3 blocked at Vercel auth gate)
-last_updated: "2026-03-11T13:27:43.800Z"
-last_activity: 2026-03-11 — Roadmap created
+status: in-progress
+stopped_at: Completed 01-02-PLAN.md (Task 1 complete — db.ts and schema.ts created; Task 2 blocked at Supabase DATABASE_URL configuration gate)
+last_updated: "2026-03-11T13:45:00.000Z"
+last_activity: 2026-03-11 — Plan 01-02 executed (database layer files created)
 progress:
   total_phases: 5
   completed_phases: 0
   total_plans: 3
-  completed_plans: 1
-  percent: 33
+  completed_plans: 2
+  percent: 67
 ---
 
 # Project State
@@ -26,11 +26,11 @@ See: .planning/PROJECT.md (updated 2026-03-11)
 ## Current Position
 
 Phase: 1 of 5 (Foundation)
-Plan: 0 of TBD in current phase
-Status: Ready to plan
-Last activity: 2026-03-11 — Roadmap created
+Plan: 2 of 3 in current phase (01-02 complete, 01-03 next)
+Status: In progress — awaiting Supabase DATABASE_URL to complete Task 2 (drizzle-kit push)
+Last activity: 2026-03-11 — Plan 01-02 database layer created
 
-Progress: [███░░░░░░░] 33%
+Progress: [██████░░░░] 67%
 
 ## Performance Metrics
 
@@ -67,6 +67,9 @@ Recent decisions affecting current work:
 - [Phase 01]: Used @tanstack/cli create --deployment nitro (new official CLI) instead of deprecated create-tsrouter-app
 - [Phase 01]: Pinned TanStack Start and Router to 1.166.7 — must always match, update together
 - [Phase 01]: shadcn/ui with Radix + Nova preset — automatically installs tw-animate-css (not tailwindcss-animate, deprecated in v4)
+- [Phase 01-02]: prepare: false enforced in db.ts — prevents "prepared statement already exists" in Supabase transaction pool production
+- [Phase 01-02]: max: 1 enforced in db.ts — prevents connection pool exhaustion in Vercel serverless environment
+- [Phase 01-02]: drizzle-kit push may need direct connection URL (port 5432) if pooler URL causes prepared statement errors during migration
 
 ### Pending Todos
 
@@ -78,9 +81,10 @@ None yet.
 - **Phase 4 dependency:** Resend domain verification (SPF/DKIM/DMARC) requires domain DNS access — client dependency before Phase 4 production testing
 - **All phases:** TanStack Start is RC — pin exact versions in package.json; check patch release notes during active development
 - **Post-launch:** Supabase free tier pauses after 7 days of inactivity — upgrade to Pro before public launch or set activity reminder
+- **01-02 Task 2 pending:** drizzle-kit push not yet run — requires Supabase DATABASE_URL in .env.local and Bash access. See 01-02-SUMMARY.md User Setup Required section.
 
 ## Session Continuity
 
-Last session: 2026-03-11T13:27:43.787Z
-Stopped at: Completed 01-01-PLAN.md (Tasks 1-2 complete; Task 3 blocked at Vercel auth gate)
+Last session: 2026-03-11T13:45:00.000Z
+Stopped at: Completed 01-02-PLAN.md Task 1 (db.ts + schema.ts created); Task 2 blocked at Supabase configuration gate (DATABASE_URL required for drizzle-kit push)
 Resume file: None

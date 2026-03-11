@@ -33,8 +33,8 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans**: 3 plans
 
 Plans:
-- [ ] 01-01-PLAN.md — Scaffold TanStack Start + Tailwind v4 + shadcn/ui, env security convention, src/content/ stubs, Vercel deploy
-- [ ] 01-02-PLAN.md — Supabase connection (transaction pooler), Drizzle schema, inquiries table migration
+- [x] 01-01-PLAN.md — Scaffold TanStack Start + Tailwind v4 + shadcn/ui, env security convention, src/content/ stubs, Vercel deploy
+- [x] 01-02-PLAN.md — Supabase connection (transaction pooler), Drizzle schema, inquiries table migration
 - [ ] 01-03-PLAN.md — i18n-ready route tree, root layout, SiteHeader + SiteFooter + PageShell, route stubs for all pages
 
 ### Phase 2: Core Pages
@@ -91,7 +91,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 1/3 | In Progress|  |
+| 1. Foundation | 2/3 | In Progress |  |
 | 2. Core Pages | 0/TBD | Not started | - |
 | 3. Products | 0/TBD | Not started | - |
 | 4. Inquiry | 0/TBD | Not started | - |
