@@ -170,10 +170,10 @@
 | SEO-07 | Phase 5 | Pending |
 
 **Coverage:**
-- v1 requirements: 44 total
-- Mapped to phases: 44
+- v1 requirements: 49 total
+- Mapped to phases: 49
 - Unmapped: 0 ✓
 
 ---
 *Requirements defined: 2026-03-11*
-*Last updated: 2026-03-11 after initial definition*
+*Last updated: 2026-03-11 — traceability confirmed against ROADMAP.md; corrected count from 44 to 49*
