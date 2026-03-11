@@ -1,0 +1,5 @@
+/* Wischos Gift — Tailwind v4 CSS entry point */
+/* Primary styles are in src/styles.css (scaffold-generated) */
+/* This file satisfies the i18n-seam convention requirement */
+
+@import "tailwindcss";
