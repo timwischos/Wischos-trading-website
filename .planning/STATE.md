@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: "All plans executed. Next steps in order:"
-stopped_at: Completed 02-core-pages 02-02-PLAN.md
-last_updated: "2026-03-12T00:38:58.021Z"
+stopped_at: Completed 02-core-pages 02-03-PLAN.md
+last_updated: "2026-03-12T00:44:02.206Z"
 last_activity: 2026-03-11 — All Phase 1 plans executed
 progress:
   total_phases: 5
   completed_phases: 1
   total_plans: 7
-  completed_plans: 5
+  completed_plans: 6
   percent: 100
 ---
 
@@ -57,6 +57,7 @@ Progress: [██████████] 100% (Phase 1 plans)
 | Phase 01 P01 | 40 | 2 tasks | 21 files |
 | Phase 02-core-pages P01 | 8 | 2 tasks | 14 files |
 | Phase 02-core-pages P02 | 5 | 2 tasks | 9 files |
+| Phase 02-core-pages P03 | 8 | 2 tasks | 5 files |
 
 ## Accumulated Context
 
@@ -80,6 +81,8 @@ Recent decisions affecting current work:
 - [Phase 02-core-pages]: about.trust.registrationNumber: kept as PLACEHOLDER literal — company registration details not yet provided by client
 - [Phase 02-core-pages]: RouterTo cast pattern: link.href as RouterTo avoids per-link ts-expect-error for optional locale prefix paths
 - [Phase 02-core-pages]: ProductPreviewSection is Phase 2 teaser only — no images, pricing, or detail links (Phase 3 adds those)
+- [Phase 02-core-pages]: About route uses no PageShell — sections manage own padding and bg alternation
+- [Phase 02-core-pages]: TrustSection DEV warning uses import.meta.env.DEV && PLACEHOLDER check — visible only in dev, zero production cost
 
 ### Pending Todos
 
@@ -95,7 +98,7 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-12T00:38:58.000Z
-Stopped at: Completed 02-core-pages 02-02-PLAN.md
+Last session: 2026-03-12T00:44:02.186Z
+Stopped at: Completed 02-core-pages 02-03-PLAN.md
 Resume with: /gsd:progress (check state) or /gsd:verify-work 1 (after drizzle-kit push + Vercel redeploy)
 Resume file: None
