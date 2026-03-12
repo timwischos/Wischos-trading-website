@@ -1,4 +1,9 @@
-import { describe, it } from 'vitest'
+import { describe, it, vi } from 'vitest'
+
+vi.mock('@/server/submitInquiry', () => ({
+  submitInquiry: vi.fn(),
+}))
+
 // Component imported — tests will be implemented once .todo stubs are filled
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { InquiryFormSection as _InquiryFormSection } from '@/components/sections/InquiryFormSection'

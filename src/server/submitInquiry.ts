@@ -1,4 +1,5 @@
-import { createAPIFileRoute } from '@tanstack/react-start/api'
+import { createServerFn } from '@tanstack/react-start'
+import { z } from 'zod'
 import { Resend } from 'resend'
 import { render } from '@react-email/render'
 import { db } from '@/server/db'
@@ -6,34 +7,34 @@ import { inquiries } from '@/server/schema'
 import { inquiryInsertSchema } from '@/lib/schemas/inquiry'
 import { InquiryEmail } from '@/server/email/InquiryEmail'
 
-export const APIRoute = createAPIFileRoute('/api/inquiry')({
-  POST: async ({ request }) => {
-    const body = (await request.json()) as Record<string, unknown>
+// Extend with honeypot field — validated and stripped server-side
+const submitInquirySchema = inquiryInsertSchema.extend({
+  website: z.string().optional(),
+})
 
+export const submitInquiry = createServerFn({ method: 'POST' })
+  .inputValidator((data: unknown) => submitInquirySchema.parse(data))
+  .handler(async ({ data }) => {
     // Honeypot check — silent fake success for bots
-    if (typeof body.website === 'string' && body.website.length > 0) {
-      return Response.json({ success: true })
+    if (data.website) {
+      return { success: true }
     }
 
-    // Server-side validation
-    const parsed = inquiryInsertSchema.safeParse(body)
-    if (!parsed.success) {
-      return Response.json({ error: 'Invalid submission' }, { status: 400 })
-    }
+    const { website: _honeypot, ...inquiry } = data
 
     // Persist to DB — no .returning() to avoid SELECT RLS requirement
-    await db.insert(inquiries).values(parsed.data)
+    await db.insert(inquiries).values(inquiry)
 
     // Send email notification — failure is non-fatal
     try {
       const resend = new Resend(process.env.RESEND_API_KEY)
       const html = await render(
-        <InquiryEmail {...parsed.data} submittedAt={new Date().toISOString()} />,
+        InquiryEmail({ ...inquiry, submittedAt: new Date().toISOString() }),
       )
       await resend.emails.send({
         from: 'onboarding@resend.dev', // dev fallback — production requires verified domain
         to: process.env.OPERATOR_EMAIL!,
-        subject: `New Inquiry — ${parsed.data.companyName}`,
+        subject: `New Inquiry — ${inquiry.companyName}`,
         html,
       })
     } catch (emailErr) {
@@ -41,6 +42,5 @@ export const APIRoute = createAPIFileRoute('/api/inquiry')({
       // Do not re-throw — inquiry is saved, email failure is non-fatal
     }
 
-    return Response.json({ success: true })
-  },
-})
+    return { success: true }
+  })

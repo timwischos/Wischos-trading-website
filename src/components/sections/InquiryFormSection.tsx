@@ -4,6 +4,7 @@ import { z } from 'zod'
 import { useForm } from '@tanstack/react-form'
 import { useSearch } from '@tanstack/react-router'
 import { inquiryInsertSchema } from '@/lib/schemas/inquiry'
+import { submitInquiry } from '@/server/submitInquiry'
 import { contactContent } from '@/content/contact'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
@@ -62,16 +63,8 @@ export function InquiryFormSection() {
     onSubmit: async ({ value }) => {
       setSubmitError(null)
       try {
-        const res = await fetch('/api/inquiry', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(value),
-        })
-        if (res.ok) {
-          setIsSuccess(true)
-        } else {
-          setSubmitError('Something went wrong. Please try again or email us directly.')
-        }
+        await submitInquiry({ data: value })
+        setIsSuccess(true)
       } catch {
         setSubmitError('Something went wrong. Please try again or email us directly.')
       }
