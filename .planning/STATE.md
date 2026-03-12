@@ -2,15 +2,15 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: in-progress
-stopped_at: All 3 Phase 1 plans executed. Pending — (1) drizzle-kit push to Supabase (needs DATABASE_URL in .env.local), (2) Vercel redeploy with layout changes, (3) Phase 1 verification via /gsd:verify-work 1
-last_updated: "2026-03-11T15:00:00.000Z"
-last_activity: 2026-03-11 — Phase 1 Wave 2 complete (01-02 db layer + 01-03 layout shell)
+status: "All plans executed. Next steps in order:"
+stopped_at: Completed 02-core-pages 02-01-PLAN.md
+last_updated: "2026-03-12T00:31:32.861Z"
+last_activity: 2026-03-11 — All Phase 1 plans executed
 progress:
   total_phases: 5
-  completed_phases: 0
-  total_plans: 3
-  completed_plans: 3
+  completed_phases: 1
+  total_plans: 7
+  completed_plans: 4
   percent: 100
 ---
 
@@ -55,6 +55,7 @@ Progress: [██████████] 100% (Phase 1 plans)
 
 *Updated after each plan completion*
 | Phase 01 P01 | 40 | 2 tasks | 21 files |
+| Phase 02-core-pages P01 | 8 | 2 tasks | 14 files |
 
 ## Accumulated Context
 
@@ -74,6 +75,8 @@ Recent decisions affecting current work:
 - [Phase 01-02]: prepare: false enforced in db.ts — prevents "prepared statement already exists" in Supabase transaction pool production
 - [Phase 01-02]: max: 1 enforced in db.ts — prevents connection pool exhaustion in Vercel serverless environment
 - [Phase 01-02]: drizzle-kit push may need direct connection URL (port 5432) if pooler URL causes prepared statement errors during migration
+- [Phase 02-core-pages]: Footer test: use act() + router.load() to await async TanStack Router RouterProvider hydration in jsdom before asserting DOM
+- [Phase 02-core-pages]: about.trust.registrationNumber: kept as PLACEHOLDER literal — company registration details not yet provided by client
 
 ### Pending Todos
 
@@ -89,7 +92,7 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-11T15:00:00.000Z
-Stopped at: All 3 Phase 1 plans complete. Layout shell live locally (SiteHeader, SiteFooter, all route stubs). drizzle-kit push pending DATABASE_URL. Vercel redeploy pending.
+Last session: 2026-03-12T00:31:32.841Z
+Stopped at: Completed 02-core-pages 02-01-PLAN.md
 Resume with: /gsd:progress (check state) or /gsd:verify-work 1 (after drizzle-kit push + Vercel redeploy)
 Resume file: None

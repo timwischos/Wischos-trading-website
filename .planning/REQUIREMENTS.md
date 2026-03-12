@@ -17,12 +17,12 @@
 
 ### Landing Page
 
-- [ ] **LAND-01**: Hero section captures attention with a single compelling headline and subheadline targeting corporate gift buyers (AIDA — Attention) — **copywriting delivered as part of this requirement**
-- [ ] **LAND-02**: Value proposition section communicates the three differentiators: premium metal materials, custom packaging design, small-batch MOQ 50 sets (AIDA — Interest) — **copywriting delivered**
-- [ ] **LAND-03**: "How we're different" section with concrete comparison against commodity suppliers — specific, not generic (AIDA — Desire) — **copywriting delivered**
-- [ ] **LAND-04**: Social proof or credibility signal section (market experience callout, even without testimonials) — **copywriting delivered**
-- [ ] **LAND-05**: Primary CTA section drives to inquiry form with clear action language (AIDA — Action) — **copywriting delivered**
-- [ ] **LAND-06**: Product preview section on homepage linking to full products page
+- [x] **LAND-01**: Hero section captures attention with a single compelling headline and subheadline targeting corporate gift buyers (AIDA — Attention) — **copywriting delivered as part of this requirement**
+- [x] **LAND-02**: Value proposition section communicates the three differentiators: premium metal materials, custom packaging design, small-batch MOQ 50 sets (AIDA — Interest) — **copywriting delivered**
+- [x] **LAND-03**: "How we're different" section with concrete comparison against commodity suppliers — specific, not generic (AIDA — Desire) — **copywriting delivered**
+- [x] **LAND-04**: Social proof or credibility signal section (market experience callout, even without testimonials) — **copywriting delivered**
+- [x] **LAND-05**: Primary CTA section drives to inquiry form with clear action language (AIDA — Action) — **copywriting delivered**
+- [x] **LAND-06**: Product preview section on homepage linking to full products page
 
 ### Products Page
 
@@ -35,19 +35,19 @@
 
 ### How It Works / Customization Process
 
-- [ ] **PROC-01**: Standalone page explaining the end-to-end process from first inquiry to delivery — **full page copywriting delivered**
-- [ ] **PROC-02**: Sample policy clearly stated: reference samples (client pays shipping, samples free); custom samples (client pays sample fee)
-- [ ] **PROC-03**: Lead times stated: samples 7–10 business days, bulk orders approx. 30 days (with note that timelines vary by product and are confirmed during inquiry)
-- [ ] **PROC-04**: Payment terms stated: T/T (bank transfer)
-- [ ] **PROC-05**: Step-by-step process flow (minimum 4 steps: Inquiry → Sample → Confirm → Delivery) — **each step has written description copy**
+- [x] **PROC-01**: Standalone page explaining the end-to-end process from first inquiry to delivery — **full page copywriting delivered**
+- [x] **PROC-02**: Sample policy clearly stated: reference samples (client pays shipping, samples free); custom samples (client pays sample fee)
+- [x] **PROC-03**: Lead times stated: samples 7–10 business days, bulk orders approx. 30 days (with note that timelines vary by product and are confirmed during inquiry)
+- [x] **PROC-04**: Payment terms stated: T/T (bank transfer)
+- [x] **PROC-05**: Step-by-step process flow (minimum 4 steps: Inquiry → Sample → Confirm → Delivery) — **each step has written description copy**
 
 ### About Us
 
-- [ ] **ABOUT-01**: Company presented as a professional trading company with a manufacturing partner network — no language that reveals single-person operation — **full page copywriting delivered following E-E-A-T principles**
-- [ ] **ABOUT-02**: Market expertise section covering EU/US/AU buyer expectations — E-E-A-T Experience and Expertise signals — **copywriting delivered**
-- [ ] **ABOUT-03**: "Why Wischos Gift" section differentiating from factory-direct and commodity suppliers — E-E-A-T Authoritativeness — **copywriting delivered**
-- [ ] **ABOUT-04**: Trust signals: professional contact details (branded domain email placeholder), company registration acknowledgment without exposing SOHO nature, quality commitment statement — E-E-A-T Trustworthiness — **copywriting delivered**
-- [ ] **ABOUT-05**: No factory names, certifications, or any information that could enable client disintermediation
+- [x] **ABOUT-01**: Company presented as a professional trading company with a manufacturing partner network — no language that reveals single-person operation — **full page copywriting delivered following E-E-A-T principles**
+- [x] **ABOUT-02**: Market expertise section covering EU/US/AU buyer expectations — E-E-A-T Experience and Expertise signals — **copywriting delivered**
+- [x] **ABOUT-03**: "Why Wischos Gift" section differentiating from factory-direct and commodity suppliers — E-E-A-T Authoritativeness — **copywriting delivered**
+- [x] **ABOUT-04**: Trust signals: professional contact details (branded domain email placeholder), company registration acknowledgment without exposing SOHO nature, quality commitment statement — E-E-A-T Trustworthiness — **copywriting delivered**
+- [x] **ABOUT-05**: No factory names, certifications, or any information that could enable client disintermediation
 
 ### Inquiry Form & Contact
 
@@ -78,8 +78,8 @@
 
 ### Privacy & Legal
 
-- [ ] **LEGAL-01**: Privacy Policy page covering: what data is collected (inquiry form), how it is used, data retention, user rights under GDPR, contact for data requests
-- [ ] **LEGAL-02**: Privacy Policy linked in footer on every page
+- [x] **LEGAL-01**: Privacy Policy page covering: what data is collected (inquiry form), how it is used, data retention, user rights under GDPR, contact for data requests
+- [x] **LEGAL-02**: Privacy Policy linked in footer on every page
 
 ## v2 Requirements
 
@@ -126,24 +126,24 @@
 | FOUND-05 | Phase 1 | Pending |
 | FOUND-06 | Phase 1 | Pending |
 | FOUND-07 | Phase 1 | Complete |
-| LAND-01 | Phase 2 | Pending |
-| LAND-02 | Phase 2 | Pending |
-| LAND-03 | Phase 2 | Pending |
-| LAND-04 | Phase 2 | Pending |
-| LAND-05 | Phase 2 | Pending |
-| LAND-06 | Phase 2 | Pending |
-| ABOUT-01 | Phase 2 | Pending |
-| ABOUT-02 | Phase 2 | Pending |
-| ABOUT-03 | Phase 2 | Pending |
-| ABOUT-04 | Phase 2 | Pending |
-| ABOUT-05 | Phase 2 | Pending |
-| PROC-01 | Phase 2 | Pending |
-| PROC-02 | Phase 2 | Pending |
-| PROC-03 | Phase 2 | Pending |
-| PROC-04 | Phase 2 | Pending |
-| PROC-05 | Phase 2 | Pending |
-| LEGAL-01 | Phase 2 | Pending |
-| LEGAL-02 | Phase 2 | Pending |
+| LAND-01 | Phase 2 | Complete |
+| LAND-02 | Phase 2 | Complete |
+| LAND-03 | Phase 2 | Complete |
+| LAND-04 | Phase 2 | Complete |
+| LAND-05 | Phase 2 | Complete |
+| LAND-06 | Phase 2 | Complete |
+| ABOUT-01 | Phase 2 | Complete |
+| ABOUT-02 | Phase 2 | Complete |
+| ABOUT-03 | Phase 2 | Complete |
+| ABOUT-04 | Phase 2 | Complete |
+| ABOUT-05 | Phase 2 | Complete |
+| PROC-01 | Phase 2 | Complete |
+| PROC-02 | Phase 2 | Complete |
+| PROC-03 | Phase 2 | Complete |
+| PROC-04 | Phase 2 | Complete |
+| PROC-05 | Phase 2 | Complete |
+| LEGAL-01 | Phase 2 | Complete |
+| LEGAL-02 | Phase 2 | Complete |
 | PROD-01 | Phase 3 | Pending |
 | PROD-02 | Phase 3 | Pending |
 | PROD-03 | Phase 3 | Pending |
