@@ -47,7 +47,13 @@ Plans:
   3. The How It Works page states the end-to-end process in at least 4 steps, with sample policy (reference free / custom paid), lead times (7–10 days samples, ~30 days bulk), and T/T payment terms all visible without clicking through
   4. The Privacy Policy page is live and linked in the footer — a GDPR-conscious EU buyer can find it from any page
   5. All pages render correctly on a 375px mobile viewport, 768px tablet viewport, and 1280px desktop viewport — no horizontal scroll, no broken layouts at any breakpoint
-**Plans**: TBD
+**Plans**: 4 plans
+
+Plans:
+- [ ] 02-01-PLAN.md — Vitest config, test scaffold (5 test files), all content modules (homepage, about, howItWorks, privacy), meta.ts privacy entry, SiteFooter Link fix
+- [ ] 02-02-PLAN.md — Homepage section components (HeroSection, ValuePropSection, DifferentiatorSection, CredibilitySection, ProductPreviewSection, CtaSection) + route assembly
+- [ ] 02-03-PLAN.md — About page section components (AboutHeroSection, ExpertiseSection, WhyUsSection, TrustSection) + route assembly
+- [ ] 02-04-PLAN.md — How It Works page (ProcessStepsSection, ProcessPolicySection) + Privacy Policy page + human verification checkpoint
 
 ### Phase 3: Products
 **Goal**: A buyer can browse the full product catalog, click into individual product detail pages to read specifications and customization options, open a full-size image in a lightbox, and reach the inquiry form directly from any product page
@@ -92,7 +98,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 2/3 | In Progress |  |
-| 2. Core Pages | 0/TBD | Not started | - |
+| 2. Core Pages | 0/4 | Not started | - |
 | 3. Products | 0/TBD | Not started | - |
 | 4. Inquiry | 0/TBD | Not started | - |
 | 5. SEO and Launch | 0/TBD | Not started | - |
