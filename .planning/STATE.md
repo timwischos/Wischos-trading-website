@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: "All plans executed. Next steps in order:"
-stopped_at: Completed 03-products-01-PLAN.md
-last_updated: "2026-03-12T06:26:48.254Z"
+stopped_at: Completed 03-products-02-PLAN.md (ProductGridSection)
+last_updated: "2026-03-12T06:29:05.827Z"
 last_activity: 2026-03-11 — All Phase 1 plans executed
 progress:
   total_phases: 5
   completed_phases: 2
   total_plans: 11
-  completed_plans: 8
+  completed_plans: 9
   percent: 100
 ---
 
@@ -60,6 +60,7 @@ Progress: [██████████] 100% (Phase 1 plans)
 | Phase 02-core-pages P03 | 8 | 2 tasks | 5 files |
 | Phase 02-core-pages P04 | continuation | 3 tasks | 4 files |
 | Phase 03-products P01 | 7 | 2 tasks | 4 files |
+| Phase 03-products P02 | 6 | 2 tasks | 3 files |
 
 ## Accumulated Context
 
@@ -89,6 +90,9 @@ Recent decisions affecting current work:
 - [Phase 02-core-pages]: ProcessStepsSection uses Lucide icon map keyed on step number string ('01'..'04') rather than index
 - [Phase 03-products]: Wave 0 TDD: data and data-tests written together in same plan — no meaningful RED phase for static content shape tests
 - [Phase 03-products]: ProductCard/ProductLightbox test files import from fixed paths so plans 03-02 and 03-04 must match those named exports
+- [Phase 03-products]: img is first direct child of Card (not in div) for has-[>img:first-child]:pt-0 CSS full-bleed effect
+- [Phase 03-products]: Products route drops PageShell — ProductGridSection self-manages padding with page-wrap + py-20
+- [Phase 03-products]: No price on product cards — B2B inquiry model, price on request
 
 ### Pending Todos
 
@@ -104,7 +108,7 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-12T06:26:48.225Z
-Stopped at: Completed 03-products-01-PLAN.md
+Last session: 2026-03-12T06:29:05.808Z
+Stopped at: Completed 03-products-02-PLAN.md (ProductGridSection)
 Resume with: /gsd:progress (check state) or /gsd:verify-work 1 (after drizzle-kit push + Vercel redeploy)
 Resume file: None
