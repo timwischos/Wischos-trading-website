@@ -1,8 +1,7 @@
-import { useState } from 'react'
-import { Dialog, DialogContent, DialogTitle, DialogTrigger } from '@/components/ui/dialog'
+import { Dialog as DialogPrimitive } from 'radix-ui'
 import { Button } from '@/components/ui/button'
 import { Link, type LinkProps } from '@tanstack/react-router'
-import { Stamp, ZoomIn, ZoomOut } from 'lucide-react'
+import { Stamp, X } from 'lucide-react'
 import type { Product } from '@/content/products'
 
 type RouterTo = LinkProps['to']
@@ -12,11 +11,9 @@ interface ProductLightboxProps {
 }
 
 export function ProductLightbox({ product }: ProductLightboxProps) {
-  const [zoomed, setZoomed] = useState(false)
-
   return (
-    <Dialog onOpenChange={() => setZoomed(false)}>
-      <DialogTrigger asChild>
+    <DialogPrimitive.Root>
+      <DialogPrimitive.Trigger asChild>
         <button
           className="cursor-zoom-in w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded-lg"
           aria-label={`View ${product.name} full size`}
@@ -27,33 +24,39 @@ export function ProductLightbox({ product }: ProductLightboxProps) {
             className="w-full aspect-[4/3] object-cover rounded-lg"
           />
         </button>
-      </DialogTrigger>
-      <DialogContent className="w-[90vw]! max-w-[90vw]! h-[85vh]! p-0! gap-0! overflow-hidden bg-black flex flex-col">
-        <DialogTitle className="sr-only">{product.name} — full size image</DialogTitle>
-
-        {/* Zoom toggle button — positioned left of the default close button */}
-        <button
-          onClick={() => setZoomed((z) => !z)}
-          className="absolute top-3 right-12 z-20 flex items-center gap-1.5 rounded bg-black/60 px-2.5 py-1.5 text-xs text-white hover:bg-black/80 transition-colors"
-          aria-label={zoomed ? 'Zoom out' : 'Zoom in'}
+      </DialogPrimitive.Trigger>
+      <DialogPrimitive.Portal>
+        <DialogPrimitive.Overlay
+          style={{ position: 'fixed', inset: 0, zIndex: 9998, background: 'rgba(255,255,255,0.95)' }}
+        />
+        <DialogPrimitive.Content
+          style={{
+            position: 'fixed',
+            inset: 0,
+            zIndex: 9999,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            outline: 'none',
+          }}
         >
-          {zoomed ? <ZoomOut className="size-3.5" /> : <ZoomIn className="size-3.5" />}
-          {zoomed ? 'Fit' : 'Zoom In'}
-        </button>
-
-        {/* Scrollable image container */}
-        <div
-          className={`flex-1 overflow-auto ${zoomed ? 'cursor-zoom-out' : 'flex items-center justify-center cursor-zoom-in'}`}
-          onClick={() => setZoomed((z) => !z)}
-        >
+          <DialogPrimitive.Title style={{ position: 'absolute', width: 1, height: 1, overflow: 'hidden', clip: 'rect(0,0,0,0)' }}>
+            {product.name}
+          </DialogPrimitive.Title>
+          <DialogPrimitive.Close
+            style={{ position: 'absolute', top: '1rem', right: '1rem', background: 'none', border: 'none', cursor: 'pointer', padding: '0.5rem', lineHeight: 0 }}
+            aria-label="Close"
+          >
+            <X size={24} />
+          </DialogPrimitive.Close>
           <img
             src={product.heroImage}
             alt={product.name}
-            className={zoomed ? 'w-[200%] h-auto' : 'max-w-full max-h-[85vh] object-contain'}
+            style={{ maxHeight: '85vh', maxWidth: '65vw', objectFit: 'contain' }}
           />
-        </div>
-      </DialogContent>
-    </Dialog>
+        </DialogPrimitive.Content>
+      </DialogPrimitive.Portal>
+    </DialogPrimitive.Root>
   )
 }
 
