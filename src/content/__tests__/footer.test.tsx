@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { render } from '@testing-library/react'
+import { render, act } from '@testing-library/react'
 import {
   createMemoryHistory,
   createRootRoute,
@@ -18,9 +18,14 @@ function createTestRouter() {
 }
 
 describe('SiteFooter', () => {
-  it('renders a link to /privacy', () => {
+  it('renders a link to /privacy', async () => {
     const router = createTestRouter()
-    const { container } = render(<RouterProvider router={router} />)
+    let container!: HTMLElement
+    await act(async () => {
+      const result = render(<RouterProvider router={router} />)
+      container = result.container
+      await router.load()
+    })
     const privacyLink = container.querySelector('a[href="/privacy"]')
     expect(privacyLink).not.toBeNull()
     expect(privacyLink?.textContent).toContain('Privacy Policy')

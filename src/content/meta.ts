@@ -27,5 +27,10 @@ export const siteMeta = {
       title: 'How It Works | Wischos Gift',
       description: 'Our end-to-end process from first inquiry to delivery. Sample policy, lead times, and payment terms explained.',
     },
+    privacy: {
+      title: 'Privacy Policy | Wischos Gift',
+      description:
+        'Privacy policy for Wischos Gift — how we collect, use, and protect your inquiry data under GDPR.',
+    },
   },
 } as const
