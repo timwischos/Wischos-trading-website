@@ -1,6 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router'
-import { PageShell } from '@/components/layout/PageShell'
 import { siteMeta } from '@/content/meta'
+import { ProcessStepsSection } from '@/components/sections/ProcessStepsSection'
+import { ProcessPolicySection } from '@/components/sections/ProcessPolicySection'
 
 export const Route = createFileRoute('/{-$locale}/how-it-works')({
   head: () => ({
@@ -14,9 +15,9 @@ export const Route = createFileRoute('/{-$locale}/how-it-works')({
 
 function HowItWorksPage() {
   return (
-    <PageShell>
-      <h1 className="text-4xl font-bold">How It Works</h1>
-      <p className="mt-4 text-muted-foreground">Process page — Phase 2</p>
-    </PageShell>
+    <>
+      <ProcessStepsSection />
+      <ProcessPolicySection />
+    </>
   )
 }
