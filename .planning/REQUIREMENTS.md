@@ -26,12 +26,12 @@
 
 ### Products Page
 
-- [ ] **PROD-01**: Products grid displaying 4–5 product series cards with placeholder names, AI-generated concept image, one-line description, and MOQ 50 sets label on each card — **product names and one-line descriptions are written text placeholders (not lorem ipsum)**
-- [ ] **PROD-02**: Each product card links to individual product detail page
-- [ ] **PROD-03**: Product detail page shows expanded description, customization options (logo placement, packaging), lead time indication, and inquiry CTA — **full product description is written placeholder copy aligned with "Useful, Interesting, Refined" positioning**
-- [ ] **PROD-04**: Lightbox — clicking product image opens full-size view overlay
-- [ ] **PROD-05**: Logo customization illustration or callout on each product (visual mockup or icon indicating "Custom Logo Available")
-- [ ] **PROD-06**: Product JSON-LD structured data (`Product` schema with `priceSpecification: "On Request"`) on each product detail page
+- [x] **PROD-01**: Products grid displaying 4–5 product series cards with placeholder names, AI-generated concept image, one-line description, and MOQ 50 sets label on each card — **product names and one-line descriptions are written text placeholders (not lorem ipsum)**
+- [x] **PROD-02**: Each product card links to individual product detail page
+- [x] **PROD-03**: Product detail page shows expanded description, customization options (logo placement, packaging), lead time indication, and inquiry CTA — **full product description is written placeholder copy aligned with "Useful, Interesting, Refined" positioning**
+- [x] **PROD-04**: Lightbox — clicking product image opens full-size view overlay
+- [x] **PROD-05**: Logo customization illustration or callout on each product (visual mockup or icon indicating "Custom Logo Available")
+- [x] **PROD-06**: Product JSON-LD structured data (`Product` schema with `priceSpecification: "On Request"`) on each product detail page
 
 ### How It Works / Customization Process
 
@@ -144,12 +144,12 @@
 | PROC-05 | Phase 2 | Complete |
 | LEGAL-01 | Phase 2 | Complete |
 | LEGAL-02 | Phase 2 | Complete |
-| PROD-01 | Phase 3 | Pending |
-| PROD-02 | Phase 3 | Pending |
-| PROD-03 | Phase 3 | Pending |
-| PROD-04 | Phase 3 | Pending |
-| PROD-05 | Phase 3 | Pending |
-| PROD-06 | Phase 3 | Pending |
+| PROD-01 | Phase 3 | Complete |
+| PROD-02 | Phase 3 | Complete |
+| PROD-03 | Phase 3 | Complete |
+| PROD-04 | Phase 3 | Complete |
+| PROD-05 | Phase 3 | Complete |
+| PROD-06 | Phase 3 | Complete |
 | INQ-01 | Phase 4 | Pending |
 | INQ-02 | Phase 4 | Pending |
 | INQ-03 | Phase 4 | Pending |
