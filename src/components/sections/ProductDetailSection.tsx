@@ -1,7 +1,8 @@
+import { useState } from 'react'
 import { Dialog, DialogContent, DialogTitle, DialogTrigger } from '@/components/ui/dialog'
 import { Button } from '@/components/ui/button'
 import { Link, type LinkProps } from '@tanstack/react-router'
-import { Stamp } from 'lucide-react'
+import { Stamp, ZoomIn, ZoomOut } from 'lucide-react'
 import type { Product } from '@/content/products'
 
 type RouterTo = LinkProps['to']
@@ -11,8 +12,10 @@ interface ProductLightboxProps {
 }
 
 export function ProductLightbox({ product }: ProductLightboxProps) {
+  const [zoomed, setZoomed] = useState(false)
+
   return (
-    <Dialog>
+    <Dialog onOpenChange={() => setZoomed(false)}>
       <DialogTrigger asChild>
         <button
           className="cursor-zoom-in w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded-lg"
@@ -25,13 +28,30 @@ export function ProductLightbox({ product }: ProductLightboxProps) {
           />
         </button>
       </DialogTrigger>
-      <DialogContent className="max-w-[90vw] max-h-[90vh] p-0 overflow-hidden bg-background flex items-center justify-center">
+      <DialogContent className="max-w-[90vw] max-h-[90vh] p-0 overflow-hidden bg-black flex flex-col">
         <DialogTitle className="sr-only">{product.name} — full size image</DialogTitle>
-        <img
-          src={product.heroImage}
-          alt={product.name}
-          className="w-full h-full object-contain"
-        />
+
+        {/* Zoom toggle button — positioned left of the default close button */}
+        <button
+          onClick={() => setZoomed((z) => !z)}
+          className="absolute top-3 right-12 z-20 flex items-center gap-1.5 rounded bg-black/60 px-2.5 py-1.5 text-xs text-white hover:bg-black/80 transition-colors"
+          aria-label={zoomed ? 'Zoom out' : 'Zoom in'}
+        >
+          {zoomed ? <ZoomOut className="size-3.5" /> : <ZoomIn className="size-3.5" />}
+          {zoomed ? 'Fit' : 'Zoom In'}
+        </button>
+
+        {/* Scrollable image container */}
+        <div
+          className={`flex-1 overflow-auto ${zoomed ? 'cursor-zoom-out' : 'flex items-center justify-center cursor-zoom-in'}`}
+          onClick={() => setZoomed((z) => !z)}
+        >
+          <img
+            src={product.heroImage}
+            alt={product.name}
+            className={zoomed ? 'w-[200%] h-auto' : 'max-w-full max-h-[85vh] object-contain'}
+          />
+        </div>
       </DialogContent>
     </Dialog>
   )
