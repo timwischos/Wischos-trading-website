@@ -1,5 +1,5 @@
 import { createFileRoute } from '@tanstack/react-router'
-import { PageShell } from '@/components/layout/PageShell'
+import { ProductGridSection } from '@/components/sections/ProductGridSection'
 import { siteMeta } from '@/content/meta'
 
 export const Route = createFileRoute('/{-$locale}/products/')({
@@ -13,10 +13,5 @@ export const Route = createFileRoute('/{-$locale}/products/')({
 })
 
 function ProductsPage() {
-  return (
-    <PageShell>
-      <h1 className="text-4xl font-bold">Our Products</h1>
-      <p className="mt-4 text-muted-foreground">Product catalog — Phase 3</p>
-    </PageShell>
-  )
+  return <ProductGridSection />
 }

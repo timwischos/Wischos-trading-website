@@ -7,11 +7,12 @@ import {
   createRouter,
   RouterProvider,
   Outlet,
+  type RouteComponent,
 } from '@tanstack/react-router'
 import { ProductCard } from '@/components/sections/ProductGridSection'
 import { products } from '@/content/products'
 
-function createTestRouter(component: React.ComponentType) {
+function createTestRouter(component: RouteComponent) {
   const rootRoute = createRootRoute({ component: Outlet })
   const indexRoute = createRoute({ getParentRoute: () => rootRoute, path: '/', component })
   const routeTree = rootRoute.addChildren([indexRoute])
