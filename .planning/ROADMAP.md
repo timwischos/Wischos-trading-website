@@ -82,7 +82,14 @@ Plans:
   3. A submitted inquiry appears as a row in the Supabase `inquiries` table within 5 seconds of submission — confirmed via Supabase dashboard in the production project
   4. The operator receives a Resend email notification with all inquiry field values within 60 seconds of a successful submission — confirmed with a real submission to the production environment
   5. Supabase RLS allows anonymous INSERT but prevents anonymous SELECT — a direct API call cannot read the inquiries table without operator credentials
-**Plans**: TBD
+**Plans**: 5 plans
+
+Plans:
+- [ ] 04-01-PLAN.md — Zod schema (src/lib/schemas/inquiry.ts) + 4 Wave 0 test scaffolds
+- [ ] 04-02-PLAN.md — POST /api/inquiry server route + InquiryEmail React Email template
+- [ ] 04-03-PLAN.md — ContactSection + InquiryFormSection components + contact content module
+- [ ] 04-04-PLAN.md — Wire /contact route + /inquiry redirect + human UI verification checkpoint
+- [ ] 04-05-PLAN.md — Supabase RLS + drizzle-kit push + Vercel deploy + production e2e checkpoint
 
 ### Phase 5: SEO and Launch
 **Goal**: Every page has correct metadata and structured data so the site is discoverable in traditional search and AI-generated answers, a FAQ page addresses common buyer objections, and the pre-launch checklist confirms no factory names, credential leaks, or security gaps before the domain goes live
@@ -106,5 +113,5 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | 1. Foundation | 2/3 | In Progress |  |
 | 2. Core Pages | 3/4 | In Progress|  |
 | 3. Products | 3/4 | In Progress|  |
-| 4. Inquiry | 0/TBD | Not started | - |
+| 4. Inquiry | 0/5 | Not started | - |
 | 5. SEO and Launch | 0/TBD | Not started | - |
