@@ -141,8 +141,8 @@ export function ProductDetailSection({ product }: ProductDetailSectionProps) {
         </nav>
 
         {/* 2-column grid */}
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '4rem', alignItems: 'start' }}
-          className="lg:grid-cols-[55%_1fr]">
+        <div style={{ display: 'grid', gap: '4rem', alignItems: 'start' }}
+          className="grid-cols-1 lg:grid-cols-[55%_1fr]">
 
           {/* Left: image gallery */}
           <div>
