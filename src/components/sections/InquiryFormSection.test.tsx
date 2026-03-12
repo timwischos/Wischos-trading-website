@@ -1,6 +1,7 @@
 import { describe, it } from 'vitest'
-// Import added when InquiryFormSection is created in plan 04-03
-// import { InquiryFormSection } from '@/components/sections/InquiryFormSection'
+// Component imported — tests will be implemented once .todo stubs are filled
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import { InquiryFormSection as _InquiryFormSection } from '@/components/sections/InquiryFormSection'
 
 describe('InquiryFormSection', () => {
   it.todo('renders all required form fields: Full Name, Company Name, Job Title, Email, Phone, Product Interest, Estimated Quantity, Target Timeline, Message')
