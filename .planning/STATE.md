@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: "All plans executed. Next steps in order:"
-stopped_at: Completed 02-core-pages 02-03-PLAN.md
-last_updated: "2026-03-12T00:44:02.206Z"
+stopped_at: Completed 02-core-pages 02-04-PLAN.md
+last_updated: "2026-03-12T01:05:03.289Z"
 last_activity: 2026-03-11 — All Phase 1 plans executed
 progress:
   total_phases: 5
-  completed_phases: 1
+  completed_phases: 2
   total_plans: 7
-  completed_plans: 6
+  completed_plans: 7
   percent: 100
 ---
 
@@ -58,6 +58,7 @@ Progress: [██████████] 100% (Phase 1 plans)
 | Phase 02-core-pages P01 | 8 | 2 tasks | 14 files |
 | Phase 02-core-pages P02 | 5 | 2 tasks | 9 files |
 | Phase 02-core-pages P03 | 8 | 2 tasks | 5 files |
+| Phase 02-core-pages P04 | continuation | 3 tasks | 4 files |
 
 ## Accumulated Context
 
@@ -83,6 +84,8 @@ Recent decisions affecting current work:
 - [Phase 02-core-pages]: ProductPreviewSection is Phase 2 teaser only — no images, pricing, or detail links (Phase 3 adds those)
 - [Phase 02-core-pages]: About route uses no PageShell — sections manage own padding and bg alternation
 - [Phase 02-core-pages]: TrustSection DEV warning uses import.meta.env.DEV && PLACEHOLDER check — visible only in dev, zero production cost
+- [Phase 02-core-pages]: How It Works and Privacy routes use no PageShell — sections self-manage padding to avoid double py-12
+- [Phase 02-core-pages]: ProcessStepsSection uses Lucide icon map keyed on step number string ('01'..'04') rather than index
 
 ### Pending Todos
 
@@ -98,7 +101,7 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-12T00:44:02.186Z
-Stopped at: Completed 02-core-pages 02-03-PLAN.md
+Last session: 2026-03-12T01:05:03.269Z
+Stopped at: Completed 02-core-pages 02-04-PLAN.md
 Resume with: /gsd:progress (check state) or /gsd:verify-work 1 (after drizzle-kit push + Vercel redeploy)
 Resume file: None
