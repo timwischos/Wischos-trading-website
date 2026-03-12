@@ -1,6 +1,11 @@
 import { createFileRoute } from '@tanstack/react-router'
-import { PageShell } from '@/components/layout/PageShell'
 import { siteMeta } from '@/content/meta'
+import { HeroSection } from '@/components/sections/HeroSection'
+import { ValuePropSection } from '@/components/sections/ValuePropSection'
+import { DifferentiatorSection } from '@/components/sections/DifferentiatorSection'
+import { CredibilitySection } from '@/components/sections/CredibilitySection'
+import { ProductPreviewSection } from '@/components/sections/ProductPreviewSection'
+import { CtaSection } from '@/components/sections/CtaSection'
 
 export const Route = createFileRoute('/')({
   head: () => ({
@@ -14,9 +19,13 @@ export const Route = createFileRoute('/')({
 
 function HomePage() {
   return (
-    <PageShell>
-      <h1 className="text-4xl font-bold">Wischos Gift</h1>
-      <p className="mt-4 text-muted-foreground">Landing page — Phase 2</p>
-    </PageShell>
+    <>
+      <HeroSection />
+      <ValuePropSection />
+      <DifferentiatorSection />
+      <CredibilitySection />
+      <ProductPreviewSection />
+      <CtaSection />
+    </>
   )
 }
