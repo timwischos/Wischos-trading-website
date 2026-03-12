@@ -64,7 +64,13 @@ Plans:
   2. Clicking a product card opens a detail page with full description, customization options (logo placement, packaging), lead time indication, and an inquiry CTA
   3. Clicking a product image opens a full-size overlay (lightbox) that can be dismissed with a keyboard Escape key or click outside; lightbox works on mobile touch and tablet
   4. Each product detail page has Product JSON-LD structured data with `priceSpecification: "On Request"` visible in the page source
-**Plans**: TBD
+**Plans**: 4 plans
+
+Plans:
+- [ ] 03-01-PLAN.md — Test scaffold (3 test files) + populate products.ts with 4 real product objects
+- [ ] 03-02-PLAN.md — Products grid page (ProductGridSection + ProductCard) + wire products/index.tsx
+- [ ] 03-03-PLAN.md — Product detail page ($productId.tsx route + ProductDetailSection + lightbox + JSON-LD)
+- [ ] 03-04-PLAN.md — Human verification checkpoint for full product catalog flow
 
 ### Phase 4: Inquiry
 **Goal**: A buyer can submit an inquiry from any inquiry entry point, the submission is saved to Supabase, the operator receives an email notification with all details, and the buyer sees a clear success confirmation — the commercial pipeline works end-to-end in the production environment
@@ -99,6 +105,6 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 |-------|----------------|--------|-----------|
 | 1. Foundation | 2/3 | In Progress |  |
 | 2. Core Pages | 3/4 | In Progress|  |
-| 3. Products | 0/TBD | Not started | - |
+| 3. Products | 0/4 | Planned | - |
 | 4. Inquiry | 0/TBD | Not started | - |
 | 5. SEO and Launch | 0/TBD | Not started | - |
