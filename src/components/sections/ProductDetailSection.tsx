@@ -25,12 +25,12 @@ export function ProductLightbox({ product }: ProductLightboxProps) {
           />
         </button>
       </DialogTrigger>
-      <DialogContent className="max-w-4xl p-0 overflow-hidden bg-background">
+      <DialogContent className="max-w-[90vw] max-h-[90vh] p-0 overflow-hidden bg-background flex items-center justify-center">
         <DialogTitle className="sr-only">{product.name} — full size image</DialogTitle>
         <img
           src={product.heroImage}
           alt={product.name}
-          className="w-full h-auto"
+          className="w-full h-full object-contain"
         />
       </DialogContent>
     </Dialog>
