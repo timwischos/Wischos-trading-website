@@ -17,6 +17,7 @@ import { Route as Char123LocaleChar125HowItWorksRouteImport } from './routes/{-$
 import { Route as Char123LocaleChar125ContactRouteImport } from './routes/{-$locale}/contact'
 import { Route as Char123LocaleChar125AboutRouteImport } from './routes/{-$locale}/about'
 import { Route as Char123LocaleChar125ProductsIndexRouteImport } from './routes/{-$locale}/products/index'
+import { Route as Char123LocaleChar125ProductsProductIdRouteImport } from './routes/{-$locale}/products/$productId'
 
 const Char123LocaleChar125Route = Char123LocaleChar125RouteImport.update({
   id: '/{-$locale}',
@@ -63,6 +64,12 @@ const Char123LocaleChar125ProductsIndexRoute =
     path: '/products/',
     getParentRoute: () => Char123LocaleChar125Route,
   } as any)
+const Char123LocaleChar125ProductsProductIdRoute =
+  Char123LocaleChar125ProductsProductIdRouteImport.update({
+    id: '/products/$productId',
+    path: '/products/$productId',
+    getParentRoute: () => Char123LocaleChar125Route,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -72,6 +79,7 @@ export interface FileRoutesByFullPath {
   '/{-$locale}/contact': typeof Char123LocaleChar125ContactRoute
   '/{-$locale}/how-it-works': typeof Char123LocaleChar125HowItWorksRoute
   '/{-$locale}/inquiry': typeof Char123LocaleChar125InquiryRoute
+  '/{-$locale}/products/$productId': typeof Char123LocaleChar125ProductsProductIdRoute
   '/{-$locale}/products/': typeof Char123LocaleChar125ProductsIndexRoute
 }
 export interface FileRoutesByTo {
@@ -82,6 +90,7 @@ export interface FileRoutesByTo {
   '/{-$locale}/contact': typeof Char123LocaleChar125ContactRoute
   '/{-$locale}/how-it-works': typeof Char123LocaleChar125HowItWorksRoute
   '/{-$locale}/inquiry': typeof Char123LocaleChar125InquiryRoute
+  '/{-$locale}/products/$productId': typeof Char123LocaleChar125ProductsProductIdRoute
   '/{-$locale}/products': typeof Char123LocaleChar125ProductsIndexRoute
 }
 export interface FileRoutesById {
@@ -93,6 +102,7 @@ export interface FileRoutesById {
   '/{-$locale}/contact': typeof Char123LocaleChar125ContactRoute
   '/{-$locale}/how-it-works': typeof Char123LocaleChar125HowItWorksRoute
   '/{-$locale}/inquiry': typeof Char123LocaleChar125InquiryRoute
+  '/{-$locale}/products/$productId': typeof Char123LocaleChar125ProductsProductIdRoute
   '/{-$locale}/products/': typeof Char123LocaleChar125ProductsIndexRoute
 }
 export interface FileRouteTypes {
@@ -105,6 +115,7 @@ export interface FileRouteTypes {
     | '/{-$locale}/contact'
     | '/{-$locale}/how-it-works'
     | '/{-$locale}/inquiry'
+    | '/{-$locale}/products/$productId'
     | '/{-$locale}/products/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -115,6 +126,7 @@ export interface FileRouteTypes {
     | '/{-$locale}/contact'
     | '/{-$locale}/how-it-works'
     | '/{-$locale}/inquiry'
+    | '/{-$locale}/products/$productId'
     | '/{-$locale}/products'
   id:
     | '__root__'
@@ -125,6 +137,7 @@ export interface FileRouteTypes {
     | '/{-$locale}/contact'
     | '/{-$locale}/how-it-works'
     | '/{-$locale}/inquiry'
+    | '/{-$locale}/products/$productId'
     | '/{-$locale}/products/'
   fileRoutesById: FileRoutesById
 }
@@ -192,6 +205,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof Char123LocaleChar125ProductsIndexRouteImport
       parentRoute: typeof Char123LocaleChar125Route
     }
+    '/{-$locale}/products/$productId': {
+      id: '/{-$locale}/products/$productId'
+      path: '/products/$productId'
+      fullPath: '/{-$locale}/products/$productId'
+      preLoaderRoute: typeof Char123LocaleChar125ProductsProductIdRouteImport
+      parentRoute: typeof Char123LocaleChar125Route
+    }
   }
 }
 
@@ -200,6 +220,7 @@ interface Char123LocaleChar125RouteChildren {
   Char123LocaleChar125ContactRoute: typeof Char123LocaleChar125ContactRoute
   Char123LocaleChar125HowItWorksRoute: typeof Char123LocaleChar125HowItWorksRoute
   Char123LocaleChar125InquiryRoute: typeof Char123LocaleChar125InquiryRoute
+  Char123LocaleChar125ProductsProductIdRoute: typeof Char123LocaleChar125ProductsProductIdRoute
   Char123LocaleChar125ProductsIndexRoute: typeof Char123LocaleChar125ProductsIndexRoute
 }
 
@@ -208,6 +229,8 @@ const Char123LocaleChar125RouteChildren: Char123LocaleChar125RouteChildren = {
   Char123LocaleChar125ContactRoute: Char123LocaleChar125ContactRoute,
   Char123LocaleChar125HowItWorksRoute: Char123LocaleChar125HowItWorksRoute,
   Char123LocaleChar125InquiryRoute: Char123LocaleChar125InquiryRoute,
+  Char123LocaleChar125ProductsProductIdRoute:
+    Char123LocaleChar125ProductsProductIdRoute,
   Char123LocaleChar125ProductsIndexRoute:
     Char123LocaleChar125ProductsIndexRoute,
 }
