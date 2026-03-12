@@ -113,5 +113,5 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | 1. Foundation | 2/3 | In Progress |  |
 | 2. Core Pages | 3/4 | In Progress|  |
 | 3. Products | 3/4 | In Progress|  |
-| 4. Inquiry | 0/5 | Not started | - |
+| 4. Inquiry | 1/5 | In Progress|  |
 | 5. SEO and Launch | 0/TBD | Not started | - |

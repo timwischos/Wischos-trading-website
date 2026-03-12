@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: "All plans executed. Next steps in order:"
-stopped_at: Phase 4 context gathered
-last_updated: "2026-03-12T12:31:01.432Z"
+stopped_at: Completed 04-inquiry-01-PLAN.md
+last_updated: "2026-03-12T12:54:15.021Z"
 last_activity: 2026-03-11 — All Phase 1 plans executed
 progress:
   total_phases: 5
   completed_phases: 2
-  total_plans: 11
-  completed_plans: 10
+  total_plans: 16
+  completed_plans: 11
   percent: 100
 ---
 
@@ -62,6 +62,7 @@ Progress: [██████████] 100% (Phase 1 plans)
 | Phase 03-products P01 | 7 | 2 tasks | 4 files |
 | Phase 03-products P02 | 6 | 2 tasks | 3 files |
 | Phase 03-products P03 | 14 | 2 tasks | 3 files |
+| Phase 04-inquiry P01 | 8 | 2 tasks | 5 files |
 
 ## Accumulated Context
 
@@ -96,6 +97,8 @@ Recent decisions affecting current work:
 - [Phase 03-products]: No price on product cards — B2B inquiry model, price on request
 - [Phase 03-products]: Loader typed as any (eslint-disable) to bypass TanStack Start 1.166.7 SSR loader type constraint (ValidateSerializableLifecycleResult => never bug)
 - [Phase 03-products]: DialogTitle sr-only in ProductLightbox — ARIA requirement for Radix Dialog accessibility compliance
+- [Phase 04-inquiry]: inquiryInsertSchema is standalone Zod v4 (no drizzle-zod, incompatible with Zod v4)
+- [Phase 04-inquiry]: id and createdAt excluded from inquiryInsertSchema — DB-generated, never sent by client
 
 ### Pending Todos
 
@@ -111,7 +114,7 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-12T12:31:01.409Z
-Stopped at: Phase 4 context gathered
+Last session: 2026-03-12T12:54:15.005Z
+Stopped at: Completed 04-inquiry-01-PLAN.md
 Resume with: /gsd:progress (check state) or /gsd:verify-work 1 (after drizzle-kit push + Vercel redeploy)
-Resume file: .planning/phases/04-inquiry/04-CONTEXT.md
+Resume file: None

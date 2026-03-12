@@ -51,13 +51,13 @@
 
 ### Inquiry Form & Contact
 
-- [ ] **INQ-01**: Contact page with company contact information (branded email placeholder, LinkedIn placeholder) and embedded inquiry form
-- [ ] **INQ-02**: Inquiry form fields: Full Name, Company Name, Job Title, Email (required), Phone (optional), Product Interest (dropdown or text), Estimated Quantity, Target Timeline, Message/Requirements
-- [ ] **INQ-03**: Form validation with Zod — required fields enforced, email format validated, helpful error messages
-- [ ] **INQ-04**: Successful form submission saves record to Supabase `inquiries` table via `/api/inquiry` Server Route
-- [ ] **INQ-05**: Successful form submission triggers Resend email notification to operator with all inquiry details
-- [ ] **INQ-06**: Honeypot field to filter spam submissions without requiring CAPTCHA
-- [ ] **INQ-07**: Success state shown to user after submission (confirmation message, not a page redirect)
+- [x] **INQ-01**: Contact page with company contact information (branded email placeholder, LinkedIn placeholder) and embedded inquiry form
+- [x] **INQ-02**: Inquiry form fields: Full Name, Company Name, Job Title, Email (required), Phone (optional), Product Interest (dropdown or text), Estimated Quantity, Target Timeline, Message/Requirements
+- [x] **INQ-03**: Form validation with Zod — required fields enforced, email format validated, helpful error messages
+- [x] **INQ-04**: Successful form submission saves record to Supabase `inquiries` table via `/api/inquiry` Server Route
+- [x] **INQ-05**: Successful form submission triggers Resend email notification to operator with all inquiry details
+- [x] **INQ-06**: Honeypot field to filter spam submissions without requiring CAPTCHA
+- [x] **INQ-07**: Success state shown to user after submission (confirmation message, not a page redirect)
 - [ ] **INQ-08**: Row-level security (RLS) enabled on Supabase `inquiries` table — public can insert, cannot read
 
 ### FAQ Page
@@ -150,13 +150,13 @@
 | PROD-04 | Phase 3 | Complete |
 | PROD-05 | Phase 3 | Complete |
 | PROD-06 | Phase 3 | Complete |
-| INQ-01 | Phase 4 | Pending |
-| INQ-02 | Phase 4 | Pending |
-| INQ-03 | Phase 4 | Pending |
-| INQ-04 | Phase 4 | Pending |
-| INQ-05 | Phase 4 | Pending |
-| INQ-06 | Phase 4 | Pending |
-| INQ-07 | Phase 4 | Pending |
+| INQ-01 | Phase 4 | Complete |
+| INQ-02 | Phase 4 | Complete |
+| INQ-03 | Phase 4 | Complete |
+| INQ-04 | Phase 4 | Complete |
+| INQ-05 | Phase 4 | Complete |
+| INQ-06 | Phase 4 | Complete |
+| INQ-07 | Phase 4 | Complete |
 | INQ-08 | Phase 4 | Pending |
 | FAQ-01 | Phase 5 | Pending |
 | FAQ-02 | Phase 5 | Pending |
