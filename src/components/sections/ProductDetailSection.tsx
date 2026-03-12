@@ -28,7 +28,7 @@ export function ProductLightbox({ product }: ProductLightboxProps) {
           />
         </button>
       </DialogTrigger>
-      <DialogContent className="!w-[90vw] !max-w-[90vw] !h-[85vh] !p-0 !gap-0 overflow-hidden bg-black flex flex-col">
+      <DialogContent className="w-[90vw]! max-w-[90vw]! h-[85vh]! p-0! gap-0! overflow-hidden bg-black flex flex-col">
         <DialogTitle className="sr-only">{product.name} — full size image</DialogTitle>
 
         {/* Zoom toggle button — positioned left of the default close button */}
