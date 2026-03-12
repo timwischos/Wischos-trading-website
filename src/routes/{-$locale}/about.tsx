@@ -1,6 +1,9 @@
 import { createFileRoute } from '@tanstack/react-router'
-import { PageShell } from '@/components/layout/PageShell'
 import { siteMeta } from '@/content/meta'
+import { AboutHeroSection } from '@/components/sections/AboutHeroSection'
+import { ExpertiseSection } from '@/components/sections/ExpertiseSection'
+import { WhyUsSection } from '@/components/sections/WhyUsSection'
+import { TrustSection } from '@/components/sections/TrustSection'
 
 export const Route = createFileRoute('/{-$locale}/about')({
   head: () => ({
@@ -14,9 +17,11 @@ export const Route = createFileRoute('/{-$locale}/about')({
 
 function AboutPage() {
   return (
-    <PageShell>
-      <h1 className="text-4xl font-bold">About Wischos Gift</h1>
-      <p className="mt-4 text-muted-foreground">About page — Phase 2</p>
-    </PageShell>
+    <>
+      <AboutHeroSection />
+      <ExpertiseSection />
+      <WhyUsSection />
+      <TrustSection />
+    </>
   )
 }
