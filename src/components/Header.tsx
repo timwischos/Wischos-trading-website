@@ -1,5 +1,7 @@
-import { Link } from '@tanstack/react-router'
+import { Link, type LinkProps } from '@tanstack/react-router'
 import ThemeToggle from './ThemeToggle'
+
+type RouterTo = LinkProps['to']
 
 export default function Header() {
   return (
@@ -57,7 +59,7 @@ export default function Header() {
             Home
           </Link>
           <Link
-            to="/about"
+            to={'/about' as RouterTo}
             className="nav-link"
             activeProps={{ className: 'nav-link is-active' }}
           >
