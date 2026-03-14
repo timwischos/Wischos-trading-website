@@ -1,4 +1,4 @@
-import { pgTable, varchar, text, timestamp, integer } from 'drizzle-orm/pg-core'
+import { pgTable, varchar, text, timestamp, integer, boolean } from 'drizzle-orm/pg-core'
 
 export const inquiries = pgTable('inquiries', {
   id: integer().primaryKey().generatedAlwaysAsIdentity(),
@@ -16,3 +16,20 @@ export const inquiries = pgTable('inquiries', {
 
 export type Inquiry = typeof inquiries.$inferSelect
 export type NewInquiry = typeof inquiries.$inferInsert
+
+export const products = pgTable('products', {
+  id: text('id').primaryKey(),
+  name: text('name').notNull(),
+  tagline: text('tagline').notNull(),
+  description: text('description').notNull(),
+  category: text('category').notNull(),
+  materials: text('materials').array().notNull(),
+  heroImage: text('hero_image').notNull(),
+  images: text('images').array().notNull(),
+  moq: integer('moq').notNull().default(50),
+  customizationOptions: text('customization_options').array().notNull(),
+  sortOrder: integer('sort_order').notNull().default(0),
+  active: boolean('active').notNull().default(true),
+})
+
+export type DbProduct = typeof products.$inferSelect

@@ -1,13 +1,28 @@
 import { describe, it, expect } from 'vitest'
 import { render, screen, fireEvent, act } from '@testing-library/react'
 import { ProductLightbox } from '@/components/sections/ProductDetailSection'
-import { products } from '@/content/products'
+import type { DbProduct } from '@/server/schema'
 
 // NOTE: ESC key dismiss is NOT tested here — Radix Dialog keyboard events
 // are unreliable in jsdom. Verify ESC dismiss manually in browser.
 
+const mockProduct: DbProduct = {
+  id: 'test-product',
+  name: 'Test Product',
+  tagline: 'A tagline',
+  description: 'A description',
+  category: 'Desk Accessories',
+  materials: ['Brass'],
+  heroImage: 'https://example.com/hero.jpg',
+  images: ['https://example.com/img1.jpg', 'https://example.com/img2.jpg'],
+  moq: 50,
+  customizationOptions: ['Logo engraving'],
+  sortOrder: 0,
+  active: true,
+}
+
 describe('ProductLightbox', () => {
-  const product = products[0]!
+  const product = mockProduct
 
   it('renders an image trigger button', () => {
     render(<ProductLightbox product={product} />)

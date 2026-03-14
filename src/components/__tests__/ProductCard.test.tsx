@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { render, screen } from '@testing-library/react'
+import { render, screen, act } from '@testing-library/react'
 import {
   createMemoryHistory,
   createRootRoute,
@@ -10,7 +10,7 @@ import {
   type RouteComponent,
 } from '@tanstack/react-router'
 import { ProductCard } from '@/components/sections/ProductGridSection'
-import { products } from '@/content/products'
+import type { DbProduct } from '@/server/schema'
 
 function createTestRouter(component: RouteComponent) {
   const rootRoute = createRootRoute({ component: Outlet })
@@ -22,27 +22,42 @@ function createTestRouter(component: RouteComponent) {
   })
 }
 
+const mockProduct: DbProduct = {
+  id: 'test-product',
+  name: 'Test Product',
+  tagline: 'A tagline for testing',
+  description: 'A description',
+  category: 'Desk Accessories',
+  materials: ['Brass'],
+  heroImage: 'https://example.com/hero.jpg',
+  images: ['https://example.com/img1.jpg', 'https://example.com/img2.jpg'],
+  moq: 50,
+  customizationOptions: ['Logo engraving'],
+  sortOrder: 0,
+  active: true,
+}
+
 describe('ProductCard', () => {
-  const product = products[0]!
+  const product = mockProduct
 
   it('renders product name', async () => {
     const router = createTestRouter(() => <ProductCard product={product} />)
     render(<RouterProvider router={router} />)
-    await router.load()
+    await act(() => router.load())
     expect(screen.getByText(product.name)).toBeTruthy()
   })
 
-  it('renders "Custom Logo Available" callout', async () => {
+  it('renders product category', async () => {
     const router = createTestRouter(() => <ProductCard product={product} />)
     render(<RouterProvider router={router} />)
-    await router.load()
-    expect(screen.getByText(/Custom Logo Available/i)).toBeTruthy()
+    await act(() => router.load())
+    expect(screen.getByText(product.category)).toBeTruthy()
   })
 
   it('renders MOQ badge', async () => {
     const router = createTestRouter(() => <ProductCard product={product} />)
     render(<RouterProvider router={router} />)
-    await router.load()
+    await act(() => router.load())
     expect(screen.getByText(/MOQ 50/i)).toBeTruthy()
   })
 })
