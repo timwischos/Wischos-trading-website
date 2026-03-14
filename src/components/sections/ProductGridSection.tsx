@@ -1,74 +1,110 @@
+import { useState } from 'react'
 import { Link, type LinkProps } from '@tanstack/react-router'
-import { products, type Product } from '@/content/products'
+import type { DbProduct } from '@/server/schema'
 
 type RouterTo = LinkProps['to']
 
 interface ProductCardProps {
-  product: Product
+  product: DbProduct
 }
 
 export function ProductCard({ product }: ProductCardProps) {
+  const [hovered, setHovered] = useState(false)
+  const coverSrc = product.images[0] ?? ''
+  const hoverSrc = product.images[1] ?? ''
+  const hasHoverImage = Boolean(hoverSrc && hoverSrc !== coverSrc)
+
   return (
     <Link
       to={`/products/${product.id}` as RouterTo}
-      className="block group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
       aria-label={product.name}
-      style={{ textDecoration: 'none', color: 'inherit' }}
+      style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
     >
       {/* Image */}
-      <div style={{ overflow: 'hidden', background: '#f5f5f5' }}>
+      <div style={{ overflow: 'hidden', background: '#f7f7f7', position: 'relative', aspectRatio: '1/1' }}>
         <img
-          src={product.images[0]}
+          src={coverSrc}
           alt={product.name}
           loading="lazy"
-          style={{ width: '100%', aspectRatio: '4/5', objectFit: 'cover', display: 'block', transition: 'transform 0.5s ease' }}
-          className="group-hover:scale-105"
+          style={{
+            width: '100%', height: '100%', objectFit: 'cover', display: 'block',
+            transition: 'opacity 0.4s ease',
+            opacity: hasHoverImage && hovered ? 0 : 1,
+          }}
         />
+        {hasHoverImage && (
+          <img
+            src={hoverSrc}
+            alt=""
+            aria-hidden="true"
+            style={{
+              position: 'absolute', inset: 0,
+              width: '100%', height: '100%', objectFit: 'cover',
+              transition: 'opacity 0.4s ease',
+              opacity: hovered ? 1 : 0,
+            }}
+          />
+        )}
       </div>
 
       {/* Info */}
-      <div style={{ paddingTop: '0.875rem' }}>
-        <p style={{ fontSize: '0.65rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: '#888', marginBottom: '0.3rem' }}>
+      <div style={{ padding: '0.875rem 1rem 1.25rem', borderTop: '1px solid var(--grid-color)' }}>
+        <p style={{ fontSize: '0.62rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: '#aaa', marginBottom: '0.35rem' }}>
           {product.category}
         </p>
-        <p style={{ fontSize: '0.9rem', fontWeight: 500, color: '#060606', lineHeight: 1.3 }}>
+        <p style={{ fontSize: '0.85rem', color: '#0a0a0a', lineHeight: 1.3, marginBottom: '0.4rem' }}>
           {product.name}
         </p>
-        <p style={{ fontSize: '0.75rem', color: '#aaa', marginTop: '0.25rem', letterSpacing: '0.04em' }}>
-          MOQ 50 sets · Custom Logo Available
+        <p style={{ fontSize: '0.7rem', color: '#bbb', letterSpacing: '0.04em' }}>
+          MOQ {product.moq} sets
         </p>
       </div>
     </Link>
   )
 }
 
-export function ProductGridSection() {
+export function ProductGridSection({ products }: { products: DbProduct[] }) {
   return (
-    <section style={{ paddingTop: '4rem', paddingBottom: '6rem' }}>
-      <div className="page-wrap">
-
-        {/* Header */}
-        <div style={{ marginBottom: '3rem' }}>
-          <p style={{ fontSize: '0.7rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: '#888', marginBottom: '0.75rem' }}>
+    <section style={{ borderTop: '1px solid var(--grid-color)' }}>
+      {/* Header */}
+      <div style={{ padding: '2.5rem 1.5rem 2rem', borderBottom: '1px solid var(--grid-color)' }}>
+        <div className="page-wrap" style={{ width: '100%', margin: 0, maxWidth: 'none' }}>
+          <p style={{ fontSize: '0.68rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: '#888', marginBottom: '0.75rem' }}>
             Our Products
           </p>
-          <h1 style={{ fontSize: 'clamp(1.75rem, 4vw, 2.75rem)', fontWeight: 700, lineHeight: 1.1, marginBottom: '0.75rem' }}>
+          <h1 className="display-title" style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 300, lineHeight: 1.05, marginBottom: '0.75rem' }}>
             Premium Metal Gift Sets
           </h1>
-          <p style={{ fontSize: '0.95rem', color: '#666', maxWidth: '36rem', lineHeight: 1.6 }}>
+          <p style={{ fontSize: '0.875rem', color: '#666', maxWidth: '40rem', lineHeight: 1.65 }}>
             Each series is available from MOQ 50 sets with full custom logo and packaging design.
             Sample before you commit.
           </p>
         </div>
+      </div>
 
-        {/* Grid */}
-        <div style={{ display: 'grid', gap: '2rem' }} className="grid-cols-2 lg:grid-cols-4">
+      {/* Grid — border lines between cells */}
+      {products.length === 0 ? (
+        <p style={{ padding: '3rem 1.5rem', color: '#aaa', fontSize: '0.9rem' }}>No products found.</p>
+      ) : (
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(2, 1fr)',
+          borderLeft: '1px solid var(--grid-color)',
+        }}
+          className="lg:grid-cols-4"
+        >
           {products.map((product) => (
-            <ProductCard key={product.id} product={product} />
+            <div
+              key={product.id}
+              style={{ borderRight: '1px solid var(--grid-color)', borderBottom: '1px solid var(--grid-color)' }}
+            >
+              <ProductCard product={product} />
+            </div>
           ))}
         </div>
-
-      </div>
+      )}
     </section>
   )
 }

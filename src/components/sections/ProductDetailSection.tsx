@@ -2,7 +2,9 @@ import { useState } from 'react'
 import { Dialog as DialogPrimitive } from 'radix-ui'
 import { Link, type LinkProps } from '@tanstack/react-router'
 import { X, ChevronLeft, ChevronRight, Stamp } from 'lucide-react'
-import type { Product } from '@/content/products'
+import type { DbProduct } from '@/server/schema'
+
+type Product = DbProduct
 
 type RouterTo = LinkProps['to']
 
@@ -38,7 +40,7 @@ export function ProductLightbox({ product, initialIdx = 0 }: { product: Product;
             src={product.images[initialIdx]}
             alt={product.name}
             className="w-full object-cover"
-            style={{ aspectRatio: '4/5' }}
+            style={{ aspectRatio: '1/1' }}
           />
         </button>
       </DialogPrimitive.Trigger>
@@ -224,18 +226,12 @@ export function ProductDetailSection({ product }: ProductDetailSectionProps) {
               </ul>
             </div>
 
-            {/* MOQ / Lead time */}
-            <div style={{ background: '#f5f5f5', padding: '1.25rem', display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
-              {[
-                ['Minimum Order Quantity', `${product.moq} sets`],
-                ['Sample Lead Time', product.leadTimeSample],
-                ['Bulk Lead Time', product.leadTimeBulk],
-              ].map(([label, value]) => (
-                <div key={label} style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.85rem' }}>
-                  <span style={{ color: '#888' }}>{label}</span>
-                  <span style={{ fontWeight: 500 }}>{value}</span>
-                </div>
-              ))}
+            {/* MOQ */}
+            <div style={{ background: '#f5f5f5', padding: '1.25rem' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.85rem' }}>
+                <span style={{ color: '#888' }}>Minimum Order Quantity</span>
+                <span style={{ fontWeight: 500 }}>{product.moq} sets</span>
+              </div>
             </div>
 
             {/* CTA */}

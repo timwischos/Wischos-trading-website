@@ -1,6 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { ProductGridSection } from '@/components/sections/ProductGridSection'
 import { siteMeta } from '@/content/meta'
+import { getProducts } from '@/server/getProducts'
 
 export const Route = createFileRoute('/{-$locale}/products/')({
   head: () => ({
@@ -9,9 +10,11 @@ export const Route = createFileRoute('/{-$locale}/products/')({
       { name: 'description', content: siteMeta.routes.products.description },
     ],
   }),
+  loader: () => getProducts(),
   component: ProductsPage,
 })
 
 function ProductsPage() {
-  return <ProductGridSection />
+  const products = Route.useLoaderData()
+  return <ProductGridSection products={products} />
 }

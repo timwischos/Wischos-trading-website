@@ -1,13 +1,20 @@
 import { createFileRoute, notFound, Link, type LinkProps } from '@tanstack/react-router'
-import { products, type Product } from '@/content/products'
 import { ProductDetailSection } from '@/components/sections/ProductDetailSection'
+import { getProductById } from '@/server/getProducts'
+import type { DbProduct } from '@/server/schema'
 
 type RouterTo = LinkProps['to']
 
 export const Route = createFileRoute('/{-$locale}/products/$productId')({
-  head: ({ params }) => {
-    const product = products.find((p) => p.id === params.productId)
-    if (!product) return {}
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  loader: (async ({ params }: any) => {
+    const product = await getProductById({ data: params.productId })
+    if (!product) throw notFound()
+    return { product }
+  }) as any,
+  head: ({ loaderData }) => {
+    if (!loaderData?.product) return {}
+    const { product } = loaderData
     return {
       meta: [
         { title: `${product.name} | Wischos Gift` },
@@ -34,12 +41,6 @@ export const Route = createFileRoute('/{-$locale}/products/$productId')({
       ],
     }
   },
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  loader: (({ params }: any) => {
-    const product = products.find((p: Product) => p.id === params.productId)
-    if (!product) throw notFound()
-    return { product }
-  }) as any,
   notFoundComponent: () => (
     <div className="page-wrap py-20 text-center">
       <h1 className="text-2xl font-bold mb-4">Product not found</h1>
@@ -55,6 +56,6 @@ export const Route = createFileRoute('/{-$locale}/products/$productId')({
 })
 
 function ProductDetailPage() {
-  const loaderData = Route.useLoaderData() as { product: Product }
-  return <ProductDetailSection product={loaderData.product} />
+  const { product } = Route.useLoaderData() as { product: DbProduct }
+  return <ProductDetailSection product={product} />
 }
