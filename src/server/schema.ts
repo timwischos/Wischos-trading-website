@@ -1,4 +1,4 @@
-import { pgTable, varchar, text, timestamp, integer, boolean } from 'drizzle-orm/pg-core'
+import { pgTable, varchar, text, timestamp, integer, boolean, jsonb } from 'drizzle-orm/pg-core'
 
 export const inquiries = pgTable('inquiries', {
   id: integer().primaryKey().generatedAlwaysAsIdentity(),
@@ -27,7 +27,11 @@ export const products = pgTable('products', {
   heroImage: text('hero_image').notNull(),
   images: text('images').array().notNull(),
   moq: integer('moq').notNull().default(50),
+  highlights: text('highlights').array(),
   customizationOptions: text('customization_options').array().notNull(),
+  specifications: jsonb('specifications').$type<Array<{ label: string; value: string }>>(),
+  faqs: jsonb('faqs').$type<Array<{ q: string; a: string }>>(),
+  seoKeywords: text('seo_keywords').array(),
   sortOrder: integer('sort_order').notNull().default(0),
   active: boolean('active').notNull().default(true),
 })

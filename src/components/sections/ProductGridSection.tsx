@@ -54,7 +54,7 @@ export function ProductCard({ product }: ProductCardProps) {
         <p style={{ fontSize: '0.62rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: '#aaa', marginBottom: '0.35rem' }}>
           {product.category}
         </p>
-        <p style={{ fontSize: '0.85rem', color: '#0a0a0a', lineHeight: 1.3, marginBottom: '0.4rem' }}>
+        <p className="display-title" style={{ fontSize: '1.05rem', fontWeight: 300, color: '#0a0a0a', lineHeight: 1.25, marginBottom: '0.4rem' }}>
           {product.name}
         </p>
         <p style={{ fontSize: '0.7rem', color: '#bbb', letterSpacing: '0.04em' }}>

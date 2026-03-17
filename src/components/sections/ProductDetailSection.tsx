@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Dialog as DialogPrimitive } from 'radix-ui'
 import { Link, type LinkProps } from '@tanstack/react-router'
-import { X, ChevronLeft, ChevronRight, Stamp } from 'lucide-react'
+import { X, ChevronLeft, ChevronRight } from 'lucide-react'
 import type { DbProduct } from '@/server/schema'
 
 type Product = DbProduct
@@ -10,6 +10,34 @@ type RouterTo = LinkProps['to']
 
 interface ProductDetailSectionProps {
   product: Product
+}
+
+function AccordionSection({ title, children }: { title: string; children: React.ReactNode }) {
+  const [open, setOpen] = useState(false)
+  return (
+    <div>
+      <button
+        onClick={() => setOpen((o) => !o)}
+        style={{
+          display: 'flex', justifyContent: 'space-between', alignItems: 'center',
+          width: '100%', background: 'none', border: 'none', cursor: 'pointer',
+          padding: '0.875rem 0', borderTop: '1px solid #e5e5e5',
+        }}
+      >
+        <span style={{ fontSize: '0.75rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: '#888' }}>
+          {title}
+        </span>
+        <span style={{ fontSize: '1.25rem', lineHeight: 1, color: '#555', fontWeight: 300 }}>
+          {open ? '−' : '+'}
+        </span>
+      </button>
+      {open && (
+        <div style={{ paddingBottom: '1.25rem' }}>
+          {children}
+        </div>
+      )}
+    </div>
+  )
 }
 
 export function ProductLightbox({ product, initialIdx = 0 }: { product: Product; initialIdx?: number }) {
@@ -172,9 +200,9 @@ export function ProductDetailSection({ product }: ProductDetailSectionProps) {
           </div>
 
           {/* Right: product info */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1.75rem' }}>
 
-            {/* Category + Name + Tagline */}
+            {/* Category + Name + Highlights */}
             <div>
               <p style={{ fontSize: '0.7rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: '#888', marginBottom: '0.75rem' }}>
                 {product.category}
@@ -182,57 +210,79 @@ export function ProductDetailSection({ product }: ProductDetailSectionProps) {
               <h1 style={{ fontSize: 'clamp(1.75rem, 3vw, 2.5rem)', fontWeight: 700, lineHeight: 1.1, marginBottom: '0.75rem' }}>
                 {product.name}
               </h1>
-              <p style={{ fontSize: '1rem', lineHeight: 1.6, color: '#444' }}>
-                {product.tagline}
-              </p>
+              {product.highlights && product.highlights.length > 0 ? (
+                <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.55rem' }}>
+                  {product.highlights.map((item, i) => {
+                    const colonIdx = item.indexOf(': ')
+                    const label = colonIdx !== -1 ? item.slice(0, colonIdx) : null
+                    const body = colonIdx !== -1 ? item.slice(colonIdx + 2) : item
+                    return (
+                      <li key={i} style={{ fontSize: '0.9rem', lineHeight: 1.6, color: '#444', paddingLeft: '1.1rem', position: 'relative' }}>
+                        <span style={{ position: 'absolute', left: 0, top: '0.58em', width: 5, height: 5, borderRadius: '50%', background: '#060606', display: 'inline-block', flexShrink: 0 }} />
+                        {label ? <><strong style={{ fontWeight: 600, color: '#1a1a1a' }}>{label}:</strong>{' '}{body}</> : body}
+                      </li>
+                    )
+                  })}
+                </ul>
+              ) : (
+                <p style={{ fontSize: '1rem', lineHeight: 1.6, color: '#444' }}>
+                  {product.tagline}
+                </p>
+              )}
             </div>
 
             {/* Divider */}
-            <hr style={{ border: 'none', borderTop: '1px solid #e5e5e5' }} />
+            <hr style={{ border: 'none', borderTop: '1px solid #e5e5e5', margin: 0 }} />
 
             {/* Description */}
             <div>
               <p style={{ fontSize: '0.75rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: '#888', marginBottom: '0.75rem' }}>
-                About This Series
+                About This Product
               </p>
-              <p style={{ fontSize: '0.9rem', lineHeight: 1.7, color: '#333' }}>
-                {product.description}
-              </p>
+              {product.description.split('\n\n').map((para, i) => (
+                <p key={i} style={{ fontSize: '0.9rem', lineHeight: 1.7, color: '#333', marginBottom: i < product.description.split('\n\n').length - 1 ? '1rem' : 0 }}>
+                  {para}
+                </p>
+              ))}
             </div>
 
-            {/* Materials */}
-            <div>
-              <p style={{ fontSize: '0.75rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: '#888', marginBottom: '0.5rem' }}>
-                Materials
-              </p>
-              <p style={{ fontSize: '0.9rem', color: '#333' }}>
-                {product.materials.join(' · ')}
-              </p>
-            </div>
+            {/* Specifications — accordion */}
+            {product.specifications && product.specifications.length > 0 && (
+              <AccordionSection title="Specifications">
+                <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+                  <tbody>
+                    {product.specifications.map((spec, i) => (
+                      <tr key={i} style={{ borderBottom: '1px solid #f0f0f0' }}>
+                        <td style={{ padding: '0.5rem 0.75rem 0.5rem 0', fontSize: '0.8rem', color: '#888', width: '45%', verticalAlign: 'top' }}>
+                          {spec.label}
+                        </td>
+                        <td style={{ padding: '0.5rem 0', fontSize: '0.85rem', color: '#333', verticalAlign: 'top' }}>
+                          {spec.value}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </AccordionSection>
+            )}
 
-            {/* Customization */}
-            <div>
-              <p style={{ fontSize: '0.75rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: '#888', marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
-                <Stamp size={12} aria-hidden="true" />
-                Customization
-              </p>
-              <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
-                {product.customizationOptions.map((opt) => (
-                  <li key={opt} style={{ fontSize: '0.85rem', color: '#333', paddingLeft: '1rem', position: 'relative' }}>
-                    <span style={{ position: 'absolute', left: 0, top: '0.45em', width: 4, height: 4, borderRadius: '50%', background: '#bbb', display: 'inline-block' }} />
-                    {opt}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* MOQ */}
-            <div style={{ background: '#f5f5f5', padding: '1.25rem' }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.85rem' }}>
-                <span style={{ color: '#888' }}>Minimum Order Quantity</span>
-                <span style={{ fontWeight: 500 }}>{product.moq} sets</span>
-              </div>
-            </div>
+            {/* FAQ — accordion */}
+            {product.faqs && product.faqs.length > 0 && (
+              <AccordionSection title="Frequently Asked Questions">
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+                  {product.faqs.map((faq, i) => (
+                    <div key={i}>
+                      <p style={{ fontSize: '0.85rem', fontWeight: 600, color: '#1a1a1a', marginBottom: '0.4rem', lineHeight: 1.5 }}>
+                        {faq.q}
+                      </p>
+                      <p style={{ fontSize: '0.85rem', lineHeight: 1.7, color: '#555', margin: 0 }}>
+                        {faq.a}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </AccordionSection>
+            )}
 
             {/* CTA */}
             <div>

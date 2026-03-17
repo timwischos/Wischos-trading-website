@@ -2,6 +2,9 @@
  * Run with: npx tsx src/server/seed-products.ts
  * Inserts all new products into Supabase.
  */
+import { config } from 'dotenv'
+config({ path: '.env.local' })
+
 import { drizzle } from 'drizzle-orm/postgres-js'
 import postgres from 'postgres'
 import { products } from './schema'
@@ -14,6 +17,11 @@ const newProducts = [
     id: 'aluminium-metal-pen-holder-01',
     name: 'Aluminium Metal Pen Holder',
     tagline: 'Keep your workspace sharp and organised',
+    highlights: [
+      'Precision CNC Machining: Aircraft-grade aluminium with clean geometry and a weighted base that stays put.',
+      'Anodized Finish: Hard-wearing surface that resists scratches and ages beautifully with minimal care.',
+      'Corporate Ready: Laser-engraved logo or embossed branding for a permanent desk presence.',
+    ],
     description:
       'A precision-machined aluminium pen holder for the modern desk. Clean geometry, anodized finish that ages beautifully, and a weighted base that stays put. Available with laser-engraved logo or embossed branding for full corporate customisation.',
     category: 'Desk Accessories',
@@ -35,6 +43,11 @@ const newProducts = [
     id: 'badge-holder-card-holder-with-metal-clip',
     name: 'Badge Holder with Metal Clip',
     tagline: 'Professional identity, every day',
+    highlights: [
+      'Spring-Loaded Clip: Secure attachment to any lanyard or lapel — never slips, never snags.',
+      'Polished Stainless Steel: Mirror finish that keeps your brand looking sharp through every event.',
+      'Flush Engraving: Logo sits level with the surface — precise, permanent, and understated.',
+    ],
     description:
       'A refined badge and ID card holder machined from premium metal. The spring-loaded clip provides secure attachment to any lanyard or lapel, while the polished finish keeps your brand looking its best. Engrave your logo for a lasting impression at every event and conference.',
     category: 'Office Accessories',
@@ -57,6 +70,11 @@ const newProducts = [
     id: 'bolt-action-pen-01',
     name: 'Bolt-Action Pen',
     tagline: 'The satisfying click of precision engineering',
+    highlights: [
+      'Bolt-Action Mechanism: Single thumb motion deploys and retracts the tip with a clean, audible click.',
+      'Parker-Style Refill: Compatible with the widest range of aftermarket refills available.',
+      'Knurled Aluminium Barrel: Full-size grip that finds the hand naturally, even in a rush.',
+    ],
     description:
       'A bolt-action mechanism inspired by precision machining tools. A single thumb motion deploys and retracts the tip with a clean, audible click. Full-size aluminium barrel with comfortable knurled grip. Writes with standard Parker-style refills. A pen people will reach for on purpose.',
     category: 'Writing Instruments',
@@ -78,6 +96,11 @@ const newProducts = [
     id: 'edc-carbon-fibre-magnetic-fidget-sticks-01',
     name: 'Carbon Fibre Magnetic Fidget Sticks',
     tagline: 'Tactile precision for the focused mind',
+    highlights: [
+      'High-Grade Carbon Fibre: Lightweight yet rigid — engineered for the embedded rare-earth magnets.',
+      'Neodymium Magnets: Strong enough to snap satisfyingly, precise enough for one-handed manipulation.',
+      'Stainless Steel End Caps: The engraving surface, and the detail that sets these apart.',
+    ],
     description:
       'Two high-grade carbon fibre rods connected by embedded rare-earth magnets. Roll them, stack them, spin them — the interaction is endlessly satisfying. A kinetic desk object that signals attention to detail without saying a word. Makes an unforgettable gift for executives and engineers alike.',
     category: 'EDC Accessories',
@@ -101,6 +124,11 @@ const newProducts = [
     id: 'key-chain-organizer-holder-01',
     name: 'Key Chain Organiser',
     tagline: 'Silence the jingle, organise the everyday',
+    highlights: [
+      'Swiss-Thread Pivot Screw: Adjustable tension — tune the resistance to your exact preference.',
+      'Compact Flat Stack: Keys fold silently together — no rattling, no bulk in the pocket.',
+      'Aircraft Aluminium Frame: Anodized finish that resists daily wear and looks sharp after years.',
+    ],
     description:
       'A machined aluminium key organiser that keeps your keys flat, silent, and stacked in a compact form. Swiss-thread pivot screw with adjustable tension. Carry only what you need — and carry it beautifully. A practical gift that earns a permanent place in the pocket.',
     category: 'EDC Accessories',
@@ -123,6 +151,11 @@ const newProducts = [
     id: 'letter-opener-01',
     name: 'Letter Opener Series I',
     tagline: 'A desk instrument that outlasts the inbox',
+    highlights: [
+      'Single-Piece Stainless Steel: No welds, no seams — machined from a single billet for full integrity.',
+      'Mirror Polish: A finish that catches light at every angle and requires no maintenance.',
+      'Flush Engraving: Logo sits level with the surface — permanent and understated.',
+    ],
     description:
       'A single continuous piece of stainless steel, mirror polished and perfectly balanced. Opens correspondence with clean authority. Equally at home as an executive desk piece or a thoughtful closing gift. The engraved logo sits flush with the surface — no raised edges, no fuss.',
     category: 'Desk Accessories',
@@ -145,6 +178,11 @@ const newProducts = [
     id: 'letter-opener-02',
     name: 'Letter Opener Series II',
     tagline: 'Warm metal, cold efficiency',
+    highlights: [
+      'Solid Brass Body: Slightly heavier than Series I, with an ergonomic taper for a secure grip.',
+      'Hand-Brushed Finish: Warm, directional texture that catches light differently from every angle.',
+      'Living Patina: Develops a uniquely personal character over months of use — no two age the same.',
+    ],
     description:
       'Series II introduces solid brass with a hand-brushed finish. Slightly heavier than Series I, with an ergonomic taper for a secure grip. The natural patina it develops over months of use becomes uniquely personal — no two will age the same way. An heirloom-grade desk instrument.',
     category: 'Desk Accessories',
@@ -167,6 +205,11 @@ const newProducts = [
     id: 'metal-multifunctional-tool-ballpoint-pen-01',
     name: 'Multi-Tool Ballpoint Pen',
     tagline: 'Writes notes. Opens bottles. Gets things done.',
+    highlights: [
+      'Primary Tool: A reliable full-size ballpoint first — the multi-tool functions are built around it.',
+      'Integrated Tools: Flat-head screwdriver, bottle opener, and capacitive stylus in one seamless body.',
+      '316 Stainless Steel: Knurled grip section for control; the construction survives daily carry.',
+    ],
     description:
       'A full-size precision ballpoint pen with integrated multi-tool functions including a flat-head screwdriver, bottle opener, and capacitive stylus tip. 316 stainless steel construction with a comfortable knurled grip section. A genuinely useful gift that earns daily carry.',
     category: 'Writing Instruments',
@@ -190,6 +233,11 @@ const newProducts = [
     id: 'precision-brass-spinning-01',
     name: 'Precision Brass Spinning Top',
     tagline: 'Three minutes of spin from a single finger flick',
+    highlights: [
+      'Single Billet Brass: Weight distribution inherent to the material — not added or engineered in.',
+      'Tungsten Carbide Tip: Near-zero friction contact point for consistent, extended spin times.',
+      'Invites Curiosity: A desk object that signals attention to detail without saying a word.',
+    ],
     description:
       'Machined from a single billet of solid brass with a tungsten carbide tip for maximum spin time and minimal friction. Set it spinning on any flat surface. The weight, balance, and sound are immediately recognisable as something made with intent. A desk object that invites curiosity and rewards patience.',
     category: 'EDC Accessories',
@@ -211,6 +259,11 @@ const newProducts = [
     id: 'tactical-stainless-steel-pen-01',
     name: 'Tactical Stainless Steel Pen',
     tagline: 'Engineered to write anywhere. Built to last forever.',
+    highlights: [
+      '316 Steel, Single Billet: Clip and barrel machined together — no welds, no failure points.',
+      'Pressurised Cartridge: Writes upside down, at altitude, and in extreme temperatures without skipping.',
+      'Precision Knurling: Grip pattern machined for secure control in any condition.',
+    ],
     description:
       '316 stainless steel construction with precision knurling for grip control in any condition. Uses a pressurised cartridge that writes upside down, at altitude, and in extreme temperatures. The clip is machined from the same billet as the barrel — no welds, no weakness. The pen that outlasts the notebook.',
     category: 'Writing Instruments',
@@ -235,6 +288,11 @@ const newProducts = [
     id: 'titanium-anti-static-comb-01',
     name: 'Titanium Anti-Static Comb',
     tagline: 'The last comb you will ever need',
+    highlights: [
+      'Grade 5 Titanium: 18g of virtually indestructible material — the last comb you will ever buy.',
+      'Anti-Static Treatment: Prevents hair from clinging to the teeth throughout the day.',
+      'Hypoallergenic: Safe for sensitive skin; will not rust, stain, or react over a lifetime of use.',
+    ],
     description:
       'Grade 5 titanium with an anti-static treatment that prevents hair from clinging to the teeth. Precision-cut with no sharp edges. At 18g, it disappears in a jacket pocket. Hypoallergenic, corrosion-proof, and virtually indestructible. A gift that signals thoughtfulness and quality without being showy.',
     category: 'EDC Accessories',
@@ -258,6 +316,11 @@ const newProducts = [
     id: 'titanium-water-bottle-01',
     name: 'Titanium Water Bottle',
     tagline: 'Pure taste. No plastic. No compromise.',
+    highlights: [
+      'Pure Titanium: No liner, no coating — just metal and water, with zero taste or odour transfer.',
+      '90g for 500ml: Weighs less than most stainless steel caps alone — the lightest serious bottle available.',
+      'Brushed Satin Finish: Resists fingerprints and surface scratches equally, with no maintenance required.',
+    ],
     description:
       'Single-wall titanium construction that never imparts taste or odour. No liner, no coatings — just pure metal meeting pure water. At 90g for a 500ml bottle, it weighs less than the water inside. The brushed satin finish resists fingerprints and scratches in equal measure. A gift that travels.',
     category: 'Drinkware',

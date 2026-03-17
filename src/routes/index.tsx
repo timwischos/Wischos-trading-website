@@ -4,9 +4,10 @@ import { HeroSection } from '@/components/sections/HeroSection'
 import { ValuePropSection } from '@/components/sections/ValuePropSection'
 import { DifferentiatorSection } from '@/components/sections/DifferentiatorSection'
 import { CredibilitySection } from '@/components/sections/CredibilitySection'
-import { ProductPreviewSection } from '@/components/sections/ProductPreviewSection'
 import { CtaSection } from '@/components/sections/CtaSection'
 import { ImageTextSection } from '@/components/sections/ImageTextSection'
+import { HomepageProductsSection } from '@/components/sections/HomepageProductsSection'
+import { getProducts } from '@/server/getProducts'
 
 export const Route = createFileRoute('/')({
   head: () => ({
@@ -15,10 +16,12 @@ export const Route = createFileRoute('/')({
       { name: 'description', content: siteMeta.routes.home.description },
     ],
   }),
+  loader: () => getProducts(),
   component: HomePage,
 })
 
 function HomePage() {
+  const products = Route.useLoaderData()
   return (
     <>
       <HeroSection />
@@ -39,10 +42,10 @@ function HomePage() {
         ctaHref="/contact"
         imageRight
       />
+      <HomepageProductsSection products={products.slice(0, 8)} />
       <ValuePropSection />
       <DifferentiatorSection />
       <CredibilitySection />
-      <ProductPreviewSection />
       <CtaSection />
     </>
   )
