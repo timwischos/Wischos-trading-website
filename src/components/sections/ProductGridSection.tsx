@@ -18,7 +18,7 @@ export function ProductCard({ product }: ProductCardProps) {
     <Link
       to={`/products/${product.id}` as RouterTo}
       aria-label={product.name}
-      style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}
+      style={{ textDecoration: 'none', color: 'inherit', display: 'block', cursor: 'pointer' }}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
@@ -51,13 +51,13 @@ export function ProductCard({ product }: ProductCardProps) {
 
       {/* Info */}
       <div style={{ padding: '0.875rem 1rem 1.25rem', borderTop: '1px solid var(--grid-color)' }}>
-        <p style={{ fontSize: '0.62rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: '#aaa', marginBottom: '0.35rem' }}>
+        <p style={{ fontSize: '0.75rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: '#767676', marginBottom: '0.35rem' }}>
           {product.category}
         </p>
         <p className="display-title" style={{ fontSize: '1.05rem', fontWeight: 300, color: '#0a0a0a', lineHeight: 1.25, marginBottom: '0.4rem' }}>
           {product.name}
         </p>
-        <p style={{ fontSize: '0.7rem', color: '#bbb', letterSpacing: '0.04em' }}>
+        <p style={{ fontSize: '0.75rem', color: '#6b6b6b', letterSpacing: '0.04em' }}>
           MOQ {product.moq} sets
         </p>
       </div>
@@ -71,7 +71,7 @@ export function ProductGridSection({ products }: { products: DbProduct[] }) {
       {/* Header */}
       <div style={{ padding: '2.5rem 1.5rem 2rem', borderBottom: '1px solid var(--grid-color)' }}>
         <div className="page-wrap" style={{ width: '100%', margin: 0, maxWidth: 'none' }}>
-          <p style={{ fontSize: '0.68rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: '#888', marginBottom: '0.75rem' }}>
+          <p style={{ fontSize: '0.75rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: '#767676', marginBottom: '0.75rem' }}>
             Our Products
           </p>
           <h1 className="display-title" style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 300, lineHeight: 1.05, marginBottom: '0.75rem' }}>
@@ -86,7 +86,7 @@ export function ProductGridSection({ products }: { products: DbProduct[] }) {
 
       {/* Grid — border lines between cells */}
       {products.length === 0 ? (
-        <p style={{ padding: '3rem 1.5rem', color: '#aaa', fontSize: '0.9rem' }}>No products found.</p>
+        <p style={{ padding: '3rem 1.5rem', color: '#767676', fontSize: '0.9rem' }}>No products found.</p>
       ) : (
         <div style={{
           display: 'grid',

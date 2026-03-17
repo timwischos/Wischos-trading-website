@@ -14,28 +14,41 @@ interface ProductDetailSectionProps {
 
 function AccordionSection({ title, children }: { title: string; children: React.ReactNode }) {
   const [open, setOpen] = useState(false)
+  const id = title.toLowerCase().replace(/\s+/g, '-')
   return (
     <div>
       <button
         onClick={() => setOpen((o) => !o)}
+        aria-expanded={open}
+        aria-controls={`accordion-${id}`}
+        id={`accordion-trigger-${id}`}
         style={{
           display: 'flex', justifyContent: 'space-between', alignItems: 'center',
           width: '100%', background: 'none', border: 'none', cursor: 'pointer',
           padding: '0.875rem 0', borderTop: '1px solid #e5e5e5',
         }}
       >
-        <span style={{ fontSize: '0.75rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: '#888' }}>
+        <span style={{ fontSize: '0.75rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: '#6b6b6b' }}>
           {title}
         </span>
-        <span style={{ fontSize: '1.25rem', lineHeight: 1, color: '#555', fontWeight: 300 }}>
+        <span style={{ fontSize: '1.25rem', lineHeight: 1, color: '#4a4a4a', fontWeight: 300 }}>
           {open ? '−' : '+'}
         </span>
       </button>
-      {open && (
+      <div
+        id={`accordion-${id}`}
+        role="region"
+        aria-labelledby={`accordion-trigger-${id}`}
+        style={{
+          overflow: 'hidden',
+          maxHeight: open ? '600px' : '0',
+          transition: 'max-height 250ms ease',
+        }}
+      >
         <div style={{ paddingBottom: '1.25rem' }}>
           {children}
         </div>
-      )}
+      </div>
     </div>
   )
 }
@@ -60,8 +73,8 @@ export function ProductLightbox({ product, initialIdx = 0 }: { product: Product;
     <DialogPrimitive.Root onOpenChange={() => { setIdx(initialIdx); setZoomed(false) }}>
       <DialogPrimitive.Trigger asChild>
         <button
-          className="w-full focus-visible:outline-none"
-          style={{ cursor: 'zoom-in' }}
+          className="w-full"
+          style={{ cursor: 'zoom-in', border: 'none', padding: 0, background: 'none', display: 'block' }}
           aria-label={`View ${product.name} full size`}
         >
           <img
@@ -204,7 +217,7 @@ export function ProductDetailSection({ product }: ProductDetailSectionProps) {
 
             {/* Category + Name + Highlights */}
             <div>
-              <p style={{ fontSize: '0.7rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: '#888', marginBottom: '0.75rem' }}>
+              <p style={{ fontSize: '0.75rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: '#6b6b6b', marginBottom: '0.75rem' }}>
                 {product.category}
               </p>
               <h1 style={{ fontSize: 'clamp(1.75rem, 3vw, 2.5rem)', fontWeight: 700, lineHeight: 1.1, marginBottom: '0.75rem' }}>
@@ -236,7 +249,7 @@ export function ProductDetailSection({ product }: ProductDetailSectionProps) {
 
             {/* Description */}
             <div>
-              <p style={{ fontSize: '0.75rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: '#888', marginBottom: '0.75rem' }}>
+              <p style={{ fontSize: '0.75rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: '#6b6b6b', marginBottom: '0.75rem' }}>
                 About This Product
               </p>
               {product.description.split('\n\n').map((para, i) => (
@@ -253,7 +266,7 @@ export function ProductDetailSection({ product }: ProductDetailSectionProps) {
                   <tbody>
                     {product.specifications.map((spec, i) => (
                       <tr key={i} style={{ borderBottom: '1px solid #f0f0f0' }}>
-                        <td style={{ padding: '0.5rem 0.75rem 0.5rem 0', fontSize: '0.8rem', color: '#888', width: '45%', verticalAlign: 'top' }}>
+                        <td style={{ padding: '0.5rem 0.75rem 0.5rem 0', fontSize: '0.8rem', color: '#6b6b6b', width: '45%', verticalAlign: 'top' }}>
                           {spec.label}
                         </td>
                         <td style={{ padding: '0.5rem 0', fontSize: '0.85rem', color: '#333', verticalAlign: 'top' }}>
@@ -292,12 +305,15 @@ export function ProductDetailSection({ product }: ProductDetailSectionProps) {
                   display: 'inline-block', background: '#060606', color: '#fff',
                   padding: '0.875rem 2rem', fontSize: '0.8rem', letterSpacing: '0.1em',
                   textTransform: 'uppercase', textDecoration: 'none', width: '100%',
-                  textAlign: 'center', boxSizing: 'border-box',
+                  textAlign: 'center', boxSizing: 'border-box', cursor: 'pointer',
+                  transition: 'background 150ms ease',
                 }}
+                onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = '#2a2a2a' }}
+                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = '#060606' }}
               >
                 Request a Quote
               </Link>
-              <p style={{ marginTop: '0.75rem', fontSize: '0.75rem', color: '#aaa', textAlign: 'center' }}>
+              <p style={{ marginTop: '0.75rem', fontSize: '0.75rem', color: '#6b6b6b', textAlign: 'center' }}>
                 We respond to all inquiries within 1 business day.
               </p>
             </div>

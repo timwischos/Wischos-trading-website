@@ -16,10 +16,10 @@ const companyLinks = [
 ]
 
 const labelStyle: React.CSSProperties = {
-  fontSize: '0.62rem',
+  fontSize: '0.75rem',
   letterSpacing: '0.14em',
   textTransform: 'uppercase',
-  color: '#888',
+  color: '#6b6b6b',
   marginBottom: '1.5rem',
 }
 
@@ -30,36 +30,38 @@ const linkStyle: React.CSSProperties = {
   textDecoration: 'none',
   marginBottom: '0.75rem',
   transition: 'color 150ms ease',
+  cursor: 'pointer',
 }
 
 const subLinkStyle: React.CSSProperties = {
   display: 'block',
   fontSize: '0.8rem',
-  color: '#888',
+  color: '#6b6b6b',
   textDecoration: 'none',
   marginBottom: '0.55rem',
   paddingLeft: '0.85rem',
   borderLeft: '1px solid var(--grid-color)',
   transition: 'color 150ms ease',
+  cursor: 'pointer',
 }
 
-// Placeholder social icon (square)
+// Placeholder social icon — uses button for keyboard accessibility
 function SocialPlaceholder({ label }: { label: string }) {
   return (
-    <div
+    <button
       aria-label={label}
       style={{
         width: '2rem', height: '2rem',
         border: '1px solid var(--grid-color)',
         display: 'flex', alignItems: 'center', justifyContent: 'center',
-        cursor: 'pointer',
+        cursor: 'pointer', background: 'none',
         transition: 'border-color 150ms ease',
       }}
       onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = '#0a0a0a' }}
       onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = 'var(--grid-color)' }}
     >
-      <div style={{ width: '0.9rem', height: '0.9rem', background: '#ccc', borderRadius: '1px' }} />
-    </div>
+      <div style={{ width: '0.9rem', height: '0.9rem', background: '#bbb', borderRadius: '1px' }} />
+    </button>
   )
 }
 
@@ -83,15 +85,20 @@ export function SiteFooter() {
             display: 'flex', alignItems: 'center', justifyContent: 'center',
             marginBottom: '1.25rem',
           }}>
-            <span style={{ fontSize: '0.65rem', color: '#bbb', letterSpacing: '0.08em', textTransform: 'uppercase' }}>Logo</span>
+            <span style={{ fontSize: '0.65rem', color: '#999', letterSpacing: '0.08em', textTransform: 'uppercase' }}>Logo</span>
           </div>
 
-          <p style={{ fontSize: '0.8rem', color: '#666', lineHeight: 1.65, maxWidth: '22ch', marginBottom: '1rem' }}>
+          <p style={{ fontSize: '0.8rem', color: '#4a4a4a', lineHeight: 1.65, maxWidth: '22ch', marginBottom: '1rem' }}>
             Premium metal corporate gifts. Custom branding from MOQ 50 sets.
           </p>
-          <p style={{ fontSize: '0.75rem', color: '#aaa', marginBottom: '1.75rem' }}>
+          <a
+            href="mailto:inquiries@wischosgift.com"
+            style={{ fontSize: '0.75rem', color: '#6b6b6b', display: 'block', marginBottom: '1.75rem', textDecoration: 'none', transition: 'color 150ms ease' }}
+            onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = '#0a0a0a' }}
+            onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = '#6b6b6b' }}
+          >
             inquiries@wischosgift.com
-          </p>
+          </a>
 
           {/* Social icons */}
           <div style={{ display: 'flex', gap: '0.6rem' }}>
@@ -117,7 +124,7 @@ export function SiteFooter() {
               style={{ ...linkStyle, marginBottom: 0, color: productsHovered ? '#0a0a0a' : '#444', display: 'flex', alignItems: 'center', gap: '0.4rem' }}
             >
               All Products
-              <span style={{ fontSize: '0.6rem', color: '#aaa', transition: 'transform 150ms ease', display: 'inline-block', transform: productsHovered ? 'rotate(90deg)' : 'none' }}>▶</span>
+              <span style={{ fontSize: '0.6rem', color: '#6b6b6b', transition: 'transform 150ms ease', display: 'inline-block', transform: productsHovered ? 'rotate(90deg)' : 'none' }}>▶</span>
             </Link>
 
             {/* Subcategories */}
@@ -133,7 +140,7 @@ export function SiteFooter() {
                   to={link.href as any}
                   style={subLinkStyle}
                   onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = '#0a0a0a' }}
-                  onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = '#888' }}
+                  onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = '#6b6b6b' }}
                 >
                   {link.label}
                 </Link>
@@ -161,10 +168,10 @@ export function SiteFooter() {
 
       {/* Bottom bar */}
       <div style={{ padding: '1rem 2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '0.5rem' }}>
-        <p style={{ fontSize: '0.72rem', color: '#bbb', letterSpacing: '0.04em' }}>
+        <p style={{ fontSize: '0.72rem', color: '#6b6b6b', letterSpacing: '0.04em' }}>
           &copy; {new Date().getFullYear()} Wischos Gift Trading Co. All rights reserved.
         </p>
-        <p style={{ fontSize: '0.72rem', color: '#bbb' }}>
+        <p style={{ fontSize: '0.72rem', color: '#6b6b6b' }}>
           B2B Custom Metal Gifts · MOQ 50
         </p>
       </div>
