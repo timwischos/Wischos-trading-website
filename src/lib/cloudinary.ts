@@ -16,7 +16,7 @@ const BASE = `https://res.cloudinary.com/${CLOUD_NAME}`
  */
 export function cloudinaryUrl(
   path: string,
-  opts?: { w?: number; h?: number; fill?: boolean }
+  opts?: { w?: number; h?: number; fill?: boolean; dpr?: number }
 ): string {
   if (!path) return path
 
@@ -36,7 +36,8 @@ export function cloudinaryUrl(
   const transforms: string[] = ['f_auto', 'q_auto']
   if (opts?.w) transforms.push(`w_${opts.w}`)
   if (opts?.h) transforms.push(`h_${opts.h}`)
-  if (opts?.w && opts?.h) transforms.push(opts.fill !== false ? 'c_fill' : 'c_fill')
+  if (opts?.w && opts?.h) transforms.push('c_fill')
+  if (opts?.dpr) transforms.push(`dpr_${opts.dpr}`)
   const tx = transforms.join(',')
 
   return `${BASE}/image/upload/${tx}/${stripped}`

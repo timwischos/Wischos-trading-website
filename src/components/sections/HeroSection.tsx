@@ -9,9 +9,10 @@ export function HeroSection() {
     <section style={{ position: 'relative', width: '100%', height: '90vh', minHeight: '540px', overflow: 'hidden' }}>
       {/* Banner image */}
       <img
-        src={cloudinaryUrl('/images/banner')}
+        src={cloudinaryUrl('/images/banner', { w: 1600 })}
         alt="Wischos Gift — Custom Metal Corporate Gift Sets"
         loading="eager"
+        fetchPriority="high"
         style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', display: 'block' }}
       />
       <div style={{ position: 'absolute', inset: 0, background: 'rgba(0,0,0,0.25)' }} />

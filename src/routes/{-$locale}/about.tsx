@@ -75,6 +75,7 @@ function AboutPage() {
             src="https://res.cloudinary.com/dcivh8ovs/video/upload/v1774942569/how-it-works_rnzm15.mp4"
             controls
             playsInline
+            preload="metadata"
             style={{ display: 'block', width: '100%', maxWidth: '1200px', margin: '0 auto' }}
           />
         </div>

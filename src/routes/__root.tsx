@@ -38,6 +38,9 @@ export const Route = createRootRoute({
       { name: 'description', content: siteMeta.defaultDescription },
     ],
     links: [
+      { rel: 'preconnect', href: 'https://res.cloudinary.com' },
+      { rel: 'dns-prefetch', href: 'https://res.cloudinary.com' },
+      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
       { rel: 'stylesheet', href: appCss },
       { rel: 'icon', href: '/favicon.ico' },
     ],
