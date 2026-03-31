@@ -36,7 +36,7 @@ export function buildCanonical(path: string) {
 
 export const siteMeta = {
   siteName: 'Wischos Gift',
-  siteUrl: 'https://wischos-trading-website.vercel.app',
+  siteUrl: 'https://wischosgift.com',
   legalName: 'Anhui Wischos International Trading Co. Ltd',
   email: 'inquiries@wischosgift.com',
   defaultOgImage: '/products/WP-401-pure-titanium-vacuum-insulated-bottle/pure-titanium-vacuum-insulated-bottle-lifestyle.avif',
