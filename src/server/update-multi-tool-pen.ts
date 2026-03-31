@@ -18,18 +18,20 @@ async function main() {
     .update(products)
     .set({
       name: '6-in-1 Precision Metal Tool Pen',
-      tagline: 'Professional B2B Choice | Versatile, Solid, Functional',
+      tagline: 'Silver & Black Colorways | Spirit Level | 10cm Ruler | 6-Tool Pocket Kit',
       highlights: [
-        '6-Way Integration: Ballpoint pen, stylus, bubble level, ruler, and double-ended screwdriver bit — a complete pocket toolkit in one instrument.',
-        'Lacquer Finish: Uniform lacquer coating provides a stable grip, resists daily stains, and delivers a modern industrial aesthetic.',
+        '6-Way Integration: Ballpoint pen, stylus, spirit level, 10cm ruler scale, and double-ended screwdriver bit — a complete pocket engineering toolkit in one instrument.',
+        'Precision Spirit Level: The integrated spirit level window provides a quick, accurate horizontal reference for field work, installation tasks, or presentations — more professional and accurate terminology than a basic "bubble level".',
+        'Two Color Editions: Available in Silver and Black lacquer finishes — order both for a premium dual-tone gift set or choose the colorway that best matches your corporate palette.',
         'Solid Metal Build: Zinc/aluminum alloy construction with weighted feel and durability far superior to standard plastic alternatives.',
       ],
       description:
-        'Pragmatic tools for professional efficiency.\n\nIn high-paced environments, tool integration defines productivity. This 6-in-1 precision metal tool pen utilizes a sleek metallic body finished with a lacquer coating — a treatment that not only enhances visual consistency but ensures the product is rugged enough for both office and field scenarios.\n\nBeyond its function as a smooth-writing instrument, it serves as a miniaturized workstation for your pocket. Whether for touchscreen interaction, minor mechanical adjustments, or leveling tasks, it provides immediate functional support. A functional essential that prioritizes reliability and utility, offering a cost-effective solution with high perceived value for corporate gifting.',
+        'Pragmatic tools for professional efficiency.\n\nAvailable in Silver and Black lacquer finishes, this 6-in-1 precision metal tool pen covers both classic and modern corporate aesthetics. The integrated spirit level window provides an accurate horizontal reference for installation, presentations, or precision field work — a technically correct and more professional term than "bubble level" in engineering and construction contexts.\n\nThe 10cm ruler scale etched on the barrel handles quick measurements without reaching for additional tools. Whether for touchscreen interaction, minor mechanical adjustments, or leveling tasks, it provides immediate functional support. A functional essential that prioritizes reliability and utility, offering a cost-effective solution with high perceived value for corporate gifting.',
       specifications: [
         { label: 'Material', value: 'Industrial-Grade Metal Alloy (Zinc/Aluminum)' },
         { label: 'Finish', value: 'Lacquer Finish' },
-        { label: 'Integrated Tools', value: 'Writing, Stylus, Bubble Level, Ruler, Screwdriver Bits' },
+        { label: 'Color Options', value: 'Silver / Black (Lacquer Finish)' },
+        { label: 'Integrated Tools', value: 'Ballpoint Pen, Stylus, Spirit Level, 10cm Ruler Scale, Flat + Phillips Screwdriver' },
         { label: 'Dimensions', value: '149mm × 10mm' },
         { label: 'Weight', value: 'Approx. 30g (Solid weighted feel)' },
         { label: 'Durability', value: 'Corrosion-resistant, Rigid structure, High coating adhesion' },

@@ -1,24 +1,39 @@
 import { createFileRoute, notFound, Link, type LinkProps } from '@tanstack/react-router'
 import { ProductDetailSection } from '@/components/sections/ProductDetailSection'
-import { getProductById } from '@/server/getProducts'
+import { getProductById, getProducts } from '@/server/getProducts'
 import type { DbProduct } from '@/server/schema'
+import { siteMeta, buildOgMeta, buildCanonical } from '@/content/meta'
 
 type RouterTo = LinkProps['to']
 
 export const Route = createFileRoute('/{-$locale}/products/$productId')({
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   loader: (async ({ params }: any) => {
-    const product = await getProductById({ data: params.productId })
+    const [product, allProducts] = await Promise.all([
+      getProductById({ data: params.productId }),
+      getProducts({ data: null }),
+    ])
     if (!product) throw notFound()
-    return { product }
+    const related = allProducts
+      .filter(p => p.category === product.category && p.id !== product.id)
+      .slice(0, 4)
+    return { product, related }
   }) as any,
   head: ({ loaderData }) => {
     if (!loaderData?.product) return {}
     const { product } = loaderData
+    const title = `${product.name} | Wischos Gift`
     return {
       meta: [
-        { title: `${product.name} | Wischos Gift` },
+        { title },
         { name: 'description', content: product.tagline },
+        ...buildOgMeta({
+          title,
+          description: product.tagline,
+          image: product.heroImage || product.images[0],
+          type: 'product',
+          url: `/products/${product.id}`,
+        }),
       ],
       scripts: [
         {
@@ -27,18 +42,47 @@ export const Route = createFileRoute('/{-$locale}/products/$productId')({
             '@context': 'https://schema.org',
             '@type': 'Product',
             name: product.name,
-            description: product.description,
-            brand: { '@type': 'Brand', name: 'Wischos Gift' },
+            description: product.tagline,
+            sku: product.id,
+            image: product.images.slice(0, 3).map(
+              (img: string) => `${siteMeta.siteUrl}${img}`
+            ),
+            ...(product.materials?.length ? { material: product.materials.join(', ') } : {}),
+            category: product.category,
+            brand: { '@type': 'Brand', name: siteMeta.siteName },
+            manufacturer: { '@type': 'Organization', name: siteMeta.legalName },
             offers: {
               '@type': 'Offer',
+              url: `${siteMeta.siteUrl}/products/${product.id}`,
+              availability: 'https://schema.org/InStock',
+              priceCurrency: 'USD',
               priceSpecification: {
                 '@type': 'PriceSpecification',
-                price: 'On Request',
+                description: `Price on request. MOQ 100 pcs.`,
               },
+              seller: { '@type': 'Organization', name: siteMeta.siteName },
             },
           }),
         },
+        ...(product.faqs?.length
+          ? [{
+              type: 'application/ld+json',
+              children: JSON.stringify({
+                '@context': 'https://schema.org',
+                '@type': 'FAQPage',
+                mainEntity: product.faqs.map((faq: { q: string; a: string }) => ({
+                  '@type': 'Question',
+                  name: faq.q,
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: faq.a,
+                  },
+                })),
+              }),
+            }]
+          : []),
       ],
+      links: [buildCanonical(`/products/${product.id}`)],
     }
   },
   notFoundComponent: () => (
@@ -56,6 +100,6 @@ export const Route = createFileRoute('/{-$locale}/products/$productId')({
 })
 
 function ProductDetailPage() {
-  const { product } = Route.useLoaderData() as { product: DbProduct }
-  return <ProductDetailSection product={product} />
+  const { product, related } = Route.useLoaderData() as { product: DbProduct; related: DbProduct[] }
+  return <ProductDetailSection product={product} relatedProducts={related} />
 }

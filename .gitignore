@@ -13,3 +13,9 @@ dist-ssr
 .vercel
 __unconfig*
 todos.json
+
+# Media files — hosted on Cloudinary, not committed to Git
+public/products/
+public/images/
+public/how-it-works.mp4
+public/wischos-logo.png

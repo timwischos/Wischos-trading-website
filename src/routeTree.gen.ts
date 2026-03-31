@@ -13,11 +13,15 @@ import { Route as Char123LocaleChar125RouteImport } from './routes/{-$locale}'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as Char123LocaleChar125InquiryRouteImport } from './routes/{-$locale}/inquiry'
-import { Route as Char123LocaleChar125HowItWorksRouteImport } from './routes/{-$locale}/how-it-works'
+import { Route as Char123LocaleChar125FeaturedRouteImport } from './routes/{-$locale}/featured'
 import { Route as Char123LocaleChar125ContactRouteImport } from './routes/{-$locale}/contact'
+import { Route as Char123LocaleChar125BlogRouteImport } from './routes/{-$locale}/blog'
 import { Route as Char123LocaleChar125AboutRouteImport } from './routes/{-$locale}/about'
 import { Route as Char123LocaleChar125ProductsIndexRouteImport } from './routes/{-$locale}/products/index'
+import { Route as Char123LocaleChar125BlogIndexRouteImport } from './routes/{-$locale}/blog/index'
 import { Route as Char123LocaleChar125ProductsProductIdRouteImport } from './routes/{-$locale}/products/$productId'
+import { Route as Char123LocaleChar125GiftSetsSetIdRouteImport } from './routes/{-$locale}/gift-sets/$setId'
+import { Route as Char123LocaleChar125BlogSlugRouteImport } from './routes/{-$locale}/blog/$slug'
 
 const Char123LocaleChar125Route = Char123LocaleChar125RouteImport.update({
   id: '/{-$locale}',
@@ -40,16 +44,22 @@ const Char123LocaleChar125InquiryRoute =
     path: '/inquiry',
     getParentRoute: () => Char123LocaleChar125Route,
   } as any)
-const Char123LocaleChar125HowItWorksRoute =
-  Char123LocaleChar125HowItWorksRouteImport.update({
-    id: '/how-it-works',
-    path: '/how-it-works',
+const Char123LocaleChar125FeaturedRoute =
+  Char123LocaleChar125FeaturedRouteImport.update({
+    id: '/featured',
+    path: '/featured',
     getParentRoute: () => Char123LocaleChar125Route,
   } as any)
 const Char123LocaleChar125ContactRoute =
   Char123LocaleChar125ContactRouteImport.update({
     id: '/contact',
     path: '/contact',
+    getParentRoute: () => Char123LocaleChar125Route,
+  } as any)
+const Char123LocaleChar125BlogRoute =
+  Char123LocaleChar125BlogRouteImport.update({
+    id: '/blog',
+    path: '/blog',
     getParentRoute: () => Char123LocaleChar125Route,
   } as any)
 const Char123LocaleChar125AboutRoute =
@@ -64,11 +74,29 @@ const Char123LocaleChar125ProductsIndexRoute =
     path: '/products/',
     getParentRoute: () => Char123LocaleChar125Route,
   } as any)
+const Char123LocaleChar125BlogIndexRoute =
+  Char123LocaleChar125BlogIndexRouteImport.update({
+    id: '/',
+    path: '/',
+    getParentRoute: () => Char123LocaleChar125BlogRoute,
+  } as any)
 const Char123LocaleChar125ProductsProductIdRoute =
   Char123LocaleChar125ProductsProductIdRouteImport.update({
     id: '/products/$productId',
     path: '/products/$productId',
     getParentRoute: () => Char123LocaleChar125Route,
+  } as any)
+const Char123LocaleChar125GiftSetsSetIdRoute =
+  Char123LocaleChar125GiftSetsSetIdRouteImport.update({
+    id: '/gift-sets/$setId',
+    path: '/gift-sets/$setId',
+    getParentRoute: () => Char123LocaleChar125Route,
+  } as any)
+const Char123LocaleChar125BlogSlugRoute =
+  Char123LocaleChar125BlogSlugRouteImport.update({
+    id: '/$slug',
+    path: '/$slug',
+    getParentRoute: () => Char123LocaleChar125BlogRoute,
   } as any)
 
 export interface FileRoutesByFullPath {
@@ -76,10 +104,14 @@ export interface FileRoutesByFullPath {
   '/privacy': typeof PrivacyRoute
   '/{-$locale}': typeof Char123LocaleChar125RouteWithChildren
   '/{-$locale}/about': typeof Char123LocaleChar125AboutRoute
+  '/{-$locale}/blog': typeof Char123LocaleChar125BlogRouteWithChildren
   '/{-$locale}/contact': typeof Char123LocaleChar125ContactRoute
-  '/{-$locale}/how-it-works': typeof Char123LocaleChar125HowItWorksRoute
+  '/{-$locale}/featured': typeof Char123LocaleChar125FeaturedRoute
   '/{-$locale}/inquiry': typeof Char123LocaleChar125InquiryRoute
+  '/{-$locale}/blog/$slug': typeof Char123LocaleChar125BlogSlugRoute
+  '/{-$locale}/gift-sets/$setId': typeof Char123LocaleChar125GiftSetsSetIdRoute
   '/{-$locale}/products/$productId': typeof Char123LocaleChar125ProductsProductIdRoute
+  '/{-$locale}/blog/': typeof Char123LocaleChar125BlogIndexRoute
   '/{-$locale}/products/': typeof Char123LocaleChar125ProductsIndexRoute
 }
 export interface FileRoutesByTo {
@@ -88,9 +120,12 @@ export interface FileRoutesByTo {
   '/{-$locale}': typeof Char123LocaleChar125RouteWithChildren
   '/{-$locale}/about': typeof Char123LocaleChar125AboutRoute
   '/{-$locale}/contact': typeof Char123LocaleChar125ContactRoute
-  '/{-$locale}/how-it-works': typeof Char123LocaleChar125HowItWorksRoute
+  '/{-$locale}/featured': typeof Char123LocaleChar125FeaturedRoute
   '/{-$locale}/inquiry': typeof Char123LocaleChar125InquiryRoute
+  '/{-$locale}/blog/$slug': typeof Char123LocaleChar125BlogSlugRoute
+  '/{-$locale}/gift-sets/$setId': typeof Char123LocaleChar125GiftSetsSetIdRoute
   '/{-$locale}/products/$productId': typeof Char123LocaleChar125ProductsProductIdRoute
+  '/{-$locale}/blog': typeof Char123LocaleChar125BlogIndexRoute
   '/{-$locale}/products': typeof Char123LocaleChar125ProductsIndexRoute
 }
 export interface FileRoutesById {
@@ -99,10 +134,14 @@ export interface FileRoutesById {
   '/privacy': typeof PrivacyRoute
   '/{-$locale}': typeof Char123LocaleChar125RouteWithChildren
   '/{-$locale}/about': typeof Char123LocaleChar125AboutRoute
+  '/{-$locale}/blog': typeof Char123LocaleChar125BlogRouteWithChildren
   '/{-$locale}/contact': typeof Char123LocaleChar125ContactRoute
-  '/{-$locale}/how-it-works': typeof Char123LocaleChar125HowItWorksRoute
+  '/{-$locale}/featured': typeof Char123LocaleChar125FeaturedRoute
   '/{-$locale}/inquiry': typeof Char123LocaleChar125InquiryRoute
+  '/{-$locale}/blog/$slug': typeof Char123LocaleChar125BlogSlugRoute
+  '/{-$locale}/gift-sets/$setId': typeof Char123LocaleChar125GiftSetsSetIdRoute
   '/{-$locale}/products/$productId': typeof Char123LocaleChar125ProductsProductIdRoute
+  '/{-$locale}/blog/': typeof Char123LocaleChar125BlogIndexRoute
   '/{-$locale}/products/': typeof Char123LocaleChar125ProductsIndexRoute
 }
 export interface FileRouteTypes {
@@ -112,10 +151,14 @@ export interface FileRouteTypes {
     | '/privacy'
     | '/{-$locale}'
     | '/{-$locale}/about'
+    | '/{-$locale}/blog'
     | '/{-$locale}/contact'
-    | '/{-$locale}/how-it-works'
+    | '/{-$locale}/featured'
     | '/{-$locale}/inquiry'
+    | '/{-$locale}/blog/$slug'
+    | '/{-$locale}/gift-sets/$setId'
     | '/{-$locale}/products/$productId'
+    | '/{-$locale}/blog/'
     | '/{-$locale}/products/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -124,9 +167,12 @@ export interface FileRouteTypes {
     | '/{-$locale}'
     | '/{-$locale}/about'
     | '/{-$locale}/contact'
-    | '/{-$locale}/how-it-works'
+    | '/{-$locale}/featured'
     | '/{-$locale}/inquiry'
+    | '/{-$locale}/blog/$slug'
+    | '/{-$locale}/gift-sets/$setId'
     | '/{-$locale}/products/$productId'
+    | '/{-$locale}/blog'
     | '/{-$locale}/products'
   id:
     | '__root__'
@@ -134,10 +180,14 @@ export interface FileRouteTypes {
     | '/privacy'
     | '/{-$locale}'
     | '/{-$locale}/about'
+    | '/{-$locale}/blog'
     | '/{-$locale}/contact'
-    | '/{-$locale}/how-it-works'
+    | '/{-$locale}/featured'
     | '/{-$locale}/inquiry'
+    | '/{-$locale}/blog/$slug'
+    | '/{-$locale}/gift-sets/$setId'
     | '/{-$locale}/products/$productId'
+    | '/{-$locale}/blog/'
     | '/{-$locale}/products/'
   fileRoutesById: FileRoutesById
 }
@@ -177,11 +227,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof Char123LocaleChar125InquiryRouteImport
       parentRoute: typeof Char123LocaleChar125Route
     }
-    '/{-$locale}/how-it-works': {
-      id: '/{-$locale}/how-it-works'
-      path: '/how-it-works'
-      fullPath: '/{-$locale}/how-it-works'
-      preLoaderRoute: typeof Char123LocaleChar125HowItWorksRouteImport
+    '/{-$locale}/featured': {
+      id: '/{-$locale}/featured'
+      path: '/featured'
+      fullPath: '/{-$locale}/featured'
+      preLoaderRoute: typeof Char123LocaleChar125FeaturedRouteImport
       parentRoute: typeof Char123LocaleChar125Route
     }
     '/{-$locale}/contact': {
@@ -189,6 +239,13 @@ declare module '@tanstack/react-router' {
       path: '/contact'
       fullPath: '/{-$locale}/contact'
       preLoaderRoute: typeof Char123LocaleChar125ContactRouteImport
+      parentRoute: typeof Char123LocaleChar125Route
+    }
+    '/{-$locale}/blog': {
+      id: '/{-$locale}/blog'
+      path: '/blog'
+      fullPath: '/{-$locale}/blog'
+      preLoaderRoute: typeof Char123LocaleChar125BlogRouteImport
       parentRoute: typeof Char123LocaleChar125Route
     }
     '/{-$locale}/about': {
@@ -205,6 +262,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof Char123LocaleChar125ProductsIndexRouteImport
       parentRoute: typeof Char123LocaleChar125Route
     }
+    '/{-$locale}/blog/': {
+      id: '/{-$locale}/blog/'
+      path: '/'
+      fullPath: '/{-$locale}/blog/'
+      preLoaderRoute: typeof Char123LocaleChar125BlogIndexRouteImport
+      parentRoute: typeof Char123LocaleChar125BlogRoute
+    }
     '/{-$locale}/products/$productId': {
       id: '/{-$locale}/products/$productId'
       path: '/products/$productId'
@@ -212,23 +276,58 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof Char123LocaleChar125ProductsProductIdRouteImport
       parentRoute: typeof Char123LocaleChar125Route
     }
+    '/{-$locale}/gift-sets/$setId': {
+      id: '/{-$locale}/gift-sets/$setId'
+      path: '/gift-sets/$setId'
+      fullPath: '/{-$locale}/gift-sets/$setId'
+      preLoaderRoute: typeof Char123LocaleChar125GiftSetsSetIdRouteImport
+      parentRoute: typeof Char123LocaleChar125Route
+    }
+    '/{-$locale}/blog/$slug': {
+      id: '/{-$locale}/blog/$slug'
+      path: '/$slug'
+      fullPath: '/{-$locale}/blog/$slug'
+      preLoaderRoute: typeof Char123LocaleChar125BlogSlugRouteImport
+      parentRoute: typeof Char123LocaleChar125BlogRoute
+    }
   }
 }
 
+interface Char123LocaleChar125BlogRouteChildren {
+  Char123LocaleChar125BlogSlugRoute: typeof Char123LocaleChar125BlogSlugRoute
+  Char123LocaleChar125BlogIndexRoute: typeof Char123LocaleChar125BlogIndexRoute
+}
+
+const Char123LocaleChar125BlogRouteChildren: Char123LocaleChar125BlogRouteChildren =
+  {
+    Char123LocaleChar125BlogSlugRoute: Char123LocaleChar125BlogSlugRoute,
+    Char123LocaleChar125BlogIndexRoute: Char123LocaleChar125BlogIndexRoute,
+  }
+
+const Char123LocaleChar125BlogRouteWithChildren =
+  Char123LocaleChar125BlogRoute._addFileChildren(
+    Char123LocaleChar125BlogRouteChildren,
+  )
+
 interface Char123LocaleChar125RouteChildren {
   Char123LocaleChar125AboutRoute: typeof Char123LocaleChar125AboutRoute
+  Char123LocaleChar125BlogRoute: typeof Char123LocaleChar125BlogRouteWithChildren
   Char123LocaleChar125ContactRoute: typeof Char123LocaleChar125ContactRoute
-  Char123LocaleChar125HowItWorksRoute: typeof Char123LocaleChar125HowItWorksRoute
+  Char123LocaleChar125FeaturedRoute: typeof Char123LocaleChar125FeaturedRoute
   Char123LocaleChar125InquiryRoute: typeof Char123LocaleChar125InquiryRoute
+  Char123LocaleChar125GiftSetsSetIdRoute: typeof Char123LocaleChar125GiftSetsSetIdRoute
   Char123LocaleChar125ProductsProductIdRoute: typeof Char123LocaleChar125ProductsProductIdRoute
   Char123LocaleChar125ProductsIndexRoute: typeof Char123LocaleChar125ProductsIndexRoute
 }
 
 const Char123LocaleChar125RouteChildren: Char123LocaleChar125RouteChildren = {
   Char123LocaleChar125AboutRoute: Char123LocaleChar125AboutRoute,
+  Char123LocaleChar125BlogRoute: Char123LocaleChar125BlogRouteWithChildren,
   Char123LocaleChar125ContactRoute: Char123LocaleChar125ContactRoute,
-  Char123LocaleChar125HowItWorksRoute: Char123LocaleChar125HowItWorksRoute,
+  Char123LocaleChar125FeaturedRoute: Char123LocaleChar125FeaturedRoute,
   Char123LocaleChar125InquiryRoute: Char123LocaleChar125InquiryRoute,
+  Char123LocaleChar125GiftSetsSetIdRoute:
+    Char123LocaleChar125GiftSetsSetIdRoute,
   Char123LocaleChar125ProductsProductIdRoute:
     Char123LocaleChar125ProductsProductIdRoute,
   Char123LocaleChar125ProductsIndexRoute:

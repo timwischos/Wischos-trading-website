@@ -17,19 +17,19 @@ async function main() {
   await db
     .update(products)
     .set({
-      name: 'Industrial Precision Aluminum Pen Holder',
-      tagline: 'Ideal for B2B Corporate Sourcing | Solid, Minimalist, Permanent',
+      name: 'Precision Aluminum Pen Holder',
+      tagline: '6061-T6 Aluminum | Interior-Anodized | Solid, Minimalist, Permanent',
       highlights: [
         '500g Substantial Weight: Significantly heavier than market standards, providing a rock-solid foundation that won\'t tip over, even with heavy tools.',
         'Precision Chamfered Edges: Machined to a smooth, burr-free finish for a refined tactile experience and daily safety.',
         'Heavy-Duty Build: 2.5mm wall thickness—resistant to drops, warping, and wear. A reliable choice for corporate office setups and premium kits.',
       ],
       description:
-        'Building a more professional desktop. Reliability is the foundation of an organized workspace. Machined from high-strength aluminum alloy, this pen holder features a refined sandblasted and anodized finish, offering a matte metallic aesthetic that complements modern office environments.\n\nUnlike plastic or fabric organizers that fray, stain, or age over time, the all-metal construction ensures an indefinite lifespan. The dense oxide surface is resistant to dust and ink, allowing it to look brand new with just a simple wipe. This is a practical, industrial-grade essential that upgrades the "standard" through better materials, providing high perceived value for corporate gifting without the premium price tag.',
+        'Building a more professional desktop. Reliability is the foundation of an organized workspace. Machined from 6061-T6 aluminum alloy — the same aerospace-grade specification used in precision engineering — this pen holder features a refined sandblasted and anodized finish, offering a matte metallic aesthetic that complements modern office environments.\n\nThe interior is independently anodized to create a smooth, non-porous lining that resists ink transfer and staining from pens, markers, and metal tools. Unlike plastic or fabric organizers that fray, stain, or age over time, the all-metal construction ensures an indefinite lifespan. This is a practical, industrial-grade essential that upgrades the "standard" through better materials, providing high perceived value for corporate gifting without the premium price tag.',
       specifications: [
-        { label: 'Material', value: 'Industrial-Grade Aluminum Alloy (6000 Series)' },
+        { label: 'Material', value: '6061-T6 Aluminum Alloy (High-Strength)' },
         { label: 'Base Material', value: 'Non-slip PU Leather / Anodized Aluminum' },
-        { label: 'Finish', value: 'Anodized + Fine Sandblasting (Matte Finish)' },
+        { label: 'Finish', value: 'Exterior Sandblasted + Anodized; Interior Anodized (Stain-Resistant Lining)' },
         { label: 'Dimensions', value: 'Φ100mm × 80mm' },
         { label: 'Weight', value: 'Approx. 500g (1.1 lbs)' },
         { label: 'Wall Thickness', value: '2.5mm' },

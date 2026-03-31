@@ -1,34 +1,51 @@
 import { about } from '@/content/about'
+import { useFadeIn } from './useFadeIn'
 
 export function TrustSection() {
+  const ref = useFadeIn<HTMLElement>()
   return (
-    <section className="py-20">
-      <div className="page-wrap">
-        <h2 className="text-2xl font-bold text-[var(--sea-ink)] mb-8 text-center">Trust &amp; Transparency</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Left column — contact & quality */}
-          <div className="island-shell rounded-xl p-6">
-            <p className="text-xs island-kicker mb-2">Contact</p>
-            <a
-              href={`mailto:${about.trust.email}`}
-              className="text-[var(--lagoon-deep)] font-medium hover:underline"
-            >
-              {about.trust.email}
-            </a>
-            <p className="text-sm text-[var(--sea-ink)] opacity-70 mt-4">{about.trust.qualityStatement}</p>
-          </div>
+    <section ref={ref}>
+      <div style={{ padding: '2.5rem 1.5rem', borderBottom: '1px solid var(--grid-color)' }}>
+        <h2
+          className="display-title"
+          style={{ fontSize: 'clamp(1.5rem, 2.5vw, 2.25rem)', fontWeight: 300, color: '#0a0a0a' }}
+        >
+          Trust &amp; Transparency
+        </h2>
+      </div>
+      <div style={{ display: 'grid' }} className="grid-cols-1 lg:grid-cols-2">
+        {/* Contact + Quality statement */}
+        <div
+          style={{ padding: '2.5rem 1.75rem', borderBottom: '1px solid var(--grid-color)' }}
+          className="lg:border-r border-[var(--grid-color)]"
+        >
+          <p style={{ fontSize: '0.75rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: '#767676', marginBottom: '1rem' }}>
+            Contact
+          </p>
+          <a
+            href={`mailto:${about.trust.email}`}
+            style={{ fontSize: '0.95rem', color: '#0a0a0a', textDecoration: 'none', display: 'block', marginBottom: '1.5rem', fontWeight: 500 }}
+            onMouseEnter={e => { (e.currentTarget as HTMLElement).style.textDecoration = 'underline' }}
+            onMouseLeave={e => { (e.currentTarget as HTMLElement).style.textDecoration = 'none' }}
+          >
+            {about.trust.email}
+          </a>
+          <p style={{ fontSize: '0.85rem', color: '#555', lineHeight: 1.75 }}>
+            {about.trust.qualityStatement}
+          </p>
+        </div>
 
-          {/* Right column — registration */}
-          <div className="island-shell rounded-xl p-6">
-            <p className="text-xs island-kicker mb-2">{about.trust.registrationLabel}</p>
-            {import.meta.env.DEV && about.trust.registrationNumber.includes('PLACEHOLDER') && (
-              <p className="bg-yellow-100 text-yellow-800 text-xs px-3 py-2 rounded mb-3 border border-yellow-200">
-                DEV: Registration number placeholder — operator must fill in before launch
-              </p>
-            )}
-            <p className="text-sm text-[var(--sea-ink)]">{about.trust.registrationNumber}</p>
-            <p className="text-xs text-[var(--sea-ink)] opacity-60 mt-1">{about.trust.registrationNote}</p>
-          </div>
+        {/* Registration */}
+        <div style={{ padding: '2.5rem 1.75rem', borderBottom: '1px solid var(--grid-color)' }}>
+          <p style={{ fontSize: '0.75rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: '#767676', marginBottom: '1rem' }}>
+            {about.trust.registrationLabel}
+          </p>
+          <p style={{ fontSize: '0.9rem', color: '#0a0a0a', marginBottom: '0.5rem', fontWeight: 500 }}>
+            {about.trust.registrationNumber}
+          </p>
+          <p style={{ fontSize: '0.75rem', color: '#767676', lineHeight: 1.6 }}>
+            {about.trust.registrationNote}
+          </p>
         </div>
       </div>
     </section>

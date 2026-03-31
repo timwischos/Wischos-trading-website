@@ -1,38 +1,62 @@
 import { howItWorks } from '@/content/howItWorks'
-import { ClipboardList, FlaskConical, CheckSquare, Truck } from 'lucide-react'
-
-const stepIcons: Record<string, React.ComponentType<{ className?: string }>> = {
-  '01': ClipboardList,
-  '02': FlaskConical,
-  '03': CheckSquare,
-  '04': Truck,
-}
 
 export function ProcessStepsSection() {
   return (
-    <section className="py-24 rise-in">
-      <div className="page-wrap">
-        <h1 className="display-title text-center">{howItWorks.hero.heading}</h1>
-        <p className="mt-4 text-center text-[var(--sea-ink)] opacity-70 text-lg max-w-2xl mx-auto">
+    <section>
+      {/* Page header */}
+      <div style={{ padding: '4rem 1.5rem 3rem', borderBottom: '1px solid var(--grid-color)' }}>
+        <p style={{ fontSize: '0.75rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: '#767676', marginBottom: '0.75rem' }}>
+          Process
+        </p>
+        <h1
+          className="display-title"
+          style={{ fontSize: 'clamp(2rem, 4vw, 3.25rem)', fontWeight: 300, lineHeight: 1.05, color: '#0a0a0a', marginBottom: '1rem' }}
+        >
+          {howItWorks.hero.heading}
+        </h1>
+        <p style={{ fontSize: '0.9rem', color: '#555', lineHeight: 1.75, maxWidth: '42ch' }}>
           {howItWorks.hero.subheading}
         </p>
-        <ol className="flex flex-col gap-8 mt-16 max-w-3xl mx-auto">
-          {howItWorks.steps.map((step) => {
-            const Icon = stepIcons[step.number]
-            return (
-              <li key={step.number} className="flex gap-6 items-start">
-                <div className="flex-shrink-0 w-14 h-14 rounded-full bg-[var(--lagoon)] flex items-center justify-center text-white font-bold text-lg">
-                  {Icon ? <Icon className="h-6 w-6" /> : step.number}
-                </div>
-                <div>
-                  <p className="font-semibold text-[var(--sea-ink)] text-lg mb-2">{step.title}</p>
-                  <p className="text-[var(--sea-ink)] opacity-70">{step.body}</p>
-                </div>
-              </li>
-            )
-          })}
-        </ol>
       </div>
+
+      {/* Steps */}
+      {howItWorks.steps.map((step) => (
+        <div
+          key={step.number}
+          style={{ display: 'grid', borderBottom: '1px solid var(--grid-color)' }}
+          className="grid-cols-1 lg:grid-cols-[5rem_1fr_2fr]"
+        >
+          {/* Step number — hidden on mobile to avoid orphaned row */}
+          <div
+            style={{ padding: '2rem 1.5rem', alignItems: 'flex-start', justifyContent: 'center' }}
+            className="hidden lg:flex lg:border-r border-[var(--grid-color)]"
+          >
+            <span
+              className="display-title"
+              style={{ fontSize: '1.35rem', fontWeight: 300, color: '#ccc', lineHeight: 1 }}
+            >
+              {step.number}
+            </span>
+          </div>
+          {/* Step title */}
+          <div
+            style={{ padding: '2rem 1.5rem', borderBottom: '1px solid var(--grid-color)' }}
+            className="lg:border-b-0 lg:border-r border-[var(--grid-color)]"
+          >
+            <p style={{ fontSize: '0.9rem', fontWeight: 600, color: '#0a0a0a', lineHeight: 1.4 }}>
+              {step.title}
+            </p>
+          </div>
+          {/* Step body */}
+          <div style={{ padding: '2rem 1.5rem' }}>
+            <p style={{ fontSize: '0.85rem', color: '#555', lineHeight: 1.8 }}>
+              {step.body}
+            </p>
+          </div>
+        </div>
+      ))}
+
+
     </section>
   )
 }

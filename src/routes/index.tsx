@@ -1,51 +1,62 @@
 import { createFileRoute } from '@tanstack/react-router'
-import { siteMeta } from '@/content/meta'
+import { siteMeta, buildOgMeta, buildCanonical } from '@/content/meta'
 import { HeroSection } from '@/components/sections/HeroSection'
-import { ValuePropSection } from '@/components/sections/ValuePropSection'
-import { DifferentiatorSection } from '@/components/sections/DifferentiatorSection'
-import { CredibilitySection } from '@/components/sections/CredibilitySection'
 import { CtaSection } from '@/components/sections/CtaSection'
-import { ImageTextSection } from '@/components/sections/ImageTextSection'
 import { HomepageProductsSection } from '@/components/sections/HomepageProductsSection'
-import { getProducts } from '@/server/getProducts'
+import { HomepageFeaturedProductsSection } from '@/components/sections/HomepageFeaturedProductsSection'
+import { ProcessPreviewSection } from '@/components/sections/ProcessPreviewSection'
+import { ExpertNotesTeaser } from '@/components/sections/ExpertNotesTeaser'
+import { WhySection } from '@/components/sections/WhySection'
+import { getProductsByIds } from '@/server/getProducts'
+
+const FEATURED_PRODUCT_IDS = [
+  'WP-402-pure-titanium-capsule-flask-150ml',
+  'WP-207-carbon-fiber-magnetic-fidget-stick',
+  'WP-203-executive-zinc-alloy-letter-opener',
+  'WP-102-executive-dual-head-metal-pen',
+]
 
 export const Route = createFileRoute('/')({
   head: () => ({
     meta: [
       { title: siteMeta.routes.home.title },
       { name: 'description', content: siteMeta.routes.home.description },
+      ...buildOgMeta({
+        title: siteMeta.routes.home.title,
+        description: siteMeta.routes.home.description,
+        image: siteMeta.defaultOgImage,
+        url: '/',
+      }),
     ],
+    links: [buildCanonical('/')],
   }),
-  loader: () => getProducts(),
+  loader: () => getProductsByIds({ data: FEATURED_PRODUCT_IDS }),
   component: HomePage,
 })
 
 function HomePage() {
-  const products = Route.useLoaderData()
+  const featuredProducts = Route.useLoaderData()
   return (
     <>
+      {/* A — Attention */}
       <HeroSection />
-      <ImageTextSection
-        image="/products/EDC-Carbon-Fibre-Magnetic-Fidget-Sticks-01/EDC-Carbon-Fibre-Magnetic-Fidget-Sticks-01-lifestyle.avif"
-        kicker="Craftsmanship"
-        heading="Precision Engineered, Built to Impress"
-        body="Every piece in our catalogue is machined from premium metals — aluminium, titanium, brass, stainless steel. We obsess over tolerances so your clients notice the difference the moment they pick it up."
-        ctaLabel="View Products"
-        ctaHref="/products"
-      />
-      <ImageTextSection
-        image="/products/Letter-opener-01/Letter-opener-01-lifestyle.avif"
-        kicker="Custom Branding"
-        heading="Your Brand on Objects That Last"
-        body="Laser engraving, anodized finishes, bespoke packaging — we handle every detail. From 50 to 50,000 sets, your brand stays sharp across the full run."
-        ctaLabel="Request a Quote"
-        ctaHref="/contact"
-        imageRight
-      />
-      <HomepageProductsSection products={products.slice(0, 8)} />
-      <ValuePropSection />
-      <DifferentiatorSection />
-      <CredibilitySection />
+
+      {/* I — Gift Sets */}
+      <HomepageProductsSection />
+
+      {/* I — Featured individual products */}
+      <HomepageFeaturedProductsSection products={featuredProducts} />
+
+      {/* D — Why us */}
+      <WhySection />
+
+      {/* D — Process transparency */}
+      <ProcessPreviewSection />
+
+      {/* E-E-A-T — Material expertise */}
+      <ExpertNotesTeaser />
+
+      {/* A — Action */}
       <CtaSection />
     </>
   )

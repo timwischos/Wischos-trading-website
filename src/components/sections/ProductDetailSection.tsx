@@ -3,6 +3,7 @@ import { Dialog as DialogPrimitive } from 'radix-ui'
 import { Link, type LinkProps } from '@tanstack/react-router'
 import { X, ChevronLeft, ChevronRight } from 'lucide-react'
 import type { DbProduct } from '@/server/schema'
+import { cloudinaryUrl } from '@/lib/cloudinary'
 
 type Product = DbProduct
 
@@ -10,10 +11,11 @@ type RouterTo = LinkProps['to']
 
 interface ProductDetailSectionProps {
   product: Product
+  relatedProducts?: Product[]
 }
 
-function AccordionSection({ title, children }: { title: string; children: React.ReactNode }) {
-  const [open, setOpen] = useState(false)
+function AccordionSection({ title, children, defaultOpen = false }: { title: string; children: React.ReactNode; defaultOpen?: boolean }) {
+  const [open, setOpen] = useState(defaultOpen)
   const id = title.toLowerCase().replace(/\s+/g, '-')
   return (
     <div>
@@ -32,7 +34,7 @@ function AccordionSection({ title, children }: { title: string; children: React.
           {title}
         </span>
         <span style={{ fontSize: '1.25rem', lineHeight: 1, color: '#4a4a4a', fontWeight: 300 }}>
-          {open ? '−' : '+'}
+          {open ? '\u2212' : '+'}
         </span>
       </button>
       <div
@@ -51,6 +53,15 @@ function AccordionSection({ title, children }: { title: string; children: React.
       </div>
     </div>
   )
+}
+
+function productAlt(product: Product, suffix?: string): string {
+  const material = product.materials?.[0] ?? ''
+  const parts = ['Wischos Gift', product.name]
+  if (material) parts.push(material)
+  parts.push('Custom Corporate Gift')
+  if (suffix) parts.push(suffix)
+  return parts.join(' - ')
 }
 
 export function ProductLightbox({ product, initialIdx = 0 }: { product: Product; initialIdx?: number }) {
@@ -78,8 +89,8 @@ export function ProductLightbox({ product, initialIdx = 0 }: { product: Product;
           aria-label={`View ${product.name} full size`}
         >
           <img
-            src={product.images[initialIdx]}
-            alt={product.name}
+            src={cloudinaryUrl(product.images[initialIdx])}
+            alt={productAlt(product)}
             className="w-full object-cover"
             style={{ aspectRatio: '1/1' }}
           />
@@ -132,8 +143,8 @@ export function ProductLightbox({ product, initialIdx = 0 }: { product: Product;
             }}
           >
             <img
-              src={product.images[idx]}
-              alt={product.name}
+              src={cloudinaryUrl(product.images[idx])}
+              alt={productAlt(product, `image ${idx + 1}`)}
               style={{
                 maxHeight: zoomed ? 'none' : '88vh',
                 maxWidth: zoomed ? 'none' : '72vw',
@@ -167,7 +178,7 @@ export function ProductLightbox({ product, initialIdx = 0 }: { product: Product;
   )
 }
 
-export function ProductDetailSection({ product }: ProductDetailSectionProps) {
+export function ProductDetailSection({ product, relatedProducts }: ProductDetailSectionProps) {
   const [selectedIdx, setSelectedIdx] = useState(0)
 
   return (
@@ -179,7 +190,7 @@ export function ProductDetailSection({ product }: ProductDetailSectionProps) {
           <Link to={'/products' as RouterTo} style={{ color: 'inherit', textDecoration: 'none' }}>
             Products
           </Link>
-          <span style={{ margin: '0 0.5rem' }}>—</span>
+          <span style={{ margin: '0 0.5rem' }}>&mdash;</span>
           <span>{product.category}</span>
         </nav>
 
@@ -205,7 +216,7 @@ export function ProductDetailSection({ product }: ProductDetailSectionProps) {
                       outlineOffset: 2, cursor: 'pointer', background: 'none', overflow: 'hidden',
                     }}
                   >
-                    <img src={src} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+                    <img src={cloudinaryUrl(src)} alt={`${product.name} - view ${i + 1}`} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
                   </button>
                 ))}
               </div>
@@ -231,7 +242,7 @@ export function ProductDetailSection({ product }: ProductDetailSectionProps) {
                     const body = colonIdx !== -1 ? item.slice(colonIdx + 2) : item
                     return (
                       <li key={i} style={{ fontSize: '0.9rem', lineHeight: 1.6, color: '#444', paddingLeft: '1.1rem', position: 'relative' }}>
-                        <span style={{ position: 'absolute', left: 0, top: '0.58em', width: 5, height: 5, borderRadius: '50%', background: '#060606', display: 'inline-block', flexShrink: 0 }} />
+                        <span style={{ position: 'absolute', left: 0, top: '0.58em', width: 5, height: 5, borderRadius: '50%', background: 'var(--accent-brand)', display: 'inline-block', flexShrink: 0 }} />
                         {label ? <><strong style={{ fontWeight: 600, color: '#1a1a1a' }}>{label}:</strong>{' '}{body}</> : body}
                       </li>
                     )
@@ -297,29 +308,86 @@ export function ProductDetailSection({ product }: ProductDetailSectionProps) {
               </AccordionSection>
             )}
 
+            {/* Expert Notes — accordion */}
+            {product.expertNotes && product.expertNotes.length > 0 && (
+              <AccordionSection title="Expert Notes">
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+                  {product.expertNotes.map((note, i) => (
+                    <div key={i}>
+                      <p style={{ fontSize: '0.85rem', fontWeight: 600, color: '#1a1a1a', marginBottom: '0.4rem', lineHeight: 1.5 }}>
+                        {note.title}
+                      </p>
+                      <p style={{ fontSize: '0.85rem', lineHeight: 1.7, color: '#555', margin: 0 }}>
+                        {note.body}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </AccordionSection>
+            )}
+
             {/* CTA */}
             <div>
               <Link
                 to={`/inquiry?product=${encodeURIComponent(product.name)}` as RouterTo}
                 style={{
-                  display: 'inline-block', background: '#060606', color: '#fff',
+                  display: 'inline-block', background: 'var(--accent-brand)', color: '#fff',
                   padding: '0.875rem 2rem', fontSize: '0.8rem', letterSpacing: '0.1em',
                   textTransform: 'uppercase', textDecoration: 'none', width: '100%',
                   textAlign: 'center', boxSizing: 'border-box', cursor: 'pointer',
                   transition: 'background 150ms ease',
                 }}
-                onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = '#2a2a2a' }}
-                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = '#060606' }}
+                onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = 'var(--accent-brand-light)' }}
+                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = 'var(--accent-brand)' }}
               >
-                Request a Quote
+                Send an Inquiry
               </Link>
               <p style={{ marginTop: '0.75rem', fontSize: '0.75rem', color: '#6b6b6b', textAlign: 'center' }}>
-                We respond to all inquiries within 1 business day.
+                Tell us your branding and quantity requirements.
               </p>
             </div>
 
           </div>
         </div>
+
+        {/* Related Products / Complete the Set */}
+        {relatedProducts && relatedProducts.length > 0 && (
+          <div style={{ marginTop: '5rem', borderTop: '1px solid var(--grid-color)', paddingTop: '3rem' }}>
+            <h2
+              className="display-title"
+              style={{ fontSize: 'clamp(1.5rem, 2.5vw, 2rem)', fontWeight: 300, marginBottom: '2rem' }}
+            >
+              Related Products
+            </h2>
+            <div className="grid grid-cols-2 lg:grid-cols-4" style={{ gap: 0, borderLeft: '1px solid var(--grid-color)' }}>
+              {relatedProducts.slice(0, 4).map(rp => (
+                <div key={rp.id} style={{ borderRight: '1px solid var(--grid-color)', borderBottom: '1px solid var(--grid-color)' }}>
+                  <Link
+                    to={`/products/${rp.id}` as RouterTo}
+                    style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}
+                  >
+                    <div style={{ overflow: 'hidden', background: '#f7f7f7', aspectRatio: '1/1' }}>
+                      <img
+                        src={cloudinaryUrl(rp.images[0])}
+                        alt={`Wischos Gift - ${rp.name} - ${rp.category} Corporate Gift`}
+                        loading="lazy"
+                        style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                      />
+                    </div>
+                    <div style={{ padding: '0.875rem 1rem 1.25rem', borderTop: '1px solid var(--grid-color)' }}>
+                      <p style={{ fontSize: '0.75rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: '#767676', marginBottom: '0.35rem' }}>
+                        {rp.category}
+                      </p>
+                      <p className="display-title" style={{ fontSize: '1.05rem', fontWeight: 300, color: '#0a0a0a', lineHeight: 1.25 }}>
+                        {rp.name}
+                      </p>
+                    </div>
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </section>
   )

@@ -7,22 +7,22 @@ export const howItWorks = {
     {
       number: '01',
       title: 'Submit Your Inquiry',
-      body: 'Tell us about your gifting programme — product interest, estimated quantity, and target timeline. We review every inquiry and respond within 1 business day with a programme outline and next steps.',
+      body: 'Tell us your product interest, estimated quantity, and target timeline. You will receive a clear programme outline and proposed next steps within 1–2 business days.',
     },
     {
       number: '02',
-      title: 'Sample and Review',
-      body: 'Reference samples are provided free of charge; you cover international shipping cost. Custom samples (with your logo or packaging specification) carry a sample fee confirmed at inquiry stage. Sample lead time: 7–10 business days from dispatch.',
+      title: 'Review Samples',
+      body: 'You receive reference samples free of charge — freight collect. If your project requires custom samples with your logo or packaging, a sample fee applies, confirmed before we proceed. You review and approve before anything moves forward.',
     },
     {
       number: '03',
-      title: 'Confirm and Pay',
-      body: 'Once samples are approved, we issue a proforma invoice for the bulk order. Payment is by T/T (telegraphic transfer / bank transfer). Production begins on receipt of the agreed deposit.',
+      title: 'Confirm and Deposit',
+      body: 'Once you approve the samples, you receive a proforma invoice for the bulk order. A deposit by T/T (bank transfer) locks in your production slot. You set the timeline — production starts when you are ready.',
     },
     {
       number: '04',
       title: 'Production and Delivery',
-      body: 'Bulk orders are typically ready within approximately 30 days of production start. Exact timelines are confirmed per order and may vary by product type and quantity. We provide production updates and pre-shipment quality photos.',
+      body: 'You receive regular progress updates and pre-shipment quality photos for your sign-off. Final balance is settled prior to or against shipping documents, depending on the shipment method. Tracking details are sent to you as soon as goods are on their way.',
     },
   ],
   samplePolicy: {
@@ -33,9 +33,9 @@ export const howItWorks = {
   },
   leadTimes: {
     heading: 'Lead Times',
-    samples: '7–10 business days from sample dispatch',
-    bulk: 'Approximately 30 days from production start',
-    note: 'All timelines are indicative. Exact lead times are confirmed per order during the inquiry process and depend on product type, quantity, and current production schedules.',
+    samples: 'Confirmed per project at inquiry stage',
+    bulk: 'Normally 25–35 days from production start',
+    note: 'All timelines are indicative. Exact lead times depend on customization details and are confirmed per order during the inquiry process.',
   },
   paymentTerms: {
     heading: 'Payment Terms',

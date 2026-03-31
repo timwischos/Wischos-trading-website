@@ -1,59 +1,58 @@
 export const about = {
   hero: {
-    heading: 'A Trading Partner Built for Corporate Buyers',
+    heading: 'Your Single Point of Contact for Custom Metal Corporate Gifts',
     subheading:
-      'Wischos Gift sources, customises, and delivers premium metal gift sets to corporate buyers in Europe, the United States, and Australia.',
+      'Finding a reliable China supplier for premium metal gifts — one who understands materials, manages custom production end-to-end, and communicates clearly across time zones — takes time most buyers cannot afford. We handle it from the first inquiry.',
   },
   expertise: {
-    kicker: 'Market Expertise',
-    heading: 'We understand your market',
+    kicker: 'What You Stop Worrying About',
+    heading: 'Three things off your plate when you work with us',
     markets: [
       {
-        region: 'European Union',
+        region: 'Import & Compliance',
         insight:
-          'EU buyers require REACH-compliant materials, precise lead time commitments, and packaging suited to premium retail environments.',
+          'You receive accurate customs documentation and materials sourced to international standards. Wherever you are importing to, shipments clear without delays — paperwork is handled for you.',
       },
       {
-        region: 'United States',
+        region: 'Consistent Quality Across Runs',
         insight:
-          'US corporate gifting programmes expect brand consistency, scalable reorder options, and straightforward T/T payment terms.',
+          'Every product ships with written QC specs and pre-shipment photos. Whether you reorder six months later or scale from 100 to 5,000 sets, quality and branding stay consistent.',
       },
       {
-        region: 'Australia',
+        region: 'Reliable Communication',
         insight:
-          'Australian buyers value responsive communication across time zones and clear customs documentation for smooth importation.',
+          'You always know where your order stands. One contact, clear timelines, and prompt replies regardless of time zone — no chasing updates.',
       },
     ],
   },
   whyUs: {
-    kicker: 'Why Wischos Gift',
-    heading: 'The alternative to factory-direct complexity',
+    kicker: 'Why Work With Us',
+    heading: 'Honest about what we are — and good at it',
     points: [
       {
-        title: 'You deal with one professional',
-        body: 'A single account contact manages every aspect of your order — specification, sampling, production, and logistics. You are never passed to a factory floor.',
+        title: 'One contact — and you always know how to reach them',
+        body: 'One professional handles your sourcing brief, factory coordination, branding, quality inspection, and shipping documentation. You get a direct response, not a forwarded email or a different person each time. No handoffs. No chasing updates.',
       },
       {
-        title: 'Your brand stays yours',
-        body: 'We do not publish supplier names or expose manufacturing relationships. Your competitive advantage — a curated, branded product line — remains confidential.',
+        title: 'A specialist trading company — by design',
+        body: 'We work with specialist manufacturers across Yangjiang, Dongguan, Zhongshan, Shenzhen, Yiwu, and Wenzhou. A single factory can only offer what it makes. We select the right factory for your brief — metal type, finish, tolerance, volume — and you are not locked into one supplier\'s catalogue.',
       },
       {
-        title: 'Small-batch without compromise',
-        body: 'MOQ 50 sets enables premium gifting programmes that would be uneconomical at factory minimum quantities. Quality is not scaled down for smaller orders.',
+        title: 'Quality visible before anything ships',
+        body: 'Every order includes in-process and pre-shipment photos against your approved sample. Customs documentation is prepared to international import standards. Nothing leaves the factory without your approval.',
       },
     ],
   },
   trust: {
     registrationLabel: 'Company Registration',
-    // PLACEHOLDER: Replace with actual 统一社会信用代码 before launch
-    registrationNumber: '[PLACEHOLDER — awaiting company registration details]',
-    registrationNote: 'Registered trading company. Full details available on request.',
+    registrationNumber: 'Anhui Wischos International Trading Co. Ltd',
+    registrationNote: 'Registered trading company in Anhui, China. Established 2024. Full details available on request.',
     email: 'inquiries@wischosgift.com',
     qualityStatement:
-      'Every order is quality-checked against a written specification before shipment. We do not release production without written client approval of samples.',
+      'Every order includes pre-shipment quality photos and written QC specs. Nothing ships without your written sample approval.',
   },
   mission: {
-    heading: 'Our commitment',
-    body: 'Corporate gifting should be effortless for the buyer and impressive for the recipient. We handle the complexity of international sourcing so you can focus on your programme outcomes.',
+    heading: 'The Company',
+    body: 'Wischos Gift is a registered trading company established in 2024. We source custom metal corporate gifts through a verified manufacturer network across Southern China, working exclusively with corporate buyers internationally.',
   },
 } as const

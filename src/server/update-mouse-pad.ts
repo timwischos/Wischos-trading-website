@@ -17,12 +17,13 @@ async function main() {
   await db
     .update(products)
     .set({
-      name: 'Professional Aluminum Mouse Pad',
-      tagline: 'Ideal for B2B Corporate Gifting | Minimalist, Durable, Easy-to-Clean',
+      name: 'Professional Aluminum Desk Mat',
+      tagline: '5052 Aluminum Desk Mat | Laser Engravable | Minimalist, Durable, Easy-to-Clean',
       highlights: [
+        'Custom Laser Engraving: The matte anodized surface is ideal for high-contrast laser engraving — corporate logos, text, or geometric patterns are permanently etched with a clean silver-white metallic finish.',
         'CNC Smooth Chamfer: Machined edges ensure a flat, burr-free finish for long-term comfort.',
         'Practical Dual-Sided Design: Anodized 5052 aluminum for precision; non-slip PU leather for stability.',
-        'Built to Last: 2.5mm profile—no warping, no fraying, and sweat-resistant. Designed for high-frequency use.',
+        'Built to Last: 2.5mm profile — no warping, no fraying, and sweat-resistant. Designed for high-frequency use.',
       ],
       description:
         'A Cleaner, More Professional Setup. In a high-paced office environment, reliability is key. This aluminum mouse pad is built with proven industrial processes, machined from 5052 aluminum plates to eliminate the common issues of fraying and staining found in traditional pads.\n\nFeaturing a sandblasted and anodized finish, the surface provides a fine matte texture that complements modern laptops. The polished edges provide a clean visual accent while ensuring a smooth tactile experience. This is a practical desktop essential that upgrades the "standard" through better materials, offering a high-perceived value for corporate gift programs without the premium price tag.',
@@ -46,6 +47,28 @@ async function main() {
           q: 'What is the best way to add a corporate Logo?',
           a: 'We recommend Laser Etching. The logo appears in a clean, silver-white metallic tone, providing a subtle yet professional contrast against the matte surface.',
         },
+      ],
+      seoKeywords: [
+        // Core product
+        'aluminum desk mat',
+        'metal desk mat',
+        'aluminum mouse pad',
+        'metal mouse pad',
+        'aluminium desk pad',
+        // B2B / corporate gifting
+        'custom aluminum mouse pad bulk order',
+        'corporate desk gift set',
+        'engraved metal mouse pad',
+        'promotional desk accessory',
+        // Material / craft
+        'anodized aluminum mouse pad',
+        'CNC machined mouse pad',
+        'dual sided aluminum mouse pad',
+        // Niche / long-tail
+        'heavy duty office mouse pad',
+        'non-slip metal desk mat',
+        'executive desk accessory gift',
+        'minimalist aluminum desk pad',
       ],
     })
     .where(eq(products.id, 'aluminium-double-sided-mouse-pad'))

@@ -24,10 +24,11 @@ const inquiryFormSchema = inquiryInsertSchema.extend({
 })
 
 const PRODUCT_OPTIONS = [
-  { value: 'Architect Desk Set', label: 'Architect Desk Set' },
-  { value: 'Signature Pen Collection', label: 'Signature Pen Collection' },
-  { value: 'Castro Catchall Tray', label: 'Castro Catchall Tray' },
-  { value: 'Executive EDC Set', label: 'Executive EDC Set' },
+  { value: 'Writing Instruments', label: 'Writing Instruments' },
+  { value: 'Desk Accessories', label: 'Desk Accessories' },
+  { value: 'EDC Accessories', label: 'EDC Accessories' },
+  { value: 'Drinkware', label: 'Drinkware' },
+  { value: 'Gift Sets', label: 'Gift Sets' },
   { value: 'Other / Multiple Products', label: 'Other / Multiple Products' },
 ]
 
@@ -44,6 +45,7 @@ export function InquiryFormSection() {
 
   const [isSuccess, setIsSuccess] = useState(false)
   const [submitError, setSubmitError] = useState<string | null>(null)
+  const [showDetails, setShowDetails] = useState(false)
 
   const form = useForm({
     defaultValues: {
@@ -75,14 +77,20 @@ export function InquiryFormSection() {
     return (
       <div className="py-16 text-left">
         <h2 className="text-2xl font-semibold tracking-tight">Thank you.</h2>
-        <p className="mt-3 text-muted-foreground">We'll be in touch within 2 business days.</p>
+        <p className="mt-3 text-muted-foreground">We'll review your inquiry and get back to you within 2 business days.</p>
       </div>
     )
   }
 
   return (
-    <div className="page-wrap py-12">
-      <h2 className="text-2xl font-semibold tracking-tight mb-8">{contactContent.formHeading}</h2>
+    <div>
+      <h2 className="text-2xl font-semibold tracking-tight mb-2">Tell us about your project</h2>
+      <p style={{ fontSize: '0.85rem', color: '#6b6b6b', marginBottom: '0.6rem' }}>
+        Whether you're enquiring about a product in our catalogue or something entirely custom, we're happy to help source it.
+      </p>
+      <p style={{ fontSize: '0.85rem', color: '#6b6b6b', marginBottom: '2rem' }}>
+        Fields marked with * are required.
+      </p>
 
       <form
         onSubmit={(e) => {
@@ -157,22 +165,6 @@ export function InquiryFormSection() {
           )}
         </form.Field>
 
-        {/* Job Title — optional */}
-        <form.Field name="role">
-          {(field) => (
-            <div className="space-y-1">
-              <Label htmlFor="role">Job Title</Label>
-              <Input
-                id="role"
-                type="text"
-                value={field.state.value}
-                onChange={(e) => field.handleChange(e.target.value)}
-                onBlur={field.handleBlur}
-              />
-            </div>
-          )}
-        </form.Field>
-
         {/* Email — required */}
         <form.Field name="email">
           {(field) => (
@@ -196,23 +188,7 @@ export function InquiryFormSection() {
           )}
         </form.Field>
 
-        {/* Phone — optional */}
-        <form.Field name="phone">
-          {(field) => (
-            <div className="space-y-1">
-              <Label htmlFor="phone">Phone</Label>
-              <Input
-                id="phone"
-                type="tel"
-                value={field.state.value}
-                onChange={(e) => field.handleChange(e.target.value)}
-                onBlur={field.handleBlur}
-              />
-            </div>
-          )}
-        </form.Field>
-
-        {/* Product Interest — Select */}
+        {/* Product Interest — required feel but optional in schema */}
         <form.Field name="productInterest">
           {(field) => (
             <div className="space-y-1">
@@ -222,7 +198,7 @@ export function InquiryFormSection() {
                 onValueChange={(val) => field.handleChange(val)}
               >
                 <SelectTrigger>
-                  <SelectValue placeholder="Select a product series" />
+                  <SelectValue placeholder="Select a product category" />
                 </SelectTrigger>
                 <SelectContent>
                   {PRODUCT_OPTIONS.map((opt) => (
@@ -236,65 +212,137 @@ export function InquiryFormSection() {
           )}
         </form.Field>
 
-        {/* Estimated Quantity — optional */}
-        <form.Field name="quantity">
-          {(field) => (
-            <div className="space-y-1">
-              <Label htmlFor="quantity">Estimated Quantity</Label>
-              <Input
-                id="quantity"
-                type="text"
-                placeholder="e.g. 200 sets"
-                value={field.state.value}
-                onChange={(e) => field.handleChange(e.target.value)}
-                onBlur={field.handleBlur}
-              />
-            </div>
-          )}
-        </form.Field>
+        {/* Expandable additional details */}
+        <div>
+          <button
+            type="button"
+            onClick={() => setShowDetails(d => !d)}
+            style={{
+              background: 'none', border: 'none', cursor: 'pointer', padding: 0,
+              fontSize: '0.8rem', color: '#6b6b6b', display: 'flex', alignItems: 'center', gap: '0.35rem',
+              transition: 'color 150ms ease',
+            }}
+            onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = '#0a0a0a' }}
+            onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = '#6b6b6b' }}
+          >
+            <span style={{
+              display: 'inline-block', transition: 'transform 200ms ease',
+              transform: showDetails ? 'rotate(90deg)' : 'rotate(0deg)',
+              fontSize: '0.7rem',
+            }}>▶</span>
+            Add more details (optional)
+          </button>
 
-        {/* Target Timeline — optional */}
-        <form.Field name="timeline">
-          {(field) => (
-            <div className="space-y-1">
-              <Label htmlFor="timeline">Target Timeline</Label>
-              <Input
-                id="timeline"
-                type="text"
-                placeholder="e.g. Q3 2026"
-                value={field.state.value}
-                onChange={(e) => field.handleChange(e.target.value)}
-                onBlur={field.handleBlur}
-              />
-            </div>
-          )}
-        </form.Field>
+          <div style={{
+            overflow: 'hidden',
+            maxHeight: showDetails ? '40rem' : '0',
+            transition: 'max-height 300ms ease',
+            marginTop: showDetails ? '1rem' : '0',
+          }}>
+            <div className="space-y-6">
+              {/* Phone — optional */}
+              <form.Field name="phone">
+                {(field) => (
+                  <div className="space-y-1">
+                    <Label htmlFor="phone">Phone</Label>
+                    <Input
+                      id="phone"
+                      type="tel"
+                      value={field.state.value}
+                      onChange={(e) => field.handleChange(e.target.value)}
+                      onBlur={field.handleBlur}
+                    />
+                  </div>
+                )}
+              </form.Field>
 
-        {/* Message / Requirements — optional */}
-        <form.Field name="message">
-          {(field) => (
-            <div className="space-y-1">
-              <Label htmlFor="message">Message / Requirements</Label>
-              <Textarea
-                id="message"
-                rows={5}
-                value={field.state.value}
-                onChange={(e) => field.handleChange(e.target.value)}
-                onBlur={field.handleBlur}
-              />
+              {/* Job Title — optional */}
+              <form.Field name="role">
+                {(field) => (
+                  <div className="space-y-1">
+                    <Label htmlFor="role">Job Title</Label>
+                    <Input
+                      id="role"
+                      type="text"
+                      value={field.state.value}
+                      onChange={(e) => field.handleChange(e.target.value)}
+                      onBlur={field.handleBlur}
+                    />
+                  </div>
+                )}
+              </form.Field>
+
+              {/* Estimated Quantity — optional */}
+              <form.Field name="quantity">
+                {(field) => (
+                  <div className="space-y-1">
+                    <Label htmlFor="quantity">Estimated Quantity</Label>
+                    <Input
+                      id="quantity"
+                      type="text"
+                      placeholder="e.g. 200 sets"
+                      value={field.state.value}
+                      onChange={(e) => field.handleChange(e.target.value)}
+                      onBlur={field.handleBlur}
+                    />
+                  </div>
+                )}
+              </form.Field>
+
+              {/* Target Timeline — optional */}
+              <form.Field name="timeline">
+                {(field) => (
+                  <div className="space-y-1">
+                    <Label htmlFor="timeline">Target Timeline</Label>
+                    <Input
+                      id="timeline"
+                      type="text"
+                      placeholder="e.g. Q3 2026"
+                      value={field.state.value}
+                      onChange={(e) => field.handleChange(e.target.value)}
+                      onBlur={field.handleBlur}
+                    />
+                  </div>
+                )}
+              </form.Field>
+
+              {/* Message — optional */}
+              <form.Field name="message">
+                {(field) => (
+                  <div className="space-y-1">
+                    <Label htmlFor="message">Message / Requirements</Label>
+                    <Textarea
+                      id="message"
+                      rows={4}
+                      value={field.state.value}
+                      onChange={(e) => field.handleChange(e.target.value)}
+                      onBlur={field.handleBlur}
+                    />
+                  </div>
+                )}
+              </form.Field>
             </div>
-          )}
-        </form.Field>
+          </div>
+        </div>
 
         {/* Submit error */}
         {submitError && <p className="text-sm text-destructive">{submitError}</p>}
 
-        {/* Submit button */}
+        {/* Submit button + response time */}
         <form.Subscribe selector={(state) => state.isSubmitting}>
           {(isSubmitting) => (
-            <Button type="submit" disabled={isSubmitting}>
-              {isSubmitting ? 'Sending...' : 'Send Inquiry'}
-            </Button>
+            <div className="flex items-center gap-4 flex-wrap">
+              <Button
+                type="submit"
+                disabled={isSubmitting}
+                style={{ background: 'var(--accent-brand)', borderColor: 'var(--accent-brand)' }}
+                onMouseEnter={e => { if (!isSubmitting) (e.currentTarget as HTMLElement).style.background = 'var(--accent-brand-light)' }}
+                onMouseLeave={e => { if (!isSubmitting) (e.currentTarget as HTMLElement).style.background = 'var(--accent-brand)' }}
+              >
+                {isSubmitting ? 'Sending...' : 'Submit Inquiry'}
+              </Button>
+              <p className="text-sm text-muted-foreground">{contactContent.responseTime}</p>
+            </div>
           )}
         </form.Subscribe>
       </form>

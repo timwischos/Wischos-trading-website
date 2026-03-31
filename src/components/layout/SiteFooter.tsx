@@ -1,11 +1,16 @@
-import { useState } from 'react'
-import { Link } from '@tanstack/react-router'
+import { Link, type LinkProps } from '@tanstack/react-router'
+
+type RouterTo = LinkProps['to']
+import { Linkedin, Mail } from 'lucide-react'
+import { cloudinaryUrl } from '@/lib/cloudinary'
 
 const productCategories = [
-  { label: 'Writing Instruments', href: '/products' },
-  { label: 'Desk Accessories', href: '/products' },
-  { label: 'EDC Accessories', href: '/products' },
-  { label: 'Drinkware', href: '/products' },
+  { label: 'Gift Sets', href: '/featured' },
+  { label: 'Our Products', href: '/products' },
+  { label: 'Writing Instruments', href: '/products?category=Writing+Instruments' },
+  { label: 'Desk Accessories', href: '/products?category=Desk+Accessories' },
+  { label: 'EDC Accessories', href: '/products?category=EDC+Accessories' },
+  { label: 'Drinkware', href: '/products?category=Drinkware' },
 ]
 
 const companyLinks = [
@@ -33,40 +38,30 @@ const linkStyle: React.CSSProperties = {
   cursor: 'pointer',
 }
 
-const subLinkStyle: React.CSSProperties = {
-  display: 'block',
-  fontSize: '0.8rem',
-  color: '#6b6b6b',
-  textDecoration: 'none',
-  marginBottom: '0.55rem',
-  paddingLeft: '0.85rem',
-  borderLeft: '1px solid var(--grid-color)',
-  transition: 'color 150ms ease',
-  cursor: 'pointer',
-}
 
-// Placeholder social icon — uses button for keyboard accessibility
-function SocialPlaceholder({ label }: { label: string }) {
+function SocialIconButton({ href, label, children }: { href: string; label: string; children: React.ReactNode }) {
   return (
-    <button
+    <a
+      href={href}
       aria-label={label}
+      target={href.startsWith('http') ? '_blank' : undefined}
+      rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
       style={{
         width: '2rem', height: '2rem',
         border: '1px solid var(--grid-color)',
         display: 'flex', alignItems: 'center', justifyContent: 'center',
-        cursor: 'pointer', background: 'none',
-        transition: 'border-color 150ms ease',
+        textDecoration: 'none', color: '#6b6b6b',
+        transition: 'border-color 150ms ease, color 150ms ease',
       }}
-      onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = '#0a0a0a' }}
-      onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = 'var(--grid-color)' }}
+      onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = 'var(--accent-brand)'; (e.currentTarget as HTMLElement).style.color = 'var(--accent-brand)' }}
+      onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = 'var(--grid-color)'; (e.currentTarget as HTMLElement).style.color = '#6b6b6b' }}
     >
-      <div style={{ width: '0.9rem', height: '0.9rem', background: '#bbb', borderRadius: '1px' }} />
-    </button>
+      {children}
+    </a>
   )
 }
 
 export function SiteFooter() {
-  const [productsHovered, setProductsHovered] = useState(false)
 
   return (
     <footer style={{ borderTop: '1px solid var(--grid-color)', background: '#fff' }}>
@@ -78,18 +73,15 @@ export function SiteFooter() {
 
         {/* Left — Brand + Social */}
         <div style={{ padding: '2.5rem 2rem', borderRight: '1px solid var(--grid-color)' }}>
-          {/* Logo placeholder */}
-          <div style={{
-            width: '7rem', height: '2.25rem',
-            border: '1px dashed #ccc',
-            display: 'flex', alignItems: 'center', justifyContent: 'center',
-            marginBottom: '1.25rem',
-          }}>
-            <span style={{ fontSize: '0.65rem', color: '#999', letterSpacing: '0.08em', textTransform: 'uppercase' }}>Logo</span>
-          </div>
+          {/* Logo */}
+          <img
+            src={cloudinaryUrl('/wischos-logo')}
+            alt="Wischos Gift Trading"
+            style={{ height: '2.5rem', width: 'auto', marginBottom: '1.25rem', display: 'block' }}
+          />
 
           <p style={{ fontSize: '0.8rem', color: '#4a4a4a', lineHeight: 1.65, maxWidth: '22ch', marginBottom: '1rem' }}>
-            Premium metal corporate gifts. Custom branding from MOQ 50 sets.
+            Custom metal gifts for B2B buyers. MOQ 100 sets.
           </p>
           <a
             href="mailto:inquiries@wischosgift.com"
@@ -102,51 +94,29 @@ export function SiteFooter() {
 
           {/* Social icons */}
           <div style={{ display: 'flex', gap: '0.6rem' }}>
-            <SocialPlaceholder label="Social 1" />
-            <SocialPlaceholder label="Social 2" />
-            <SocialPlaceholder label="Social 3" />
-            <SocialPlaceholder label="Social 4" />
+            <SocialIconButton href="https://www.linkedin.com/company/wischos" label="LinkedIn">
+              <Linkedin size={14} />
+            </SocialIconButton>
+            <SocialIconButton href="mailto:inquiries@wischosgift.com" label="Email us">
+              <Mail size={14} />
+            </SocialIconButton>
           </div>
         </div>
 
         {/* Middle — Products */}
         <div style={{ padding: '2.5rem 2rem', borderRight: '1px solid var(--grid-color)', borderTop: '1px solid var(--grid-color)' }} className="md:border-t-0">
           <p style={labelStyle}>Products</p>
-
-          {/* All Products with hover dropdown */}
-          <div
-            style={{ position: 'relative', marginBottom: productsHovered ? '0.25rem' : '0.75rem' }}
-            onMouseEnter={() => setProductsHovered(true)}
-            onMouseLeave={() => setProductsHovered(false)}
-          >
+          {productCategories.map(link => (
             <Link
-              to="/products"
-              style={{ ...linkStyle, marginBottom: 0, color: productsHovered ? '#0a0a0a' : '#444', display: 'flex', alignItems: 'center', gap: '0.4rem' }}
+              key={link.label}
+              to={link.href as any}
+              style={linkStyle}
+              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = '#0a0a0a' }}
+              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = '#444' }}
             >
-              All Products
-              <span style={{ fontSize: '0.6rem', color: '#6b6b6b', transition: 'transform 150ms ease', display: 'inline-block', transform: productsHovered ? 'rotate(90deg)' : 'none' }}>▶</span>
+              {link.label}
             </Link>
-
-            {/* Subcategories */}
-            <div style={{
-              overflow: 'hidden',
-              maxHeight: productsHovered ? '12rem' : '0',
-              transition: 'max-height 250ms ease',
-              marginTop: productsHovered ? '0.6rem' : '0',
-            }}>
-              {productCategories.map(link => (
-                <Link
-                  key={link.label}
-                  to={link.href as any}
-                  style={subLinkStyle}
-                  onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = '#0a0a0a' }}
-                  onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = '#6b6b6b' }}
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </div>
-          </div>
+          ))}
         </div>
 
         {/* Right — Company */}
@@ -172,7 +142,7 @@ export function SiteFooter() {
           &copy; {new Date().getFullYear()} Wischos Gift Trading Co. All rights reserved.
         </p>
         <p style={{ fontSize: '0.72rem', color: '#6b6b6b' }}>
-          B2B Custom Metal Gifts · MOQ 50
+          B2B Custom Metal Gifts · MOQ 100
         </p>
       </div>
     </footer>

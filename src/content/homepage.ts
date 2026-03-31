@@ -1,76 +1,76 @@
 export const homepage = {
   hero: {
-    kicker: 'Premium Corporate Gifting',
-    headline: 'Gift Sets That Reflect Your Brand — Not the Factory',
+    kicker: 'Customized Metal Gift Sets · MOQ 100',
+    headline: 'Sourced · Assembled · Branded — One Inquiry to Get Started',
     subheadline:
-      'Custom metal gift sets from MOQ 50 sets. Full packaging design. A single professional counterpart from first inquiry to delivery.',
-    cta: 'Request an Inquiry',
+      'Complete branded gift sets — from sourcing to delivery, one inquiry.',
+    cta: 'Send an Inquiry',
   },
   valueProps: {
     kicker: 'Why Wischos Gift',
-    heading: 'Three reasons corporate buyers choose us',
+    heading: 'What corporate buyers get when they work with us',
     items: [
       {
-        title: 'Premium Metal Materials',
+        title: 'Real Metal, Real Quality',
         description:
-          'Stainless steel, brass, and anodised aluminium finishes that communicate quality before the box is opened.',
+          'Aluminium, brass, stainless steel, and titanium — machined to spec and quality-checked before shipment. No plastic with a metallic finish.',
         icon: 'Gem',
       },
       {
-        title: 'Custom Packaging Design',
+        title: 'Custom Branding Included',
         description:
-          'Your logo, your colour palette, your unboxing experience — designed to your brand standards.',
+          'Your logo, your finish, your packaging. Laser engraving, anodised colours, and box design are standard — not add-ons.',
         icon: 'Package',
       },
       {
-        title: 'MOQ 50 Sets',
+        title: 'Low MOQ, Reliable Lead Times',
         description:
-          'Small-batch production that suits pilot programmes and premium gifting without factory-scale commitments.',
+          'Start from 100 sets without factory-scale commitments. Sample and production lead times confirmed per project during the inquiry stage.',
         icon: 'CheckCircle',
       },
     ],
   },
   differentiators: {
-    kicker: 'How We Are Different',
-    heading: 'Not a factory. Not a marketplace. A specialist trading partner.',
+    kicker: 'Why Us',
+    heading: 'A single accountable source for branded metal gifts.',
     intro:
-      'Commodity suppliers ship generic products. Factories want large orders and direct client relationships. Wischos Gift sits between both — delivering factory quality at small-batch scale, with full brand control.',
+      'Corporate gift programmes involve coordinating product specification, customisation, compliance, and logistics. We consolidate this into one managed engagement — direct accountability and consistent communication from inquiry to delivery.',
     items: [
       {
-        claim: 'Single point of contact',
+        claim: 'Dedicated programme management',
         detail:
-          'One professional counterpart manages your order from inquiry to customs clearance. No factory miscommunication.',
+          'Every order is managed through a consistent, direct relationship — from specification to delivery. Clear accountability at every stage.',
       },
       {
-        claim: 'Brand-first packaging',
+        claim: 'Specialist manufacturing partners',
         detail:
-          'We do not ship plain boxes with a sticker. Every order includes designed packaging aligned to your visual identity.',
+          'Products are sourced from specialist factories across China\'s established manufacturing regions — Dongguan, Zhongshan, Shenzhen, Yiwu, Wenzhou — selected by product category and production capability. CNC-precision metalwork, consistent lead times.',
       },
       {
-        claim: 'EU / US / AU buyer expertise',
+        claim: 'Proactive project updates',
         detail:
-          'We understand import compliance, lead time expectations, and quality standards for your market — not generic export.',
+          'From sampling through production to shipment, you receive regular updates at each stage — packaging approvals, production progress, and shipping confirmation. No chasing required.',
       },
       {
-        claim: 'No minimum brand dilution',
+        claim: 'Precision metal, verified materials',
         detail:
-          'At MOQ 50 sets, your brand appears exclusively on your order. No co-branding, no shared production runs.',
+          'Every product is precision-machined from brass, titanium, aluminium, or stainless steel. The weight and finish are genuine because the material is.',
       },
     ],
   },
   credibility: {
-    kicker: 'Our Focus',
-    heading: 'Specialists in premium corporate gifting',
+    kicker: 'At a Glance',
+    heading: 'What to expect',
     stats: [
-      { value: 'EU · US · AU', label: 'Markets served' },
-      { value: 'MOQ 50', label: 'Minimum order, any series' },
-      { value: '7–10 days', label: 'Sample lead time' },
-      { value: '~30 days', label: 'Bulk production lead time' },
+      { value: 'Selected objects', label: 'ready to brand' },
+      { value: '100 units', label: 'Sets minimum order' },
+      { value: 'Full custom', label: 'Logo, finish, packaging' },
+      { value: 'One contact', label: 'Inquiry to delivery' },
     ],
   },
   productPreview: {
     kicker: 'Our Products',
-    heading: 'Premium metal gift sets for every occasion',
+    heading: 'Metal gift sets ready to carry your brand',
     viewAllCta: 'View All Products',
     items: [
       {
@@ -88,8 +88,8 @@ export const homepage = {
     ],
   },
   cta: {
-    heading: 'Ready to create a gifting experience your clients will remember?',
-    body: 'Tell us about your programme — product interest, quantity, and timeline. We respond within 1 business day.',
-    buttonLabel: 'Request an Inquiry',
+    heading: "Let's discuss your project",
+    body: "Tell us what you need — products, quantities, branding, timeline. We'll come back with a tailored proposal and sample plan.",
+    buttonLabel: 'Send an Inquiry',
   },
 } as const

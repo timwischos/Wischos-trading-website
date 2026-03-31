@@ -17,6 +17,8 @@
   --text-muted: #767676;
   --text-subtle: #6b6b6b;
   --bg: #ffffff;
+  --accent-brand: #B87333;
+  --accent-brand-light: #d4956a;
 
   /* shadcn — neutral black/white */
   --background: oklch(1 0 0);
@@ -155,7 +157,7 @@ a:hover {
 
 .nav-link:hover,
 .nav-link.is-active {
-  color: #0a0a0a;
+  color: var(--accent-brand);
 }
 
 /* Rise in animation */
