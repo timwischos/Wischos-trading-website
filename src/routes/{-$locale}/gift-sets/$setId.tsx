@@ -30,6 +30,45 @@ export const Route = createFileRoute('/{-$locale}/gift-sets/$setId')({
         }),
       ],
       links: [buildCanonical(`/gift-sets/${set.id}`)],
+      scripts: [
+        {
+          type: 'application/ld+json',
+          children: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Product',
+            name: set.name,
+            description: set.heroCopy.slice(0, 200),
+            sku: set.sku,
+            image: set.coverImage
+              ? [`https://wischosgift.com${set.coverImage}`]
+              : [],
+            brand: { '@type': 'Brand', name: 'Wischos Gift' },
+            offers: {
+              '@type': 'Offer',
+              url: `https://wischosgift.com/gift-sets/${set.id}`,
+              availability: 'https://schema.org/InStock',
+              priceCurrency: 'USD',
+              priceSpecification: {
+                '@type': 'PriceSpecification',
+                description: `Price on request. MOQ 100 sets. FOB: ${set.fob}`,
+              },
+              seller: { '@type': 'Organization', name: 'Wischos Gift' },
+            },
+          }),
+        },
+        {
+          type: 'application/ld+json',
+          children: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://wischosgift.com/' },
+              { '@type': 'ListItem', position: 2, name: 'Gift Sets', item: 'https://wischosgift.com/gift-sets' },
+              { '@type': 'ListItem', position: 3, name: set.name, item: `https://wischosgift.com/gift-sets/${set.id}` },
+            ],
+          }),
+        },
+      ],
     }
   },
   component: GiftSetDetailPage,

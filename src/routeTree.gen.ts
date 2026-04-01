@@ -14,6 +14,7 @@ import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as Char123LocaleChar125InquiryRouteImport } from './routes/{-$locale}/inquiry'
 import { Route as Char123LocaleChar125FeaturedRouteImport } from './routes/{-$locale}/featured'
+import { Route as Char123LocaleChar125FaqRouteImport } from './routes/{-$locale}/faq'
 import { Route as Char123LocaleChar125ContactRouteImport } from './routes/{-$locale}/contact'
 import { Route as Char123LocaleChar125BlogRouteImport } from './routes/{-$locale}/blog'
 import { Route as Char123LocaleChar125AboutRouteImport } from './routes/{-$locale}/about'
@@ -48,6 +49,12 @@ const Char123LocaleChar125FeaturedRoute =
   Char123LocaleChar125FeaturedRouteImport.update({
     id: '/featured',
     path: '/featured',
+    getParentRoute: () => Char123LocaleChar125Route,
+  } as any)
+const Char123LocaleChar125FaqRoute =
+  Char123LocaleChar125FaqRouteImport.update({
+    id: '/faq',
+    path: '/faq',
     getParentRoute: () => Char123LocaleChar125Route,
   } as any)
 const Char123LocaleChar125ContactRoute =
@@ -106,6 +113,7 @@ export interface FileRoutesByFullPath {
   '/{-$locale}/about': typeof Char123LocaleChar125AboutRoute
   '/{-$locale}/blog': typeof Char123LocaleChar125BlogRouteWithChildren
   '/{-$locale}/contact': typeof Char123LocaleChar125ContactRoute
+  '/{-$locale}/faq': typeof Char123LocaleChar125FaqRoute
   '/{-$locale}/featured': typeof Char123LocaleChar125FeaturedRoute
   '/{-$locale}/inquiry': typeof Char123LocaleChar125InquiryRoute
   '/{-$locale}/blog/$slug': typeof Char123LocaleChar125BlogSlugRoute
@@ -120,6 +128,7 @@ export interface FileRoutesByTo {
   '/{-$locale}': typeof Char123LocaleChar125RouteWithChildren
   '/{-$locale}/about': typeof Char123LocaleChar125AboutRoute
   '/{-$locale}/contact': typeof Char123LocaleChar125ContactRoute
+  '/{-$locale}/faq': typeof Char123LocaleChar125FaqRoute
   '/{-$locale}/featured': typeof Char123LocaleChar125FeaturedRoute
   '/{-$locale}/inquiry': typeof Char123LocaleChar125InquiryRoute
   '/{-$locale}/blog/$slug': typeof Char123LocaleChar125BlogSlugRoute
@@ -136,6 +145,7 @@ export interface FileRoutesById {
   '/{-$locale}/about': typeof Char123LocaleChar125AboutRoute
   '/{-$locale}/blog': typeof Char123LocaleChar125BlogRouteWithChildren
   '/{-$locale}/contact': typeof Char123LocaleChar125ContactRoute
+  '/{-$locale}/faq': typeof Char123LocaleChar125FaqRoute
   '/{-$locale}/featured': typeof Char123LocaleChar125FeaturedRoute
   '/{-$locale}/inquiry': typeof Char123LocaleChar125InquiryRoute
   '/{-$locale}/blog/$slug': typeof Char123LocaleChar125BlogSlugRoute
@@ -153,6 +163,7 @@ export interface FileRouteTypes {
     | '/{-$locale}/about'
     | '/{-$locale}/blog'
     | '/{-$locale}/contact'
+    | '/{-$locale}/faq'
     | '/{-$locale}/featured'
     | '/{-$locale}/inquiry'
     | '/{-$locale}/blog/$slug'
@@ -167,6 +178,7 @@ export interface FileRouteTypes {
     | '/{-$locale}'
     | '/{-$locale}/about'
     | '/{-$locale}/contact'
+    | '/{-$locale}/faq'
     | '/{-$locale}/featured'
     | '/{-$locale}/inquiry'
     | '/{-$locale}/blog/$slug'
@@ -182,6 +194,7 @@ export interface FileRouteTypes {
     | '/{-$locale}/about'
     | '/{-$locale}/blog'
     | '/{-$locale}/contact'
+    | '/{-$locale}/faq'
     | '/{-$locale}/featured'
     | '/{-$locale}/inquiry'
     | '/{-$locale}/blog/$slug'
@@ -239,6 +252,13 @@ declare module '@tanstack/react-router' {
       path: '/contact'
       fullPath: '/{-$locale}/contact'
       preLoaderRoute: typeof Char123LocaleChar125ContactRouteImport
+      parentRoute: typeof Char123LocaleChar125Route
+    }
+    '/{-$locale}/faq': {
+      id: '/{-$locale}/faq'
+      path: '/faq'
+      fullPath: '/{-$locale}/faq'
+      preLoaderRoute: typeof Char123LocaleChar125FaqRouteImport
       parentRoute: typeof Char123LocaleChar125Route
     }
     '/{-$locale}/blog': {
@@ -313,6 +333,7 @@ interface Char123LocaleChar125RouteChildren {
   Char123LocaleChar125AboutRoute: typeof Char123LocaleChar125AboutRoute
   Char123LocaleChar125BlogRoute: typeof Char123LocaleChar125BlogRouteWithChildren
   Char123LocaleChar125ContactRoute: typeof Char123LocaleChar125ContactRoute
+  Char123LocaleChar125FaqRoute: typeof Char123LocaleChar125FaqRoute
   Char123LocaleChar125FeaturedRoute: typeof Char123LocaleChar125FeaturedRoute
   Char123LocaleChar125InquiryRoute: typeof Char123LocaleChar125InquiryRoute
   Char123LocaleChar125GiftSetsSetIdRoute: typeof Char123LocaleChar125GiftSetsSetIdRoute
@@ -324,6 +345,7 @@ const Char123LocaleChar125RouteChildren: Char123LocaleChar125RouteChildren = {
   Char123LocaleChar125AboutRoute: Char123LocaleChar125AboutRoute,
   Char123LocaleChar125BlogRoute: Char123LocaleChar125BlogRouteWithChildren,
   Char123LocaleChar125ContactRoute: Char123LocaleChar125ContactRoute,
+  Char123LocaleChar125FaqRoute: Char123LocaleChar125FaqRoute,
   Char123LocaleChar125FeaturedRoute: Char123LocaleChar125FeaturedRoute,
   Char123LocaleChar125InquiryRoute: Char123LocaleChar125InquiryRoute,
   Char123LocaleChar125GiftSetsSetIdRoute:

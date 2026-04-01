@@ -1,6 +1,4 @@
-import { Link, type LinkProps } from '@tanstack/react-router'
-
-type RouterTo = LinkProps['to']
+import { Link } from '@tanstack/react-router'
 import { Linkedin, Mail } from 'lucide-react'
 import { cloudinaryUrl } from '@/lib/cloudinary'
 
@@ -15,7 +13,8 @@ const productCategories = [
 
 const companyLinks = [
   { label: 'About', href: '/about' },
-  { label: 'How It Works', href: '/how-it-works' },
+  { label: 'How It Works', href: '/about#how-it-works' },
+  { label: 'FAQ', href: '/faq' },
   { label: 'Contact', href: '/contact' },
   { label: 'Privacy Policy', href: '/privacy' },
 ]

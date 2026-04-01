@@ -29,6 +29,34 @@ export const Route = createFileRoute('/{-$locale}/blog/$slug')({
         }),
       ],
       links: [buildCanonical(`/blog/${post.slug}`)],
+      scripts: [
+        {
+          type: 'application/ld+json',
+          children: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BlogPosting',
+            headline: post.title,
+            description: post.metaDescription,
+            image: post.heroImage,
+            datePublished: post.isoDate,
+            dateModified: post.isoDate,
+            author: {
+              '@type': 'Organization',
+              name: 'Wischos Gift',
+              url: 'https://wischosgift.com',
+            },
+            publisher: {
+              '@type': 'Organization',
+              name: 'Wischos Gift',
+              url: 'https://wischosgift.com',
+            },
+            mainEntityOfPage: {
+              '@type': 'WebPage',
+              '@id': `https://wischosgift.com/blog/${post.slug}`,
+            },
+          }),
+        },
+      ],
     }
   },
   component: ArticlePage,
