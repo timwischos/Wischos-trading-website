@@ -17,6 +17,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [ ] **Phase 3: Products** - Product grid, detail pages, lightbox, Product JSON-LD
 - [ ] **Phase 4: Inquiry** - Inquiry form, API route, Supabase persistence, Resend notification
 - [ ] **Phase 5: SEO and Launch** - FAQ page, per-route metadata, structured data, sitemap, pre-launch audit
+- [ ] **Phase 6: Go-to-Market** - ICP definition, Google prospect playbook, SEO/SIO/GEO gap fixes, LinkedIn launch kit
 
 ## Phase Details
 
@@ -103,10 +104,26 @@ Plans:
   5. A pre-launch audit confirms: no factory names in any page content or metadata, no secrets in the client bundle, RLS is enabled on the inquiries table, and the inquiry form submits and displays correctly on mobile (375px) and tablet (768px) devices
 **Plans**: TBD
 
+### Phase 6: Go-to-Market
+**Goal**: The operator has a concrete, actionable acquisition system in place — a precise ICP document, a Google search operator playbook for finding SMB prospects, a fully optimized website (SEO/SIO/GEO gaps closed), and a complete LinkedIn launch strategy with copy and visual direction for both the personal profile and company page
+**Depends on**: Phase 5
+**Requirements**: GTM-01, GTM-02, GTM-03, GTM-04
+**Success Criteria** (what must be TRUE):
+  1. A written ICP (Ideal Customer Profile) document names the exact buyer roles, company sizes, industries, geographies, and pain points that match Wischos Gift's offer — precise enough to evaluate any prospect against
+  2. A Google search operator playbook delivers at least 10 ready-to-use search strings that surface SMB prospects (Office Managers, Executive Assistants, HR Managers at 50–500 person companies) with company name, contact role, and LinkedIn/website hints
+  3. A full SEO/SIO/GEO audit of the live site is completed and all identified gaps are fixed in code — on-page metadata, structured data, AI-answer optimization, and content completeness
+  4. A LinkedIn launch kit is ready for immediate use: personal profile copy (headline, about, experience), company page copy (tagline, about, specialties), and a 4-week content calendar with post copy and image direction for each post
+**Plans**: 3 plans
+
+Plans:
+- [ ] 06-01-PLAN.md — ICP document (4 personas, firmographic table, qualification checklist) + Google search operator playbook (12+ strings)
+- [ ] 06-02-PLAN.md — SEO/GEO code fixes: robots.txt AI bots, privacy.tsx OG/canonical, blog JSON-LD, gift-set JSON-LD + BreadcrumbList, /faq route with FAQPage JSON-LD, Organization schema improvements
+- [ ] 06-03-PLAN.md — LinkedIn launch kit (personal profile copy, company page copy, 4-week content calendar) + sameAs Organization JSON-LD update
+
 ## Progress
 
 **Execution Order:**
-Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
+Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
@@ -115,3 +132,4 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | 3. Products | 3/4 | In Progress|  |
 | 4. Inquiry | 4/5 | In Progress|  |
 | 5. SEO and Launch | 0/TBD | Not started | - |
+| 6. Go-to-Market | 0/3 | Not started | - |
