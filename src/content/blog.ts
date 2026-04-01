@@ -7,6 +7,8 @@ export interface BlogPost {
   category: string
   readTime: string
   publishedAt: string // display string e.g. "March 28, 2026"
+  // ISO 8601 date for JSON-LD datePublished e.g. "2026-01-14"
+  isoDate: string
   heroImage: string
   heroImageAlt: string
   heroImageCredit: string
@@ -24,6 +26,7 @@ export const blogPosts: BlogPost[] = [
     category: 'Material Guide',
     readTime: '6 min read',
     publishedAt: 'January 14, 2026',
+    isoDate: '2026-01-14',
     heroImage:
       'https://images.pexels.com/photos/10406128/pexels-photo-10406128.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     heroImageAlt: 'Close-up of precision machined metal tool showing fine surface detail',
@@ -40,6 +43,7 @@ export const blogPosts: BlogPost[] = [
     category: 'Customisation',
     readTime: '4 min read',
     publishedAt: 'February 6, 2026',
+    isoDate: '2026-02-06',
     heroImage:
       'https://images.pexels.com/photos/7254428/pexels-photo-7254428.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     heroImageAlt: 'Close-up of a CNC laser engraving machine working on a metal surface',
@@ -56,6 +60,7 @@ export const blogPosts: BlogPost[] = [
     category: 'Sourcing Guide',
     readTime: '6 min read',
     publishedAt: 'March 3, 2026',
+    isoDate: '2026-03-03',
     heroImage:
       'https://images.pexels.com/photos/7480239/pexels-photo-7480239.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     heroImageAlt: 'Close-up of a precision CNC milling machine carving metal with high accuracy',
@@ -72,6 +77,7 @@ export const blogPosts: BlogPost[] = [
     category: 'Logistics',
     readTime: '5 min read',
     publishedAt: 'March 24, 2026',
+    isoDate: '2026-03-24',
     heroImage:
       'https://images.pexels.com/photos/1427107/pexels-photo-1427107.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     heroImageAlt: 'Aerial view of shipping containers stacked at a cargo port',

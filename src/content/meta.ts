@@ -49,7 +49,7 @@ export const siteMeta = {
     },
     products: {
       title: 'Metal Gift Set Catalog | Wischos Gift',
-      description: 'Browse premium metal gift sets. MOQ 100 sets per series. Full packaging customization available.',
+      description: 'Browse our full catalog of premium custom metal gifts — pens, desk accessories, EDC tools and drinkware. MOQ 100 pcs. Full packaging customization available.',
     },
     about: {
       title: 'About Wischos Gift — Corporate Gift Specialists',
@@ -57,7 +57,7 @@ export const siteMeta = {
     },
     contact: {
       title: 'Contact Wischos Gift',
-      description: 'Get in touch with Wischos Gift for custom branded metal gift sets.',
+      description: 'Get in touch with Wischos Gift. Request samples, ask about MOQ, or start a custom branded metal gift set inquiry. We respond within 24 hours.',
     },
     inquiry: {
       title: 'Request an Inquiry | Wischos Gift',
@@ -69,8 +69,15 @@ export const siteMeta = {
     },
     privacy: {
       title: 'Privacy Policy | Wischos Gift',
-      description:
-        'Privacy policy for Wischos Gift — how we collect, use, and protect your inquiry data under GDPR.',
+      description: 'Privacy policy for Wischos Gift — how we collect, use, and protect your personal and inquiry data in compliance with GDPR and applicable data protection laws.',
+    },
+    faq: {
+      title: 'FAQ — Custom Metal Corporate Gifts | Wischos Gift',
+      description: 'Answers to the most common questions about ordering custom branded metal gift sets. MOQ, lead times, samples, payment terms, and packaging options.',
+    },
+    blog: {
+      title: 'Corporate Gift Insights | Wischos Gift Blog',
+      description: 'Practical guides for corporate buyers — materials, customisation methods, sourcing from China, and lead time planning.',
     },
   },
 } as const
