@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: "All plans executed. Next steps in order:"
-stopped_at: Completed 06-01-PLAN.md
-last_updated: "2026-04-01T11:12:35.421Z"
+stopped_at: Completed 06-02-PLAN.md
+last_updated: "2026-04-01T11:58:17.761Z"
 last_activity: 2026-03-11 — All Phase 1 plans executed
 progress:
   total_phases: 6
   completed_phases: 2
   total_plans: 19
-  completed_plans: 15
+  completed_plans: 16
   percent: 100
 ---
 
@@ -65,6 +65,7 @@ Progress: [██████████] 100% (Phase 1 plans)
 | Phase 04-inquiry P01 | 8 | 2 tasks | 5 files |
 | Phase 04-inquiry P04 | 5 | 1 tasks | 2 files |
 | Phase 06-go-to-market P01 | 20 | 2 tasks | 2 files |
+| Phase 06-go-to-market P02 | 305 | 3 tasks | 9 files |
 
 ## Accumulated Context
 
@@ -105,6 +106,8 @@ Recent decisions affecting current work:
 - [Phase 04-inquiry]: search: location.search cast as Record<string,string> — TanStack Router 1.166.7 type narrowing for redirect search params
 - [Phase 06-go-to-market]: ICP excludes USA market due to 2026 tariff complexity — priority AU > EU > SG > KR > JP
 - [Phase 06-go-to-market]: Marketing Coordinator designated secondary persona — lower priority than Office Manager / EA / HR Manager
+- [Phase 06-go-to-market]: isoDate field added to BlogPost interface for JSON-LD datePublished decoupled from display string
+- [Phase 06-go-to-market]: Organization JSON-LD areaServed changed from Worldwide string to country array [AU, EU, SG, KR, JP]
 
 ### Pending Todos
 
@@ -120,7 +123,7 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-04-01T11:12:35.351Z
-Stopped at: Completed 06-01-PLAN.md
+Last session: 2026-04-01T11:58:17.742Z
+Stopped at: Completed 06-02-PLAN.md
 Resume with: /gsd:progress (check state) or /gsd:verify-work 1 (after drizzle-kit push + Vercel redeploy)
 Resume file: None
