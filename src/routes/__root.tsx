@@ -14,11 +14,13 @@ const organizationJsonLd = {
   url: siteMeta.siteUrl,
   email: siteMeta.email,
   description: siteMeta.defaultDescription,
-  areaServed: 'Worldwide',
+  foundingDate: '2024',
+  areaServed: ['AU', 'EU', 'SG', 'KR', 'JP'],
   contactPoint: {
     '@type': 'ContactPoint',
     contactType: 'sales',
     email: siteMeta.email,
+    availableLanguage: 'English',
   },
 }
 

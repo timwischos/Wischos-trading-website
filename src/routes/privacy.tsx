@@ -1,5 +1,5 @@
 import { createFileRoute } from '@tanstack/react-router'
-import { siteMeta } from '@/content/meta'
+import { siteMeta, buildOgMeta, buildCanonical } from '@/content/meta'
 import { privacy } from '@/content/privacy'
 
 export const Route = createFileRoute('/privacy')({
@@ -7,7 +7,14 @@ export const Route = createFileRoute('/privacy')({
     meta: [
       { title: siteMeta.routes.privacy.title },
       { name: 'description', content: siteMeta.routes.privacy.description },
+      ...buildOgMeta({
+        title: siteMeta.routes.privacy.title,
+        description: siteMeta.routes.privacy.description,
+        image: siteMeta.defaultOgImage,
+        url: '/privacy',
+      }),
     ],
+    links: [buildCanonical('/privacy')],
   }),
   component: PrivacyPage,
 })
