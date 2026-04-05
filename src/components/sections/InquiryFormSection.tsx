@@ -5,6 +5,7 @@ import { useForm } from '@tanstack/react-form'
 import { useSearch } from '@tanstack/react-router'
 import { inquiryInsertSchema } from '@/lib/schemas/inquiry'
 import { submitInquiry } from '@/server/submitInquiry'
+import { trackQualifyLead } from '@/lib/analytics'
 import { contactContent } from '@/content/contact'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
@@ -66,6 +67,10 @@ export function InquiryFormSection() {
       setSubmitError(null)
       try {
         await submitInquiry({ data: value })
+        trackQualifyLead({
+          productInterest: value.productInterest,
+          companyName: value.companyName,
+        })
         setIsSuccess(true)
       } catch {
         setSubmitError('Something went wrong. Please try again or email us directly.')

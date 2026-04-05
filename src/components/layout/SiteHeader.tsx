@@ -3,6 +3,7 @@ import { Link, useNavigate, type LinkProps } from '@tanstack/react-router'
 import { Menu, X, ChevronDown, Search } from 'lucide-react'
 import { navigation } from '@/content/navigation'
 import { cloudinaryUrl } from '@/lib/cloudinary'
+import { trackViewSearchResults } from '@/lib/analytics'
 
 type RouterTo = LinkProps['to']
 
@@ -46,6 +47,7 @@ export function SiteHeader() {
     e.preventDefault()
     if (searchQuery.trim()) {
       navigate({ to: '/products' as RouterTo, search: { q: searchQuery.trim() } as never })
+      trackViewSearchResults({ query: searchQuery.trim() })
       setSearchOpen(false)
       setSearchQuery('')
     }

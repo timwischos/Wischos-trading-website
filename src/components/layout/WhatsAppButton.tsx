@@ -1,3 +1,5 @@
+import { trackWhatsAppClick } from '@/lib/analytics'
+
 const WHATSAPP_NUMBER = '8618755336272'
 const WHATSAPP_MESSAGE = encodeURIComponent(
   "Hi, I'm interested in your custom metal gift sets. Could you share more details?"
@@ -10,6 +12,7 @@ export function WhatsAppButton() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat on WhatsApp"
+      onClick={trackWhatsAppClick}
       style={{
         position: 'fixed',
         bottom: '1.5rem',

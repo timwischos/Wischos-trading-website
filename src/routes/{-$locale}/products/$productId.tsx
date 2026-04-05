@@ -1,8 +1,10 @@
+import { useEffect } from 'react'
 import { createFileRoute, notFound, Link, type LinkProps } from '@tanstack/react-router'
 import { ProductDetailSection } from '@/components/sections/ProductDetailSection'
 import { getProductById, getProducts } from '@/server/getProducts'
 import type { DbProduct } from '@/server/schema'
 import { siteMeta, buildOgMeta, buildCanonical } from '@/content/meta'
+import { trackViewItem } from '@/lib/analytics'
 
 type RouterTo = LinkProps['to']
 
@@ -101,5 +103,14 @@ export const Route = createFileRoute('/{-$locale}/products/$productId')({
 
 function ProductDetailPage() {
   const { product, related } = Route.useLoaderData() as { product: DbProduct; related: DbProduct[] }
+
+  useEffect(() => {
+    trackViewItem({
+      productId: product.id,
+      productName: product.name,
+      category: product.category ?? undefined,
+    })
+  }, [product.id, product.name, product.category])
+
   return <ProductDetailSection product={product} relatedProducts={related} />
 }
