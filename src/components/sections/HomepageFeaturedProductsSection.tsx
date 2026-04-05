@@ -30,7 +30,7 @@ export function HomepageFeaturedProductsSection({ products }: { products: DbProd
       </div>
 
       {/* 4-column grid */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', borderLeft: b }}>
+      <div style={{ display: 'grid', borderLeft: b }} className="grid-cols-2 md:grid-cols-4">
         {products.map(product => (
           <div key={product.id} style={{ borderRight: b, borderBottom: b }}>
             <ProductCard product={product} />

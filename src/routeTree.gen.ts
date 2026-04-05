@@ -18,6 +18,7 @@ import { Route as Char123LocaleChar125FaqRouteImport } from './routes/{-$locale}
 import { Route as Char123LocaleChar125ContactRouteImport } from './routes/{-$locale}/contact'
 import { Route as Char123LocaleChar125BlogRouteImport } from './routes/{-$locale}/blog'
 import { Route as Char123LocaleChar125AboutRouteImport } from './routes/{-$locale}/about'
+import { Route as LandingOnboardingGiftSetRouteImport } from './routes/landing/onboarding-gift-set'
 import { Route as Char123LocaleChar125ProductsIndexRouteImport } from './routes/{-$locale}/products/index'
 import { Route as Char123LocaleChar125BlogIndexRouteImport } from './routes/{-$locale}/blog/index'
 import { Route as Char123LocaleChar125ProductsProductIdRouteImport } from './routes/{-$locale}/products/$productId'
@@ -51,12 +52,11 @@ const Char123LocaleChar125FeaturedRoute =
     path: '/featured',
     getParentRoute: () => Char123LocaleChar125Route,
   } as any)
-const Char123LocaleChar125FaqRoute =
-  Char123LocaleChar125FaqRouteImport.update({
-    id: '/faq',
-    path: '/faq',
-    getParentRoute: () => Char123LocaleChar125Route,
-  } as any)
+const Char123LocaleChar125FaqRoute = Char123LocaleChar125FaqRouteImport.update({
+  id: '/faq',
+  path: '/faq',
+  getParentRoute: () => Char123LocaleChar125Route,
+} as any)
 const Char123LocaleChar125ContactRoute =
   Char123LocaleChar125ContactRouteImport.update({
     id: '/contact',
@@ -74,6 +74,12 @@ const Char123LocaleChar125AboutRoute =
     id: '/about',
     path: '/about',
     getParentRoute: () => Char123LocaleChar125Route,
+  } as any)
+const LandingOnboardingGiftSetRoute =
+  LandingOnboardingGiftSetRouteImport.update({
+    id: '/landing/onboarding-gift-set',
+    path: '/landing/onboarding-gift-set',
+    getParentRoute: () => rootRouteImport,
   } as any)
 const Char123LocaleChar125ProductsIndexRoute =
   Char123LocaleChar125ProductsIndexRouteImport.update({
@@ -110,6 +116,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/privacy': typeof PrivacyRoute
   '/{-$locale}': typeof Char123LocaleChar125RouteWithChildren
+  '/landing/onboarding-gift-set': typeof LandingOnboardingGiftSetRoute
   '/{-$locale}/about': typeof Char123LocaleChar125AboutRoute
   '/{-$locale}/blog': typeof Char123LocaleChar125BlogRouteWithChildren
   '/{-$locale}/contact': typeof Char123LocaleChar125ContactRoute
@@ -126,6 +133,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/privacy': typeof PrivacyRoute
   '/{-$locale}': typeof Char123LocaleChar125RouteWithChildren
+  '/landing/onboarding-gift-set': typeof LandingOnboardingGiftSetRoute
   '/{-$locale}/about': typeof Char123LocaleChar125AboutRoute
   '/{-$locale}/contact': typeof Char123LocaleChar125ContactRoute
   '/{-$locale}/faq': typeof Char123LocaleChar125FaqRoute
@@ -142,6 +150,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/privacy': typeof PrivacyRoute
   '/{-$locale}': typeof Char123LocaleChar125RouteWithChildren
+  '/landing/onboarding-gift-set': typeof LandingOnboardingGiftSetRoute
   '/{-$locale}/about': typeof Char123LocaleChar125AboutRoute
   '/{-$locale}/blog': typeof Char123LocaleChar125BlogRouteWithChildren
   '/{-$locale}/contact': typeof Char123LocaleChar125ContactRoute
@@ -160,6 +169,7 @@ export interface FileRouteTypes {
     | '/'
     | '/privacy'
     | '/{-$locale}'
+    | '/landing/onboarding-gift-set'
     | '/{-$locale}/about'
     | '/{-$locale}/blog'
     | '/{-$locale}/contact'
@@ -176,6 +186,7 @@ export interface FileRouteTypes {
     | '/'
     | '/privacy'
     | '/{-$locale}'
+    | '/landing/onboarding-gift-set'
     | '/{-$locale}/about'
     | '/{-$locale}/contact'
     | '/{-$locale}/faq'
@@ -191,6 +202,7 @@ export interface FileRouteTypes {
     | '/'
     | '/privacy'
     | '/{-$locale}'
+    | '/landing/onboarding-gift-set'
     | '/{-$locale}/about'
     | '/{-$locale}/blog'
     | '/{-$locale}/contact'
@@ -208,6 +220,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   PrivacyRoute: typeof PrivacyRoute
   Char123LocaleChar125Route: typeof Char123LocaleChar125RouteWithChildren
+  LandingOnboardingGiftSetRoute: typeof LandingOnboardingGiftSetRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -247,18 +260,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof Char123LocaleChar125FeaturedRouteImport
       parentRoute: typeof Char123LocaleChar125Route
     }
-    '/{-$locale}/contact': {
-      id: '/{-$locale}/contact'
-      path: '/contact'
-      fullPath: '/{-$locale}/contact'
-      preLoaderRoute: typeof Char123LocaleChar125ContactRouteImport
-      parentRoute: typeof Char123LocaleChar125Route
-    }
     '/{-$locale}/faq': {
       id: '/{-$locale}/faq'
       path: '/faq'
       fullPath: '/{-$locale}/faq'
       preLoaderRoute: typeof Char123LocaleChar125FaqRouteImport
+      parentRoute: typeof Char123LocaleChar125Route
+    }
+    '/{-$locale}/contact': {
+      id: '/{-$locale}/contact'
+      path: '/contact'
+      fullPath: '/{-$locale}/contact'
+      preLoaderRoute: typeof Char123LocaleChar125ContactRouteImport
       parentRoute: typeof Char123LocaleChar125Route
     }
     '/{-$locale}/blog': {
@@ -274,6 +287,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/{-$locale}/about'
       preLoaderRoute: typeof Char123LocaleChar125AboutRouteImport
       parentRoute: typeof Char123LocaleChar125Route
+    }
+    '/landing/onboarding-gift-set': {
+      id: '/landing/onboarding-gift-set'
+      path: '/landing/onboarding-gift-set'
+      fullPath: '/landing/onboarding-gift-set'
+      preLoaderRoute: typeof LandingOnboardingGiftSetRouteImport
+      parentRoute: typeof rootRouteImport
     }
     '/{-$locale}/products/': {
       id: '/{-$locale}/products/'
@@ -363,6 +383,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   PrivacyRoute: PrivacyRoute,
   Char123LocaleChar125Route: Char123LocaleChar125RouteWithChildren,
+  LandingOnboardingGiftSetRoute: LandingOnboardingGiftSetRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

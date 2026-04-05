@@ -28,14 +28,14 @@ export function HomepageProductsSection() {
         onMouseLeave={() => setHoveredId(null)}
       >
         <img
-          src={cloudinaryUrl(set.coverImage)}
+          src={cloudinaryUrl(set.coverImage, { w: 800 })}
           alt={set.name}
           loading={large ? 'eager' : 'lazy'}
           style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', transition: 'opacity 0.4s ease', opacity: hasHover && hovered ? 0 : 1 }}
         />
         {hasHover && (
           <img
-            src={cloudinaryUrl(set.hoverImage!)}
+            src={cloudinaryUrl(set.hoverImage!, { w: 800 })}
             alt=""
             aria-hidden="true"
             loading="lazy"

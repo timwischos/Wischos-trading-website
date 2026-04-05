@@ -1,4 +1,4 @@
-import { HeadContent, Scripts, createRootRoute } from '@tanstack/react-router'
+import { HeadContent, Scripts, createRootRoute, useRouterState } from '@tanstack/react-router'
 import { SiteHeader } from '@/components/layout/SiteHeader'
 import { SiteFooter } from '@/components/layout/SiteFooter'
 import { WhatsAppButton } from '@/components/layout/WhatsAppButton'
@@ -22,6 +22,9 @@ const organizationJsonLd = {
     email: siteMeta.email,
     availableLanguage: 'English',
   },
+  sameAs: [
+    'https://www.linkedin.com/company/wischosgift',
+  ],
 }
 
 const websiteJsonLd = {
@@ -55,6 +58,9 @@ export const Route = createRootRoute({
 })
 
 function RootDocument({ children }: { children: React.ReactNode }) {
+  const location = useRouterState({ select: (s) => s.location.pathname })
+  const isLanding = location.startsWith('/landing/')
+
   return (
     <html lang="en">
       <head>
@@ -66,12 +72,19 @@ function RootDocument({ children }: { children: React.ReactNode }) {
           gtag('js', new Date());
           gtag('config', 'G-859CPYDHVK');
         `}} />
+        <script dangerouslySetInnerHTML={{ __html: `
+          (function(c,l,a,r,i,t,y){
+              c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+              t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+              y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+          })(window, document, "clarity", "script", "w6z70dz6w4");
+        `}} />
       </head>
       <body className="min-h-screen bg-background font-sans antialiased">
-        <SiteHeader />
+        {!isLanding && <SiteHeader />}
         {children}
-        <SiteFooter />
-        <WhatsAppButton />
+        {!isLanding && <SiteFooter />}
+        {!isLanding && <WhatsAppButton />}
         <Scripts />
       </body>
     </html>

@@ -16,42 +16,35 @@ Optimize your personal profile before touching the company page — always. Your
 
 ### 2a: Headline
 
-> Founder @ Wischos Gift | Custom Metal Gift Sets for Corporate Buyers | MOQ 100 Sets, Full Packaging Design, Ships to AU / EU / SG
+> Corporate Gifting Specialist @ Wischos Gift | Custom Metal Gift Sets for Corporate Buyers | MOQ 100 Sets · Packaging Design Included
 
-**Character count:** 130 (well under 220 limit)
+**Character count:** 131 (well under 220 limit)
 
 ---
 
 ### 2b: About Section
 
-> If your company orders branded gifts every year and you are still piecing together suppliers, chasing samples, and wondering whether the final product will match the mockup — this is the problem I started Wischos Gift to solve.
+> Corporate gifting programs run into the same wall, regardless of company size.
 >
-> I work with Office Managers, Executive Assistants, HR teams, and Marketing Coordinators at companies with 50 to 500 employees across Australia, the EU, Singapore, South Korea, and Japan. These are the people who run corporate gifting programs without a dedicated procurement department — they need premium-quality branded items at quantities that fit a real budget, not a Fortune 500 purchase order.
+> The buyer — usually an Office Manager, EA, or HR lead — needs premium branded items at quantities that fit a real budget. Not 500 pieces. Not generic catalogue merchandise. Not the complexity of sourcing direct from overseas factories.
 >
-> The standard options are frustrating. Alibaba requires fluent factory negotiation skills, two rounds of samples, and a 500-piece minimum that nobody needs. Generic promotional merchandise distributors sell the same pen in 400 catalogues. Neither option produces something that actually reflects your brand at client events, onboarding kits, or executive gift programs.
+> That gap is real. MOQ 100 sits in a space that large manufacturers won't touch and general promotional distributors can't serve well.
 >
-> Wischos Gift is a curated catalog of 24 premium metal gift products across five material categories: brass, titanium, stainless steel, zinc alloy, and aluminum. Every product is designed for B2B gifting programs — not retail, not FMCG giveaways. We cover pens, desk accessories, EDC tools, and drinkware. Minimum order is 100 sets. Custom packaging design is included, not an upsell.
+> My background is in premium gift set programs — airline gift set sourcing and promotional gift sets — where product quality and packaging consistency aren't optional. That work made the gap in the corporate gifting market obvious. Metal gift sets done properly — right material, right finish, right packaging — look and feel different from standard promotional merchandise. Recipients notice.
 >
-> A few specifics:
-> - 24 products across 5 material categories
-> - MOQ 100 sets (single SKU or curated set combination)
-> - FOB unit prices from $18 USD
-> - Full custom packaging design included
-> - Manufacturing network across Yangjiang, Dongguan, Zhongshan, Shenzhen, Yiwu, and Wenzhou
-> - Normal production lead time: 25–35 days
-> - Serving buyers in AU, EU (NL, DE, UK), SG, KR, JP
+> At Wischos Gift, I work with corporate buyers who run annual gifting programs, client appreciation events, onboarding kits, and conference giveaways. The catalog covers 24 products across five metal categories: brass, titanium, stainless steel, zinc alloy, and aluminum. MOQ 100 sets. Custom packaging design included.
 >
-> You deal with one person throughout — inquiry, sample approval, production, and shipping. No account handoffs, no language barrier, no factory browsing required.
+> One point of contact from inquiry through delivery. No account handoffs. No factory browsing required.
 >
-> If you have a gift program coming up in the next 90 days or you are building a recurring gifting calendar for next year, visit wischosgift.com to see the catalog — or send me a direct message here. No pitch calls, no hard sell. Just a conversation about what you need.
+> If you have a gifting program coming up or you're building a recurring gifting calendar, visit wischosgift.com to browse the full catalog — or send me a message here. No pitch calls. Just a conversation about what you need.
 
-**Character count:** approximately 1,950 (under 2,600 limit)
+**Character count:** approximately 900 (under 2,600 limit)
 
 ---
 
 ### 2c: Experience Entry — Wischos Gift
 
-**Position title:** Founder
+**Position title:** Corporate Gifting Specialist
 
 **Company:** Wischos Gift
 
@@ -59,13 +52,11 @@ Optimize your personal profile before touching the company page — always. Your
 
 **Description:**
 
-> Wischos Gift is a B2B corporate gifting supplier specializing in custom metal gift sets for SMB buyers in Australia, the EU, Singapore, South Korea, and Japan. The company bridges the gap between factory-direct sourcing and the level of service that a corporate buyer expects — a single point of contact, full packaging customization, and MOQ 100 sets designed for teams that run gifting programs without a dedicated procurement function.
-
-**Key outcomes:**
-
-> - Curated a catalog of 24 premium metal gift products across 5 material categories (brass, titanium, stainless steel, zinc alloy, aluminum)
-> - Built a 6-factory manufacturing network spanning Yangjiang, Dongguan, Zhongshan, Shenzhen, Yiwu, and Wenzhou to ensure category coverage and production flexibility
-> - Launched full e-commerce and inquiry platform at wischosgift.com serving B2B buyers across AU, EU, SG, KR, and JP with product specifications, FOB pricing, and direct inquiry flow
+> Wischos Gift is a B2B corporate gifting supplier specializing in custom metal gift sets for corporate buyers. The company bridges the gap between factory-direct sourcing and the level of service a corporate buyer expects — a single point of contact, full packaging customization, and MOQ 100 sets designed for teams that run gifting programs without a dedicated procurement function.
+>
+> - Manage sourcing and client relationships across a catalog of 24 premium metal gift products in 5 material categories (brass, titanium, stainless steel, zinc alloy, aluminum)
+> - Coordinate end-to-end order fulfillment across a 6-factory manufacturing network spanning Yangjiang, Dongguan, Zhongshan, Shenzhen, Yiwu, and Wenzhou
+> - Support B2B buyers through the full gifting program cycle — inquiry, sample approval, packaging design, production, and delivery — as a single point of contact
 
 ---
 
@@ -77,7 +68,8 @@ Optimize your personal profile before touching the company page — always. Your
 4. Premium Packaging
 5. Metal Manufacturing
 6. Custom Branding
-7. Corporate Merchandise
+7. Executive Gifts
+8. Custom Metal Products
 
 ---
 
@@ -95,7 +87,7 @@ Optimize your personal profile before touching the company page — always. Your
 
 ### 3a: Tagline
 
-> Custom metal gift sets for corporate buyers. MOQ 100 sets. Packaging design included. AU, EU, SG.
+> Custom metal gift sets for corporate buyers. MOQ 100 sets. Packaging design included.
 
 **Character count:** 91 (under 120 limit)
 

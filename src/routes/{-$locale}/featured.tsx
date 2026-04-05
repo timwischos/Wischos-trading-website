@@ -9,10 +9,10 @@ export const Route = createFileRoute('/{-$locale}/featured')({
   head: () => ({
     meta: [
       { title: 'Featured Gift Sets | Wischos Gift' },
-      { name: 'description', content: 'Curated premium metal gift sets for corporate clients. MOQ 100 sets, fully custom-branded.' },
+      { name: 'description', content: 'Curated premium metal gift sets for corporate buyers. Each set is fully custom-branded with your logo. MOQ 100 sets. Explore writing, desk, EDC and drinkware combinations.' },
       ...buildOgMeta({
         title: 'Featured Gift Sets | Wischos Gift',
-        description: 'Curated premium metal gift sets for corporate clients. MOQ 100 sets, fully custom-branded.',
+        description: 'Curated premium metal gift sets for corporate buyers. Each set is fully custom-branded with your logo. MOQ 100 sets. Explore writing, desk, EDC and drinkware combinations.',
         image: siteMeta.defaultOgImage,
         url: '/featured',
       }),

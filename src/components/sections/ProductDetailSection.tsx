@@ -89,7 +89,7 @@ export function ProductLightbox({ product, initialIdx = 0 }: { product: Product;
           aria-label={`View ${product.name} full size`}
         >
           <img
-            src={cloudinaryUrl(product.images[initialIdx])}
+            src={cloudinaryUrl(product.images[initialIdx], { w: 1200 })}
             alt={productAlt(product)}
             className="w-full object-cover"
             style={{ aspectRatio: '1/1' }}
@@ -143,7 +143,7 @@ export function ProductLightbox({ product, initialIdx = 0 }: { product: Product;
             }}
           >
             <img
-              src={cloudinaryUrl(product.images[idx])}
+              src={cloudinaryUrl(product.images[idx], { w: 1600 })}
               alt={productAlt(product, `image ${idx + 1}`)}
               style={{
                 maxHeight: zoomed ? 'none' : '88vh',
@@ -216,7 +216,7 @@ export function ProductDetailSection({ product, relatedProducts }: ProductDetail
                       outlineOffset: 2, cursor: 'pointer', background: 'none', overflow: 'hidden',
                     }}
                   >
-                    <img src={cloudinaryUrl(src)} alt={`${product.name} - view ${i + 1}`} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+                    <img src={cloudinaryUrl(src, { w: 200 })} alt={`${product.name} - view ${i + 1}`} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
                   </button>
                 ))}
               </div>
@@ -368,7 +368,7 @@ export function ProductDetailSection({ product, relatedProducts }: ProductDetail
                   >
                     <div style={{ overflow: 'hidden', background: '#f7f7f7', aspectRatio: '1/1' }}>
                       <img
-                        src={cloudinaryUrl(rp.images[0])}
+                        src={cloudinaryUrl(rp.images[0], { w: 600 })}
                         alt={`Wischos Gift - ${rp.name} - ${rp.category} Corporate Gift`}
                         loading="lazy"
                         style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}

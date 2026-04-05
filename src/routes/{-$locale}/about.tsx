@@ -72,12 +72,14 @@ function AboutPage() {
         <ProcessStepsSection />
         <div style={{ borderTop: '1px solid var(--grid-color)', borderBottom: '1px solid var(--grid-color)', background: '#0a0a0a' }}>
           <video
-            src="https://res.cloudinary.com/dcivh8ovs/video/upload/v1774942569/how-it-works_rnzm15.mp4"
             controls
             playsInline
             preload="metadata"
             style={{ display: 'block', width: '100%', maxWidth: '1200px', margin: '0 auto' }}
-          />
+          >
+            <source src="https://res.cloudinary.com/dcivh8ovs/video/upload/f_webm,q_auto,vc_vp9/v1774942569/how-it-works_rnzm15.webm" type="video/webm" />
+            <source src="https://res.cloudinary.com/dcivh8ovs/video/upload/f_mp4,q_auto,vc_h264/v1774942569/how-it-works_rnzm15.mp4" type="video/mp4" />
+          </video>
         </div>
         <ProcessPolicySection />
       </div>

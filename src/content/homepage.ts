@@ -1,9 +1,9 @@
 export const homepage = {
   hero: {
     kicker: 'Customized Metal Gift Sets · MOQ 100',
-    headline: 'Sourced · Assembled · Branded — One Inquiry to Get Started',
+    headline: 'Custom Metal Gift Sets — Sourced, Branded & Delivered',
     subheadline:
-      'Complete branded gift sets — from sourcing to delivery, one inquiry.',
+      'Custom engraved corporate gift sets — from sourcing to delivery, one inquiry.',
     cta: 'Send an Inquiry',
   },
   valueProps: {

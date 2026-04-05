@@ -11,8 +11,8 @@ interface ProductCardProps {
 
 export function ProductCard({ product }: ProductCardProps) {
   const [hovered, setHovered] = useState(false)
-  const coverSrc = cloudinaryUrl(product.images[0] ?? '')
-  const hoverSrc = cloudinaryUrl(product.images[1] ?? '')
+  const coverSrc = cloudinaryUrl(product.images[0] ?? '', { w: 800 })
+  const hoverSrc = cloudinaryUrl(product.images[1] ?? '', { w: 800 })
   const hasHoverImage = Boolean(hoverSrc && hoverSrc !== coverSrc)
 
   const altText = `Wischos Gift - ${product.name} - ${product.category} Corporate Gift`
@@ -146,10 +146,9 @@ export function ProductGridSection({ products, category, searchQuery }: { produc
       ) : (
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(2, 1fr)',
           borderLeft: '1px solid var(--grid-color)',
         }}
-          className="lg:grid-cols-4"
+          className="grid-cols-2 lg:grid-cols-4"
         >
           {products.map((product) => (
             <div
