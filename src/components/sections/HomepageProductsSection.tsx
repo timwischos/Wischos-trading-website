@@ -54,7 +54,7 @@ export function HomepageProductsSection() {
             {set.sku}
           </span>
           <span style={{ fontSize: '0.68rem', color: '#888', whiteSpace: 'nowrap' }}>
-            {set.fob} FOB
+            Price on request
           </span>
         </div>
         <Link to={`/gift-sets/${set.id}` as RouterTo} style={{ textDecoration: 'none' }}>
