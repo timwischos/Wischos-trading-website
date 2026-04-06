@@ -280,7 +280,8 @@ function FeaturedPage() {
           All sets are samples-before-order. Request physical samples of any set at cost before committing to a bulk run.
         </p>
         <Link
-          to={'/how-it-works' as RouterTo}
+          to={'/about' as RouterTo}
+          hash="how-it-works"
           style={{
             fontSize: '0.72rem', letterSpacing: '0.1em', textTransform: 'uppercase',
             color: '#0a0a0a', border: '1px solid #0a0a0a',
