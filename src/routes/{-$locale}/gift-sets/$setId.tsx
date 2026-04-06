@@ -174,7 +174,7 @@ function GiftSetDetailPage() {
             <span style={{ fontSize: '0.65rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: '#bbb', fontFamily: 'monospace' }}>
               {set.sku}
             </span>
-            <span style={{ fontSize: '0.78rem', fontWeight: 600, color: '#0a0a0a' }}>{set.fob} FOB</span>
+            <span style={{ fontSize: '0.78rem', color: '#767676' }}>Price on request</span>
           </div>
 
           {/* Name + Tagline */}

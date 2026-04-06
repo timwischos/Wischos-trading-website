@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { createFileRoute, Link, type LinkProps } from '@tanstack/react-router'
 import { giftSets, type GiftSet } from '@/content/giftSets'
 import { siteMeta, buildOgMeta, buildCanonical } from '@/content/meta'
+import { cloudinaryUrl } from '@/lib/cloudinary'
 
 type RouterTo = LinkProps['to']
 
@@ -36,7 +37,7 @@ function GiftSetCard({ set }: { set: GiftSet }) {
         onMouseLeave={() => setHovered(false)}
       >
         <img
-          src={set.coverImage}
+          src={cloudinaryUrl(set.coverImage)}
           alt={set.name}
           loading="lazy"
           style={{
@@ -47,7 +48,7 @@ function GiftSetCard({ set }: { set: GiftSet }) {
         />
         {hasHover && (
           <img
-            src={set.hoverImage}
+            src={cloudinaryUrl(set.hoverImage!)}
             alt=""
             aria-hidden="true"
             loading="lazy"
@@ -65,7 +66,7 @@ function GiftSetCard({ set }: { set: GiftSet }) {
       <div style={{ padding: '1.75rem', display: 'flex', flexDirection: 'column', gap: '0.75rem', flex: 1, borderTop: '1px solid var(--grid-color)' }}>
         <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: '0.5rem', flexWrap: 'wrap' }}>
           <span style={{ fontSize: '0.65rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: '#bbb' }}>{set.sku}</span>
-          <span style={{ fontSize: '0.7rem', letterSpacing: '0.06em', color: '#0a0a0a', fontWeight: 500 }}>{set.fob} FOB</span>
+          <span style={{ fontSize: '0.7rem', letterSpacing: '0.06em', color: '#767676' }}>Price on request</span>
         </div>
 
         <Link to={`/gift-sets/${set.id}` as RouterTo} style={{ textDecoration: 'none' }}>
@@ -122,7 +123,7 @@ function FeaturedPage() {
               Curated Collections
             </p>
             <h1 className="display-title" style={{ fontSize: 'clamp(2rem, 3.5vw, 3.25rem)', fontWeight: 300, lineHeight: 1.05, color: '#0a0a0a', marginBottom: '1rem' }}>
-              Gift Sets
+              Featured Gift Sets
             </h1>
             <p style={{ fontSize: '0.82rem', color: '#767676', lineHeight: 1.7, maxWidth: '36ch' }}>
               Defined by utility and material substance. Custom branding available from 100 units. Samples provided upon request.
@@ -142,8 +143,8 @@ function FeaturedPage() {
                 <p style={{ fontSize: '0.9rem', fontWeight: 600, color: '#0a0a0a' }}>25–35 days</p>
               </div>
               <div>
-                <p style={{ fontSize: '0.65rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: '#767676', marginBottom: '0.25rem' }}>Price Range</p>
-                <p style={{ fontSize: '0.9rem', fontWeight: 600, color: '#0a0a0a' }}>$12–50 FOB</p>
+                <p style={{ fontSize: '0.65rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: '#767676', marginBottom: '0.25rem' }}>Pricing</p>
+                <p style={{ fontSize: '0.9rem', fontWeight: 600, color: '#0a0a0a' }}>Price on request</p>
               </div>
             </div>
           </div>
