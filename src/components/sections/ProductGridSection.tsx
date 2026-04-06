@@ -162,10 +162,71 @@ export function ProductGridSection({ products, category, searchQuery }: { produc
           {/* More coming card */}
           {!searchQuery && (
             <div style={{ borderRight: '1px solid var(--grid-color)', borderBottom: '1px solid var(--grid-color)' }}>
-              {/* Image placeholder */}
-              <div style={{ aspectRatio: '1/1', background: '#f2f0ed', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '0.75rem' }}>
-                <div style={{ width: '2rem', height: '2px', background: '#ccc' }} />
-                <div style={{ width: '2px', height: '2rem', background: '#ccc', marginTop: '-1.5rem' }} />
+              {/* Image area */}
+              <div style={{
+                aspectRatio: '1/1',
+                background: '#0d0d0d',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
+                position: 'relative',
+                overflow: 'hidden',
+              }}>
+                <img
+                  src="/images/more-coming-products.avif"
+                  alt="More products coming soon"
+                  loading="lazy"
+                  style={{
+                    position: 'absolute',
+                    inset: 0,
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    opacity: 0.5,
+                  }}
+                />
+                {/* Overlay content */}
+                <div style={{
+                  position: 'relative',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: '1rem',
+                  zIndex: 1,
+                }}>
+                  {/* Copper rule */}
+                  <div style={{ width: '2rem', height: '1px', background: 'var(--accent-brand)', opacity: 0.7 }} />
+                  {/* Label */}
+                  <p style={{
+                    fontSize: '0.55rem',
+                    letterSpacing: '0.2em',
+                    textTransform: 'uppercase',
+                    color: 'rgba(255,255,255,0.7)',
+                    textAlign: 'center',
+                    lineHeight: 1.8,
+                  }}>
+                    New Object<br />In Progress
+                  </p>
+                  {/* Copper rule */}
+                  <div style={{ width: '2rem', height: '1px', background: 'var(--accent-brand)', opacity: 0.7 }} />
+                </div>
+                {/* Corner marks */}
+                {[
+                  { top: '1rem', left: '1rem', borderTop: '1px solid', borderLeft: '1px solid' },
+                  { top: '1rem', right: '1rem', borderTop: '1px solid', borderRight: '1px solid' },
+                  { bottom: '1rem', left: '1rem', borderBottom: '1px solid', borderLeft: '1px solid' },
+                  { bottom: '1rem', right: '1rem', borderBottom: '1px solid', borderRight: '1px solid' },
+                ].map((style, i) => (
+                  <div key={i} style={{
+                    position: 'absolute',
+                    width: '0.875rem', height: '0.875rem',
+                    borderColor: 'rgba(184,115,51,0.4)',
+                    zIndex: 1,
+                    ...style,
+                  }} />
+                ))}
               </div>
               {/* Info */}
               <div style={{ padding: '0.875rem 1rem 1.25rem', borderTop: '1px solid var(--grid-color)' }}>

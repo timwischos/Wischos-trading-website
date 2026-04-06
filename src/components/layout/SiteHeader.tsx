@@ -8,7 +8,7 @@ import { trackViewSearchResults } from '@/lib/analytics'
 type RouterTo = LinkProps['to']
 
 const productDropdownItems = [
-  { label: 'Featured Gift Sets', href: '/featured' },
+  { label: 'Featured Gift Sets', href: '/gift-sets' },
   { label: 'Our Products', href: '/products' },
   { label: 'Writing Instruments', href: '/products?category=Writing+Instruments' },
   { label: 'Desk Accessories', href: '/products?category=Desk+Accessories' },

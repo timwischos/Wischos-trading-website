@@ -85,7 +85,7 @@ export function HomepageProductsSection() {
           </p>
         </div>
         <Link
-          to={'/featured' as RouterTo}
+          to={'/gift-sets' as RouterTo}
           style={{ fontSize: '0.75rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--accent-brand)', border: `1px solid var(--accent-brand)`, padding: '0.65rem 1.75rem', textDecoration: 'none', transition: 'background 150ms ease, color 150ms ease', whiteSpace: 'nowrap' }}
           onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = 'var(--accent-brand)'; (e.currentTarget as HTMLElement).style.color = '#fff' }}
           onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = 'transparent'; (e.currentTarget as HTMLElement).style.color = 'var(--accent-brand)' }}

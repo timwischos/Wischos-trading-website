@@ -3,7 +3,7 @@ import { Mail } from 'lucide-react'
 import { cloudinaryUrl } from '@/lib/cloudinary'
 
 const productCategories = [
-  { label: 'Featured Gift Sets', href: '/featured' },
+  { label: 'Featured Gift Sets', href: '/gift-sets' },
   { label: 'Our Products', href: '/products' },
   { label: 'Writing Instruments', href: '/products?category=Writing+Instruments' },
   { label: 'Desk Accessories', href: '/products?category=Desk+Accessories' },
@@ -80,7 +80,7 @@ export function SiteFooter() {
           />
 
           <p style={{ fontSize: '0.8rem', color: '#4a4a4a', lineHeight: 1.65, maxWidth: '22ch', marginBottom: '1rem' }}>
-            Custom metal gifts for B2B buyers. MOQ 100 sets.
+            Custom metal gifts for teams, events, and bulk orders. MOQ 100 sets.
           </p>
           <a
             href="mailto:inquiries@wischosgift.com"

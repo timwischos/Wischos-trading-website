@@ -6,7 +6,7 @@ import { cloudinaryUrl } from '@/lib/cloudinary'
 
 type RouterTo = LinkProps['to']
 
-export const Route = createFileRoute('/{-$locale}/featured')({
+export const Route = createFileRoute('/{-$locale}/gift-sets')({
   head: () => ({
     meta: [
       { title: 'Featured Gift Sets | Wischos Gift' },
@@ -15,10 +15,10 @@ export const Route = createFileRoute('/{-$locale}/featured')({
         title: 'Featured Gift Sets | Wischos Gift',
         description: 'Curated premium metal gift sets for corporate buyers. Each set is fully custom-branded with your logo. MOQ 100 sets. Explore writing, desk, EDC and drinkware combinations.',
         image: siteMeta.defaultOgImage,
-        url: '/featured',
+        url: '/gift-sets',
       }),
     ],
-    links: [buildCanonical('/featured')],
+    links: [buildCanonical('/gift-sets')],
   }),
   component: FeaturedPage,
 })
@@ -128,6 +128,9 @@ function FeaturedPage() {
             <p style={{ fontSize: '0.82rem', color: '#767676', lineHeight: 1.7, maxWidth: '36ch' }}>
               Defined by utility and material substance. Custom branding available from 100 units. Samples provided upon request.
             </p>
+            <p style={{ fontSize: '0.76rem', color: '#666', lineHeight: 1.65, marginTop: '1.25rem', maxWidth: '40ch', borderLeft: '2px solid var(--accent-brand)', paddingLeft: '0.75rem' }}>
+              Branding shown is illustrative. Every piece leaves the factory marked with your logo — engraved to your specification, not ours.
+            </p>
           </div>
           <div style={{ padding: '4rem 2rem 3rem', display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: '1.5rem' }}>
             <p style={{ fontSize: '0.9rem', lineHeight: 1.8, color: '#444', maxWidth: '40ch' }}>
@@ -162,10 +165,71 @@ function FeaturedPage() {
           ))}
           {/* More coming card */}
           <div style={{ borderRight: '1px solid var(--grid-color)', borderBottom: '1px solid var(--grid-color)', display: 'flex', flexDirection: 'column' }}>
-            {/* Image placeholder */}
-            <div style={{ aspectRatio: '4/3', background: '#f2f0ed', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '0.75rem' }}>
-              <div style={{ width: '2rem', height: '2px', background: '#ccc' }} />
-              <div style={{ width: '2px', height: '2rem', background: '#ccc', marginTop: '-1.5rem' }} />
+            {/* Image area */}
+            <div style={{
+              aspectRatio: '4/3',
+              background: '#0d0d0d',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              justifyContent: 'center',
+              overflow: 'hidden',
+              position: 'relative',
+            }}>
+              <img
+                src="/images/more-coming-gift-sets.avif"
+                alt="More sets coming soon"
+                loading="lazy"
+                style={{
+                  position: 'absolute',
+                  inset: 0,
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                  opacity: 0.5,
+                }}
+              />
+              {/* Overlay content */}
+              <div style={{
+                position: 'relative',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: '1.25rem',
+                zIndex: 1,
+              }}>
+                {/* Copper rule */}
+                <div style={{ width: '2.5rem', height: '1px', background: 'var(--accent-brand)', opacity: 0.7 }} />
+                {/* Label */}
+                <p style={{
+                  fontSize: '0.6rem',
+                  letterSpacing: '0.22em',
+                  textTransform: 'uppercase',
+                  color: 'rgba(255,255,255,0.7)',
+                  textAlign: 'center',
+                  lineHeight: 1.8,
+                }}>
+                  New Set<br />In Development
+                </p>
+                {/* Copper rule */}
+                <div style={{ width: '2.5rem', height: '1px', background: 'var(--accent-brand)', opacity: 0.7 }} />
+              </div>
+              {/* Corner marks */}
+              {[
+                { top: '1.25rem', left: '1.25rem', borderTop: '1px solid', borderLeft: '1px solid' },
+                { top: '1.25rem', right: '1.25rem', borderTop: '1px solid', borderRight: '1px solid' },
+                { bottom: '1.25rem', left: '1.25rem', borderBottom: '1px solid', borderLeft: '1px solid' },
+                { bottom: '1.25rem', right: '1.25rem', borderBottom: '1px solid', borderRight: '1px solid' },
+              ].map((style, i) => (
+                <div key={i} style={{
+                  position: 'absolute',
+                  width: '1rem', height: '1rem',
+                  borderColor: 'rgba(184,115,51,0.4)',
+                  zIndex: 1,
+                  ...style,
+                }} />
+              ))}
             </div>
             {/* Content */}
             <div style={{ padding: '1.75rem', display: 'flex', flexDirection: 'column', gap: '0.75rem', flex: 1, borderTop: '1px solid var(--grid-color)' }}>

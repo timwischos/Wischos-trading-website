@@ -88,7 +88,7 @@ function GiftSetDetailPage() {
     <>
       {/* Breadcrumb */}
       <div style={{ padding: '1rem 2rem', borderBottom: '1px solid var(--grid-color)', display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
-        <Link to={"/{-$locale}/featured" as RouterTo} style={{ fontSize: '0.72rem', color: '#6b6b6b', textDecoration: 'none', letterSpacing: '0.06em' }}
+        <Link to={"/{-$locale}/gift-sets" as RouterTo} style={{ fontSize: '0.72rem', color: '#6b6b6b', textDecoration: 'none', letterSpacing: '0.06em' }}
           onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = '#0a0a0a' }}
           onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = '#6b6b6b' }}
         >
@@ -339,7 +339,7 @@ function GiftSetDetailPage() {
       {/* Back to all sets */}
       <section style={{ padding: '2rem', borderTop: '1px solid var(--grid-color)', display: 'flex', justifyContent: 'center' }}>
         <Link
-          to={"/{-$locale}/featured" as RouterTo}
+          to={"/{-$locale}/gift-sets" as RouterTo}
           style={{
             fontSize: '0.72rem', letterSpacing: '0.1em', textTransform: 'uppercase',
             color: '#0a0a0a', border: '1px solid #0a0a0a',
