@@ -167,7 +167,7 @@ export function ProductLightbox({ product, initialIdx = 0 }: { product: Product;
                     cursor: 'pointer', background: 'none', overflow: 'hidden', borderRadius: 2,
                   }}
                 >
-                  <img src={src} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  <img src={cloudinaryUrl(src, { w: 96 })} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 </button>
               ))}
             </div>
