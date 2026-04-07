@@ -10,6 +10,12 @@ export function HeroSection() {
       {/* Banner image */}
       <img
         src={cloudinaryUrl('/images/banner', { w: 1600 })}
+        srcSet={[
+          `${cloudinaryUrl('/images/banner', { w: 640 })} 640w`,
+          `${cloudinaryUrl('/images/banner', { w: 1024 })} 1024w`,
+          `${cloudinaryUrl('/images/banner', { w: 1600 })} 1600w`,
+        ].join(', ')}
+        sizes="100vw"
         alt="Wischos Gift — Custom Metal Corporate Gift Sets"
         loading="eager"
         fetchPriority="high"
