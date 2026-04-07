@@ -1,4 +1,5 @@
 import { HeadContent, Scripts, createRootRoute, useRouterState } from '@tanstack/react-router'
+import { useEffect } from 'react'
 import { SiteHeader } from '@/components/layout/SiteHeader'
 import { SiteFooter } from '@/components/layout/SiteFooter'
 import { WhatsAppButton } from '@/components/layout/WhatsAppButton'
@@ -61,16 +62,30 @@ function RootDocument({ children }: { children: React.ReactNode }) {
   const location = useRouterState({ select: (s) => s.location.pathname })
   const isLanding = location.startsWith('/landing/')
 
+  useEffect(() => {
+    if (typeof (window as any).gtag === 'function') {
+      ;(window as any).gtag('event', 'page_view', { page_path: location })
+    }
+  }, [location])
+
   return (
     <html lang="en">
       <head>
         <HeadContent />
+      </head>
+      <body className="min-h-screen bg-background font-sans antialiased">
+        {!isLanding && <SiteHeader />}
+        {children}
+        {!isLanding && <SiteFooter />}
+        {!isLanding && <WhatsAppButton />}
+
+        {/* Third-party analytics - Non-blocking scripts */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-859CPYDHVK" />
         <script dangerouslySetInnerHTML={{ __html: `
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', 'G-859CPYDHVK');
+          gtag('config', 'G-859CPYDHVK', { 'send_page_view': false });
         `}} />
         <script dangerouslySetInnerHTML={{ __html: `
           (function(c,l,a,r,i,t,y){
@@ -79,12 +94,6 @@ function RootDocument({ children }: { children: React.ReactNode }) {
               y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
           })(window, document, "clarity", "script", "w6z70dz6w4");
         `}} />
-      </head>
-      <body className="min-h-screen bg-background font-sans antialiased">
-        {!isLanding && <SiteHeader />}
-        {children}
-        {!isLanding && <SiteFooter />}
-        {!isLanding && <WhatsAppButton />}
         <Scripts />
       </body>
     </html>
