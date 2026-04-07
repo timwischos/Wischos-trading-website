@@ -53,17 +53,6 @@ export const Route = createFileRoute('/{-$locale}/products/$productId')({
             category: product.category,
             brand: { '@type': 'Brand', name: siteMeta.siteName },
             manufacturer: { '@type': 'Organization', name: siteMeta.legalName },
-            offers: {
-              '@type': 'Offer',
-              url: `${siteMeta.siteUrl}/products/${product.id}`,
-              availability: 'https://schema.org/InStock',
-              priceCurrency: 'USD',
-              priceSpecification: {
-                '@type': 'PriceSpecification',
-                description: `Price on request.`,
-              },
-              seller: { '@type': 'Organization', name: siteMeta.siteName },
-            },
           }),
         },
         ...(product.faqs?.length
