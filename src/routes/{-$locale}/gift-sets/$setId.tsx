@@ -43,17 +43,6 @@ export const Route = createFileRoute('/{-$locale}/gift-sets/$setId')({
               ? [`https://wischosgift.com${set.coverImage}`]
               : [],
             brand: { '@type': 'Brand', name: 'Wischos Gift' },
-            offers: {
-              '@type': 'Offer',
-              url: `https://wischosgift.com/gift-sets/${set.id}`,
-              availability: 'https://schema.org/InStock',
-              priceCurrency: 'USD',
-              priceSpecification: {
-                '@type': 'PriceSpecification',
-                description: `Price on request. MOQ 100 sets. FOB: ${set.fob}`,
-              },
-              seller: { '@type': 'Organization', name: 'Wischos Gift' },
-            },
           }),
         },
         {
