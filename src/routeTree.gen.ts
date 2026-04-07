@@ -20,6 +20,7 @@ import { Route as Char123LocaleChar125BlogRouteImport } from './routes/{-$locale
 import { Route as Char123LocaleChar125AboutRouteImport } from './routes/{-$locale}/about'
 import { Route as LandingOnboardingGiftSetRouteImport } from './routes/landing/onboarding-gift-set'
 import { Route as Char123LocaleChar125ProductsIndexRouteImport } from './routes/{-$locale}/products/index'
+import { Route as Char123LocaleChar125GiftSetsIndexRouteImport } from './routes/{-$locale}/gift-sets/index'
 import { Route as Char123LocaleChar125BlogIndexRouteImport } from './routes/{-$locale}/blog/index'
 import { Route as Char123LocaleChar125ProductsProductIdRouteImport } from './routes/{-$locale}/products/$productId'
 import { Route as Char123LocaleChar125GiftSetsSetIdRouteImport } from './routes/{-$locale}/gift-sets/$setId'
@@ -87,6 +88,12 @@ const Char123LocaleChar125ProductsIndexRoute =
     path: '/products/',
     getParentRoute: () => Char123LocaleChar125Route,
   } as any)
+const Char123LocaleChar125GiftSetsIndexRoute =
+  Char123LocaleChar125GiftSetsIndexRouteImport.update({
+    id: '/',
+    path: '/',
+    getParentRoute: () => Char123LocaleChar125GiftSetsRoute,
+  } as any)
 const Char123LocaleChar125BlogIndexRoute =
   Char123LocaleChar125BlogIndexRouteImport.update({
     id: '/',
@@ -127,6 +134,7 @@ export interface FileRoutesByFullPath {
   '/{-$locale}/gift-sets/$setId': typeof Char123LocaleChar125GiftSetsSetIdRoute
   '/{-$locale}/products/$productId': typeof Char123LocaleChar125ProductsProductIdRoute
   '/{-$locale}/blog/': typeof Char123LocaleChar125BlogIndexRoute
+  '/{-$locale}/gift-sets/': typeof Char123LocaleChar125GiftSetsIndexRoute
   '/{-$locale}/products/': typeof Char123LocaleChar125ProductsIndexRoute
 }
 export interface FileRoutesByTo {
@@ -137,12 +145,12 @@ export interface FileRoutesByTo {
   '/{-$locale}/about': typeof Char123LocaleChar125AboutRoute
   '/{-$locale}/contact': typeof Char123LocaleChar125ContactRoute
   '/{-$locale}/faq': typeof Char123LocaleChar125FaqRoute
-  '/{-$locale}/gift-sets': typeof Char123LocaleChar125GiftSetsRouteWithChildren
   '/{-$locale}/inquiry': typeof Char123LocaleChar125InquiryRoute
   '/{-$locale}/blog/$slug': typeof Char123LocaleChar125BlogSlugRoute
   '/{-$locale}/gift-sets/$setId': typeof Char123LocaleChar125GiftSetsSetIdRoute
   '/{-$locale}/products/$productId': typeof Char123LocaleChar125ProductsProductIdRoute
   '/{-$locale}/blog': typeof Char123LocaleChar125BlogIndexRoute
+  '/{-$locale}/gift-sets': typeof Char123LocaleChar125GiftSetsIndexRoute
   '/{-$locale}/products': typeof Char123LocaleChar125ProductsIndexRoute
 }
 export interface FileRoutesById {
@@ -161,6 +169,7 @@ export interface FileRoutesById {
   '/{-$locale}/gift-sets/$setId': typeof Char123LocaleChar125GiftSetsSetIdRoute
   '/{-$locale}/products/$productId': typeof Char123LocaleChar125ProductsProductIdRoute
   '/{-$locale}/blog/': typeof Char123LocaleChar125BlogIndexRoute
+  '/{-$locale}/gift-sets/': typeof Char123LocaleChar125GiftSetsIndexRoute
   '/{-$locale}/products/': typeof Char123LocaleChar125ProductsIndexRoute
 }
 export interface FileRouteTypes {
@@ -180,6 +189,7 @@ export interface FileRouteTypes {
     | '/{-$locale}/gift-sets/$setId'
     | '/{-$locale}/products/$productId'
     | '/{-$locale}/blog/'
+    | '/{-$locale}/gift-sets/'
     | '/{-$locale}/products/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -190,12 +200,12 @@ export interface FileRouteTypes {
     | '/{-$locale}/about'
     | '/{-$locale}/contact'
     | '/{-$locale}/faq'
-    | '/{-$locale}/gift-sets'
     | '/{-$locale}/inquiry'
     | '/{-$locale}/blog/$slug'
     | '/{-$locale}/gift-sets/$setId'
     | '/{-$locale}/products/$productId'
     | '/{-$locale}/blog'
+    | '/{-$locale}/gift-sets'
     | '/{-$locale}/products'
   id:
     | '__root__'
@@ -213,6 +223,7 @@ export interface FileRouteTypes {
     | '/{-$locale}/gift-sets/$setId'
     | '/{-$locale}/products/$productId'
     | '/{-$locale}/blog/'
+    | '/{-$locale}/gift-sets/'
     | '/{-$locale}/products/'
   fileRoutesById: FileRoutesById
 }
@@ -302,6 +313,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof Char123LocaleChar125ProductsIndexRouteImport
       parentRoute: typeof Char123LocaleChar125Route
     }
+    '/{-$locale}/gift-sets/': {
+      id: '/{-$locale}/gift-sets/'
+      path: '/'
+      fullPath: '/{-$locale}/gift-sets/'
+      preLoaderRoute: typeof Char123LocaleChar125GiftSetsIndexRouteImport
+      parentRoute: typeof Char123LocaleChar125GiftSetsRoute
+    }
     '/{-$locale}/blog/': {
       id: '/{-$locale}/blog/'
       path: '/'
@@ -351,12 +369,15 @@ const Char123LocaleChar125BlogRouteWithChildren =
 
 interface Char123LocaleChar125GiftSetsRouteChildren {
   Char123LocaleChar125GiftSetsSetIdRoute: typeof Char123LocaleChar125GiftSetsSetIdRoute
+  Char123LocaleChar125GiftSetsIndexRoute: typeof Char123LocaleChar125GiftSetsIndexRoute
 }
 
 const Char123LocaleChar125GiftSetsRouteChildren: Char123LocaleChar125GiftSetsRouteChildren =
   {
     Char123LocaleChar125GiftSetsSetIdRoute:
       Char123LocaleChar125GiftSetsSetIdRoute,
+    Char123LocaleChar125GiftSetsIndexRoute:
+      Char123LocaleChar125GiftSetsIndexRoute,
   }
 
 const Char123LocaleChar125GiftSetsRouteWithChildren =

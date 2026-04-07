@@ -58,11 +58,43 @@ export const homepage = {
       },
     ],
   },
+  selectionStandard: {
+    kicker: 'The Selection Standard',
+    heading: 'U.I.S. — How every product earns its place.',
+    intro:
+      'We don\'t carry everything. Every product in this catalog is evaluated against three core principles before it\'s offered as a branded gift — plus one rule that applies specifically to how pieces are combined into sets.',
+    items: [
+      {
+        label: 'U',
+        title: 'Useful',
+        subtitle: 'Daily Use Over Display',
+        body: "A gift that ends up in a drawer isn't doing brand work. Every product we carry has a function the recipient will reach for regularly — writing, carrying keys, opening post, carrying liquid. The brand mark works hardest when the object is in someone's hands every day, not when it's on a shelf once.",
+      },
+      {
+        label: 'I',
+        title: 'Interesting',
+        subtitle: 'Tactile Character',
+        body: 'The best corporate gifts create a moment — the click of a bolt-action mechanism, the weighted spin of a brass top, the satisfying compression of a precision key organizer. We select products that have a physical interaction worth noticing. If it can be picked up without thinking, it will be.',
+      },
+      {
+        label: 'S',
+        title: 'Substantial',
+        subtitle: 'Material Integrity',
+        body: "Every product is machined from the stated material — brass, titanium, aluminium, or stainless steel. We don't carry zinc-plated plastic, chrome-coated resin, or anything that impersonates metal at a distance and disappoints up close. If the spec says brass, the piece is brass.",
+      },
+      {
+        label: 'C',
+        title: 'Cohesive',
+        subtitle: 'More Than a Collection',
+        body: 'True gift sets tell a single story. We assemble products based on shared contexts—like the first day at a new job or the essentials for a field site. The pieces complement each other in function and form, creating an unboxing experience where the whole is far greater than the sum of its parts.',
+      },
+    ],
+  },
   credibility: {
     kicker: 'At a Glance',
     heading: 'What to expect',
     stats: [
-      { value: 'Selected objects', label: 'ready to brand' },
+      { value: '24 products', label: 'across 6 gift sets' },
       { value: '100 units', label: 'Sets minimum order' },
       { value: 'Full custom', label: 'Logo, finish, packaging' },
       { value: 'One contact', label: 'Inquiry to delivery' },
@@ -74,16 +106,16 @@ export const homepage = {
     viewAllCta: 'View All Products',
     items: [
       {
-        name: 'Executive Desk Set',
-        tagline: 'Stainless steel stationery set with custom engraving and branded packaging.',
+        name: 'The First Day',
+        tagline: 'Full aluminium identity system for new hire onboarding — badge holder, tool pen, and pen stand.',
       },
       {
-        name: 'Premium Pen Collection',
-        tagline: 'Brass-body fountain and rollerball pens in a custom presentation case.',
+        name: 'The Mechanical Desk',
+        tagline: 'Three brass kinetic pieces that turn a desk into a conversation. Bolt-action pen, spinning letter opener, weighted top.',
       },
       {
-        name: 'Business Card Holder Set',
-        tagline: 'Anodised aluminium card holders with your logo precision-etched.',
+        name: 'The Morning Ritual',
+        tagline: 'Pure titanium flask, anti-static comb, and brass pen — the complete shirt-pocket set.',
       },
     ],
   },

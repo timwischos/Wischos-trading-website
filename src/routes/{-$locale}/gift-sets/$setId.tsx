@@ -84,11 +84,15 @@ function GiftSetDetailPage() {
   const prevSet = giftSets[currentIdx - 1]
   const nextSet = giftSets[currentIdx + 1]
 
+  const galleryImages = set.hoverImage 
+    ? [set.images[0], set.hoverImage, ...set.images.slice(1)]
+    : set.images;
+
   return (
     <>
       {/* Breadcrumb */}
       <div style={{ padding: '1rem 2rem', borderBottom: '1px solid var(--grid-color)', display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
-        <Link to={"/{-$locale}/gift-sets" as RouterTo} style={{ fontSize: '0.72rem', color: '#6b6b6b', textDecoration: 'none', letterSpacing: '0.06em' }}
+        <Link to={'/gift-sets/' as RouterTo} style={{ fontSize: '0.72rem', color: '#6b6b6b', textDecoration: 'none', letterSpacing: '0.06em' }}
           onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = '#0a0a0a' }}
           onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = '#6b6b6b' }}
         >
@@ -106,23 +110,32 @@ function GiftSetDetailPage() {
           {/* Main image */}
           <div style={{ aspectRatio: '1/1', overflow: 'hidden', background: '#f7f7f7', borderBottom: '1px solid var(--grid-color)' }}>
             <img
-              src={cloudinaryUrl(set.images[activeImg])}
+              src={cloudinaryUrl(galleryImages[activeImg])}
               alt={`${set.name} — image ${activeImg + 1}`}
               style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
             />
           </div>
           {/* Thumbnails */}
-          {set.images.length > 1 && (
+          {galleryImages.length > 1 && (
             <div style={{ display: 'flex', borderBottom: '1px solid var(--grid-color)' }}>
-              {set.images.map((img, i) => {
-                const component = i > 0 ? (set.components.find(c => c.imageIndex === i) ?? null) : null
+              {galleryImages.map((img, i) => {
+                let component = null;
+                if (set.hoverImage) {
+                  if (i > 1) {
+                    component = set.components.find(c => c.imageIndex === i - 1) ?? null;
+                  }
+                } else {
+                  if (i > 0) {
+                    component = set.components.find(c => c.imageIndex === i) ?? null;
+                  }
+                }
                 const isHovered = hoveredThumb === i
                 return (
                   <div
                     key={i}
                     style={{
                       flex: 1, aspectRatio: '1/1', position: 'relative',
-                      borderRight: i < set.images.length - 1 ? '1px solid var(--grid-color)' : 'none',
+                      borderRight: i < galleryImages.length - 1 ? '1px solid var(--grid-color)' : 'none',
                     }}
                     onMouseEnter={() => component && setHoveredThumb(i)}
                     onMouseLeave={() => setHoveredThumb(null)}
@@ -306,13 +319,20 @@ function GiftSetDetailPage() {
           {prevSet ? (
             <Link
               to={`/gift-sets/${prevSet.id}` as RouterTo}
-              style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem', padding: '1.75rem 2rem', textDecoration: 'none' }}
+              style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', padding: '1.75rem 2rem', textDecoration: 'none' }}
               onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = '#fafafa' }}
               onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = 'transparent' }}
             >
-              <span style={{ fontSize: '0.62rem', color: '#aaa', letterSpacing: '0.1em', textTransform: 'uppercase' }}>← Previous</span>
-              <span className="display-title" style={{ fontSize: '1rem', color: '#0a0a0a', fontWeight: 300 }}>{prevSet.name}</span>
-              <span style={{ fontSize: '0.7rem', color: '#999', fontFamily: 'monospace' }}>{prevSet.sku}</span>
+              {prevSet.coverImage && (
+                <div style={{ width: '6.5rem', height: '6.5rem', flexShrink: 0, overflow: 'hidden', background: '#f7f7f7' }}>
+                  <img src={cloudinaryUrl(prevSet.coverImage)} alt={prevSet.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                </div>
+              )}
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
+                <span style={{ fontSize: '0.62rem', color: '#aaa', letterSpacing: '0.1em', textTransform: 'uppercase' }}>← Previous</span>
+                <span className="display-title" style={{ fontSize: '1rem', color: '#0a0a0a', fontWeight: 300 }}>{prevSet.name}</span>
+                <span style={{ fontSize: '0.7rem', color: '#999', fontFamily: 'monospace' }}>{prevSet.sku}</span>
+              </div>
             </Link>
           ) : (
             <div style={{ padding: '1.75rem 2rem' }} />
@@ -322,13 +342,20 @@ function GiftSetDetailPage() {
           {nextSet ? (
             <Link
               to={`/gift-sets/${nextSet.id}` as RouterTo}
-              style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem', padding: '1.75rem 2rem', textDecoration: 'none', alignItems: 'flex-end' }}
+              style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', padding: '1.75rem 2rem', textDecoration: 'none', justifyContent: 'flex-end' }}
               onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = '#fafafa' }}
               onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = 'transparent' }}
             >
-              <span style={{ fontSize: '0.62rem', color: '#aaa', letterSpacing: '0.1em', textTransform: 'uppercase' }}>Next →</span>
-              <span className="display-title" style={{ fontSize: '1rem', color: '#0a0a0a', fontWeight: 300 }}>{nextSet.name}</span>
-              <span style={{ fontSize: '0.7rem', color: '#999', fontFamily: 'monospace' }}>{nextSet.sku}</span>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem', textAlign: 'right' }}>
+                <span style={{ fontSize: '0.62rem', color: '#aaa', letterSpacing: '0.1em', textTransform: 'uppercase' }}>Next →</span>
+                <span className="display-title" style={{ fontSize: '1rem', color: '#0a0a0a', fontWeight: 300 }}>{nextSet.name}</span>
+                <span style={{ fontSize: '0.7rem', color: '#999', fontFamily: 'monospace' }}>{nextSet.sku}</span>
+              </div>
+              {nextSet.coverImage && (
+                <div style={{ width: '6.5rem', height: '6.5rem', flexShrink: 0, overflow: 'hidden', background: '#f7f7f7' }}>
+                  <img src={cloudinaryUrl(nextSet.coverImage)} alt={nextSet.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                </div>
+              )}
             </Link>
           ) : (
             <div style={{ padding: '1.75rem 2rem' }} />
@@ -339,7 +366,7 @@ function GiftSetDetailPage() {
       {/* Back to all sets */}
       <section style={{ padding: '2rem', borderTop: '1px solid var(--grid-color)', display: 'flex', justifyContent: 'center' }}>
         <Link
-          to={"/{-$locale}/gift-sets" as RouterTo}
+          to={'/gift-sets/' as RouterTo}
           style={{
             fontSize: '0.72rem', letterSpacing: '0.1em', textTransform: 'uppercase',
             color: '#0a0a0a', border: '1px solid #0a0a0a',

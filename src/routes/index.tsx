@@ -7,6 +7,7 @@ import { HomepageFeaturedProductsSection } from '@/components/sections/HomepageF
 import { ProcessPreviewSection } from '@/components/sections/ProcessPreviewSection'
 import { ExpertNotesTeaser } from '@/components/sections/ExpertNotesTeaser'
 import { WhySection } from '@/components/sections/WhySection'
+import { SelectionStandardSection } from '@/components/sections/SelectionStandardSection'
 import { getProductsByIds } from '@/server/getProducts'
 
 const FEATURED_PRODUCT_IDS = [
@@ -46,6 +47,9 @@ function HomePage() {
 
       {/* I — Featured individual products */}
       <HomepageFeaturedProductsSection products={featuredProducts} />
+
+      {/* I — Selection standard (UIS) */}
+      <SelectionStandardSection />
 
       {/* D — Why us */}
       <WhySection />

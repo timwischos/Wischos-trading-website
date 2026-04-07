@@ -54,7 +54,28 @@ export const giftSets: GiftSet[] = [
     packaging: 'Corrugated Packaging Box + EVA Foam Insert',
     cta: 'A sharp first impression at a practical MOQ.',
     fob: '$18–28',
-    expertNotes: [],
+    expertNotes: [
+      {
+        title: 'Why inkless over ballpoint',
+        body: 'The inkless tip pen is the counterintuitive choice — it writes on most surfaces without ink, lasts 20,000m, and surprises recipients who have never used one. For procurement teams that track sustainability metrics, it delivers a tangible ESG story without greenwashing. For everyone else, it is a writing instrument that never runs dry.',
+      },
+      {
+        title: 'Why a letter opener in 2026',
+        body: 'Physical mail is back in corporate environments — contracts, invoices, signed documents, and marketing parcels. A precision letter opener signals that someone thought about the full desk experience, not just the screen. It is also one of the most visible objects on a desk: upright, catching light, carrying a brand mark at eye level every working day.',
+      },
+      {
+        title: 'Why Kraft Rigid Box?',
+        body: 'A kraft rigid box uses 1200gsm+ greyboard wrapped in unbleached kraft paper. It delivers premium unboxing weight (the lid lifts with deliberate resistance) at 30–40% less cost than laminated art-paper boxes. The natural brown tone aligns with the sustainability narrative of the inkless pen inside — an intentional material pairing, not a budget compromise.',
+      },
+      {
+        title: 'Logo on Packaging: Hot Foil Stamping',
+        body: 'For kraft surfaces, hot foil stamping (gold, silver, or copper) creates the highest contrast and perceived value. The foil fuses into the paper fibers under heat and pressure, producing a metallic imprint that is scratch-resistant and does not peel. Alternative: debossing (blind stamp without foil) creates an elegant tone-on-tone tactile logo — quieter but highly refined.',
+      },
+      {
+        title: 'Upgrade Option: Magnetic Closure Box',
+        body: 'For clients seeking a higher-tier presentation, upgrading to a magnetic closure box (art paper + embedded magnets) adds approximately $1.50–2.50/unit at MOQ 100. The magnetic snap creates an audible "click" on opening — a small detail that significantly elevates the unboxing ritual and gift perceived value.',
+      },
+    ],
     coverImage: '/products/WGS-001-3-The-Desk-Starter/The-Desk-Starter-cover.avif',
     hoverImage: '/products/WGS-001-3-The-Desk-Starter/The-Desk-Starter-hover.avif',
     images: [
@@ -94,7 +115,28 @@ export const giftSets: GiftSet[] = [
     packaging: 'Corrugated Packaging Box + EVA Foam Insert',
     cta: 'Precision mechanisms. Permanent brand mark.',
     fob: '$28–42',
-    expertNotes: [],
+    expertNotes: [
+      {
+        title: 'Why three kinetic pieces',
+        body: "The brief for this set was three distinct tactile moments in one box. The bolt-action click, the propeller rotation, and the top's sustained spin are each satisfying in a different way. When a visitor picks up any of these from a colleague's desk, the brand is in their hands — and the question \"where did you get this?\" follows naturally.",
+      },
+      {
+        title: 'Why brass ages better than any finish',
+        body: 'Brass is the only material in our catalog that improves with handling — it develops a patina that makes each piece unique over time. A gift set that looks better after two years of use stays on the desk instead of moving to a storage box. The weight of solid brass also communicates material quality without any explanation required.',
+      },
+      {
+        title: 'EVA Foam Insert Engineering',
+        body: "The EVA foam insert is CNC-routed to match each component's exact profile. This isn't decorative — it prevents metal-on-metal contact during shipping, eliminating scratch damage that would ruin the brass patina story. EVA density is typically 38–45 kg/m³ for gift packaging: firm enough to hold components in place, soft enough to absorb transit shock.",
+      },
+      {
+        title: 'Magnetic Box Construction',
+        body: 'The magnetic closure uses embedded neodymium magnets (N35 grade) inside 1400gsm greyboard, wrapped in art paper with matte or soft-touch lamination. The magnet pull force is calibrated to ~200g — strong enough for a satisfying snap, light enough for one-handed opening. This is the industry standard for mid-to-premium corporate gift packaging.',
+      },
+      {
+        title: 'Alternative: Wooden Box with Sliding Lid',
+        body: 'For clients targeting luxury positioning (executive VIP gifts, C-suite onboarding), a paulownia or walnut wood box with sliding lid adds $4–7/unit. Wood can be laser-engraved with the client\'s logo directly on the lid — creating a reusable desk object that extends brand exposure beyond the initial unboxing moment.',
+      },
+    ],
     coverImage: '/products/WGS-002-3-The-Mechanical-Desk/The-Mechanical-Desk-cover.avif',
     hoverImage: '/products/WGS-002-3-The-Mechanical-Desk/The-Mechanical-Desk-hover.avif',
     images: [
@@ -134,7 +176,28 @@ export const giftSets: GiftSet[] = [
     packaging: 'Corrugated Packaging Box + EVA Foam Insert',
     cta: 'The set that stays in the pocket.',
     fob: '$22–32',
-    expertNotes: [],
+    expertNotes: [
+      {
+        title: 'Why three different metals',
+        body: 'The brass key organizer, stainless steel money clip, and zinc alloy nail clipper each use the material best suited to their function: brass for the warm tactile feel of a daily carry item, stainless for the flex and spring of a money clip, zinc alloy for the precise machining tolerance required in a clipper mechanism. The variation reads as considered, not inconsistent.',
+      },
+      {
+        title: 'The gender-neutral logic',
+        body: "Most corporate gift sets assume a recipient — tactical tools for men, soft goods for women. The Pocket Three carries no such assumption. Any professional who manages keys, cards, and travel finds it immediately useful. Procurement teams ordering 200 sets for a mixed workforce don't need to sort by recipient. It goes in the box.",
+      },
+      {
+        title: 'Why Tin Box for EDC Sets?',
+        body: "Tinplate packaging (0.2mm cold-rolled steel with tin plating) is the natural choice for pocket-carry gift sets. It's crush-proof, stackable, and reusable — recipients often repurpose it as a small parts organizer, extending brand exposure for years. The metallic surface also echoes the industrial aesthetic of the brass and steel components inside.",
+      },
+      {
+        title: 'Logo on Tin: Offset Printing + Clear Varnish',
+        body: 'Tin boxes support full-color CMYK offset printing directly onto the metal surface, with a protective clear varnish layer. This allows photographic-quality brand artwork across the entire lid and sides — far more design freedom than paper boxes. The varnish prevents scratching and maintains color vibrancy through daily handling.',
+      },
+      {
+        title: 'Alternative: Leather-Wrapped Snap Case',
+        body: 'For a premium EDC presentation, a PU leather snap case (with button or magnetic closure) adds $2–4/unit. The case becomes a carry pouch itself — recipients use it as a daily pocket organizer, keeping all three tools together. This transforms the packaging from disposable container to functional accessory.',
+      },
+    ],
     coverImage: '/products/WGS-003-3-The-Pocket-Three/The-Pocket-Three-cover.avif',
     hoverImage: '/products/WGS-003-3-The-Pocket-Three/The-Pocket-Three-hover.avif',
     images: [
@@ -174,7 +237,28 @@ export const giftSets: GiftSet[] = [
     packaging: 'Corrugated Packaging Box + EVA Foam Insert',
     cta: 'Field-ready tools, brand-ready finish.',
     fob: '$28–38',
-    expertNotes: [],
+    expertNotes: [
+      {
+        title: 'Safety function, not tactical aesthetics',
+        body: "The Field EDC was not selected for military styling — it was selected because the three pieces cover three genuine scenarios. The glass breaker handles vehicle emergencies. The pry bar is a daily work tool on any physical site. The folding scissors handle packaging, cable management, and first-aid situations. The gift works hardest in sectors where physical environments are part of the job description.",
+      },
+      {
+        title: 'Why this lands in construction and logistics',
+        body: "Professionals in field environments will immediately recognise each tool's application — they live in contexts where these functions matter. A gift that respects the recipient's professional reality lands differently from one that assumes they work at a desk. That relevance is what creates lasting brand association rather than polite acknowledgement.",
+      },
+      {
+        title: 'Packaging Choice: Tin vs Kraft for Field Use',
+        body: "For this set, both options are valid but serve different contexts. Tin box is better for field professionals (crush-proof, reusable as a tool tray) while kraft rigid box is better for office-to-field gifting (premium unboxing, then tools go into pockets). Recommend asking the buyer about the delivery context — trade show handout vs mailed gift — to choose correctly.",
+      },
+      {
+        title: 'Logo on Packaging: Screen Printing for Tin, Foil for Kraft',
+        body: 'Tin surfaces accept screen printing (1–4 colors) with excellent adhesion — the ink bonds directly to the metal substrate. For kraft boxes, hot foil stamping or letterpress creates the strongest impression. Both methods produce marks that survive field conditions without fading or smudging.',
+      },
+      {
+        title: 'Alternative: Waxed Canvas Roll Pouch',
+        body: "For outdoor and construction sector clients, a waxed canvas tool roll ($3–5/unit) turns the packaging into a field-ready organizer. Each tool sits in its own loop pocket, and the roll ties shut for belt or bag attachment. The canvas can be screen-printed or leather-patched with the brand logo — a packaging format that gets daily use rather than disposal.",
+      },
+    ],
     coverImage: '/products/WGS-004-3-The-Field-EDC/The-Field-EDC-cover.avif',
     hoverImage: '/products/WGS-004-3-The-Field-EDC/The-Field-EDC-hover.avif',
     images: [
@@ -214,7 +298,28 @@ export const giftSets: GiftSet[] = [
     packaging: 'Corrugated Packaging Box + EVA Foam Insert',
     cta: 'The set for the professional who packs intentionally.',
     fob: '$38–50',
-    expertNotes: [],
+    expertNotes: [
+      {
+        title: 'Why titanium for the top tier',
+        body: "Titanium is rare in consumer products and rarer still in corporate gifting. A pure titanium flask with no inner lining, no coating, and no metallic taste is genuinely different from every alternative in this category — the material choice of aerospace and medical applications, applied to a daily carry object. Recipients typically show it to people. It starts conversations precisely because it is unusual.",
+      },
+      {
+        title: 'The zero-consumables principle',
+        body: 'This set was designed so that a premium gift asks nothing of the recipient after receipt. No refills, no replacement parts, no coating to maintain. Pure titanium does not corrode or develop odour. The bolt-action pen takes standard Parker refills. The titanium comb will not lose teeth or rust. A gift that requires nothing beyond use is a gift that lasts indefinitely — and stays associated with the brand that gave it.',
+      },
+      {
+        title: 'Premium Tier Packaging: Soft-Touch Lamination',
+        body: 'At the $38–50 FOB price point, the packaging should match the product tier. Soft-touch lamination (velvet-feel matte coating) on the magnetic box exterior adds $0.30–0.50/unit but dramatically elevates perceived value. The tactile difference is immediately noticeable — recipients instinctively slow down when handling it, which enhances the unboxing experience.',
+      },
+      {
+        title: 'Logo on Premium Box: Combination Technique',
+        body: 'For maximum impact at this price tier, combine debossing with foil stamping — the logo is pressed into the paper surface AND filled with metallic foil. This creates a 3D tactile mark that catches light from any angle. Copper or rose-gold foil pairs naturally with the brass pen and titanium flask inside.',
+      },
+      {
+        title: 'Alternative: Magnetic Book-Style Box with Ribbon Pull',
+        body: 'A book-style hinged box (opens like a book cover, with ribbon pull tab for the EVA tray) adds $2–3/unit over standard magnetic closure. The flat-lying format is better for mailing (fits in standard mailer boxes) and creates a more ceremonial opening sequence — ideal for executive gifting where the unboxing is performed in front of the giver.',
+      },
+    ],
     coverImage: '/products/WGS-005-3-The-Morning-Ritual/The-Morning-Ritual-cover.avif',
     hoverImage: '/products/WGS-005-3-The-Morning-Ritual/The-Morning-Ritual-hover.avif',
     images: [
@@ -254,7 +359,28 @@ export const giftSets: GiftSet[] = [
     packaging: 'Corrugated Packaging Box + EVA Foam Insert',
     cta: 'Turn day one into a brand moment.',
     fob: '$25–38',
-    expertNotes: [],
+    expertNotes: [
+      {
+        title: 'The badge holder as a strategic choice',
+        body: 'The badge holder is the highest-frequency branded object a new employee touches — multiple times each working day, from day one. An aluminium badge holder with a laser-engraved logo delivers brand exposure at every door, every lift, and every access point. Most onboarding kits lead with a notebook. This set leads with the object the employee will hold every day for as long as they work there.',
+      },
+      {
+        title: 'Why a 6-function pen for week one',
+        body: 'The first week at a new role involves assembling equipment, adjusting furniture, taking notes across different environments, and navigating unfamiliar technology. A pen with a built-in LED, stylus, ruler, and screwdrivers is immediately relevant — not a desk ornament. By the end of week one, most recipients have used at least three of the six functions. That is when the brand mark on the pen starts doing real work.',
+      },
+      {
+        title: 'Onboarding Box: Branded Inside and Out',
+        body: 'For HR onboarding kits, the box interior matters as much as the exterior. A custom-printed interior liner (full-color digital print on the inside of the lid) can carry a welcome message, QR code to the employee portal, or brand values statement. This adds $0.50–1.00/unit but transforms a product box into a brand touchpoint.',
+      },
+      {
+        title: 'Logo on Magnetic Box: Laser-Engraved Aluminum Plate',
+        body: 'For a cohesive all-aluminum aesthetic matching the products inside, a small laser-engraved aluminum nameplate can be adhered to the box lid. This creates a metal-on-paper contrast that immediately signals "precision hardware inside." Cost: $0.80–1.20/unit including plate + adhesive.',
+      },
+      {
+        title: 'Alternative: Desk Tray Box (Reusable)',
+        body: "For onboarding kits, a box that converts into a desk tray after unboxing ($2–4/unit premium) keeps the brand visible on the recipient's desk permanently. The box base becomes a pen tray or card holder, with the brand logo visible on the interior bottom. This maximizes ROI on packaging spend — it never gets thrown away.",
+      },
+    ],
     coverImage: '/products/WGS-006-3-The-First-Day/The-First-Day-cover.avif',
     hoverImage: '/products/WGS-006-3-The-First-Day/The-First-Day-hover.avif',
     images: [
