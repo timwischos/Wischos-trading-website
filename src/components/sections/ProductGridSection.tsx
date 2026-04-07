@@ -64,9 +64,6 @@ export function ProductCard({ product }: ProductCardProps) {
         <p style={{ fontSize: '0.75rem', color: '#6b6b6b', letterSpacing: '0.04em', marginBottom: '0.5rem' }}>
           {product.tagline}
         </p>
-        <p style={{ fontSize: '0.68rem', color: '#bbb', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
-          MOQ 100 pcs
-        </p>
       </div>
     </Link>
   )
@@ -174,7 +171,7 @@ export function ProductGridSection({ products, category, searchQuery }: { produc
                 overflow: 'hidden',
               }}>
                 <img
-                  src="/images/more-coming-products.avif"
+                  src={cloudinaryUrl('/images/more-coming-products.avif')}
                   alt="More products coming soon"
                   loading="lazy"
                   style={{

@@ -60,7 +60,7 @@ export const Route = createFileRoute('/{-$locale}/products/$productId')({
               priceCurrency: 'USD',
               priceSpecification: {
                 '@type': 'PriceSpecification',
-                description: `Price on request. MOQ 100 pcs.`,
+                description: `Price on request.`,
               },
               seller: { '@type': 'Organization', name: siteMeta.siteName },
             },

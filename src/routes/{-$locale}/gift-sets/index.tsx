@@ -177,7 +177,7 @@ function FeaturedPage() {
               position: 'relative',
             }}>
               <img
-                src="/images/more-coming-gift-sets.avif"
+                src={cloudinaryUrl('/images/more-coming-gift-sets.avif')}
                 alt="More sets coming soon"
                 loading="lazy"
                 style={{
