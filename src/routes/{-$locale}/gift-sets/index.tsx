@@ -93,19 +93,6 @@ function GiftSetCard({ set }: { set: GiftSet }) {
             Packaging: <span style={{ fontWeight: 500, color: '#444', textTransform: 'none', letterSpacing: 0 }}>{set.packaging}</span>
           </p>
           <p style={{ fontSize: '0.68rem', color: '#999', lineHeight: 1.5 }}>{set.targetBuyer}</p>
-          <Link
-            to={`/gift-sets/${set.id}` as RouterTo}
-            style={{
-              marginTop: '0.5rem',
-              fontSize: '0.7rem', letterSpacing: '0.08em', textTransform: 'uppercase',
-              color: '#0a0a0a', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '0.4rem',
-              transition: 'gap 150ms ease',
-            }}
-            onMouseEnter={e => { (e.currentTarget as HTMLElement).style.gap = '0.65rem' }}
-            onMouseLeave={e => { (e.currentTarget as HTMLElement).style.gap = '0.4rem' }}
-          >
-            View Set Details <span style={{ fontSize: '0.8rem' }}>→</span>
-          </Link>
         </div>
       </div>
     </div>
