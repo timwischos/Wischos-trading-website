@@ -1,8 +1,12 @@
 import { createFileRoute } from '@tanstack/react-router'
+import { lazy, Suspense } from 'react'
 import { PageShell } from '@/components/layout/PageShell'
 import { siteMeta, buildOgMeta, buildCanonical } from '@/content/meta'
 import { ContactSection } from '@/components/sections/ContactSection'
-import { InquiryFormSection } from '@/components/sections/InquiryFormSection'
+
+const InquiryFormSection = lazy(() =>
+  import('@/components/sections/InquiryFormSection').then(m => ({ default: m.InquiryFormSection }))
+)
 
 export const Route = createFileRoute('/{-$locale}/contact')({
   head: () => ({
@@ -27,7 +31,9 @@ function ContactPage() {
       <div className="page-wrap py-16">
         <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-start">
           <ContactSection />
-          <InquiryFormSection />
+          <Suspense fallback={<div style={{ minHeight: '400px' }} />}>
+            <InquiryFormSection />
+          </Suspense>
         </div>
       </div>
     </PageShell>

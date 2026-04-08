@@ -1,6 +1,10 @@
 import { createFileRoute } from '@tanstack/react-router'
-import { InquiryFormSection } from '@/components/sections/InquiryFormSection'
+import { lazy, Suspense } from 'react'
 import { cloudinaryUrl } from '@/lib/cloudinary'
+
+const InquiryFormSection = lazy(() =>
+  import('@/components/sections/InquiryFormSection').then(m => ({ default: m.InquiryFormSection }))
+)
 
 export const Route = createFileRoute('/landing/onboarding-gift-set')({
   head: () => ({
@@ -107,7 +111,9 @@ function OnboardingLandingPage() {
         {/* Right — inquiry form */}
         <div id="inquiry-form" style={{ position: 'sticky', top: '2rem' }}>
           <div style={{ border: '1px solid #e5e5e5', padding: '2rem' }}>
-            <InquiryFormSection />
+            <Suspense fallback={<div style={{ height: '400px' }} />}>
+              <InquiryFormSection />
+            </Suspense>
           </div>
         </div>
       </section>
