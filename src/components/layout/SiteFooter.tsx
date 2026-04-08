@@ -80,7 +80,7 @@ export function SiteFooter() {
           />
 
           <p style={{ fontSize: '0.8rem', color: '#4a4a4a', lineHeight: 1.65, maxWidth: '22ch', marginBottom: '1rem' }}>
-            Custom metal gifts for teams, events, and bulk orders. MOQ 100 sets.
+            Custom metal gifts for teams, events, and bulk orders.
           </p>
           <a
             href="mailto:inquiries@wischosgift.com"
@@ -143,7 +143,7 @@ export function SiteFooter() {
           &copy; {new Date().getFullYear()} Wischos Gift Trading Co. All rights reserved.
         </p>
         <p style={{ fontSize: '0.72rem', color: '#6b6b6b' }}>
-          B2B Custom Metal Gifts · MOQ 100
+          B2B Custom Metal Gifts
         </p>
       </div>
     </footer>

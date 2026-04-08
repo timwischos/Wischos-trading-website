@@ -1,6 +1,6 @@
 export const homepage = {
   hero: {
-    kicker: 'Customized Metal Gift Sets · MOQ 100',
+    kicker: 'Custom Metal Corporate Gift Sets',
     headline: 'Custom Metal Gift Sets — Sourced, Branded & Delivered',
     subheadline:
       'Custom engraved corporate gift sets — from sourcing to delivery, one inquiry.',
