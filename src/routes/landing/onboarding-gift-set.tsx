@@ -101,9 +101,7 @@ function OnboardingLandingPage() {
             ))}
           </div>
 
-          <p style={{ fontSize: '0.78rem', color: '#888', marginTop: '1rem' }}>
-            FOB Price: $25–38 / set &nbsp;·&nbsp; Packaging design consultation included
-          </p>
+
         </div>
 
         {/* Right — inquiry form */}
