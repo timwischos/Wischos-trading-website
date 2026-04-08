@@ -46,23 +46,6 @@ function OnboardingLandingPage() {
         <p style={{ fontSize: '1.05rem', color: '#4a4a4a', lineHeight: 1.7, maxWidth: '55ch', marginBottom: '2rem' }}>
           Turn day one into a brand moment. Laser-engraved metal tools, premium packaging, ready for your logo. We handle sourcing, customization, and quality control — you ship a gift worth remembering.
         </p>
-        <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', alignItems: 'center', marginBottom: '2rem' }}>
-          <a
-            href="#inquiry-form"
-            style={{
-              display: 'inline-block',
-              background: '#B87333',
-              color: '#fff',
-              padding: '0.75rem 1.75rem',
-              fontSize: '0.9rem',
-              fontWeight: 600,
-              letterSpacing: '0.04em',
-              textDecoration: 'none',
-            }}
-          >
-            Request a Quote →
-          </a>
-        </div>
         <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
           {['Laser Engraving Included', 'Sample Available', '25–35 Day Lead Time'].map((badge) => (
             <span key={badge} style={{
