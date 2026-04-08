@@ -10,7 +10,6 @@ const stats = [
   { value: '25+', label: 'Products in catalogue' },
   { value: '6', label: 'Manufacturing regions' },
   { value: '4', label: 'Product categories' },
-  { value: '100 pcs', label: 'Minimum order quantity' },
 ]
 
 export const Route = createFileRoute('/{-$locale}/about')({

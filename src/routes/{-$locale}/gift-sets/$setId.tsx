@@ -194,8 +194,13 @@ function GiftSetDetailPage() {
             {set.heroCopy}
           </p>
 
+          {/* Customization note */}
+          <p style={{ fontSize: '0.78rem', color: '#767676', lineHeight: 1.7, borderLeft: '2px solid var(--accent-brand)', paddingLeft: '0.875rem' }}>
+            Use this set as a starting point — products, materials, and packaging can all be adjusted to your brief.
+          </p>
+
           {/* Logo disclaimer */}
-          <p style={{ fontSize: '0.72rem', color: '#aaa', lineHeight: 1.6, fontStyle: 'italic' }}>
+          <p style={{ fontSize: '0.72rem', color: 'var(--accent-brand)', lineHeight: 1.6 }}>
             Branding shown is illustrative. Every piece leaves the factory marked with your logo — engraved to your specification, not ours.
           </p>
 
@@ -214,16 +219,12 @@ function GiftSetDetailPage() {
             </ul>
           </div>
 
-          {/* Packaging + MOQ */}
+          {/* Packaging + Lead Time */}
           <div style={{ display: 'flex', gap: '2rem', borderTop: '1px solid var(--grid-color)', paddingTop: '1.25rem', flexWrap: 'wrap' }}>
             <div>
               <p style={{ fontSize: '0.62rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: '#767676', marginBottom: '0.3rem' }}>Default Package</p>
               <p style={{ fontSize: '0.85rem', color: '#0a0a0a', marginBottom: '0.25rem' }}>{set.packaging}</p>
               <p style={{ fontSize: '0.7rem', color: '#999', lineHeight: 1.5 }}>Custom packaging available on request</p>
-            </div>
-            <div>
-              <p style={{ fontSize: '0.62rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: '#767676', marginBottom: '0.3rem' }}>MOQ</p>
-              <p style={{ fontSize: '0.85rem', color: '#0a0a0a' }}>100 sets</p>
             </div>
             <div>
               <p style={{ fontSize: '0.62rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: '#767676', marginBottom: '0.3rem' }}>Lead Time</p>

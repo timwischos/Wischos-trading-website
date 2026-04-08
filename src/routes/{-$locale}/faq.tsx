@@ -5,7 +5,7 @@ const faqItems = [
   {
     question: 'What is the minimum order quantity?',
     answer:
-      'The minimum order quantity is 100 sets. If you need reference samples before committing to a bulk order, we can supply up to 5 sets — you cover shipping costs. Custom samples (with your logo applied) are quoted separately per project.',
+      'Our standard minimum is 100 sets — for specific products or smaller quantities, reach out and we\'ll advise. If you need reference samples before committing to a bulk order, we can supply up to 5 sets — you cover shipping costs. Custom samples (with your logo applied) are quoted separately per project.',
   },
   {
     question: 'What products can be included in a gift set?',

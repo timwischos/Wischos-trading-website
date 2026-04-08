@@ -23,9 +23,9 @@ export const homepage = {
         icon: 'Package',
       },
       {
-        title: 'Low MOQ, Reliable Lead Times',
+        title: 'Flexible Volumes, Reliable Lead Times',
         description:
-          'Start from 100 sets without factory-scale commitments. Sample and production lead times confirmed per project during the inquiry stage.',
+          'No factory-scale commitments — tell us your quantity and we\'ll confirm what\'s possible. Sample and production lead times confirmed per project during the inquiry stage.',
         icon: 'CheckCircle',
       },
     ],
@@ -95,7 +95,7 @@ export const homepage = {
     heading: 'What to expect',
     stats: [
       { value: '24 products', label: 'across 6 gift sets' },
-      { value: '100 units', label: 'Sets minimum order' },
+      { value: '25–35 days', label: 'Production lead time' },
       { value: 'Full custom', label: 'Logo, finish, packaging' },
       { value: 'One contact', label: 'Inquiry to delivery' },
     ],

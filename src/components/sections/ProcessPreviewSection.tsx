@@ -7,7 +7,7 @@ const steps = [
   {
     number: '01',
     title: 'Submit Your Inquiry',
-    body: 'Tell us your product interest, quantity, and target timeline. We respond with a programme outline within 1–2 business days.',
+    body: 'Start with one of our curated sets as a reference, or brief us directly on what you need. Either way, we respond with a programme outline within 1–2 business days.',
     time: '1–2 days',
   },
   {

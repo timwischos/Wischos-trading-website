@@ -6,7 +6,7 @@ export const Route = createFileRoute('/landing/onboarding-gift-set')({
   head: () => ({
     meta: [
       { title: 'Custom Employee Onboarding Gift Sets | Wischos Gift' },
-      { name: 'description', content: 'Branded metal gift sets for new hire welcome kits. MOQ 100 sets. Laser engraving included. Sample available.' },
+      { name: 'description', content: 'Branded metal gift sets for new hire welcome kits. Laser engraving included. Sample available.' },
       { name: 'robots', content: 'noindex, nofollow' },
     ],
   }),
@@ -44,10 +44,27 @@ function OnboardingLandingPage() {
           Custom Metal Gift Sets for Employee Onboarding
         </h1>
         <p style={{ fontSize: '1.05rem', color: '#4a4a4a', lineHeight: 1.7, maxWidth: '55ch', marginBottom: '2rem' }}>
-          Turn day one into a brand moment. Laser-engraved metal tools, premium packaging, MOQ 100 sets. We handle sourcing, customization, and quality control — you ship a gift worth remembering.
+          Turn day one into a brand moment. Laser-engraved metal tools, premium packaging, ready for your logo. We handle sourcing, customization, and quality control — you ship a gift worth remembering.
         </p>
+        <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', alignItems: 'center', marginBottom: '2rem' }}>
+          <a
+            href="#inquiry-form"
+            style={{
+              display: 'inline-block',
+              background: '#B87333',
+              color: '#fff',
+              padding: '0.75rem 1.75rem',
+              fontSize: '0.9rem',
+              fontWeight: 600,
+              letterSpacing: '0.04em',
+              textDecoration: 'none',
+            }}
+          >
+            Request a Quote →
+          </a>
+        </div>
         <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
-          {['MOQ 100 Sets', 'Laser Engraving Included', 'Sample Available', '25–35 Day Lead Time'].map((badge) => (
+          {['Laser Engraving Included', 'Sample Available', '25–35 Day Lead Time'].map((badge) => (
             <span key={badge} style={{
               fontSize: '0.78rem', letterSpacing: '0.06em',
               border: '1px solid #d4956a', color: '#B87333',
@@ -57,6 +74,9 @@ function OnboardingLandingPage() {
             </span>
           ))}
         </div>
+        <p style={{ fontSize: '0.78rem', color: '#6b6b6b', lineHeight: 1.65, marginTop: '0.75rem' }}>
+          Our standard minimum is 100 sets — for specific products or smaller quantities, reach out and we'll advise.
+        </p>
       </section>
 
       {/* Product + Form */}
@@ -104,7 +124,7 @@ function OnboardingLandingPage() {
         </div>
 
         {/* Right — inquiry form */}
-        <div style={{ position: 'sticky', top: '2rem' }}>
+        <div id="inquiry-form" style={{ position: 'sticky', top: '2rem' }}>
           <div style={{ border: '1px solid #e5e5e5', padding: '2rem' }}>
             <InquiryFormSection />
           </div>

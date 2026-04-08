@@ -344,7 +344,7 @@ export function InquiryFormSection() {
                 onMouseEnter={e => { if (!isSubmitting) (e.currentTarget as HTMLElement).style.background = 'var(--accent-brand-light)' }}
                 onMouseLeave={e => { if (!isSubmitting) (e.currentTarget as HTMLElement).style.background = 'var(--accent-brand)' }}
               >
-                {isSubmitting ? 'Sending...' : 'Submit Inquiry'}
+                {isSubmitting ? 'Sending...' : 'Get Bulk Pricing'}
               </Button>
               <p className="text-sm text-muted-foreground">{contactContent.responseTime}</p>
             </div>

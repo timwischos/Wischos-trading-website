@@ -49,7 +49,7 @@ export const siteMeta = {
     },
     products: {
       title: 'Corporate Metal Gift Set Catalog | Wischos Gift',
-      description: 'Browse our full catalog of custom metal corporate gift sets — executive pen sets, desk accessories, EDC tools and drinkware. MOQ 100 pcs. Laser engraving and full packaging customization available.',
+      description: 'Browse our full catalog of custom metal corporate gift sets — executive pen sets, desk accessories, EDC tools and drinkware. Laser engraving and full packaging customization available.',
     },
     about: {
       title: 'About Wischos Gift — Corporate Gift Specialists',
@@ -61,7 +61,7 @@ export const siteMeta = {
     },
     inquiry: {
       title: 'Request an Inquiry | Wischos Gift',
-      description: 'Submit an inquiry for custom branded metal gift sets. MOQ 100 sets.',
+      description: 'Submit an inquiry for custom branded metal gift sets. Tell us your quantity and requirements.',
     },
     howItWorks: {
       title: 'How It Works | Wischos Gift',

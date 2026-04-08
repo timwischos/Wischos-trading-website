@@ -10,10 +10,10 @@ export const Route = createFileRoute('/{-$locale}/gift-sets/')({
   head: () => ({
     meta: [
       { title: 'Featured Gift Sets | Wischos Gift' },
-      { name: 'description', content: 'Curated premium metal gift sets for corporate buyers. Each set is fully custom-branded with your logo. MOQ 100 sets. Explore writing, desk, EDC and drinkware combinations.' },
+      { name: 'description', content: 'Curated premium metal gift sets for corporate buyers. Each set is fully custom-branded with your logo. Explore writing, desk, EDC and drinkware combinations.' },
       ...buildOgMeta({
         title: 'Featured Gift Sets | Wischos Gift',
-        description: 'Curated premium metal gift sets for corporate buyers. Each set is fully custom-branded with your logo. MOQ 100 sets. Explore writing, desk, EDC and drinkware combinations.',
+        description: 'Curated premium metal gift sets for corporate buyers. Each set is fully custom-branded with your logo. Explore writing, desk, EDC and drinkware combinations.',
         image: siteMeta.defaultOgImage,
         url: '/gift-sets',
       }),
@@ -113,7 +113,7 @@ function FeaturedPage() {
               Featured Gift Sets
             </h1>
             <p style={{ fontSize: '0.82rem', color: '#767676', lineHeight: 1.7, maxWidth: '36ch' }}>
-              Defined by utility and material substance. Custom branding available from 100 units. Samples provided upon request.
+              Defined by utility and material substance. Custom branding and packaging included. Samples provided upon request.
             </p>
             <p style={{ fontSize: '0.76rem', color: '#666', lineHeight: 1.65, marginTop: '1.25rem', maxWidth: '40ch', borderLeft: '2px solid var(--accent-brand)', paddingLeft: '0.75rem' }}>
               Branding shown is illustrative. Every piece leaves the factory marked with your logo — engraved to your specification, not ours.
@@ -121,13 +121,9 @@ function FeaturedPage() {
           </div>
           <div style={{ padding: '4rem 2rem 3rem', display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: '1.5rem' }}>
             <p style={{ fontSize: '0.9rem', lineHeight: 1.8, color: '#444', maxWidth: '40ch' }}>
-              Six pre-designed sets combining our most-ordered metal pieces. Each set ships from MOQ 100, fully custom-branded with your logo and packaging colour.
+              Six pre-designed sets combining our most-ordered metal pieces. Each set is fully custom-branded with your logo and packaging colour.
             </p>
             <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
-              <div>
-                <p style={{ fontSize: '0.65rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: '#767676', marginBottom: '0.25rem' }}>MOQ</p>
-                <p style={{ fontSize: '0.9rem', fontWeight: 600, color: '#0a0a0a' }}>100 sets</p>
-              </div>
               <div>
                 <p style={{ fontSize: '0.65rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: '#767676', marginBottom: '0.25rem' }}>Lead Time</p>
                 <p style={{ fontSize: '0.9rem', fontWeight: 600, color: '#0a0a0a' }}>25–35 days</p>
