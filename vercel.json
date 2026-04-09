@@ -1,4 +1,11 @@
 {
+  "redirects": [
+    {
+      "source": "/products/WP-201-professional-aluminum-desk-mat",
+      "destination": "/products/WP-201-professional-aluminum-mouse-pad",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",

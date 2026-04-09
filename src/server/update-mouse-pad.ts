@@ -17,8 +17,8 @@ async function main() {
   await db
     .update(products)
     .set({
-      name: 'Professional Aluminum Desk Mat',
-      tagline: '5052 Aluminum Desk Mat | Laser Engravable | Minimalist, Durable, Easy-to-Clean',
+      name: 'Professional Aluminum Mouse Pad',
+      tagline: '5052 Aluminum Mouse Pad | Laser Engravable | Minimalist, Durable, Easy-to-Clean',
       highlights: [
         'Custom Laser Engraving: The matte anodized surface is ideal for high-contrast laser engraving — corporate logos, text, or geometric patterns are permanently etched with a clean silver-white metallic finish.',
         'CNC Smooth Chamfer: Machined edges ensure a flat, burr-free finish for long-term comfort.',

@@ -66,14 +66,14 @@ const updates: { id: string; images: string[] }[] = [
     ],
   },
   {
-    id: 'WP-201-professional-aluminum-desk-mat',
+    id: 'WP-201-professional-aluminum-mouse-pad',
     images: [
-      '/products/WP-201-professional-aluminum-desk-mat/professional-aluminum-desk-mat-cover.avif',
-      '/products/WP-201-professional-aluminum-desk-mat/professional-aluminum-desk-mat-hover.avif',
-      '/products/WP-201-professional-aluminum-desk-mat/professional-aluminum-desk-mat-detail-1.avif',
-      '/products/WP-201-professional-aluminum-desk-mat/professional-aluminum-desk-mat-detail-2.avif',
-      '/products/WP-201-professional-aluminum-desk-mat/professional-aluminum-desk-mat-detail-3.avif',
-      '/products/WP-201-professional-aluminum-desk-mat/professional-aluminum-desk-mat-lifestyle.avif',
+      '/products/WP-201-professional-aluminum-mouse-pad/professional-aluminum-mouse-pad-cover.avif',
+      '/products/WP-201-professional-aluminum-mouse-pad/professional-aluminum-mouse-pad-hover.avif',
+      '/products/WP-201-professional-aluminum-mouse-pad/professional-aluminum-mouse-pad-detail-1.avif',
+      '/products/WP-201-professional-aluminum-mouse-pad/professional-aluminum-mouse-pad-detail-2.avif',
+      '/products/WP-201-professional-aluminum-mouse-pad/professional-aluminum-mouse-pad-detail-3.avif',
+      '/products/WP-201-professional-aluminum-mouse-pad/professional-aluminum-mouse-pad-lifestyle.avif',
     ],
   },
   {

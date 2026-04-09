@@ -80,10 +80,10 @@ const notes: Record<string, ExpertNote[]> = {
 
   // ─── DESK ACCESSORIES (WP-2xx) ────────────────────────────────────────────
 
-  'WP-201-professional-aluminum-desk-mat': [
+  'WP-201-professional-aluminum-mouse-pad': [
     {
-      title: '5052 Aluminum: The Right Alloy for a Desk Mat',
-      body: '5052-H32 aluminum has excellent formability and corrosion resistance (superior to 6061 in marine environments). Its tensile strength of 228 MPa is more than sufficient for a desk mat, while its 2.68 g/cm³ density keeps the 240×200mm pad at a manageable 320g. The magnesium content (2.2–2.8%) also provides natural antimicrobial properties — relevant for a surface that\'s touched thousands of times per day.',
+      title: '5052 Aluminum: The Right Alloy for a Mouse Pad',
+      body: '5052-H32 aluminum has excellent formability and corrosion resistance (superior to 6061 in marine environments). Its tensile strength of 228 MPa is more than sufficient for a mouse pad, while its 2.68 g/cm³ density keeps the 240×200mm pad at a manageable 320g. The magnesium content (2.2–2.8%) also provides natural antimicrobial properties — relevant for a surface that\'s touched thousands of times per day.',
     },
     {
       title: 'Sandblasting + Anodization: A Two-Step Surface',
@@ -91,7 +91,7 @@ const notes: Record<string, ExpertNote[]> = {
     },
     {
       title: 'Thermal Advantage Over Cloth Pads',
-      body: 'Aluminum\'s thermal conductivity (138 W/m·K) is 500× that of cloth. This means an aluminum desk mat actively dissipates heat from your wrist and forearm, keeping the working surface 2–4°C cooler than ambient. In warm offices, this reduces palm sweating — a practical ergonomic benefit that cloth or leather pads cannot provide.',
+      body: 'Aluminum\'s thermal conductivity (138 W/m·K) is 500× that of cloth. This means an aluminum mouse pad actively dissipates heat from your wrist and forearm, keeping the working surface 2–4°C cooler than ambient. In warm offices, this reduces palm sweating — a practical ergonomic benefit that cloth or leather pads cannot provide.',
     },
   ],
 

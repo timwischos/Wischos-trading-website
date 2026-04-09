@@ -18,7 +18,7 @@ const migrations: [string, string][] = [
   ['aluminum-inkless-pen-01',                         'WP-102-executive-dual-head-metal-pen'],
   ['tactical-stainless-steel-pen-01',                 'WP-103-tactical-stainless-steel-pen'],
   ['metal-multifunctional-tool-ballpoint-pen-01',     'WP-104-6-in-1-precision-metal-tool-pen'],
-  ['aluminium-double-sided-mouse-pad',                'WP-201-professional-aluminum-desk-mat'],
+  ['aluminium-double-sided-mouse-pad',                'WP-201-professional-aluminum-mouse-pad'],
   ['aluminium-metal-pen-holder-01',                   'WP-202-precision-aluminum-pen-holder'],
   ['letter-opener-01',                                'WP-203-executive-zinc-alloy-letter-opener'],
   ['letter-opener-02',                                'WP-204-propeller-spinning-letter-opener'],

@@ -19,7 +19,7 @@ const PRODUCTS_DIR = path.join(process.cwd(), 'public/products')
 
 // DB product ID → new folder name
 const FOLDER_MAP: Record<string, string> = {
-  'aluminium-double-sided-mouse-pad':                     'WP-201-professional-aluminum-desk-mat',
+  'aluminium-double-sided-mouse-pad':                     'WP-201-professional-aluminum-mouse-pad',
   'aluminium-metal-pen-holder-01':                        'WP-202-precision-aluminum-pen-holder',
   'badge-holder-card-holder-with-metal-clip':             'WP-301-rfid-aluminum-wallet-badge-holder',
   'bolt-action-pen-01':                                   'WP-101-brass-crown-bolt-action-pen',
