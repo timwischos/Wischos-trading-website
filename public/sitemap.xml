@@ -13,11 +13,6 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://wischosgift.com/featured</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://wischosgift.com/about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -28,14 +23,34 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://wischosgift.com/how-it-works</loc>
+    <loc>https://wischosgift.com/faq</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://wischosgift.com/blog</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.3</priority>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://wischosgift.com/blog/aluminum-brass-steel-titanium-corporate-gifts</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://wischosgift.com/blog/laser-engraving-vs-color-printing-corporate-gifts</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://wischosgift.com/blog/how-to-order-custom-corporate-gifts-from-china</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://wischosgift.com/blog/corporate-gift-lead-times-china-planning-guide</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://wischosgift.com/privacy</loc>
@@ -161,6 +176,11 @@
   </url>
 
   <!-- Gift Sets (6) -->
+  <url>
+    <loc>https://wischosgift.com/gift-sets</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://wischosgift.com/gift-sets/wgs-001-3-the-desk-starter</loc>
     <changefreq>monthly</changefreq>
