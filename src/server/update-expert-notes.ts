@@ -289,7 +289,7 @@ const notes: Record<string, ExpertNote[]> = {
     },
   ],
 
-  'WP-402-pure-titanium-capsule-flask-150ml': [
+  'WP-402-pure-titanium-capsule-bottle-150ml': [
     {
       title: 'Pure Titanium vs Titanium Alloy',
       body: 'This flask uses commercially pure titanium (Grade 1–2, >99% Ti) — not Ti-6Al-4V alloy. Pure titanium is softer (HRC 20 vs 36) but has superior corrosion resistance and zero aluminum content. For a drinking vessel, pure titanium is the correct choice: no aluminum leaching, no vanadium exposure, and the lower hardness actually allows better forming of the capsule profile.',

@@ -115,7 +115,7 @@ export const homepage = {
       },
       {
         name: 'The Morning Ritual',
-        tagline: 'Pure titanium flask, anti-static comb, and brass pen — the complete shirt-pocket set.',
+        tagline: 'Titanium bottle, EDC carabiner, and brass pen — two metals, one carry set.',
       },
     ],
   },

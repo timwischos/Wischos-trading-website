@@ -17,17 +17,17 @@ const db = drizzle(sql)
 
 const sharedHighlights = [
   'Pure Titanium Liner: Non-reactive with coffee or acidic drinks — zero metallic odor, zero flavor contamination. Unlike stainless steel, pure titanium contains no nickel and is fully biocompatible for long-term daily use.',
-  'Shirt-Pocket Form Factor: At 150ml, this capsule flask is explicitly sized to fit a standard shirt pocket — the most friction-free carry format for professionals who want a discreet hydration option at meetings, in transit, or at the desk without a bag.',
+  'Shirt-Pocket Form Factor: At 150ml, this capsule bottle is explicitly sized to fit a standard shirt pocket — the most friction-free carry format for professionals who want a discreet hydration option at meetings, in transit, or at the desk without a bag.',
   'Condensation-Free Vacuum Insulation: The double-wall vacuum structure prevents external condensation, protecting documents, electronics, and desk surfaces from moisture damage during long working sessions.',
 ]
 
 const sharedDescription =
-  'This Pure Titanium Capsule Flask prioritizes material integrity and functional efficiency for the modern workspace. By utilizing pure titanium, we offer a flask that is chemically stable and resistant to the lingering odors often found in traditional metal containers. The 150ml capsule form is sized explicitly for shirt-pocket carry — the optimal capacity for a focused espresso, green tea, or tincture without adding bulk to a briefcase or jacket.\n\nThe food-grade PP (polypropylene) cap seals the flask securely without imparting taste or odor, complementing the inert titanium liner for a fully neutral drinking experience. The compact capsule silhouette projects a sense of reliability and modern professionalism — making it a solid choice for corporate gifting programs targeting executives, frequent travelers, and professionals who carry their standards with them.'
+  'This Pure Titanium Capsule Bottle prioritizes material integrity and functional efficiency for the modern workspace. By utilizing pure titanium, we offer a bottle that is chemically stable and resistant to the lingering odors often found in traditional metal containers. The 150ml capsule form is sized explicitly for shirt-pocket carry — the optimal capacity for a focused espresso, green tea, or tincture without adding bulk to a briefcase or jacket.\n\nThe food-grade PP (polypropylene) cap seals the bottle securely without imparting taste or odor, complementing the inert titanium liner for a fully neutral drinking experience. The compact capsule silhouette projects a sense of reliability and modern professionalism — making it a solid choice for corporate gifting programs targeting executives, frequent travelers, and professionals who carry their standards with them.'
 
 const sharedFaqs = [
   {
     q: 'How does pure titanium hold up for long-term daily use?',
-    a: 'Pure titanium is exceptionally resistant to corrosion. Unlike steel, this capsule flask will not rust or degrade when exposed to acidic beverages over time, ensuring a reliable, long-lasting flask for intense daily use.',
+    a: 'Pure titanium is exceptionally resistant to corrosion. Unlike steel, this capsule bottle will not rust or degrade when exposed to acidic beverages over time, ensuring a reliable, long-lasting bottle for intense daily use.',
   },
   {
     q: 'What material is the cap and does it affect taste?',
@@ -84,7 +84,7 @@ async function main() {
   // ── 150ml — UPDATE ─────────────────────────────────────────────────────────
   const BASE_150 = '/products/WP-402-pure-titanium-capsule-flask-150ml'
   await db.update(products).set({
-    name: 'Pure Titanium Capsule Flask',
+    name: 'Pure Titanium Capsule Bottle',
     tagline: 'Pure Titanium | 150ml Shirt-Pocket Size | Double-Wall Vacuum | Food-Grade PP Cap | Zero Metallic Odor',
     category: 'Drinkware',
     materials: ['Pure Titanium', 'Food-Grade PP'],
@@ -119,14 +119,14 @@ async function main() {
     ],
     sortOrder: 240,
     active: true,
-  }).where(eq(products.id, 'pure-titanium-capsule-flask-150ml'))
-  console.log('✓ Pure Titanium Capsule Flask 150ml updated.')
+  }).where(eq(products.id, 'WP-402-pure-titanium-capsule-bottle-150ml'))
+  console.log('✓ Pure Titanium Capsule Bottle 150ml updated.')
 
   // ── 200ml — DEACTIVATE ──────────────────────────────────────────────────────
   await db.update(products).set({
     active: false,
-  }).where(eq(products.id, 'pure-titanium-capsule-flask-200ml'))
-  console.log('✓ Pure Titanium Capsule Flask 200ml deactivated.')
+  }).where(eq(products.id, 'WP-406-pure-titanium-capsule-bottle-200ml'))
+  console.log('✓ Pure Titanium Capsule Bottle 200ml deactivated.')
 
   await sql.end()
 }
