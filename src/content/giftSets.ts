@@ -30,7 +30,7 @@ export const giftSets: GiftSet[] = [
     name: 'The Desk Starter',
     tagline: 'Three tools. Every desk.',
     heroCopy:
-      'Three aluminium desk tools that cover the basics without overcomplicating them — a pen that writes without ink, a letter opener for the physical correspondence that still lands on every desk, and a phone stand that keeps the screen at eye level through the working day. Each piece is machined aluminium, laser-engraved with your brand, and built to stay on the desk rather than in a drawer.',
+      'Three aluminium desk tools that cover the basics: an inkless pen that never needs a refill, a letter opener that handles every piece of physical correspondence, and a precision-cut metal bookmark engraved with your brand or a chosen company value — visible standing in a book on the desk throughout the working day. All three are machined aluminium, laser-engraved, and built to stay on the desk rather than disappear into a drawer.',
     sellingPoints: [
       {
         title: 'Inkless Pen — No Refills, No Waste',
@@ -41,8 +41,8 @@ export const giftSets: GiftSet[] = [
         body: 'All three pieces share anodised aluminium construction — the same material, the same finish language. On a desk, they read as a set rather than three items that happened to arrive together.',
       },
       {
-        title: 'Laser Engraving Across All Three Pieces',
-        body: 'Your logo goes on every component — pen barrel, opener blade, stand body. Consistent brand presence across everything in the box, at the most accessible price point in the lineup.',
+        title: 'The Bookmark That Doubles as a Values Marker',
+        body: 'Laser-engraved on the face, the metal bookmark functions as a standing nameplate when in a book on the desk — your logo, a tagline, or a single company value at eye level throughout the working day. A functional object that makes the brand visible even when no one is using it.',
       },
     ],
     components: [

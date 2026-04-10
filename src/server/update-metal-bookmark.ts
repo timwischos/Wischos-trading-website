@@ -1,6 +1,6 @@
 /**
  * Run with: npx tsx src/server/update-metal-bookmark.ts
- * Updates the Precision Custom Metal Bookmark — adds sample branding disclaimer.
+ * Updates the Precision Custom Metal Bookmark — values marker repositioning.
  */
 import { config } from 'dotenv'
 config({ path: '.env.local' })
@@ -18,14 +18,14 @@ async function main() {
     .update(products)
     .set({
       name: 'Precision Custom Metal Bookmark',
-      tagline: 'Brass or Stainless Steel | Chemical Etching & Laser-Cut | Fully Custom Profile',
+      tagline: 'Laser-engraved metal that marks pages — and keeps your brand visible.',
       highlights: [
-        'Full Design Flexibility: Dimensions and profiles can be fully customized to align with your corporate visual identity — any shape, any size.',
-        'Permanent Brand Integration: Complex logos are precision-etched or laser-cut directly into the metal substrate, ensuring they never fade, peel, or wear away.',
-        'Structural Integrity: Solid Brass or Stainless Steel resists deformation and aging even with high-frequency daily use in heavy books or document files.',
+        'Desk-Visible Brand Placement: Standing in a book on the desk, the engraved face sits at eye level throughout the working day — functioning as a nameplate, a values statement, or a logo mark that no paper insert can match in permanence or material presence.',
+        'Permanent Brand Integration: Logos and text are precision-etched or laser-cut directly into the metal substrate — they never fade, peel, or wear away. The brand mark outlasts the books it marks.',
+        'Full Profile Customisation: Dimensions and silhouettes can be cut to match your corporate visual identity — standard rectangular or fully custom shape.',
       ],
       description:
-        'Note: Product images show samples featuring Wischos branding for illustration purposes. All bulk orders are produced with your company\'s logo, name, or custom design — no Wischos branding will appear on delivered products.\n\nOur custom metal bookmarks offer complete freedom in specification, allowing shapes and sizes to be tailored specifically to your corporate visual identity. The substantial weight of the metal ensures a firm physical presence between pages, providing a stable and reliable feel that paper or plastic alternatives cannot match. Whether you choose the grounded tone of brass or the clean look of stainless steel, these tools are built to withstand years of professional handling without deforming.\n\nThrough precision chemical etching and laser-cutting processes, even the most intricate brand designs are permanently integrated into the metal substrate. This ensures that your corporate identity remains crisp and intact, resisting damage from friction or environmental wear. It is a durable, low-maintenance hardware solution for long-term brand representation.',
+        'Note: Product images show samples featuring Wischos branding for illustration purposes. All bulk orders are produced with your company\'s logo, name, or custom design — no Wischos branding will appear on delivered products.\n\nA metal bookmark does two things a paper one cannot: it marks a page permanently, and it holds its shape on a desk. Standing in a closed book, the engraved face is visible — your logo, a company value, a single word. It functions as a nameplate without needing a stand, a holder, or any surface space of its own.\n\nBrass and stainless steel are both laser-engravable and etch-ready. The substantial weight holds position in heavy document files and hardcover books without slipping. Through precision chemical etching and laser-cutting, complex logos and fine text are permanently integrated into the metal surface — crisp, tactile, and resistant to years of handling.',
       specifications: [
         { label: 'Material Options', value: 'Brass / Stainless Steel / Zinc Alloy' },
         { label: 'Standard Weight', value: '~20g' },
@@ -51,31 +51,49 @@ async function main() {
           a: 'Chemical etching recesses the logo into the metal surface, creating a tactile, engraved effect with high durability. Laser cutting physically cuts through or deeply scores the metal for sharp, precise outlines. Both methods are permanent — the choice depends on your design complexity and desired aesthetic.',
         },
       ],
+      expertNotes: [
+        {
+          title: 'The bookmark as a standing nameplate',
+          body: 'A metal bookmark sitting in a closed book on a desk occupies real estate without requiring any. The engraved face is at eye level — visible to the person sitting at the desk and to anyone sitting across from them. A company value, a logo, a year, a single word: whatever is engraved there is present every working day, on every call, in every meeting that happens at that desk. No paper insert achieves this. No digital screen replaces it.',
+        },
+        {
+          title: 'Why laser engraving outlasts every alternative',
+          body: 'Printed bookmarks fade. Foiled paper peels. Embossed card compresses. Laser engraving removes material — the mark is the metal itself, not something applied to it. A brass or stainless steel bookmark engraved in 2025 will read identically in 2035. For a branded object that recipients are expected to keep and use, permanence is not a feature — it is the baseline requirement.',
+        },
+        {
+          title: 'Custom profile: the shape is part of the brand',
+          body: 'Standard rectangular bookmarks are functional. A bookmark cut to a custom silhouette — a brand icon, a geometric form, a shape tied to the company\'s visual identity — is a different kind of object. The profile is visible every time it sticks out of a book. Chemical etching and laser cutting both support complex outlines at MOQ 100, making custom silhouettes accessible at entry-level order quantities.',
+        },
+        {
+          title: 'Material choice: brass vs stainless steel',
+          body: 'Brass develops a patina with handling — the surface darkens slightly at contact points, creating a lived-in quality that reads as craft rather than wear. It suits brands that want warmth and character. Stainless steel stays clean and consistent regardless of handling — it suits brands that want precision and permanence. Both are laser-engravable, both hold their shape in heavy books, and both are available in mirror-polished or matte-tumbled finish.',
+        },
+        {
+          title: 'Pairing with The Desk Starter set',
+          body: 'As the third component in The Desk Starter (WGS-001), the metal bookmark completes an all-aluminium desk set alongside the inkless pen and letter opener. The engraved bookmark carries the brand mark on the desk throughout the working day — not as decoration, but as a functional object that earns its position. For clients who want to include a company value or phrase rather than just a logo, the bookmark is the only component in the set that has the surface area and visibility to carry it.',
+        },
+      ],
       seoKeywords: [
-        // Core product
         'custom metal bookmark',
         'precision metal bookmark',
         'metal bookmark bulk',
         'engraved metal bookmark',
         'laser cut metal bookmark',
-        // B2B / corporate gifting
         'corporate branded metal bookmark',
         'custom logo bookmark wholesale',
         'branded bookmark corporate gift',
         'metal bookmark bulk order',
-        // Material / craft
         'brass bookmark custom',
         'stainless steel bookmark engraved',
         'chemical etching bookmark',
         'laser engraved brass bookmark',
-        // Long-tail
         'personalized metal bookmark corporate gift',
         'custom shape metal bookmark B2B',
         'permanent logo metal bookmark bulk',
         'precision engraved bookmark wholesale',
       ],
     })
-    .where(eq(products.id, 'metal-bookmark-01'))
+    .where(eq(products.id, 'WP-205-precision-custom-metal-bookmark'))
 
   console.log('✓ Precision Custom Metal Bookmark updated.')
   await sql.end()
