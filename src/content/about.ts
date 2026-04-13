@@ -2,7 +2,7 @@ export const about = {
   hero: {
     heading: 'Your Single Point of Contact for Custom Metal Corporate Gifts',
     subheading:
-      'Finding a reliable China supplier for premium metal gifts — one who understands materials, manages custom production end-to-end, and communicates clearly across time zones — takes time most buyers cannot afford. We handle it from the first inquiry.',
+      'Most corporate gift suppliers solve for availability, not integrity. Wischos is an outlier — we have built our entire operation around one category: Custom Metal Gift Sets. Mastering its complexities requires a narrow focus, and that focus is what lets us select the right factory for your brief. For buyers who cannot afford to spend weeks vetting suppliers across time zones, this is the difference.',
   },
   expertise: {
     kicker: 'What You Stop Worrying About',
@@ -27,15 +27,15 @@ export const about = {
   },
   whyUs: {
     kicker: 'Why Work With Us',
-    heading: 'Honest about what we are — and good at it',
+    heading: 'One point of contact. One standard of execution.',
     points: [
       {
         title: 'One contact — and you always know how to reach them',
-        body: 'One professional handles your sourcing brief, factory coordination, branding, quality inspection, and shipping documentation. You get a direct response, not a forwarded email or a different person each time. No handoffs. No chasing updates.',
+        body: 'One professional handles your sourcing brief, factory coordination, branding, quality inspection, and shipping documentation. We are not trying to be everything to everyone. We are simply becoming the most reliable call for this one, specific job.',
       },
       {
         title: 'A specialist trading company — by design',
-        body: 'We work with specialist manufacturers across Yangjiang, Dongguan, Zhongshan, Shenzhen, Yiwu, and Wenzhou. A single factory can only offer what it makes. We select the right factory for your brief — metal type, finish, tolerance, volume — and you are not locked into one supplier\'s catalogue.',
+        body: 'A factory is limited to what its machines can do today; we select the right manufacturer from across six specialized regions in China based on the specific requirements of your brief. A precision-machined instrument requires a different set of hands than a heavy-duty EDC tool.',
       },
       {
         title: 'Quality visible before anything ships',
@@ -53,6 +53,6 @@ export const about = {
   },
   mission: {
     heading: 'The Company',
-    body: 'Wischos Gift is a registered trading company established in 2024. We source custom metal corporate gifts through a verified manufacturer network across Southern China, working exclusively with corporate buyers internationally.',
+    body: 'We are a trading company, not a captive factory. A factory is limited to what its machines can do today; we select the right manufacturer from across six specialized regions in China based on the specific requirements of your brief.',
   },
 } as const

@@ -3,7 +3,6 @@ import { siteMeta, buildOgMeta, buildCanonical } from '@/content/meta'
 import { AboutHeroSection } from '@/components/sections/AboutHeroSection'
 import { WhyUsSection } from '@/components/sections/WhyUsSection'
 import { ProcessStepsSection } from '@/components/sections/ProcessStepsSection'
-import { ProcessPolicySection } from '@/components/sections/ProcessPolicySection'
 import { CtaSection } from '@/components/sections/CtaSection'
 
 const stats = [
@@ -60,10 +59,10 @@ function AboutPage() {
 
       <div style={{ background: '#0a0a0a', padding: '2.5rem 2rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '2rem', flexWrap: 'wrap', borderBottom: '1px solid var(--grid-color)' }}>
         <p className="display-title" style={{ fontSize: 'clamp(1.1rem, 2vw, 1.5rem)', fontWeight: 300, color: '#fff', lineHeight: 1.2 }}>
-          Sourced close to the factory. Priced without the layers.
+          Metal communicates in a way that marketing copy cannot.
         </p>
         <p style={{ fontSize: '0.82rem', color: 'rgba(255,255,255,0.55)', lineHeight: 1.7, maxWidth: '42ch' }}>
-          We work close to the production source so the savings reach you — no catalogue markup, no inflated middle tiers.
+          The weight of a CNC-machined pen or the tactile resistance of a titanium tool creates an immediate, unspoken understanding of value. These are objects built to outlast the event that prompted the gift.
         </p>
       </div>
 
@@ -80,7 +79,6 @@ function AboutPage() {
             <source src="https://res.cloudinary.com/dcivh8ovs/video/upload/f_mp4,q_auto,vc_h264/v1774942569/how-it-works_rnzm15.mp4" type="video/mp4" />
           </video>
         </div>
-        <ProcessPolicySection />
       </div>
       <CtaSection />
     </>
