@@ -5,6 +5,8 @@ export const contactContent = {
   emailLabel: 'Email',
   linkedin: 'https://linkedin.com/company/wischosgift',
   linkedinLabel: 'LinkedIn',
+  instagram: 'https://www.instagram.com/wischosgift',
+  instagramLabel: 'Instagram',
   responseTime: 'All inquiries are reviewed and responded to within 2 business days.',
   formHeading: 'Send an Inquiry',
   companyLabel: 'Company',

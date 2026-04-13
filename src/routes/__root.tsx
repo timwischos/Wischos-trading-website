@@ -25,6 +25,7 @@ const organizationJsonLd = {
   },
   sameAs: [
     'https://www.linkedin.com/company/wischosgift',
+    'https://www.instagram.com/wischosgift',
   ],
 }
 
