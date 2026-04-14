@@ -91,7 +91,7 @@ export function InquiryFormSection() {
     <div>
       <h2 className="text-2xl font-semibold tracking-tight mb-2">Tell us about your project</h2>
       <p style={{ fontSize: '0.85rem', color: '#6b6b6b', marginBottom: '0.6rem' }}>
-        Whether you're enquiring about a product in our catalogue or something entirely custom, we're happy to help source it.
+        Whether you're enquiring about a product in our catalogue or something entirely custom, leave the rest to us.
       </p>
       <p style={{ fontSize: '0.85rem', color: '#6b6b6b', marginBottom: '2rem' }}>
         Fields marked with * are required.
@@ -285,7 +285,7 @@ export function InquiryFormSection() {
                     <Input
                       id="quantity"
                       type="text"
-                      placeholder="e.g. 200 sets"
+                      placeholder="e.g. 100 sets"
                       value={field.state.value}
                       onChange={(e) => field.handleChange(e.target.value)}
                       onBlur={field.handleBlur}

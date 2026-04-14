@@ -1,6 +1,6 @@
 export const contactContent = {
   heading: 'Get in Touch',
-  intro: 'Tell us about your gifting requirements — products, branding, quantity, and timeline.',
+  intro: 'We work with procurement managers, brand managers, and marketing teams running custom metal gift programmes — from a single product line to full multi-SKU sets.',
   email: 'inquiries@wischosgift.com',
   emailLabel: 'Email',
   linkedin: 'https://linkedin.com/company/wischosgift',
