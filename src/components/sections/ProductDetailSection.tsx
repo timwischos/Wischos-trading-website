@@ -329,7 +329,7 @@ export function ProductDetailSection({ product, relatedProducts }: ProductDetail
             {/* CTA */}
             <div>
               <Link
-                to={`/inquiry?product=${encodeURIComponent(product.name)}` as RouterTo}
+                to={`/contact?product=${encodeURIComponent(product.name)}` as RouterTo}
                 style={{
                   display: 'inline-block', background: 'var(--accent-brand)', color: '#fff',
                   padding: '0.875rem 2rem', fontSize: '0.8rem', letterSpacing: '0.1em',

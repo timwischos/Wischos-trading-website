@@ -258,7 +258,7 @@ export function ProductGridSection({ products, category, searchQuery }: { produc
           {' '}We source beyond this catalogue — send us a brief and we'll find the right product.
         </p>
         <a
-          href="/inquiry"
+          href="/contact"
           style={{
             display: 'inline-block',
             padding: '0.5rem 1.25rem',

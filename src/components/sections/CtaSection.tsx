@@ -20,7 +20,7 @@ export function CtaSection() {
           In operation since 2024. Every order managed through a single point of contact — from specification to delivery.
         </p>
         <Link
-          to={'/inquiry' as RouterTo}
+          to={'/contact' as RouterTo}
           style={{
             display: 'inline-block',
             fontSize: '0.72rem', letterSpacing: '0.12em', textTransform: 'uppercase',

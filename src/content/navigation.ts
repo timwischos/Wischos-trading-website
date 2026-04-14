@@ -6,6 +6,6 @@ export const navigation = {
     { label: 'Blog', href: '/blog' },
     { label: 'Contact', href: '/contact' },
   ],
-  cta: { label: 'Send an Inquiry', href: '/inquiry' },
+  cta: { label: 'Send an Inquiry', href: '/contact' },
   logoText: 'Wischos Gift',
 } as const

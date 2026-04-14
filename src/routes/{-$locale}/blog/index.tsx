@@ -194,7 +194,7 @@ function BlogPage() {
             View Products
           </Link>
           <Link
-            to={'/inquiry' as RouterTo}
+            to={'/contact' as RouterTo}
             style={{ display: 'inline-block', padding: '0.75rem 2rem', background: 'transparent', color: 'white', fontSize: '0.8rem', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', textDecoration: 'none', border: '1px solid rgba(255,255,255,0.3)', borderRadius: '1px' }}
           >
             Send an Inquiry

@@ -11,10 +11,10 @@ import { SelectionStandardSection } from '@/components/sections/SelectionStandar
 import { getProductsByIds } from '@/server/getProducts'
 
 const FEATURED_PRODUCT_IDS = [
-  'WP-402-pure-titanium-capsule-bottle-150ml',
-  'WP-207-carbon-fiber-magnetic-fidget-stick',
-  'WP-203-executive-zinc-alloy-letter-opener',
-  'WP-102-executive-dual-head-metal-pen',
+  'wp-402-pure-titanium-capsule-bottle-150ml',
+  'wp-207-carbon-fiber-magnetic-fidget-stick',
+  'wp-203-executive-zinc-alloy-letter-opener',
+  'wp-102-executive-dual-head-metal-pen',
 ]
 
 export const Route = createFileRoute('/')({

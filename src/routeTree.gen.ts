@@ -12,13 +12,13 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as Char123LocaleChar125RouteImport } from './routes/{-$locale}'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as Char123LocaleChar125InquiryRouteImport } from './routes/{-$locale}/inquiry'
 import { Route as Char123LocaleChar125GiftSetsRouteImport } from './routes/{-$locale}/gift-sets'
 import { Route as Char123LocaleChar125FaqRouteImport } from './routes/{-$locale}/faq'
 import { Route as Char123LocaleChar125ContactRouteImport } from './routes/{-$locale}/contact'
 import { Route as Char123LocaleChar125BlogRouteImport } from './routes/{-$locale}/blog'
 import { Route as Char123LocaleChar125AboutRouteImport } from './routes/{-$locale}/about'
 import { Route as LandingOnboardingGiftSetRouteImport } from './routes/landing/onboarding-gift-set'
+import { Route as LandingExecutiveGiftSetRouteImport } from './routes/landing/executive-gift-set'
 import { Route as Char123LocaleChar125ProductsIndexRouteImport } from './routes/{-$locale}/products/index'
 import { Route as Char123LocaleChar125GiftSetsIndexRouteImport } from './routes/{-$locale}/gift-sets/index'
 import { Route as Char123LocaleChar125BlogIndexRouteImport } from './routes/{-$locale}/blog/index'
@@ -41,12 +41,6 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const Char123LocaleChar125InquiryRoute =
-  Char123LocaleChar125InquiryRouteImport.update({
-    id: '/inquiry',
-    path: '/inquiry',
-    getParentRoute: () => Char123LocaleChar125Route,
-  } as any)
 const Char123LocaleChar125GiftSetsRoute =
   Char123LocaleChar125GiftSetsRouteImport.update({
     id: '/gift-sets',
@@ -82,6 +76,11 @@ const LandingOnboardingGiftSetRoute =
     path: '/landing/onboarding-gift-set',
     getParentRoute: () => rootRouteImport,
   } as any)
+const LandingExecutiveGiftSetRoute = LandingExecutiveGiftSetRouteImport.update({
+  id: '/landing/executive-gift-set',
+  path: '/landing/executive-gift-set',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const Char123LocaleChar125ProductsIndexRoute =
   Char123LocaleChar125ProductsIndexRouteImport.update({
     id: '/products/',
@@ -123,13 +122,13 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/privacy': typeof PrivacyRoute
   '/{-$locale}': typeof Char123LocaleChar125RouteWithChildren
+  '/landing/executive-gift-set': typeof LandingExecutiveGiftSetRoute
   '/landing/onboarding-gift-set': typeof LandingOnboardingGiftSetRoute
   '/{-$locale}/about': typeof Char123LocaleChar125AboutRoute
   '/{-$locale}/blog': typeof Char123LocaleChar125BlogRouteWithChildren
   '/{-$locale}/contact': typeof Char123LocaleChar125ContactRoute
   '/{-$locale}/faq': typeof Char123LocaleChar125FaqRoute
   '/{-$locale}/gift-sets': typeof Char123LocaleChar125GiftSetsRouteWithChildren
-  '/{-$locale}/inquiry': typeof Char123LocaleChar125InquiryRoute
   '/{-$locale}/blog/$slug': typeof Char123LocaleChar125BlogSlugRoute
   '/{-$locale}/gift-sets/$setId': typeof Char123LocaleChar125GiftSetsSetIdRoute
   '/{-$locale}/products/$productId': typeof Char123LocaleChar125ProductsProductIdRoute
@@ -141,11 +140,11 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/privacy': typeof PrivacyRoute
   '/{-$locale}': typeof Char123LocaleChar125RouteWithChildren
+  '/landing/executive-gift-set': typeof LandingExecutiveGiftSetRoute
   '/landing/onboarding-gift-set': typeof LandingOnboardingGiftSetRoute
   '/{-$locale}/about': typeof Char123LocaleChar125AboutRoute
   '/{-$locale}/contact': typeof Char123LocaleChar125ContactRoute
   '/{-$locale}/faq': typeof Char123LocaleChar125FaqRoute
-  '/{-$locale}/inquiry': typeof Char123LocaleChar125InquiryRoute
   '/{-$locale}/blog/$slug': typeof Char123LocaleChar125BlogSlugRoute
   '/{-$locale}/gift-sets/$setId': typeof Char123LocaleChar125GiftSetsSetIdRoute
   '/{-$locale}/products/$productId': typeof Char123LocaleChar125ProductsProductIdRoute
@@ -158,13 +157,13 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/privacy': typeof PrivacyRoute
   '/{-$locale}': typeof Char123LocaleChar125RouteWithChildren
+  '/landing/executive-gift-set': typeof LandingExecutiveGiftSetRoute
   '/landing/onboarding-gift-set': typeof LandingOnboardingGiftSetRoute
   '/{-$locale}/about': typeof Char123LocaleChar125AboutRoute
   '/{-$locale}/blog': typeof Char123LocaleChar125BlogRouteWithChildren
   '/{-$locale}/contact': typeof Char123LocaleChar125ContactRoute
   '/{-$locale}/faq': typeof Char123LocaleChar125FaqRoute
   '/{-$locale}/gift-sets': typeof Char123LocaleChar125GiftSetsRouteWithChildren
-  '/{-$locale}/inquiry': typeof Char123LocaleChar125InquiryRoute
   '/{-$locale}/blog/$slug': typeof Char123LocaleChar125BlogSlugRoute
   '/{-$locale}/gift-sets/$setId': typeof Char123LocaleChar125GiftSetsSetIdRoute
   '/{-$locale}/products/$productId': typeof Char123LocaleChar125ProductsProductIdRoute
@@ -178,13 +177,13 @@ export interface FileRouteTypes {
     | '/'
     | '/privacy'
     | '/{-$locale}'
+    | '/landing/executive-gift-set'
     | '/landing/onboarding-gift-set'
     | '/{-$locale}/about'
     | '/{-$locale}/blog'
     | '/{-$locale}/contact'
     | '/{-$locale}/faq'
     | '/{-$locale}/gift-sets'
-    | '/{-$locale}/inquiry'
     | '/{-$locale}/blog/$slug'
     | '/{-$locale}/gift-sets/$setId'
     | '/{-$locale}/products/$productId'
@@ -196,11 +195,11 @@ export interface FileRouteTypes {
     | '/'
     | '/privacy'
     | '/{-$locale}'
+    | '/landing/executive-gift-set'
     | '/landing/onboarding-gift-set'
     | '/{-$locale}/about'
     | '/{-$locale}/contact'
     | '/{-$locale}/faq'
-    | '/{-$locale}/inquiry'
     | '/{-$locale}/blog/$slug'
     | '/{-$locale}/gift-sets/$setId'
     | '/{-$locale}/products/$productId'
@@ -212,13 +211,13 @@ export interface FileRouteTypes {
     | '/'
     | '/privacy'
     | '/{-$locale}'
+    | '/landing/executive-gift-set'
     | '/landing/onboarding-gift-set'
     | '/{-$locale}/about'
     | '/{-$locale}/blog'
     | '/{-$locale}/contact'
     | '/{-$locale}/faq'
     | '/{-$locale}/gift-sets'
-    | '/{-$locale}/inquiry'
     | '/{-$locale}/blog/$slug'
     | '/{-$locale}/gift-sets/$setId'
     | '/{-$locale}/products/$productId'
@@ -231,6 +230,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   PrivacyRoute: typeof PrivacyRoute
   Char123LocaleChar125Route: typeof Char123LocaleChar125RouteWithChildren
+  LandingExecutiveGiftSetRoute: typeof LandingExecutiveGiftSetRoute
   LandingOnboardingGiftSetRoute: typeof LandingOnboardingGiftSetRoute
 }
 
@@ -256,13 +256,6 @@ declare module '@tanstack/react-router' {
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
-    }
-    '/{-$locale}/inquiry': {
-      id: '/{-$locale}/inquiry'
-      path: '/inquiry'
-      fullPath: '/{-$locale}/inquiry'
-      preLoaderRoute: typeof Char123LocaleChar125InquiryRouteImport
-      parentRoute: typeof Char123LocaleChar125Route
     }
     '/{-$locale}/gift-sets': {
       id: '/{-$locale}/gift-sets'
@@ -304,6 +297,13 @@ declare module '@tanstack/react-router' {
       path: '/landing/onboarding-gift-set'
       fullPath: '/landing/onboarding-gift-set'
       preLoaderRoute: typeof LandingOnboardingGiftSetRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/landing/executive-gift-set': {
+      id: '/landing/executive-gift-set'
+      path: '/landing/executive-gift-set'
+      fullPath: '/landing/executive-gift-set'
+      preLoaderRoute: typeof LandingExecutiveGiftSetRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/{-$locale}/products/': {
@@ -391,7 +391,6 @@ interface Char123LocaleChar125RouteChildren {
   Char123LocaleChar125ContactRoute: typeof Char123LocaleChar125ContactRoute
   Char123LocaleChar125FaqRoute: typeof Char123LocaleChar125FaqRoute
   Char123LocaleChar125GiftSetsRoute: typeof Char123LocaleChar125GiftSetsRouteWithChildren
-  Char123LocaleChar125InquiryRoute: typeof Char123LocaleChar125InquiryRoute
   Char123LocaleChar125ProductsProductIdRoute: typeof Char123LocaleChar125ProductsProductIdRoute
   Char123LocaleChar125ProductsIndexRoute: typeof Char123LocaleChar125ProductsIndexRoute
 }
@@ -403,7 +402,6 @@ const Char123LocaleChar125RouteChildren: Char123LocaleChar125RouteChildren = {
   Char123LocaleChar125FaqRoute: Char123LocaleChar125FaqRoute,
   Char123LocaleChar125GiftSetsRoute:
     Char123LocaleChar125GiftSetsRouteWithChildren,
-  Char123LocaleChar125InquiryRoute: Char123LocaleChar125InquiryRoute,
   Char123LocaleChar125ProductsProductIdRoute:
     Char123LocaleChar125ProductsProductIdRoute,
   Char123LocaleChar125ProductsIndexRoute:
@@ -417,6 +415,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   PrivacyRoute: PrivacyRoute,
   Char123LocaleChar125Route: Char123LocaleChar125RouteWithChildren,
+  LandingExecutiveGiftSetRoute: LandingExecutiveGiftSetRoute,
   LandingOnboardingGiftSetRoute: LandingOnboardingGiftSetRoute,
 }
 export const routeTree = rootRouteImport

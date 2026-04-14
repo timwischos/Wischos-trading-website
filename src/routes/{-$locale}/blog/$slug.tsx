@@ -195,7 +195,7 @@ function Article1Content() {
       </p>
       <div style={prose.callout}>
         If you're deciding between materials for an upcoming programme,{' '}
-        <Link to={'/inquiry' as RouterTo} style={prose.inlineLink}>send us your brief</Link>.
+        <Link to={'/contact' as RouterTo} style={prose.inlineLink}>send us your brief</Link>.
         The Wischos team will recommend the right tier based on your budget, your recipient profile, and the exact message your gift needs to communicate.
       </div>
     </div>
@@ -267,7 +267,7 @@ function Article2Content() {
       </p>
       <div style={prose.callout}>
         The Wischos catalogue focuses on substantial, high-quality metal goods built for daily utility. Because we believe a corporate gift should be as enduring as the relationship it represents, laser engraving is our default customization method.{' '}
-        <Link to={'/inquiry' as RouterTo} style={prose.inlineLink}>Contact us</Link>{' '}
+        <Link to={'/contact' as RouterTo} style={prose.inlineLink}>Contact us</Link>{' '}
         to discuss your artwork, or to explore how we can apply your logo for maximum impact.
       </div>
     </div>
@@ -336,7 +336,7 @@ function Article3Content() {
       </p>
       <div style={prose.callout}>
         Ready to start a conversation?{' '}
-        <Link to={'/inquiry' as RouterTo} style={prose.inlineLink}>Send us your brief</Link>{' '}
+        <Link to={'/contact' as RouterTo} style={prose.inlineLink}>Send us your brief</Link>{' '}
         with your target category, quantity, and timeline. Our team will respond with product recommendations and a comprehensive quote within one business day.
       </div>
     </div>
@@ -435,7 +435,7 @@ function Article4Content() {
       </ol>
       <div style={prose.callout}>
         Planning an executive gift program and need a realistic timeline?{' '}
-        <Link to={'/inquiry' as RouterTo} style={prose.inlineLink}>Send us your event date and product ideas</Link>
+        <Link to={'/contact' as RouterTo} style={prose.inlineLink}>Send us your event date and product ideas</Link>
         , and the Wischos team will give you a straight answer on what is achievable.
       </div>
     </div>
@@ -632,7 +632,7 @@ function ArticlePage() {
             View Products
           </Link>
           <Link
-            to={'/inquiry' as RouterTo}
+            to={'/contact' as RouterTo}
             style={{ display: 'inline-block', padding: '0.75rem 2rem', background: 'transparent', color: 'white', fontSize: '0.8rem', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase', textDecoration: 'none', border: '1px solid rgba(255,255,255,0.3)', borderRadius: '1px' }}
           >
             Send an Inquiry
