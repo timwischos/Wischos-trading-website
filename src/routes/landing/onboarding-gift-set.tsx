@@ -99,8 +99,8 @@ function OnboardingLandingPage() {
         }}>
           {[
             {
-              label: 'Factory-Direct Sourcing',
-              body: 'We work directly with metal manufacturers in Guangdong and Zhejiang — no trading intermediaries. One contact handles selection, customization, and quality check.',
+              label: 'One Contact, Full Coverage',
+              body: 'We handle supplier selection, customization, and quality inspection — sourcing from metal manufacturers across Guangdong and Zhejiang. You deal with one person from first inquiry to delivered sets.',
             },
             {
               label: '24-Hour Reply',
@@ -139,8 +139,18 @@ function OnboardingLandingPage() {
           <img
             src={cloudinaryUrl('/products/WGS-006-3-The-First-Day/The-First-Day-cover', { w: 700, h: 700, fill: 'pad' })}
             alt="The First Day — Custom Employee Onboarding Gift Set"
-            style={{ width: '100%', display: 'block', marginBottom: '2rem', background: '#f7f7f7' }}
+            style={{ width: '100%', display: 'block', background: '#f7f7f7' }}
           />
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '0.5rem', marginBottom: '2rem', marginTop: '0.5rem' }}>
+            {['detail-1', 'detail-2', 'detail-3'].map((d) => (
+              <img
+                key={d}
+                src={cloudinaryUrl(`/products/WGS-006-3-The-First-Day/The-First-Day-${d}`, { w: 400, h: 400, fill: 'pad' })}
+                alt={`The First Day set — ${d}`}
+                style={{ width: '100%', display: 'block', background: '#f7f7f7' }}
+              />
+            ))}
+          </div>
 
           <h2 style={{ fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.5rem' }}>
             The First Day Set — WGS-006
