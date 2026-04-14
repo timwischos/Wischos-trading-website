@@ -64,6 +64,63 @@ function OnboardingLandingPage() {
         <p style={{ fontSize: '0.78rem', color: '#6b6b6b', lineHeight: 1.65, marginTop: '0.75rem' }}>
           Our standard minimum is 100 sets — for specific products or smaller quantities, reach out and we'll advise.
         </p>
+        <div style={{ marginTop: '2rem' }}>
+          <a
+            href="#inquiry-form"
+            style={{
+              display: 'inline-block',
+              background: '#B87333',
+              color: '#fff',
+              fontSize: '0.9rem',
+              fontWeight: 600,
+              letterSpacing: '0.04em',
+              padding: '0.85rem 2rem',
+              textDecoration: 'none',
+            }}
+          >
+            Request a Quote →
+          </a>
+        </div>
+      </section>
+
+      {/* Trust strip */}
+      <section style={{
+        borderTop: '1px solid #e5e5e5',
+        borderBottom: '1px solid #e5e5e5',
+        background: '#fafafa',
+      }}>
+        <div style={{
+          maxWidth: '1100px',
+          margin: '0 auto',
+          padding: '2.5rem 2rem',
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
+          gap: '2rem',
+        }}>
+          {[
+            {
+              label: 'Factory-Direct Sourcing',
+              body: 'We work directly with metal manufacturers in Guangdong and Zhejiang — no trading intermediaries. One contact handles selection, customization, and quality check.',
+            },
+            {
+              label: '24-Hour Reply',
+              body: 'Every inquiry gets a response within one business day with product availability and indicative pricing. No waiting a week for a quote.',
+            },
+            {
+              label: '25–35 Day Lead Time',
+              body: 'Standard production timeline for laser-engraved metal sets. We confirm the schedule before you commit — no surprises at the delivery stage.',
+            },
+          ].map((item) => (
+            <div key={item.label}>
+              <p style={{ fontWeight: 600, fontSize: '0.88rem', marginBottom: '0.5rem', color: '#0a0a0a' }}>
+                {item.label}
+              </p>
+              <p style={{ fontSize: '0.83rem', color: '#555', lineHeight: 1.65 }}>
+                {item.body}
+              </p>
+            </div>
+          ))}
+        </div>
       </section>
 
       {/* Product + Form */}
