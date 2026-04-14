@@ -1,6 +1,136 @@
 import { createFileRoute } from '@tanstack/react-router'
-import { lazy, Suspense } from 'react'
+import { lazy, Suspense, useState } from 'react'
+import { Dialog as DialogPrimitive } from 'radix-ui'
+import { X, ChevronLeft, ChevronRight } from 'lucide-react'
 import { cloudinaryUrl } from '@/lib/cloudinary'
+
+const WGS006_IMAGES = [
+  '/products/WGS-006-3-The-First-Day/The-First-Day-cover',
+  '/products/WGS-006-3-The-First-Day/The-First-Day-detail-1',
+  '/products/WGS-006-3-The-First-Day/The-First-Day-detail-2',
+  '/products/WGS-006-3-The-First-Day/The-First-Day-detail-3',
+]
+
+function ImageGallery({ images }: { images: string[] }) {
+  const [selectedIdx, setSelectedIdx] = useState(0)
+  const [lightboxIdx, setLightboxIdx] = useState(0)
+  const [zoomed, setZoomed] = useState(false)
+  const total = images.length
+
+  function openLightbox(idx: number) {
+    setLightboxIdx(idx)
+    setZoomed(false)
+  }
+
+  return (
+    <DialogPrimitive.Root onOpenChange={() => setZoomed(false)}>
+      {/* Main image */}
+      <DialogPrimitive.Trigger asChild>
+        <button
+          onClick={() => openLightbox(selectedIdx)}
+          style={{ cursor: 'zoom-in', border: 'none', padding: 0, background: 'none', display: 'block', width: '100%' }}
+          aria-label="View full size"
+        >
+          <img
+            src={cloudinaryUrl(images[selectedIdx], { w: 700, h: 700, fill: 'pad' })}
+            alt="The First Day — Custom Employee Onboarding Gift Set"
+            style={{ width: '100%', display: 'block', background: '#f7f7f7', aspectRatio: '1/1', objectFit: 'contain' }}
+          />
+        </button>
+      </DialogPrimitive.Trigger>
+
+      {/* Thumbnail strip */}
+      <div style={{ display: 'flex', gap: '0.5rem', marginTop: '0.5rem', marginBottom: '2rem' }}>
+        {images.map((src, i) => (
+          <button
+            key={i}
+            onClick={() => setSelectedIdx(i)}
+            style={{
+              flex: '1 1 0', aspectRatio: '1', padding: 0, border: 'none',
+              outline: selectedIdx === i ? '2px solid #060606' : '2px solid transparent',
+              outlineOffset: 2, cursor: 'pointer', background: 'none', overflow: 'hidden',
+            }}
+          >
+            <img
+              src={cloudinaryUrl(src, { w: 200 })}
+              alt={`View ${i + 1}`}
+              style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', background: '#f7f7f7' }}
+            />
+          </button>
+        ))}
+      </div>
+
+      {/* Lightbox */}
+      <DialogPrimitive.Portal>
+        <DialogPrimitive.Overlay style={{ position: 'fixed', inset: 0, zIndex: 9998, background: 'rgba(250,250,250,0.97)' }} />
+        <DialogPrimitive.Content
+          data-slot="dialog-content"
+          style={{ position: 'fixed', inset: 0, zIndex: 9999, display: 'flex', flexDirection: 'column', outline: 'none' }}
+        >
+          <DialogPrimitive.Title style={{ position: 'absolute', width: 1, height: 1, overflow: 'hidden', clip: 'rect(0,0,0,0)' }}>
+            The First Day Set
+          </DialogPrimitive.Title>
+          <DialogPrimitive.Close
+            style={{ position: 'absolute', top: '1.25rem', right: '1.25rem', background: 'none', border: 'none', cursor: 'pointer', padding: '0.5rem', zIndex: 10, lineHeight: 0 }}
+            aria-label="Close"
+          >
+            <X size={22} />
+          </DialogPrimitive.Close>
+          {total > 1 && (
+            <>
+              <button
+                onClick={(e) => { e.stopPropagation(); setZoomed(false); setLightboxIdx((i) => (i - 1 + total) % total) }}
+                aria-label="Previous image"
+                style={{ position: 'absolute', left: '1.25rem', top: '50%', transform: 'translateY(-50%)', background: 'none', border: 'none', cursor: 'pointer', padding: '0.5rem', zIndex: 10, lineHeight: 0 }}
+              >
+                <ChevronLeft size={28} />
+              </button>
+              <button
+                onClick={(e) => { e.stopPropagation(); setZoomed(false); setLightboxIdx((i) => (i + 1) % total) }}
+                aria-label="Next image"
+                style={{ position: 'absolute', right: '3.5rem', top: '50%', transform: 'translateY(-50%)', background: 'none', border: 'none', cursor: 'pointer', padding: '0.5rem', zIndex: 10, lineHeight: 0 }}
+              >
+                <ChevronRight size={28} />
+              </button>
+            </>
+          )}
+          <div
+            onClick={() => setZoomed((z) => !z)}
+            style={{
+              flex: 1, overflow: zoomed ? 'auto' : 'hidden',
+              display: 'flex', alignItems: zoomed ? 'flex-start' : 'center', justifyContent: zoomed ? 'flex-start' : 'center',
+              cursor: zoomed ? 'zoom-out' : 'zoom-in',
+            }}
+          >
+            <img
+              src={cloudinaryUrl(images[lightboxIdx], { w: 1600 })}
+              alt={`The First Day set — image ${lightboxIdx + 1}`}
+              style={{
+                maxHeight: zoomed ? 'none' : '88vh', maxWidth: zoomed ? 'none' : '72vw',
+                width: zoomed ? '160%' : 'auto', objectFit: 'contain', userSelect: 'none',
+              }}
+            />
+          </div>
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '0.5rem', padding: '1rem', flexShrink: 0 }}>
+            {images.map((src, i) => (
+              <button
+                key={i}
+                onClick={(e) => { e.stopPropagation(); setZoomed(false); setLightboxIdx(i) }}
+                style={{
+                  width: 48, height: 48, padding: 0,
+                  border: i === lightboxIdx ? '2px solid #060606' : '2px solid transparent',
+                  cursor: 'pointer', background: 'none', overflow: 'hidden', borderRadius: 2,
+                }}
+              >
+                <img src={cloudinaryUrl(src, { w: 96 })} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              </button>
+            ))}
+          </div>
+        </DialogPrimitive.Content>
+      </DialogPrimitive.Portal>
+    </DialogPrimitive.Root>
+  )
+}
 
 const InquiryFormSection = lazy(() =>
   import('@/components/sections/InquiryFormSection').then(m => ({ default: m.InquiryFormSection }))
@@ -136,21 +266,7 @@ function OnboardingLandingPage() {
 
         {/* Left — product details */}
         <div>
-          <img
-            src={cloudinaryUrl('/products/WGS-006-3-The-First-Day/The-First-Day-cover', { w: 700, h: 700, fill: 'pad' })}
-            alt="The First Day — Custom Employee Onboarding Gift Set"
-            style={{ width: '100%', display: 'block', background: '#f7f7f7' }}
-          />
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '0.5rem', marginBottom: '2rem', marginTop: '0.5rem' }}>
-            {['detail-1', 'detail-2', 'detail-3'].map((d) => (
-              <img
-                key={d}
-                src={cloudinaryUrl(`/products/WGS-006-3-The-First-Day/The-First-Day-${d}`, { w: 400, h: 400, fill: 'pad' })}
-                alt={`The First Day set — ${d}`}
-                style={{ width: '100%', display: 'block', background: '#f7f7f7' }}
-              />
-            ))}
-          </div>
+          <ImageGallery images={WGS006_IMAGES} />
 
           <h2 style={{ fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.5rem' }}>
             The First Day Set — WGS-006
