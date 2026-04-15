@@ -53,6 +53,11 @@ export const Route = createFileRoute('/{-$locale}/products/$productId')({
             category: product.category,
             brand: { '@type': 'Brand', name: siteMeta.siteName },
             manufacturer: { '@type': 'Organization', name: siteMeta.legalName },
+            offers: {
+              '@type': 'Offer',
+              availability: 'https://schema.org/InStock',
+              url: 'https://wischosgift.com/contact',
+            },
           }),
         },
         ...(product.faqs?.length

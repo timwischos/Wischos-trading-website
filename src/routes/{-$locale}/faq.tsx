@@ -30,7 +30,7 @@ const faqItems = [
   {
     question: 'Can you design the packaging?',
     answer:
-      'Yes. Custom packaging design is included in our service at no additional design fee. Options include rigid gift boxes, drawer boxes, custom foam or card inserts, and branded tissue paper. We provide design files for your approval before production begins.',
+      'Yes. Custom packaging design is included in our service at no additional design fee. Options include rigid gift boxes, drawer boxes, custom foam or card inserts, and branded tissue paper. Reusable tinplate tin box — crush-proof, brandable, and keeps brand exposure long after unboxing. We provide design files for your approval before production begins.',
   },
   {
     question: 'Which countries do you ship to?',

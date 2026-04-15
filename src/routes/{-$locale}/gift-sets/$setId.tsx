@@ -43,6 +43,11 @@ export const Route = createFileRoute('/{-$locale}/gift-sets/$setId')({
               ? [`https://wischosgift.com${set.coverImage}`]
               : [],
             brand: { '@type': 'Brand', name: 'Wischos Gift' },
+            offers: {
+              '@type': 'Offer',
+              availability: 'https://schema.org/InStock',
+              url: 'https://wischosgift.com/contact',
+            },
           }),
         },
         {
@@ -224,7 +229,7 @@ function GiftSetDetailPage() {
             <div>
               <p style={{ fontSize: '0.62rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: '#767676', marginBottom: '0.3rem' }}>Default Package</p>
               <p style={{ fontSize: '0.85rem', color: '#0a0a0a', marginBottom: '0.25rem' }}>{set.packaging}</p>
-              <p style={{ fontSize: '0.7rem', color: '#999', lineHeight: 1.5 }}>Custom packaging available on request</p>
+              <p style={{ fontSize: '0.7rem', color: '#999', lineHeight: 1.5 }}>Packaging can be upgraded — tinplate tin box or rigid magnetic gift box available on request.</p>
             </div>
             <div>
               <p style={{ fontSize: '0.62rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: '#767676', marginBottom: '0.3rem' }}>Lead Time</p>

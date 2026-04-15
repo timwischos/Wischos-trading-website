@@ -5,12 +5,6 @@ import { WhyUsSection } from '@/components/sections/WhyUsSection'
 import { ProcessStepsSection } from '@/components/sections/ProcessStepsSection'
 import { CtaSection } from '@/components/sections/CtaSection'
 
-const stats = [
-  { value: '25+', label: 'Products in catalogue' },
-  { value: '6', label: 'Manufacturing regions' },
-  { value: '4', label: 'Product categories' },
-]
-
 export const Route = createFileRoute('/{-$locale}/about')({
   head: () => ({
     meta: [
@@ -34,28 +28,6 @@ function AboutPage() {
       <AboutHeroSection />
       <WhyUsSection />
 
-      {/* Stats bar */}
-      <div style={{ borderTop: '1px solid var(--grid-color)', borderBottom: '1px solid var(--grid-color)' }}>
-        <div style={{ display: 'grid' }} className="grid-cols-2 lg:grid-cols-4">
-          {stats.map((stat, i) => (
-            <div
-              key={stat.label}
-              style={{
-                padding: '2rem 1.75rem',
-                borderRight: i < 3 ? '1px solid var(--grid-color)' : undefined,
-                borderBottom: '1px solid var(--grid-color)',
-              }}
-            >
-              <p className="display-title" style={{ fontSize: 'clamp(1.5rem, 2.5vw, 2rem)', fontWeight: 300, color: '#0a0a0a', marginBottom: '0.4rem' }}>
-                {stat.value}
-              </p>
-              <p style={{ fontSize: '0.72rem', letterSpacing: '0.06em', color: '#888', textTransform: 'uppercase' }}>
-                {stat.label}
-              </p>
-            </div>
-          ))}
-        </div>
-      </div>
 
       <div style={{ background: '#0a0a0a', padding: '2.5rem 2rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '2rem', flexWrap: 'wrap', borderBottom: '1px solid var(--grid-color)' }}>
         <p className="display-title" style={{ fontSize: 'clamp(1.1rem, 2vw, 1.5rem)', fontWeight: 300, color: '#fff', lineHeight: 1.2 }}>
