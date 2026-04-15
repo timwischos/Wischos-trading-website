@@ -442,11 +442,52 @@ function Article4Content() {
   )
 }
 
+function Article5Content() {
+  return (
+    <div style={prose.wrapper}>
+      <p style={prose.p}>
+        In corporate gifting, there are no absolutes about what is "good" or "bad." Canvas bags offer convenience. Tech products solve immediate needs. Paper delivers messages quickly. Each material serves a different purpose.
+      </p>
+      <p style={prose.p}>
+        But when the goal is for a gift to <em>stay in use</em> — not just be received — material choice becomes a practical consideration.
+      </p>
+      <p style={prose.p}>
+        In many projects, we've seen that most gifts eventually end up in drawers. Not necessarily because of poor quality, but because their relevance fades over time. This is where material starts to matter.
+      </p>
+      <p style={prose.p}>
+        In practice, when we select products for our clients, our recommendation often leans toward metals — aluminum, brass, stainless steel, and titanium — especially for projects where longevity is a core expectation.
+      </p>
+      <p style={prose.p}>
+        Metal is not just about strength. It has weight, temperature, and a kind of physical presence that people notice immediately. More importantly, it ages with character:
+      </p>
+      <ul style={prose.ul}>
+        <li style={prose.li}>A brass piece carried over time develops a surface that feels more personal.</li>
+        <li style={prose.li}>A precision-machined aluminum object maintains its tactile appeal even after years of use.</li>
+      </ul>
+      <p style={prose.p}>
+        This isn't about making something "premium" for its own sake. It's about choosing materials that remain relevant longer.
+      </p>
+      <p style={prose.p}>
+        In projects where brand values like quality and attention to detail are paramount, using solid, honest materials — rather than coated or imitative ones — usually leads to better long-term results.
+      </p>
+      <p style={prose.p}>
+        Of course, different campaigns have different priorities. For short-term use, other materials may be more suitable.
+      </p>
+      <div style={prose.callout}>
+        But when the intention is to create something that stays — on a desk, in a pocket, or in daily use — metal is a practical and reliable choice.{' '}
+        <Link to={'/contact' as RouterTo} style={prose.inlineLink}>Tell us about your programme</Link>{' '}
+        and we'll help you find the right material for the job.
+      </div>
+    </div>
+  )
+}
+
 const articleContent: Record<string, () => React.JSX.Element> = {
   'aluminum-brass-steel-titanium-corporate-gifts': Article1Content,
   'laser-engraving-vs-color-printing-corporate-gifts': Article2Content,
   'how-to-order-custom-corporate-gifts-from-china': Article3Content,
   'corporate-gift-lead-times-china-planning-guide': Article4Content,
+  'why-we-often-recommend-metal-in-corporate-gifting': Article5Content,
 }
 
 // ─── Page component ───────────────────────────────────────────────────────────

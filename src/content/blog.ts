@@ -83,4 +83,20 @@ export const blogPosts: BlogPost[] = [
     heroImageAlt: 'Aerial view of shipping containers stacked at a cargo port',
     heroImageCredit: 'Pexels',
   },
+  {
+    slug: 'why-we-often-recommend-metal-in-corporate-gifting',
+    title: 'Beyond the Drawer: Why We Often Recommend Metal in Corporate Gifting',
+    metaTitle: 'Why We Recommend Metal for Corporate Gifts | Wischos Gift',
+    metaDescription:
+      'Canvas bags, tech products, and paper each serve a purpose. But when the goal is a gift that stays in daily use — not just gets received — material choice becomes a practical consideration.',
+    excerpt:
+      'Most gifts eventually end up in drawers. Not because of poor quality, but because their relevance fades. This is where material starts to matter.',
+    category: 'Material Guide',
+    readTime: '3 min read',
+    publishedAt: 'April 15, 2026',
+    isoDate: '2026-04-15',
+    heroImage: 'https://res.cloudinary.com/dcivh8ovs/image/upload/blog/blog-005.avif',
+    heroImageAlt: 'Curated metal corporate gift set arranged on a clean surface',
+    heroImageCredit: 'Wischos Gift',
+  },
 ]
