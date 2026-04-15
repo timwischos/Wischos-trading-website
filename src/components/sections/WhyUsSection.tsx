@@ -28,7 +28,7 @@ export function WhyUsSection() {
           className="lg:border-r border-[var(--grid-color)] border-b lg:border-b-0"
         >
           <img
-            src={cloudinaryUrl('/images/about-why-us')}
+            src={cloudinaryUrl('/images/about-why-us', { w: 1200 })}
             alt="Custom gift set handover"
             style={{ display: 'block', width: '100%', height: '100%', minHeight: '320px', objectFit: 'cover' }}
           />

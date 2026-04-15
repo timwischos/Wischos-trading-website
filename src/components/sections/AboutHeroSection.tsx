@@ -36,7 +36,7 @@ export function AboutHeroSection() {
       {/* Hero image */}
       <div style={{ borderTop: '1px solid var(--grid-color)' }}>
         <img
-          src={cloudinaryUrl('/images/about-materials-banner')}
+          src={cloudinaryUrl('/images/about-materials-banner', { w: 1600 })}
           alt="Wischos product materials — brass, titanium, aluminium, stainless steel"
           style={{ display: 'block', width: '100%', aspectRatio: '16/5', objectFit: 'cover' }}
         />

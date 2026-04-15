@@ -37,7 +37,7 @@ function GiftSetCard({ set }: { set: GiftSet }) {
         onMouseLeave={() => setHovered(false)}
       >
         <img
-          src={cloudinaryUrl(set.coverImage)}
+          src={cloudinaryUrl(set.coverImage, { w: 700 })}
           alt={set.name}
           loading="lazy"
           style={{
@@ -48,7 +48,7 @@ function GiftSetCard({ set }: { set: GiftSet }) {
         />
         {hasHover && (
           <img
-            src={cloudinaryUrl(set.hoverImage!)}
+            src={cloudinaryUrl(set.hoverImage!, { w: 700 })}
             alt=""
             aria-hidden="true"
             loading="lazy"
@@ -160,7 +160,7 @@ function FeaturedPage() {
               position: 'relative',
             }}>
               <img
-                src={cloudinaryUrl('/images/more-coming-gift-sets.avif')}
+                src={cloudinaryUrl('/images/more-coming-gift-sets', { w: 600 })}
                 alt="More sets coming soon"
                 loading="lazy"
                 style={{

@@ -104,7 +104,7 @@ function GiftSetDetailPage() {
           {/* Main image */}
           <div style={{ aspectRatio: '1/1', overflow: 'hidden', background: '#f7f7f7', borderBottom: '1px solid var(--grid-color)' }}>
             <img
-              src={cloudinaryUrl(galleryImages[activeImg])}
+              src={cloudinaryUrl(galleryImages[activeImg], { w: 1200 })}
               alt={`${set.name} — image ${activeImg + 1}`}
               style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
             />
@@ -145,7 +145,7 @@ function GiftSetDetailPage() {
                       aria-label={`View image ${i + 1}`}
                     >
                       <img
-                        src={cloudinaryUrl(img)}
+                        src={cloudinaryUrl(img, { w: 200 })}
                         alt=""
                         style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
                       />
@@ -320,7 +320,7 @@ function GiftSetDetailPage() {
             >
               {prevSet.coverImage && (
                 <div style={{ width: '6.5rem', height: '6.5rem', flexShrink: 0, overflow: 'hidden', background: '#f7f7f7' }}>
-                  <img src={cloudinaryUrl(prevSet.coverImage)} alt={prevSet.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  <img src={cloudinaryUrl(prevSet.coverImage, { w: 200 })} alt={prevSet.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 </div>
               )}
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
@@ -348,7 +348,7 @@ function GiftSetDetailPage() {
               </div>
               {nextSet.coverImage && (
                 <div style={{ width: '6.5rem', height: '6.5rem', flexShrink: 0, overflow: 'hidden', background: '#f7f7f7' }}>
-                  <img src={cloudinaryUrl(nextSet.coverImage)} alt={nextSet.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  <img src={cloudinaryUrl(nextSet.coverImage, { w: 200 })} alt={nextSet.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 </div>
               )}
             </Link>

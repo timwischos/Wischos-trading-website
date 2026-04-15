@@ -63,7 +63,7 @@ export function WhySection() {
         {/* Right col: image full height */}
         <div style={{ overflow: 'hidden', borderBottom: '1px solid var(--grid-color)' }}>
           <img
-            src={cloudinaryUrl('/images/why-us-section')}
+            src={cloudinaryUrl('/images/why-us-section', { w: 1200 })}
             alt="Corporate gift set on office desk"
             style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', display: 'block' }}
           />
