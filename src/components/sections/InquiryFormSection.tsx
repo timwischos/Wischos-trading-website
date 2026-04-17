@@ -2,7 +2,7 @@
 import { useState } from 'react'
 import { z } from 'zod'
 import { useForm } from '@tanstack/react-form'
-import { useSearch } from '@tanstack/react-router'
+import { useSearch, useNavigate } from '@tanstack/react-router'
 import { inquiryInsertSchema } from '@/lib/schemas/inquiry'
 import { submitInquiry } from '@/server/submitInquiry'
 import { trackQualifyLead } from '@/lib/analytics'
@@ -44,7 +44,7 @@ export function InquiryFormSection() {
     initialProduct = matched ? matched.value : 'Other / Multiple Products'
   }
 
-  const [isSuccess, setIsSuccess] = useState(false)
+  const navigate = useNavigate()
   const [submitError, setSubmitError] = useState<string | null>(null)
   const [showDetails, setShowDetails] = useState(false)
 
@@ -71,21 +71,12 @@ export function InquiryFormSection() {
           productInterest: value.productInterest,
           companyName: value.companyName,
         })
-        setIsSuccess(true)
+        navigate({ to: '/thank-you' })
       } catch {
         setSubmitError('Something went wrong. Please try again or email us directly.')
       }
     },
   })
-
-  if (isSuccess) {
-    return (
-      <div className="py-16 text-left">
-        <h2 className="text-2xl font-semibold tracking-tight">Thank you.</h2>
-        <p className="mt-3 text-muted-foreground">We'll review your inquiry and get back to you within 2 business days.</p>
-      </div>
-    )
-  }
 
   return (
     <div>
