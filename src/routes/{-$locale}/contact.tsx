@@ -71,7 +71,7 @@ function ContactPage() {
           {/* Content — mobile uses dark text, desktop uses white */}
           <div style={{ position: 'relative', padding: '2.5rem 1.5rem' }} className="md:px-12 md:py-14">
             <div className="md:hidden">
-              <ContactSection dark={false} />
+              <ContactSection dark={false} headingAs="p" />
             </div>
             <div className="hidden md:block">
               <ContactSection dark={true} />

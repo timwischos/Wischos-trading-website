@@ -43,12 +43,17 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://wischosgift.com/blog/how-to-order-custom-corporate-gifts-from-china</loc>
+    <loc>https://wischosgift.com/blog/how-to-choose-corporate-gift-sets</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://wischosgift.com/blog/corporate-gift-lead-times-china-planning-guide</loc>
+    <loc>https://wischosgift.com/blog/corporate-gift-trends-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://wischosgift.com/blog/beyond-the-drawer-why-we-often-recommend-metal</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -58,119 +63,151 @@
     <priority>0.3</priority>
   </url>
 
-  <!-- Products (23 active) -->
+  <!-- Product category pages -->
   <url>
-    <loc>https://wischosgift.com/products/WP-101-brass-crown-bolt-action-pen</loc>
+    <loc>https://wischosgift.com/products?category=Writing+Instruments</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://wischosgift.com/products/WP-102-executive-dual-head-metal-pen</loc>
+    <loc>https://wischosgift.com/products?category=Desk+Accessories</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://wischosgift.com/products/WP-103-tactical-stainless-steel-pen</loc>
+    <loc>https://wischosgift.com/products?category=EDC+Accessories</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://wischosgift.com/products/WP-104-6-in-1-precision-metal-tool-pen</loc>
+    <loc>https://wischosgift.com/products?category=Drinkware</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Products (25 active) -->
+  <url>
+    <loc>https://wischosgift.com/products/wp-101</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://wischosgift.com/products/WP-201-professional-aluminum-desk-mat</loc>
+    <loc>https://wischosgift.com/products/wp-102</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://wischosgift.com/products/WP-202-precision-aluminum-pen-holder</loc>
+    <loc>https://wischosgift.com/products/wp-103</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://wischosgift.com/products/WP-203-executive-zinc-alloy-letter-opener</loc>
+    <loc>https://wischosgift.com/products/wp-104</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://wischosgift.com/products/WP-204-propeller-spinning-letter-opener</loc>
+    <loc>https://wischosgift.com/products/wp-201</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://wischosgift.com/products/WP-205-precision-custom-metal-bookmark</loc>
+    <loc>https://wischosgift.com/products/wp-202</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://wischosgift.com/products/WP-206-precision-brass-spinning-top</loc>
+    <loc>https://wischosgift.com/products/wp-203</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://wischosgift.com/products/WP-207-carbon-fiber-magnetic-fidget-stick</loc>
+    <loc>https://wischosgift.com/products/wp-204</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://wischosgift.com/products/WP-301-rfid-aluminum-wallet-badge-holder</loc>
+    <loc>https://wischosgift.com/products/wp-205</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://wischosgift.com/products/WP-302-industrial-brass-key-organizer</loc>
+    <loc>https://wischosgift.com/products/wp-206</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://wischosgift.com/products/WP-303-industrial-stainless-steel-money-clip</loc>
+    <loc>https://wischosgift.com/products/wp-207</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://wischosgift.com/products/WP-304-titanium-anti-static-edc-comb</loc>
+    <loc>https://wischosgift.com/products/wp-301</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://wischosgift.com/products/WP-305-industrial-mini-edc-pry-bar</loc>
+    <loc>https://wischosgift.com/products/wp-302</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://wischosgift.com/products/WP-306-executive-zinc-alloy-nail-clipper</loc>
+    <loc>https://wischosgift.com/products/wp-303</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://wischosgift.com/products/WP-307-edc-folding-metal-scissors</loc>
+    <loc>https://wischosgift.com/products/wp-304</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://wischosgift.com/products/WP-401-pure-titanium-vacuum-insulated-bottle</loc>
+    <loc>https://wischosgift.com/products/wp-305</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://wischosgift.com/products/WP-402-pure-titanium-capsule-flask-150ml</loc>
+    <loc>https://wischosgift.com/products/wp-306</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://wischosgift.com/products/WP-403-weighted-vacuum-insulated-office-tumbler</loc>
+    <loc>https://wischosgift.com/products/wp-307</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://wischosgift.com/products/WP-404-bamboo-groove-stainless-steel-mug</loc>
+    <loc>https://wischosgift.com/products/wp-308</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://wischosgift.com/products/WP-405-ice-crystal-pure-titanium-egg-cup</loc>
+    <loc>https://wischosgift.com/products/wp-401</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wischosgift.com/products/wp-402</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wischosgift.com/products/wp-403</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wischosgift.com/products/wp-404</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wischosgift.com/products/wp-405</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wischosgift.com/products/wp-406</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

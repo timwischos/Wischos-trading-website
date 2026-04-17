@@ -18,14 +18,14 @@ const NEXT_STEPS = [
   },
 ]
 
-export function ContactSection({ dark = false }: { dark?: boolean }) {
+export function ContactSection({ dark = false, headingAs: Heading = 'h1' }: { dark?: boolean; headingAs?: 'h1' | 'p' }) {
   const fg = dark ? '#fff' : '#0a0a0a'
   const muted = dark ? 'rgba(255,255,255,0.62)' : '#6b7280'
   const divider = dark ? 'rgba(255,255,255,0.12)' : '#e5e7eb'
 
   return (
     <div>
-      <h1 style={{
+      <Heading style={{
         fontSize: 'clamp(1.75rem, 3vw, 2.5rem)',
         fontWeight: 300,
         letterSpacing: '-0.02em',
@@ -33,7 +33,7 @@ export function ContactSection({ dark = false }: { dark?: boolean }) {
         color: fg,
       }}>
         {contactContent.heading}
-      </h1>
+      </Heading>
       <p style={{
         marginTop: '1rem',
         fontSize: '0.875rem',
