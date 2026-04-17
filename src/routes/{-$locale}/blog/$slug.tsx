@@ -11,7 +11,10 @@ export const Route = createFileRoute('/{-$locale}/blog/$slug')({
   loader: ({ params }) => {
     const post = blogPosts.find(p => p.slug === params.slug)
     if (!post) throw notFound()
-    const others = blogPosts.filter(p => p.slug !== params.slug).slice(0, 2)
+    const others = blogPosts
+      .filter(p => p.slug !== params.slug)
+      .sort((a, b) => b.isoDate.localeCompare(a.isoDate))
+      .slice(0, 2)
     return { post, others }
   },
   head: ({ loaderData }) => {
