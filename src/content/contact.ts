@@ -3,7 +3,7 @@ export const contactContent = {
   intro: 'We work with procurement managers, brand managers, and marketing teams running custom metal gift programmes — from a single product line to full multi-SKU sets.',
   email: 'inquiries@wischosgift.com',
   emailLabel: 'Email',
-  linkedin: 'https://linkedin.com/company/wischosgift',
+  linkedin: 'https://www.linkedin.com/company/wischosgift',
   linkedinLabel: 'LinkedIn',
   instagram: 'https://www.instagram.com/wischosgift',
   instagramLabel: 'Instagram',

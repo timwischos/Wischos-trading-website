@@ -69,6 +69,13 @@ export function ProductCard({ product }: ProductCardProps) {
   )
 }
 
+const CATEGORY_DESCRIPTIONS: Record<string, string> = {
+  'Writing Instruments': 'Corporate pens and writing tools built for daily use. Our selection covers precision ballpoints, rollerball pens, and mechanical pencils in solid brass, stainless steel, and aluminium — materials that communicate substance without saying a word. Unlike promotional giveaways, these are objects recipients keep on their desks and reach for by choice. Each piece supports laser engraving with a company name, logo, or recipient\'s initials, turning a functional tool into a personalised keepsake. Suitable for new client onboarding kits, employee milestones, conference gifts, and long-service awards.',
+  'Desk Accessories': 'Precision-made desk objects for corporate gifting. This category includes aluminium mouse pads, pen holders, desk organisers, spinning tops, custom bookmarks, and other functional pieces built for professional environments. The weight and finish quality are immediately apparent when handled — these are not catalogue fillers. All pieces support laser engraving or surface printing for corporate branding. Ideal for executive welcome kits, team gifts, client appreciation sets, and trade show presentations.',
+  'Drinkware': 'Premium metal drinkware for corporate gifting programs. Our range covers pure titanium bottles, vacuum-insulated stainless steel tumblers, and bamboo-groove mugs — functional gifts that accompany recipients through their workday and beyond. Titanium is a standout choice: lighter than steel, corrosion-resistant, and free of metallic taste. All pieces support laser engraving on the body or lid. Suitable for team gifts, client appreciation packages, wellness-focused onboarding kits, and executive welcome sets.',
+  'EDC Accessories': 'Everyday carry accessories made for professionals who value functional precision. This category includes titanium multi-tools, stainless steel key organisers, EDC pry bars, letter openers, and pocket tools designed for daily use and long-term durability. Each piece is compact, purposeful, and built to a standard that holds up over years of use. Suitable for high-value client gifts, executive welcome kits, and recognition awards where the recipient is expected to actually use what they receive. All pieces support laser engraving for personalisation.',
+}
+
 export function ProductGridSection({ products, category, searchQuery }: { products: DbProduct[]; category?: string; searchQuery?: string }) {
   const heading = searchQuery
     ? `Search: "${searchQuery}"`
@@ -78,6 +85,7 @@ export function ProductGridSection({ products, category, searchQuery }: { produc
     : category
       ? `Showing all products in ${category}`
       : "We don't just find products; we curate objects that matter. Each piece is hand-selected based on our principles of utility and substance, ready to be marked with your legacy."
+  const categoryDescription = !searchQuery && category ? CATEGORY_DESCRIPTIONS[category] : undefined
 
   return (
     <section style={{ borderTop: '1px solid var(--grid-color)' }}>
@@ -93,6 +101,11 @@ export function ProductGridSection({ products, category, searchQuery }: { produc
           <p style={{ fontSize: '0.875rem', color: '#666', maxWidth: '40rem', lineHeight: 1.65 }}>
             {subheading}
           </p>
+          {categoryDescription && (
+            <p style={{ fontSize: '0.875rem', color: '#555', maxWidth: '48rem', lineHeight: 1.75, marginTop: '0.75rem' }}>
+              {categoryDescription}
+            </p>
+          )}
 
           {/* Category filter tabs */}
           {!searchQuery && (

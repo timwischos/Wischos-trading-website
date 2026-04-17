@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as Char123LocaleChar125RouteImport } from './routes/{-$locale}'
+import { Route as ThankYouRouteImport } from './routes/thank-you'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as Char123LocaleChar125GiftSetsRouteImport } from './routes/{-$locale}/gift-sets'
@@ -29,6 +30,11 @@ import { Route as Char123LocaleChar125BlogSlugRouteImport } from './routes/{-$lo
 const Char123LocaleChar125Route = Char123LocaleChar125RouteImport.update({
   id: '/{-$locale}',
   path: '/{-$locale}',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ThankYouRoute = ThankYouRouteImport.update({
+  id: '/thank-you',
+  path: '/thank-you',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PrivacyRoute = PrivacyRouteImport.update({
@@ -121,6 +127,7 @@ const Char123LocaleChar125BlogSlugRoute =
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/privacy': typeof PrivacyRoute
+  '/thank-you': typeof ThankYouRoute
   '/{-$locale}': typeof Char123LocaleChar125RouteWithChildren
   '/landing/executive-gift-set': typeof LandingExecutiveGiftSetRoute
   '/landing/onboarding-gift-set': typeof LandingOnboardingGiftSetRoute
@@ -139,6 +146,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/privacy': typeof PrivacyRoute
+  '/thank-you': typeof ThankYouRoute
   '/{-$locale}': typeof Char123LocaleChar125RouteWithChildren
   '/landing/executive-gift-set': typeof LandingExecutiveGiftSetRoute
   '/landing/onboarding-gift-set': typeof LandingOnboardingGiftSetRoute
@@ -156,6 +164,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/privacy': typeof PrivacyRoute
+  '/thank-you': typeof ThankYouRoute
   '/{-$locale}': typeof Char123LocaleChar125RouteWithChildren
   '/landing/executive-gift-set': typeof LandingExecutiveGiftSetRoute
   '/landing/onboarding-gift-set': typeof LandingOnboardingGiftSetRoute
@@ -176,6 +185,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/privacy'
+    | '/thank-you'
     | '/{-$locale}'
     | '/landing/executive-gift-set'
     | '/landing/onboarding-gift-set'
@@ -194,6 +204,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/privacy'
+    | '/thank-you'
     | '/{-$locale}'
     | '/landing/executive-gift-set'
     | '/landing/onboarding-gift-set'
@@ -210,6 +221,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/privacy'
+    | '/thank-you'
     | '/{-$locale}'
     | '/landing/executive-gift-set'
     | '/landing/onboarding-gift-set'
@@ -229,6 +241,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   PrivacyRoute: typeof PrivacyRoute
+  ThankYouRoute: typeof ThankYouRoute
   Char123LocaleChar125Route: typeof Char123LocaleChar125RouteWithChildren
   LandingExecutiveGiftSetRoute: typeof LandingExecutiveGiftSetRoute
   LandingOnboardingGiftSetRoute: typeof LandingOnboardingGiftSetRoute
@@ -241,6 +254,13 @@ declare module '@tanstack/react-router' {
       path: '/{-$locale}'
       fullPath: '/{-$locale}'
       preLoaderRoute: typeof Char123LocaleChar125RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/thank-you': {
+      id: '/thank-you'
+      path: '/thank-you'
+      fullPath: '/thank-you'
+      preLoaderRoute: typeof ThankYouRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/privacy': {
@@ -414,6 +434,7 @@ const Char123LocaleChar125RouteWithChildren =
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   PrivacyRoute: PrivacyRoute,
+  ThankYouRoute: ThankYouRoute,
   Char123LocaleChar125Route: Char123LocaleChar125RouteWithChildren,
   LandingExecutiveGiftSetRoute: LandingExecutiveGiftSetRoute,
   LandingOnboardingGiftSetRoute: LandingOnboardingGiftSetRoute,

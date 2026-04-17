@@ -44,7 +44,7 @@ function SocialIconButton({ href, label, children }: { href: string; label: stri
       href={href}
       aria-label={label}
       target={href.startsWith('http') ? '_blank' : undefined}
-      rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
+      rel={href.startsWith('http') ? 'nofollow noopener noreferrer' : undefined}
       style={{
         width: '2.25rem', height: '2.25rem',
         border: '1px solid var(--grid-color)',
