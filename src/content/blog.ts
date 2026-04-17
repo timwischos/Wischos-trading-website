@@ -4,6 +4,7 @@ export interface BlogPost {
   metaTitle: string
   metaDescription: string
   excerpt: string
+  quickAnswer: string // ≤40 words — used for AEO quick answer block
   category: string
   readTime: string
   publishedAt: string // display string e.g. "March 28, 2026"
@@ -23,6 +24,8 @@ export const blogPosts: BlogPost[] = [
       'Aluminum, brass, stainless steel, or titanium for your corporate gift programme? A practical guide to what each metal actually means in durability, feel, finish, and value.',
     excerpt:
       'The material is a more consequential decision than it first appears. It determines how the gift feels in hand, how it ages on a desk, and the signal it sends before anyone reads the card.',
+    quickAnswer:
+      'Stainless steel for durable everyday use. Aluminum for color and modern design. Brass for executive desk presence. Titanium for lightweight luxury. Match the metal to your recipient profile and how long the gift needs to remain in active daily use.',
     category: 'Material Guide',
     readTime: '6 min read',
     publishedAt: 'January 14, 2026',
@@ -40,6 +43,8 @@ export const blogPosts: BlogPost[] = [
       'Laser engraving or color printing for your company logo on metal gifts? A practical guide to durability, personalization, and which method is right for your programme.',
     excerpt:
       'They look equally sharp in a mockup. In practice, the gap in durability is significant — and it matters most on the gifts people actually keep.',
+    quickAnswer:
+      'For premium metal gifts, laser engraving is the right choice — permanent, part of the metal itself, and ideal for personalisation and small batches. Choose color printing only when exact Pantone matching is a strict brand requirement.',
     category: 'Customisation',
     readTime: '4 min read',
     publishedAt: 'February 6, 2026',
@@ -57,6 +62,8 @@ export const blogPosts: BlogPost[] = [
       'A practical guide to ordering premium custom corporate gifts from China — covering MOQ, the factory-direct myth, sample orders, and how a specialist trading partner adds real value.',
     excerpt:
       "China manufactures the vast majority of the world's corporate gifts. The quality spectrum is massive — from disposable trinkets to aerospace-grade titanium tools. Navigating it comes down to knowing the right questions to ask.",
+    quickAnswer:
+      'Send a clear brief — product type, quantity, budget per unit, and hard deadline. Work with a trading partner rather than going factory-direct, always order samples first, and allow 7–9 weeks total for a complete premium metal gift set.',
     category: 'Sourcing Guide',
     readTime: '6 min read',
     publishedAt: 'March 3, 2026',
@@ -74,6 +81,8 @@ export const blogPosts: BlogPost[] = [
       'Most corporate gift programs fail on timing, not quality. The full production-to-delivery timeline, key disruption dates to plan around, and what to do when time is short.',
     excerpt:
       "Most corporate gift programs fail on timing — not quality. The order goes in too late, the gifts arrive after the event, or quality corners get cut to hit an impossible deadline.",
+    quickAnswer:
+      'Allow 7–9 weeks for a premium metal gift set by air freight: sampling, production, QC, and shipping combined. For Q4 delivery, confirm orders by July. Chinese New Year disrupts production for 6–8 weeks around it.',
     category: 'Logistics',
     readTime: '5 min read',
     publishedAt: 'March 24, 2026',
@@ -91,6 +100,8 @@ export const blogPosts: BlogPost[] = [
       'Canvas bags, tech products, and paper each serve a purpose. But when the goal is a gift that stays in daily use — not just gets received — material choice becomes a practical consideration.',
     excerpt:
       'Most gifts eventually end up in drawers. Not because of poor quality, but because their relevance fades. This is where material starts to matter.',
+    quickAnswer:
+      'Metal gifts stay in use longer than most alternatives — they have physical presence and age with character. When the goal is a gift kept on a desk or in a pocket for years, metal is the practical choice.',
     category: 'Material Guide',
     readTime: '3 min read',
     publishedAt: 'April 15, 2026',

@@ -580,6 +580,26 @@ function ArticlePage() {
         </p>
       </div>
 
+      {/* Quick Answer */}
+      {post.quickAnswer && (
+        <div style={{ maxWidth: '860px', margin: '0 auto', padding: '0 1.5rem 2rem' }}>
+          <div style={{
+            background: '#faf7f4',
+            border: '1px solid #e8ddd3',
+            borderLeft: '3px solid var(--accent-brand)',
+            borderRadius: '2px',
+            padding: '1rem 1.25rem',
+          }}>
+            <p style={{ fontSize: '0.62rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--accent-brand)', marginBottom: '0.4rem' }}>
+              Quick Answer
+            </p>
+            <p style={{ fontSize: '0.95rem', lineHeight: 1.7, color: '#2a2a2a', margin: 0 }}>
+              {post.quickAnswer}
+            </p>
+          </div>
+        </div>
+      )}
+
       {/* Article body */}
       <div style={{ maxWidth: '860px', margin: '0 auto', padding: '0 1.5rem' }}>
         {ContentComponent ? <ContentComponent /> : (
