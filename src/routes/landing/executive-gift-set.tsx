@@ -184,7 +184,7 @@ function ExecutiveLandingPage() {
           ))}
         </div>
         <p style={{ fontSize: '0.78rem', color: '#6b6b6b', lineHeight: 1.65, marginTop: '0.75rem' }}>
-          Our standard minimum is 100 sets — for specific products or smaller quantities, reach out and we'll advise.
+          Minimum quantities are flexible — reach out and we'll advise based on your brief.
         </p>
         <div style={{ marginTop: '2rem' }}>
           <a
@@ -263,8 +263,11 @@ function ExecutiveLandingPage() {
           <h2 style={{ fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.5rem' }}>
             The Morning Ritual Set — WGS-005
           </h2>
-          <p style={{ fontSize: '0.9rem', color: '#4a4a4a', marginBottom: '2rem', lineHeight: 1.6 }}>
+          <p style={{ fontSize: '0.9rem', color: '#4a4a4a', marginBottom: '1.25rem', lineHeight: 1.6 }}>
             Brass bolt-action pen, pure titanium capsule bottle, and titanium carabiner with bottle opener. Two metals, three functions, one material story. All three laser-engraved with your logo and shipped in premium packaging.
+          </p>
+          <p style={{ fontSize: '0.85rem', color: '#6b6b6b', marginBottom: '2rem', lineHeight: 1.6 }}>
+            Looking for steel or aluminium options? We carry a full range — mention your preference in the inquiry form.
           </p>
 
           <div style={{ borderTop: '1px solid #e5e5e5', paddingTop: '1.5rem' }}>
