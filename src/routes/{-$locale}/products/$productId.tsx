@@ -4,6 +4,7 @@ import { ProductDetailSection } from '@/components/sections/ProductDetailSection
 import { getProductById, getProducts } from '@/server/getProducts'
 import type { DbProduct } from '@/server/schema'
 import { siteMeta, buildOgMeta, buildCanonical } from '@/content/meta'
+import { cloudinaryUrl } from '@/lib/cloudinary'
 import { trackViewItem } from '@/lib/analytics'
 
 type RouterTo = LinkProps['to']
@@ -47,7 +48,7 @@ export const Route = createFileRoute('/{-$locale}/products/$productId')({
             description: product.tagline,
             sku: product.id,
             image: product.images.slice(0, 3).map(
-              (img: string) => `${siteMeta.siteUrl}${img}`
+              (img: string) => cloudinaryUrl(img, { w: 800 })
             ),
             ...(product.materials?.length ? { material: product.materials.join(', ') } : {}),
             category: product.category,

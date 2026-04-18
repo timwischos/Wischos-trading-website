@@ -142,8 +142,8 @@ function Article1Content() {
         <li style={prose.li}><strong style={prose.strong}>What it offers:</strong> Over time, raw brass develops a natural patina. Rather than looking worn, a brass object begins to look <em>owned</em> — evidence of handling and real work. For recipients who appreciate craft and living materials, this is precisely the appeal.</li>
         <li style={prose.li}><strong style={prose.strong}>The trade-off:</strong> It commands a price premium and tarnishes. If your recipients expect a perpetually shiny object, raw brass might lead to misunderstandings. It is a material for a specific type of recipient who appreciates character.</li>
         <li style={prose.li}><strong style={prose.strong}>Best for:</strong> Signature{' '}
-          <Link to={'/products/wp-101' as RouterTo} style={prose.inlineLink}>writing instruments</Link>,{' '}
-          <Link to={'/products/wp-206' as RouterTo} style={prose.inlineLink}>spinning tops</Link>, and commanding executive desk presence.</li>
+          <Link to={'/products/wp-101-brass-crown-bolt-action-pen' as RouterTo} style={prose.inlineLink}>writing instruments</Link>,{' '}
+          <Link to={'/products/wp-206-precision-brass-spinning-top' as RouterTo} style={prose.inlineLink}>spinning tops</Link>, and commanding executive desk presence.</li>
       </ul>
 
       <h2 style={prose.h2}>Stainless Steel: The Reliable Workhorse</h2>
@@ -166,7 +166,7 @@ function Article1Content() {
           <Link to={'/products' as RouterTo} search={{ category: 'Drinkware' } as never} style={prose.inlineLink}>drinkware</Link> or pocket tools, that weight difference is a noticeable detail that recipients appreciate every single time they use it.</li>
         <li style={prose.li}><strong style={prose.strong}>The trade-off:</strong> Titanium typically costs 2–3× more than comparable stainless steel. Because it is notoriously difficult to machine, titanium products often require longer lead times. Plan your executive gifting schedules accordingly.</li>
         <li style={prose.li}><strong style={prose.strong}>Best for:</strong> Lightweight luxury,{' '}
-          <Link to={'/products/wp-401' as RouterTo} style={prose.inlineLink}>premium flasks</Link>, and VIP/Executive gifting.</li>
+          <Link to={'/products/wp-401-pure-titanium-vacuum-insulated-bottle' as RouterTo} style={prose.inlineLink}>premium flasks</Link>, and VIP/Executive gifting.</li>
       </ul>
 
       <h2 style={prose.h2}>How to Choose</h2>

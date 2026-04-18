@@ -40,7 +40,7 @@ export const Route = createFileRoute('/{-$locale}/gift-sets/$setId')({
             description: set.heroCopy.slice(0, 200),
             sku: set.sku,
             image: set.coverImage
-              ? [`https://wischosgift.com${set.coverImage}`]
+              ? [cloudinaryUrl(set.coverImage, { w: 800 })]
               : [],
             brand: { '@type': 'Brand', name: 'Wischos Gift' },
           }),
