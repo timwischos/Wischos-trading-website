@@ -181,7 +181,7 @@ function OnboardingLandingPage() {
           Turn day one into a brand moment. Laser-engraved metal tools, premium packaging, ready for your logo. We handle sourcing, customization, and quality control — you ship a gift worth remembering.
         </p>
         <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
-          {['Laser Engraving Included', 'Sample Available', '25–35 Day Lead Time'].map((badge) => (
+          {['Laser Engraving Included', 'Sample Available', '25-35 Day Lead Time'].map((badge) => (
             <span key={badge} style={{
               fontSize: '0.78rem', letterSpacing: '0.06em',
               border: '1px solid #d4956a', color: '#B87333',
@@ -237,7 +237,7 @@ function OnboardingLandingPage() {
               body: 'Every inquiry gets a response within one business day with product availability and indicative pricing. No waiting a week for a quote.',
             },
             {
-              label: '25–35 Day Lead Time',
+              label: '25-35 Day Lead Time',
               body: 'Standard production timeline for laser-engraved metal sets. We confirm the schedule before you commit — no surprises at the delivery stage.',
             },
           ].map((item) => (
@@ -271,8 +271,11 @@ function OnboardingLandingPage() {
           <h2 style={{ fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.5rem' }}>
             The First Day Set — WGS-006
           </h2>
-          <p style={{ fontSize: '0.9rem', color: '#4a4a4a', marginBottom: '2rem', lineHeight: 1.6 }}>
+          <p style={{ fontSize: '0.9rem', color: '#4a4a4a', marginBottom: '1.25rem', lineHeight: 1.6 }}>
             RFID aluminum badge holder, 6-in-1 tool pen, and aluminum pen holder. All three laser-engraved with your logo. Arrives in branded packaging — ready to hand to every new hire on arrival.
+          </p>
+          <p style={{ fontSize: '0.78rem', color: '#888', marginBottom: '2rem', lineHeight: 1.6, fontStyle: 'italic' }}>
+            Branding shown is illustrative. Every piece leaves the factory marked with your logo — engraved to your specification, not ours.
           </p>
 
           <div style={{ borderTop: '1px solid #e5e5e5', paddingTop: '1.5rem' }}>

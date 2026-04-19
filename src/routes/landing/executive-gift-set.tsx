@@ -173,7 +173,7 @@ function ExecutiveLandingPage() {
           A gift that holds its own in any boardroom or briefcase. Pure titanium capsule bottle, titanium carabiner, and bolt-action brass pen — all three laser-engraved with your logo. The set for clients and executives who notice material quality.
         </p>
         <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
-          {['Pure Titanium · No Coating', 'Laser Engraving Included', '25–35 Day Lead Time'].map((badge) => (
+          {['Pure Titanium · No Coating', 'Laser Engraving Included', '25-35 Day Lead Time'].map((badge) => (
             <span key={badge} style={{
               fontSize: '0.78rem', letterSpacing: '0.06em',
               border: '1px solid #d4956a', color: '#B87333',
@@ -265,6 +265,9 @@ function ExecutiveLandingPage() {
           </h2>
           <p style={{ fontSize: '0.9rem', color: '#4a4a4a', marginBottom: '1.25rem', lineHeight: 1.6 }}>
             Brass bolt-action pen, pure titanium capsule bottle, and titanium carabiner with bottle opener. Two metals, three functions, one material story. All three laser-engraved with your logo and shipped in premium packaging.
+          </p>
+          <p style={{ fontSize: '0.78rem', color: '#888', marginBottom: '1.25rem', lineHeight: 1.6, fontStyle: 'italic' }}>
+            Branding shown is illustrative. Every piece leaves the factory marked with your logo — engraved to your specification, not ours.
           </p>
           <p style={{ fontSize: '0.85rem', color: '#6b6b6b', marginBottom: '2rem', lineHeight: 1.6 }}>
             Looking for steel or aluminium options? We carry a full range — mention your preference in the inquiry form.
