@@ -353,6 +353,33 @@ function OnboardingLandingPage() {
         </a>
       </footer>
 
+      {/* Sticky mobile CTA */}
+      <style>{`
+        .ob-sticky { display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 100; background: #fff; border-top: 1px solid #e5e5e5; padding: 0.75rem 1.25rem; align-items: center; justify-content: space-between; gap: 1rem; box-shadow: 0 -2px 12px rgba(0,0,0,0.06); }
+        @media (min-width: 768px) { .ob-sticky { display: none; } }
+      `}</style>
+      <div className="ob-sticky">
+        <p style={{ fontSize: '0.78rem', color: '#555', margin: 0, lineHeight: 1.3 }}>
+          Engraved Metal &middot; Day One Ready
+        </p>
+        <a
+          href="#inquiry-form"
+          style={{
+            background: '#B87333',
+            color: '#fff',
+            fontSize: '0.85rem',
+            fontWeight: 600,
+            letterSpacing: '0.04em',
+            padding: '0.65rem 1.25rem',
+            textDecoration: 'none',
+            whiteSpace: 'nowrap',
+            flexShrink: 0,
+          }}
+        >
+          Just Talk to Us →
+        </a>
+      </div>
+
     </div>
   )
 }
