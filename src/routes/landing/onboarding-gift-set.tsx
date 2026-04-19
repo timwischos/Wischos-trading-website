@@ -166,50 +166,65 @@ function OnboardingLandingPage() {
       </header>
 
       {/* Hero */}
-      <section style={{
-        padding: '4rem 2rem 3rem',
-        maxWidth: '1100px',
-        margin: '0 auto',
-      }}>
-        <p style={{ fontSize: '0.75rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: '#888', marginBottom: '1rem' }}>
-          Corporate Gifting · New Hire Welcome Kits
-        </p>
-        <h1 style={{ fontSize: 'clamp(2rem, 5vw, 3.25rem)', fontWeight: 700, lineHeight: 1.15, marginBottom: '1.25rem', maxWidth: '18ch' }}>
-          Custom Metal Gift Sets for Employee Onboarding
-        </h1>
-        <p style={{ fontSize: '1.05rem', color: '#4a4a4a', lineHeight: 1.7, maxWidth: '55ch', marginBottom: '2rem' }}>
-          Turn day one into a brand moment. Laser-engraved metal tools, premium packaging, ready for your logo. We handle sourcing, customization, and quality control — you ship a gift worth remembering.
-        </p>
-        <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
-          {['Laser Engraving Included', 'Sample Available', '25-35 Day Lead Time'].map((badge) => (
-            <span key={badge} style={{
-              fontSize: '0.78rem', letterSpacing: '0.06em',
-              border: '1px solid #d4956a', color: '#B87333',
-              padding: '0.3rem 0.75rem',
-            }}>
-              {badge}
-            </span>
-          ))}
-        </div>
-        <p style={{ fontSize: '0.78rem', color: '#6b6b6b', lineHeight: 1.65, marginTop: '0.75rem' }}>
-          Our standard minimum is 100 sets — for specific products or smaller quantities, reach out and we'll advise.
-        </p>
-        <div style={{ marginTop: '2rem' }}>
-          <a
-            href="#inquiry-form"
-            style={{
-              display: 'inline-block',
-              background: '#B87333',
-              color: '#fff',
-              fontSize: '0.9rem',
-              fontWeight: 600,
-              letterSpacing: '0.04em',
-              padding: '0.85rem 2rem',
-              textDecoration: 'none',
-            }}
-          >
-            Request a Quote →
-          </a>
+      <section>
+        <style>{`
+          .ob-hero { display: grid; grid-template-columns: 1fr; }
+          .ob-hero-img { order: 1; width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block; background: #f7f7f7; }
+          .ob-hero-text { order: 2; padding: 2rem 1.25rem 2.5rem; }
+          .ob-cta { display: block; text-align: center; }
+          @media (min-width: 768px) {
+            .ob-hero { grid-template-columns: 1fr 1fr; max-width: 1100px; margin: 0 auto; }
+            .ob-hero-img { order: 2; aspect-ratio: auto; height: 100%; min-height: 480px; }
+            .ob-hero-text { order: 1; padding: 4rem 2rem 3rem; }
+            .ob-cta { display: inline-block; }
+          }
+        `}</style>
+        <div className="ob-hero">
+          <div className="ob-hero-text">
+            <p style={{ fontSize: '0.75rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: '#888', marginBottom: '1rem' }}>
+              Corporate Gifting · New Hire Welcome Kits
+            </p>
+            <h1 style={{ fontSize: 'clamp(2rem, 5vw, 3.25rem)', fontWeight: 700, lineHeight: 1.15, marginBottom: '1.25rem', maxWidth: '18ch' }}>
+              Custom Metal Gift Sets for Employee Onboarding
+            </h1>
+            <p style={{ fontSize: '1.05rem', color: '#4a4a4a', lineHeight: 1.7, maxWidth: '55ch', marginBottom: '2rem' }}>
+              Turn day one into a brand moment. Laser-engraved metal tools, premium packaging, ready for your logo. We handle sourcing, customization, and quality control — you ship a gift worth remembering.
+            </p>
+            <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap', marginBottom: '0.75rem' }}>
+              {['Laser Engraving Included', 'Branded Packaging Included', '25-35 Day Lead Time'].map((badge) => (
+                <span key={badge} style={{
+                  fontSize: '0.78rem', letterSpacing: '0.06em',
+                  border: '1px solid #d4956a', color: '#B87333',
+                  padding: '0.3rem 0.75rem',
+                }}>
+                  {badge}
+                </span>
+              ))}
+            </div>
+            <p style={{ fontSize: '0.78rem', color: '#6b6b6b', lineHeight: 1.65, marginBottom: '2rem' }}>
+              Our standard minimum is 100 sets — for specific products or smaller quantities, reach out and we'll advise.
+            </p>
+            <a
+              href="#inquiry-form"
+              className="ob-cta"
+              style={{
+                background: '#B87333',
+                color: '#fff',
+                fontSize: '0.9rem',
+                fontWeight: 600,
+                letterSpacing: '0.04em',
+                padding: '0.85rem 2rem',
+                textDecoration: 'none',
+              }}
+            >
+              Request a Quote →
+            </a>
+          </div>
+          <img
+            className="ob-hero-img"
+            src={cloudinaryUrl(WGS006_IMAGES[0], { w: 800 })}
+            alt="The First Day — Custom Employee Onboarding Gift Set"
+          />
         </div>
       </section>
 
@@ -291,7 +306,24 @@ function OnboardingLandingPage() {
             ))}
           </div>
 
-
+          <div style={{ marginTop: '2rem', paddingTop: '1.5rem', borderTop: '1px solid #e5e5e5' }}>
+            <a
+              href="#inquiry-form"
+              style={{
+                display: 'block',
+                background: '#B87333',
+                color: '#fff',
+                fontSize: '0.9rem',
+                fontWeight: 600,
+                letterSpacing: '0.04em',
+                padding: '0.85rem 2rem',
+                textDecoration: 'none',
+                textAlign: 'center',
+              }}
+            >
+              Request a Quote →
+            </a>
+          </div>
         </div>
 
         {/* Right — inquiry form */}

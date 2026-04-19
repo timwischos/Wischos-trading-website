@@ -158,50 +158,65 @@ function ExecutiveLandingPage() {
       </header>
 
       {/* Hero */}
-      <section style={{
-        padding: '4rem 2rem 3rem',
-        maxWidth: '1100px',
-        margin: '0 auto',
-      }}>
-        <p style={{ fontSize: '0.75rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: '#888', marginBottom: '1rem' }}>
-          Premium Corporate Gifting · Executive & Client Gifts
-        </p>
-        <h1 style={{ fontSize: 'clamp(2rem, 5vw, 3.25rem)', fontWeight: 700, lineHeight: 1.15, marginBottom: '1.25rem', maxWidth: '20ch' }}>
-          Custom Executive Gift Sets in Titanium and Brass
-        </h1>
-        <p style={{ fontSize: '1.05rem', color: '#4a4a4a', lineHeight: 1.7, maxWidth: '55ch', marginBottom: '2rem' }}>
-          A gift that holds its own in any boardroom or briefcase. Pure titanium capsule bottle, titanium carabiner, and bolt-action brass pen — all three laser-engraved with your logo. The set for clients and executives who notice material quality.
-        </p>
-        <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
-          {['Pure Titanium · No Coating', 'Laser Engraving Included', '25-35 Day Lead Time'].map((badge) => (
-            <span key={badge} style={{
-              fontSize: '0.78rem', letterSpacing: '0.06em',
-              border: '1px solid #d4956a', color: '#B87333',
-              padding: '0.3rem 0.75rem',
-            }}>
-              {badge}
-            </span>
-          ))}
-        </div>
-        <p style={{ fontSize: '0.78rem', color: '#6b6b6b', lineHeight: 1.65, marginTop: '0.75rem' }}>
-          Minimum quantities are flexible — reach out and we'll advise based on your brief.
-        </p>
-        <div style={{ marginTop: '2rem' }}>
-          <a
-            href="#inquiry-form"
-            style={{
-              display: 'inline-block',
-              background: '#B87333',
-              color: '#fff',
-              fontSize: '0.9rem',
-              fontWeight: 600,
-              letterSpacing: '0.04em',
-              padding: '0.85rem 2rem',
-              textDecoration: 'none',
-            }}
-          >
-            Request a Quote →
-          </a>
+      <section>
+        <style>{`
+          .exec-hero { display: grid; grid-template-columns: 1fr; }
+          .exec-hero-img { order: 1; width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block; background: #f7f7f7; }
+          .exec-hero-text { order: 2; padding: 2rem 1.25rem 2.5rem; }
+          .exec-cta { display: block; text-align: center; }
+          @media (min-width: 768px) {
+            .exec-hero { grid-template-columns: 1fr 1fr; max-width: 1100px; margin: 0 auto; }
+            .exec-hero-img { order: 2; aspect-ratio: auto; height: 100%; min-height: 480px; }
+            .exec-hero-text { order: 1; padding: 4rem 2rem 3rem; }
+            .exec-cta { display: inline-block; }
+          }
+        `}</style>
+        <div className="exec-hero">
+          <div className="exec-hero-text">
+            <p style={{ fontSize: '0.75rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: '#888', marginBottom: '1rem' }}>
+              Premium Corporate Gifting · Executive & Client Gifts
+            </p>
+            <h1 style={{ fontSize: 'clamp(2rem, 5vw, 3.25rem)', fontWeight: 700, lineHeight: 1.15, marginBottom: '1.25rem', maxWidth: '20ch' }}>
+              Custom Executive Gift Sets in Titanium and Brass
+            </h1>
+            <p style={{ fontSize: '1.05rem', color: '#4a4a4a', lineHeight: 1.7, maxWidth: '55ch', marginBottom: '2rem' }}>
+              A gift that holds its own in any boardroom or briefcase. Pure titanium capsule bottle, titanium carabiner, and bolt-action brass pen — all three laser-engraved with your logo. The set for clients and executives who notice material quality.
+            </p>
+            <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap', marginBottom: '0.75rem' }}>
+              {['Pure Titanium · No Coating', 'Laser Engraving Included', '25-35 Day Lead Time'].map((badge) => (
+                <span key={badge} style={{
+                  fontSize: '0.78rem', letterSpacing: '0.06em',
+                  border: '1px solid #d4956a', color: '#B87333',
+                  padding: '0.3rem 0.75rem',
+                }}>
+                  {badge}
+                </span>
+              ))}
+            </div>
+            <p style={{ fontSize: '0.78rem', color: '#6b6b6b', lineHeight: 1.65, marginBottom: '2rem' }}>
+              Minimum quantities are flexible — reach out and we'll advise based on your brief.
+            </p>
+            <a
+              href="#inquiry-form"
+              className="exec-cta"
+              style={{
+                background: '#B87333',
+                color: '#fff',
+                fontSize: '0.9rem',
+                fontWeight: 600,
+                letterSpacing: '0.04em',
+                padding: '0.85rem 2rem',
+                textDecoration: 'none',
+              }}
+            >
+              Request a Quote →
+            </a>
+          </div>
+          <img
+            className="exec-hero-img"
+            src={cloudinaryUrl(WGS005_IMAGES[0], { w: 800 })}
+            alt="The Morning Ritual — Custom Executive Gift Set"
+          />
         </div>
       </section>
 
@@ -293,6 +308,25 @@ function ExecutiveLandingPage() {
                 <p style={{ fontSize: '0.85rem', color: '#555', lineHeight: 1.6 }}>{pt.body}</p>
               </div>
             ))}
+          </div>
+
+          <div style={{ marginTop: '2rem', paddingTop: '1.5rem', borderTop: '1px solid #e5e5e5' }}>
+            <a
+              href="#inquiry-form"
+              style={{
+                display: 'block',
+                background: '#B87333',
+                color: '#fff',
+                fontSize: '0.9rem',
+                fontWeight: 600,
+                letterSpacing: '0.04em',
+                padding: '0.85rem 2rem',
+                textDecoration: 'none',
+                textAlign: 'center',
+              }}
+            >
+              Request a Quote →
+            </a>
           </div>
         </div>
 
