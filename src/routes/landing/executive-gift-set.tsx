@@ -332,6 +332,19 @@ function ExecutiveLandingPage() {
 
         {/* Right — inquiry form */}
         <div id="inquiry-form" style={{ position: 'sticky', top: '2rem' }}>
+          <div style={{ marginBottom: '1.5rem', padding: '1.25rem', background: '#fafafa', border: '1px solid #e5e5e5' }}>
+            <p style={{ fontSize: '0.82rem', color: '#555', lineHeight: 1.7, marginBottom: '0.75rem' }}>
+              Wischos Gift is a specialist trading company sourcing from vetted metal manufacturers across Guangdong and Zhejiang. Every order is quality-checked before shipment.
+            </p>
+            <a
+              href="https://www.linkedin.com/in/john-lui-4529a3102/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ fontSize: '0.8rem', color: '#B87333', textDecoration: 'none', fontWeight: 500 }}
+            >
+              Questions? Connect on LinkedIn →
+            </a>
+          </div>
           <div style={{ border: '1px solid #e5e5e5', padding: '2rem' }}>
             <Suspense fallback={<div style={{ height: '400px' }} />}>
               <InquiryFormSection />
