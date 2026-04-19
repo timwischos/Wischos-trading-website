@@ -45,6 +45,7 @@ function AboutPage() {
             controls
             playsInline
             preload="metadata"
+            poster="https://res.cloudinary.com/dcivh8ovs/video/upload/f_jpg,so_0/v1774942569/how-it-works_rnzm15.jpg"
             style={{ display: 'block', width: '100%', maxWidth: '1200px', margin: '0 auto' }}
           >
             <source src="https://res.cloudinary.com/dcivh8ovs/video/upload/f_webm,q_auto,vc_vp9/v1774942569/how-it-works_rnzm15.webm" type="video/webm" />
