@@ -150,11 +150,13 @@ function ExecutiveLandingPage() {
         display: 'flex',
         alignItems: 'center',
       }}>
-        <img
-          src={cloudinaryUrl('/wischos-logo')}
-          alt="Wischos Gift"
-          style={{ height: '2rem', width: 'auto' }}
-        />
+        <a href="/" aria-label="Wischos Gift — Home">
+          <img
+            src={cloudinaryUrl('/wischos-logo')}
+            alt="Wischos Gift"
+            style={{ height: '2rem', width: 'auto' }}
+          />
+        </a>
       </header>
 
       {/* Hero */}
