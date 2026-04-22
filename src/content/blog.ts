@@ -93,25 +93,6 @@ export const blogPosts: BlogPost[] = [
     heroImageCredit: 'Pexels',
   },
   {
-    slug: 'metal-surface-finishes-corporate-gifts',
-    title: 'Surface Finishes for Metal Corporate Gifts: Brushed, Anodised, PVD, and What Each Actually Survives',
-    metaTitle: 'Metal Surface Finishes for Corporate Gifts | Wischos Gift',
-    metaDescription:
-      'Brushed, anodised, PVD, or matte — how each surface finish affects durability, logo clarity, and how a metal corporate gift ages under daily use.',
-    excerpt:
-      'Surface finish is set at the factory, weeks before you see a sample photo. It determines how your logo reads, how the product handles daily handling, and whether the gift still looks considered eighteen months later.',
-    quickAnswer:
-      'Brushed and matte finishes are the most forgiving for daily-carry gifts — they hide micro-scratches and age well. Anodised aluminum gives the widest colour range with permanent colour. PVD coating on steel delivers the most durable dark finish. Mirror polish looks exceptional in photos but shows wear quickly under regular handling.',
-    category: 'Manufacturing',
-    readTime: '6 min read',
-    publishedAt: 'May 26, 2026',
-    isoDate: '2026-05-26',
-    heroImage:
-      'https://images.pexels.com/photos/3785927/pexels-photo-3785927.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&dpr=1',
-    heroImageAlt: 'Close-up of brushed stainless steel surface showing fine directional grain texture',
-    heroImageCredit: 'Pexels',
-  },
-  {
     slug: 'what-makes-a-corporate-gift-worth-keeping',
     title: 'What Makes a Corporate Gift Worth Keeping?',
     metaTitle: 'What Makes a Corporate Gift Worth Keeping? | Wischos Gift',
@@ -127,6 +108,24 @@ export const blogPosts: BlogPost[] = [
     isoDate: '2026-04-15',
     heroImage: 'https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_800/blog/blog-005',
     heroImageAlt: 'Curated metal corporate gift set arranged on a clean surface',
+    heroImageCredit: 'Wischos Gift',
+  },
+  {
+    slug: 'metal-surface-finishes-corporate-gifts',
+    title: 'Surface Finishes for Metal Corporate Gifts: Brushed, Anodised, PVD, and What Each Actually Survives',
+    metaTitle: 'Metal Surface Finishes for Corporate Gifts | Wischos Gift',
+    metaDescription:
+      'Brushed, anodised, PVD, or matte — how each surface finish affects durability, logo clarity, and how a metal corporate gift ages under daily use.',
+    excerpt:
+      'Surface finish is set at the factory, weeks before you see a sample photo. It determines how your logo reads, how the product handles daily handling, and whether the gift still looks considered eighteen months later.',
+    quickAnswer:
+      'Brushed and matte finishes are the most forgiving for daily-carry gifts — they hide micro-scratches and age well. Anodised aluminum gives the widest colour range with permanent colour. PVD coating on steel delivers the most durable dark finish. Mirror polish looks exceptional in photos but shows wear quickly under regular handling.',
+    category: 'Manufacturing',
+    readTime: '6 min read',
+    publishedAt: 'April 22, 2026',
+    isoDate: '2026-04-22',
+    heroImage: 'https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_1200/blog/blog-006',
+    heroImageAlt: 'Close-up of brushed stainless steel surface showing fine directional grain texture',
     heroImageCredit: 'Wischos Gift',
   },
 ]

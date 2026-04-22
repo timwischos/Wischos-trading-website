@@ -613,6 +613,14 @@ function Article8Content() {
       </p>
 
       <h2 style={prose.h2}>Brushed Finish — The Most Forgiving Default</h2>
+      <div style={{ margin: '1rem 0 1.5rem', borderRadius: '2px', overflow: 'hidden', aspectRatio: '16/7' }}>
+        <img
+          src="https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_860/blog/blog-006-brushed"
+          alt="Brushed finish on stainless steel surface showing uniform directional grain texture"
+          loading="lazy"
+          style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+        />
+      </div>
       <p style={prose.p}>
         A brushed finish is created by drawing fine abrasive media across the metal surface in a single direction, leaving a uniform linear grain. It is the most commonly specified finish in premium corporate gifting — and for good reason.
       </p>
@@ -630,6 +638,14 @@ function Article8Content() {
       </ul>
 
       <h2 style={prose.h2}>Mirror Polish — High Impact, High Maintenance</h2>
+      <div style={{ margin: '1rem 0 1.5rem', borderRadius: '2px', overflow: 'hidden', aspectRatio: '16/7' }}>
+        <img
+          src="https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_860/blog/blog-006-mirror"
+          alt="Mirror polished metal surface with high-gloss reflective finish"
+          loading="lazy"
+          style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+        />
+      </div>
       <p style={prose.p}>
         Mirror polish is achieved through multiple stages of progressively finer abrasives, finishing with a buffing compound. The result is a surface that reflects clearly — exceptional in photographs and commanding on a desk.
       </p>
@@ -643,6 +659,14 @@ function Article8Content() {
       </ul>
 
       <h2 style={prose.h2}>Anodising — The Aluminum Colour Specialist</h2>
+      <div style={{ margin: '1rem 0 1.5rem', borderRadius: '2px', overflow: 'hidden', aspectRatio: '16/7' }}>
+        <img
+          src="https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_860/blog/blog-006-anodising"
+          alt="Anodised aluminum surface showing deep matte colour with permanent finish"
+          loading="lazy"
+          style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+        />
+      </div>
       <p style={prose.p}>
         Anodising is an electrochemical process exclusive to aluminum. The surface is converted into aluminum oxide (Al₂O₃) — not a coating applied on top of the metal, but a structural transformation of the surface itself. Dye is absorbed into the porous oxide layer before it is sealed.
       </p>
@@ -659,6 +683,14 @@ function Article8Content() {
       </ul>
 
       <h2 style={prose.h2}>PVD Coating — The Premium Dark Tier</h2>
+      <div style={{ margin: '1rem 0 1.5rem', borderRadius: '2px', overflow: 'hidden', aspectRatio: '16/7' }}>
+        <img
+          src="https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_860/blog/blog-006-pvd"
+          alt="PVD coated stainless steel surface in dark gunmetal finish"
+          loading="lazy"
+          style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+        />
+      </div>
       <p style={prose.p}>
         PVD (Physical Vapor Deposition) is a vacuum-chamber process in which target metals — typically titanium nitride (TiN), chromium nitride (CrN), or zirconium nitride (ZrN) — are vaporised and deposited as an ultra-thin film, typically 2–5 microns thick. The resulting surface is not a paint layer; it is a bonded metallic compound with a hardness that often exceeds the substrate beneath it.
       </p>
@@ -676,6 +708,14 @@ function Article8Content() {
       </ul>
 
       <h2 style={prose.h2}>Matte / Sandblasted Finish — Clean and Contemporary</h2>
+      <div style={{ margin: '1rem 0 1.5rem', borderRadius: '2px', overflow: 'hidden', aspectRatio: '16/7' }}>
+        <img
+          src="https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_860/blog/blog-006-sandblasted"
+          alt="Sandblasted metal surface with uniform non-directional matte texture"
+          loading="lazy"
+          style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+        />
+      </div>
       <p style={prose.p}>
         A sandblasted or bead-blasted finish is produced by propelling fine abrasive media — glass beads or aluminum oxide — at controlled pressure across the metal surface. Unlike brushed, the result is non-directional: the texture is uniform regardless of viewing angle.
       </p>
@@ -692,6 +732,14 @@ function Article8Content() {
       </ul>
 
       <h2 style={prose.h2}>Stone Wash — The Titanium EDC Finish</h2>
+      <div style={{ margin: '1rem 0 1.5rem', borderRadius: '2px', overflow: 'hidden', aspectRatio: '16/7' }}>
+        <img
+          src="https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_860/blog/blog-006-stone-wash"
+          alt="Stone washed titanium surface with worn-in low-gloss appearance"
+          loading="lazy"
+          style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+        />
+      </div>
       <p style={prose.p}>
         Of the five finishes above, most apply across stainless steel, aluminum, and titanium. Titanium has one additional process worth knowing for EDC products: stone washing.
       </p>
