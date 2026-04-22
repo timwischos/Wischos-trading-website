@@ -19,9 +19,9 @@ export const blogPosts: BlogPost[] = [
   {
     slug: 'aluminum-brass-steel-titanium-corporate-gifts',
     title: 'Aluminum, Brass, Steel, or Titanium? How to Choose the Right Metal for Corporate Gifts',
-    metaTitle: 'Aluminum vs Brass vs Steel vs Titanium for Corporate Gifts | Wischos Gift',
+    metaTitle: 'Aluminum, Brass, Steel or Titanium for Corporate Gifts',
     metaDescription:
-      'Aluminum, brass, stainless steel, or titanium for your corporate gift programme? A practical guide to what each metal actually means in durability, feel, finish, and value.',
+      'Aluminum, brass, stainless steel, or titanium for your corporate gift programme? A practical guide to durability, feel, finish, and total value.',
     excerpt:
       'The material is a more consequential decision than it first appears. It determines how the gift feels in hand, how it ages on a desk, and the signal it sends before anyone reads the card.',
     quickAnswer:
@@ -38,9 +38,9 @@ export const blogPosts: BlogPost[] = [
   {
     slug: 'laser-engraving-vs-color-printing-corporate-gifts',
     title: 'Laser Engraving vs. Color Printing: Which Logo Method Is Right for Your Metal Corporate Gift?',
-    metaTitle: 'Laser Engraving vs Color Printing for Metal Corporate Gifts | Wischos Gift',
+    metaTitle: 'Laser Engraving vs Color Printing: Metal Corporate Gifts',
     metaDescription:
-      'Laser engraving or color printing for your company logo on metal gifts? A practical guide to durability, personalization, and which method is right for your programme.',
+      'Laser engraving or color printing for your company logo on metal gifts? Durability, personalisation, and which method is right for your programme.',
     excerpt:
       'They look equally sharp in a mockup. In practice, the gap in durability is significant — and it matters most on the gifts people actually keep.',
     quickAnswer:
@@ -57,9 +57,9 @@ export const blogPosts: BlogPost[] = [
   {
     slug: 'how-to-order-custom-corporate-gifts-from-china',
     title: "How to Order Premium Custom Corporate Gifts from China: A Buyer's Guide",
-    metaTitle: "How to Order Premium Custom Corporate Gifts from China | Wischos Gift",
+    metaTitle: 'How to Order Custom Corporate Gifts from China | Wischos Gift',
     metaDescription:
-      'A practical guide to ordering premium custom corporate gifts from China — covering MOQ, the factory-direct myth, sample orders, and how a specialist trading partner adds real value.',
+      'Ordering premium custom corporate gifts from China: MOQ, the factory-direct myth, sample orders, and how a specialist trading partner adds real value.',
     excerpt:
       "China manufactures the vast majority of the world's corporate gifts. The quality spectrum is massive — from disposable trinkets to aerospace-grade titanium tools. Navigating it comes down to knowing the right questions to ask.",
     quickAnswer:
@@ -76,9 +76,9 @@ export const blogPosts: BlogPost[] = [
   {
     slug: 'corporate-gift-lead-times-china-planning-guide',
     title: 'The Hidden Timeline: Why Most Corporate Gift Programs Fail on Delivery',
-    metaTitle: 'Corporate Gift Lead Times from China: The Full Timeline | Wischos Gift',
+    metaTitle: 'Corporate Gift Lead Times from China | Wischos Gift',
     metaDescription:
-      'Most corporate gift programs fail on timing, not quality. The full production-to-delivery timeline, key disruption dates to plan around, and what to do when time is short.',
+      'Most corporate gift programmes fail on timing, not quality. Full timeline from order to delivery, key disruption dates to plan around, and options when deadlines are tight.',
     excerpt:
       "Most corporate gift programs fail on timing — not quality. The order goes in too late, the gifts arrive after the event, or quality corners get cut to hit an impossible deadline.",
     quickAnswer:
@@ -93,17 +93,36 @@ export const blogPosts: BlogPost[] = [
     heroImageCredit: 'Pexels',
   },
   {
-    slug: 'why-we-often-recommend-metal-in-corporate-gifting',
-    title: 'Beyond the Drawer: Why We Often Recommend Metal in Corporate Gifting',
-    metaTitle: 'Why We Recommend Metal for Corporate Gifts | Wischos Gift',
+    slug: 'metal-surface-finishes-corporate-gifts',
+    title: 'Surface Finishes for Metal Corporate Gifts: Brushed, Anodised, PVD, and What Each Actually Survives',
+    metaTitle: 'Metal Surface Finishes for Corporate Gifts | Wischos Gift',
     metaDescription:
-      'Canvas bags, tech products, and paper each serve a purpose. But when the goal is a gift that stays in daily use — not just gets received — material choice becomes a practical consideration.',
+      'Brushed, anodised, PVD, or matte — how each surface finish affects durability, logo clarity, and how a metal corporate gift ages under daily use.',
+    excerpt:
+      'Surface finish is set at the factory, weeks before you see a sample photo. It determines how your logo reads, how the product handles daily handling, and whether the gift still looks considered eighteen months later.',
+    quickAnswer:
+      'Brushed and matte finishes are the most forgiving for daily-carry gifts — they hide micro-scratches and age well. Anodised aluminum gives the widest colour range with permanent colour. PVD coating on steel delivers the most durable dark finish. Mirror polish looks exceptional in photos but shows wear quickly under regular handling.',
+    category: 'Manufacturing',
+    readTime: '6 min read',
+    publishedAt: 'May 26, 2026',
+    isoDate: '2026-05-26',
+    heroImage:
+      'https://images.pexels.com/photos/3785927/pexels-photo-3785927.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&dpr=1',
+    heroImageAlt: 'Close-up of brushed stainless steel surface showing fine directional grain texture',
+    heroImageCredit: 'Pexels',
+  },
+  {
+    slug: 'what-makes-a-corporate-gift-worth-keeping',
+    title: 'What Makes a Corporate Gift Worth Keeping?',
+    metaTitle: 'What Makes a Corporate Gift Worth Keeping? | Wischos Gift',
+    metaDescription:
+      'Most corporate gifts end up in drawers. The ones that stay in use share three traits: genuine utility, material substance, and restrained branding.',
     excerpt:
       'Most gifts eventually end up in drawers. Not because of poor quality, but because their relevance fades. This is where material starts to matter.',
     quickAnswer:
-      'Metal gifts stay in use longer than most alternatives — they have physical presence and age with character. When the goal is a gift kept on a desk or in a pocket for years, metal is the practical choice.',
-    category: 'Material Guide',
-    readTime: '3 min read',
+      'A gift is worth keeping when it solves a real daily problem for the recipient, feels substantial in hand, and carries branding restrained enough that the recipient would use it without the logo. Utility dominates — PPAI data shows 75.4% keep branded items because they are useful.',
+    category: 'Gifting Strategy',
+    readTime: '5 min read',
     publishedAt: 'April 15, 2026',
     isoDate: '2026-04-15',
     heroImage: 'https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_800/blog/blog-005',
