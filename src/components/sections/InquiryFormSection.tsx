@@ -1,11 +1,11 @@
 'use client'
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import { z } from 'zod'
 import { useForm } from '@tanstack/react-form'
 import { useSearch, useNavigate } from '@tanstack/react-router'
 import { inquiryInsertSchema } from '@/lib/schemas/inquiry'
 import { submitInquiry } from '@/server/submitInquiry'
-import { trackQualifyLead } from '@/lib/analytics'
+import { trackQualifyLead, trackFormStarted } from '@/lib/analytics'
 import { contactContent } from '@/content/contact'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
@@ -47,6 +47,14 @@ export function InquiryFormSection() {
   const navigate = useNavigate()
   const [submitError, setSubmitError] = useState<string | null>(null)
   const [showDetails, setShowDetails] = useState(false)
+  const formStartedFired = useRef(false)
+
+  function handleFormFocus() {
+    if (!formStartedFired.current) {
+      formStartedFired.current = true
+      trackFormStarted()
+    }
+  }
 
   const form = useForm({
     defaultValues: {
@@ -128,6 +136,7 @@ export function InquiryFormSection() {
                 value={field.state.value}
                 onChange={(e) => field.handleChange(e.target.value)}
                 onBlur={field.handleBlur}
+                onFocus={handleFormFocus}
               />
               {field.state.meta.isTouched && field.state.meta.errors.length > 0 && (
                 <p className="text-sm text-destructive mt-1">

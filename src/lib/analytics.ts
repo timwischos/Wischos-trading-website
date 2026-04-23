@@ -50,6 +50,11 @@ export function trackViewItem(params: {
   })
 }
 
+/** Fired when a user first focuses any field in the inquiry form */
+export function trackFormStarted() {
+  safeGtag('form_started')
+}
+
 /** Fired when a user submits a search query */
 export function trackViewSearchResults(params: { query: string }) {
   safeGtag('view_search_results', {
