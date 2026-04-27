@@ -89,36 +89,36 @@ export const giftSets: GiftSet[] = [
     id: 'wgs-002-3-the-mechanical-desk',
     sku: 'WGS-002-3',
     name: 'The Mechanical Desk',
-    tagline: 'Three reasons your brand stays in someone\'s hands.',
+    tagline: 'Two metals. Three objects. One desk worth noticing.',
     heroCopy:
-      'Not every corporate gift needs to be a tool. Some need to be picked up. The bolt-action click of a brass pen, the idle spin of a propeller blade, the weighted rotation of a solid brass top — three distinct mechanical interactions that turn dead air into brand contact. Each piece is machined from solid brass, laser-engraved with your mark, and built to be handled — by the recipient between calls, and by every colleague and client who reaches across the desk to try it.',
+      'Three precision-machined desk objects built around daily use. The bolt-action brass pen goes to every meeting. The propeller letter opener spins with a single finger — and handles every piece of correspondence that lands on the desk. The folding aluminium device stand holds a phone or tablet at eye level, stays open all day, and folds flat in a second. Two metals. Three mechanical interactions. Every object on this desk earning its place.',
     sellingPoints: [
       {
-        title: 'Built to Be Handled',
-        body: 'Most corporate gifts sit on a shelf or stay in a drawer. These don\'t. Each piece has a distinct mechanical interaction — click, spin, rotate — that invites touch without asking. A gift that gets picked up twelve times a day puts your brand in someone\'s hands more often than a pen ever will.',
+        title: 'Built to Be Used, Not Just Handled',
+        body: 'Each piece has a distinct mechanical interaction — bolt-action click, propeller spin, precision fold — and a daily function behind it. The pen writes. The letter opener opens. The stand holds the device that is checked between every call. A gift that earns its place on the desk through use puts your brand in contact more often than one that sits in a drawer.',
       },
       {
-        title: 'Solid Brass, Living Surface',
-        body: 'All three pieces are machined from solid brass. Over months of handling, each develops a unique patina — a surface that records use and improves with age. A gift that looks better after a year on someone\'s desk is a gift that never gets replaced.',
+        title: 'Brass and Aluminium — Two Precision Materials',
+        body: 'The pen and letter opener are solid brass — a material that develops a unique patina with handling and improves with age. The device stand is CNC-machined anodised aluminium, lighter and built for daily deployment. Two materials chosen for their specific roles, not for visual uniformity.',
       },
       {
-        title: 'The Desk That Starts Conversations',
-        body: 'When a visitor picks up a brass spinning top from a colleague\'s desk, the question follows naturally: where did you get this? That moment — your brand in their hands, the question asked — is worth more than a logo on a mug that never leaves the kitchen.',
+        title: 'The Stand That Changes What Gets Seen',
+        body: 'Most screens sit flat on a desk or lean against a wall. The aluminium stand raises a phone or tablet to eye level — where it gets used in meetings, glanced at between calls, and seen by every person who sits across the desk. Your laser-engraved brand mark stays visible every time the device goes up.',
       },
     ],
     components: [
       { sku: 'WP-101', name: 'Brass Crown Bolt-Action Pen', productId: 'wp-101-brass-crown-bolt-action-pen', imageIndex: 2 },
       { sku: 'WP-204', name: 'Propeller Spinning Letter Opener', productId: 'wp-204-propeller-spinning-letter-opener', imageIndex: 1 },
-      { sku: 'WP-206', name: 'Precision Brass Spinning Top', productId: 'wp-206-precision-brass-spinning-top', imageIndex: 3 },
+      { sku: 'WP-208', name: 'Precision Folding Aluminium Device Stand', productId: 'wp-208-precision-folding-aluminium-device-stand', imageIndex: 3 },
     ],
-    targetBuyer: 'Design studios, creative agencies, architecture firms, consulting companies, innovation teams, executive thank-you gifts',
+    targetBuyer: 'Design studios, creative agencies, technology companies, architecture firms, consulting companies, executive thank-you gifts',
     packaging: 'Corrugated Packaging Box + EVA Foam Insert',
-    cta: 'Three objects. Every conversation.',
+    cta: 'Two metals. Three objects. One desk worth noticing.',
     fob: '$28–42',
     expertNotes: [
       {
-        title: 'Why tactile objects outperform practical ones',
-        body: "Corporate gifting ROI comes down to one metric: how often does the recipient interact with your brand? A branded notebook gets opened once a day. A mug sits in a kitchen rotation. A brass spinning top gets picked up between every call, during every meeting pause, and by every visitor who spots it. The Mechanical Desk was designed around interaction frequency, not task utility — and that is a deliberate trade-off. For creative studios, consulting firms, and design teams, a set that invites handling outperforms a set that sits in a drawer being 'useful.'",
+        title: 'Daily use over novelty alone',
+        body: "The selection logic for this set shifted from pure tactile novelty to daily use. The propeller letter opener spins, but it also handles correspondence. The bolt-action pen clicks, but it also writes. The folding stand deploys in a second and holds the device that is checked between every call. A set that combines a mechanical interaction with a genuine function stays on the desk rather than moving to a shelf after the first week.",
       },
       {
         title: 'Why brass ages better than any finish',
@@ -134,7 +134,7 @@ export const giftSets: GiftSet[] = [
       },
       {
         title: 'Alternative: Wooden Box with Sliding Lid',
-        body: 'For clients targeting luxury positioning (executive VIP gifts, C-suite onboarding), a paulownia or walnut wood box with sliding lid adds $4–7/unit. The wood lid can be laser-engraved with the client\'s logo — turning the box itself into a desk object that stays on the surface long after the products have been taken out. A natural material exterior also creates a deliberate contrast with the machined brass inside.',
+        body: 'For clients targeting luxury positioning (executive VIP gifts, C-suite onboarding), a paulownia or walnut wood box with sliding lid adds $4–7/unit. The wood lid can be laser-engraved with the client\'s logo — turning the box itself into a desk object that stays on the surface long after the products have been taken out. A natural material exterior creates a deliberate contrast with the machined brass and aluminium inside.',
       },
     ],
     coverImage: '/products/WGS-002-3-The-Mechanical-Desk/The-Mechanical-Desk-cover.avif',
@@ -152,7 +152,7 @@ export const giftSets: GiftSet[] = [
     name: 'The Pocket Three',
     tagline: "Everything in your pocket. Nothing you don't need.",
     heroCopy:
-      "A lean EDC set for the professional who carries only what works. The brass key organizer eliminates key jangle; the stainless clip keeps cards and cash flat; the keychain nail clipper handles the small moments. Three tools, three pockets, zero bulk.",
+      "A lean EDC set for the professional who carries only what works. The brass key organizer eliminates key jangle — up to ten keys, silent. The stainless clip keeps cards and cash flat. The titanium comb weighs less than a pen, never bends, and carries a brand mark on every use. Three tools, two pockets, zero bulk.",
     sellingPoints: [
       {
         title: 'Pocket-Optimized Form Factor',
@@ -160,17 +160,17 @@ export const giftSets: GiftSet[] = [
       },
       {
         title: 'Three-Metal Material Story',
-        body: 'Brass organizer, stainless steel clip, zinc alloy clipper — a deliberate mix of precision metals that signals quality without demanding attention.',
+        body: 'Brass organizer, stainless steel clip, titanium comb — a deliberate mix of precision metals: brass for warm tactile carry, stainless for the flex and spring of a money clip, titanium for a daily tool that outlasts every plastic alternative.',
       },
       {
         title: 'Works for Any Recipient',
-        body: "Keys, cards, and a nail clipper are not gender-specific. Any professional who carries a bag or jacket pocket finds this set immediately useful — no sorting required when ordering for a mixed team.",
+        body: "Keys, cards, and a comb are not gender-specific — and none of them assume the recipient sits at a desk. Any professional who carries a bag or jacket pocket finds this set immediately useful from day one, with no sorting required when ordering for a mixed team.",
       },
     ],
     components: [
       { sku: 'WP-302', name: 'Industrial Brass Key Organizer', productId: 'wp-302-industrial-brass-key-organizer', imageIndex: 2 },
       { sku: 'WP-303', name: 'Industrial Stainless Steel Money Clip', productId: 'wp-303-industrial-stainless-steel-money-clip', imageIndex: 1 },
-      { sku: 'WP-306', name: 'Executive Zinc Alloy Nail Clipper', productId: 'wp-306-executive-zinc-alloy-nail-clipper', imageIndex: 3 },
+      { sku: 'WP-304', name: 'Titanium Anti-Static EDC Comb', productId: 'wp-304-titanium-anti-static-edc-comb', imageIndex: 3 },
     ],
     targetBuyer: 'HR teams, employee wellness kits, finance/banking sector, insurance brokers, retail client appreciation gifts',
     packaging: 'Corrugated Packaging Box + EVA Foam Insert',
@@ -179,11 +179,11 @@ export const giftSets: GiftSet[] = [
     expertNotes: [
       {
         title: 'Why three different metals',
-        body: 'The brass key organizer, stainless steel money clip, and zinc alloy nail clipper each use the material best suited to their function: brass for the warm tactile feel of a daily carry item, stainless for the flex and spring of a money clip, zinc alloy for the precise machining tolerance required in a clipper mechanism. The variation reads as considered, not inconsistent.',
+        body: 'The brass key organizer, stainless steel money clip, and titanium comb each use the material best suited to their function: brass for the warm tactile feel and durability of a daily carry hinge, stainless for the flex and spring of a money clip, titanium for a precision grooming tool that is lighter than steel, harder than aluminium, and completely corrosion-resistant. The variation reads as considered, not inconsistent.',
       },
       {
         title: 'No recipient sorting required',
-        body: "Most corporate gift sets quietly assume something about the recipient. The Pocket Three doesn't. Keys, cards, and a nail clipper are daily-carry items for any professional. When ordering for a team of mixed roles and backgrounds, this set goes in the box without adjustment.",
+        body: "Most corporate gift sets quietly assume something about the recipient. The Pocket Three doesn't. Keys, cards, and a comb are daily-carry items for any professional. When ordering for a team of mixed roles and backgrounds, this set goes in the box without adjustment.",
       },
       {
         title: 'Why Tin Box for EDC Sets?',
