@@ -12,8 +12,8 @@ import { getProductsByIds } from '@/server/getProducts'
 
 const FEATURED_PRODUCT_IDS = [
   'wp-402-pure-titanium-capsule-bottle-150ml',
-  'wp-207-carbon-fiber-magnetic-fidget-stick',
-  'wp-203-executive-zinc-alloy-letter-opener',
+  'wp-308-titanium-edc-carabiner',
+  'wp-405-ice-crystal-pure-titanium-egg-cup',
   'wp-102-executive-dual-head-metal-pen',
 ]
 
