@@ -390,6 +390,67 @@ export const giftSets: GiftSet[] = [
       '/products/WGS-006-3-The-First-Day/The-First-Day-detail-3.avif',
     ],
   },
+  {
+    id: 'wgs-007-3-the-thinking-desk',
+    sku: 'WGS-007-3',
+    name: 'The Thinking Desk',
+    tagline: 'Three objects for the desk that earns its keep.',
+    heroCopy:
+      'Three objects for the desk of someone who works with ideas. A brass rollerball that writes with weight and balance — the pen that doesn\'t need adjusting mid-sentence. A precision-machined kinetic brass spinning top that spins for minutes and gives the hand something to do while the mind is working. A double-wall stainless steel desk cup that holds a drink without heating the hand or leaving a ring on a document. Two pieces in brushed silver. One in warm brass. The one that moves is the hardest one to explain — and the last one to leave the desk.',
+    sellingPoints: [
+      {
+        title: 'Two Silver, One Brass — A Deliberate Accent',
+        body: 'The brushed silver pen and bare brushed steel cup read as a pair. The brass spinning top is the accent — warmer, heavier, more complex in light. Two materials, one clear logic: precision tools in silver, the tactile object in brass. The contrast reads as considered, not mixed.',
+      },
+      {
+        title: 'The Spinning Top as a Thinking Tool',
+        body: 'The brass spinning top is not a fidget toy — it is a desk object for the kind of distraction that produces ideas. A problem that isn\'t moving, a call about to be made, a decision still in progress: the top gives the hand something precise to do while the mind keeps going. It is the piece most recipients will show to someone.',
+      },
+      {
+        title: 'Three Functions, Zero Overlap',
+        body: 'The pen writes. The cup holds a drink. The top spins. None of the three does what the others do — and all three belong on the same desk. A set without redundancy is a set where every object earns its place every day.',
+      },
+    ],
+    components: [
+      { sku: 'WP-105', name: 'Artisan Brass Rollerball', productId: 'wp-105-artisan-brass-rollerball', imageIndex: 1 },
+      { sku: 'WP-206', name: 'Precision Kinetic Brass Spinning Top', productId: 'wp-206-precision-brass-spinning-top', imageIndex: 2 },
+      { sku: 'WP-407', name: 'Double-Wall Stainless Steel Desk Cup', productId: 'wp-407-double-wall-stainless-steel-desk-cup', imageIndex: 3 },
+    ],
+    targetBuyer: 'Employee recognition, year-end appreciation, client thank-you gifts — any professional with a desk they spend time at',
+    packaging: 'Magnetic Closure Box + EVA Foam Insert',
+    cta: 'Two in silver. One in brass. The one that moves.',
+    fob: '$32–42',
+    expertNotes: [
+      {
+        title: 'Magnetic closure box is the baseline at this tier',
+        body: 'A corrugated box suits lower-tier sets; this set calls for a magnetic closure box with matte or soft-touch lamination as the minimum. The opening itself is part of the gift experience — the pull of the magnets and the resistance of the lid panel give the recipient a moment of tactile quality before anything is removed.',
+      },
+      {
+        title: 'EVA insert engineering for three different profiles',
+        body: 'The three components have significantly different cross-sections: the cup (82mm diameter, 98mm tall) needs the largest footprint and should stand upright; the pen (140mm × 9mm) lies flat in a dedicated channel; the spinning top requires a circular recess in its own zone to prevent rotation and metal-on-metal contact during transit. EVA density of 38–45 kg/m³ is standard for this application.',
+      },
+      {
+        title: 'Box logo: deboss with foil for the right pairing',
+        body: 'On a matte laminated surface, foil stamping alone reads clearly; combining it with debossing — pressing the logo into the paper while adding metallic foil — creates a mark with both tactile depth and light-catching surface. Copper or gold foil pairs naturally with the brass spinning top inside, creating a material echo between box and contents.',
+      },
+      {
+        title: 'Product customisation: three different processes',
+        body: 'Each piece takes a different approach: the rollerball in brushed silver takes laser engraving, which removes the surface layer to expose the warm brass beneath — sharp two-tone contrast with no added colour; the desk cup barrel takes laser engraving on bare brushed steel; the spinning top takes laser engraving on the base face, logo visible when displayed upright without affecting the spinning surface. Specify the same logo across all three; mixing processes across pieces is not recommended.',
+      },
+      {
+        title: 'Upgrade option: wood-lid gift box',
+        body: 'For executive thank-you or VIP client occasions, a walnut or paulownia lid paired with a magnetic-base box is the natural upgrade. The lid face can be laser-engraved, creating a material contrast — metal inside, wood outside — that reads as deliberate. The lid itself has desk display value; the box is not immediately discarded after unboxing.',
+      },
+    ],
+    coverImage: '/products/WGS-007-3-The-Thinking-Desk/The-Thinking-Desk-cover.avif',
+    hoverImage: '/products/WGS-007-3-The-Thinking-Desk/The-Thinking-Desk-hover.avif',
+    images: [
+      '/products/WGS-007-3-The-Thinking-Desk/The-Thinking-Desk-cover.avif',
+      '/products/WGS-007-3-The-Thinking-Desk/The-Thinking-Desk-detail-1.avif',
+      '/products/WGS-007-3-The-Thinking-Desk/The-Thinking-Desk-detail-2.avif',
+      '/products/WGS-007-3-The-Thinking-Desk/The-Thinking-Desk-detail-3.avif',
+    ],
+  },
 ]
 
 export function getGiftSetById(id: string): GiftSet | undefined {
