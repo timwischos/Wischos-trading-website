@@ -29,18 +29,18 @@ async function main() {
     images: [
       `/products/${FOLDER}/${PREFIX}-cover.avif`,
       `/products/${FOLDER}/${PREFIX}-hover.avif`,
-      `/products/${FOLDER}/${PREFIX}-lifestyle.avif`,
       `/products/${FOLDER}/${PREFIX}-detail-1.avif`,
       `/products/${FOLDER}/${PREFIX}-detail-2.avif`,
       `/products/${FOLDER}/${PREFIX}-detail-4.avif`,
+      `/products/${FOLDER}/${PREFIX}-lifestyle.avif`,
     ],
     highlights: [
-      'Three configurations: desktop phone/tablet holder, laptop riser, folded carry mode',
-      'Ring-array magnets — MagSafe compatible, instant attachment, no adjustment needed',
-      'High-damping hinges hold set angle without drift or creep',
-      'Anodised aluminium, 150g — fits in jacket pocket or laptop bag side pocket',
-      'Silicone contact pads protect device surfaces and prevent desk slippage',
-      'Laser-engravable on base panel — logo stays visible on every desk it sits on',
+      'Three configurations: Desktop phone/tablet holder, laptop riser, and folded carry mode.',
+      'Ring-array magnets: MagSafe compatible with instant attachment and no adjustment needed.',
+      'High-damping hinges: Hold the set angle without drift or creep.',
+      'Anodised aluminium body: 150g total weight, fits in a jacket pocket or laptop bag side pocket.',
+      'Silicone contact pads: Protect device surfaces and prevent desk slippage.',
+      'Laser engraving area: Base panel, with logo visible on every desk it sits on.',
     ],
     customizationOptions: [
       'Laser engraving on base panel (logo or company name)',
@@ -77,7 +77,7 @@ async function main() {
         a: 'The stand is designed for laptops up to approximately 16 inches and under 2kg. It raises the screen 18–20cm above desk level. It is not recommended for gaming laptops or workstation-class machines.',
       },
     ],
-    expertNotes: [
+    sourcingNotes: [
       {
         title: 'Why this lands in WFH onboarding kits',
         body: 'A laptop stand is one of the few corporate gifts that gets used before the recipient has finished unpacking the box. For companies running remote or hybrid onboarding, shipping this alongside a badge holder or welcome letter puts a branded object on the home desk from day one — and it stays there. Unlike pens or notebooks that migrate to drawers, a stand is a fixed desk fixture with the logo facing outward every working day.',

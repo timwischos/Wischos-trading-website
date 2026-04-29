@@ -309,10 +309,10 @@ export function ProductDetailSection({ product, relatedProducts }: ProductDetail
             )}
 
             {/* Expert Notes — accordion */}
-            {product.expertNotes && product.expertNotes.length > 0 && (
-              <AccordionSection title="Expert Notes">
+            {product.sourcingNotes && product.sourcingNotes.length > 0 && (
+              <AccordionSection title="Sourcing Notes">
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
-                  {product.expertNotes.map((note, i) => (
+                  {product.sourcingNotes.map((note, i) => (
                     <div key={i}>
                       <p style={{ fontSize: '0.85rem', fontWeight: 600, color: '#1a1a1a', marginBottom: '0.4rem', lineHeight: 1.5 }}>
                         {note.title}

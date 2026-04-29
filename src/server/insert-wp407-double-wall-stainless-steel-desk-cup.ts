@@ -29,17 +29,17 @@ async function main() {
     images: [
       `/products/${FOLDER}/${PREFIX}-cover.avif`,
       `/products/${FOLDER}/${PREFIX}-hover.avif`,
-      `/products/${FOLDER}/${PREFIX}-lifestyle.avif`,
       `/products/${FOLDER}/${PREFIX}-detail-1.avif`,
       `/products/${FOLDER}/${PREFIX}-detail-2.avif`,
       `/products/${FOLDER}/${PREFIX}-detail-3.avif`,
+      `/products/${FOLDER}/${PREFIX}-lifestyle.avif`,
     ],
     highlights: [
-      '304 food-grade steel, not 201 — 304 contains 18% chromium and 8% nickel, giving higher corrosion resistance and food safety rating with no metallic taste over time.',
-      'Double-wall insulation — the outer surface stays close to room temperature; hot drinks won\'t burn the hand, cold drinks won\'t sweat onto the desk. No rings left on a desk or document.',
-      'No-handle cylinder — minimal desk footprint, clean visual form, efficient use of gift box space. No handle cutout required in packaging.',
-      'Three finishes: bare brushed steel, gold, rose gold — same construction across all, colour can be matched to a gift set palette or corporate brand.',
-      'Laser engraving on exterior barrel — bare brushed steel gives the sharpest contrast. Permanent mark, no fading or peeling.',
+      'Material grade: 304 food-grade steel, not 201. 304 contains 18% chromium and 8% nickel, giving higher corrosion resistance and food safety rating with no metallic taste over time.',
+      'Double-wall insulation: The outer surface stays close to room temperature; hot drinks won\'t burn the hand, cold drinks won\'t sweat onto the desk. No rings left on a desk or document.',
+      'No-handle cylinder: Minimal desk footprint, clean visual form, and efficient use of gift box space. No handle cutout required in packaging.',
+      'Three finishes: Bare brushed steel, gold, and rose gold. Same construction across all, and colour can be matched to a gift set palette or corporate brand.',
+      'Laser engraving area: Exterior barrel. Bare brushed steel gives the sharpest contrast; permanent mark with no fading or peeling.',
     ],
     customizationOptions: [
       'Laser engraving on exterior barrel',
@@ -79,7 +79,7 @@ async function main() {
         a: 'Standard production lead time is 25–35 working days from artwork approval, including customisation. For orders ahead of major holidays or for first-time sample runs, advise at inquiry and we will confirm the timeline.',
       },
     ],
-    expertNotes: [
+    sourcingNotes: [
       {
         title: 'A desk cup, not a travel mug',
         body: 'Travel mugs have lids, handles, and a shape that reads as "practical commuter item." A no-handle cylinder reads differently — it belongs on a desk alongside precision objects, not in a bag or a cupholder. The form signals that this cup was chosen for a specific context, which is part of what makes a curated gift set feel considered rather than assembled.',

@@ -354,11 +354,11 @@ async function main() {
   let ok = 0
   let fail = 0
 
-  for (const [id, expertNotes] of Object.entries(notes)) {
+  for (const [id, sourcingNotes] of Object.entries(notes)) {
     try {
       const result = await db
         .update(products)
-        .set({ expertNotes })
+        .set({ sourcingNotes })
         .where(eq(products.id, id))
 
       console.log(`✓ ${id}`)

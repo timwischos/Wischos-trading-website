@@ -32,7 +32,7 @@ export const products = pgTable('products', {
   specifications: jsonb('specifications').$type<Array<{ label: string; value: string }>>(),
   faqs: jsonb('faqs').$type<Array<{ q: string; a: string }>>(),
   sku: text('sku'),
-  expertNotes: jsonb('expert_notes').$type<Array<{ title: string; body: string }>>(),
+  sourcingNotes: jsonb('expert_notes').$type<Array<{ title: string; body: string }>>(),
   seoKeywords: text('seo_keywords').array(),
   sortOrder: integer('sort_order').notNull().default(0),
   active: boolean('active').notNull().default(true),

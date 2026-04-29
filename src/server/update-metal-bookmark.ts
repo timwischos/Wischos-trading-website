@@ -51,7 +51,7 @@ async function main() {
           a: 'Chemical etching recesses the logo into the metal surface, creating a tactile, engraved effect with high durability. Laser cutting physically cuts through or deeply scores the metal for sharp, precise outlines. Both methods are permanent — the choice depends on your design complexity and desired aesthetic.',
         },
       ],
-      expertNotes: [
+      sourcingNotes: [
         {
           title: 'The bookmark as a standing nameplate',
           body: 'A metal bookmark sitting in a closed book on a desk occupies real estate without requiring any. The engraved face is at eye level — visible to the person sitting at the desk and to anyone sitting across from them. A company value, a logo, a year, a single word: whatever is engraved there is present every working day, on every call, in every meeting that happens at that desk. No paper insert achieves this. No digital screen replaces it.',

@@ -29,10 +29,10 @@ async function main() {
     images: [
       `/products/${FOLDER}/${PREFIX}-cover.avif`,
       `/products/${FOLDER}/${PREFIX}-cover-hover.avif`,
-      `/products/${FOLDER}/${PREFIX}-lifestyle.avif`,
       `/products/${FOLDER}/${PREFIX}-detail-1.avif`,
       `/products/${FOLDER}/${PREFIX}-detail-2.avif`,
       `/products/${FOLDER}/${PREFIX}-detail-3.avif`,
+      `/products/${FOLDER}/${PREFIX}-lifestyle.avif`,
     ],
     highlights: [
       'Twist-cap with hard stops — reliable in a bag or a pocket: quarter-turn open/close, mechanical stop at both ends, no accidental deployment.',
@@ -84,7 +84,7 @@ async function main() {
         a: 'Standard production lead time is 25–35 working days from artwork approval, including customisation. For orders ahead of major holidays or for first-time sample runs, advise at inquiry and we will confirm the timeline.',
       },
     ],
-    expertNotes: [
+    sourcingNotes: [
       {
         title: 'Why brass over aluminium for a desk pen',
         body: 'Aluminium pens are light and cold to the touch — they work as utility items but don\'t carry much physical presence. Brass warms to body temperature slowly and holds weight at the grip. For a desk gift set where the pen is the most-used object, the material choice determines whether the pen stays on the desk or ends up in a drawer. Brass stays on the desk.',

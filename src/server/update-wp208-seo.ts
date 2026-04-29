@@ -22,7 +22,7 @@ async function main() {
     description:
       'A folding aluminium stand that switches between three configurations without tools or adjustment. Flat on a desk, it holds phones and tablets via a ring-magnet array compatible with MagSafe-enabled devices — place, attach, done. Folded upright, it raises a laptop screen by up to 20cm, reducing neck load during extended desk sessions. Collapsed to 182 × 60 × 18mm and 150g, it fits in a jacket pocket or laptop bag without adding meaningful weight. High-damping hinges hold any set angle without drift. The anodised body and silicone contact pads protect surfaces on both sides.\n\nFor corporate gifting, the three-mode design earns its place where a single-function phone stand cannot. The recipient uses it as a height-adjustable laptop riser during morning calls, switches to phone dock mode at the desk, and carries it flat in a bag between locations. A promotional stand that travels with its owner reaches more contexts — and delivers more daily brand exposure — than a desk-only fixture. The flat aluminium base panel accepts laser engraving permanently on the metal surface: logo facing outward every time the stand is deployed.',
 
-    expertNotes: [
+    sourcingNotes: [
       {
         title: 'Why this lands in WFH onboarding kits',
         body: 'A laptop stand is one of the few corporate gifts that gets used before the recipient has finished unpacking the box. For companies running remote or hybrid onboarding, shipping this alongside a badge holder or welcome letter puts a branded object on the home desk from day one — and it stays there. Unlike pens or notebooks that migrate to drawers, a stand is a fixed desk fixture with the logo facing outward every working day.',

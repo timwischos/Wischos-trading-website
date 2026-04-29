@@ -70,7 +70,7 @@ async function main() {
         a: 'Our standard minimum for this product is 100 pieces. For specific quantities outside this range, contact us and we will advise.',
       },
     ],
-    expertNotes: [
+    sourcingNotes: [
       {
         title: 'Why titanium over aluminum for a keychain',
         body: 'Aluminum carabiners are the default at this price bracket. Titanium costs more per kilo but carries differently — no anodized layer to chip, no surface that ages poorly, no weight penalty for the durability. A titanium keychain at year three looks like a titanium keychain. An anodized aluminum one often looks like a chipped version of what it was. For a branded gift, the five-year appearance of a product is part of the brand statement.',

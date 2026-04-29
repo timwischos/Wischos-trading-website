@@ -17,7 +17,7 @@ export interface GiftSet {
   packaging: string
   cta: string
   fob: string
-  expertNotes: { title: string; body: string }[]
+  sourcingNotes: { title: string; body: string }[]
   coverImage: string
   hoverImage?: string
   images: string[]
@@ -55,7 +55,7 @@ export const giftSets: GiftSet[] = [
     packaging: 'Magnetic Rigid Gift Box + Flocked EVA Insert',
     cta: 'Three aluminium tools for the desks that use them daily.',
     fob: '$18–28',
-    expertNotes: [
+    sourcingNotes: [
       {
         title: 'Why inkless works for gifting',
         body: "The inkless pen's value in a gift set is what it removes: no cartridges, no refills, no caps to manage. For buyers with sustainability criteria, it is a verifiable claim — no plastic consumables across the full product lifetime. The metal tip writes on standard paper surfaces without drying out between uses, which means the pen performs consistently whether it was last used yesterday or six months ago.",
@@ -116,7 +116,7 @@ export const giftSets: GiftSet[] = [
     packaging: 'Drawer Rigid Gift Box + Flocked EVA Insert',
     cta: 'Three mechanical desk tools, one clear brand mark.',
     fob: '$28–42',
-    expertNotes: [
+    sourcingNotes: [
       {
         title: 'Why the propeller opener belongs in the set',
         body: 'The propeller letter opener adds a mechanical action that is visible the moment it is picked up, but it is still tied to a practical desk task. In offices where contracts, envelopes, samples, and mailed documents still arrive physically, it fits a clear use case rather than acting as a novelty piece.',
@@ -177,7 +177,7 @@ export const giftSets: GiftSet[] = [
     packaging: 'Magnetic Rigid Gift Box + Flocked EVA Insert',
     cta: 'Three metal tools that go out with your team.',
     fob: '$22–32',
-    expertNotes: [
+    sourcingNotes: [
       {
         title: 'Why three metals in one set',
         body: 'Brass, stainless steel, and titanium each bring a different physical property to the set. Brass works well for a compact hinge-based key organizer. Stainless steel gives a money clip the spring it needs. Titanium keeps the comb light in pocket carry while staying rigid in use.',
@@ -238,7 +238,7 @@ export const giftSets: GiftSet[] = [
     packaging: 'Drawer Rigid Gift Box + Flocked EVA Insert',
     cta: 'Three compact tools for teams that work on site.',
     fob: '$28–38',
-    expertNotes: [
+    sourcingNotes: [
       {
         title: 'Why these three tools belong together',
         body: 'The selection logic is based on three common field functions: writing, prying, and cutting. Each tool covers a different type of task, which keeps overlap low and makes the set easier to issue across operational teams.',
@@ -299,7 +299,7 @@ export const giftSets: GiftSet[] = [
     packaging: 'Magnetic Rigid Gift Box + Flocked EVA Insert',
     cta: 'Three metal pieces for the way work moves through the day.',
     fob: '$38–50',
-    expertNotes: [
+    sourcingNotes: [
       {
         title: 'Why titanium fits this set',
         body: 'Pure titanium suits small carry objects where low weight and corrosion resistance matter. In this set, it keeps the bottle and carabiner light in use while maintaining a clean metal surface without coating layers.',
@@ -360,7 +360,7 @@ export const giftSets: GiftSet[] = [
     packaging: 'Rigid Lid Gift Box + Flocked EVA Insert',
     cta: 'Three metal tools for a stronger first day.',
     fob: '$25–38',
-    expertNotes: [
+    sourcingNotes: [
       {
         title: 'Why this set fits onboarding',
         body: 'This set is built around the first practical needs of a new employee: building access, desk setup, meetings, and a personal work surface. The three pieces map directly to those moments without relying on decorative items.',
@@ -421,7 +421,7 @@ export const giftSets: GiftSet[] = [
     packaging: 'Magnetic Rigid Gift Box + Flocked EVA Insert',
     cta: 'Three desk objects for the work that happens in one place.',
     fob: '$32–42',
-    expertNotes: [
+    sourcingNotes: [
       {
         title: 'Why the spinning top works in a desk set',
         body: 'A spinning top brings movement into a desk set without leaving the desktop category. Unlike a pocket tool or carry item, it stays on the surface and becomes part of the visual and tactile environment of the workspace.',

@@ -33,7 +33,7 @@ async function main() {
         '/products/WP-201-professional-aluminum-mouse-pad/professional-aluminum-mouse-pad-lifestyle.avif',
       ],
       heroImage: '/products/WP-201-professional-aluminum-mouse-pad/professional-aluminum-mouse-pad-cover.avif',
-      expertNotes: [
+      sourcingNotes: [
         {
           title: '5052 Aluminum: The Right Alloy for a Mouse Pad',
           body: "5052-H32 aluminum has excellent formability and corrosion resistance (superior to 6061 in marine environments). Its tensile strength of 228 MPa is more than sufficient for a mouse pad, while its 2.68 g/cm³ density keeps the 240×200mm pad at a manageable 320g. The magnesium content (2.2–2.8%) also provides natural antimicrobial properties — relevant for a surface that's touched thousands of times per day.",

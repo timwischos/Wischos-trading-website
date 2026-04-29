@@ -264,13 +264,13 @@ function GiftSetDetailPage() {
       </div>
 
       {/* Expert Notes */}
-      {set.expertNotes && set.expertNotes.length > 0 && (
+      {set.sourcingNotes && set.sourcingNotes.length > 0 && (
         <section style={{ borderTop: '1px solid var(--grid-color)', padding: '3rem 2rem' }}>
           <h2 style={{ fontSize: '0.65rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: '#767676', marginBottom: '1.5rem', fontWeight: 400, margin: '0 0 1.5rem' }}>
-            Expert Notes — Packaging & Customization
+            Sourcing Notes — Packaging & Customization
           </h2>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-            {set.expertNotes.map((note, i) => (
+            {set.sourcingNotes.map((note, i) => (
               <div key={i}>
                 <p style={{ fontSize: '0.9rem', fontWeight: 600, color: '#0a0a0a', marginBottom: '0.4rem', lineHeight: 1.4 }}>
                   {note.title}
