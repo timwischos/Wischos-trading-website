@@ -46,7 +46,7 @@ export const Route = createFileRoute('/{-$locale}/products/$productId')({
             '@type': 'Product',
             name: product.name,
             description: product.description,
-            sku: product.id,
+            sku: product.sku ?? product.id,
             image: product.images.slice(0, 3).map(
               (img: string) => cloudinaryUrl(img, { w: 800 })
             ),
