@@ -15,7 +15,7 @@ export const Route = createFileRoute('/{-$locale}/gift-sets/$setId')({
   head: ({ loaderData }) => {
     if (!loaderData?.set) return {}
     const { set } = loaderData
-    const title = `${set.name} | Wischos Gift Sets`
+    const title = `${set.name} — Custom Metal Corporate Gift Set`
     const description = set.heroCopy.slice(0, 155)
     return {
       meta: [
@@ -100,7 +100,7 @@ function GiftSetDetailPage() {
           <div style={{ aspectRatio: '1/1', overflow: 'hidden', background: '#f7f7f7', borderBottom: '1px solid var(--grid-color)' }}>
             <img
               src={cloudinaryUrl(galleryImages[activeImg], { w: 1200 })}
-              alt={`${set.name} — image ${activeImg + 1}`}
+              alt={set.imageAlts?.[activeImg] ?? `${set.name} — custom metal corporate gift set`}
               style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
             />
           </div>
@@ -266,9 +266,9 @@ function GiftSetDetailPage() {
       {/* Expert Notes */}
       {set.expertNotes && set.expertNotes.length > 0 && (
         <section style={{ borderTop: '1px solid var(--grid-color)', padding: '3rem 2rem' }}>
-          <p style={{ fontSize: '0.65rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: '#767676', marginBottom: '1.5rem' }}>
+          <h2 style={{ fontSize: '0.65rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: '#767676', marginBottom: '1.5rem', fontWeight: 400, margin: '0 0 1.5rem' }}>
             Expert Notes — Packaging & Customization
-          </p>
+          </h2>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
             {set.expertNotes.map((note, i) => (
               <div key={i}>
@@ -286,6 +286,9 @@ function GiftSetDetailPage() {
 
       {/* Selling Points */}
       <section style={{ borderTop: '1px solid var(--grid-color)' }}>
+        <h2 style={{ fontSize: '0.65rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: '#767676', fontWeight: 400, padding: '1.5rem 2rem 0', margin: 0 }}>
+          Why This Set
+        </h2>
         <div style={{ display: 'grid', borderLeft: '1px solid var(--grid-color)' }} className="grid-cols-1 md:grid-cols-3">
           {set.sellingPoints.map((sp, i) => (
             <div key={i} style={{ padding: '2.5rem 2rem', borderRight: '1px solid var(--grid-color)', borderBottom: '1px solid var(--grid-color)' }}>

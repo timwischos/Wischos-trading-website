@@ -21,6 +21,7 @@ export interface GiftSet {
   coverImage: string
   hoverImage?: string
   images: string[]
+  imageAlts?: string[]
 }
 
 export const giftSets: GiftSet[] = [
@@ -412,9 +413,9 @@ export const giftSets: GiftSet[] = [
       },
     ],
     components: [
-      { sku: 'WP-105', name: 'Artisan Brass Rollerball', productId: 'wp-105-artisan-brass-rollerball', imageIndex: 1 },
-      { sku: 'WP-206', name: 'Precision Kinetic Brass Spinning Top', productId: 'wp-206-precision-brass-spinning-top', imageIndex: 2 },
-      { sku: 'WP-407', name: 'Double-Wall Stainless Steel Desk Cup', productId: 'wp-407-double-wall-stainless-steel-desk-cup', imageIndex: 3 },
+      { sku: 'WP-105', name: 'Artisan Brass Rollerball', productId: 'wp-105-artisan-brass-rollerball', imageIndex: 3 },
+      { sku: 'WP-206', name: 'Precision Kinetic Brass Spinning Top', productId: 'wp-206-precision-brass-spinning-top', imageIndex: 1 },
+      { sku: 'WP-407', name: 'Double-Wall Stainless Steel Desk Cup', productId: 'wp-407-double-wall-stainless-steel-desk-cup', imageIndex: 2 },
     ],
     targetBuyer: 'Employee recognition, year-end appreciation, client thank-you gifts — any professional with a desk they spend time at',
     packaging: 'Magnetic Closure Box + EVA Foam Insert',
@@ -449,6 +450,13 @@ export const giftSets: GiftSet[] = [
       '/products/WGS-007-3-The-Thinking-Desk/The-Thinking-Desk-detail-1.avif',
       '/products/WGS-007-3-The-Thinking-Desk/The-Thinking-Desk-detail-2.avif',
       '/products/WGS-007-3-The-Thinking-Desk/The-Thinking-Desk-detail-3.avif',
+    ],
+    imageAlts: [
+      'Three-piece custom metal corporate desk gift set — brass spinning top, brushed silver rollerball pen and double-wall stainless steel cup presented in open magnetic closure gift box with black EVA foam insert',
+      'Close-up overhead view of three engraved metal desk gifts in black EVA foam — brass spinning top, brushed silver rollerball pen and stainless steel cup',
+      'Precision kinetic brass spinning top with knurled grip stem and laser-engraved logo — custom corporate desk gift',
+      'Double-wall brushed stainless steel desk cup 300ml with laser-engraved logo — custom corporate gift',
+      'Brushed silver rollerball pen with cylindrical barrel, capped, laser-engraved — custom corporate desk gift',
     ],
   },
 ]
