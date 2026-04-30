@@ -16,7 +16,7 @@ export const Route = createFileRoute('/{-$locale}/gift-sets/$setId')({
     if (!loaderData?.set) return {}
     const { set } = loaderData
     const title = `${set.name} — Custom Metal Corporate Gift Set`
-    const description = set.heroCopy.slice(0, 155)
+    const description = set.definition.slice(0, 155)
     return {
       meta: [
         { title },
@@ -37,12 +37,18 @@ export const Route = createFileRoute('/{-$locale}/gift-sets/$setId')({
             '@context': 'https://schema.org',
             '@type': 'Product',
             name: set.name,
-            description: set.heroCopy.slice(0, 200),
+            description: set.definition,
             sku: set.sku,
             image: set.coverImage
               ? [cloudinaryUrl(set.coverImage, { w: 800 })]
               : [],
             brand: { '@type': 'Brand', name: 'Wischos Gift' },
+            isRelatedTo: set.components.map((component) => ({
+              '@type': 'Product',
+              name: component.name,
+              sku: component.sku,
+              url: `https://wischosgift.com/products/${component.productId}`,
+            })),
           }),
         },
         {
@@ -190,12 +196,16 @@ function GiftSetDetailPage() {
           </div>
 
           {/* Hero Copy */}
+          <p style={{ fontSize: '0.9rem', color: '#333', lineHeight: 1.75, borderLeft: '2px solid var(--accent-brand)', paddingLeft: '0.875rem' }}>
+            {set.definition}
+          </p>
+
           <p style={{ fontSize: '0.875rem', color: '#444', lineHeight: 1.8 }}>
             {set.heroCopy}
           </p>
 
           {/* Customization note */}
-          <p style={{ fontSize: '0.78rem', color: '#767676', lineHeight: 1.7, borderLeft: '2px solid var(--accent-brand)', paddingLeft: '0.875rem' }}>
+          <p style={{ fontSize: '0.78rem', color: '#767676', lineHeight: 1.7 }}>
             Use this set as a starting point — products, materials, and packaging can all be adjusted to your brief.
           </p>
 
@@ -224,7 +234,7 @@ function GiftSetDetailPage() {
             <div>
               <p style={{ fontSize: '0.62rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: '#767676', marginBottom: '0.3rem' }}>Default Package</p>
               <p style={{ fontSize: '0.85rem', color: '#0a0a0a', marginBottom: '0.25rem' }}>{set.packaging}</p>
-              <p style={{ fontSize: '0.7rem', color: '#999', lineHeight: 1.5 }}>Packaging can be upgraded — tinplate tin box or rigid magnetic gift box available on request.</p>
+              <p style={{ fontSize: '0.7rem', color: '#999', lineHeight: 1.5 }}>Packaging upgrades vary by set and are detailed in the sourcing notes below.</p>
             </div>
             <div>
               <p style={{ fontSize: '0.62rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: '#767676', marginBottom: '0.3rem' }}>Lead Time</p>
@@ -287,7 +297,7 @@ function GiftSetDetailPage() {
       {/* Selling Points */}
       <section style={{ borderTop: '1px solid var(--grid-color)' }}>
         <h2 style={{ fontSize: '0.65rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: '#767676', fontWeight: 400, padding: '1.5rem 2rem 0', margin: 0 }}>
-          Why This Set
+          Set Details
         </h2>
         <div style={{ display: 'grid', borderLeft: '1px solid var(--grid-color)' }} className="grid-cols-1 md:grid-cols-3">
           {set.sellingPoints.map((sp, i) => (

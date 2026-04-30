@@ -34,6 +34,10 @@ export const products = pgTable('products', {
   sku: text('sku'),
   sourcingNotes: jsonb('expert_notes').$type<Array<{ title: string; body: string }>>(),
   seoKeywords: text('seo_keywords').array(),
+  quickAnswer: text('quick_answer'),
+  metaDescription: text('meta_description'),
+  comparisonTable: jsonb('comparison_table').$type<{ columns: [string, string, string]; rows: [string, string, string][] }>(),
+  keyInsight: text('key_insight'),
   sortOrder: integer('sort_order').notNull().default(0),
   active: boolean('active').notNull().default(true),
 })

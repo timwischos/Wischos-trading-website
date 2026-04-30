@@ -4,6 +4,10 @@ import { ProductDetailSection } from '@/components/sections/ProductDetailSection
 import { getProductById, getProducts } from '@/server/getProducts'
 import type { DbProduct } from '@/server/schema'
 import { siteMeta, buildOgMeta, buildCanonical } from '@/content/meta'
+import {
+  applyProductSeoGeoOverride,
+  type ProductWithSeoGeo,
+} from '@/content/productSeoGeoOverrides'
 import { cloudinaryUrl } from '@/lib/cloudinary'
 import { trackViewItem } from '@/lib/analytics'
 
@@ -17,22 +21,24 @@ export const Route = createFileRoute('/{-$locale}/products/$productId')({
       getProducts({ data: null }),
     ])
     if (!product) throw notFound()
+    const productWithSeoGeo = applyProductSeoGeoOverride(product)
     const related = allProducts
-      .filter(p => p.category === product.category && p.id !== product.id)
+      .filter(p => p.category === productWithSeoGeo.category && p.id !== productWithSeoGeo.id)
       .slice(0, 4)
-    return { product, related }
+    return { product: productWithSeoGeo, related }
   }) as any,
   head: ({ loaderData }) => {
     if (!loaderData?.product) return {}
     const { product } = loaderData
     const title = `${product.name} | Corporate Gift`
+    const description = product.metaDescription ?? product.tagline
     return {
       meta: [
         { title },
-        { name: 'description', content: product.tagline },
+        { name: 'description', content: description },
         ...buildOgMeta({
           title,
-          description: product.tagline,
+          description,
           image: product.heroImage || product.images[0],
           type: 'product',
           url: `/products/${product.id}`,
@@ -54,6 +60,15 @@ export const Route = createFileRoute('/{-$locale}/products/$productId')({
             category: product.category,
             brand: { '@type': 'Brand', name: siteMeta.siteName },
             manufacturer: { '@type': 'Organization', name: siteMeta.legalName },
+            ...(product.specifications?.length
+              ? {
+                  additionalProperty: product.specifications.map((spec: { label: string; value: string }) => ({
+                    '@type': 'PropertyValue',
+                    name: spec.label,
+                    value: spec.value,
+                  })),
+                }
+              : {}),
           }),
         },
         ...(product.faqs?.length
@@ -92,7 +107,7 @@ export const Route = createFileRoute('/{-$locale}/products/$productId')({
 })
 
 function ProductDetailPage() {
-  const { product, related } = Route.useLoaderData() as { product: DbProduct; related: DbProduct[] }
+  const { product, related } = Route.useLoaderData() as { product: ProductWithSeoGeo; related: DbProduct[] }
 
   useEffect(() => {
     trackViewItem({

@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { createFileRoute, Link, type LinkProps } from '@tanstack/react-router'
-import { giftSets, type GiftSet } from '@/content/giftSets'
+import { giftSetPageContent, giftSets, type GiftSet } from '@/content/giftSets'
 import { siteMeta, buildOgMeta, buildCanonical } from '@/content/meta'
 import { cloudinaryUrl } from '@/lib/cloudinary'
 
@@ -9,16 +9,48 @@ type RouterTo = LinkProps['to']
 export const Route = createFileRoute('/{-$locale}/gift-sets/')({
   head: () => ({
     meta: [
-      { title: 'Featured Gift Sets | Wischos Gift' },
-      { name: 'description', content: 'Curated premium metal gift sets for corporate buyers. Each set is fully custom-branded with your logo. Explore writing, desk, EDC and drinkware combinations.' },
+      { title: giftSetPageContent.metaTitle },
+      { name: 'description', content: giftSetPageContent.metaDescription },
       ...buildOgMeta({
-        title: 'Featured Gift Sets | Wischos Gift',
-        description: 'Curated premium metal gift sets for corporate buyers. Each set is fully custom-branded with your logo. Explore writing, desk, EDC and drinkware combinations.',
+        title: giftSetPageContent.metaTitle,
+        description: giftSetPageContent.metaDescription,
         image: siteMeta.defaultOgImage,
         url: '/gift-sets',
       }),
     ],
     links: [buildCanonical('/gift-sets')],
+    scripts: [
+      {
+        type: 'application/ld+json',
+        children: JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'ItemList',
+          name: 'Custom Metal Corporate Gift Sets',
+          description: giftSetPageContent.directAnswer,
+          itemListElement: giftSets.map((set, index) => ({
+            '@type': 'ListItem',
+            position: index + 1,
+            url: `https://wischosgift.com/gift-sets/${set.id}`,
+            name: `${set.sku} ${set.name}`,
+          })),
+        }),
+      },
+      {
+        type: 'application/ld+json',
+        children: JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: giftSetPageContent.faqs.map((faq) => ({
+            '@type': 'Question',
+            name: faq.question,
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: faq.answer,
+            },
+          })),
+        }),
+      },
+    ],
   }),
   component: FeaturedPage,
 })
@@ -107,13 +139,13 @@ function FeaturedPage() {
         <div style={{ display: 'grid' }} className="grid-cols-1 lg:grid-cols-2">
           <div style={{ padding: '4rem 2rem 3rem', borderBottom: '1px solid var(--grid-color)' }} className="lg:border-b-0 lg:border-r border-[var(--grid-color)]">
             <p style={{ fontSize: '0.75rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: '#767676', marginBottom: '1rem' }}>
-              Curated Collections
+              Custom Metal Corporate Gift Sets
             </p>
             <h1 className="display-title" style={{ fontSize: 'clamp(2rem, 3.5vw, 3.25rem)', fontWeight: 300, lineHeight: 1.05, color: '#0a0a0a', marginBottom: '1rem' }}>
               Featured Gift Sets
             </h1>
-            <p style={{ fontSize: '0.82rem', color: '#767676', lineHeight: 1.7, maxWidth: '36ch' }}>
-              Defined by utility and material substance. Custom branding and packaging included. Samples provided upon request.
+            <p style={{ fontSize: '0.78rem', color: '#666', lineHeight: 1.65, marginTop: '1rem', maxWidth: '40ch' }}>
+              Our pre-designed gift sets are starting points for building your own branded corporate gift set. Each set combines practical metal pieces with matched packaging, with room to adjust logo placement, finish, and box details to your brief.
             </p>
             <p style={{ fontSize: '0.76rem', color: '#666', lineHeight: 1.65, marginTop: '1.25rem', maxWidth: '40ch', borderLeft: '2px solid var(--accent-brand)', paddingLeft: '0.75rem' }}>
               Branding shown is illustrative. Every piece leaves the factory marked with your logo — engraved to your specification, not ours.
@@ -121,7 +153,7 @@ function FeaturedPage() {
           </div>
           <div style={{ padding: '4rem 2rem 3rem', display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: '1.5rem' }}>
             <p style={{ fontSize: '0.9rem', lineHeight: 1.8, color: '#444', maxWidth: '40ch' }}>
-              Six pre-designed sets combining our most-ordered metal pieces. Each set is fully custom-branded with your logo and packaging colour.
+              {giftSetPageContent.directAnswer}
             </p>
             <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
               <div>
@@ -130,7 +162,7 @@ function FeaturedPage() {
               </div>
               <div>
                 <p style={{ fontSize: '0.65rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: '#767676', marginBottom: '0.25rem' }}>Pricing</p>
-                <p style={{ fontSize: '0.9rem', fontWeight: 600, color: '#0a0a0a' }}>Price on request</p>
+                <p style={{ fontSize: '0.9rem', fontWeight: 600, color: '#0a0a0a' }}>Quoted by final set configuration</p>
               </div>
             </div>
           </div>
@@ -227,33 +259,57 @@ function FeaturedPage() {
               </p>
             </div>
           </div>
+        </div>
+      </section>
 
-          {/* CTA card */}
-          <div style={{ borderRight: '1px solid var(--grid-color)', borderBottom: '1px solid var(--grid-color)', background: '#0a0a0a', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '3rem 2rem', textAlign: 'center', gap: '1.25rem' }}>
-            <p style={{ fontSize: '0.75rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.5)' }}>
+      {/* Custom brief CTA */}
+      <section style={{ borderTop: '1px solid var(--grid-color)', borderBottom: '1px solid var(--grid-color)', background: '#0a0a0a' }}>
+        <div style={{ padding: '2.5rem 2rem', display: 'grid', alignItems: 'center', gap: '1.5rem' }} className="grid-cols-1 md:grid-cols-[1fr_auto]">
+          <div>
+            <p style={{ fontSize: '0.75rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.5)', marginBottom: '0.75rem' }}>
               Custom Brief
             </p>
-            <p className="display-title" style={{ fontSize: '1.5rem', fontWeight: 300, color: '#fff', lineHeight: 1.2 }}>
+            <p className="display-title" style={{ fontSize: 'clamp(1.4rem, 2vw, 1.9rem)', fontWeight: 300, color: '#fff', lineHeight: 1.2, marginBottom: '0.75rem' }}>
               Need a bespoke set?
             </p>
-            <p style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.65)', lineHeight: 1.7 }}>
+            <p style={{ fontSize: '0.82rem', color: 'rgba(255,255,255,0.65)', lineHeight: 1.7, maxWidth: '56ch' }}>
               Tell us your budget, headcount, and theme — we'll propose a set built around your brief.
             </p>
-            <Link
-              to={'/contact' as RouterTo}
-              style={{
-                marginTop: '0.5rem',
-                fontSize: '0.72rem', letterSpacing: '0.1em', textTransform: 'uppercase',
-                color: '#0a0a0a', background: '#fff',
-                padding: '0.75rem 2rem', textDecoration: 'none',
-                transition: 'opacity 150ms ease',
-              }}
-              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.opacity = '0.85' }}
-              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.opacity = '1' }}
-            >
-              Start a Brief
-            </Link>
           </div>
+          <Link
+            to={'/contact' as RouterTo}
+            style={{
+              fontSize: '0.72rem', letterSpacing: '0.1em', textTransform: 'uppercase',
+              color: '#0a0a0a', background: '#fff',
+              padding: '0.75rem 2rem', textDecoration: 'none',
+              transition: 'opacity 150ms ease', justifySelf: 'start',
+            }}
+            onMouseEnter={e => { (e.currentTarget as HTMLElement).style.opacity = '0.85' }}
+            onMouseLeave={e => { (e.currentTarget as HTMLElement).style.opacity = '1' }}
+          >
+            Start a Brief
+          </Link>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section style={{ borderTop: '1px solid var(--grid-color)' }}>
+        <div style={{ padding: '2rem', borderBottom: '1px solid var(--grid-color)' }}>
+          <h2 style={{ fontSize: '0.65rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: '#767676', fontWeight: 400, margin: 0 }}>
+            Gift Set FAQ
+          </h2>
+        </div>
+        <div style={{ display: 'grid', borderLeft: '1px solid var(--grid-color)' }} className="grid-cols-1 md:grid-cols-2">
+          {giftSetPageContent.faqs.map((faq) => (
+            <div key={faq.question} style={{ padding: '2rem', borderRight: '1px solid var(--grid-color)', borderBottom: '1px solid var(--grid-color)' }}>
+              <h3 style={{ fontSize: '0.92rem', color: '#0a0a0a', lineHeight: 1.35, fontWeight: 500, margin: '0 0 0.75rem' }}>
+                {faq.question}
+              </h3>
+              <p style={{ fontSize: '0.8rem', color: '#555', lineHeight: 1.7, margin: 0 }}>
+                {faq.answer}
+              </p>
+            </div>
+          ))}
         </div>
       </section>
 

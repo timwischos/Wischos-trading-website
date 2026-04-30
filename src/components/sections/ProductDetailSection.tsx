@@ -3,15 +3,16 @@ import { Dialog as DialogPrimitive } from 'radix-ui'
 import { Link, type LinkProps } from '@tanstack/react-router'
 import { X, ChevronLeft, ChevronRight } from 'lucide-react'
 import type { DbProduct } from '@/server/schema'
+import type { ProductWithSeoGeo } from '@/content/productSeoGeoOverrides'
 import { cloudinaryUrl } from '@/lib/cloudinary'
 
-type Product = DbProduct
+type Product = ProductWithSeoGeo
 
 type RouterTo = LinkProps['to']
 
 interface ProductDetailSectionProps {
   product: Product
-  relatedProducts?: Product[]
+  relatedProducts?: DbProduct[]
 }
 
 function AccordionSection({ title, children, defaultOpen = false }: { title: string; children: React.ReactNode; defaultOpen?: boolean }) {
@@ -263,16 +264,62 @@ export function ProductDetailSection({ product, relatedProducts }: ProductDetail
               <p style={{ fontSize: '0.75rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: '#6b6b6b', marginBottom: '0.75rem' }}>
                 About This Product
               </p>
+              {product.quickAnswer && (
+                <p style={{ fontSize: '0.9rem', lineHeight: 1.7, color: '#333', marginBottom: '1rem' }}>
+                  {product.quickAnswer}
+                </p>
+              )}
               {product.description.split('\n\n').map((para, i) => (
                 <p key={i} style={{ fontSize: '0.9rem', lineHeight: 1.7, color: '#333', marginBottom: i < product.description.split('\n\n').length - 1 ? '1rem' : 0 }}>
                   {para}
                 </p>
               ))}
+              {product.keyInsight && (
+                <div style={{ marginTop: '1.25rem', padding: '1rem', borderLeft: '2px solid var(--accent-brand)', background: '#fafafa' }}>
+                  <p style={{ fontSize: '0.68rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: '#6b6b6b', marginBottom: '0.5rem' }}>
+                    Key Insight
+                  </p>
+                  <p style={{ fontSize: '0.85rem', lineHeight: 1.65, color: '#333', margin: 0 }}>
+                    {product.keyInsight}
+                  </p>
+                </div>
+              )}
             </div>
+
+            {/* Comparison Table — accordion */}
+            {product.comparisonTable && (
+              <AccordionSection title="Comparison">
+                <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+                  <thead>
+                    <tr style={{ borderBottom: '1px solid #d9d9d9' }}>
+                      {product.comparisonTable.columns.map((column) => (
+                        <th
+                          key={column}
+                          style={{ padding: '0.5rem 0.75rem 0.5rem 0', fontSize: '0.75rem', letterSpacing: '0.06em', textTransform: 'uppercase', color: '#6b6b6b', textAlign: 'left', verticalAlign: 'bottom' }}
+                        >
+                          {column}
+                        </th>
+                      ))}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {product.comparisonTable.rows.map((row, i) => (
+                      <tr key={i} style={{ borderBottom: '1px solid #f0f0f0' }}>
+                        {row.map((cell, j) => (
+                          <td key={j} style={{ padding: '0.6rem 0.75rem 0.6rem 0', fontSize: '0.82rem', lineHeight: 1.55, color: j === 0 ? '#1a1a1a' : '#555', fontWeight: j === 0 ? 600 : 400, verticalAlign: 'top' }}>
+                            {cell}
+                          </td>
+                        ))}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </AccordionSection>
+            )}
 
             {/* Specifications — accordion */}
             {product.specifications && product.specifications.length > 0 && (
-              <AccordionSection title="Specifications">
+              <AccordionSection title="Specifications" defaultOpen>
                 <table style={{ width: '100%', borderCollapse: 'collapse' }}>
                   <tbody>
                     {product.specifications.map((spec, i) => (
