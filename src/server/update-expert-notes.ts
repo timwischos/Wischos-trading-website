@@ -292,7 +292,7 @@ const notes: Record<string, ExpertNote[]> = {
   'WP-402-pure-titanium-capsule-bottle-150ml': [
     {
       title: 'Pure Titanium vs Titanium Alloy',
-      body: 'This flask uses commercially pure titanium (Grade 1–2, >99% Ti) — not Ti-6Al-4V alloy. Pure titanium is softer (HRC 20 vs 36) but has superior corrosion resistance and zero aluminum content. For a drinking vessel, pure titanium is the correct choice: no aluminum leaching, no vanadium exposure, and the lower hardness actually allows better forming of the capsule profile.',
+      body: 'This bottle uses commercially pure titanium (Grade 1–2, >99% Ti) — not Ti-6Al-4V alloy. Pure titanium is softer (HRC 20 vs 36) but has superior corrosion resistance and zero aluminum content. For a drinking vessel, pure titanium is the correct choice: no aluminum leaching, no vanadium exposure, and the lower hardness actually allows better forming of the capsule profile.',
     },
     {
       title: 'Food-Grade PP Cap: Material Selection Logic',
@@ -300,7 +300,7 @@ const notes: Record<string, ExpertNote[]> = {
     },
     {
       title: '150ml: The "Double Espresso" Capacity',
-      body: 'The 150ml capacity is not arbitrary — it\'s calibrated to the standard double espresso (60ml) plus room for hot water dilution (Americano, long black). This positions the flask as a coffee ritual accessory rather than a general hydration container. For corporate gifting, this specificity creates a more compelling story than a generic "small bottle."',
+      body: 'The 150ml capacity is not arbitrary — it\'s calibrated to the standard double espresso (60ml) plus room for hot water dilution (Americano, long black). This positions the bottle as a coffee ritual accessory rather than a general hydration container. For corporate gifting, this specificity creates a more compelling story than a generic "small bottle."',
     },
   ],
 

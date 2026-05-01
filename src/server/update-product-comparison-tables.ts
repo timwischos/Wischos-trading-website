@@ -179,7 +179,7 @@ const tables: Record<string, ComparisonTable> = {
       ['Full-size scissors', 'Desk or supply room', 'Best when pocket carry is not required'],
     ],
   },
-  'wp-308-titanium-edc-carabiner': {
+  'wp-308-titanium-edc-keychain': {
     columns: ['Feature', 'Buyer value', 'Buyer note'],
     rows: [
       ['Titanium body', 'Light carry and material story', 'Higher material tier'],

@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { createFileRoute, notFound, Link, type LinkProps } from '@tanstack/react-router'
+import { createFileRoute, notFound, redirect, Link, type LinkProps } from '@tanstack/react-router'
 import { ProductDetailSection } from '@/components/sections/ProductDetailSection'
 import { getProductById, getProducts } from '@/server/getProducts'
 import type { DbProduct } from '@/server/schema'
@@ -13,9 +13,23 @@ import { trackViewItem } from '@/lib/analytics'
 
 type RouterTo = LinkProps['to']
 
+const PRODUCT_REDIRECTS: Record<string, string> = {
+  'wp-308-titanium-edc-carabiner': 'wp-308-titanium-edc-keychain',
+  'wp-402-pure-titanium-capsule-flask-150ml': 'wp-402-pure-titanium-capsule-bottle-150ml',
+  'wp-406-pure-titanium-capsule-flask-200ml': 'wp-406-pure-titanium-capsule-bottle-200ml',
+}
+
 export const Route = createFileRoute('/{-$locale}/products/$productId')({
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   loader: (async ({ params }: any) => {
+    const redirectProductId = PRODUCT_REDIRECTS[params.productId]
+    if (redirectProductId) {
+      throw redirect({
+        to: '/products/$productId',
+        params: { productId: redirectProductId },
+      })
+    }
+
     const [product, allProducts] = await Promise.all([
       getProductById({ data: params.productId }),
       getProducts({ data: null }),

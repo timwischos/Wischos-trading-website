@@ -182,7 +182,7 @@ function ExecutiveLandingPage() {
               Custom Executive Gift Sets in Titanium and Brass
             </h1>
             <p style={{ fontSize: '1.05rem', color: '#4a4a4a', lineHeight: 1.7, maxWidth: '55ch', marginBottom: '2rem' }}>
-              A gift that holds its own in any boardroom or briefcase. Pure titanium capsule bottle, titanium carabiner, and bolt-action brass pen — all three laser-engraved with your logo. The set for clients and executives who notice material quality.
+              A gift that holds its own in any boardroom or briefcase. Pure titanium capsule bottle, titanium keychain, and bolt-action brass pen — all three laser-engraved with your logo. The set for clients and executives who notice material quality.
             </p>
             <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap', marginBottom: '0.75rem' }}>
               {['Pure Titanium · No Coating', 'Laser Engraving Included', '25-35 Day Lead Time'].map((badge) => (
@@ -239,7 +239,7 @@ function ExecutiveLandingPage() {
           {[
             {
               label: 'Pure Titanium — Stated, Not Implied',
-              body: 'The bottle and carabiner are solid titanium — no inner lining, no coating, no metallic taste. The material difference is apparent the moment you pick them up. We state the spec clearly so your procurement brief can too.',
+              body: 'The bottle and keychain are solid titanium — no inner lining, no coating, no metallic taste. The material difference is apparent the moment you pick them up. We state the spec clearly so your procurement brief can too.',
             },
             {
               label: 'One Contact, Full Coverage',
@@ -281,7 +281,7 @@ function ExecutiveLandingPage() {
             The Morning Ritual Set — WGS-005
           </h2>
           <p style={{ fontSize: '0.9rem', color: '#4a4a4a', marginBottom: '1.25rem', lineHeight: 1.6 }}>
-            Brass bolt-action pen, pure titanium capsule bottle, and titanium carabiner with bottle opener. Two metals, three functions, one material story. All three laser-engraved with your logo and shipped in premium packaging.
+            Brass bolt-action pen, pure titanium capsule bottle, and titanium keychain with bottle opener. Two metals, three functions, one material story. All three laser-engraved with your logo and shipped in premium packaging.
           </p>
           <p style={{ fontSize: '0.78rem', color: '#888', marginBottom: '1.25rem', lineHeight: 1.6, fontStyle: 'italic' }}>
             Branding shown is illustrative. Every piece leaves the factory marked with your logo — engraved to your specification, not ours.
@@ -294,11 +294,11 @@ function ExecutiveLandingPage() {
             {[
               {
                 title: 'Two Titanium, One Brass',
-                body: 'Pure titanium for the bottle and carabiner — the material used in aerospace and medical instruments, applied to two daily carry objects. Solid brass for the pen, which develops a patina with handling. Two metals, one set, nothing that wears out.',
+                body: 'Pure titanium for the bottle and keychain — the material used in aerospace and medical instruments, applied to two daily carry objects. Solid brass for the pen, which develops a patina with handling. Two metals, one set, nothing that wears out.',
               },
               {
                 title: 'Every Piece Has a Second Function',
-                body: 'The bottle carries liquid. The carabiner clips to keys and opens bottles. The bolt-action pen writes and clicks. None of the three justifies itself with appearance alone — each earns its place with something it does.',
+                body: 'The bottle carries liquid. The keychain attaches to keys or a bag and opens bottles. The bolt-action pen writes and clicks. None of the three justifies itself with appearance alone — each earns its place with something it does.',
               },
               {
                 title: 'The Highest-Tier Set in the Lineup',

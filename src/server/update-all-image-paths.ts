@@ -40,8 +40,8 @@ const FOLDER_MAP: Record<string, string> = {
   'edc-folding-metal-scissors-01':                        'WP-307-edc-folding-metal-scissors',
   'minimalist-portable-stainless-steel-coffee-cup-01':    'WP-403-weighted-vacuum-insulated-office-tumbler',
   'stainless-steel-drink-cup-01':                         'WP-404-bamboo-groove-stainless-steel-mug',
-  'pure-titanium-capsule-flask-150ml':                    'WP-402-pure-titanium-capsule-flask-150ml',
-  'pure-titanium-capsule-flask-200ml':                    'WP-406-pure-titanium-capsule-flask-200ml',
+  'wp-402-pure-titanium-capsule-bottle-150ml':            'WP-402-pure-titanium-capsule-bottle-150ml',
+  'wp-406-pure-titanium-capsule-bottle-200ml':            'WP-406-pure-titanium-capsule-bottle-200ml',
   'ice-crystal-pure-titanium-egg-cup':                    'WP-405-ice-crystal-pure-titanium-egg-cup',
 }
 

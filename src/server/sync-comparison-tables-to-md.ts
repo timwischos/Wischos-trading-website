@@ -8,7 +8,7 @@ config({ path: '.env.local' })
 
 import postgres from 'postgres'
 
-const docPath = 'docs/单品文案调整/单品文案修改稿-seo+geo.md'
+const docPath = 'docs/产品文案相关/单品文案调整/单品文案修改稿-seo+geo.md'
 
 function escapeRegExp(value: string) {
   return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')

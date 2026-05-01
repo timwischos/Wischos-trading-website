@@ -374,12 +374,12 @@ export const giftSets: GiftSet[] = [
     sku: 'WGS-005-3',
     name: 'The Morning Ritual',
     tagline: "From the morning bag to the working desk.",
-    definition: "The Morning Ritual is a branded daily carry gift set for workdays that move from commute to desk to after-work use. It combines a titanium bottle, titanium carabiner, and brass bolt-action pen.",
-    heroCopy: "A branded daily carry gift set built around the movement from morning commute to desk work. The titanium capsule bottle carries water, tea, or coffee through the morning. The titanium carabiner clips to keys or a bag strap and includes a bottle opener. The solid brass bolt-action pen moves between desk and meeting use with a weighted click mechanism. Three metal objects for three different moments in the working day.",
+    definition: "The Morning Ritual is a branded daily carry gift set for workdays that move from commute to desk to after-work use. It combines a titanium bottle, titanium keychain, and brass bolt-action pen.",
+    heroCopy: "A branded daily carry gift set built around the movement from morning commute to desk work. The titanium capsule bottle carries water, tea, or coffee through the morning. The titanium keychain attaches to keys or a bag strap and includes a bottle opener. The solid brass bolt-action pen moves between desk and meeting use with a weighted click mechanism. Three metal objects for three different moments in the working day.",
     sellingPoints: [
       {
-        title: "Titanium Bottle and Carabiner",
-        body: "The bottle and carabiner use titanium for light carry and clean metal surfaces. One carries drinks through the day. The other clips to keys or bags and adds a bottle-opening function in the same piece.",
+        title: "Titanium Bottle and Keychain",
+        body: "The bottle and keychain use titanium for light carry and clean metal surfaces. One carries drinks through the day. The other attaches to keys or bags and adds a bottle-opening function in the same piece.",
       },
       {
         title: "Solid Brass Bolt-Action Pen",
@@ -387,13 +387,13 @@ export const giftSets: GiftSet[] = [
       },
       {
         title: "Three Use Contexts in One Set",
-        body: "The bottle covers the morning carry. The carabiner goes onto keys or a bag. The pen stays in reach on the desk. The set places your brand across commute, desk, and after-work use through the same working day.",
+        body: "The bottle covers the morning carry. The keychain goes onto keys or a bag. The pen stays in reach on the desk. The set places your brand across commute, desk, and after-work use through the same working day.",
       },
     ],
     components: [
       { sku: 'WP-101', name: 'Brass Crown Bolt-Action Pen', productId: 'wp-101-brass-crown-bolt-action-pen', imageIndex: 3 },
       { sku: 'WP-402', name: 'Pure Titanium Capsule Bottle (150ml)', productId: 'wp-402-pure-titanium-capsule-bottle-150ml', imageIndex: 2 },
-      { sku: 'WP-308', name: 'Titanium EDC Carabiner with Bottle Opener', productId: 'wp-308-titanium-edc-carabiner', imageIndex: 1 },
+      { sku: 'WP-308', name: 'Titanium EDC Keychain', productId: 'wp-308-titanium-edc-keychain', imageIndex: 1 },
     ],
     targetBuyer: 'Executive gifting, finance sector, premium client retention gifts, high-value HR onboarding programs',
     packaging: 'Magnetic Rigid Gift Box + Flocked EVA Insert',
@@ -402,7 +402,7 @@ export const giftSets: GiftSet[] = [
     sourcingNotes: [
       {
         title: "Titanium for carry: weight and corrosion properties",
-        body: "Titanium suits small carry objects where low weight and corrosion resistance matter. In this set, it keeps the bottle and carabiner light in use while maintaining a clean metal surface without coating layers.",
+        body: "Titanium suits small carry objects where low weight and corrosion resistance matter. In this set, it keeps the bottle and keychain light in use while maintaining a clean metal surface without coating layers.",
       },
       {
         title: "Material allocation: titanium for carry, brass for desk",

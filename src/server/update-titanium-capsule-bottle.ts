@@ -1,8 +1,8 @@
 /**
- * Run with: npx tsx src/server/update-titanium-capsule-flask.ts
- * Updates Pure Titanium Capsule Flask — 150ml (active) and 200ml (deactivated).
+ * Run with: npx tsx src/server/update-titanium-capsule-bottle.ts
+ * Updates Pure Titanium Capsule Bottle — 150ml and 200ml.
  * 150ml: adds shirt-pocket sizing + PP cap detail.
- * 200ml: sets active = false.
+ * 200ml: keeps the product active and uses bottle image paths.
  */
 import { config } from 'dotenv'
 config({ path: '.env.local' })
@@ -43,36 +43,36 @@ const sharedFaqs = [
   },
   {
     q: 'Does pure titanium affect the taste of coffee or tea?',
-    a: 'No. Pure titanium is chemically inert and non-reactive with acidic beverages, coffee, and tea. It leaves zero metallic taste or odor — a key advantage over standard stainless steel flasks, which can impart subtle metallic notes over time.',
+        a: 'No. Pure titanium is chemically inert and non-reactive with acidic beverages, coffee, and tea. It leaves zero metallic taste or odor — a key advantage over standard stainless steel bottles, which can impart subtle metallic notes over time.',
   },
 ]
 
 const sharedSeoKeywords = [
   // SEO — core product
-  'pure titanium flask',
-  'titanium capsule flask',
+  'pure titanium bottle',
+  'titanium capsule bottle',
   'mini titanium thermos',
-  'pure titanium vacuum flask',
+  'pure titanium vacuum bottle',
   // SEO — B2B / corporate
-  'corporate gift titanium flask bulk',
-  'custom logo titanium flask wholesale',
-  'branded titanium flask bulk order',
+  'corporate gift titanium bottle bulk',
+  'custom logo titanium bottle wholesale',
+  'branded titanium bottle bulk order',
   // Material / craft
-  'laser engraved titanium flask',
-  'titanium no metallic taste flask',
-  'food grade pure titanium flask',
+  'laser engraved titanium bottle',
+  'titanium no metallic taste bottle',
+  'food grade pure titanium bottle',
   // SIO — social intent
-  'EDC titanium capsule flask',
-  'shirt pocket titanium flask',
+  'EDC titanium capsule bottle',
+  'shirt pocket titanium bottle',
   'aesthetic titanium capsule carry',
   // GEO — AI natural language
-  'best pure titanium flask for office use',
-  'shirt pocket titanium capsule flask corporate gift',
-  'pure titanium flask zero metallic odor PP cap',
+  'best pure titanium bottle for office use',
+  'shirt pocket titanium capsule bottle corporate gift',
+  'pure titanium bottle zero metallic odor PP cap',
   // Long-tail
-  'pure titanium capsule flask bulk order',
-  'titanium vacuum flask no metallic taste corporate gift',
-  'mini titanium flask laser engraving wholesale',
+  'pure titanium capsule bottle bulk order',
+  'titanium vacuum bottle no metallic taste corporate gift',
+  'mini titanium bottle laser engraving wholesale',
 ]
 
 const sharedCustomizationOptions = [
@@ -82,21 +82,22 @@ const sharedCustomizationOptions = [
 
 async function main() {
   // ── 150ml — UPDATE ─────────────────────────────────────────────────────────
-  const BASE_150 = '/products/WP-402-pure-titanium-capsule-flask-150ml'
+  const BASE_150 = '/products/WP-402-pure-titanium-capsule-bottle-150ml'
   await db.update(products).set({
+    sku: 'WP-402',
     name: 'Pure Titanium Capsule Bottle',
     tagline: 'Pure Titanium | 150ml Shirt-Pocket Size | Double-Wall Vacuum | Food-Grade PP Cap | Zero Metallic Odor',
     category: 'Drinkware',
     materials: ['Pure Titanium', 'Food-Grade PP'],
-    heroImage: `${BASE_150}/pure-titanium-capsule-flask-150ml-cover.avif`,
+    heroImage: `${BASE_150}/pure-titanium-capsule-bottle-150ml-cover.avif`,
     images: [
-      `${BASE_150}/pure-titanium-capsule-flask-150ml-cover.avif`,
-      `${BASE_150}/pure-titanium-capsule-flask-150ml-hover.avif`,
-      `${BASE_150}/pure-titanium-capsule-flask-150ml-detail-1.avif`,
-      `${BASE_150}/pure-titanium-capsule-flask-150ml-detail-2.avif`,
-      `${BASE_150}/pure-titanium-capsule-flask-150ml-detail-3.avif`,
-      `${BASE_150}/pure-titanium-capsule-flask-150ml-detail-4.avif`,
-      `${BASE_150}/pure-titanium-capsule-flask-150ml-detail-5.avif`,
+      `${BASE_150}/pure-titanium-capsule-bottle-150ml-cover.avif`,
+      `${BASE_150}/pure-titanium-capsule-bottle-150ml-hover.avif`,
+      `${BASE_150}/pure-titanium-capsule-bottle-150ml-detail-1.avif`,
+      `${BASE_150}/pure-titanium-capsule-bottle-150ml-detail-2.avif`,
+      `${BASE_150}/pure-titanium-capsule-bottle-150ml-detail-3.avif`,
+      `${BASE_150}/pure-titanium-capsule-bottle-150ml-detail-4.avif`,
+      `${BASE_150}/pure-titanium-capsule-bottle-150ml-detail-5.avif`,
     ],
     moq: 50,
     customizationOptions: sharedCustomizationOptions,
@@ -113,20 +114,35 @@ async function main() {
     faqs: sharedFaqs,
     seoKeywords: [
       ...sharedSeoKeywords,
-      '150ml titanium flask',
-      '150ml pure titanium capsule flask',
-      'mini 150ml titanium vacuum flask shirt pocket',
+      '150ml titanium bottle',
+      '150ml pure titanium capsule bottle',
+      'mini 150ml titanium vacuum bottle shirt pocket',
     ],
     sortOrder: 240,
     active: true,
-  }).where(eq(products.id, 'WP-402-pure-titanium-capsule-bottle-150ml'))
+  }).where(eq(products.id, 'wp-402-pure-titanium-capsule-bottle-150ml'))
   console.log('✓ Pure Titanium Capsule Bottle 150ml updated.')
 
-  // ── 200ml — DEACTIVATE ──────────────────────────────────────────────────────
+  // ── 200ml — UPDATE ─────────────────────────────────────────────────────────
+  const BASE_200 = '/products/WP-406-pure-titanium-capsule-bottle-200ml'
   await db.update(products).set({
-    active: false,
-  }).where(eq(products.id, 'WP-406-pure-titanium-capsule-bottle-200ml'))
-  console.log('✓ Pure Titanium Capsule Bottle 200ml deactivated.')
+    sku: 'WP-406',
+    name: 'Pure Titanium Capsule Bottle',
+    heroImage: `${BASE_200}/pure-titanium-capsule-bottle-200ml-cover.avif`,
+    images: [
+      `${BASE_200}/pure-titanium-capsule-bottle-200ml-cover.avif`,
+      `${BASE_200}/pure-titanium-capsule-bottle-200ml-hover.avif`,
+      `${BASE_200}/pure-titanium-capsule-bottle-200ml-detail-1.avif`,
+      `${BASE_200}/pure-titanium-capsule-bottle-200ml-detail-2.avif`,
+      `${BASE_200}/pure-titanium-capsule-bottle-200ml-detail-3.avif`,
+      `${BASE_200}/pure-titanium-capsule-bottle-200ml-detail-4.avif`,
+      `${BASE_200}/pure-titanium-capsule-bottle-200ml-detail-5.avif`,
+      `${BASE_200}/pure-titanium-capsule-bottle-200ml-detail-6.avif`,
+      `${BASE_200}/pure-titanium-capsule-bottle-200ml-detail-7.avif`,
+    ],
+    active: true,
+  }).where(eq(products.id, 'wp-406-pure-titanium-capsule-bottle-200ml'))
+  console.log('✓ Pure Titanium Capsule Bottle 200ml updated.')
 
   await sql.end()
 }

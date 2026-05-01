@@ -1,11 +1,14 @@
 /**
- * Batch update product copy from docs/单品文案调整/单品文案修改稿-seo+geo.md.
+ * Batch update product copy from docs/产品文案相关/单品文案调整/单品文案修改稿-seo+geo.md.
  *
  * Dry run:
  *   npx tsx src/server/batch-update-product-copy-from-md.ts --dry-run
  *
  * Update existing products:
  *   npx tsx src/server/batch-update-product-copy-from-md.ts
+ *
+ * Update one SKU:
+ *   npx tsx src/server/batch-update-product-copy-from-md.ts --sku=WP-308
  */
 import { readFileSync } from 'node:fs'
 import { join } from 'node:path'
@@ -40,8 +43,9 @@ type ProductCopy = {
   seoKeywords: string[]
 }
 
-const docPath = join(process.cwd(), 'docs/单品文案调整/单品文案修改稿-seo+geo.md')
+const docPath = join(process.cwd(), 'docs/产品文案相关/单品文案调整/单品文案修改稿-seo+geo.md')
 const dryRun = process.argv.includes('--dry-run')
+const skuFilter = process.argv.find((arg) => arg.startsWith('--sku='))?.slice('--sku='.length).toUpperCase()
 
 function codeBlock(section: string, field: string): string {
   const pattern = new RegExp(`### ${field}\\s+\\\`\\\`\\\`text\\n([\\s\\S]*?)\\n\\\`\\\`\\\``, 'm')
@@ -193,7 +197,10 @@ async function main() {
 
   try {
     const markdown = readFileSync(docPath, 'utf8')
-    const parsedProducts = parseProducts(markdown)
+    const parsedProducts = parseProducts(markdown).filter((product) => !skuFilter || product.sku === skuFilter)
+    if (skuFilter && parsedProducts.length === 0) {
+      throw new Error(`No product copy found for ${skuFilter}`)
+    }
     const dbProducts = await db.select().from(products)
 
     let updated = 0

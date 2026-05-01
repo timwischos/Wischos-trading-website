@@ -30,15 +30,15 @@ const BATCHES = [
     ],
   },
   {
-    label: 'WP-308 Titanium EDC Carabiner',
-    folder: 'products/WP-308-Titanium-EDC-Carabiner',
+    label: 'WP-308 Titanium EDC Keychain',
+    folder: 'products/WP-308-Titanium-EDC-keychain',
     files: [
-      'Titanium-EDC-Carabiner-cover.avif',
-      'Titanium-EDC-Carabiner-hover.avif',
-      'Titanium-EDC-Carabiner-detail-1.avif',
-      'Titanium-EDC-Carabiner-detail-2.avif',
-      'Titanium-EDC-Carabiner-detail-3.avif',
-      'Titanium-EDC-Carabiner-lifestyle.avif',
+      'Titanium-EDC-keychain-cover.avif',
+      'Titanium-EDC-keychain-hover.avif',
+      'Titanium-EDC-keychain-detail-1.avif',
+      'Titanium-EDC-keychain-detail-2.avif',
+      'Titanium-EDC-keychain-detail-3.avif',
+      'Titanium-EDC-keychain-lifestyle.avif',
     ],
   },
 ]

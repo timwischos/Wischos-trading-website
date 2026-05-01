@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-Wischos Gift — 2025 Product Catalog Generator
+Wischos Gift — 2026 Product Catalog Generator
 Run with: python3 generate_catalog.py
-Output:   Wischos_Gift_Catalog_2025.pdf
+Output:   Wischos_Gift_Catalog_2026.pdf
 """
 
 import io
@@ -29,7 +29,7 @@ M    = 22 * mm   # page margin
 
 # ── Paths ─────────────────────────────────────────────────────────────────────
 PUBLIC = Path(__file__).parent / 'public' / 'products'
-OUT    = Path(__file__).parent / 'Wischos_Gift_Catalog_2025.pdf'
+OUT    = Path(__file__).parent / 'Wischos_Gift_Catalog_2026.pdf'
 
 # ── Image loader ──────────────────────────────────────────────────────────────
 def load_cover(folder: str, crop_square: bool = True) -> ImageReader | None:
@@ -94,7 +94,6 @@ def img_box(c, ir, x, y_bot, w, h):
 def footer(c):
     c.setFont('Helvetica', 6.5)
     c.setFillColor(MUTED)
-    c.drawString(M, M - 9, 'Wischos Gift Trading Co., Ltd  ·  Anhui, China')
     c.drawRightString(W - M, M - 9, 'wischosgift.com  ·  inquiries@wischosgift.com')
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -171,19 +170,19 @@ GIFT_SETS = [
     },
     {
         'sku': 'WGS-005-3', 'name': 'The Morning Ritual',
-        'tagline': 'The three you reach for before you leave.',
+        'tagline': 'Titanium and brass. Nothing else.',
         'fob': '$38–50', 'folder': 'WGS-005-3-The-Morning-Ritual',
         'cta': 'The set for the professional who packs intentionally.',
         'target': 'Executive gifting · Finance sector · Premium HR onboarding',
         'components': [
             ('WP-101', 'Brass Crown Bolt-Action Pen'),
-            ('WP-402', 'Pure Titanium Capsule Flask (150ml)'),
-            ('WP-304', 'Titanium Anti-Static EDC Comb'),
+            ('WP-402', 'Pure Titanium Capsule Bottle (150ml)'),
+            ('WP-308', 'Titanium EDC Carabiner with Bottle Opener'),
         ],
         'points': [
-            'Titanium + brass pairing — deliberate premium two-tone material story',
-            'Shirt-pocket complete — all three fit in a single jacket pocket',
-            'Zero disposables: no ink, no plastic, no consumables across the set',
+            'Pure titanium for bottle & carabiner, solid brass for the pen',
+            'Every piece has a second function: bottle carries liquid, carabiner opens bottles, pen writes',
+            'The highest-tier set in the lineup — solid titanium through, no coatings',
         ],
     },
     {
@@ -228,7 +227,7 @@ CATEGORIES = [
         'items': [
             {'sku': 'WP-201', 'name': 'Professional Aluminum Desk Mat',
              'tagline': 'Aircraft aluminum  |  Dual-sided surface',
-             'folder': 'WP-201-professional-aluminum-desk-mat'},
+             'folder': 'WP-201-professional-aluminum-mouse-pad'},
             {'sku': 'WP-202', 'name': 'Precision Aluminum Pen Holder',
              'tagline': 'CNC machined  |  Anodized  |  Weighted base',
              'folder': 'WP-202-precision-aluminum-pen-holder'},
@@ -273,6 +272,9 @@ CATEGORIES = [
             {'sku': 'WP-307', 'name': 'EDC Folding Metal Scissors',
              'tagline': 'Stainless steel  |  Compact fold  |  Pocket-safe',
              'folder': 'WP-307-edc-folding-metal-scissors'},
+            {'sku': 'WP-308', 'name': 'Titanium EDC Carabiner with Bottle Opener',
+             'tagline': 'Titanium frame  |  Brass core  |  Built-in bottle opener',
+             'folder': 'WP-308-Titanium-EDC-Carabiner'},
         ],
     },
     {
@@ -281,9 +283,12 @@ CATEGORIES = [
             {'sku': 'WP-401', 'name': 'Pure Titanium Vacuum Insulated Bottle',
              'tagline': 'Grade 1 titanium  |  500ml  |  90g  |  No liner, no taste',
              'folder': 'WP-401-pure-titanium-vacuum-insulated-bottle'},
-            {'sku': 'WP-402', 'name': 'Pure Titanium Capsule Flask',
+            {'sku': 'WP-402', 'name': 'Pure Titanium Capsule Bottle',
              'tagline': 'Pure titanium  |  150ml  |  Shirt-pocket size',
-             'folder': 'WP-402-pure-titanium-capsule-flask-150ml'},
+             'folder': 'WP-402-pure-titanium-capsule-bottle-150ml'},
+            {'sku': 'WP-406', 'name': 'Pure Titanium Capsule Bottle (200ml)',
+             'tagline': 'Pure titanium  |  200ml  |  Double wall insulated',
+             'folder': 'WP-406-pure-titanium-capsule-bottle-200ml'},
             {'sku': 'WP-403', 'name': 'Weighted Vacuum Insulated Office Tumbler',
              'tagline': '316 stainless  |  350ml  |  Anti-tip weighted base',
              'folder': 'WP-403-weighted-vacuum-insulated-office-tumbler'},
@@ -340,7 +345,7 @@ def page_cover(c):
     c.drawCentredString(W / 2, 54, 'wischosgift.com  ·  inquiries@wischosgift.com')
     c.setFont('Helvetica', 7)
     c.setFillColor(HexColor('#666666'))
-    c.drawCentredString(W / 2, 38, 'MOQ 100 Sets  ·  FOB China  ·  Lead Time 25–35 Days')
+    # Removed MOQ string
 
 
 def page_about(c):
@@ -798,11 +803,11 @@ def page_contact(c):
 
 def main():
     c = rl_canvas.Canvas(str(OUT), pagesize=A4)
-    c.setTitle('Wischos Gift — Product Catalog 2025')
+    c.setTitle('Wischos Gift — Product Catalog 2026')
     c.setAuthor('Wischos Gift Trading Co., Ltd')
-    c.setSubject('Custom Metal Corporate Gift Sets — 2025')
+    c.setSubject('Custom Metal Corporate Gift Sets — 2026')
 
-    print('Generating Wischos Gift Catalog 2025...')
+    print('Generating Wischos Gift Catalog 2026...')
 
     print('  [1] Cover')
     page_cover(c)

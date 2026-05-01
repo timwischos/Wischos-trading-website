@@ -33,11 +33,11 @@ const migrations: [string, string][] = [
   ['integrated-boxed-nail-clipper-01',                'WP-306-executive-zinc-alloy-nail-clipper'],
   ['edc-folding-metal-scissors-01',                   'WP-307-edc-folding-metal-scissors'],
   ['titanium-water-bottle-01',                        'WP-401-pure-titanium-vacuum-insulated-bottle'],
-  ['pure-titanium-capsule-flask-150ml',               'WP-402-pure-titanium-capsule-flask-150ml'],
+  ['pure-titanium-capsule-flask-150ml',               'wp-402-pure-titanium-capsule-bottle-150ml'],
   ['minimalist-portable-stainless-steel-coffee-cup-01', 'WP-403-weighted-vacuum-insulated-office-tumbler'],
   ['stainless-steel-drink-cup-01',                    'WP-404-bamboo-groove-stainless-steel-mug'],
   ['ice-crystal-pure-titanium-egg-cup',               'WP-405-ice-crystal-pure-titanium-egg-cup'],
-  ['pure-titanium-capsule-flask-200ml',               'WP-406-pure-titanium-capsule-flask-200ml'],
+  ['pure-titanium-capsule-flask-200ml',               'wp-406-pure-titanium-capsule-bottle-200ml'],
 ]
 
 async function main() {

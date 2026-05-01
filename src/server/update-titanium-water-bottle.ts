@@ -27,12 +27,20 @@ async function main() {
       description:
         'Move beyond fragile glass and low-grade plastic with a hydration tool engineered for the long haul. This vacuum bottle features a pure titanium interior, a material renowned for its exceptional corrosion resistance and health-neutral properties. Unlike standard stainless steel, the titanium liner ensures no metallic aftertaste and no staining from acidic beverages. It is a solid, reliable asset for professionals who prioritize health and functional durability in their daily routine.\n\nThe bottle\'s exterior is finished with a specialized sandblasted or crystal coating, providing a slip-resistant, industrial texture that withstands scratches and abrasion. Whether positioned on a modern executive desk or stored in a vehicle for transit, its substantial 600g build reflects a commitment to structural integrity. It is an ideal, sustainable replacement for office disposables, offering a professional aesthetic that aligns with high-performance corporate environments.',
       specifications: [
-        { label: 'Capacity Options', value: '500ml / 600ml / 750ml' },
-        { label: 'Net Weight', value: '600g' },
-        { label: 'Liner Material', value: 'Pure Titanium' },
-        { label: 'Shell Material', value: '316 Stainless Steel' },
-        { label: 'Handle', value: 'Integrated Carry Handle (carabiner-ready)' },
-        { label: 'Finish Options', value: 'Industrial Sandblasted / Structural Crystal' },
+        { label: 'Capacity Options',   value: '500ml / 600ml / 750ml' },
+        { label: 'Height (500ml)',     value: '190mm' },
+        { label: 'Height (600ml)',     value: '220mm' },
+        { label: 'Height (750ml)',     value: '255mm' },
+        { label: 'Body Diameter',      value: '70mm' },
+        { label: 'Lid Diameter',       value: '55mm' },
+        { label: 'Net Weight (500ml)', value: '~120g' },
+        { label: 'Net Weight (600ml)', value: '~132g' },
+        { label: 'Net Weight (750ml)', value: '~145g' },
+        { label: 'Liner Material',     value: 'Pure Titanium (no coating, no inner shell)' },
+        { label: 'Shell Material',     value: '316 Stainless Steel' },
+        { label: 'Insulation',         value: 'Double-wall vacuum' },
+        { label: 'Handle',             value: 'Integrated carry handle (carabiner-ready)' },
+        { label: 'Finish Options',     value: 'Industrial Sandblasted / Structural Crystal' },
       ],
       faqs: [
         {

@@ -1,6 +1,6 @@
 /**
  * Run with: npx tsx src/server/activate-wp406.ts
- * Activates WP-406 Pure Titanium Capsule Bottle 200ml.
+ * Activates WP-406 Pure Titanium Capsule Bottle.
  */
 import { config } from 'dotenv'
 config({ path: '.env.local' })

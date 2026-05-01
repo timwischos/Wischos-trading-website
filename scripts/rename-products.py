@@ -29,8 +29,8 @@ MAPPING = [
     ("Multi-Purpose-mini-Folding-Scissors-01",                    "edc-folding-metal-scissors"),
     ("Minimalist-portale-stainless-steel-coffee-cup-01",          "weighted-vacuum-insulated-office-tumbler"),
     ("Stainless-Steel-Drink-Cup-01",                              "bamboo-groove-stainless-steel-mug"),
-    ("150ml-Mini-Insulated-Titanium-Water-Bottle-01",             "pure-titanium-capsule-flask-150ml"),
-    ("200ml-Pure-Titanium-Insulated-Cup-01",                      "pure-titanium-capsule-flask-200ml"),
+    ("150ml-Mini-Insulated-Titanium-Water-Bottle-01",             "pure-titanium-capsule-bottle-150ml"),
+    ("200ml-Pure-Titanium-Insulated-Cup-01",                      "pure-titanium-capsule-bottle-200ml"),
     ("Titanium-Double-Layer-Insulated-Anti-Scalding-Water-Cup-01","ice-crystal-pure-titanium-egg-cup"),
 ]
 
