@@ -17,8 +17,8 @@ describe('about content', () => {
     expect(about.whyUs.points.length).toBeGreaterThanOrEqual(3)
   })
 
-  it('trust.registrationNumber contains PLACEHOLDER', () => {
-    expect(about.trust.registrationNumber).toContain('PLACEHOLDER')
+  it('trust.registrationNumber contains company name', () => {
+    expect(about.trust.registrationNumber).toContain('Anhui Wischos International Trading Co. Ltd')
   })
 
   it('trust.email contains wischosgift.com', () => {

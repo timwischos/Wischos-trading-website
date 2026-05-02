@@ -2,6 +2,7 @@ import { createFileRoute } from '@tanstack/react-router'
 import { siteMeta, buildOgMeta, buildCanonical } from '@/content/meta'
 import { AboutHeroSection } from '@/components/sections/AboutHeroSection'
 import { WhyUsSection } from '@/components/sections/WhyUsSection'
+import { ExpertiseSection } from '@/components/sections/ExpertiseSection'
 import { ProcessStepsSection } from '@/components/sections/ProcessStepsSection'
 import { CtaSection } from '@/components/sections/CtaSection'
 
@@ -27,14 +28,14 @@ function AboutPage() {
     <>
       <AboutHeroSection />
       <WhyUsSection />
-
+      <ExpertiseSection />
 
       <div style={{ background: '#0a0a0a', padding: '2.5rem 2rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '2rem', flexWrap: 'wrap', borderBottom: '1px solid var(--grid-color)' }}>
         <p className="display-title" style={{ fontSize: 'clamp(1.1rem, 2vw, 1.5rem)', fontWeight: 300, color: '#fff', lineHeight: 1.2 }}>
-          Metal communicates in a way that marketing copy cannot.
+          A custom gift set is only as strong as the sourcing behind it.
         </p>
         <p style={{ fontSize: '0.82rem', color: 'rgba(255,255,255,0.55)', lineHeight: 1.7, maxWidth: '42ch' }}>
-          The weight of a CNC-machined pen or the tactile resistance of a titanium tool creates an immediate, unspoken understanding of value. These are objects built to outlast the event that prompted the gift.
+          The visible gift is only the final layer. Before that come product selection, material checks, logo method decisions, sample review, packaging coordination, production timing, and export documentation. Wischos exists to manage those details so buyers receive a set that can be approved, produced, and delivered with fewer surprises.
         </p>
       </div>
 

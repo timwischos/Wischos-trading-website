@@ -1,45 +1,45 @@
 export const about = {
   hero: {
-    heading: 'Your Single Point of Contact for Custom Metal Corporate Gifts',
+    heading: 'Your China-Based Sourcing Partner for Custom Metal Gift Sets',
     subheading:
-      'Most corporate gift suppliers solve for availability, not integrity. Wischos is an outlier — we have built our entire operation around one category: Custom Metal Gift Sets. Mastering its complexities requires a narrow focus, and that focus is what lets us select the right factory for your brief. For buyers who cannot afford to spend weeks vetting suppliers across time zones, this is the difference.',
+      'Wischos Gift helps distributors, corporate buyers, and procurement teams turn a gift idea or product brief into a workable metal gift set. We coordinate product selection, factory matching, logo customization, packaging direction, sampling, production updates, and shipment follow-up through one accountable contact.',
   },
   expertise: {
     kicker: 'What You Stop Worrying About',
     heading: 'Three things off your plate when you work with us',
     markets: [
       {
-        region: 'Import & Compliance',
+        region: 'Product and Factory Matching',
         insight:
-          'You receive accurate customs documentation and materials sourced to international standards. Wherever you are importing to, shipments clear without delays — paperwork is handled for you.',
+          'We review the product type, material, finish, logo method, packaging requirements, and target quantity before selecting a suitable sourcing path. This keeps the project practical before samples or bulk production begin.',
       },
       {
-        region: 'Consistent Quality Across Runs',
+        region: 'Clear Communication Across the Project',
         insight:
-          'Every product ships with written QC specs and pre-shipment photos. Whether you reorder six months later or scale from 100 to 5,000 sets, quality and branding stay consistent.',
+          'We respond to qualified briefs within 1–2 business days and keep communication focused on what buyers need to approve: product direction, customization options, samples, production timing, and shipment status.',
       },
       {
-        region: 'Reliable Communication',
+        region: 'Quality Visible Before Shipment',
         insight:
-          'You always know where your order stands. One contact, clear timelines, and prompt replies regardless of time zone — no chasing updates.',
+          'Projects can include sample review, logo approval, production updates, packaging checks, and pre-shipment photos, so buyers have visibility before goods leave the factory.',
       },
     ],
   },
   whyUs: {
     kicker: 'Why Work With Us',
-    heading: 'One point of contact. One standard of execution.',
+    heading: 'A practical sourcing partner for custom gift set supply.',
     points: [
       {
-        title: 'One contact — and you always know how to reach them',
-        body: 'One professional handles your sourcing brief, factory coordination, branding, quality inspection, and shipping documentation. We are not trying to be everything to everyone. We are simply becoming the most reliable call for this one, specific job.',
+        title: 'One contact from brief to shipment',
+        body: 'You do not need to coordinate separate product suppliers, packaging vendors, logo processors, and shipping updates. One Wischos contact manages the brief, quotation path, sample details, production communication, and pre-shipment follow-up.',
       },
       {
-        title: 'A specialist trading company — by design',
-        body: 'A factory is limited to what its machines can do today; we select the right manufacturer from across six specialized regions in China based on the specific requirements of your brief. A precision-machined instrument requires a different set of hands than a heavy-duty EDC tool.',
+        title: 'Long-term factory partners, matched by category',
+        body: 'We work with long-term manufacturing partners across metal gift categories including writing instruments, desk accessories, EDC tools, drinkware, logo customization, and packaging. Instead of forcing every project through one factory, we match the brief to suitable production partners based on product type, material, finish, order quantity, and customization requirements.',
       },
       {
-        title: 'Quality visible before anything ships',
-        body: 'Every order includes in-process and pre-shipment photos against your approved sample. Customs documentation is prepared to international import standards. Nothing leaves the factory without your approval.',
+        title: 'Custom sets beyond the website catalog',
+        body: 'The sets shown on the website are starting points, not fixed limits. Buyers can adjust product combinations, materials, colors, logo methods, packaging, and private-label details according to quantity, budget, and production feasibility. If you have a product idea outside the catalog, we can review it as a sourcing brief.',
       },
     ],
   },
@@ -53,6 +53,6 @@ export const about = {
   },
   mission: {
     heading: 'The Company',
-    body: 'We are a trading company, not a captive factory. A factory is limited to what its machines can do today; we select the right manufacturer from across six specialized regions in China based on the specific requirements of your brief.',
+    body: 'We are a trading company, not a captive factory. That matters because custom gift sets rarely come from one production line. A brass pen, titanium tool, stainless steel drinkware item, aluminium desk accessory, and rigid gift box each require different manufacturing strengths. We work with long-term manufacturing partners across relevant gift categories and match each brief to the right production path based on material, finish, logo method, quantity, packaging, and timeline.',
   },
 } as const

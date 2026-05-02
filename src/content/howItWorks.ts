@@ -1,28 +1,28 @@
 export const howItWorks = {
   hero: {
-    heading: 'From Inquiry to Delivery',
-    subheading: 'A transparent, four-step process — no surprises, no hidden fees.',
+    heading: 'From Brief to Shipment',
+    subheading: 'A clear sourcing and production process for custom metal gift sets.',
   },
   steps: [
     {
       number: '01',
-      title: 'Submit Your Inquiry',
-      body: 'Tell us your product interest, estimated quantity, and target timeline. You will receive a clear programme outline and proposed next steps within 1–2 business days.',
+      title: 'Share Your Brief',
+      body: 'Send the target recipient, quantity, budget range, preferred products, logo needs, packaging direction, and delivery timeline. We review the brief and respond within 1–2 business days.',
     },
     {
       number: '02',
-      title: 'Review Samples',
-      body: 'You receive reference samples free of charge — freight collect. If your project requires custom samples with your logo or packaging, a sample fee applies, confirmed before we proceed. You review and approve before anything moves forward.',
+      title: 'Confirm the Sourcing Path',
+      body: 'We review suitable product and factory options, confirm what can be customized at the expected quantity, and prepare a quotation or sample direction for discussion.',
     },
     {
       number: '03',
-      title: 'Confirm and Deposit',
-      body: 'Once you approve the samples, you receive a proforma invoice for the bulk order. A deposit by T/T (bank transfer) locks in your production slot. You set the timeline — production starts when you are ready.',
+      title: 'Review Samples and Details',
+      body: 'Reference samples or custom samples can be arranged after the project direction is clear. Product feel, material claims, logo method, color, packaging, and set composition are reviewed before bulk production.',
     },
     {
       number: '04',
-      title: 'Production and Delivery',
-      body: 'You receive regular progress updates and pre-shipment quality photos for your sign-off. Final balance is settled prior to or against shipping documents, depending on the shipment method. Tracking details are sent to you as soon as goods are on their way.',
+      title: 'Produce and Ship',
+      body: 'After approval and deposit, we coordinate production updates, packaging checks, pre-shipment photos, and shipment follow-up.',
     },
   ],
   samplePolicy: {

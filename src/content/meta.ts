@@ -52,8 +52,8 @@ export const siteMeta = {
       description: 'Browse our full catalog of custom metal corporate gift sets — executive pen sets, desk accessories, EDC tools and drinkware. Laser engraving and full packaging customization available.',
     },
     about: {
-      title: 'About Wischos Gift — Corporate Gift Specialists',
-      description: 'Wischos Gift is a trading company specialising in quality custom metal gift sets for corporate buyers worldwide.',
+      title: 'About Wischos Gift — Custom Metal Gift Set Sourcing',
+      description: 'Wischos Gift is a China-based sourcing partner for custom metal gift sets, coordinating product selection, factory matching, logo customization, packaging, samples, and production updates.',
     },
     contact: {
       title: 'Contact Wischos Gift',
