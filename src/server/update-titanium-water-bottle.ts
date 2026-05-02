@@ -58,7 +58,7 @@ async function main() {
         },
         {
           q: 'Is this an executive desk bottle or an outdoor bottle?',
-          a: 'It is better positioned as outdoor-ready premium drinkware rather than a boardroom desk item. The handle, finish, and lifestyle imagery make it strongest for travel, field, wellness, and active workday programs.',
+          a: 'It fits outdoor-ready and active-workday programs. The integrated handle, bottle silhouette, and finish suit travel, field, wellness, and daily carry use.',
         },
       ],
       seoKeywords: [
@@ -91,11 +91,11 @@ async function main() {
       sourcingNotes: [
         {
           title: 'Outdoor-ready positioning',
-          body: 'The carry handle, bottle silhouette, and lifestyle imagery point toward travel, field, wellness, and outdoor use. Positioning it as an executive boardroom item would fight the product signals.',
+          body: 'The carry handle, bottle silhouette, and finish suit travel, field, wellness, and outdoor use. It works best when recipients are expected to carry the bottle through the day.',
         },
         {
           title: 'Titanium liner as the material story',
-          body: 'The liner is the surface that touches the drink. Using titanium there gives the material story a functional role rather than making titanium only a decorative claim.',
+          body: 'The liner is the surface that touches the drink. Using titanium there gives the material story a functional role for water, tea, and coffee without relying on an inner coating.',
         },
         {
           title: 'Best-fit gift programs',

@@ -177,8 +177,8 @@ async function main() {
       { q: 'Is the glass breaker a safety certification?', a: 'It should be described as a tungsten-carbide glass breaker function. Buyers should verify requirements if the project has compliance or certification needs.' },
     ],
     sourcingNotes: [
-      { title: 'Hand weight and field carry expectation', body: 'At this weight class, the pen feels different from a standard office pen. That is useful for field carry, but the copy should make the hand weight clear so buyers understand the product category.' },
-      { title: 'Glass breaker function and claim control', body: 'The glass breaker is a recognizable utility feature. Certification language should only be used when certification is provided.' },
+      { title: 'Hand weight and field carry expectation', body: 'At approx. 102.8g, the pen has a heavier hand feel than standard office pens. That weight suits field carry, vehicle-adjacent teams, and utility gift sets where the product is expected to feel substantial in hand.' },
+      { title: 'Glass breaker function and certification checks', body: 'The glass breaker is a recognizable utility feature. If a project requires certified safety performance, the selected sample and documentation should be reviewed before production.' },
       { title: 'Where this product fits', body: 'This pen belongs in field and utility gift sets where writing and emergency-oriented functions make sense together.' },
     ],
     comparisonTable: {
@@ -239,7 +239,7 @@ async function main() {
     ],
     sourcingNotes: [
       { title: 'Onboarding use for desk setup tasks', body: 'New desks often need quick setup tasks: measuring, adjusting, marking, and note-taking. A tool pen connects those small tasks in one object.' },
-      { title: 'Compact tool function boundaries', body: 'The functions are compact. They are useful for quick adjustments, not heavy repair work, so the copy should stay within that use case.' },
+      { title: 'Compact tool function boundaries', body: 'The functions are compact and intended for quick adjustments, measuring, marking, and desk setup tasks. Full-size repair work still belongs to dedicated tools.' },
       { title: 'Pairing with badge holders and pen holders', body: 'Together, these objects cover access, setup, writing, and desk organization, which fits a first-week employee kit.' },
     ],
     comparisonTable: {
