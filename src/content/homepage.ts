@@ -1,68 +1,68 @@
 export const homepage = {
   hero: {
-    kicker: 'Custom Metal Corporate Gift Sets',
-    headline: 'Custom Metal Gift Sets — Sourced, Branded & Delivered',
+    kicker: 'B2B Metal Gift Sourcing & Set Development',
+    headline: 'Metal gift sets built for distributors, agencies, and corporate buyers.',
     subheadline:
-      'Custom engraved corporate gift sets — from sourcing to delivery, one inquiry.',
+      'Curated products, verified material claims, logo-ready customization, and managed China sourcing in one accountable process.',
     cta: 'Send an Inquiry',
   },
   valueProps: {
     kicker: 'Why Wischos Gift',
-    heading: 'What corporate buyers get when they work with us',
+    heading: 'Where a specialist trading partner adds value',
     items: [
       {
-        title: 'Real Metal, Real Quality',
+        title: 'Set Strategy, Not Loose Items',
         description:
-          'Aluminium, brass, stainless steel, and titanium — machined to spec and quality-checked before shipment. No plastic with a metallic finish.',
+          'We combine products by use case, material feel, logo placement, and packaging logic so a gift set is easier for your sales team to explain.',
         icon: 'Gem',
       },
       {
-        title: 'Custom Branding Included',
+        title: 'Claims Kept Accurate',
         description:
-          'Your logo, your finish, your packaging. Laser engraving, anodised colours, and box design are standard — not add-ons.',
+          'Material, coating, capacity, and customization claims are checked before they become buyer-facing copy or sample instructions.',
         icon: 'Package',
       },
       {
-        title: 'Flexible Volumes, Reliable Lead Times',
+        title: 'One Managed Supply Chain',
         description:
-          'No factory-scale commitments — tell us your quantity and we\'ll confirm what\'s possible. Sample and production lead times confirmed per project during the inquiry stage.',
+          'We coordinate sourcing, samples, logo methods, packaging decisions, production updates, and shipment follow-up through one contact.',
         icon: 'CheckCircle',
       },
     ],
   },
   differentiators: {
-    kicker: 'Why Us',
-    heading: 'A single accountable source for branded metal gifts.',
+    kicker: 'Why Work With Wischos',
+    heading: 'A trading partner built around sellable metal gift programs.',
     intro:
-      'Corporate gift programmes involve coordinating product specification, customisation, compliance, and logistics. We consolidate this into one managed engagement — direct accountability and consistent communication from inquiry to delivery.',
+      'For distributors and corporate buyers, the challenge is not only finding products. It is turning the right products into a reliable offer with clear specifications, controlled claims, workable customization, and delivery updates your client can trust.',
     items: [
       {
-        claim: 'Dedicated programme management',
+        claim: 'Curated sets with a clear buyer use case',
         detail:
-          'Every order is managed through a consistent, direct relationship — from specification to delivery. Clear accountability at every stage.',
+          'Each set is arranged around a practical business context such as onboarding, desk work, field teams, executive gifting, or wellness programs. The result is easier to position than a random mix of promotional items.',
       },
       {
-        claim: 'Specialist manufacturing partners',
+        claim: 'Factory matching by product category',
         detail:
-          'Products are sourced from specialist factories across China\'s established manufacturing regions — Dongguan, Zhongshan, Shenzhen, Yiwu, Wenzhou — selected by product category and production capability. CNC-precision metalwork, consistent lead times.',
+          'We match brass, titanium, aluminium, stainless steel, drinkware, tools, and packaging requirements to suitable production partners instead of forcing every project through one generic supplier.',
       },
       {
-        claim: 'Proactive project updates',
+        claim: 'Sales-ready product information',
         detail:
-          'From sampling through production to shipment, you receive regular updates at each stage — packaging approvals, production progress, and shipping confirmation. No chasing required.',
+          'Product pages are written with buyer questions in mind: material, daily use, logo method, set role, packaging logic, and comparison points. This helps your team respond faster and with fewer vague claims.',
       },
       {
-        claim: 'Precision metal, verified materials',
+        claim: 'Managed production communication',
         detail:
-          'Every product is precision-machined from brass, titanium, aluminium, or stainless steel. The weight and finish are genuine because the material is.',
+          'From sample review through logo approval, production progress, inspection photos, and shipment confirmation, you work through one accountable contact instead of chasing separate vendors.',
       },
     ],
   },
   selectionStandard: {
     kicker: 'The Selection Standard',
-    heading: 'U.I.S. — How every product earns its place.',
+    heading: 'U.I.S.C. — How every product earns its place.',
     intro:
-      'We don\'t carry everything. Every product in this catalog is evaluated against three core principles before it\'s offered as a branded gift — plus one rule that applies specifically to how pieces are combined into sets.',
+      'We do not try to list every available gift item. Products are selected for repeat use, tactile interest, material substance, and their ability to work coherently inside a branded set.',
     items: [
       {
         label: 'U',
@@ -94,9 +94,9 @@ export const homepage = {
     kicker: 'At a Glance',
     heading: 'What to expect',
     stats: [
-      { value: '24 products', label: 'across 6 gift sets' },
+      { value: '29 products', label: 'across 7 gift set concepts' },
       { value: '25–35 days', label: 'Production lead time' },
-      { value: 'Full custom', label: 'Logo, finish, packaging' },
+      { value: 'Logo-ready', label: 'Engraving, printing, packaging' },
       { value: 'One contact', label: 'Inquiry to delivery' },
     ],
   },
@@ -120,8 +120,8 @@ export const homepage = {
     ],
   },
   cta: {
-    heading: "Let's discuss your project",
-    body: "Tell us what you need — products, quantities, branding, timeline. We'll come back with a tailored proposal and sample plan.",
+    heading: "Let's build a gift program your client can approve",
+    body: "Tell us the recipient profile, quantity, target budget, branding needs, and delivery timeline. We'll recommend a set direction, sample path, and production plan.",
     buttonLabel: 'Send an Inquiry',
   },
 } as const

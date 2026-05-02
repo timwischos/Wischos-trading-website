@@ -6,20 +6,20 @@ type RouterTo = LinkProps['to']
 const steps = [
   {
     number: '01',
-    title: 'Submit Your Inquiry',
-    body: 'Start with one of our curated sets as a reference, or brief us directly on what you need. Either way, we respond with a programme outline within 1–2 business days.',
+    title: 'Share the Buyer Brief',
+    body: 'Start with a set reference or send the recipient profile, quantity, budget range, logo needs, and deadline. We respond with a recommended direction within 1–2 business days.',
     time: '1–2 days',
   },
   {
     number: '02',
-    title: 'Sample & Approve',
-    body: 'Reference samples free of charge — you cover shipping. Custom samples with your logo available before any bulk commitment.',
+    title: 'Review Samples and Claims',
+    body: 'Confirm product feel, material claims, logo method, packaging direction, and any client-facing details before committing to bulk production.',
     time: '~15 days',
   },
   {
     number: '03',
-    title: 'Production & Delivery',
-    body: 'Bulk production begins on deposit receipt. Regular progress updates and pre-shipment quality photos included as standard.',
+    title: 'Produce, Check, and Ship',
+    body: 'Bulk production begins after approval and deposit. Progress updates, packaging checks, pre-shipment photos, and shipping confirmation are included as standard.',
     time: 'normally 25–35 days',
   },
 ]
@@ -38,7 +38,7 @@ export function ProcessPreviewSection() {
           className="display-title"
           style={{ fontSize: 'clamp(1.75rem, 3vw, 2.75rem)', fontWeight: 300, lineHeight: 1.1 }}
         >
-          From inquiry to delivery — clear steps, confirmed timelines.
+          From buyer brief to shipment — clear steps, controlled claims.
         </h2>
       </div>
 
@@ -89,7 +89,7 @@ export function ProcessPreviewSection() {
         display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '0.75rem',
       }}>
         <p style={{ fontSize: '0.78rem', color: '#888' }}>
-          Samples available before any bulk order commitment.
+          Samples and logo details are reviewed before bulk order commitment.
         </p>
         <Link
           to={'/about' as RouterTo}

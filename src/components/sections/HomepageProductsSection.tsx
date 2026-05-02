@@ -75,13 +75,13 @@ export function HomepageProductsSection() {
       <div style={{ padding: '5rem 1.5rem', borderBottom: b, display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', gap: '1rem', flexWrap: 'wrap' }}>
         <div>
           <p style={{ fontSize: '0.75rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: '#767676', marginBottom: '0.75rem' }}>
-            Featured Sets
+            Set Programs
           </p>
           <h2 className="display-title" style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)', fontWeight: 300, lineHeight: 1.05 }}>
-            Curated Gift Sets
+            Curated sets with a reason to exist
           </h2>
           <p style={{ fontSize: '0.76rem', color: '#666', lineHeight: 1.65, marginTop: '0.75rem', maxWidth: '52ch', borderLeft: '2px solid var(--accent-brand)', paddingLeft: '0.75rem' }}>
-            Branding shown is illustrative. Every piece leaves the factory marked with your logo — engraved to your specification, not ours.
+            Each set is built around a buyer scenario, shared material logic, and logo-ready surfaces, so distributors can present a complete program instead of a loose product list.
           </p>
         </div>
         <Link

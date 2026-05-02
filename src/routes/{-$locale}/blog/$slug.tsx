@@ -1013,7 +1013,8 @@ function ArticlePage() {
           Browse the Catalogue or Send a Brief
         </h2>
         <p style={{ fontSize: '1rem', color: '#aaa', maxWidth: '32rem', margin: '0 auto 2rem', lineHeight: 1.65 }}>
-          24 products across 4 categories. MOQ 100 units. Custom branding and packaging available.
+          Curated metal products and gift set concepts for B2B programs. Custom branding,
+          packaging, and sourcing support available.
         </p>
         <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
           <Link

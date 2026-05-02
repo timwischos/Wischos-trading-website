@@ -40,12 +40,12 @@ export const siteMeta = {
   legalName: 'Anhui Wischos International Trading Co. Ltd',
   email: 'inquiries@wischosgift.com',
   defaultOgImage: '/products/WP-401-pure-titanium-vacuum-insulated-bottle/pure-titanium-vacuum-insulated-bottle-lifestyle.avif',
-  defaultTitle: 'Custom Metal Corporate Gift Sets | Wischos Gift',
-  defaultDescription: 'Custom engraved metal gift sets for corporate buyers. Executive gift sets, pens, desk accessories. Full branding and packaging included. Worldwide delivery.',
+  defaultTitle: 'B2B Custom Metal Gift Sets | Wischos Gift',
+  defaultDescription: 'B2B custom metal gift sets for distributors, agencies, and corporate buyers. Curated products, verified material claims, logo-ready customization, and managed China sourcing.',
   routes: {
     home: {
-      title: 'Custom Metal Corporate Gift Sets | Wischos Gift',
-      description: 'Custom engraved metal gift sets for corporate buyers. Executive gift sets, pens, desk accessories. Full branding and packaging included. Worldwide delivery.',
+      title: 'B2B Custom Metal Gift Sets | Wischos Gift',
+      description: 'B2B custom metal gift sets for distributors, agencies, and corporate buyers. Curated products, verified material claims, logo-ready customization, and managed China sourcing.',
     },
     products: {
       title: 'Corporate Metal Gift Set Catalog | Wischos Gift',

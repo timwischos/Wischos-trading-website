@@ -13,10 +13,10 @@ export function HomepageFeaturedProductsSection({ products }: { products: DbProd
       <div style={{ padding: '5rem 1.5rem', borderBottom: b, display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', gap: '1rem', flexWrap: 'wrap' }}>
         <div>
           <p style={{ fontSize: '0.68rem', letterSpacing: '0.16em', textTransform: 'uppercase', color: '#999', marginBottom: '0.5rem' }}>
-            Individual Products
+            Product Building Blocks
           </p>
           <h2 className="display-title" style={{ fontSize: 'clamp(1.4rem, 3vw, 2rem)', fontWeight: 300, color: '#0a0a0a', lineHeight: 1.1 }}>
-            From the Catalog
+            Products ready for set development
           </h2>
         </div>
         <Link
