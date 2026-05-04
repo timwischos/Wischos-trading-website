@@ -176,38 +176,40 @@
     }
 
     .sets-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      display: flex;
+      flex-direction: column;
       gap: 5mm;
       flex: 1;
-      align-items: start;
     }
 
     .set-item {
-      display: flex;
-      flex-direction: column;
+      display: grid;
+      grid-template-columns: 42mm 1fr;
+      gap: 4mm;
+      align-items: center;
     }
 
     .set-item img {
-      width: 100%;
-      aspect-ratio: 4 / 3;
+      width: 42mm;
+      height: 42mm;
       object-fit: cover;
       display: block;
       background: #1a1a1a;
-      margin-bottom: 3.5mm;
     }
 
+    .set-text {}
+
     .set-name {
-      font-size: 9pt;
+      font-size: 9.5pt;
       font-weight: 600;
       color: #ddd;
       margin-bottom: 1.5mm;
     }
 
     .set-desc {
-      font-size: 8pt;
+      font-size: 8.5pt;
       color: #555;
-      line-height: 1.45;
+      line-height: 1.5;
     }
 
     .catalog-link {
@@ -257,7 +259,7 @@
 
       <!-- LEFT COLUMN -->
       <div class="left-col">
-        <div class="headline">Custom metal gift sets,<br>built around your brief</div>
+        <div class="headline">Custom metal gift sets, built around your brief</div>
         <div class="subline">China-based sourcing partner. We recommend set direction, materials, and packaging — you keep the client relationship.</div>
 
         <div class="spec-list">
@@ -301,24 +303,30 @@
                 src="https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_400/products/WGS-004-3-The-Field-EDC/The-Field-EDC-cover"
                 alt="The Field EDC"
               />
-              <div class="set-name">The Field EDC</div>
-              <div class="set-desc">Stainless steel EDC carry set</div>
+              <div class="set-text">
+                <div class="set-name">The Field EDC</div>
+                <div class="set-desc">Stainless steel EDC carry set — field teams, active professionals</div>
+              </div>
             </div>
             <div class="set-item">
               <img
                 src="https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_400/products/WGS-005-3-The-Morning-Ritual/The-Morning-Ritual-cover"
                 alt="The Morning Ritual"
               />
-              <div class="set-name">The Morning Ritual</div>
-              <div class="set-desc">Titanium + brass, executive tier</div>
+              <div class="set-text">
+                <div class="set-name">The Morning Ritual</div>
+                <div class="set-desc">Titanium + brass — executive and client gifting tier</div>
+              </div>
             </div>
             <div class="set-item">
               <img
                 src="https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_400/products/WGS-008-4-The-Quartet/The-Quartet-cover"
                 alt="The Quartet"
               />
-              <div class="set-name">The Quartet</div>
-              <div class="set-desc">4-piece set in magnetic rigid box</div>
+              <div class="set-text">
+                <div class="set-name">The Quartet</div>
+                <div class="set-desc">4-piece set in magnetic rigid box — for programs that need a complete story</div>
+              </div>
             </div>
           </div>
           <div class="catalog-link">Full catalog: wischosgift.com/gift-sets</div>
