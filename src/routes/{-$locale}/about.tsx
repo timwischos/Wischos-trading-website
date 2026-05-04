@@ -54,6 +54,14 @@ function AboutPage() {
           </video>
         </div>
       </div>
+      <div style={{ borderTop: '1px solid var(--grid-color)', padding: '2rem', textAlign: 'center', background: '#fff' }}>
+        <p style={{ fontSize: '0.85rem', color: '#555', lineHeight: 1.7 }}>
+          Working as a distributor or gifting agency?{' '}
+          <a href="/for-distributors" style={{ color: '#B87333', textDecoration: 'none', fontWeight: 500 }}>
+            See how we work with distribution partners →
+          </a>
+        </p>
+      </div>
       <CtaSection />
     </>
   )
