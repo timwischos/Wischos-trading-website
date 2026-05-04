@@ -559,6 +559,69 @@ export const giftSets: GiftSet[] = [
       'Brushed silver rollerball pen with cylindrical barrel, capped, laser-engraved — custom corporate desk gift',
     ],
   },
+  {
+    id: 'wgs-008-4-the-quartet',
+    sku: 'WGS-008-4',
+    name: 'The Quartet',
+    tagline: 'Ready before the first meeting.',
+    definition: 'The Quartet (WGS-008) is a four-piece engraved executive corporate gift set for client-facing professionals. It combines a solid brass ballpoint pen, titanium tea infuser business cup, folding aluminium device stand, and slim push stainless steel business card case in a magnetic rigid gift box.',
+    heroCopy: 'A four-piece custom metal gift set built for executive desk use, client meetings, and workdays that move between spaces. The solid brass ballpoint pen handles signatures and daily writing. The titanium tea infuser business cup holds warm drinks at the desk and in the meeting room. The folding aluminium device stand keeps a phone or tablet at eye level when the work surface is occupied. The stainless steel business card case presents a card at the start of a meeting without opening a wallet or a lid. All four pieces support laser engraving for company logos. Four metals — brass, titanium, aluminium, stainless steel — each assigned to a different part of the professional day.',
+    sellingPoints: [
+      {
+        title: 'Brass Pen, Titanium Cup, Aluminium Stand, Steel Card Case',
+        body: 'Each piece uses a different metal matched to its function. Brass for the pen: weight and surface character in hand for writing and signatures. Titanium liner for the cup: a clean food-contact surface for warm drinks without coatings. Anodised aluminium for the stand: fold-flat carry with a stable desk footprint. Brushed stainless steel for the card case: a flat engravable face that holds a laser mark through daily handling.',
+      },
+      {
+        title: 'Four Pieces, Four Parts of the Workday',
+        body: 'Writing, warm drinks, device viewing, and business card exchange each belong to a different part of a standard professional day. The set is suited to desk-to-meeting routines where the recipient moves between a fixed workspace and client or colleague-facing situations.',
+      },
+      {
+        title: 'Thumb-Push Card Case — Card Out Before the Handshake',
+        body: 'The stainless steel card case uses a thumb-push slide mechanism. The user presses from the back to present a card from the front edge without opening a hinged lid. At approximately 103 × 60mm and 80g, it fits a jacket pocket and holds 13–18 standard business cards.',
+      },
+    ],
+    components: [
+      { sku: 'WP-106', name: 'Solid Brass Ballpoint Pen', productId: 'wp-106-solid-brass-clip-ballpoint', imageIndex: 1 },
+      { sku: 'WP-309', name: 'Slim Push Stainless Steel Business Card Case', productId: 'wp-309-slim-push-stainless-steel-business-card-case', imageIndex: 2 },
+      { sku: 'WP-208', name: 'Precision Folding Aluminium Device Stand', productId: 'wp-208-precision-folding-aluminium-device-stand', imageIndex: 3 },
+      { sku: 'WP-408', name: 'Titanium Tea Infuser Business Cup', productId: 'wp-408-titanium-tea-infuser-business-cup', imageIndex: 4 },
+    ],
+    targetBuyer: 'Executive appreciation programs, finance and professional services gifting, distributor resale for high-value client accounts, VIP welcome kits, year-end recognition for senior staff',
+    packaging: 'Magnetic Rigid Gift Box + Matte Soft-Touch Lamination + Flocked EVA Insert',
+    cta: 'Four-piece executive metal gift set. Send a brief and we\'ll confirm the configuration.',
+    fob: '$44–58',
+    sourcingNotes: [
+      {
+        title: 'Four metals in one set: surface behavior over time',
+        body: 'Brass, titanium, aluminium, and stainless steel each respond differently to handling. The brass pen barrel develops surface character through repeated contact. The titanium cup exterior holds its finish without the surface change that comes with brass. The aluminium stand has an anodised surface that resists wear at fold points. The brushed stainless steel card case maintains a consistent surface texture through daily pocket and bag handling. A recipient using all four pieces will notice that each object changes — or stays stable — in a different way.',
+      },
+      {
+        title: 'Titanium cup: removable infuser and daily drink range',
+        body: 'The infuser in WP-408 is removable. Without it, the cup works as a 480ml covered office cup for warm water or coffee. With it, the cup supports loose-leaf tea. For buyers configuring a gift set for a mixed recipient group, the removable format means the cup suits different drink habits without changing the product.',
+      },
+      {
+        title: 'What the standard packaging delivers',
+        body: 'The set ships in a magnetic rigid gift box with matte soft-touch lamination and a flocked EVA insert. The matte soft-touch surface is part of the standard configuration — not an upgrade — giving the exterior a velvet-feel coating from the first handling. Each component sits in a precision-cut recess in the flocked EVA to keep the four metal surfaces separated in transit and in presentation.',
+      },
+      {
+        title: 'Logo placement across four pieces',
+        body: 'The brass ballpoint pen takes laser engraving on the barrel. The titanium-gold exterior of the business cup takes laser engraving or screen printing. The aluminium stand takes laser engraving on its flat surface. The stainless steel card case takes laser engraving on its brushed face. Four engravable surfaces across one set gives the buyer consistent logo placement on every piece a recipient uses through the day.',
+      },
+      {
+        title: 'Upgrade options',
+        body: 'Hot-stamped debossed logo on the box lid is available on request, using gold, silver, or copper foil against the matte soft-touch surface. A printed interior liner can carry a brand message, welcome note, or QR code at the first opening. If the standard four-piece configuration does not match your brief — different components, finishes, or packaging — reach out and we\'ll advise.',
+      },
+    ],
+    coverImage: '/products/WGS-008-4-The-Quartet/The-Quartet-cover.avif',
+    hoverImage: '/products/WGS-008-4-The-Quartet/The-Quartet-hover.avif',
+    images: [
+      '/products/WGS-008-4-The-Quartet/The-Quartet-cover.avif',
+      '/products/WGS-008-4-The-Quartet/The-Quartet-detail-1.avif',
+      '/products/WGS-008-4-The-Quartet/The-Quartet-detail-2.avif',
+      '/products/WGS-008-4-The-Quartet/The-Quartet-detail-3.avif',
+      '/products/WGS-008-4-The-Quartet/The-Quartet-detail-4.avif',
+    ],
+  },
 ]
 
 export function getGiftSetById(id: string): GiftSet | undefined {
