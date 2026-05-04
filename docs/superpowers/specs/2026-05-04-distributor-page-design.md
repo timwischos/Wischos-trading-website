@@ -14,7 +14,9 @@ Secondary: email contact.
 
 - Route: `/for-distributors` (TanStack file-based routing: `src/routes/for-distributors.tsx`)
 - Visible on site: yes (not noindex)
-- SEO meta: title = `Metal Gift Sets for Distributors & Gifting Agencies | Wischos Gift`
+- SEO meta:
+  - **title**: `Custom Metal Gift Sets for Distributors | Wischos Gift` (54 chars)
+  - **meta description**: `We build custom metal gift sets around your client briefs. White-label, verifiable material specs, and sales materials included. China-based sourcing, 25–35 day lead time.` (172 chars — trim to fit 160 if needed during implementation)
 - Not in main navigation
 - Entry point: low-key link at the bottom of the About page
 - Primary use: LinkedIn cold outreach — send link directly to distributor prospects
@@ -58,10 +60,10 @@ Section title: `What you can offer your clients`
 
 Four capability dimensions, written from the distributor's perspective ("what you can commit to your client"):
 
-- **Materials**: Brass, titanium, stainless steel, aluminium — stated specs, not marketing language
-- **Price tiers**: Entry programs for volume gifting, mid-tier for client retention, premium for executive recipients. FOB pricing quoted per project.
-- **Customization**: Logo method (laser engraving or screen print), packaging configuration, set composition
-- **Lead time**: Normally 25–35 days after sample approval — confirmed per project at inquiry stage
+- **Materials**: Brass, titanium, stainless steel, aluminium — each stated clearly, no vague "premium metal" language. Your client's procurement brief can quote the spec directly.
+- **Price tiers**: Entry programs for volume gifting, mid-tier for client retention, premium for executive recipients. FOB pricing is quoted per project based on quantity, configuration, and packaging — reach out with a brief and we'll advise.
+- **Customization**: Logo applied by laser engraving or screen print depending on material and surface. Packaging configuration, set composition, and component substitutions are all discussable based on quantity and production feasibility.
+- **Lead time**: Normally 25–35 days after sample approval. Confirmed per project at inquiry stage — we don't publish lead times we can't commit to.
 
 ### 5. Example Sets — "What's possible"
 Section title: `What's possible — three directions`
@@ -78,13 +80,32 @@ Three sets shown as capability proof, not as fixed products to order:
 Each set: one cover image + set name + one-line positioning + link to full set page.
 Footer of section: `View full catalog →` linking to `/gift-sets`.
 
-### 6. Inquiry Form
+### 6. FAQ Section
+Section title: `Common questions`
+
+Three questions targeting distributor-specific concerns — also serves GEO (AI answer engines prefer Q&A structure):
+
+| Question | Answer |
+|----------|--------|
+| Do you white-label? | Yes. Wischos branding does not appear on products or packaging as standard. Every set ships with your client's identity — or unbranded, if preferred. |
+| Can I bring briefs from multiple clients? | Yes. We work with distributors across multiple client programs. Each brief is handled separately with its own recommendation, pricing, and production timeline. |
+| What materials do you work with? | Our current range covers brass, titanium, stainless steel, and aluminium. Each material is stated accurately in our specs — no coating described as solid metal, no plating described as pure. |
+
+Render as accordion (same `AccordionSection` component used on product pages). Add `FAQPage` JSON-LD schema.
+
+### 7. JSON-LD Schema
+Two schema types to include in the route's `head()`:
+
+- **`Service`** schema: name = "Custom Metal Gift Set Sourcing", provider = Wischos Gift, areaServed = ["AU", "GB", "CA", "EU"], description mirrors meta description
+- **`FAQPage`** schema: derived from the 3 FAQ items above
+
+### 8. Inquiry Form
 - Reuse existing `InquiryFormSection` component
 - Section ID: `inquiry-form` (for anchor links from CTAs above)
 - Left column: form
 - Right column: brief blurb about Wischos + email link (`inquiries@wischosgift.com`) + LinkedIn link as fallback contact
 
-### 7. Minimal Footer
+### 9. Minimal Footer
 Same as existing landing pages: copyright + `wischosgift.com` link.
 
 ## About Page Entry Point
