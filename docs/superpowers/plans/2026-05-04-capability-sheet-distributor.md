@@ -1,0 +1,457 @@
+# Capability Sheet (Distributor Edition) Implementation Plan
+
+> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
+
+**Goal:** Create a standalone `capability-sheet-distributor.html` file that renders as a one-page A4 PDF when printed from Chrome — for use as a LinkedIn cold outreach attachment.
+
+**Architecture:** Single self-contained HTML file. All styles inline in a `<style>` block. Product images loaded from Cloudinary CDN. No JavaScript. Print CSS forces A4 with zero margins. No build step, no deployment — open in Chrome, Ctrl+P → Save as PDF.
+
+**Tech Stack:** HTML, CSS (print media query), Cloudinary image CDN (`dcivh8ovs`).
+
+---
+
+## File Map
+
+| Action | File | Purpose |
+|--------|------|---------|
+| Create | `capability-sheet-distributor.html` | Complete standalone capability sheet |
+
+---
+
+### Task 1: Create the HTML file with A4 skeleton and two-column layout
+
+**Files:**
+- Create: `capability-sheet-distributor.html`
+
+- [ ] **Step 1: Create the file with doctype, print CSS, and layout skeleton**
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wischos Gift — Capability Sheet (Distributors)</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    @page {
+      size: A4;
+      margin: 0;
+    }
+
+    html, body {
+      width: 210mm;
+      height: 297mm;
+      background: #0a0a0a;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      color: #fff;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .page {
+      width: 210mm;
+      height: 297mm;
+      padding: 14mm 14mm 12mm;
+      display: flex;
+      flex-direction: column;
+      background: #0a0a0a;
+      overflow: hidden;
+    }
+
+    /* Top bar */
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #222;
+      padding-bottom: 8px;
+      margin-bottom: 14px;
+      flex-shrink: 0;
+    }
+
+    .wordmark {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      color: #fff;
+      text-transform: uppercase;
+    }
+
+    .top-label {
+      font-size: 7px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #B87333;
+    }
+
+    /* Two-column grid */
+    .body-grid {
+      display: grid;
+      grid-template-columns: 72mm 1fr;
+      gap: 12mm;
+      flex: 1;
+      min-height: 0;
+    }
+
+    /* LEFT COLUMN */
+    .left-col {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .headline {
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 1.35;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+
+    .subline {
+      font-size: 7.5px;
+      color: #666;
+      line-height: 1.55;
+      margin-bottom: 16px;
+    }
+
+    .spec-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex: 1;
+    }
+
+    .spec-item {
+      border-top: 1px solid #333;
+      padding-top: 7px;
+    }
+
+    .spec-item:first-child {
+      border-top-color: #B87333;
+    }
+
+    .spec-label {
+      font-size: 6px;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: #B87333;
+      margin-bottom: 3px;
+    }
+
+    .spec-body {
+      font-size: 7.5px;
+      color: #aaa;
+      line-height: 1.5;
+    }
+
+    .contact-block {
+      border-top: 1px solid #1a1a1a;
+      padding-top: 10px;
+      margin-top: 14px;
+    }
+
+    .contact-line {
+      font-size: 7px;
+      color: #555;
+      margin-bottom: 3px;
+    }
+
+    .contact-line.accent {
+      color: #B87333;
+    }
+
+    /* RIGHT COLUMN */
+    .right-col {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .callout {
+      background: #111;
+      border-left: 2px solid #B87333;
+      padding: 10px 12px;
+    }
+
+    .callout-heading {
+      font-size: 9px;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 5px;
+    }
+
+    .callout-body {
+      font-size: 7.5px;
+      color: #777;
+      line-height: 1.6;
+    }
+
+    .sets-section {
+      flex: 1;
+    }
+
+    .sets-label {
+      font-size: 6px;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: #555;
+      margin-bottom: 8px;
+    }
+
+    .sets-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 8px;
+    }
+
+    .set-item img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      display: block;
+      background: #1a1a1a;
+      margin-bottom: 5px;
+    }
+
+    .set-name {
+      font-size: 7.5px;
+      font-weight: 600;
+      color: #ddd;
+      margin-bottom: 2px;
+    }
+
+    .set-desc {
+      font-size: 6.5px;
+      color: #555;
+      line-height: 1.35;
+    }
+
+    .catalog-link {
+      font-size: 7px;
+      color: #444;
+      margin-top: 8px;
+    }
+
+    @media print {
+      html, body { width: 210mm; height: 297mm; }
+      .page { page-break-after: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- Top bar -->
+    <div class="top-bar">
+      <div class="wordmark">Wischos Gift</div>
+      <div class="top-label">For Distributors &amp; Gifting Agencies</div>
+    </div>
+
+    <!-- Body grid -->
+    <div class="body-grid">
+
+      <!-- LEFT COLUMN — placeholder, filled in Task 2 -->
+      <div class="left-col">
+        <!-- content coming in Task 2 -->
+      </div>
+
+      <!-- RIGHT COLUMN — placeholder, filled in Task 3 -->
+      <div class="right-col">
+        <!-- content coming in Task 3 -->
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
+```
+
+- [ ] **Step 2: Open in Chrome and verify skeleton**
+
+Open `capability-sheet-distributor.html` in Chrome. Expected:
+- Dark background fills the page
+- Top bar shows "WISCHOS GIFT" on the left, "FOR DISTRIBUTORS & GIFTING AGENCIES" on the right
+- Two-column layout is visible (both columns are empty placeholders)
+
+- [ ] **Step 3: Commit skeleton**
+
+```bash
+git add capability-sheet-distributor.html
+git commit -m "Add capability sheet skeleton with A4 print CSS and two-column layout"
+```
+
+---
+
+### Task 2: Populate left column
+
+**Files:**
+- Modify: `capability-sheet-distributor.html`
+
+- [ ] **Step 1: Replace the left column placeholder with full content**
+
+Replace the comment `<!-- content coming in Task 2 -->` inside `<div class="left-col">` with:
+
+```html
+        <div class="headline">Custom metal gift sets,<br>built around your brief</div>
+        <div class="subline">China-based sourcing partner. We recommend set direction, materials, and packaging — you keep the client relationship.</div>
+
+        <div class="spec-list">
+          <div class="spec-item">
+            <div class="spec-label">Materials</div>
+            <div class="spec-body">Brass · Titanium · Stainless Steel · Aluminium — each stated accurately in specs, no vague "premium metal" language.</div>
+          </div>
+          <div class="spec-item">
+            <div class="spec-label">White-Label</div>
+            <div class="spec-body">Standard. Wischos branding does not appear on products or packaging. Every set ships with your client's identity — or unbranded, if preferred.</div>
+          </div>
+          <div class="spec-item">
+            <div class="spec-label">Lead Time</div>
+            <div class="spec-body">Normally 25–35 days after sample approval. Confirmed per project at inquiry stage.</div>
+          </div>
+          <div class="spec-item">
+            <div class="spec-label">Your Client</div>
+            <div class="spec-body">Stays yours. All communication goes through you. Quotes and spec sheets are yours to use in your own proposals.</div>
+          </div>
+        </div>
+
+        <div class="contact-block">
+          <div class="contact-line">inquiries@wischosgift.com</div>
+          <div class="contact-line">wischosgift.com</div>
+          <div class="contact-line accent">linkedin.com/in/john-lui-4529a3102</div>
+        </div>
+```
+
+- [ ] **Step 2: Verify in Chrome**
+
+Reload the file. Expected:
+- Left column shows headline, subline, four spec items with copper top border on the first item, contact block at the bottom
+- Text does not overflow the left column
+- Copper accent color visible on spec labels and LinkedIn line
+
+- [ ] **Step 3: Commit**
+
+```bash
+git add capability-sheet-distributor.html
+git commit -m "Add left column content to capability sheet"
+```
+
+---
+
+### Task 3: Populate right column with callout and example sets
+
+**Files:**
+- Modify: `capability-sheet-distributor.html`
+
+- [ ] **Step 1: Replace the right column placeholder with callout box and example sets**
+
+Replace the comment `<!-- content coming in Task 3 -->` inside `<div class="right-col">` with:
+
+```html
+        <div class="callout">
+          <div class="callout-heading">Bring any brief. Keep every client.</div>
+          <div class="callout-body">We work across multiple client programs simultaneously. Each brief is handled separately — its own recommendation, pricing, and production timeline. We don't cross-sell to your end clients or introduce competing distributors.</div>
+        </div>
+
+        <div class="sets-section">
+          <div class="sets-label">Example Sets</div>
+          <div class="sets-grid">
+            <div class="set-item">
+              <img
+                src="https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_400/products/WGS-004-3-The-Field-EDC/The-Field-EDC-cover"
+                alt="The Field EDC"
+              />
+              <div class="set-name">The Field EDC</div>
+              <div class="set-desc">Stainless steel EDC carry set</div>
+            </div>
+            <div class="set-item">
+              <img
+                src="https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_400/products/WGS-005-3-The-Morning-Ritual/The-Morning-Ritual-cover"
+                alt="The Morning Ritual"
+              />
+              <div class="set-name">The Morning Ritual</div>
+              <div class="set-desc">Titanium + brass, executive tier</div>
+            </div>
+            <div class="set-item">
+              <img
+                src="https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_400/products/WGS-008-4-The-Quartet/The-Quartet-cover"
+                alt="The Quartet"
+              />
+              <div class="set-name">The Quartet</div>
+              <div class="set-desc">4-piece set in magnetic rigid box</div>
+            </div>
+          </div>
+          <div class="catalog-link">Full catalog: wischosgift.com/gift-sets</div>
+        </div>
+```
+
+- [ ] **Step 2: Verify in Chrome**
+
+Reload the file. Expected:
+- Right column shows callout box with copper left border
+- Three set images load from Cloudinary (requires internet connection)
+- Set names and descriptions appear below each image
+- "Full catalog" line at bottom
+
+- [ ] **Step 3: Commit**
+
+```bash
+git add capability-sheet-distributor.html
+git commit -m "Add right column content and example sets to capability sheet"
+```
+
+---
+
+### Task 4: Verify print output and generate PDF
+
+**Files:** none
+
+- [ ] **Step 1: Open Chrome print preview**
+
+In Chrome, open `capability-sheet-distributor.html`. Press `Ctrl+P` (or `Cmd+P` on Mac).
+
+In the print dialog:
+- Destination: Save as PDF
+- Paper size: A4
+- Margins: None
+- Options: check "Background graphics"
+
+Expected in preview:
+- All content fits on exactly one page
+- No content clipped at edges
+- Dark background renders (requires "Background graphics" checked)
+- All three set images visible
+- Copper accents visible
+
+- [ ] **Step 2: If content overflows — fix font sizes**
+
+If text or images push past the page boundary, reduce these values in `<style>`:
+
+```css
+/* Option A: reduce body padding */
+.page { padding: 10mm 12mm 10mm; }
+
+/* Option B: reduce spec item gap */
+.spec-list { gap: 7px; }
+
+/* Option C: reduce set image size (images are 1:1 ratio, constrained by grid) */
+.sets-grid { gap: 6px; }
+```
+
+Adjust until content fits in one page, then verify preview again.
+
+- [ ] **Step 3: Save PDF**
+
+Click Save. Name the file `Wischos-Capability-Sheet-Distributors.pdf`. Open the saved PDF and verify:
+- File size is under 2MB
+- All images rendered
+- Background color is dark
+
+- [ ] **Step 4: Final commit**
+
+```bash
+git add capability-sheet-distributor.html
+git commit -m "Finalize capability sheet — verified A4 print output"
+```
