@@ -128,4 +128,22 @@ export const blogPosts: BlogPost[] = [
     heroImageAlt: 'Close-up of brushed stainless steel surface showing fine directional grain texture',
     heroImageCredit: 'Wischos Gift',
   },
+  {
+    slug: 'discreet-branding-corporate-gifts-smaller-logos',
+    title: 'Why the Best Corporate Gifts Have a Small Logo',
+    metaTitle: 'Discreet Branding Corporate Gifts: Smaller Logo Strategy',
+    metaDescription:
+      'Why premium corporate gifts often use smaller logos, subtle engraving and packaging-led branding instead of loud product decoration.',
+    excerpt:
+      'A large logo increases the chance a gift gets donated within days. A small, restrained logo increases the chance it gets used for years. For premium client gifts, that trade-off is the whole decision.',
+    quickAnswer:
+      "Discreet branding in corporate gifts means using a smaller, quieter or less dominant logo so the product still feels useful to the recipient. This approach is often a better fit for client gifts, executive gifts and VIP programs, where long-term use matters more than instant logo visibility. ASI's 2026 Ad Impressions Study reports that 78% of U.S. consumers would keep a promo item because it is useful.",
+    category: 'Gifting Strategy',
+    readTime: '6 min read',
+    publishedAt: 'May 9, 2026',
+    isoDate: '2026-05-09',
+    heroImage: 'https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_800/blog/blog-007',
+    heroImageAlt: 'Premium metal corporate gift set with subtle tone-on-tone laser engraved branding on a quiet executive desk',
+    heroImageCredit: 'Wischos Gift',
+  },
 ]
