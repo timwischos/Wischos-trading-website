@@ -111,6 +111,25 @@ const prose = {
   } as CSSProperties,
 }
 
+function ArticleImage({
+  src,
+  alt,
+}: {
+  src: string
+  alt: string
+}) {
+  return (
+    <div style={{ margin: '1.25rem 0 1.75rem', borderRadius: '2px', overflow: 'hidden', aspectRatio: '16/7' }}>
+      <img
+        src={src}
+        alt={alt}
+        loading="lazy"
+        style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+      />
+    </div>
+  )
+}
+
 // ─── Article content ──────────────────────────────────────────────────────────
 
 function Article1Content() {
@@ -811,12 +830,273 @@ function Article8Content() {
   )
 }
 
+function Article7Content() {
+  return (
+    <div style={prose.wrapper}>
+      <p style={prose.p}>We are often asked how large the logo can be.</p>
+      <p style={prose.p}>
+        For premium client gifts, that is usually the wrong first question. Discreet branding corporate gifts use smaller, quieter or less dominant logo placement so the product still feels useful to the recipient. The question is not whether the brand should be present. The question is whether the branding helps the gift stay in use.
+      </p>
+      <p style={prose.p}>
+        ASI's 2026 Ad Impressions Study reports that 78% of U.S. consumers would keep a promo item because it is useful. That number should make every buyer a little more careful with artwork approval. A useful object can earn attention for years. A loud logo can shorten that life.
+      </p>
+      <p style={prose.p}>Some gifts should be loud.</p>
+      <p style={prose.p}>A trade show tote. A staff event cap. A launch-day T-shirt. In those cases, the logo is part of the point. The item is supposed to show up in photos, on the floor, in the room.</p>
+      <p style={prose.p}>A client gift is different.</p>
+      <p style={prose.p}>
+        A brass pen on a desk is not a billboard. Neither is a metal card holder in a meeting or a phone stand beside a laptop. These products have to earn their place in the recipient's life. If the logo makes the product harder to use, the branding has started working against the gift.
+      </p>
+      <p style={prose.p}>That is the trap. The buyer thinks they are buying exposure. The recipient sees an advertisement.</p>
+      <p style={prose.p}>
+        For premium gifts, the better question is not "How big can the logo be?" It is:
+      </p>
+      <div style={prose.callout}>
+        How visible can the brand be before the product stops feeling like something the recipient would choose?
+      </div>
+
+      <h2 style={prose.h2}>The Trade-Off Buyers Actually Face</h2>
+      <p style={prose.p}>A larger logo gives the brand more immediate visibility. That can be useful.</p>
+      <p style={prose.p}>
+        But visibility is not the same as retention. A smaller logo may create less instant exposure, but it can give the product a better chance of being used longer.
+      </p>
+      <p style={prose.p}>
+        The data does not prove that small logos always beat large logos. It does support the more important point: useful, well-made products are more likely to stay with people.
+      </p>
+      <p style={prose.p}>
+        ASI's 2026 Ad Impressions Study reports that 78% of U.S. consumers would keep a promotional item because it is useful. PPAI's Product Power 2026 research reports that roughly 65% of consumers are very likely to keep a branded product for six months or longer, with durability, design and material among the reasons. A Product Power 2026 quality/value summary lists durability, design and material as leading quality signals at 70.4%, 65.2% and 58.2%.
+      </p>
+      <p style={prose.p}>So the logo should not fight the product's usefulness, design or material quality. It should support them.</p>
+
+      <h2 style={prose.h2}>Not Every Gift Needs a Quiet Logo</h2>
+      <p style={prose.p}>Discreet branding is not a universal rule.</p>
+      <p style={prose.p}>
+        Use visible branding when the campaign needs public recognition, event photos, team identity or quick awareness. A large logo can make sense on a trade show item, a staff campaign piece or a low-cost giveaway.
+      </p>
+      <p style={prose.p}>Use a quieter logo when the item is supposed to live with the recipient after the campaign moment.</p>
+      <p style={prose.p}>That usually includes:</p>
+      <ul style={prose.ul}>
+        {['client appreciation gifts', 'executive gifts', 'VIP direct mail', 'partner gifts', 'premium onboarding gifts', 'professional service gifts', 'distributor sample kits'].map(item => (
+          <li key={item} style={prose.li}>{item}</li>
+        ))}
+      </ul>
+      <p style={prose.p}>
+        The mistake is using the same artwork logic for both. A logo that works on an event tote can feel too loud on a metal card case for a senior client.
+      </p>
+
+      <h2 style={prose.h2}>Why Loud Branding Gets in the Way</h2>
+      <p style={prose.p}>People do not reject logos automatically. They reject products that make them feel like they are carrying someone else's advertisement.</p>
+      <p style={prose.p}>
+        A large logo on a bottle at a company event may feel normal. The same logo on a pen used in a client meeting may feel awkward. A bold mark on a giveaway keyring may be fine. The same treatment on an executive desk item can make the object feel cheaper than it is.
+      </p>
+      <p style={prose.p}>
+        This is where many premium gifts lose value. The product is useful. The material is good. The packaging is considered. Then the logo is applied like the item is a poster.
+      </p>
+      <p style={prose.p}>
+        Recipient feedback often sounds like this: the logo fades into the background, but the useful object keeps the giver in mind. Or the opposite: the gift is good, but the first thing the recipient wants to do is cover the mark.
+      </p>
+      <p style={prose.p}>That is not an argument against branding. It is an argument against branding that gets in the way of use.</p>
+      <p style={prose.p}>
+        The better gift usually feels like something the recipient might have chosen anyway: useful, well made, appropriate in public and not asking them to become a walking ad.
+      </p>
+      <ArticleImage
+        src="https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_860/blog/blog-007-comparison"
+        alt="Comparison of a loud promotional gift beside a premium metal gift with a small subtle engraved logo"
+      />
+
+      <h2 style={prose.h2}>Visibility and Value Are Separate Decisions</h2>
+      <p style={prose.p}>The buyer is not choosing between branding and no branding. The real choice is immediate visibility versus long-term use.</p>
+      <div style={{ overflowX: 'auto', marginBottom: '1.5rem' }}>
+        <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.9rem' }}>
+          <thead>
+            <tr style={{ borderBottom: '2px solid #e0e0e0' }}>
+              <th style={{ textAlign: 'left', padding: '0.6rem 0.75rem', fontWeight: 600, color: '#1a1a1a' }}>Campaign type</th>
+              <th style={{ textAlign: 'left', padding: '0.6rem 0.75rem', fontWeight: 600, color: '#1a1a1a' }}>Logo strategy that usually fits</th>
+            </tr>
+          </thead>
+          <tbody>
+            {[
+              ['Trade show giveaway', 'Clear logo, visible from a distance'],
+              ['Staff event item', 'Visible logo and campaign color'],
+              ['Client appreciation gift', 'Smaller logo, better material, stronger packaging'],
+              ['Executive gift', 'Subtle engraving or packaging-led branding'],
+              ['Onboarding kit', 'Balanced branding across box, insert and product'],
+              ['VIP direct mail', 'Product-first, brand-second'],
+            ].map(([type, strategy], i) => (
+              <tr key={type} style={{ borderBottom: '1px solid #f0f0f0', background: i % 2 ? '#fafafa' : 'white' }}>
+                <td style={{ padding: '0.55rem 0.75rem', color: '#1a1a1a', fontWeight: 500 }}>{type}</td>
+                <td style={{ padding: '0.55rem 0.75rem', color: '#3a3a3a' }}>{strategy}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p style={prose.p}>
+        This is a useful way to explain the recommendation to a client. You are not removing the brand. You are putting the brand where it does the least harm to the gift.
+      </p>
+
+      <h2 style={prose.h2}>Better Ways to Brand the Gift</h2>
+      <p style={prose.p}>Discreet branding does not mean the brand disappears. It means the brand stops taking over the object.</p>
+      <h2 style={{ ...prose.h2, fontSize: '1.2rem', marginTop: '1.6rem' }}>1. Move the Logo Away From the Main Surface</h2>
+      <p style={prose.p}>Use the clip, cap, edge, corner, underside, back panel or another secondary surface.</p>
+      <p style={prose.p}>
+        This works well on brass pens, metal card holders, phone stands, keyrings and bottle openers. The gift is still branded. It just does not lead with the logo.
+      </p>
+      <p style={prose.p}>
+        For desk items, card cases, stands and small tools, the inside panel or underside can carry a logo or short message. The recipient still sees it. Other people do not have to.
+      </p>
+      <h2 style={{ ...prose.h2, fontSize: '1.2rem', marginTop: '1.6rem' }}>2. Lower the Contrast</h2>
+      <p style={prose.p}>
+        Tone-on-tone branding keeps contrast low. The mark is visible close up, but it does not dominate the product from across the room.
+      </p>
+      <p style={prose.p}>
+        On metal, that can mean laser engraving on brushed steel, shallow etching, matte-on-gloss contrast, black-on-black marks or silver-on-silver marks.
+      </p>
+      <p style={prose.p}>
+        This is often a useful compromise when the client needs proof of branding and the recipient needs something they will actually use.
+      </p>
+      <h2 style={{ ...prose.h2, fontSize: '1.2rem', marginTop: '1.6rem' }}>3. Let the Packaging Do More Work</h2>
+      <p style={prose.p}>The box, sleeve, insert card, belly band or thank-you card can carry the campaign message. The product itself can stay cleaner.</p>
+      <p style={prose.p}>
+        This works especially well for executive gifts, holiday gifts and VIP kits. The unboxing moment still belongs to the brand. The object afterwards belongs more to the recipient.
+      </p>
+      <p style={prose.p}>
+        Sometimes the product itself does not need a visible logo at all. The brand can appear on the box, card, sleeve, tray, note or reorder insert. This will not fit every campaign, but it can work when the relationship value comes from giving something genuinely useful and well presented.
+      </p>
+      <ArticleImage
+        src="https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_860/blog/blog-007-packaging"
+        alt="Premium corporate gift box with subtle branding on packaging and a nearly logo-free metal gift inside"
+      />
+
+      <h2 style={prose.h2}>Why Metal Gifts Fit This Approach</h2>
+      <p style={prose.p}>Metal is useful here because it already carries some of the value signal.</p>
+      <p style={prose.p}>
+        A brass pen has weight. A brushed stainless opener has finish. A matte aluminum stand has edge quality. Those details say something before the logo does.
+      </p>
+      <ArticleImage
+        src="https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_860/blog/blog-007-metal-detail"
+        alt="Close-up of brushed stainless steel brass and matte aluminum gifts with subtle laser engraved marks"
+      />
+      <p style={prose.p}>That gives buyers more room to use a restrained mark.</p>
+      <p style={prose.p}>
+        On brushed stainless steel, a small laser mark can sit inside the grain of the finish. It is visible when the user turns the piece in the light, but it does not shout across the surface. On brass, the same restraint matters even more. The material already has warmth and weight; a large high-contrast logo can make it feel cheaper, not more branded.
+      </p>
+      <p style={prose.p}>
+        Matte aluminum behaves differently. A small mark on the lower back edge of a phone stand may be enough because the form and finish are doing the first job. The brand appears when the object is handled, adjusted or packed away. That small moment of discovery often feels more natural than putting the mark across the front face.
+      </p>
+      <div style={{ overflowX: 'auto', marginBottom: '1.5rem' }}>
+        <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.9rem' }}>
+          <thead>
+            <tr style={{ borderBottom: '2px solid #e0e0e0' }}>
+              <th style={{ textAlign: 'left', padding: '0.6rem 0.75rem', fontWeight: 600, color: '#1a1a1a' }}>Product type</th>
+              <th style={{ textAlign: 'left', padding: '0.6rem 0.75rem', fontWeight: 600, color: '#1a1a1a' }}>Subtle logo option</th>
+            </tr>
+          </thead>
+          <tbody>
+            {[
+              ['Brass pen', 'Clip engraving, small cap mark, barrel-end mark'],
+              ['Metal keyring', 'Back-side engraving, edge mark, tone-on-tone logo'],
+              ['Bottle opener', 'Handle-end engraving, underside mark, small etched logo'],
+              ['Card holder', 'Corner engraving, back panel, inside plate'],
+              ['Phone stand', 'Lower back edge, underside, small front corner'],
+              ['Desk cup or holder', 'Base mark, inside bottom, packaging-led logo'],
+            ].map(([type, option], i) => (
+              <tr key={type} style={{ borderBottom: '1px solid #f0f0f0', background: i % 2 ? '#fafafa' : 'white' }}>
+                <td style={{ padding: '0.55rem 0.75rem', color: '#1a1a1a', fontWeight: 500 }}>{type}</td>
+                <td style={{ padding: '0.55rem 0.75rem', color: '#3a3a3a' }}>{option}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p style={prose.p}>
+        If the gift is meant to be carried, displayed or used in front of other people, keep the logo where it will not make the recipient self-conscious.
+      </p>
+
+      <h2 style={prose.h2}>When the Logo Should Stay Big</h2>
+      <p style={prose.p}>A large logo is not wrong. It is just often used in the wrong place.</p>
+      <p style={prose.p}>Keep the logo large when:</p>
+      <ul style={prose.ul}>
+        {['the item is part of a branded event', 'the campaign goal is awareness, not retention', 'the item is low-cost and high-volume', 'the recipient expects event merchandise', 'the logo is part of the design itself', 'the buyer needs visibility in photos or social posts'].map(item => (
+          <li key={item} style={prose.li}>{item}</li>
+        ))}
+      </ul>
+      <p style={prose.p}>
+        The problem is applying that logic to a relationship gift. A product meant to stay on a client's desk for a year should not be treated like a product handed out to 2,000 people at a booth.
+      </p>
+
+      <h2 style={prose.h2}>Before You Approve the Artwork</h2>
+      <p style={prose.p}>Ask these questions before signing off:</p>
+      <ol style={prose.ul}>
+        {[
+          'Would the recipient use this item in public with the logo at this size?',
+          'Does the logo make the product feel better or just more promotional?',
+          'Can the box, sleeve or insert card carry more of the message?',
+          'Is engraving better than color printing for this material?',
+          'Does the logo avoid wear points, hinges and high-contact areas?',
+          'Will the logo still look acceptable after months of handling?',
+          'Does the branding match the audience: mass, staff, client, executive or VIP?',
+          'Would the product still make sense if the logo were half the size?',
+        ].map(item => (
+          <li key={item} style={prose.li}>{item}</li>
+        ))}
+      </ol>
+      <p style={prose.p}>If the last answer is yes, test the smaller version.</p>
+
+      <h2 style={prose.h2}>How to Brief a Supplier</h2>
+      <p style={prose.p}>Do not write only: "Add our logo to the product."</p>
+      <p style={prose.p}>Write the intent:</p>
+      <div style={prose.callout}>
+        We want a premium corporate gift that feels like a retail object, not a giveaway. Please suggest subtle logo options such as small laser engraving, tone-on-tone placement, underside branding or packaging-led branding. The product should still look appropriate for daily use if the recipient keeps it on a desk or carries it in public.
+      </div>
+      <p style={prose.p}>Then add the details that affect production:</p>
+      <ul style={prose.ul}>
+        {['target recipient', 'campaign purpose', 'preferred logo visibility level', 'brand color requirements', 'packaging needs', 'unit budget', 'MOQ', 'sample deadline', 'final in-hands date'].map(item => (
+          <li key={item} style={prose.li}>{item}</li>
+        ))}
+      </ul>
+      <p style={prose.p}>
+        That kind of brief lets the supplier solve the real problem: not just where to put the logo, but how to keep the gift useful after the logo is applied.
+      </p>
+
+      <h2 style={prose.h2}>Practical Questions</h2>
+      <p style={{ ...prose.p, fontWeight: 600, color: '#1a1a1a', marginBottom: '0.4rem' }}>What are discreet branding corporate gifts?</p>
+      <p style={prose.p}>Discreet branding corporate gifts are gifts with subtle, restrained or low-visibility logo placement. The brand may appear through small engraving, tone-on-tone marks, packaging, insert cards or underside placement instead of a large logo on the main product surface.</p>
+      <p style={{ ...prose.p, fontWeight: 600, color: '#1a1a1a', marginBottom: '0.4rem' }}>Do low-logo corporate gifts still work?</p>
+      <p style={prose.p}>Yes, when the goal is retention, relationship building or premium perception. A smaller logo can make the product feel more usable, which may increase the chance that the recipient keeps it. The stronger data point is that usefulness is a proven retention driver; logo size should be managed so it does not work against that use.</p>
+      <p style={{ ...prose.p, fontWeight: 600, color: '#1a1a1a', marginBottom: '0.4rem' }}>What logo method works well for premium metal gifts?</p>
+      <p style={prose.p}>Laser engraving is often a strong choice for premium metal gifts because it is durable and restrained. Tone-on-tone engraving, small clip marks and packaging-led branding can make the product feel more refined.</p>
+      <p style={{ ...prose.p, fontWeight: 600, color: '#1a1a1a', marginBottom: '0.4rem' }}>Can the product have no visible logo?</p>
+      <p style={prose.p}>Yes, if the brand is carried by the box, insert card, sleeve, tray or gift note. This works best for executive gifts, VIP gifts and high-value client appreciation programs. It is less suitable for awareness campaigns where public logo visibility is the point.</p>
+
+      <div style={prose.callout}>
+        Wischos Gift helps distributors, agencies and corporate buyers develop premium metal gifts with subtle engraving, low-logo placement and packaging-led branding for programs where the gift needs to feel useful, not disposable.
+      </div>
+
+      <h2 style={prose.h2}>Related Products and Guides</h2>
+      <ul style={prose.ul}>
+        <li style={prose.li}><Link to={'/gift-sets' as RouterTo} style={prose.inlineLink}>Gift sets</Link></li>
+        <li style={prose.li}><Link to={'/for-distributors' as RouterTo} style={prose.inlineLink}>For distributors</Link></li>
+        <li style={prose.li}><Link to={'/products/wp-106-solid-brass-clip-ballpoint' as RouterTo} style={prose.inlineLink}>Solid brass clip ballpoint</Link></li>
+        <li style={prose.li}><Link to={'/products/wp-208-precision-folding-aluminium-device-stand' as RouterTo} style={prose.inlineLink}>Precision folding aluminium device stand</Link></li>
+      </ul>
+
+      <h2 style={prose.h2}>Data Sources</h2>
+      <ul style={prose.ul}>
+        <li style={prose.li}><a href="https://members.asicentral.com/news/strategy/march-2026/asi-s-2026-ad-impressions-study-5-compelling-takeaways/" style={prose.inlineLink}>ASI - 2026 Ad Impressions Study public summary</a>, published Mar. 30, 2026.</li>
+        <li style={prose.li}><a href="https://www.ppai.org/media-hub/product-power-2026-what-consumers-want-next/" style={prose.inlineLink}>PPAI - Product Power 2026: What Consumers Want Next</a>, published Dec. 8, 2025.</li>
+        <li style={prose.li}><a href="https://store-media.mpowerpromo.com/65e7a9eb2db27b3637eb81b2/assets/Promotional-Products-Power-2026-Quality-Value-and-Premium-Thresholds-1770594170119.pdf" style={prose.inlineLink}>PPAI Product Power 2026 quality/value summary</a>.</li>
+      </ul>
+    </div>
+  )
+}
+
 const articleContent: Record<string, () => React.JSX.Element> = {
   'aluminum-brass-steel-titanium-corporate-gifts': Article1Content,
   'laser-engraving-vs-color-printing-corporate-gifts': Article2Content,
   'how-to-order-custom-corporate-gifts-from-china': Article3Content,
   'corporate-gift-lead-times-china-planning-guide': Article4Content,
   'what-makes-a-corporate-gift-worth-keeping': Article6Content,
+  'discreet-branding-corporate-gifts-smaller-logos': Article7Content,
   'metal-surface-finishes-corporate-gifts': Article8Content,
 }
 
