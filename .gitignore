@@ -14,6 +14,9 @@ dist-ssr
 __unconfig*
 todos.json
 
+# Local agent skills
+agent-skills/export-customer-development/
+
 # Media files — hosted on Cloudinary, not committed to Git
 *.mp4
 *.mov

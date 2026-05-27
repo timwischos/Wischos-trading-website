@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as Char123LocaleChar125RouteImport } from './routes/{-$locale}'
 import { Route as ThankYouRouteImport } from './routes/thank-you'
 import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as ForDistributorsRouteImport } from './routes/for-distributors'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as Char123LocaleChar125GiftSetsRouteImport } from './routes/{-$locale}/gift-sets'
 import { Route as Char123LocaleChar125FaqRouteImport } from './routes/{-$locale}/faq'
@@ -40,6 +41,11 @@ const ThankYouRoute = ThankYouRouteImport.update({
 const PrivacyRoute = PrivacyRouteImport.update({
   id: '/privacy',
   path: '/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ForDistributorsRoute = ForDistributorsRouteImport.update({
+  id: '/for-distributors',
+  path: '/for-distributors',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -126,6 +132,7 @@ const Char123LocaleChar125BlogSlugRoute =
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/for-distributors': typeof ForDistributorsRoute
   '/privacy': typeof PrivacyRoute
   '/thank-you': typeof ThankYouRoute
   '/{-$locale}': typeof Char123LocaleChar125RouteWithChildren
@@ -145,6 +152,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/for-distributors': typeof ForDistributorsRoute
   '/privacy': typeof PrivacyRoute
   '/thank-you': typeof ThankYouRoute
   '/{-$locale}': typeof Char123LocaleChar125RouteWithChildren
@@ -163,6 +171,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/for-distributors': typeof ForDistributorsRoute
   '/privacy': typeof PrivacyRoute
   '/thank-you': typeof ThankYouRoute
   '/{-$locale}': typeof Char123LocaleChar125RouteWithChildren
@@ -184,6 +193,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/for-distributors'
     | '/privacy'
     | '/thank-you'
     | '/{-$locale}'
@@ -203,6 +213,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/for-distributors'
     | '/privacy'
     | '/thank-you'
     | '/{-$locale}'
@@ -220,6 +231,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/for-distributors'
     | '/privacy'
     | '/thank-you'
     | '/{-$locale}'
@@ -240,6 +252,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ForDistributorsRoute: typeof ForDistributorsRoute
   PrivacyRoute: typeof PrivacyRoute
   ThankYouRoute: typeof ThankYouRoute
   Char123LocaleChar125Route: typeof Char123LocaleChar125RouteWithChildren
@@ -268,6 +281,13 @@ declare module '@tanstack/react-router' {
       path: '/privacy'
       fullPath: '/privacy'
       preLoaderRoute: typeof PrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/for-distributors': {
+      id: '/for-distributors'
+      path: '/for-distributors'
+      fullPath: '/for-distributors'
+      preLoaderRoute: typeof ForDistributorsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -433,6 +453,7 @@ const Char123LocaleChar125RouteWithChildren =
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ForDistributorsRoute: ForDistributorsRoute,
   PrivacyRoute: PrivacyRoute,
   ThankYouRoute: ThankYouRoute,
   Char123LocaleChar125Route: Char123LocaleChar125RouteWithChildren,
