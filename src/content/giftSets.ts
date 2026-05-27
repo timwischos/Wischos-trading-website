@@ -48,14 +48,14 @@ export const giftSetPageContent: GiftSetPageContent = {
       "bestFor": "Desk visibility",
       "coreUseCase": "Writing, opening mail, bookmark display",
       "materials": "Anodised aluminium",
-      "packaging": "Magnetic rigid gift box"
+      "packaging": "Drawer rigid gift box"
     },
     {
       "giftSet": "WGS-002 The Mechanical Desk",
       "bestFor": "Executive desk use",
       "coreUseCase": "Writing, opening mail, holding a device",
       "materials": "Solid brass, anodised aluminium",
-      "packaging": "Drawer rigid gift box"
+      "packaging": "Magnetic rigid gift box"
     },
     {
       "giftSet": "WGS-003 The Pocket Three",
@@ -152,7 +152,7 @@ export const giftSets: GiftSet[] = [
       { sku: 'WP-205', name: 'Precision Custom Metal Bookmark', productId: 'wp-205-precision-custom-metal-bookmark', imageIndex: 3 },
     ],
     targetBuyer: 'SME corporate gifting, sustainability-conscious procurement, conference welcome packs, academic institutions',
-    packaging: 'Magnetic Rigid Gift Box + Flocked EVA Insert',
+    packaging: 'Drawer Rigid Gift Box + Flocked EVA Insert',
     cta: "Three visible desk tools for daily branded use.",
     fob: '$18–28',
     sourcingNotes: [
@@ -166,15 +166,15 @@ export const giftSets: GiftSet[] = [
       },
       {
         title: "What the standard packaging delivers",
-        body: "The set ships in a magnetic rigid gift box with a flocked EVA insert. The box core is high-density greyboard wrapped in matte art paper — firm edges, no flex. Each component sits in a precision-cut recess in the flocked EVA to help reduce movement in transit and keep metal surfaces separated. The packaging carries presentation weight before the products are removed.",
+        body: "The set ships in a drawer rigid gift box with a flocked EVA insert. The outer sleeve and inner drawer keep the presentation horizontal, with each component placed in its own recess. The format suits a set built around movement and interaction: slide open, view all three pieces at once, and remove each one in sequence.",
       },
       {
         title: "Logo on the box",
-        body: "On a matte art-paper surface, hot foil stamping — gold, silver, or copper — creates strong contrast and holds well under normal handling. The foil is applied under heat and pressure to resist peeling in regular use. For a quieter finish, blind debossing presses the logo into the surface for a tone-on-tone tactile mark. Both methods work on the lid face and can be applied to the box sides.",
+        body: "On a matte art-paper sleeve, hot foil stamping gives the logo strong contrast. Blind debossing is the quieter option, pressing the mark into the paper surface without metallic foil. Both methods work on the sleeve face and side panels.",
       },
       {
         title: "Upgrade options",
-        body: "Two upgrades are available on request. Soft-touch lamination replaces the standard matte surface with a velvet-feel coating. A printed interior liner turns the first moment of opening into a brand touchpoint: a welcome message, brand message, or QR code to an onboarding resource. If you have specific requirements for the packaging, let us know when you reach out — we source to brief.",
+        body: "A wood sleeve in paulownia or walnut is available on request. Soft-touch lamination is also available for buyers who want a smoother exterior finish on the standard drawer box. If you have specific requirements for the packaging, let us know when you reach out — we source to brief.",
       },
     ],
     coverImage: '/products/WGS-001-3-The-Desk-Starter/The-Desk-Starter-cover.avif',
@@ -213,7 +213,7 @@ export const giftSets: GiftSet[] = [
       { sku: 'WP-208', name: 'Precision Folding Aluminium Device Stand', productId: 'wp-208-precision-folding-aluminium-device-stand', imageIndex: 3 },
     ],
     targetBuyer: 'Design studios, creative agencies, technology companies, architecture firms, consulting companies, executive thank-you gifts',
-    packaging: 'Drawer Rigid Gift Box + Flocked EVA Insert',
+    packaging: 'Magnetic Rigid Gift Box + Flocked EVA Insert',
     cta: "Three mechanical desk tools built for hands-on work.",
     fob: '$28–42',
     sourcingNotes: [
@@ -227,15 +227,15 @@ export const giftSets: GiftSet[] = [
       },
       {
         title: "What the standard packaging delivers",
-        body: "The set ships in a drawer rigid gift box with a flocked EVA insert. The outer sleeve and inner drawer keep the presentation horizontal, with each component placed in its own recess. The format suits a set built around movement and interaction: slide open, view all three pieces at once, and remove each one in sequence.",
+        body: "The set ships in a magnetic rigid gift box with a flocked EVA insert. The box core is high-density greyboard wrapped in matte art paper — firm edges, no flex. Each component sits in a precision-cut recess in the flocked EVA to help reduce movement in transit and keep metal surfaces separated. The packaging carries presentation weight before the products are removed.",
       },
       {
         title: "Logo on the box",
-        body: "On a matte art-paper sleeve, hot foil stamping gives the logo strong contrast. Blind debossing is the quieter option, pressing the mark into the paper surface without metallic foil. Both methods work on the sleeve face and side panels.",
+        body: "On a matte art-paper surface, hot foil stamping — gold, silver, or copper — creates strong contrast and holds well under normal handling. The foil is applied under heat and pressure to resist peeling in regular use. For a quieter finish, blind debossing presses the logo into the surface for a tone-on-tone tactile mark. Both methods work on the lid face and can be applied to the box sides.",
       },
       {
         title: "Available packaging upgrades",
-        body: "A wood sleeve in paulownia or walnut is available on request for executive gifting. Soft-touch lamination is also available for buyers who want a smoother exterior finish on the standard drawer box.",
+        body: "Two upgrades are available on request. Soft-touch lamination replaces the standard matte surface with a velvet-feel coating. A printed interior liner turns the first moment of opening into a brand touchpoint: a welcome message, brand message, or QR code to an onboarding resource. If you have specific requirements for the packaging, let us know when you reach out — we source to brief.",
       },
     ],
     coverImage: '/products/WGS-002-3-The-Mechanical-Desk/The-Mechanical-Desk-cover.avif',
