@@ -8,6 +8,8 @@ export const inquiries = pgTable('inquiries', {
   email: varchar('email', { length: 255 }).notNull(),
   phone: varchar('phone', { length: 50 }),
   productInterest: text('product_interest'),
+  destinationCountry: varchar('destination_country', { length: 100 }),
+  incoterm: varchar('incoterm', { length: 50 }),
   quantity: varchar('quantity', { length: 100 }),
   timeline: varchar('timeline', { length: 255 }),
   message: text('message'),

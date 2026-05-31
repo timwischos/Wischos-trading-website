@@ -7,6 +7,8 @@ export interface InquiryEmailProps {
   email: string
   phone?: string
   productInterest?: string
+  destinationCountry?: string
+  incoterm?: string
   quantity?: string
   timeline?: string
   message?: string
@@ -20,6 +22,8 @@ export function InquiryEmail({
   email,
   phone,
   productInterest,
+  destinationCountry,
+  incoterm,
   quantity,
   timeline,
   message,
@@ -55,6 +59,16 @@ export function InquiryEmail({
           {productInterest ? (
             <Text>
               <strong>Product Interest:</strong> {productInterest}
+            </Text>
+          ) : null}
+          {destinationCountry ? (
+            <Text>
+              <strong>Destination Country:</strong> {destinationCountry}
+            </Text>
+          ) : null}
+          {incoterm ? (
+            <Text>
+              <strong>Quotation Type:</strong> {incoterm}
             </Text>
           ) : null}
           {quantity ? (

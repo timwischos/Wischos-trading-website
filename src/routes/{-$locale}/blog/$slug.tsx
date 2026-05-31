@@ -483,7 +483,7 @@ function Article4Content() {
       </ol>
       <h2 style={prose.h2}>Frequently Asked Questions</h2>
       <p style={{ ...prose.p, fontWeight: 600, color: '#1a1a1a', marginBottom: '0.4rem' }}>How long do premium metal corporate gifts from China take to arrive?</p>
-      <p style={prose.p}>The full timeline from order confirmation to delivery is 7–9 weeks via air freight. This covers supplier confirmation, sample production and approval (2–3 weeks), bulk production (20–35 days), final assembly and QC, and international shipping to Australia, the UK, Canada, or Europe.</p>
+      <p style={prose.p}>The full timeline from order confirmation to delivery is 7–9 weeks via air freight. This covers supplier confirmation, sample production and approval (2–3 weeks), bulk production (20–35 days), final assembly and QC, and international shipping to Australia, New Zealand, Singapore, the UAE, or other primary destinations.</p>
       <p style={{ ...prose.p, fontWeight: 600, color: '#1a1a1a', marginBottom: '0.4rem' }}>When should I place my order for Q4 year-end gifting?</p>
       <p style={prose.p}>For Christmas or year-end delivery, confirm your order by July at the latest. Q4 is peak season — high-end CNC machining lines fill up early, and July orders give you a meaningful safety buffer against production delays or quality revision rounds.</p>
       <p style={{ ...prose.p, fontWeight: 600, color: '#1a1a1a', marginBottom: '0.4rem' }}>How does Chinese New Year affect corporate gift lead times?</p>
@@ -512,7 +512,7 @@ function Article6Content() {
         The question worth asking before any programme is designed isn't "what should we give?" but a more demanding one: <em>what do people actually keep, and why?</em>
       </p>
       <p style={prose.p}>
-        After sourcing custom metal gift sets for corporate programmes across Australia, Europe, and Canada, the answer is consistently the same: recipients keep things that are genuinely useful, feel good in the hand, and don't look like walking advertisements.
+        After sourcing custom metal gift sets for corporate programmes across Australia, New Zealand, Singapore, and the UAE, the answer is consistently the same: recipients keep things that are genuinely useful, feel good in the hand, and don't look like walking advertisements.
       </p>
 
       <h2 style={prose.h2}>The Desk Drawer Test</h2>
@@ -610,7 +610,7 @@ function Article6Content() {
       <p style={prose.p}>One premium item that earns daily use consistently outperforms five that don't. Spreading budget across volume reduces per-item impact. Concentrating per-unit spend on something genuinely worth keeping typically produces better relationship outcomes and better brand recall over time.</p>
 
       <div style={prose.callout}>
-        Wischos Gift sources and curates custom metal corporate gift sets for procurement and brand managers in Australia, Europe, and Canada. If you're planning a programme and want a recommendation based on your recipient profile and timeline,{' '}
+        Wischos Gift sources and curates custom metal corporate gift sets for procurement and brand managers in Australia, New Zealand, Singapore, the UAE, and other primary destinations. If you're planning a programme and want a recommendation based on your recipient profile and timeline,{' '}
         <Link to={'/contact' as RouterTo} style={prose.inlineLink}>get in touch</Link>.
       </div>
     </div>

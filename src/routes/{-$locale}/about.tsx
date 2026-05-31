@@ -5,6 +5,7 @@ import { WhyUsSection } from '@/components/sections/WhyUsSection'
 import { ExpertiseSection } from '@/components/sections/ExpertiseSection'
 import { ProcessStepsSection } from '@/components/sections/ProcessStepsSection'
 import { CtaSection } from '@/components/sections/CtaSection'
+import { about } from '@/content/about'
 
 export const Route = createFileRoute('/{-$locale}/about')({
   head: () => ({
@@ -28,6 +29,24 @@ function AboutPage() {
     <>
       <AboutHeroSection />
       <WhyUsSection />
+
+      {/* Why Metal-Only — specialist positioning */}
+      <section style={{ borderTop: '1px solid var(--grid-color)', background: '#fff', padding: 'clamp(3rem, 6vw, 5rem) 2rem' }}>
+        <div style={{ maxWidth: '780px', margin: '0 auto' }}>
+          <p style={{ fontSize: '0.72rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: '#B87333', fontWeight: 600, marginBottom: '1.25rem' }}>
+            {about.metalOnly.kicker}
+          </p>
+          <h2 style={{ fontSize: 'clamp(1.6rem, 3.2vw, 2.4rem)', fontWeight: 300, lineHeight: 1.2, marginBottom: '2rem', color: '#0a0a0a', maxWidth: '24ch' }}>
+            {about.metalOnly.heading}
+          </h2>
+          {about.metalOnly.paragraphs.map((para, i) => (
+            <p key={i} style={{ fontSize: '1rem', color: '#3a3a3a', lineHeight: 1.8, marginBottom: '1.25rem' }}>
+              {para}
+            </p>
+          ))}
+        </div>
+      </section>
+
       <ExpertiseSection />
 
       <div style={{ background: '#0a0a0a', padding: '2.5rem 2rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '2rem', flexWrap: 'wrap', borderBottom: '1px solid var(--grid-color)' }}>

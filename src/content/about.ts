@@ -53,6 +53,17 @@ export const about = {
   },
   mission: {
     heading: 'The Company',
-    body: 'We are a trading company, not a captive factory. That matters because custom gift sets rarely come from one production line. A brass pen, titanium tool, stainless steel drinkware item, aluminium desk accessory, and rigid gift box each require different manufacturing strengths. We work with long-term manufacturing partners across relevant gift categories and match each brief to the right production path based on material, finish, logo method, quantity, packaging, and timeline.',
+    body: 'We are a trading company, not a captive factory. That matters because custom gift sets rarely come from one production line. A brass pen, titanium tool, stainless steel drinkware item, aluminium desk accessory, a zinc alloy or copper component, and the rigid gift box around them each require different manufacturing strengths. We work with long-term manufacturing partners across the metal family and match each brief to the right production path based on material, finish, logo method, quantity, packaging, and timeline.',
+  },
+  metalOnly: {
+    kicker: 'Why Metal-Only',
+    heading: 'One material family. Five years of depth.',
+    paragraphs: [
+      'We don\'t carry leather wallets, fabric tote bags, paper notebooks, or plastic pens. We don\'t offer "anything you need from China." We only do metal — brass, titanium, stainless steel, aluminium, and the broader metal family including zinc alloys, copper, bronze, and other engineered alloys.',
+      'Five years of building one supplier network around the metal family means we know which factory can hold a 0.05mm tolerance on a brass keychain, which can do PVD coating on titanium without halo, which can engrave a zinc alloy casting without surface discoloration, and which packaging partner handles magnetic rigid boxes for fragile metal sets without scuff marks.',
+      'A generalist trader sourcing across 50 categories cannot tell you that. They can find a metal supplier — but they cannot tell you which one is right for your specific brief.',
+      'When something goes wrong on a metal program — wrong alloy specification, plating defect, engraving depth issue, packaging mismatch — we have seen it before, and we know whom to call.',
+      'That is the only meaningful difference between a specialist and a generalist sourcing partner.',
+    ],
   },
 } as const

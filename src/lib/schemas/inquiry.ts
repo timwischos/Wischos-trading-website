@@ -7,6 +7,8 @@ export const inquiryInsertSchema = z.object({
   email: z.string().email('Please enter a valid email address'),
   phone: z.string().optional(),
   productInterest: z.string().optional(),
+  destinationCountry: z.string().optional(),
+  incoterm: z.string().optional(),
   quantity: z.string().optional(),
   timeline: z.string().optional(),
   message: z.string().optional(),

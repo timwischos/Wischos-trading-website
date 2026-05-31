@@ -20,7 +20,7 @@ const faqItems = [
   {
     question: 'How long does production take?',
     answer:
-      'Custom samples take 7–10 business days to produce. Bulk orders take 25–35 days in production after sample approval and deposit receipt. Shipping to Australia and EU adds 5–15 days by sea freight or 3–5 days by air express.',
+      'Custom samples take 7–10 business days to produce. Bulk orders take 25–35 days in production after sample approval and deposit receipt. Shipping adds 5–10 days by air express, or 10–28 days by sea freight depending on destination.',
   },
   {
     question: 'What are the payment terms?',
@@ -35,7 +35,7 @@ const faqItems = [
   {
     question: 'Which countries do you ship to?',
     answer:
-      'We regularly ship to Australia, New Zealand, EU countries (Netherlands, Germany, UK, France), Singapore, South Korea, and Japan. Other destinations are available on request — contact us with your location and we will confirm shipping options and lead times.',
+      'We regularly ship to Australia, New Zealand, Singapore, the UAE, Hong Kong, the UK, and Switzerland. Other destinations are available on request — contact us with your location and we will confirm shipping options, applicable trade agreements, and lead times.',
   },
   {
     question: 'How is quality checked before shipment?',

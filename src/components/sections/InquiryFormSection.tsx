@@ -33,6 +33,25 @@ const PRODUCT_OPTIONS = [
   { value: 'Other / Multiple Products', label: 'Other / Multiple Products' },
 ]
 
+const DESTINATION_OPTIONS = [
+  { value: 'Australia', label: 'Australia' },
+  { value: 'New Zealand', label: 'New Zealand' },
+  { value: 'Singapore', label: 'Singapore' },
+  { value: 'United Arab Emirates', label: 'United Arab Emirates' },
+  { value: 'Hong Kong', label: 'Hong Kong' },
+  { value: 'Saudi Arabia', label: 'Saudi Arabia' },
+  { value: 'Switzerland', label: 'Switzerland' },
+  { value: 'United Kingdom', label: 'United Kingdom' },
+  { value: 'Other', label: 'Other (specify in message)' },
+]
+
+const INCOTERM_OPTIONS = [
+  { value: 'Not Sure', label: 'Not sure — advise me' },
+  { value: 'FOB China', label: 'FOB China (I arrange freight)' },
+  { value: 'CIF Port', label: 'CIF [destination port]' },
+  { value: 'DDP Door', label: 'DDP (delivered duty paid to door)' },
+]
+
 export function InquiryFormSection() {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const search = useSearch({ strict: false }) as any
@@ -64,6 +83,8 @@ export function InquiryFormSection() {
       email: '',
       phone: '',
       productInterest: initialProduct,
+      destinationCountry: '',
+      incoterm: '',
       quantity: '',
       timeline: '',
       message: '',
@@ -207,6 +228,54 @@ export function InquiryFormSection() {
                 </SelectTrigger>
                 <SelectContent>
                   {PRODUCT_OPTIONS.map((opt) => (
+                    <SelectItem key={opt.value} value={opt.value}>
+                      {opt.label}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
+          )}
+        </form.Field>
+
+        {/* Destination Country */}
+        <form.Field name="destinationCountry">
+          {(field) => (
+            <div className="space-y-1">
+              <Label>Destination Country</Label>
+              <Select
+                value={field.state.value}
+                onValueChange={(val) => field.handleChange(val)}
+              >
+                <SelectTrigger>
+                  <SelectValue placeholder="Where should the order ship to?" />
+                </SelectTrigger>
+                <SelectContent>
+                  {DESTINATION_OPTIONS.map((opt) => (
+                    <SelectItem key={opt.value} value={opt.value}>
+                      {opt.label}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
+          )}
+        </form.Field>
+
+        {/* Incoterm Preference */}
+        <form.Field name="incoterm">
+          {(field) => (
+            <div className="space-y-1">
+              <Label>Quotation Type</Label>
+              <Select
+                value={field.state.value}
+                onValueChange={(val) => field.handleChange(val)}
+              >
+                <SelectTrigger>
+                  <SelectValue placeholder="How should we quote? (FOB / CIF / DDP)" />
+                </SelectTrigger>
+                <SelectContent>
+                  {INCOTERM_OPTIONS.map((opt) => (
                     <SelectItem key={opt.value} value={opt.value}>
                       {opt.label}
                     </SelectItem>

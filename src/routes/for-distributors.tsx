@@ -29,7 +29,7 @@ export const Route = createFileRoute('/for-distributors')({
               name: 'Wischos Gift',
               url: 'https://wischosgift.com',
             },
-            areaServed: ['AU', 'GB', 'CA', 'EU'],
+            areaServed: ['AU', 'NZ', 'SG', 'AE', 'HK', 'GB'],
             description:
               'Custom metal gift sets built around your client brief. White-label, clear material specs, sales materials included. China-based sourcing, 25–35 day lead time.',
           },
@@ -171,20 +171,20 @@ function DistributorPage() {
         }}>
           {[
             {
-              title: 'Your client relationship stays yours',
-              body: "We don't contact your end clients directly. All communication goes through you. Quotes and spec sheets are yours to use in your own proposals.",
+              title: 'One contact from brief to shipment',
+              body: 'No coordinating across product suppliers, packaging vendors, logo processors, and freight forwarders. One Wischos contact owns the brief through quotation, sampling, production updates, QC, and shipment confirmation.',
             },
             {
-              title: 'Bring any brief',
-              body: 'You can work with us across multiple client briefs. We treat each project separately and recommend the right direction per brief.',
+              title: 'Your client relationship stays yours',
+              body: "We don't contact your end clients directly. All communication goes through you. Quotes and spec sheets are yours to use in your own proposals.",
             },
             {
               title: 'White-label as standard',
               body: "Wischos branding does not appear on products or packaging unless you request it. Every set leaves with your client's identity, not ours.",
             },
             {
-              title: 'Sales materials included',
-              body: 'Each quote comes with clear material specs, product dimensions, and imagery your team can use directly in client presentations.',
+              title: 'Material specs that match procurement requirements',
+              body: 'Quotes include accurate material descriptions, dimensions, finish details, and imagery — written for your team to drop directly into client proposals or procurement submissions.',
             },
           ].map((item) => (
             <div key={item.title}>
@@ -211,7 +211,7 @@ function DistributorPage() {
           {[
             {
               label: 'Materials',
-              body: "Brass, titanium, stainless steel, aluminium — each stated clearly, no vague 'premium metal' language. Your client's procurement brief can quote the spec directly.",
+              body: "Brass, titanium, stainless steel, aluminium, and other metal alloys (zinc, copper, bronze on request) — each stated clearly, no vague 'premium metal' language. Your client's procurement brief can quote the spec directly.",
             },
             {
               label: 'Price tiers',

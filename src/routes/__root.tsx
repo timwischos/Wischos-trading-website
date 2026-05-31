@@ -60,7 +60,7 @@ const organizationJsonLd = {
   email: siteMeta.email,
   description: siteMeta.defaultDescription,
   foundingDate: '2024',
-  areaServed: ['AU', 'EU', 'SG', 'KR', 'JP'],
+  areaServed: ['AU', 'NZ', 'SG', 'AE', 'HK', 'SA', 'CH', 'GB'],
   contactPoint: {
     '@type': 'ContactPoint',
     contactType: 'sales',

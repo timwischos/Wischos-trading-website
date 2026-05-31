@@ -13,4 +13,11 @@ export const contactContent = {
   companyName: 'Anhui Wischos International Trading Co. Ltd',
   addressLabel: 'Address',
   address: 'Room 1125, Office Building No., Baizhuang Fortune Plaza, Jiujiang District, Wuhu City, Anhui Province, China',
+  // Trust signals for footer / sidebar
+  trust: {
+    languages: 'English · 中文 (Mandarin)',
+    responseWindow: '24-hour response during your business day',
+    payment: 'T/T bank transfer · Wise · USD / CNY / HKD / SGD accepted',
+    documentation: 'FTA Certificate of Origin included where applicable',
+  },
 } as const

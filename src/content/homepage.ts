@@ -1,9 +1,9 @@
 export const homepage = {
   hero: {
-    kicker: 'B2B Metal Gift Sourcing & Set Development',
-    headline: 'Metal gift sets built for distributors, agencies, and corporate buyers.',
+    kicker: 'Custom Metal Gift Sets · China Sourcing Specialist',
+    headline: 'Metal gift sets your client will actually keep.',
     subheadline:
-      'Curated products, verified material claims, logo-ready customization, and managed China sourcing in one accountable process.',
+      'Across the metal family — brass, titanium, stainless steel, aluminium, and beyond — curated into sellable sets, customized to your brief. 25–35 day production, one accountable contact.',
     cta: 'Send an Inquiry',
   },
   valueProps: {

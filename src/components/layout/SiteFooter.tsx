@@ -14,6 +14,7 @@ const productCategories = [
 const companyLinks = [
   { label: 'About', href: '/about' },
   { label: 'How It Works', href: '/about#how-it-works' },
+  { label: 'Duty & Shipping', href: '/duty-and-shipping' },
   { label: 'FAQ', href: '/faq' },
   { label: 'Contact', href: '/contact' },
   { label: 'Privacy Policy', href: '/privacy' },
@@ -140,6 +141,24 @@ export function SiteFooter() {
             </Link>
           ))}
         </div>
+      </div>
+
+      {/* Trust strip — practical signals for B2B buyers */}
+      <div style={{
+        borderTop: '1px solid var(--grid-color)',
+        padding: '1.25rem 2rem',
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
+        gap: '1rem',
+        background: '#fafafa',
+        fontSize: '0.72rem',
+        color: '#555',
+        letterSpacing: '0.02em',
+      }}>
+        <span><strong style={{ color: '#0a0a0a' }}>Languages:</strong> English · 中文</span>
+        <span><strong style={{ color: '#0a0a0a' }}>Response:</strong> within 24h on your business day</span>
+        <span><strong style={{ color: '#0a0a0a' }}>Payment:</strong> T/T · Wise · USD / CNY / HKD / SGD</span>
+        <span><strong style={{ color: '#0a0a0a' }}>Documentation:</strong> FTA Certificate of Origin where applicable</span>
       </div>
 
       {/* Bottom bar */}
