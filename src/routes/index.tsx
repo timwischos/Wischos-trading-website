@@ -13,8 +13,8 @@ import { getProductsByIds } from '@/server/getProducts'
 const FEATURED_PRODUCT_IDS = [
   'wp-402-pure-titanium-capsule-bottle-150ml',
   'wp-308-titanium-edc-keychain',
-  'wp-405-ice-crystal-pure-titanium-egg-cup',
-  'wp-102-executive-dual-head-metal-pen',
+  'wp-101-brass-crown-bolt-action-pen',
+  'wp-206-precision-brass-spinning-top',
 ]
 
 export const Route = createFileRoute('/')({
