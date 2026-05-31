@@ -9,6 +9,8 @@ export interface GiftSet {
   id: string
   sku: string
   name: string
+  /** Procurement-language category for SEO and search visibility (e.g. "Executive Commute Gift Set") — paired with brand name */
+  procurementCategory: string
   tagline: string
   definition: string
   heroCopy: string
@@ -129,6 +131,7 @@ export const giftSets: GiftSet[] = [
     id: 'wgs-001-3-the-desk-starter',
     sku: 'WGS-001-3',
     name: 'The Desk Starter',
+    procurementCategory: 'Entry-Tier Desk Gift Set',
     tagline: "Three desk tools that stay in view.",
     definition: "The Desk Starter is a custom desk gift set for companies that want daily logo visibility on a working desk. It combines an inkless pen, letter opener, and metal bookmark in a branded gift box.",
     heroCopy: "A custom desk gift set built for daily branded visibility on the working desk. The inkless pen writes without cartridges or refills. The letter opener handles contracts, invoices, and mailed documents. The metal bookmark stands in a book with your brand logo on the face, visible across the desk through the day. All three pieces are anodised aluminium with laser engraving on the surface.",
@@ -190,6 +193,7 @@ export const giftSets: GiftSet[] = [
     id: 'wgs-002-3-the-mechanical-desk',
     sku: 'WGS-002-3',
     name: 'The Mechanical Desk',
+    procurementCategory: 'Executive Desk Gift Set',
     tagline: "Built for the desk, used with your hands.",
     definition: "The Mechanical Desk is a custom executive desk gift set built around three tactile actions: writing, opening mail, and holding a device at eye level. It suits clients, managers, and teams who use physical desk tools daily.",
     heroCopy: "A custom executive desk gift set built around three mechanical actions: writing, opening mail, and holding a device at eye level. The pen goes into meetings with a solid brass body and bolt-action click. The propeller letter opener handles letters, documents, and mail that land on the desk with a single finger spin. The aluminium stand raises a phone or tablet to eye level, opens quickly, and folds flat when not in use. Your brand can be laser-engraved on all three.",
@@ -251,6 +255,7 @@ export const giftSets: GiftSet[] = [
     id: 'wgs-003-3-the-pocket-three',
     sku: 'WGS-003-3',
     name: 'The Pocket Three',
+    procurementCategory: 'EDC Daily Carry Gift Set',
     tagline: "Everything in your pocket. Nothing you don't need.",
     definition: "The Pocket Three is a branded everyday carry gift set for teams that move between offices, sites, meetings, and travel. It combines key organization, card and cash carry, and a lightweight grooming tool.",
     heroCopy: "A branded everyday carry gift set built for teams that move between offices, meetings, travel, and daily work routines. The brass key organizer holds up to ten keys in a compact stack. The stainless steel money clip keeps cards and cash flat in one piece. The titanium comb is light, rigid, and made for office, travel, and daily carry use. Three metal tools that go straight into a pocket, bag, or work carry from day one.",
@@ -312,6 +317,7 @@ export const giftSets: GiftSet[] = [
     id: 'wgs-004-3-the-field-edc',
     sku: 'WGS-004-3',
     name: 'The Field EDC',
+    procurementCategory: 'Field Team Utility Gift Set',
     tagline: "Tools for teams that work beyond the desk.",
     definition: "The Field EDC is a utility corporate gift set for field service, logistics, construction, maintenance, and safety-focused teams. It combines writing, prying, and cutting tools in a compact carry format.",
     heroCopy: "A field team gift set for companies that issue practical tools to people working in physical environments. The tactical pen writes in daily use and includes a glass breaker for permitted workplace or vehicle emergency contexts. The mini pry bar handles opening, lifting, and light prying tasks on site. The folding scissors cut packaging, cable ties, and small materials, then fold flat for carry. Three compact tools selected for field service, logistics, construction, and safety-focused teams.",
@@ -373,6 +379,7 @@ export const giftSets: GiftSet[] = [
     id: 'wgs-005-3-the-morning-ritual',
     sku: 'WGS-005-3',
     name: 'The Morning Ritual',
+    procurementCategory: 'Executive Commute Gift Set',
     tagline: "From the morning bag to the working desk.",
     definition: "The Morning Ritual is a branded daily carry gift set for workdays that move from commute to desk to after-work use. It combines a titanium bottle, titanium keychain, and brass bolt-action pen.",
     heroCopy: "A branded daily carry gift set built around the movement from morning commute to desk work. The titanium capsule bottle carries water, tea, or coffee through the morning. The titanium keychain attaches to keys or a bag strap and includes a bottle opener. The solid brass bolt-action pen moves between desk and meeting use with a weighted click mechanism. Three metal objects for three different moments in the working day.",
@@ -434,6 +441,7 @@ export const giftSets: GiftSet[] = [
     id: 'wgs-006-3-the-first-day',
     sku: 'WGS-006-3',
     name: 'The First Day',
+    procurementCategory: 'New Employee Onboarding Kit',
     tagline: "Built for the first day at work.",
     definition: "The First Day is an employee onboarding gift set for new hire welcome kits. It supports first-day access, desk setup, note-taking, and branded desk presence from the employee's first week.",
     heroCopy: "A custom employee onboarding gift set built for first-day access, desk setup, and daily branded use. The aluminium access card holder covers access from the first door entry. The 6-in-1 tool pen moves into meetings, desk setup, and note-taking through the first week. The aluminium pen holder gives the new desk a permanent place for a branded writing tool. Three metal pieces selected for arrival, setup, and daily use from day one.",
@@ -495,6 +503,7 @@ export const giftSets: GiftSet[] = [
     id: 'wgs-007-3-the-thinking-desk',
     sku: 'WGS-007-3',
     name: 'The Thinking Desk',
+    procurementCategory: 'Client Appreciation Gift Set',
     tagline: "For desks where ideas, meetings, and long sessions happen.",
     definition: "The Thinking Desk is an executive desk gift set for long desk sessions, client appreciation, and focused work. It combines a brass rollerball, brass spinning top, and stainless steel desk cup.",
     heroCopy: "A custom executive desk gift set for desks where ideas, meetings, and long working sessions happen in the same place. The brass rollerball writes with weight and balance for everyday desk use. The precision brass spinning top adds a tactile desk object that stays within reach during calls, pauses, and thinking time. The double-wall stainless steel desk cup holds a drink on the desk without transferring heat directly to the hand. Three desk objects, each with a different role in the working day.",
@@ -563,6 +572,7 @@ export const giftSets: GiftSet[] = [
     id: 'wgs-008-4-the-quartet',
     sku: 'WGS-008-4',
     name: 'The Quartet',
+    procurementCategory: 'VIP Executive Gift Set',
     tagline: 'Ready before the first meeting.',
     definition: 'The Quartet (WGS-008) is a four-piece engraved executive corporate gift set for client-facing professionals. It combines a solid brass ballpoint pen, titanium tea infuser business cup, folding aluminium device stand, and slim push stainless steel business card case in a magnetic rigid gift box.',
     heroCopy: 'A four-piece custom metal gift set built for executive desk use, client meetings, and workdays that move between spaces. The solid brass ballpoint pen handles signatures and daily writing. The titanium tea infuser business cup holds warm drinks at the desk and in the meeting room. The folding aluminium device stand keeps a phone or tablet at eye level when the work surface is occupied. The stainless steel business card case presents a card at the start of a meeting without opening a wallet or a lid. All four pieces support laser engraving for company logos. Four metals — brass, titanium, aluminium, stainless steel — each assigned to a different part of the professional day.',

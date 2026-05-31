@@ -41,6 +41,7 @@ export const Route = createFileRoute('/{-$locale}/blog/$slug')({
             headline: post.title,
             description: post.metaDescription,
             image: post.heroImage,
+            inLanguage: 'en',
             datePublished: post.isoDate,
             dateModified: post.isoDate,
             author: {
@@ -59,6 +60,64 @@ export const Route = createFileRoute('/{-$locale}/blog/$slug')({
             },
           }),
         },
+        // HowTo schema for the "How to Order" guide article
+        ...(post.slug === 'how-to-order-custom-corporate-gifts-from-china'
+          ? [{
+              type: 'application/ld+json',
+              children: JSON.stringify({
+                '@context': 'https://schema.org',
+                '@type': 'HowTo',
+                name: 'How to Order Custom Metal Corporate Gifts from China',
+                description: 'Step-by-step guide for procurement teams, distributors, and corporate buyers to source custom-branded metal gift sets from China.',
+                inLanguage: 'en',
+                totalTime: 'P60D',
+                estimatedCost: {
+                  '@type': 'MonetaryAmount',
+                  currency: 'USD',
+                  value: '14-58',
+                },
+                supply: [
+                  { '@type': 'HowToSupply', name: 'Recipient profile and target quantity' },
+                  { '@type': 'HowToSupply', name: 'Logo files (vector preferred)' },
+                  { '@type': 'HowToSupply', name: 'Target budget and timeline' },
+                  { '@type': 'HowToSupply', name: 'Destination country and Incoterm preference' },
+                ],
+                step: [
+                  {
+                    '@type': 'HowToStep',
+                    name: 'Submit an inquiry with your brief',
+                    text: 'Send recipient profile, quantity range, target budget, branding requirements, destination country, and delivery timeline through the inquiry form or email. We respond within 1–2 business days.',
+                    url: 'https://wischosgift.com/contact',
+                  },
+                  {
+                    '@type': 'HowToStep',
+                    name: 'Receive set recommendation and indicative quotation',
+                    text: 'We recommend a set direction (existing catalog or custom), confirm material and packaging configuration, and provide indicative FOB pricing or CIF/DDP landed cost depending on your Incoterm preference.',
+                  },
+                  {
+                    '@type': 'HowToStep',
+                    name: 'Approve samples',
+                    text: 'Custom samples with your logo applied take 7–10 working days and are couriered to your destination in 4–7 days via DHL/FedEx. We do not start bulk production without your written sample approval.',
+                  },
+                  {
+                    '@type': 'HowToStep',
+                    name: 'Pay deposit and start production',
+                    text: 'Pay 30% deposit via T/T or Wise (USD, CNY, HKD, SGD accepted). Bulk production runs 25–35 days including logo application, packaging assembly, and pre-shipment QC.',
+                  },
+                  {
+                    '@type': 'HowToStep',
+                    name: 'Receive pre-shipment QC photos and FTA documentation',
+                    text: 'We send pre-shipment QC photos and video for your approval, arrange the relevant FTA Certificate of Origin (ChAFTA, NZ–China FTA, CSFTA, China–Switzerland FTA, CEPA where applicable), and prepare commercial invoice and packing list.',
+                  },
+                  {
+                    '@type': 'HowToStep',
+                    name: 'Pay balance and ship',
+                    text: 'Pay 70% balance before shipment. Goods ship via sea freight (5–28 days depending on destination) or air express (2–7 days). We coordinate with your freight forwarder or arrange shipment on DDP terms.',
+                  },
+                ],
+              }),
+            }]
+          : []),
       ],
     }
   },

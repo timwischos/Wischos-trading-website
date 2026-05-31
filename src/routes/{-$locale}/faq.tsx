@@ -42,6 +42,36 @@ const faqItems = [
     answer:
       'We conduct a pre-shipment inspection at the factory before goods are packed for export. We send photos and video of randomly selected samples for your review and approval. Third-party inspection by an independent agency is also available on request.',
   },
+  {
+    question: 'What is the best gift set for new employee onboarding?',
+    answer:
+      'For new employee onboarding kits, WGS-006 The First Day is our purpose-built option. It includes an RFID aluminium badge holder for daily building access, a 6-in-1 metal tool pen for desk setup and meetings, and an aluminium pen holder for permanent desk presence. Typical configuration runs 50–500 sets per quarterly intake. The set ships in a rigid lid gift box suitable for HR welcome programs and onboarding day handouts.',
+  },
+  {
+    question: 'What is the best gift set for VIP and executive clients?',
+    answer:
+      'For VIP and board-level executive gifting, WGS-008 The Quartet is our top-tier four-piece option in the existing catalog (FOB USD 44–58). It pairs a solid brass ballpoint pen, slim push stainless steel business card case, folding aluminium device stand, and titanium tea infuser business cup — four metals for four parts of the executive day. For higher-tier government engagement and board-level appreciation, our WGS-011 The Boardroom 5-piece set (in development) adds a premium brass fountain pen and engraved brass paperweight.',
+  },
+  {
+    question: 'What is the best branded drinkware gift for corporate hydration programs?',
+    answer:
+      'For drinkware-focused programs, we are launching WGS-010 The Hydration — a three-piece set covering a 30oz (880ml) insulated tumbler with handle, a 500ml carry bottle, and the existing pure titanium 150ml capsule bottle. All vessels are 304 stainless steel or pure titanium, no plastic, no coatings. Ships under ChAFTA for duty-free entry into Australia. Standalone drinkware single-item programs are also supported via WP-402, WP-407, and WP-408 in the current catalog.',
+  },
+  {
+    question: 'Can you support distributor wholesale programs with white-label production?',
+    answer:
+      'Yes. White-label production is our standard. The Wischos name does not appear on products, packaging, or fulfilment documents unless you request it. Quotes, spec sheets, and product photography are yours to use directly in client proposals. We work with distributors across multiple client briefs simultaneously and handle each project as a separate engagement.',
+  },
+  {
+    question: 'Can you accommodate Singapore MNC gift budgets at SGD 100–300 per recipient?',
+    answer:
+      'Yes. Singapore MNC budget tiers are well-served by our existing range: employee gifts at SGD 50–100 per recipient align with WGS-001 The Desk Starter or WGS-003 The Pocket Three; client gifts at SGD 200–300 align with WGS-005 The Morning Ritual or WGS-007 The Thinking Desk; VIP client gifts at SGD 300+ align with WGS-008 The Quartet. CSFTA Form X is included for duty-free entry into Singapore.',
+  },
+  {
+    question: 'How do FTA Certificates of Origin work and what do you provide?',
+    answer:
+      'We arrange the relevant FTA Certificate of Origin through CCPIT or Chinese Customs for every qualifying shipment at no additional charge. ChAFTA Certificate of Origin for Australia, NZ–China FTA Certificate for New Zealand, Form X for Singapore (CSFTA), CEPA Certificate for Hong Kong, and China–Switzerland FTA Certificate for Switzerland — these enable duty-free preferential entry on covered tariff lines. Processing adds 1–3 working days to outbound documentation. Full reference table is available on our Duty, Shipping & FTA Coverage page.',
+  },
 ]
 
 export const Route = createFileRoute('/{-$locale}/faq')({

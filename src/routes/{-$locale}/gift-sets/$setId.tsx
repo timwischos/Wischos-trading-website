@@ -15,8 +15,8 @@ export const Route = createFileRoute('/{-$locale}/gift-sets/$setId')({
   head: ({ loaderData }) => {
     if (!loaderData?.set) return {}
     const { set } = loaderData
-    const title = `${set.name} — Custom Metal Corporate Gift Set`
-    const description = set.definition.slice(0, 155)
+    const title = `${set.procurementCategory} — ${set.name} | Wischos Gift`
+    const description = `${set.procurementCategory}. ${set.definition.slice(0, 155 - set.procurementCategory.length - 2)}`
     return {
       meta: [
         { title },
@@ -37,6 +37,7 @@ export const Route = createFileRoute('/{-$locale}/gift-sets/$setId')({
             '@context': 'https://schema.org',
             '@type': 'Product',
             name: set.name,
+            alternateName: set.procurementCategory,
             description: set.definition,
             sku: set.sku,
             image: set.coverImage
@@ -187,9 +188,12 @@ function GiftSetDetailPage() {
 
           {/* Name + Tagline */}
           <div>
-            <h1 className="display-title" style={{ fontSize: 'clamp(1.75rem, 3vw, 2.5rem)', fontWeight: 300, lineHeight: 1.05, color: '#0a0a0a', marginBottom: '0.75rem' }}>
+            <h1 className="display-title" style={{ fontSize: 'clamp(1.75rem, 3vw, 2.5rem)', fontWeight: 300, lineHeight: 1.05, color: '#0a0a0a', marginBottom: '0.5rem' }}>
               {set.name}
             </h1>
+            <h2 style={{ fontSize: '0.78rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: '#B87333', fontWeight: 600, marginBottom: '0.85rem' }}>
+              {set.procurementCategory}
+            </h2>
             <p style={{ fontSize: '0.9rem', color: '#6b6b6b', fontStyle: 'italic', lineHeight: 1.6 }}>
               "{set.tagline}"
             </p>
