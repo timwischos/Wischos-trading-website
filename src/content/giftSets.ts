@@ -196,15 +196,15 @@ export const giftSets: GiftSet[] = [
     procurementCategory: 'Executive Desk Gift Set',
     tagline: "Built for the desk, used with your hands.",
     definition: "The Mechanical Desk is a custom executive desk gift set built around three tactile actions: writing, opening mail, and holding a device at eye level. It suits clients, managers, and teams who use physical desk tools daily.",
-    heroCopy: "A custom executive desk gift set built around three mechanical actions: writing, opening mail, and holding a device at eye level. The pen goes into meetings with a solid brass body and bolt-action click. The propeller letter opener handles letters, documents, and mail that land on the desk with a single finger spin. The aluminium stand raises a phone or tablet to eye level, opens quickly, and folds flat when not in use. Your brand can be laser-engraved on all three.",
+    heroCopy: "A custom executive desk gift set built around three mechanical actions: writing, opening mail, and holding a device at eye level. The pen goes into meetings with a brass crown, anodised aluminium body, and bolt-action click. The propeller letter opener handles letters, documents, and mail that land on the desk with a single finger spin. The aluminium stand raises a phone or tablet to eye level, opens quickly, and folds flat when not in use. Your brand can be laser-engraved on all three.",
     sellingPoints: [
       {
         title: "Three Mechanisms, Three Daily Functions",
         body: "The bolt-action pen clicks and writes. The propeller opener spins and opens mail. The stand folds and holds a device at eye level. Each mechanism is tied to a function used through the working day.",
       },
       {
-        title: "Solid Brass for the Pen and Opener",
-        body: "The pen and letter opener are solid brass, with the weight and surface change that come from regular handling. The material suits two objects that are picked up directly by hand.",
+        title: "Brass Crown Where Hands Meet It",
+        body: "The pen pairs a solid brass crown — the part your thumb rests on — with an anodised aluminium body and a bolt-action mechanism. The brass section darkens with daily use; the aluminium body holds its finish unchanged. The letter opener uses electroplated zinc alloy for a high-gloss desk finish that resists wear.",
       },
       {
         title: "Folding Aluminium Stand for Daily Device Use",
@@ -227,7 +227,7 @@ export const giftSets: GiftSet[] = [
       },
       {
         title: "Brass as a desk material",
-        body: "Solid brass changes with handling. Grip areas darken, edges stay brighter, and the surface develops character over time. On a desk set built around direct hand interaction, that material change becomes part of the long-term use experience.",
+        body: "The pen's brass crown develops surface character over time — the grip area darkens with daily contact, recording the day in tone. The aluminium body holds its anodised finish unchanged, and the zinc alloy letter opener retains its high-gloss plated surface. Brass is placed deliberately where the hand meets the object; aluminium and zinc handle the parts that need stability and finish consistency.",
       },
       {
         title: "What the standard packaging delivers",
@@ -382,15 +382,15 @@ export const giftSets: GiftSet[] = [
     procurementCategory: 'Executive Commute Gift Set',
     tagline: "From the morning bag to the working desk.",
     definition: "The Morning Ritual is a branded daily carry gift set for workdays that move from commute to desk to after-work use. It combines a titanium bottle, titanium keychain, and brass bolt-action pen.",
-    heroCopy: "A branded daily carry gift set built around the movement from morning commute to desk work. The titanium capsule bottle carries water, tea, or coffee through the morning. The titanium keychain attaches to keys or a bag strap and includes a bottle opener. The solid brass bolt-action pen moves between desk and meeting use with a weighted click mechanism. Three metal objects for three different moments in the working day.",
+    heroCopy: "A branded daily carry gift set built around the movement from morning commute to desk work. The titanium capsule bottle carries water, tea, or coffee through the morning. The titanium keychain attaches to keys or a bag strap and includes a bottle opener. The brass-crowned bolt-action pen — solid brass at the grip, anodised aluminium body — moves between desk and meeting use with a weighted click mechanism. Three metal objects for three different moments in the working day.",
     sellingPoints: [
       {
         title: "Titanium Bottle and Keychain",
         body: "The bottle and keychain use titanium for light carry and clean metal surfaces. One carries drinks through the day. The other attaches to keys or bags and adds a bottle-opening function in the same piece.",
       },
       {
-        title: "Solid Brass Bolt-Action Pen",
-        body: "The pen uses a solid brass body with a bolt-action mechanism and a weighted feel in hand. It is the desk piece in the set, but still moves easily into meeting use.",
+        title: "Brass-Crowned Bolt-Action Pen",
+        body: "The pen pairs a solid brass crown — the grip area your thumb rests on — with an anodised aluminium body and a bolt-action mechanism. The brass section adds the tactile weight and warm surface where the hand meets the pen, while the aluminium body keeps the overall weight pocket-friendly for daily carry. It is the desk piece in the set, but still moves easily into meeting use.",
       },
       {
         title: "Three Use Contexts in One Set",
