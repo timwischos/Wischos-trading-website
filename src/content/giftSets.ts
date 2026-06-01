@@ -134,15 +134,15 @@ export const giftSets: GiftSet[] = [
     procurementCategory: 'Entry-Tier Desk Gift Set',
     tagline: "Three desk tools that stay in view.",
     definition: "The Desk Starter is a custom desk gift set for companies that want daily logo visibility on a working desk. It combines an inkless pen, letter opener, and metal bookmark in a branded gift box.",
-    heroCopy: "A custom desk gift set built for daily branded visibility on the working desk. The inkless pen writes without cartridges or refills. The letter opener handles contracts, invoices, and mailed documents. The metal bookmark stands in a book with your brand logo on the face, visible across the desk through the day. All three pieces are anodised aluminium with laser engraving on the surface.",
+    heroCopy: "A custom desk gift set built for daily branded visibility on the working desk. The inkless pen writes without cartridges or refills, with a matte anodised aluminium body. The electroplated zinc alloy letter opener handles contracts, invoices, and mailed documents with a high-gloss desk finish. The metal bookmark stands in a book with your brand logo on the face, available in brass, stainless steel, or zinc alloy. Each piece is selected for the role it plays on the desk, with laser engraving on every surface.",
     sellingPoints: [
       {
         title: "Inkless Pen — Writes Without Refills",
         body: "The metal tip is designed for long writing life without ink cartridges or replacement parts. A practical desk tool with no plastic refills to reorder or replace.",
       },
       {
-        title: "Anodised Aluminium Across All Three",
-        body: "Pen, letter opener, and bookmark all use anodised aluminium with a matte finish. The material and surface stay consistent across the full set.",
+        title: "Material Allocation Across Three Pieces",
+        body: "The pen uses anodised aluminium with a matte finish; the letter opener uses electroplated zinc alloy for a high-gloss desk finish; the bookmark is available in solid brass, stainless steel, or zinc alloy depending on your design brief. Each material is selected for the role its piece performs on the desk.",
       },
       {
         title: "Bookmark — Your Logo at Eye Level",
@@ -444,7 +444,7 @@ export const giftSets: GiftSet[] = [
     procurementCategory: 'New Employee Onboarding Kit',
     tagline: "Built for the first day at work.",
     definition: "The First Day is an employee onboarding gift set for new hire welcome kits. It supports first-day access, desk setup, note-taking, and branded desk presence from the employee's first week.",
-    heroCopy: "A custom employee onboarding gift set built for first-day access, desk setup, and daily branded use. The aluminium access card holder covers access from the first door entry. The 6-in-1 tool pen moves into meetings, desk setup, and note-taking through the first week. The aluminium pen holder gives the new desk a permanent place for a branded writing tool. Three metal pieces selected for arrival, setup, and daily use from day one.",
+    heroCopy: "A custom employee onboarding gift set built for first-day access, desk setup, and daily branded use. The RFID aluminium access card holder (with carbon fiber composite reinforcement) covers access from the first door entry. The electroplated zinc alloy 6-in-1 tool pen moves into meetings, desk setup, and note-taking through the first week. The 6061-T6 aluminium pen holder gives the new desk a permanent place for a branded writing tool. Three metal pieces — each material chosen for its role — selected for arrival, setup, and daily use from day one.",
     sellingPoints: [
       {
         title: "Access Card Holder for Daily Entry",
