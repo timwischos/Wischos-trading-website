@@ -232,9 +232,12 @@ export function ProductDetailSection({ product, relatedProducts }: ProductDetail
               <p style={{ fontSize: '0.75rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: '#6b6b6b', marginBottom: '0.75rem' }}>
                 {product.category}
               </p>
-              <h1 style={{ fontSize: 'clamp(1.75rem, 3vw, 2.5rem)', fontWeight: 700, lineHeight: 1.1, marginBottom: '0.75rem' }}>
+              <h1 style={{ fontSize: 'clamp(1.75rem, 3vw, 2.5rem)', fontWeight: 700, lineHeight: 1.1, marginBottom: '0.375rem' }}>
                 {product.name}
               </h1>
+              <p style={{ fontSize: '0.72rem', letterSpacing: '0.08em', textTransform: 'uppercase', color: '#9a9a9a', marginBottom: '0.75rem' }}>
+                SKU: {product.sku ?? product.id}
+              </p>
               {product.highlights && product.highlights.length > 0 ? (
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.55rem' }}>
                   {product.highlights.map((item, i) => {
