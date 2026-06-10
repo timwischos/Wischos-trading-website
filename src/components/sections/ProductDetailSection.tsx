@@ -236,7 +236,7 @@ export function ProductDetailSection({ product, relatedProducts }: ProductDetail
                 {product.name}
               </h1>
               <p style={{ fontSize: '0.72rem', letterSpacing: '0.08em', textTransform: 'uppercase', color: '#9a9a9a', marginBottom: '0.75rem' }}>
-                SKU: {product.sku ?? product.id}
+                SKU: {product.sku ?? (product.id.match(/^wp-\d+/i)?.[0].toUpperCase() ?? product.id)}
               </p>
               {product.highlights && product.highlights.length > 0 ? (
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.55rem' }}>
