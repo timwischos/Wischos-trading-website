@@ -15,7 +15,7 @@ export function ProductCard({ product }: ProductCardProps) {
   const hoverSrc = cloudinaryUrl(product.images[1] ?? '', { w: 600 })
   const hasHoverImage = Boolean(hoverSrc && hoverSrc !== coverSrc)
 
-  const altText = `Wischos Gift - ${product.name} - ${product.category} Corporate Gift`
+  const altText = `${product.name} — ${product.category}`
 
   return (
     <Link
