@@ -232,7 +232,7 @@ function Article1Content() {
         <li style={prose.li}><strong style={prose.strong}>What it offers:</strong> It requires zero maintenance and is highly resistant to corrosion. The finish range is incredibly wide: brushed, mirror-polished, matte, or PVD-coated in black or gunmetal. Laser engraving on a matte or PVD-coated stainless surface provides a striking, permanent contrast that looks exceptionally crisp.</li>
         <li style={prose.li}><strong style={prose.strong}>The trade-off:</strong> It lacks the emotional "wow" factor of titanium or brass. It is the technically correct material in most situations, even if it's rarely the one that prompts someone to mention the gift unprompted.</li>
         <li style={prose.li}><strong style={prose.strong}>Best for:</strong>{' '}
-          <Link to={'/products' as RouterTo} search={{ category: 'EDC Accessories' } as never} style={prose.inlineLink}>EDC tools</Link>, key organizers, and high-durability items at scale.</li>
+          <Link to={'/products' as RouterTo} search={{ category: 'EDC Accessories' } as never} style={prose.inlineLink}>daily-carry tools</Link>, key organizers, and high-durability items at scale.</li>
       </ul>
 
       <h2 style={prose.h2}>Titanium: The Premium Tier</h2>
@@ -333,7 +333,7 @@ function Article2Content() {
         For metal hard goods, modern color application usually means UV printing or pad printing. Ink is applied directly to the product's surface, often cured instantly with UV light. It is capable of reproducing complex, full-color brand palettes and exact Pantone matches.
       </p>
       <p style={prose.p}>
-        <strong style={prose.strong}>The limitation:</strong> Durability and setup constraints. Because the ink sits <em>on</em> the surface, it is vulnerable. Under regular handling — a pen carried daily, a tumbler through a dishwasher, a titanium EDC tool in a pocket — printed logos inevitably begin to show wear. You will notice fading at the edges, chipping on raised surfaces, and dulling on areas of high contact, often within months. Furthermore, high setup costs mean it is rarely cost-effective for small batches.
+        <strong style={prose.strong}>The limitation:</strong> Durability and setup constraints. Because the ink sits <em>on</em> the surface, it is vulnerable. Under regular handling — a pen carried daily, a tumbler through a dishwasher, a titanium daily-carry tool in a pocket — printed logos inevitably begin to show wear. You will notice fading at the edges, chipping on raised surfaces, and dulling on areas of high contact, often within months. Furthermore, high setup costs mean it is rarely cost-effective for small batches.
       </p>
 
       <h2 style={prose.h2}>The Durability Gap in Practice</h2>
@@ -349,7 +349,7 @@ function Article2Content() {
         <strong style={prose.strong}>Choose laser engraving</strong> when the gift is a premium metal item intended to last, when your logo works well in monochrome, and especially if you are running a small-batch program or want to add individual names to the gifts. This is the gold standard for{' '}
         <Link to={'/products' as RouterTo} search={{ category: 'Pens' } as never} style={prose.inlineLink}>pens</Link>
         , desk accessories,{' '}
-        <Link to={'/products' as RouterTo} search={{ category: 'EDC Accessories' } as never} style={prose.inlineLink}>EDC tools</Link>
+        <Link to={'/products' as RouterTo} search={{ category: 'EDC Accessories' } as never} style={prose.inlineLink}>daily-carry tools</Link>
         , and premium{' '}
         <Link to={'/products' as RouterTo} search={{ category: 'Drinkware' } as never} style={prose.inlineLink}>drinkware</Link>.
       </p>
@@ -604,7 +604,7 @@ function Article6Content() {
         Coresight Research puts the average corporate gift spend at <strong style={prose.strong}>$78 per item</strong>, with the most common range between $75 and $100. Recipients don't know the invoice figure — but they can feel the gap. A gift that feels underweight communicates something about the relationship it was meant to strengthen.
       </p>
       <p style={prose.p}>
-        This is why material selection is a more consequential decision than most buyers realise. Stainless steel, aluminum, brass, and titanium each read differently in the hand. A machined stainless steel EDC tool at $28 FOB lands entirely differently from a plastic-and-rubber equivalent at $12. The cost difference is marginal when distributed across a programme budget. The perceived difference is substantial.
+        This is why material selection is a more consequential decision than most buyers realise. Stainless steel, aluminum, brass, and titanium each read differently in the hand. A machined stainless steel daily-carry tool at $28 FOB lands entirely differently from a plastic-and-rubber equivalent at $12. The cost difference is marginal when distributed across a programme budget. The perceived difference is substantial.
       </p>
 
       <h2 style={prose.h2}>Branding — Less Than You Think, More Than Nothing</h2>
@@ -710,7 +710,7 @@ function Article8Content() {
         <li style={prose.li}><strong style={prose.strong}>Laser engraving result:</strong> High contrast, very clean — one of the best surfaces for logo engraving</li>
         <li style={prose.li}><strong style={prose.strong}>Best for:</strong>{' '}
           <Link to={'/products' as RouterTo} search={{ category: 'Pens' } as never} style={prose.inlineLink}>Writing instruments</Link>,{' '}
-          <Link to={'/products' as RouterTo} search={{ category: 'EDC Accessories' } as never} style={prose.inlineLink}>EDC tools</Link>, key organisers — anything carried daily
+          <Link to={'/products' as RouterTo} search={{ category: 'EDC Accessories' } as never} style={prose.inlineLink}>daily-carry tools</Link>, key organisers — anything carried daily
         </li>
         <li style={prose.li}><strong style={prose.strong}>Limitation:</strong> The directional grain reads lighter or darker depending on lighting angle — worth noting for photography-heavy programmes</li>
       </ul>
@@ -780,7 +780,7 @@ function Article8Content() {
         <li style={prose.li}><strong style={prose.strong}>Laser engraving result:</strong> Clean contrast — the silver-grey of the exposed steel reads clearly against a dark PVD background</li>
         <li style={prose.li}><strong style={prose.strong}>Best for:</strong> Executive tier gifts, premium{' '}
           <Link to={'/products' as RouterTo} search={{ category: 'Pens' } as never} style={prose.inlineLink}>writing instruments</Link>,{' '}
-          <Link to={'/products' as RouterTo} search={{ category: 'EDC Accessories' } as never} style={prose.inlineLink}>EDC tools</Link> where a sophisticated dark aesthetic is the brief
+          <Link to={'/products' as RouterTo} search={{ category: 'EDC Accessories' } as never} style={prose.inlineLink}>daily-carry tools</Link> where a sophisticated dark aesthetic is the brief
         </li>
         <li style={prose.li}><strong style={prose.strong}>Limitation:</strong> Adds 15–30% to unit cost versus brushed steel. Longer production lead time. Less suitable for complex curved geometries where film adhesion can be uneven</li>
       </ul>
@@ -809,7 +809,7 @@ function Article8Content() {
         <li style={prose.li}><strong style={prose.strong}>Limitation:</strong> Non-directional texture can read as slightly industrial in certain contexts — not the choice when the brief calls for "refined desk presence"</li>
       </ul>
 
-      <h2 style={prose.h2}>Stone Wash — The Titanium EDC Finish</h2>
+      <h2 style={prose.h2}>Stone Wash — The Titanium Daily-Carry Finish</h2>
       <div style={{ margin: '1rem 0 1.5rem', borderRadius: '2px', overflow: 'hidden', aspectRatio: '16/7' }}>
         <img
           src="https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_860/blog/blog-006-stone-wash"
@@ -819,15 +819,15 @@ function Article8Content() {
         />
       </div>
       <p style={prose.p}>
-        Of the five finishes above, most apply across stainless steel, aluminum, and titanium. Titanium has one additional process worth knowing for EDC products: stone washing.
+        Of the five finishes above, most apply across stainless steel, aluminum, and titanium. Titanium has one additional process worth knowing for daily-carry products: stone washing.
       </p>
       <p style={prose.p}>
-        A stone washed finish is produced by tumbling the titanium piece in a drum with abrasive media — typically ceramic or stone pellets — until the surface develops a uniformly worn, low-gloss appearance. This is a deliberate ageing treatment. The result is a finish that looks and feels broken-in from the first day, and absorbs further wear invisibly: scratches from daily pocket carry blend into the existing texture rather than standing out against it. For titanium EDC tools where longevity under hard use is the brief, stone wash outperforms standard matte sandblasting because the surface is already pre-textured for wear.
+        A stone washed finish is produced by tumbling the titanium piece in a drum with abrasive media — typically ceramic or stone pellets — until the surface develops a uniformly worn, low-gloss appearance. This is a deliberate ageing treatment. The result is a finish that looks and feels broken-in from the first day, and absorbs further wear invisibly: scratches from daily pocket carry blend into the existing texture rather than standing out against it. For titanium daily-carry tools where longevity under hard use is the brief, stone wash outperforms standard matte sandblasting because the surface is already pre-textured for wear.
       </p>
       <ul style={prose.ul}>
         <li style={prose.li}><strong style={prose.strong}>Works on:</strong> Titanium (occasionally used on steel knives and tools)</li>
         <li style={prose.li}><strong style={prose.strong}>Best for:</strong>{' '}
-          <Link to={'/products' as RouterTo} search={{ category: 'EDC Accessories' } as never} style={prose.inlineLink}>Titanium EDC accessories</Link>, clip tools, bottle openers — any titanium piece that will see hard daily use
+          <Link to={'/products' as RouterTo} search={{ category: 'EDC Accessories' } as never} style={prose.inlineLink}>Titanium daily-carry accessories</Link>, clip tools, bottle openers — any titanium piece that will see hard daily use
         </li>
         <li style={prose.li}><strong style={prose.strong}>Note:</strong> Each piece has slight tonal variation — consistent with the process, not a defect. Acceptable for programmes where a crafted, worn-in character is part of the brief</li>
       </ul>
@@ -1149,6 +1149,440 @@ function Article7Content() {
   )
 }
 
+function ArticleStandardCatalogueContent() {
+  return (
+    <div style={prose.wrapper}>
+      <p style={prose.p}>
+        Standard catalogues, or catalogs in North American terminology, are still the backbone of the promotional products industry. For everyday logo orders, rush events, repeat apparel jobs, basic drinkware, and simple giveaways, catalogue sourcing is usually the fastest and lowest-risk option.
+      </p>
+      <p style={prose.p}>
+        Platforms such as ASI and SAGE exist because distributors need speed, range, supplier comparison, and repeatable ordering. That catalogue workflow is not going away. But some client briefs do not fit neatly inside a standard SKU search.
+      </p>
+      <p style={prose.p}>
+        A client may not want "another pen," "another mug," or "another tumbler." They may need a gift for a service award, executive event, client appreciation program, sponsor package, or milestone campaign. In those moments, the question is not only "what product can we logo?" It becomes: what can we adapt, package, or develop so the item feels specific to this brand moment?
+      </p>
+
+      <ArticleImage
+        src="/images/blog/blog-008/hero-catalogue-to-custom-metal-projects.png"
+        alt="Standard catalogue products beside custom metal gift project components"
+      />
+
+      <h2 style={prose.h2}>What "Off-Catalogue" Means</h2>
+      <p style={prose.p}>
+        There is no single formal definition of "off-catalogue" across the promotional products industry. In practice, it usually means moving beyond a standard catalogue SKU with a logo added.
+      </p>
+      <div style={prose.callout}>
+        Off-catalogue custom sourcing means modifying, combining, sourcing, or developing a product option that is not simply a standard catalogue item with standard branding.
+      </div>
+      <p style={prose.p}>
+        It does not always mean creating a product from zero. For most distributor projects, off-catalogue does not need to start at the fully bespoke level. It often means taking a proven metal product family and adapting the material, finish, logo method, packaging, or gift-set structure around a client brief.
+      </p>
+      <div style={{ overflowX: 'auto', marginBottom: '1.5rem' }}>
+        <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.9rem' }}>
+          <thead>
+            <tr style={{ borderBottom: '2px solid #e0e0e0' }}>
+              <th style={{ textAlign: 'left', padding: '0.6rem 0.75rem', fontWeight: 600, color: '#1a1a1a' }}>Level</th>
+              <th style={{ textAlign: 'left', padding: '0.6rem 0.75rem', fontWeight: 600, color: '#1a1a1a' }}>What it means</th>
+              <th style={{ textAlign: 'left', padding: '0.6rem 0.75rem', fontWeight: 600, color: '#1a1a1a' }}>Example</th>
+            </tr>
+          </thead>
+          <tbody>
+            {[
+              ['Catalogue-adjacent', 'A proven product family adapted for a project', 'Metal pen with custom finish, packaging, insert card, or set combination'],
+              ['Semi-custom', 'A familiar product type made for a specific brief', 'Custom metal keychain, medal, pin, bottle opener, tag, or keepsake'],
+              ['Fully bespoke', 'A new product shape, tooling, or structure', 'Custom-shaped desk piece, commemorative object, or campaign-specific metal item'],
+            ].map(([level, meaning, example], i) => (
+              <tr key={level} style={{ borderBottom: '1px solid #f0f0f0', background: i % 2 ? '#fafafa' : 'white' }}>
+                <td style={{ padding: '0.55rem 0.75rem', color: '#1a1a1a', fontWeight: 600 }}>{level}</td>
+                <td style={{ padding: '0.55rem 0.75rem', color: '#3a3a3a' }}>{meaning}</td>
+                <td style={{ padding: '0.55rem 0.75rem', color: '#3a3a3a' }}>{example}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <ArticleImage
+        src="/images/blog/blog-008/off-catalogue-custom-levels.png"
+        alt="Three levels of off-catalogue custom metal product development"
+      />
+
+      <h2 style={prose.h2}>When the Catalogue Is Still the Better Route</h2>
+      <p style={prose.p}>
+        A standard catalogue product is usually the better choice when speed, low unit cost, and proven repeatability matter most.
+      </p>
+      <p style={prose.p}>
+        That includes many rush events, broad handouts, basic apparel orders, simple drinkware, tote bags, lanyards, and low-cost logo products. These are exactly the kinds of jobs where a distributor's existing ASI, SAGE, ESP, PPPC, or local supplier workflow is supposed to work well.
+      </p>
+      <p style={prose.p}>
+        The mistake is not using catalogue products. The mistake is forcing a catalogue product into a brief that is asking for something more specific, more memorable, or more gift-like.
+      </p>
+
+      <h2 style={prose.h2}>When Distributors Should Consider Going Off-Catalogue</h2>
+      <p style={prose.p}>A custom metal project may be worth exploring when the client says things like:</p>
+      <ul style={prose.ul}>
+        <li style={prose.li}>"We want something different this year."</li>
+        <li style={prose.li}>"This is for our top clients."</li>
+        <li style={prose.li}>"It needs to feel more premium."</li>
+        <li style={prose.li}>"We want something people will keep."</li>
+        <li style={prose.li}>"Can it match our event theme?"</li>
+        <li style={prose.li}>"We do not want the usual giveaway item."</li>
+      </ul>
+      <p style={prose.p}>
+        These are not normal commodity-order signals. They are project signals.
+      </p>
+      <p style={prose.p}>
+        <a href="https://www.ppai.org/media-hub/product-power-2026-what-consumers-want-next-2/" style={prose.inlineLink}>PPAI's Product Power 2026 research</a> points in the same direction: recipients respond better when branded merchandise feels useful, relevant, well-designed, and emotionally connected to the moment. PPAI's distributor data also shows why wider sourcing conversations are now normal: 61% of U.S. distributors sourced direct from overseas manufacturers in 2024, up from 47% in 2022, according to <a href="https://www.ppai.org/wp-content/uploads/2025/02/2024-PPAI-Sales-Volume-Report.pdf" style={prose.inlineLink}>PPAI's 2024 U.S. Distributor Sales Volume Report</a>.
+      </p>
+
+      <h2 style={prose.h2}>Why Metal Works Well for Off-Catalogue Projects</h2>
+      <p style={prose.p}>
+        Metal is useful in off-catalogue projects because it changes the feel of the item. Compared with many lightweight giveaway products, metal can offer:
+      </p>
+      <ul style={prose.ul}>
+        <li style={prose.li}>weight and permanence</li>
+        <li style={prose.li}>strong perceived value</li>
+        <li style={prose.li}>better fit for recognition and milestone moments</li>
+        <li style={prose.li}>more controlled branding through engraving, debossing, plating, or subtle logo placement</li>
+        <li style={prose.li}>good compatibility with premium packaging</li>
+        <li style={prose.li}>a wide range of formats: pens, keychains, medals, pins, card cases, desk pieces, bottle openers, drinkware, and custom-shaped keepsakes</li>
+      </ul>
+      <p style={prose.p}>
+        A pen, for example, can be a cheap giveaway. But a brass pen in a structured box with restrained branding and a matching desk accessory becomes a different kind of object. The product category is familiar, but the presentation changes the meaning.
+      </p>
+      <p style={prose.p}>
+        Off-catalogue projects can also help distributors move away from highly transparent commodity pricing. When the product, packaging, finish, and presentation are built around a brief, the conversation becomes less about matching the cheapest SKU and more about delivering a higher-perceived-value package.
+      </p>
+
+      <h2 style={prose.h2}>Catalogue or Custom Metal? A Decision Checklist</h2>
+      <ArticleImage
+        src="/images/blog/blog-008/catalogue-vs-custom-decision-desk.png"
+        alt="Distributor project planning desk for catalogue versus custom sourcing decisions"
+      />
+      <p style={prose.p}>Not every brief needs an off-catalogue solution. Use this checklist before moving into a custom metal quote.</p>
+      <div style={{ overflowX: 'auto', marginBottom: '1.5rem' }}>
+        <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.9rem' }}>
+          <thead>
+            <tr style={{ borderBottom: '2px solid #e0e0e0' }}>
+              <th style={{ textAlign: 'left', padding: '0.6rem 0.75rem', fontWeight: 600, color: '#1a1a1a' }}>Question</th>
+              <th style={{ textAlign: 'left', padding: '0.6rem 0.75rem', fontWeight: 600, color: '#1a1a1a' }}>Standard catalogue is usually better when...</th>
+              <th style={{ textAlign: 'left', padding: '0.6rem 0.75rem', fontWeight: 600, color: '#1a1a1a' }}>Custom metal may be worth exploring when...</th>
+            </tr>
+          </thead>
+          <tbody>
+            {[
+              ['How urgent is the timeline?', 'The item needs to be confirmed or delivered within days.', 'The project has enough time for artwork, proofing, production, and shipping.'],
+              ['What is the main goal?', 'Low unit cost, high quantity, or quick distribution.', 'Higher perceived value, retention, recognition, or a more memorable brand moment.'],
+              ['Does the client want something different?', 'A regular logo product is enough.', 'The client asks for a specific shape, material, finish, packaging, or set combination.'],
+              ['Who will receive it?', 'It is a broad handout for a large audience.', 'It is for selected clients, employees, sponsors, speakers, members, or VIPs.'],
+              ['How should the brand appear?', 'Standard logo visibility is enough.', 'The client wants more restrained, premium, or theme-specific branding.'],
+              ['How much uncertainty can the client accept?', 'They want a proven SKU, fast sampling, and low uncertainty.', 'They can review mockups or proofs and accept a planned development process.'],
+            ].map(([question, catalogue, custom], i) => (
+              <tr key={question} style={{ borderBottom: '1px solid #f0f0f0', background: i % 2 ? '#fafafa' : 'white' }}>
+                <td style={{ padding: '0.55rem 0.75rem', color: '#1a1a1a', fontWeight: 600 }}>{question}</td>
+                <td style={{ padding: '0.55rem 0.75rem', color: '#3a3a3a' }}>{catalogue}</td>
+                <td style={{ padding: '0.55rem 0.75rem', color: '#3a3a3a' }}>{custom}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p style={prose.p}>
+        If most answers fall on the left, a standard catalogue product is probably the better route. If several answers fall on the right, the project may justify off-catalogue custom sourcing.
+      </p>
+
+      <h2 style={prose.h2}>What to Include in a Custom Metal Gift Brief</h2>
+      <ArticleImage
+        src="/images/blog/blog-008/custom-metal-gift-brief-components.png"
+        alt="Custom metal gift brief with material samples packaging and project planning tools"
+      />
+      <p style={prose.p}>
+        Once a project looks suitable for custom sourcing, the next step is not to ask for a vague quote. A useful brief helps the supplier judge feasibility, cost, production time, and the right level of customization.
+      </p>
+      <p style={prose.p}>At minimum, clarify:</p>
+      <ul style={prose.ul}>
+        <li style={prose.li}><strong style={prose.strong}>Project purpose:</strong> recognition, event, onboarding, client appreciation, retail-style merch, sponsor gift, or another use case.</li>
+        <li style={prose.li}><strong style={prose.strong}>Recipient profile:</strong> employees, top clients, speakers, sponsors, members, customers, or VIP guests.</li>
+        <li style={prose.li}><strong style={prose.strong}>Quantity:</strong> expected order quantity, plus whether there may be repeat orders.</li>
+        <li style={prose.li}><strong style={prose.strong}>Target budget:</strong> per piece or per set, including distributor margin expectations and whether packaging is included.</li>
+        <li style={prose.li}><strong style={prose.strong}>Deadline:</strong> required delivery date, event date, and whether the date is flexible.</li>
+        <li style={prose.li}><strong style={prose.strong}>Product format:</strong> single item, paired items, or a full gift set.</li>
+      </ul>
+      <p style={prose.p}>
+        Then add the technical details that shape the quote: material, finish, branding method, packaging expectations, approval process, documents, destination country, and delivery address type.
+      </p>
+
+      <h2 style={prose.h2}>Where Wischos Fits</h2>
+      <p style={prose.p}>
+        Wischos Gift is a China-based B2B exporter of custom metal corporate gifts, working with planned projects such as metal pens, desk pieces, daily-carry items, drinkware, pins, medals, custom-shaped metal pieces, and gift sets.
+      </p>
+      <p style={prose.p}>
+        For distributors, this kind of supplier is best used as a planned-project source, not as a replacement for daily local catalogue supply. The fit is strongest when a standard catalogue item feels too generic and the client has enough time to develop something more specific.
+      </p>
+      <ul style={prose.ul}>
+        <li style={prose.li}>MOQ around 100 sets</li>
+        <li style={prose.li}>Production lead time around 25-35 days</li>
+        <li style={prose.li}>Strongest fit for catalogue-adjacent and semi-custom metal projects; fully bespoke tooling needs case-by-case review</li>
+      </ul>
+      <p style={prose.p}>
+        Seasonal timing matters. For Q4 and year-end gifting, many buyers plan delivery 90-120 days ahead. That planning window is much more compatible with custom metal production than last-minute holiday buying.
+      </p>
+
+      <h2 style={prose.h2}>Example Project Scenarios</h2>
+      <p style={prose.p}><strong style={prose.strong}>Employee recognition:</strong> a brass pen, custom metal badge, or desk piece packaged for service anniversaries or promotion milestones.</p>
+      <p style={prose.p}><strong style={prose.strong}>Executive client appreciation:</strong> a metal pen and desk accessory set with restrained branding and structured gift packaging.</p>
+      <p style={prose.p}><strong style={prose.strong}>Brewery or hospitality VIP gift:</strong> a custom metal opener, tag, coaster, or drinkware piece designed around the venue or campaign.</p>
+      <p style={prose.p}><strong style={prose.strong}>Conference sponsor gift:</strong> a slim metal card case, pen, or custom-shaped keepsake for speakers, sponsors, or VIP attendees.</p>
+      <p style={prose.p}><strong style={prose.strong}>Awards and milestone programs:</strong> custom medals, pins, challenge-coin-style pieces, or small metal objects that feel more permanent than a standard giveaway.</p>
+
+      <h2 style={prose.h2}>Conclusion</h2>
+      <p style={prose.p}>
+        Standard catalogues are essential. They help distributors quote quickly, compare options, manage repeat orders, and serve everyday promotional needs.
+      </p>
+      <p style={prose.p}>
+        Off-catalogue custom projects have a different role. They are for moments when the client wants the item to feel more specific, more durable, more gift-like, or more connected to the campaign.
+      </p>
+      <p style={prose.p}>
+        The strongest distributor strategy is not catalogue or custom. It is knowing when each one fits.
+      </p>
+
+      <h2 style={prose.h2}>Frequently Asked Questions</h2>
+      <p style={{ ...prose.p, fontWeight: 600, color: '#1a1a1a', marginBottom: '0.4rem' }}>What does off-catalogue mean in promotional products?</p>
+      <p style={prose.p}>Off-catalogue means moving beyond a standard promotional product SKU with a logo added. In practice, it can include adapting a proven product family, combining items into a custom set, sourcing a product not shown in the standard catalogue, or developing a semi-custom item for a specific client brief.</p>
+      <p style={{ ...prose.p, fontWeight: 600, color: '#1a1a1a', marginBottom: '0.4rem' }}>When should a promo distributor use a custom metal gift instead of a catalogue item?</p>
+      <p style={prose.p}>A custom metal gift is worth exploring when the client wants stronger perceived value, retention, recognition impact, specific materials, custom packaging, or a more memorable brand moment. Standard catalogue sourcing is usually better for rush orders, low-cost mass handouts, basic apparel, and simple repeatable logo items.</p>
+      <p style={{ ...prose.p, fontWeight: 600, color: '#1a1a1a', marginBottom: '0.4rem' }}>What information is needed for a custom metal gift quote?</p>
+      <p style={prose.p}>A useful custom metal gift brief should include project purpose, recipient profile, quantity, target budget, deadline, product format, preferred material or finish, branding method, packaging expectations, approval process, destination country, and any compliance or documentation requirements.</p>
+      <p style={{ ...prose.p, fontWeight: 600, color: '#1a1a1a', marginBottom: '0.4rem' }}>Can off-catalogue suppliers replace local catalogue suppliers?</p>
+      <p style={prose.p}>Usually, no. Off-catalogue suppliers are best used for planned custom projects that need a specific material, finish, packaging structure, or product format. Local catalogue suppliers remain the better route for rush fulfilment, apparel decoration, repeat SKU orders, and very low-cost mass giveaway sourcing.</p>
+
+      <div style={prose.callout}>
+        Have a brief that feels too generic for the catalogue?{' '}
+        <Link to={'/contact' as RouterTo} style={prose.inlineLink}>Send your concept, target budget, quantity, and deadline</Link>.
+        We can review whether the project is a realistic fit for a catalogue-adjacent, semi-custom, or fully bespoke metal gift approach before you commit to a quote path.
+      </div>
+
+      <h2 style={prose.h2}>Related Reading</h2>
+      <ul style={prose.ul}>
+        <li style={prose.li}><Link to={'/blog/what-makes-a-corporate-gift-worth-keeping' as RouterTo} style={prose.inlineLink}>What Makes a Corporate Gift Worth Keeping?</Link></li>
+        <li style={prose.li}><Link to={'/blog/metal-surface-finishes-corporate-gifts' as RouterTo} style={prose.inlineLink}>Surface Finishes for Metal Corporate Gifts</Link></li>
+        <li style={prose.li}><Link to={'/for-distributors' as RouterTo} style={prose.inlineLink}>Custom Metal Gift Sets for Distributors</Link></li>
+      </ul>
+
+      <h2 style={prose.h2}>Sources</h2>
+      <ul style={prose.ul}>
+        <li style={prose.li}><a href="https://www.ppai.org/media-hub/product-power-2026-what-consumers-want-next-2/" style={prose.inlineLink}>PPAI Product Power 2026</a></li>
+        <li style={prose.li}><a href="https://www.ppai.org/wp-content/uploads/2025/02/2024-PPAI-Sales-Volume-Report.pdf" style={prose.inlineLink}>PPAI 2024 U.S. Distributor Sales Volume Report</a></li>
+        <li style={prose.li}><a href="https://asicentral.com/" style={prose.inlineLink}>ASI ESP platform</a></li>
+        <li style={prose.li}><a href="https://www.sageworld.com/" style={prose.inlineLink}>SAGE</a></li>
+      </ul>
+    </div>
+  )
+}
+
+function ArticleProjectReviewContent() {
+  return (
+    <div style={prose.wrapper}>
+      <p style={prose.p}>
+        A custom metal gift request often starts before every detail is confirmed. That is normal.
+      </p>
+      <p style={prose.p}>
+        You may have a product reference, a client idea, a target recipient group, a campaign deadline, or just a rough direction:
+      </p>
+      <ul style={prose.ul}>
+        <li style={prose.li}>"The client wants a premium metal gift set."</li>
+        <li style={prose.li}>"We need something more specific than a standard catalogue item."</li>
+        <li style={prose.li}>"The event date is fixed, but the final product is still open."</li>
+      </ul>
+      <ArticleImage
+        src="https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_1200/blog/blog-009-rough-idea"
+        alt="Rough custom gift idea organized with blank notes, metal finish samples, packaging and calendar"
+      />
+      <p style={prose.p}>
+        Sometimes a project starts with only a short direction, such as "titanium pen set." That, plus a rough quantity and a ship date, is enough to start a conversation. We do not expect a full technical drawing, packaging dieline, and final artwork in the first email.
+      </p>
+      <p style={prose.p}>
+        What we do need is enough context to judge whether the project is realistic: the product direction, roughly how many units, when the gifts must arrive, and what kind of branding or packaging is expected.
+      </p>
+      <p style={prose.p}>
+        This article explains what helps us review a custom metal gift project, whether it is a corporate gift brief, distributor sourcing request, or early client idea, before quoting.
+      </p>
+
+      <h2 style={prose.h2}>1. Product Idea or Reference</h2>
+      <p style={prose.p}>
+        The product direction tells us which sourcing lane to check first.
+      </p>
+      <p style={prose.p}>
+        This can be specific: brass pen, stainless steel desk accessory, aluminium card holder, metal keychain, titanium drinkware, two-piece or three-piece gift set. Or it can be open: client appreciation gift, executive desk gift, dealer recognition item, event sponsor gift.
+      </p>
+      <p style={prose.p}>
+        Both are workable.
+      </p>
+      <p style={prose.p}>
+        Because Wischos focuses on metal gift sets, we look at material, surface finish, logo method and packaging together rather than as separate decisions. A product direction, even a rough one, lets us start that review.
+      </p>
+      <p style={prose.p}>
+        If you have a reference image, past order, catalogue item, sketch, or client mood board, send it. A reference does not need to be the final design. It helps us understand the product lane: size, material direction, finish level, branding space and packaging expectation.
+      </p>
+      <p style={prose.p}>
+        For off-catalogue projects, the reference is often a starting point rather than a product to copy. We may suggest adapting a proven product family, adjusting finish, combining items into a set, or changing packaging so the project fits the budget and timeline.
+      </p>
+      <p style={prose.p}>
+        <strong style={prose.strong}>What to send:</strong> product idea, reference image, or the type of gift the client has in mind.
+      </p>
+
+      <h2 style={prose.h2}>2. Quantity Range</h2>
+      <p style={prose.p}>
+        Quantity is usually the first number we look for. It determines whether we should look at existing product families, semi-custom routes, custom tooling, or a simpler catalogue-adjacent option.
+      </p>
+      <p style={prose.p}>
+        An exact final quantity is not necessary at the first stage, but a working range changes the options we review. A rough range is better than silence: 100-200 units, 500, 1,000, or phased with a possible reorder.
+      </p>
+      <p style={prose.p}>
+        One thing worth flagging: a one-time 100-set executive gift project and a 100-set pilot for a recurring recognition program may need different recommendations. The first may prioritize presentation. The second needs a product and packaging route that can be repeated cleanly later. Knowing which situation applies shapes the recommendation from the start.
+      </p>
+      <p style={prose.p}>
+        <strong style={prose.strong}>What to send:</strong> estimated quantity range and whether this is a one-time project or a pilot.
+      </p>
+      <ArticleImage
+        src="https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_1200/blog/blog-009-material-finish-logo"
+        alt="Metal samples with laser engraving marks and finish swatches for a custom metal gift branding review"
+      />
+
+      <h2 style={prose.h2}>3. Target Budget Range</h2>
+      <p style={prose.p}>
+        Budget helps us avoid sending back an option the project cannot actually use.
+      </p>
+      <p style={prose.p}>
+        The same project idea may be possible in several ways: standard product with logo, existing metal item with upgraded packaging, semi-custom finish or product combination, fully bespoke gift set with custom insert and sleeve. Each route has a different cost structure.
+      </p>
+      <p style={prose.p}>
+        For distributors, this also matters because a supplier price that looks acceptable but does not account for freight, duty, local handling, artwork or client revisions creates a problem when building the proposal. A working budget range lets us suggest a path that fits the project instead of only looking good on paper.
+      </p>
+      <p style={prose.p}>
+        <strong style={prose.strong}>What to send:</strong> target budget per item or per set, and whether the number is product-only, FOB, landed, or resale-level.
+      </p>
+
+      <h2 style={prose.h2}>4. Deadline or Event Date</h2>
+      <p style={prose.p}>
+        For custom metal gifts, the most important date is the required in-hands date, not the order date, not the production start date.
+      </p>
+      <p style={prose.p}>
+        The project timeline includes more than production. Artwork review, sample or proof approval, packaging confirmation, inspection, export handling and shipping all happen before the box arrives. Wischos commonly discusses production around 25-35 days after approval, but that is not total project time. The full timeline depends on the item, quantity, packaging, sample requirement, destination and shipping method.
+      </p>
+      <p style={prose.p}>
+        Tell us the event date early. If it is fixed, we may need a simpler configuration or air shipment. If it is flexible, that may make sea freight, better packaging, or a sample-first route possible.
+      </p>
+      <ArticleImage
+        src="https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_1200/blog/blog-009-destination-feasibility"
+        alt="Custom metal gift feasibility review desk with samples, calculator, folder and project planning documents"
+      />
+
+      <h2 style={prose.h2}>5. Logo and Branding Needs</h2>
+      <p style={prose.p}>
+        Logo details tell us whether the surface, finish and artwork can work together.
+      </p>
+      <p style={prose.p}>
+        For metal products, common branding routes include laser engraving, printing, debossing, embossing, enamel, color fill, plating effects and packaging print. Laser engraving is often suitable for metal because it creates a durable mark without adding an ink layer. But it is not always right. Exact brand colors, gradients, very small text, or detailed crests may need a different approach.
+      </p>
+      <p style={prose.p}>
+        The best logo method depends on the material, surface finish, logo size, color requirement and whether the brand prefers subtle or high-visibility marking. Vector artwork is preferred when available. If final artwork is not ready, a screenshot or low-resolution reference can still help us review feasibility.
+      </p>
+      <p style={prose.p}>
+        <strong style={prose.strong}>What to send:</strong> logo file if available, expected logo position, color requirement, and whether personalization is needed.
+      </p>
+
+      <h2 style={prose.h2}>6. Packaging Expectation</h2>
+      <p style={prose.p}>
+        Packaging is often where a simple metal item becomes a gift. The same metal piece in standard packaging and in a rigid gift box with a fitted insert are different offers: in perceived value, unit cost, production time and shipping volume.
+      </p>
+      <p style={prose.p}>
+        You do not need final packaging artwork at the beginning. But it helps to know the intended presentation level: simple individual packaging, standard gift box, rigid box, drawer box, insert, sleeve, message card, or direct-mail use.
+      </p>
+      <p style={prose.p}>
+        If the gift will go into a larger campaign pack, we should know early. If the packaging itself must carry the brand message, that changes both the design and the quotation path. At the early stage, even a simple note such as "standard box is fine" or "client wants a presentation box" helps us avoid quoting the wrong packaging route.
+      </p>
+      <ArticleImage
+        src="https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_1200/blog/blog-009-packaging-review"
+        alt="Custom metal gifts shown in simple packaging and a rigid gift box with fitted insert"
+      />
+
+      <h2 style={prose.h2}>When a Feasibility Review Comes Before a Firm Quote</h2>
+      <p style={prose.p}>
+        Sometimes the right first step is not a firm quote. It is a feasibility review.
+      </p>
+      <p style={prose.p}>
+        That usually happens when the product idea is still broad, quantity is uncertain, budget is not confirmed, or the event date may be tight. A feasibility review is not a delay. It is a way to avoid quoting a price that later fails because the artwork, packaging, shipping or approval path was not understood.
+      </p>
+      <p style={prose.p}>
+        At this stage we may suggest a simpler route, a different material, a standard product family, a semi-custom option, or a packaging adjustment. The purpose is practical: find a route that can be made, approved, packed and shipped within the project constraints.
+      </p>
+
+      <h2 style={prose.h2}>Send What You Already Know</h2>
+      <p style={prose.p}>
+        You do not need to prepare a full sourcing brief before contacting us. If you have only a few details, send those first:
+      </p>
+      <pre style={{
+        background: '#f7f4f1',
+        border: '1px solid #e8ddd3',
+        borderRadius: '2px',
+        padding: '1rem',
+        overflowX: 'auto',
+        fontSize: '0.86rem',
+        lineHeight: 1.7,
+        color: '#2a2a2a',
+        marginBottom: '1.35rem',
+      }}>
+{`Product idea or reference:
+Quantity range:
+Target budget range:
+Deadline or event date:
+Logo / branding needs:
+Packaging expectation:`}
+      </pre>
+      <p style={prose.p}>
+        Leave unknown fields blank. We will ask focused follow-up questions.
+      </p>
+      <p style={prose.p}>
+        For distributors and gifting agencies, all client communication can stay through you. We review the project information you share, advise on a workable sourcing route, and support you with clear material, customization, packaging and production details for your proposal.
+      </p>
+
+      <h2 style={prose.h2}>Have a Custom Metal Gift Idea to Review?</h2>
+      <p style={prose.p}>
+        Send what you already know to <a href="mailto:inquiries@wischosgift.com" style={prose.inlineLink}>inquiries@wischosgift.com</a>: product idea, quantity range, budget range, and deadline. We can review whether the project is better suited to a catalogue-adjacent item, semi-custom metal piece, <Link to={'/gift-sets' as RouterTo} style={prose.inlineLink}>curated gift set</Link>, or more developed custom sourcing path.
+      </p>
+
+      <h2 style={prose.h2}>Frequently Asked Questions</h2>
+      <p style={{ ...prose.p, fontWeight: 600, color: '#1a1a1a', marginBottom: '0.4rem' }}>Do I need final artwork before asking Wischos to review a project?</p>
+      <p style={prose.p}>No. A logo screenshot or reference is enough for an early feasibility review. Final production will need usable artwork, preferably vector files, but that comes later in the process.</p>
+      <p style={{ ...prose.p, fontWeight: 600, color: '#1a1a1a', marginBottom: '0.4rem' }}>Why do you ask for budget before quoting?</p>
+      <p style={prose.p}>Budget helps us choose the right sourcing path. Without a range, we may suggest an option that is technically possible but does not account for freight, duty, local handling, artwork or client revisions, which makes the quote hard to use in a real proposal.</p>
+      <p style={{ ...prose.p, fontWeight: 600, color: '#1a1a1a', marginBottom: '0.4rem' }}>Is production time the same as total project time?</p>
+      <p style={prose.p}>No. Production time starts after approval. Total project time also includes review, artwork, samples, packaging confirmation, inspection, export handling and shipping. For time-sensitive projects, the difference matters.</p>
+
+      <h2 style={prose.h2}>Related Reading</h2>
+      <ul style={prose.ul}>
+        <li style={prose.li}><Link to={'/blog/standard-catalogue-to-custom-metal-projects' as RouterTo} style={prose.inlineLink}>From Standard Catalogue to Custom Metal Projects</Link></li>
+        <li style={prose.li}><Link to={'/blog/metal-surface-finishes-corporate-gifts' as RouterTo} style={prose.inlineLink}>Surface Finishes for Metal Corporate Gifts</Link></li>
+        <li style={prose.li}><Link to={'/blog/laser-engraving-vs-color-printing-corporate-gifts' as RouterTo} style={prose.inlineLink}>Laser Engraving vs. Color Printing</Link></li>
+        <li style={prose.li}><Link to={'/for-distributors' as RouterTo} style={prose.inlineLink}>Custom Metal Gift Sets for Distributors</Link></li>
+      </ul>
+
+      <h2 style={prose.h2}>Sources and Claim Notes</h2>
+      <ul style={prose.ul}>
+        <li style={prose.li}>Wischos internal project experience: production timing, common inquiry fields, material/logo/packaging review process.</li>
+        <li style={prose.li}>Wischos buyer intent research: <code>docs/research-buyer-intent.md</code></li>
+        <li style={prose.li}>Wischos competitor catalogue research: <code>docs/research-competitor-catalogs.md</code></li>
+        <li style={prose.li}>Wischos blog data verification rules: <code>content create/blog/博客数据核实报告.md</code></li>
+        <li style={prose.li}>Blog source list: <code>content create/blog/blog信息源.md</code></li>
+        <li style={prose.li}><a href="https://www.cpsc.gov/" style={prose.inlineLink}>CPSC product safety reference</a></li>
+        <li style={prose.li}><a href="https://eur-lex.europa.eu/legal-content/en/ALL/?uri=LEGISSUM%3A4670517" style={prose.inlineLink}>EU GPSR legal summary</a></li>
+        <li style={prose.li}><a href="https://echa.europa.eu/legislation" style={prose.inlineLink}>ECHA / REACH legislation reference</a></li>
+      </ul>
+    </div>
+  )
+}
+
 const articleContent: Record<string, () => React.JSX.Element> = {
   'aluminum-brass-steel-titanium-corporate-gifts': Article1Content,
   'laser-engraving-vs-color-printing-corporate-gifts': Article2Content,
@@ -1157,6 +1591,8 @@ const articleContent: Record<string, () => React.JSX.Element> = {
   'what-makes-a-corporate-gift-worth-keeping': Article6Content,
   'discreet-branding-corporate-gifts-smaller-logos': Article7Content,
   'metal-surface-finishes-corporate-gifts': Article8Content,
+  'standard-catalogue-to-custom-metal-projects': ArticleStandardCatalogueContent,
+  'what-we-need-to-review-a-custom-metal-gift-project': ArticleProjectReviewContent,
 }
 
 // ─── Page component ───────────────────────────────────────────────────────────

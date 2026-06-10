@@ -14,8 +14,8 @@ const updates = [
     id: 'wp-103-tactical-stainless-steel-pen',
     sourcingNotes: [
       {
-        title: 'Hand weight and field carry expectation',
-        body: 'At approx. 102.8g, the pen has a heavier hand feel than standard office pens. That weight suits field carry, vehicle-adjacent teams, and utility gift sets where the product is expected to feel substantial in hand.',
+        title: 'Hand weight and daily carry expectation',
+        body: 'At approx. 102.8g, the pen has a heavier hand feel than standard office pens. That weight suits daily and field carry, operations teams, and utility gift sets where the product is expected to feel substantial in hand.',
       },
       {
         title: 'Glass breaker function and certification checks',
@@ -23,7 +23,7 @@ const updates = [
       },
       {
         title: 'Where this product fits',
-        body: 'This pen belongs in field and utility gift sets where writing and emergency-oriented functions make sense together.',
+        body: 'This pen belongs in operations and utility gift sets where writing and emergency-oriented functions make sense together.',
       },
     ],
   },
@@ -83,11 +83,11 @@ const updates = [
     sourcingNotes: [
       {
         title: 'Light utility use case boundaries',
-        body: 'This product is small and carry-focused. It is best framed as a light utility tool for EDC sets rather than heavy-duty construction work.',
+        body: 'This product is small and carry-focused. It is best framed as a light utility tool for daily-carry sets rather than heavy-duty work.',
       },
       {
-        title: 'Pry bar role in EDC sets',
-        body: 'A pry bar covers a different task from pens, scissors, and carabiners. It adds a practical utility function without increasing the size of the set much.',
+        title: 'Multi-function tool role in daily-carry sets',
+        body: 'A compact utility tool covers a different task from pens, scissors, and carabiners. It adds a practical utility function without increasing the size of the set much.',
       },
       {
         title: 'Material choice by project tier',

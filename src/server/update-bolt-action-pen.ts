@@ -19,7 +19,7 @@ async function main() {
       name: 'Brass Crown Bolt-Action Pen',
       tagline: 'Brass, Aluminum & Steel Build | Forest Green & Matte Black | G2 Refill | 28g',
       highlights: [
-        'Two Color Editions: Available in Forest Green and Matte Black — two distinct colorways that suit different corporate aesthetics, from natural executive to tactical industrial.',
+        'Two Color Editions: Available in Forest Green and Matte Black — two distinct colorways that suit different corporate aesthetics, from natural executive to industrial.',
         'Mechanical Reliability: Unique bolt-action deployment for a smooth, satisfying one-handed operation.',
         'Universal Compatibility: Uses standard G2 refills (Parker style), ensuring easy maintenance worldwide.',
         'Hybrid Metal Build: A balanced combination of Brass, Aluminum, and Stainless Steel for long-term durability.',
@@ -60,7 +60,7 @@ async function main() {
         'multi-metal bolt action pen',
         'G2 refill bolt action pen',
         // Niche / long-tail
-        'tactical EDC writing pen',
+        'utility daily-carry writing pen',
         'heavy duty office pen',
         'CNC machined bolt action pen',
         'executive metal pen gift',

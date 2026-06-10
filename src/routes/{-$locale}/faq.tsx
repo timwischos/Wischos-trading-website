@@ -10,7 +10,7 @@ const faqItems = [
   {
     question: 'What products can be included in a gift set?',
     answer:
-      'Any combination from our catalog can be included — writing instruments, desk accessories, EDC tools, and drinkware. Standard sets contain 3 items. Custom configurations with different quantities or product mix are available on request.',
+      'Any combination from our catalog can be included — writing instruments, desk accessories, daily carry tools, and drinkware. Standard sets contain 3 items. Custom configurations with different quantities or product mix are available on request.',
   },
   {
     question: 'Can I add our company logo to the products?',

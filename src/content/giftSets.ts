@@ -122,7 +122,7 @@ export const giftSetPageContent: GiftSetPageContent = {
       "answer": "The standard packaging formats include magnetic rigid gift boxes, drawer rigid gift boxes, and rigid lid gift boxes with flocked EVA inserts. Upgrade options may include soft-touch lamination, printed interior liners, wood sleeves, wood lids, waxed canvas roll pouches, or reusable desk-tray formats."
     }
   ],
-  metaTitle: "Custom Metal Corporate Gift Sets | Branded Desk, EDC & Onboarding Kits",
+  metaTitle: "Custom Metal Corporate Gift Sets | Branded Desk, Daily Carry & Onboarding Kits",
   metaDescription: "Explore custom metal corporate gift sets for desks, daily carry, field teams, onboarding, clients and executives. Add logo engraving and branded gift box packaging.",
 }
 
@@ -255,7 +255,7 @@ export const giftSets: GiftSet[] = [
     id: 'wgs-003-3-the-pocket-three',
     sku: 'WGS-003-3',
     name: 'The Pocket Three',
-    procurementCategory: 'EDC Daily Carry Gift Set',
+    procurementCategory: 'Daily Carry Gift Set',
     tagline: "Everything in your pocket. Nothing you don't need.",
     definition: "The Pocket Three is a branded everyday carry gift set for teams that move between offices, sites, meetings, and travel. It combines key organization, card and cash carry, and a lightweight grooming tool.",
     heroCopy: "A branded everyday carry gift set built for teams that move between offices, meetings, travel, and daily work routines. The brass key organizer holds up to ten keys in a compact stack. The stainless steel money clip keeps cards and cash flat in one piece. The titanium comb is light, rigid, and made for office, travel, and daily carry use. Three metal tools that go straight into a pocket, bag, or work carry from day one.",
@@ -274,9 +274,9 @@ export const giftSets: GiftSet[] = [
       },
     ],
     components: [
-      { sku: 'WP-302', name: 'Industrial Brass Key Organizer', productId: 'wp-302-industrial-brass-key-organizer', imageIndex: 2 },
-      { sku: 'WP-303', name: 'Industrial Stainless Steel Money Clip', productId: 'wp-303-industrial-stainless-steel-money-clip', imageIndex: 1 },
-      { sku: 'WP-304', name: 'Titanium Anti-Static EDC Comb', productId: 'wp-304-titanium-anti-static-edc-comb', imageIndex: 3 },
+      { sku: 'WP-302', name: 'Compact Brass Key Organizer', productId: 'wp-302-industrial-brass-key-organizer', imageIndex: 2 },
+      { sku: 'WP-303', name: 'Slim Stainless Steel Money Clip', productId: 'wp-303-industrial-stainless-steel-money-clip', imageIndex: 1 },
+      { sku: 'WP-304', name: 'Titanium Anti-Static Comb', productId: 'wp-304-titanium-anti-static-edc-comb', imageIndex: 3 },
     ],
     targetBuyer: 'HR teams, employee wellness kits, finance/banking sector, insurance brokers, retail client appreciation gifts',
     packaging: 'Magnetic Rigid Gift Box + Flocked EVA Insert',
@@ -293,7 +293,7 @@ export const giftSets: GiftSet[] = [
       },
       {
         title: "What the standard packaging delivers",
-        body: "The set ships in a magnetic rigid gift box with a flocked EVA insert. The box core is high-density greyboard wrapped in matte art paper. Each component sits in a precision-cut recess in the flocked EVA: key organizer, money clip, and comb each in their own zone, with metal surfaces separated in transit. The compact footprint suits an EDC gift set where each item is meant to move with the recipient after unboxing.",
+        body: "The set ships in a magnetic rigid gift box with a flocked EVA insert. The box core is high-density greyboard wrapped in matte art paper. Each component sits in a precision-cut recess in the flocked EVA: key organizer, money clip, and comb each in their own zone, with metal surfaces separated in transit. The compact footprint suits a daily-carry gift set where each item is meant to move with the recipient after unboxing.",
       },
       {
         title: "Logo on the box",
@@ -400,7 +400,7 @@ export const giftSets: GiftSet[] = [
     components: [
       { sku: 'WP-101', name: 'Brass Crown Bolt-Action Pen', productId: 'wp-101-brass-crown-bolt-action-pen', imageIndex: 3 },
       { sku: 'WP-402', name: 'Pure Titanium Capsule Bottle (150ml)', productId: 'wp-402-pure-titanium-capsule-bottle-150ml', imageIndex: 2 },
-      { sku: 'WP-308', name: 'Titanium EDC Keychain', productId: 'wp-308-titanium-edc-keychain', imageIndex: 1 },
+      { sku: 'WP-308', name: 'Titanium Carabiner Keychain', productId: 'wp-308-titanium-edc-keychain', imageIndex: 1 },
     ],
     targetBuyer: 'Executive gifting, finance sector, premium client retention gifts, high-value HR onboarding programs',
     packaging: 'Magnetic Rigid Gift Box + Flocked EVA Insert',

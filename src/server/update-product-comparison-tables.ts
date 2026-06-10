@@ -31,7 +31,7 @@ const tables: Record<string, ComparisonTable> = {
   'wp-103-tactical-stainless-steel-pen': {
     columns: ['Pen option', 'Best fit', 'Buyer note'],
     rows: [
-      ['Tactical stainless pen', 'Field and vehicle-adjacent teams', 'Substantial hand feel with glass-breaker utility'],
+      ['Stainless utility pen', 'Operations and field teams', 'Substantial hand feel with glass-breaker utility'],
       ['Standard metal pen', 'Office writing programs', 'More familiar choice for desk-only use'],
       ['Multi-tool pen', 'Onboarding and setup tasks', 'Adds more compact tool functions'],
     ],

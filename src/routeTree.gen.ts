@@ -13,12 +13,17 @@ import { Route as Char123LocaleChar125RouteImport } from './routes/{-$locale}'
 import { Route as ThankYouRouteImport } from './routes/thank-you'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as ForDistributorsRouteImport } from './routes/for-distributors'
+import { Route as DutyAndShippingRouteImport } from './routes/duty-and-shipping'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as Char123LocaleChar125GiftSetsRouteImport } from './routes/{-$locale}/gift-sets'
 import { Route as Char123LocaleChar125FaqRouteImport } from './routes/{-$locale}/faq'
 import { Route as Char123LocaleChar125ContactRouteImport } from './routes/{-$locale}/contact'
 import { Route as Char123LocaleChar125BlogRouteImport } from './routes/{-$locale}/blog'
 import { Route as Char123LocaleChar125AboutRouteImport } from './routes/{-$locale}/about'
+import { Route as MarketsUaeRouteImport } from './routes/markets/uae'
+import { Route as MarketsSingaporeRouteImport } from './routes/markets/singapore'
+import { Route as MarketsNewZealandRouteImport } from './routes/markets/new-zealand'
+import { Route as MarketsAustraliaRouteImport } from './routes/markets/australia'
 import { Route as LandingOnboardingGiftSetRouteImport } from './routes/landing/onboarding-gift-set'
 import { Route as LandingExecutiveGiftSetRouteImport } from './routes/landing/executive-gift-set'
 import { Route as Char123LocaleChar125ProductsIndexRouteImport } from './routes/{-$locale}/products/index'
@@ -46,6 +51,11 @@ const PrivacyRoute = PrivacyRouteImport.update({
 const ForDistributorsRoute = ForDistributorsRouteImport.update({
   id: '/for-distributors',
   path: '/for-distributors',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DutyAndShippingRoute = DutyAndShippingRouteImport.update({
+  id: '/duty-and-shipping',
+  path: '/duty-and-shipping',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -82,6 +92,26 @@ const Char123LocaleChar125AboutRoute =
     path: '/about',
     getParentRoute: () => Char123LocaleChar125Route,
   } as any)
+const MarketsUaeRoute = MarketsUaeRouteImport.update({
+  id: '/markets/uae',
+  path: '/markets/uae',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MarketsSingaporeRoute = MarketsSingaporeRouteImport.update({
+  id: '/markets/singapore',
+  path: '/markets/singapore',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MarketsNewZealandRoute = MarketsNewZealandRouteImport.update({
+  id: '/markets/new-zealand',
+  path: '/markets/new-zealand',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MarketsAustraliaRoute = MarketsAustraliaRouteImport.update({
+  id: '/markets/australia',
+  path: '/markets/australia',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const LandingOnboardingGiftSetRoute =
   LandingOnboardingGiftSetRouteImport.update({
     id: '/landing/onboarding-gift-set',
@@ -132,12 +162,17 @@ const Char123LocaleChar125BlogSlugRoute =
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/duty-and-shipping': typeof DutyAndShippingRoute
   '/for-distributors': typeof ForDistributorsRoute
   '/privacy': typeof PrivacyRoute
   '/thank-you': typeof ThankYouRoute
   '/{-$locale}': typeof Char123LocaleChar125RouteWithChildren
   '/landing/executive-gift-set': typeof LandingExecutiveGiftSetRoute
   '/landing/onboarding-gift-set': typeof LandingOnboardingGiftSetRoute
+  '/markets/australia': typeof MarketsAustraliaRoute
+  '/markets/new-zealand': typeof MarketsNewZealandRoute
+  '/markets/singapore': typeof MarketsSingaporeRoute
+  '/markets/uae': typeof MarketsUaeRoute
   '/{-$locale}/about': typeof Char123LocaleChar125AboutRoute
   '/{-$locale}/blog': typeof Char123LocaleChar125BlogRouteWithChildren
   '/{-$locale}/contact': typeof Char123LocaleChar125ContactRoute
@@ -152,12 +187,17 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/duty-and-shipping': typeof DutyAndShippingRoute
   '/for-distributors': typeof ForDistributorsRoute
   '/privacy': typeof PrivacyRoute
   '/thank-you': typeof ThankYouRoute
   '/{-$locale}': typeof Char123LocaleChar125RouteWithChildren
   '/landing/executive-gift-set': typeof LandingExecutiveGiftSetRoute
   '/landing/onboarding-gift-set': typeof LandingOnboardingGiftSetRoute
+  '/markets/australia': typeof MarketsAustraliaRoute
+  '/markets/new-zealand': typeof MarketsNewZealandRoute
+  '/markets/singapore': typeof MarketsSingaporeRoute
+  '/markets/uae': typeof MarketsUaeRoute
   '/{-$locale}/about': typeof Char123LocaleChar125AboutRoute
   '/{-$locale}/contact': typeof Char123LocaleChar125ContactRoute
   '/{-$locale}/faq': typeof Char123LocaleChar125FaqRoute
@@ -171,12 +211,17 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/duty-and-shipping': typeof DutyAndShippingRoute
   '/for-distributors': typeof ForDistributorsRoute
   '/privacy': typeof PrivacyRoute
   '/thank-you': typeof ThankYouRoute
   '/{-$locale}': typeof Char123LocaleChar125RouteWithChildren
   '/landing/executive-gift-set': typeof LandingExecutiveGiftSetRoute
   '/landing/onboarding-gift-set': typeof LandingOnboardingGiftSetRoute
+  '/markets/australia': typeof MarketsAustraliaRoute
+  '/markets/new-zealand': typeof MarketsNewZealandRoute
+  '/markets/singapore': typeof MarketsSingaporeRoute
+  '/markets/uae': typeof MarketsUaeRoute
   '/{-$locale}/about': typeof Char123LocaleChar125AboutRoute
   '/{-$locale}/blog': typeof Char123LocaleChar125BlogRouteWithChildren
   '/{-$locale}/contact': typeof Char123LocaleChar125ContactRoute
@@ -193,12 +238,17 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/duty-and-shipping'
     | '/for-distributors'
     | '/privacy'
     | '/thank-you'
     | '/{-$locale}'
     | '/landing/executive-gift-set'
     | '/landing/onboarding-gift-set'
+    | '/markets/australia'
+    | '/markets/new-zealand'
+    | '/markets/singapore'
+    | '/markets/uae'
     | '/{-$locale}/about'
     | '/{-$locale}/blog'
     | '/{-$locale}/contact'
@@ -213,12 +263,17 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/duty-and-shipping'
     | '/for-distributors'
     | '/privacy'
     | '/thank-you'
     | '/{-$locale}'
     | '/landing/executive-gift-set'
     | '/landing/onboarding-gift-set'
+    | '/markets/australia'
+    | '/markets/new-zealand'
+    | '/markets/singapore'
+    | '/markets/uae'
     | '/{-$locale}/about'
     | '/{-$locale}/contact'
     | '/{-$locale}/faq'
@@ -231,12 +286,17 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/duty-and-shipping'
     | '/for-distributors'
     | '/privacy'
     | '/thank-you'
     | '/{-$locale}'
     | '/landing/executive-gift-set'
     | '/landing/onboarding-gift-set'
+    | '/markets/australia'
+    | '/markets/new-zealand'
+    | '/markets/singapore'
+    | '/markets/uae'
     | '/{-$locale}/about'
     | '/{-$locale}/blog'
     | '/{-$locale}/contact'
@@ -252,12 +312,17 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  DutyAndShippingRoute: typeof DutyAndShippingRoute
   ForDistributorsRoute: typeof ForDistributorsRoute
   PrivacyRoute: typeof PrivacyRoute
   ThankYouRoute: typeof ThankYouRoute
   Char123LocaleChar125Route: typeof Char123LocaleChar125RouteWithChildren
   LandingExecutiveGiftSetRoute: typeof LandingExecutiveGiftSetRoute
   LandingOnboardingGiftSetRoute: typeof LandingOnboardingGiftSetRoute
+  MarketsAustraliaRoute: typeof MarketsAustraliaRoute
+  MarketsNewZealandRoute: typeof MarketsNewZealandRoute
+  MarketsSingaporeRoute: typeof MarketsSingaporeRoute
+  MarketsUaeRoute: typeof MarketsUaeRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -288,6 +353,13 @@ declare module '@tanstack/react-router' {
       path: '/for-distributors'
       fullPath: '/for-distributors'
       preLoaderRoute: typeof ForDistributorsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/duty-and-shipping': {
+      id: '/duty-and-shipping'
+      path: '/duty-and-shipping'
+      fullPath: '/duty-and-shipping'
+      preLoaderRoute: typeof DutyAndShippingRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -331,6 +403,34 @@ declare module '@tanstack/react-router' {
       fullPath: '/{-$locale}/about'
       preLoaderRoute: typeof Char123LocaleChar125AboutRouteImport
       parentRoute: typeof Char123LocaleChar125Route
+    }
+    '/markets/uae': {
+      id: '/markets/uae'
+      path: '/markets/uae'
+      fullPath: '/markets/uae'
+      preLoaderRoute: typeof MarketsUaeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/markets/singapore': {
+      id: '/markets/singapore'
+      path: '/markets/singapore'
+      fullPath: '/markets/singapore'
+      preLoaderRoute: typeof MarketsSingaporeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/markets/new-zealand': {
+      id: '/markets/new-zealand'
+      path: '/markets/new-zealand'
+      fullPath: '/markets/new-zealand'
+      preLoaderRoute: typeof MarketsNewZealandRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/markets/australia': {
+      id: '/markets/australia'
+      path: '/markets/australia'
+      fullPath: '/markets/australia'
+      preLoaderRoute: typeof MarketsAustraliaRouteImport
+      parentRoute: typeof rootRouteImport
     }
     '/landing/onboarding-gift-set': {
       id: '/landing/onboarding-gift-set'
@@ -453,12 +553,17 @@ const Char123LocaleChar125RouteWithChildren =
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  DutyAndShippingRoute: DutyAndShippingRoute,
   ForDistributorsRoute: ForDistributorsRoute,
   PrivacyRoute: PrivacyRoute,
   ThankYouRoute: ThankYouRoute,
   Char123LocaleChar125Route: Char123LocaleChar125RouteWithChildren,
   LandingExecutiveGiftSetRoute: LandingExecutiveGiftSetRoute,
   LandingOnboardingGiftSetRoute: LandingOnboardingGiftSetRoute,
+  MarketsAustraliaRoute: MarketsAustraliaRoute,
+  MarketsNewZealandRoute: MarketsNewZealandRoute,
+  MarketsSingaporeRoute: MarketsSingaporeRoute,
+  MarketsUaeRoute: MarketsUaeRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

@@ -146,4 +146,40 @@ export const blogPosts: BlogPost[] = [
     heroImageAlt: 'Premium metal corporate gift set with subtle tone-on-tone laser engraved branding on an executive desk',
     heroImageCredit: 'Wischos Gift',
   },
+  {
+    slug: 'standard-catalogue-to-custom-metal-projects',
+    title: 'From Standard Catalogue to Custom Metal Projects: When Promo Distributors Should Go Off-Catalogue',
+    metaTitle: 'When Promo Distributors Should Go Off-Catalogue',
+    metaDescription:
+      'Learn when standard catalogue products are enough and when promo distributors should consider off-catalogue custom metal gifts for planned client projects.',
+    excerpt:
+      'Standard catalogues are essential for everyday promo orders. Some briefs need a wider sourcing lane: planned custom metal gifts with clearer material, packaging, budget and timeline requirements.',
+    quickAnswer:
+      'Off-catalogue custom sourcing is useful when a standard promotional product SKU is too generic for the brief. For promo distributors, it usually means adapting a proven product family, creating a semi-custom item, or developing a planned custom gift project.',
+    category: 'Distributor Strategy',
+    readTime: '7 min read',
+    publishedAt: 'May 27, 2026',
+    isoDate: '2026-05-27',
+    heroImage: 'https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_1200/blog/blog-008-hero',
+    heroImageAlt: 'Standard catalogue products beside custom metal gift project components on a distributor sourcing desk',
+    heroImageCredit: 'Wischos Gift',
+  },
+  {
+    slug: 'what-we-need-to-review-a-custom-metal-gift-project',
+    title: 'What We Need to Review a Custom Metal Gift Project',
+    metaTitle: 'Custom Metal Gift Project Review: What We Need to Get Started',
+    metaDescription:
+      "Reviewing a custom metal gift project with Wischos doesn't require a complete spec. Here's what helps us assess feasibility, cost, timeline, branding and packaging.",
+    excerpt:
+      'You do not need a complete specification to start. A product idea, quantity range, budget direction, deadline, branding needs and packaging expectation are enough for an early feasibility review.',
+    quickAnswer:
+      'To review a custom metal gift project, Wischos needs product idea, quantity range, target budget, deadline, branding needs and packaging expectation. We can start with feasibility before giving a firm quote.',
+    category: 'Sourcing Process',
+    readTime: '6 min read',
+    publishedAt: 'June 4, 2026',
+    isoDate: '2026-06-04',
+    heroImage: 'https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_1200/blog/blog-009-hero',
+    heroImageAlt: 'Custom metal gift project review desk with metal samples, packaging, calendar and sourcing notes',
+    heroImageCredit: 'Wischos Gift',
+  },
 ]

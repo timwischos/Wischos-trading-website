@@ -115,7 +115,7 @@ export const homepage = {
       },
       {
         name: 'The Morning Ritual',
-        tagline: 'Titanium bottle, EDC keychain, and brass pen — two metals, one carry set.',
+        tagline: 'Titanium bottle, titanium keychain, and brass pen — two metals, one carry set.',
       },
     ],
   },

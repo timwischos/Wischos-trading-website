@@ -49,7 +49,7 @@ export const siteMeta = {
     },
     products: {
       title: 'Corporate Metal Gift Set Catalog | Wischos Gift',
-      description: 'Browse our full catalog of custom metal corporate gift sets — executive pen sets, desk accessories, EDC tools and drinkware. Laser engraving and full packaging customization available.',
+      description: 'Browse our full catalog of custom metal corporate gift sets — executive pen sets, desk accessories, daily carry tools and drinkware. Laser engraving and full packaging customization available.',
     },
     about: {
       title: 'About Wischos Gift — Custom Metal Gift Set Sourcing',

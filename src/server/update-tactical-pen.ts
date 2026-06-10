@@ -16,7 +16,7 @@ async function main() {
   await db
     .update(products)
     .set({
-      name: 'Tactical Stainless Steel Pen with Glass Breaker',
+      name: 'Stainless Steel Utility Pen with Glass Breaker',
       tagline: '303 Stainless Steel | Glass Breaker Tip | 102.8g Precision Weight',
       highlights: [
         'Glass-Breaker Tail Cap: The hardened tungsten-carbide tip is positioned at the tail cap (opposite the writing end) — immediately accessible for vehicle emergencies without fumbling to reverse grip.',
@@ -25,7 +25,7 @@ async function main() {
         'Extreme Durability: Mirror-polished 303 stainless steel body built to withstand heavy-duty use.',
       ],
       description:
-        'Designed for professionals who demand peak performance, this all-stainless steel tactical pen balances strength with refined craftsmanship. The hardened glass-breaker tip is positioned at the tail cap — the natural end to strike in an emergency — ensuring immediate access without re-gripping. For professionals in transport, logistics, field service, or remote work, this pen discreetly integrates emergency preparedness into a daily carry tool.\n\nThe mirror-polished 303 stainless steel surface reflects a commitment to precision manufacturing. Full modular disassembly allows tool-free refill replacement in under 30 seconds, ensuring this pen functions as a reliable daily writer for the long term. An ideal corporate gift for professionals who demand both preparedness and precision.',
+        'Designed for professionals who demand peak performance, this all-stainless steel utility pen balances strength with refined craftsmanship. The hardened glass-breaker tip is positioned at the tail cap — the natural end to strike in an emergency — ensuring immediate access without re-gripping. For professionals in transport, logistics, service teams, or remote work, this pen discreetly integrates emergency preparedness into a daily carry tool.\n\nThe mirror-polished 303 stainless steel surface reflects a commitment to precision manufacturing. Full modular disassembly allows tool-free refill replacement in under 30 seconds, ensuring this pen functions as a reliable daily writer for the long term. An ideal corporate gift for professionals who demand both preparedness and precision.',
       specifications: [
         { label: 'Length', value: '152mm' },
         { label: 'Diameter', value: '14mm' },
@@ -77,7 +77,7 @@ async function main() {
     })
     .where(eq(products.id, 'tactical-stainless-steel-pen-01'))
 
-  console.log('✓ Tactical Stainless Steel Pen updated.')
+  console.log('✓ Stainless Steel Utility Pen updated.')
   await sql.end()
 }
 

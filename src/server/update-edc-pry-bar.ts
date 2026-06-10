@@ -1,6 +1,6 @@
 /**
  * Run with: npx tsx src/server/update-edc-pry-bar.ts
- * Inserts the Industrial Mini EDC Pry Bar (new product).
+ * Inserts the Mini Multi-Function Tool (new product).
  */
 import { config } from 'dotenv'
 config({ path: '.env.local' })
@@ -17,8 +17,8 @@ const BASE = '/products/Industrial-Mini-EDC-Pry-Bar-Keychain-01'
 async function main() {
   await db.insert(products).values({
     id: 'industrial-mini-edc-pry-bar-01',
-    name: 'Industrial Mini EDC Pry Bar',
-    tagline: 'Stainless Steel or Titanium | 12g Keychain-Ready | Box Opening & Prying',
+    name: 'Mini Multi-Function Tool',
+    tagline: 'Stainless Steel or Titanium | 12g Keychain-Ready | Box Opening & Light Utility',
     category: 'EDC Tools',
     materials: ['Stainless Steel', 'Titanium Alloy'],
     heroImage: `${BASE}/Industrial-Mini-EDC-Pry-Bar-Keychain-01-cover.avif`,
@@ -32,12 +32,12 @@ async function main() {
     moq: 50,
     customizationOptions: ['Laser Engraving', 'Custom Packaging'],
     highlights: [
-      'Everyday Utility: Purpose-built for the small gritty jobs — opening shipping boxes, removing stubborn staples, and light prying — always within reach on your keychain.',
+      'Everyday Utility: Purpose-built for the small daily jobs — opening shipping boxes, removing staples, and light wedging — always within reach on your keychain.',
       'Solid Metal Build: Available in rust-proof Stainless Steel or lightweight Titanium Alloy; won\'t bend, snap, or corrode like plastic alternatives.',
       'Pocket-Ready at 12g: Compact 70mm profile lives on your keychain unnoticed, but delivers real leverage when you need to scrape or wedge something loose.',
     ],
     description:
-      'This mini pry bar is a straightforward office companion designed to handle the small, gritty jobs of the day — like popping open taped boxes or prying out misaligned staples. It\'s small enough to live on your keychain unnoticed, but solid enough to provide real leverage when you need to scrape or wedge something loose. It is a simple, permanent piece of hardware that just works.\n\nAvailable in two material grades: stainless steel for a reliable, cost-effective daily workhorse, and titanium alloy for professionals who demand the same strength at a lighter weight. Both options feature laser-engravable flat surfaces, making this a discreet but practical corporate gift that stays with its recipient every day.',
+      'This mini multi-function tool is a straightforward office companion designed to handle the small daily jobs — like popping open taped boxes or removing misaligned staples. It\'s small enough to live on your keychain unnoticed, but solid enough to provide real leverage when you need to scrape or wedge something loose. It is a simple, permanent piece of hardware that just works.\n\nAvailable in two material grades: stainless steel for a reliable, cost-effective daily workhorse, and titanium alloy for professionals who demand the same strength at a lighter weight. Both options feature laser-engravable flat surfaces, making this a discreet but practical corporate gift that stays with its recipient every day.',
     specifications: [
       { label: 'Length', value: 'Approx. 70mm' },
       { label: 'Weight', value: '12g' },
@@ -47,7 +47,7 @@ async function main() {
     faqs: [
       {
         q: 'How do the two materials compare in terms of longevity?',
-        a: 'Both are fully rust-proof. Stainless steel is a reliable, cost-effective choice for daily prying tasks. Titanium offers the same structural strength at a lighter weight, making it a premium option for professionals who prefer minimal pocket bulk.',
+        a: 'Both are fully rust-proof. Stainless steel is a reliable, cost-effective choice for daily utility tasks. Titanium offers the same structural strength at a lighter weight, making it a premium option for professionals who prefer minimal pocket bulk.',
       },
       {
         q: 'Is corporate logo customization supported?',
@@ -55,11 +55,11 @@ async function main() {
       },
       {
         q: 'Can this actually open boxes and remove staples reliably?',
-        a: 'Yes. The tapered pry tip is specifically engineered for this. It fits under packing tape seals and staple heads with enough leverage to handle daily office tasks cleanly, without damaging surrounding materials.',
+        a: 'Yes. The tapered tip is specifically engineered for this. It fits under packing tape seals and staple heads with enough leverage to handle daily office tasks cleanly, without damaging surrounding materials.',
       },
       {
         q: 'Is it safe to carry through airport security?',
-        a: 'Security rules vary by country and checkpoint. As a compact pry tool under 70mm with no blade, it is generally accepted in carry-on luggage in most regions, but we recommend checking local regulations before travel.',
+        a: 'Security rules vary by country and checkpoint. As a compact utility tool under 70mm with no blade, it is generally accepted in carry-on luggage in most regions, but we recommend checking local regulations before travel.',
       },
     ],
     seoKeywords: [
@@ -88,7 +88,7 @@ async function main() {
     active: true,
   })
 
-  console.log('✓ Industrial Mini EDC Pry Bar inserted.')
+  console.log('✓ Mini Multi-Function Tool inserted.')
   await sql.end()
 }
 

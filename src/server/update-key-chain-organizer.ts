@@ -16,7 +16,7 @@ async function main() {
   await db
     .update(products)
     .set({
-      name: 'Industrial Brass Key Organizer',
+      name: 'Compact Brass Key Organizer',
       tagline: 'Solid Brass Construction | 11–18g Per Piece | Polished Industrial Finish',
       highlights: [
         'Heavy-Duty Reliability: High-density brass construction resists rust and structural deformation.',

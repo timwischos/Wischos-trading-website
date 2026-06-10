@@ -334,7 +334,7 @@ function AustraliaMarketPage() {
               marginBottom: '0.75rem',
             }}
           >
-            Indicative Landed Cost — 500 Brass EDC Sets
+            Indicative Landed Cost — 500 Brass Daily Carry Sets
           </p>
           <table
             style={{
@@ -440,7 +440,7 @@ function AustraliaMarketPage() {
                 name: 'The Morning Ritual',
                 sku: 'WGS-005',
                 tagline:
-                  'Titanium bottle, EDC keychain, and brass pen. The highest material tier in our lineup — for executive gifting in finance, law, and professional services.',
+                  'Titanium bottle, titanium keychain, and brass pen. The highest material tier in our lineup — for executive gifting in finance, law, and professional services.',
                 href: '/gift-sets/wgs-005-3-the-morning-ritual',
               },
               {

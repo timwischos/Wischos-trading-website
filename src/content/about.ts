@@ -35,7 +35,7 @@ export const about = {
       },
       {
         title: 'Long-term factory partners, matched by category',
-        body: 'We work with long-term manufacturing partners across metal gift categories including writing instruments, desk accessories, EDC tools, drinkware, logo customization, and packaging. Instead of forcing every project through one factory, we match the brief to suitable production partners based on product type, material, finish, order quantity, and customization requirements.',
+        body: 'We work with long-term manufacturing partners across metal gift categories including writing instruments, desk accessories, daily carry tools, drinkware, logo customization, and packaging. Instead of forcing every project through one factory, we match the brief to suitable production partners based on product type, material, finish, order quantity, and customization requirements.',
       },
       {
         title: 'Custom sets beyond the website catalog',

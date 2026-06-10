@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Wischos Gift - Distributor Short Flyer 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --ink: #14110f;
+    --muted: #6f6862;
+    --soft: #f4f1ec;
+    --line: #ddd5cb;
+    --dark: #11100f;
+    --red: #9f1d20;
+    --gold: #b8894f;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: #d8d3cc; color: var(--ink); font-family: Inter, Arial, sans-serif; }
+  body { padding: 24px; display: flex; flex-direction: column; gap: 24px; align-items: center; }
+  .serif { font-family: "Cormorant Garamond", Georgia, serif; }
+  .page {
+    width: 297mm;
+    height: 210mm;
+    background: #fbfaf8;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 12px 40px rgba(0,0,0,.18);
+  }
+  .header, .footer {
+    position: absolute;
+    left: 32px;
+    right: 32px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--line);
+    font-size: 9px;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: #827a72;
+  }
+  .header { top: 0; }
+  .footer {
+    bottom: 0;
+    border-bottom: 0;
+    border-top: 1px solid var(--line);
+  }
+  .logo { width: 92px; height: auto; display: block; }
+  .cover { display: grid; grid-template-columns: 38% 62%; }
+  .cover-left { padding: 38px 32px; display: flex; flex-direction: column; height: 100%; background: #fbfaf8; }
+  .cover-kicker, .kicker {
+    font-size: 9px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--red);
+    font-weight: 600;
+  }
+  .cover h1 { font-size: 66px; line-height: .88; font-weight: 300; margin: 82px 0 24px; letter-spacing: 0; }
+  .cover h1 em { color: var(--red); font-style: italic; }
+  .cover-copy { font-size: 12px; line-height: 1.75; color: #5f5852; max-width: 310px; }
+  .badges { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+  .badge { border: 1px solid var(--line); padding: 6px 9px; font-size: 8px; letter-spacing: .12em; text-transform: uppercase; color: #4d4741; }
+  .cover-note { margin-top: auto; padding-top: 18px; border-top: 1px solid var(--line); font-size: 9px; line-height: 1.65; color: #7b736b; }
+  .cover-right { position: relative; min-height: 100%; background: #d8d2c8; overflow: hidden; }
+  .cover-right img { width: 100%; height: 100%; object-fit: cover; object-position: 50% center; display: block; }
+  .cover-right:after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,0,0,.10), rgba(0,0,0,0)); pointer-events: none; }
+  .content { position: absolute; inset: 54px 32px 46px; }
+  .section-head { display: grid; grid-template-columns: 1fr 1.2fr; gap: 36px; align-items: end; margin-bottom: 22px; }
+  .section-title { font-size: 42px; line-height: .95; font-weight: 300; margin: 8px 0 0; }
+  .section-copy { font-size: 10.5px; line-height: 1.75; color: var(--muted); margin: 0; }
+  .sets-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  .set-card { border: 1px solid var(--line); background: white; min-height: 250px; display: flex; flex-direction: column; }
+  .set-card img { width: 100%; aspect-ratio: 1.35 / 1; object-fit: cover; display: block; border-bottom: 1px solid var(--line); }
+  .set-body { padding: 11px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
+  .set-sku { font-size: 8px; letter-spacing: .15em; text-transform: uppercase; color: #9b9288; }
+  .set-name { font-size: 21px; line-height: 1.05; font-weight: 400; }
+  .set-category { font-size: 7.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #b8894f; font-weight: 600; margin-top: 4px; }
+  .set-use { margin-top: auto; font-size: 8.5px; line-height: 1.45; color: #766e66; border-top: 1px solid var(--line); padding-top: 8px; }
+  .component-page .content { display: grid; grid-template-columns: 280px 1fr; gap: 26px; }
+  .side-panel { border-right: 1px solid var(--line); padding-right: 24px; display: flex; flex-direction: column; }
+  .side-panel h2 { font-size: 40px; line-height: .96; font-weight: 300; margin: 8px 0 18px; }
+  .side-panel p { font-size: 10.5px; line-height: 1.75; color: var(--muted); margin: 0 0 14px; }
+  .stat-block { margin-top: auto; border-top: 1px solid var(--line); padding-top: 14px; display: grid; gap: 11px; }
+  .stat { display: flex; justify-content: space-between; gap: 12px; font-size: 9px; color: #766e66; }
+  .stat strong { color: var(--ink); font-size: 15px; font-weight: 500; }
+  .component-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+  .component { border: 1px solid var(--line); background: white; display: flex; flex-direction: column; }
+  .component img { width: 100%; aspect-ratio: 1.32 / 1; object-fit: cover; display: block; border-bottom: 1px solid var(--line); }
+  .component-body { padding: 8px; }
+  .component-sku { font-size: 7.5px; letter-spacing: .14em; text-transform: uppercase; color: #9b9288; margin-bottom: 3px; }
+  .component-name { font-size: 12px; line-height: 1.18; font-weight: 500; }
+  .component-meta { font-size: 7.7px; line-height: 1.4; color: #766e66; margin-top: 5px; }
+  .process { background: var(--dark); color: #f3eee8; }
+  .process .header, .process .footer { border-color: #2d2925; color: #6c6258; }
+  .process .content { display: grid; grid-template-columns: 40% 60%; gap: 34px; }
+  .process h2 { font-size: 52px; line-height: .92; font-weight: 300; margin: 8px 0 20px; }
+  .process h2 em { color: #d6ad77; font-style: italic; }
+  .process p { font-size: 11px; line-height: 1.8; color: #a79d92; margin: 0 0 14px; }
+  .steps { border-top: 1px solid #2d2925; align-self: center; }
+  .step { display: grid; grid-template-columns: 56px 1fr; gap: 18px; padding: 18px 0; border-bottom: 1px solid #2d2925; }
+  .step-no { font-size: 11px; letter-spacing: .16em; color: var(--gold); }
+  .step-title { font-size: 13px; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 5px; color: #f3eee8; }
+  .step-copy { font-size: 10px; line-height: 1.65; color: #958b80; }
+  .closing-note { margin-top: auto; padding: 14px; border: 1px solid #3a342f; color: #c8bfb5; font-size: 10px; line-height: 1.7; }
+  @media print {
+    html, body { background: white; padding: 0; gap: 0; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .page { box-shadow: none; page-break-after: always; break-after: page; }
+  }
+</style>
+</head>
+<body>
+
+<section class="page cover">
+  <div class="cover-left">
+    <img class="logo" src="https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto/wischos-logo" alt="Wischos Gift" />
+    <div>
+      <div class="cover-kicker">Distributor Short Flyer 2026</div>
+      <h1 class="serif">Curated<br /><em>Gift Sets</em><br />Built to<br />Rework</h1>
+      <p class="cover-copy">Ready-to-present corporate gift set concepts for distributors, agencies, and promotional product teams. Start with a complete set, adjust the components, then quote by quantity, branding method, packaging, destination, and timeline.</p>
+      <div class="badges">
+        <span class="badge">8 Ready Set Concepts</span>
+        <span class="badge">30+ Components</span>
+        <span class="badge">Quoted by Project</span>
+      </div>
+    </div>
+    <div class="cover-note">This short flyer is designed for first review. The full catalogue and project pricing can follow once a client brief, quantity, budget range, and destination are known.</div>
+  </div>
+  <div class="cover-right">
+    <img src="https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_1600/docs/distributor-flyer-2026-banner" alt="Wischos corporate gift set with branded packaging and metal components" />
+  </div>
+</section>
+
+<section class="page">
+  <div class="header"><span>Wischos Gift</span><span>Gift Set Concepts</span></div>
+  <div class="content">
+    <div class="section-head">
+      <div>
+        <div class="kicker">8 ready-to-present programs</div>
+        <h2 class="section-title serif">Gift sets first.<br />Components second.</h2>
+      </div>
+      <p class="section-copy">Each concept gives a distributor something visual and client-friendly to present immediately. The product mix is not fixed: components, materials, finishes, packaging, and logo placement can be adjusted around the client's budget and campaign context.</p>
+    </div>
+    <div class="sets-grid">
+      <div class="set-card"><img src="https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_800/products/WGS-001-3-The-Desk-Starter/The-Desk-Starter-cover" alt="The Desk Starter" /><div class="set-body"><div class="set-sku">WGS-001-3</div><div class="set-name serif">The Desk Starter</div><div class="set-category">Entry-Tier Desk Gift Set</div><div class="set-use">Desk, conference, SME gifting, sustainability-led programs</div></div></div>
+      <div class="set-card"><img src="https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_800/products/WGS-002-3-The-Mechanical-Desk/The-Mechanical-Desk-cover" alt="The Mechanical Desk" /><div class="set-body"><div class="set-sku">WGS-002-3</div><div class="set-name serif">The Mechanical Desk</div><div class="set-category">Executive Desk Gift Set</div><div class="set-use">Tech, engineering, design studios, executive teams</div></div></div>
+      <div class="set-card"><img src="https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_800/products/WGS-003-3-The-Pocket-Three/The-Pocket-Three-cover" alt="The Pocket Three" /><div class="set-body"><div class="set-sku">WGS-003-3</div><div class="set-name serif">The Pocket Three</div><div class="set-category">EDC Daily Carry Gift Set</div><div class="set-use">EDC, HR programs, finance, client appreciation</div></div></div>
+      <div class="set-card"><img src="https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_800/products/WGS-004-3-The-Field-EDC/The-Field-EDC-cover" alt="The Field EDC" /><div class="set-body"><div class="set-sku">WGS-004-3</div><div class="set-name serif">The Field EDC</div><div class="set-category">Field Team Utility Gift Set</div><div class="set-use">Field service, logistics, construction, safety teams</div></div></div>
+      <div class="set-card"><img src="https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_800/products/WGS-005-3-The-Morning-Ritual/The-Morning-Ritual-cover" alt="The Morning Ritual" /><div class="set-body"><div class="set-sku">WGS-005-3</div><div class="set-name serif">The Morning Ritual</div><div class="set-category">Executive Commute Gift Set</div><div class="set-use">Executive gifting, premium HR, finance, travel programs</div></div></div>
+      <div class="set-card"><img src="https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_800/products/WGS-006-3-The-First-Day/The-First-Day-cover" alt="The First Day" /><div class="set-body"><div class="set-sku">WGS-006-3</div><div class="set-name serif">The First Day</div><div class="set-category">New Employee Onboarding Kit</div><div class="set-use">Employee onboarding, badge programs, co-working welcome kits</div></div></div>
+      <div class="set-card"><img src="https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_800/products/WGS-007-3-The-Thinking-Desk/The-Thinking-Desk-cover" alt="The Thinking Desk" /><div class="set-body"><div class="set-sku">WGS-007-3</div><div class="set-name serif">The Thinking Desk</div><div class="set-category">Client Appreciation Gift Set</div><div class="set-use">Client appreciation, leadership teams, desk-focused campaigns</div></div></div>
+      <div class="set-card"><img src="https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_800/products/WGS-008-4-The-Quartet/The-Quartet-cover" alt="The Quartet" /><div class="set-body"><div class="set-sku">WGS-008-4</div><div class="set-name serif">The Quartet</div><div class="set-category">VIP Executive Gift Set</div><div class="set-use">VIP programs, executive welcome kits, premium corporate gifts</div></div></div>
+    </div>
+  </div>
+  <div class="footer"><span>Wischos Gift - Distributor Short Flyer</span><span>02</span></div>
+</section>
+
+<section class="page component-page">
+  <div class="header"><span>Wischos Gift</span><span>Representative Components</span></div>
+  <div class="content">
+    <aside class="side-panel">
+      <div class="kicker">12 sample components</div>
+      <h2 class="serif">A focused library,<br />not a fixed menu.</h2>
+      <p>These are representative pieces from the broader 30+ component library. They show the material direction and branding surfaces available for gift set development.</p>
+      <p>For distributor projects, the same set concept can be rebuilt with different components, finishes, packaging, or budget levels.</p>
+      <div class="stat-block">
+        <div class="stat"><span>Catalogue components</span><strong>30+</strong></div>
+        <div class="stat"><span>Shown on this page</span><strong>12</strong></div>
+        <div class="stat"><span>Quote basis</span><strong>By brief</strong></div>
+      </div>
+    </aside>
+    <div class="component-grid">
+      <div class="component"><img src="https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_500/products/WP-101-brass-crown-bolt-action-pen/brass-crown-bolt-action-pen-cover" alt="WP-101" /><div class="component-body"><div class="component-sku">WP-101</div><div class="component-name">Brass Crown Bolt-Action Pen</div><div class="component-meta">Brass + aluminium - laser engraving</div></div></div>
+      <div class="component"><img src="https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_500/products/WP-106-brass-clip-pen/solid-brass-ballpoint-pen-cover" alt="WP-106" /><div class="component-body"><div class="component-sku">WP-106</div><div class="component-name">Solid Brass Ballpoint Pen</div><div class="component-meta">Solid brass - clip design - laser engravable</div></div></div>
+      <div class="component"><img src="https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_500/products/WP-103-tactical-stainless-steel-pen/tactical-stainless-steel-pen-cover" alt="WP-103" /><div class="component-body"><div class="component-sku">WP-103</div><div class="component-name">Tactical Stainless Pen</div><div class="component-meta">Stainless steel - field utility</div></div></div>
+      <div class="component"><img src="https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_500/products/WP-104-6-in-1-precision-metal-tool-pen/6-in-1-precision-metal-tool-pen-cover" alt="WP-104" /><div class="component-body"><div class="component-sku">WP-104</div><div class="component-name">6-in-1 Tool Pen</div><div class="component-meta">Ballpoint, LED, stylus, ruler, tools</div></div></div>
+      <div class="component"><img src="https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_500/products/WP-203-executive-zinc-alloy-letter-opener/executive-zinc-alloy-letter-opener-cover" alt="WP-203" /><div class="component-body"><div class="component-sku">WP-203</div><div class="component-name">Zinc Alloy Letter Opener</div><div class="component-meta">Plated finish - desk gift component</div></div></div>
+      <div class="component"><img src="https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_500/products/WP-205-precision-custom-metal-bookmark/precision-custom-metal-bookmark-cover" alt="WP-205" /><div class="component-body"><div class="component-sku">WP-205</div><div class="component-name">Custom Metal Bookmark</div><div class="component-meta">Brass, stainless, zinc - custom shape</div></div></div>
+      <div class="component"><img src="https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_500/products/WP-208-precision-folding-aluminium-device-stand/precision-folding-aluminium-device-stand-cover" alt="WP-208" /><div class="component-body"><div class="component-sku">WP-208</div><div class="component-name">Folding Aluminium Stand</div><div class="component-meta">6061-T6 aluminium - desk and meetings</div></div></div>
+      <div class="component"><img src="https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_500/products/WP-301-rfid-aluminum-wallet-badge-holder/rfid-aluminum-wallet-badge-holder-cover" alt="WP-301" /><div class="component-body"><div class="component-sku">WP-301</div><div class="component-name">RFID Wallet Badge Holder</div><div class="component-meta">Aluminium - onboarding and access cards</div></div></div>
+      <div class="component"><img src="https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_500/products/WP-302-industrial-brass-key-organizer/industrial-brass-key-organizer-cover" alt="WP-302" /><div class="component-body"><div class="component-sku">WP-302</div><div class="component-name">Brass Key Organizer</div><div class="component-meta">Solid brass - pocket carry</div></div></div>
+      <div class="component"><img src="https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_500/products/WP-303-industrial-stainless-steel-money-clip/industrial-stainless-steel-money-clip-cover" alt="WP-303" /><div class="component-body"><div class="component-sku">WP-303</div><div class="component-name">Stainless Money Clip</div><div class="component-meta">Spring tension - front engraving</div></div></div>
+      <div class="component"><img src="https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_500/products/WP-401-pure-titanium-vacuum-insulated-bottle/pure-titanium-vacuum-insulated-bottle-cover" alt="WP-401" /><div class="component-body"><div class="component-sku">WP-401</div><div class="component-name">Titanium Insulated Bottle</div><div class="component-meta">Pure titanium body - premium drinkware</div></div></div>
+      <div class="component"><img src="https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_500/products/WP-402-pure-titanium-capsule-bottle-150ml/pure-titanium-capsule-bottle-150ml-cover" alt="WP-402" /><div class="component-body"><div class="component-sku">WP-402</div><div class="component-name">Titanium Capsule Bottle</div><div class="component-meta">150ml - shirt-pocket format</div></div></div>
+    </div>
+  </div>
+  <div class="footer"><span>30+ available components - custom sourcing available by brief</span><span>03</span></div>
+</section>
+
+<section class="page process">
+  <div class="header"><span>Wischos Gift</span><span>How to Work With Us</span></div>
+  <div class="content">
+    <div style="display:flex;flex-direction:column;">
+      <div class="kicker">Built for distributor workflows</div>
+      <h2 class="serif">Send a brief.<br /><em>We build</em><br />the quote path.</h2>
+      <p>We are not positioning this flyer as a full commodity catalogue. It is a focused gift set program backed by sourcing, branding, packaging, and project-by-project quotation.</p>
+      <p>Pricing depends on quantity, decoration method, packaging, destination, and required timeline.</p>
+      <p>If a client is drawn to one or two individual components rather than a full set, we are glad to discuss how to help — whether as standalone items or as the starting point for a smaller configuration.</p>
+      <div class="closing-note">30+ available components, custom sourcing available by brief. Share the client context, target budget, quantity, destination, logo method, and delivery date, and we can prepare a focused option list.</div>
+      <div class="key-facts-flyer" style="margin-top:14px;padding-top:12px;border-top:1px solid #2d2925;display:grid;grid-template-columns:repeat(4,1fr);gap:10px;">
+        <div><div style="font-size:7.5pt;letter-spacing:0.14em;text-transform:uppercase;color:#d6ad77;font-weight:600;margin-bottom:3px;">MOQ</div><div style="font-size:9px;color:#a79d92;line-height:1.45;">50–500 sets per project</div></div>
+        <div><div style="font-size:7.5pt;letter-spacing:0.14em;text-transform:uppercase;color:#d6ad77;font-weight:600;margin-bottom:3px;">Lead Time</div><div style="font-size:9px;color:#a79d92;line-height:1.45;">25–35 days production</div></div>
+        <div><div style="font-size:7.5pt;letter-spacing:0.14em;text-transform:uppercase;color:#d6ad77;font-weight:600;margin-bottom:3px;">Payment</div><div style="font-size:9px;color:#a79d92;line-height:1.45;">T/T · Wise</div></div>
+        <div><div style="font-size:7.5pt;letter-spacing:0.14em;text-transform:uppercase;color:#d6ad77;font-weight:600;margin-bottom:3px;">Response</div><div style="font-size:9px;color:#a79d92;line-height:1.45;">Within 24 hours</div></div>
+      </div>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="step-no">01</div><div><div class="step-title">Choose a starting concept</div><div class="step-copy">Select one of the 8 ready gift set concepts, or use them only as a visual direction for the client presentation.</div></div></div>
+      <div class="step"><div class="step-no">02</div><div><div class="step-title">Adjust the component mix</div><div class="step-copy">Swap components from the 30+ library, change materials or finishes, and align the set to the client's budget range.</div></div></div>
+      <div class="step"><div class="step-no">03</div><div><div class="step-title">Confirm branding and packaging</div><div class="step-copy">Logo method, placement, gift box style, insert, sleeve, and printed packaging are quoted with production feasibility in mind.</div></div></div>
+      <div class="step"><div class="step-no">04</div><div><div class="step-title">Quote by project</div><div class="step-copy">We quote based on quantity, destination, timeline, packing volume, and shipment method, rather than sending a generic price sheet.</div></div></div>
+      <div class="step"><div class="step-no">05</div><div><div class="step-title">Sample before bulk</div><div class="step-copy">Reference samples and custom samples support distributor review before final production approval.</div></div></div>
+    </div>
+  </div>
+  <div class="footer"><span>wischosgift.com - inquiries@wischosgift.com</span><span>04</span></div>
+</section>
+
+</body>
+</html>

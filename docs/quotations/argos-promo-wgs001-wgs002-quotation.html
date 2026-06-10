@@ -1,0 +1,550 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quotation - WGS-001 and WGS-002 Custom Metal Gift Sets</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 12mm;
+    }
+
+    :root {
+      --ink: #171717;
+      --muted: #646464;
+      --line: #ded8d1;
+      --paper: #fbfaf8;
+      --copper: #b87333;
+      --soft: #f3eee8;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #e9e5df;
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 12px;
+      line-height: 1.45;
+    }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto;
+      background: var(--paper);
+      padding: 14mm;
+      box-shadow: 0 18px 50px rgba(0, 0, 0, 0.12);
+    }
+
+    .topbar {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: start;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .brand-name {
+      font-size: 22px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .brand-line {
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .quote-meta {
+      text-align: right;
+      font-size: 11px;
+      color: var(--muted);
+      min-width: 220px;
+    }
+
+    .quote-meta strong {
+      color: var(--ink);
+    }
+
+    h1 {
+      margin: 22px 0 8px;
+      font-size: 28px;
+      line-height: 1.05;
+      font-weight: 400;
+      letter-spacing: 0;
+    }
+
+    .intro {
+      max-width: 680px;
+      color: var(--muted);
+      margin: 0 0 18px;
+      font-size: 12px;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border: 1px solid var(--line);
+      margin: 18px 0;
+    }
+
+    .info-cell {
+      padding: 10px;
+      border-right: 1px solid var(--line);
+      min-height: 58px;
+    }
+
+    .info-cell:last-child {
+      border-right: 0;
+    }
+
+    .label {
+      display: block;
+      font-size: 9px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 5px;
+    }
+
+    .value {
+      font-size: 12px;
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0 18px;
+    }
+
+    th {
+      text-align: left;
+      padding: 8px 7px;
+      background: var(--soft);
+      border: 1px solid var(--line);
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #3a332d;
+    }
+
+    td {
+      padding: 8px 7px;
+      border: 1px solid var(--line);
+      vertical-align: top;
+    }
+
+    .money {
+      text-align: right;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      margin: 22px 0 8px;
+      font-size: 13px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .section-title::before {
+      content: "";
+      width: 28px;
+      height: 1px;
+      background: var(--copper);
+      display: block;
+    }
+
+    .set-card {
+      border: 1px solid var(--line);
+      margin: 12px 0 18px;
+      background: rgba(255, 255, 255, 0.35);
+      page-break-inside: avoid;
+    }
+
+    .set-head {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 16px;
+      padding: 12px;
+      border-bottom: 1px solid var(--line);
+      background: #fffdfb;
+    }
+
+    .sku {
+      color: var(--copper);
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .set-name {
+      font-size: 20px;
+      font-weight: 400;
+      margin: 0;
+    }
+
+    .set-sub {
+      margin: 4px 0 0;
+      color: var(--muted);
+      max-width: 620px;
+    }
+
+    .set-price {
+      text-align: right;
+      min-width: 210px;
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .set-price strong {
+      display: block;
+      color: var(--ink);
+      font-size: 21px;
+      margin-bottom: 2px;
+    }
+
+    .component-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .component {
+      padding: 12px;
+      border-right: 1px solid var(--line);
+      min-height: 168px;
+    }
+
+    .component:last-child {
+      border-right: 0;
+    }
+
+    .component-code {
+      color: var(--copper);
+      font-size: 10px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .component-name {
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 1.25;
+      margin-bottom: 8px;
+    }
+
+    .spec-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .spec-list li {
+      margin: 0 0 5px;
+    }
+
+    .spec-list strong {
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    .notes {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .note-box {
+      border: 1px solid var(--line);
+      padding: 12px;
+      background: #fffdfb;
+      page-break-inside: avoid;
+    }
+
+    .note-box h3 {
+      margin: 0 0 8px;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .note-box ul {
+      margin: 0;
+      padding-left: 16px;
+      color: var(--muted);
+    }
+
+    .note-box li {
+      margin-bottom: 5px;
+    }
+
+    .footer {
+      margin-top: 18px;
+      padding-top: 12px;
+      border-top: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      color: var(--muted);
+      font-size: 10px;
+    }
+
+    .footer strong {
+      color: var(--ink);
+    }
+
+    @media print {
+      body {
+        background: #fff;
+      }
+
+      .page {
+        width: auto;
+        min-height: auto;
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-name">Wischos Gift</div>
+        <div class="brand-line">China-based sourcing partner for custom metal corporate gift sets</div>
+        <div class="brand-line">wischosgift.com | inquiries@wischosgift.com</div>
+      </div>
+      <div class="quote-meta">
+        <div><strong>Quotation No.</strong> WG-ARGOS-20260602-01</div>
+        <div><strong>Date</strong> 2 June 2026</div>
+        <div><strong>Prepared for</strong> Argos Promo, New Zealand</div>
+        <div><strong>Validity</strong> 14 days, subject to freight space</div>
+      </div>
+    </header>
+
+    <h1>Quotation for Custom Metal Gift Sets</h1>
+    <p class="intro">
+      Distributor reference pricing for two custom metal gift set configurations at 100 sets.
+      Each set is designed as a starting point: component finishes, logo placement, and box details
+      can be adjusted after artwork and packaging requirements are confirmed.
+    </p>
+
+    <section class="info-grid" aria-label="quotation summary">
+      <div class="info-cell">
+        <span class="label">Quantity</span>
+        <span class="value">100 sets per design</span>
+      </div>
+      <div class="info-cell">
+        <span class="label">Currency</span>
+        <span class="value">USD</span>
+      </div>
+      <div class="info-cell">
+        <span class="label">Lead Time</span>
+        <span class="value">25-35 days after approval</span>
+      </div>
+      <div class="info-cell">
+        <span class="label">Destination</span>
+        <span class="value">Auckland, New Zealand</span>
+      </div>
+    </section>
+
+    <div class="section-title">Price Summary</div>
+    <table aria-label="price summary">
+      <thead>
+        <tr>
+          <th>Set</th>
+          <th>Set Name</th>
+          <th>Quantity</th>
+          <th>FOB China</th>
+          <th>CIF Auckland Port</th>
+          <th>DAP Auckland Metro</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>WGS-001-3</strong></td>
+          <td>The Desk Starter</td>
+          <td>100 sets</td>
+          <td class="money">USD 10.80 / set<br />USD 1,080 total</td>
+          <td class="money">USD 14.80 / set<br />USD 1,480 total</td>
+          <td class="money">USD 19.80 / set<br />USD 1,980 total</td>
+        </tr>
+        <tr>
+          <td><strong>WGS-002-3</strong></td>
+          <td>The Mechanical Desk</td>
+          <td>100 sets</td>
+          <td class="money">USD 26.80 / set<br />USD 2,680 total</td>
+          <td class="money">USD 32.80 / set<br />USD 3,280 total</td>
+          <td class="money">USD 39.80 / set<br />USD 3,980 total</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <section class="set-card">
+      <div class="set-head">
+        <div>
+          <div class="sku">WGS-001-3</div>
+          <h2 class="set-name">The Desk Starter</h2>
+          <p class="set-sub">
+            Entry-tier desk gift set for daily desk visibility: writing, opening mail, and branded page marking.
+          </p>
+        </div>
+        <div class="set-price">
+          Distributor reference<br />
+          <strong>USD 10.80</strong>
+          per set FOB China
+        </div>
+      </div>
+      <div class="component-grid">
+        <article class="component">
+          <div class="component-code">WP-102</div>
+          <div class="component-name">Executive Dual-Head Metal Pen</div>
+          <ul class="spec-list">
+            <li><strong>Function:</strong> Inkless tip + rollerball writing end</li>
+            <li><strong>Material:</strong> Aluminium alloy body with gunmetal finish</li>
+            <li><strong>Size / Weight:</strong> approx. 144 x 10mm | 23.3g</li>
+            <li><strong>Logo:</strong> Pen body or clip, by laser marking, UV print, or pad print</li>
+          </ul>
+        </article>
+        <article class="component">
+          <div class="component-code">WP-203</div>
+          <div class="component-name">Executive Zinc Alloy Letter Opener</div>
+          <ul class="spec-list">
+            <li><strong>Function:</strong> Desk letter opener for envelopes and documents</li>
+            <li><strong>Material:</strong> Zinc alloy with high-gloss electroplating</li>
+            <li><strong>Size / Weight:</strong> approx. 230mm total length | 74g</li>
+            <li><strong>Logo:</strong> Flat handle surface, laser etching or screen print</li>
+          </ul>
+        </article>
+        <article class="component">
+          <div class="component-code">WP-205</div>
+          <div class="component-name">Precision Custom Metal Bookmark</div>
+          <ul class="spec-list">
+            <li><strong>Function:</strong> Rigid page marker and flat desk-visible brand surface</li>
+            <li><strong>Material:</strong> Brass, stainless steel, or zinc alloy by final brief</li>
+            <li><strong>Size / Weight:</strong> approx. 120-150mm | around 20g</li>
+            <li><strong>Logo:</strong> Laser engraving, chemical etching, or profile cutting</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="set-card">
+      <div class="set-head">
+        <div>
+          <div class="sku">WGS-002-3</div>
+          <h2 class="set-name">The Mechanical Desk</h2>
+          <p class="set-sub">
+            Executive desk gift set built around three tactile actions: writing, opening mail, and holding a device.
+          </p>
+        </div>
+        <div class="set-price">
+          Distributor reference<br />
+          <strong>USD 26.80</strong>
+          per set FOB China
+        </div>
+      </div>
+      <div class="component-grid">
+        <article class="component">
+          <div class="component-code">WP-101</div>
+          <div class="component-name">Brass Crown Bolt-Action Pen</div>
+          <ul class="spec-list">
+            <li><strong>Function:</strong> One-handed bolt-action pen with G2 refill</li>
+            <li><strong>Material:</strong> Brass details, aluminium body, stainless steel clip</li>
+            <li><strong>Size / Weight:</strong> approx. 138 x 10mm | 28g</li>
+            <li><strong>Logo:</strong> Pen body, clip, or tail crown depending on artwork</li>
+          </ul>
+        </article>
+        <article class="component">
+          <div class="component-code">WP-204</div>
+          <div class="component-name">Propeller Spinning Letter Opener</div>
+          <ul class="spec-list">
+            <li><strong>Function:</strong> Letter opener with visible propeller spin mechanism</li>
+            <li><strong>Material:</strong> Zinc alloy, matte brushed electroplated silver finish</li>
+            <li><strong>Size / Weight:</strong> approx. 187 x 19 x 4mm | 85g</li>
+            <li><strong>Logo:</strong> Flat blade surface or propeller face</li>
+          </ul>
+        </article>
+        <article class="component">
+          <div class="component-code">WP-208</div>
+          <div class="component-name">Precision Folding Aluminium Device Stand</div>
+          <ul class="spec-list">
+            <li><strong>Function:</strong> Folding stand for phone or tablet desk use</li>
+            <li><strong>Material:</strong> Anodised aluminium alloy with silicone contact pads</li>
+            <li><strong>Size / Weight:</strong> approx. 182 x 60 x 18mm folded | 150g</li>
+            <li><strong>Logo:</strong> Flat aluminium base panel, laser marking</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <div class="notes">
+      <section class="note-box">
+        <h3>Included Assumptions</h3>
+        <ul>
+          <li>Standard logo marking on each component, one standard position per item.</li>
+          <li>Standard set packaging with EVA insert; final box structure and artwork subject to approval.</li>
+          <li>Production starts after artwork, sample direction, and deposit are confirmed.</li>
+          <li>Component colours and finishes are subject to supplier availability at order confirmation.</li>
+        </ul>
+      </section>
+      <section class="note-box">
+        <h3>Freight and Tax Notes</h3>
+        <ul>
+          <li>CIF Auckland includes estimated sea freight and insurance to Auckland port only.</li>
+          <li>DAP Auckland metro is duties and taxes unpaid. NZ GST, duty, customs clearance, inspection, storage, and remote-area delivery are excluded.</li>
+          <li>DAP pricing is subject to confirmed carton size, gross weight, delivery address, and freight validity.</li>
+          <li>For Wellington, Christchurch, or non-metro delivery, inland delivery may be requoted.</li>
+        </ul>
+      </section>
+      <section class="note-box">
+        <h3>Optional Upgrades</h3>
+        <ul>
+          <li>Magnetic rigid box, drawer rigid box, soft-touch lamination, printed liner, foil stamping, or debossed box logo.</li>
+          <li>Additional logo position, full-colour UV printing, Pantone print matching, or custom bookmark silhouette.</li>
+          <li>Reference sample or custom pre-production sample can be quoted separately after project direction is confirmed.</li>
+        </ul>
+      </section>
+      <section class="note-box">
+        <h3>Payment Terms</h3>
+        <ul>
+          <li>50% deposit to start production, 50% balance before shipment unless otherwise agreed.</li>
+          <li>Bank fees and any destination charges not listed in this quotation are for buyer's account.</li>
+          <li>Quotation is valid for 14 days and may change if freight rates, material costs, or exchange conditions move significantly.</li>
+        </ul>
+      </section>
+    </div>
+
+    <footer class="footer">
+      <div><strong>Wischos Gift Trading Co.</strong><br />Custom metal gift set sourcing and set development from China.</div>
+      <div>wischosgift.com<br />inquiries@wischosgift.com</div>
+    </footer>
+  </main>
+</body>
+</html>

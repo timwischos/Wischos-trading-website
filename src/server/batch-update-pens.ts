@@ -143,13 +143,13 @@ async function main() {
 
   console.log('Updating WP-103...')
   await db.update(products).set({
-    name: 'Tactical Stainless Steel Pen with Glass Breaker',
+    name: 'Stainless Steel Utility Pen with Glass Breaker',
     tagline: '303 stainless steel | Tungsten-carbide glass breaker | 102.8g',
-    metaDescription: 'Custom stainless steel tactical pen for corporate field gifts, with glass breaker tip, heavy hand feel and logo marking.',
-    quickAnswer: 'Tactical Stainless Steel Pen with Glass Breaker is a custom branded metal writing tool made from stainless steel, combining daily ballpoint use with a tungsten-carbide glass breaker for field-facing teams.',
-    description: 'A stainless steel tactical pen built for daily writing and field carry. The pen body gives a heavier hand feel than standard office pens, while the tail glass breaker adds a recognizable emergency-oriented function for teams working around vehicles, equipment, or physical sites.\n\nSuitable for logistics teams, field service teams, construction-adjacent programs, safety kits, and branded utility gift sets where the buyer wants a custom logo pen with a clear material and function story.',
+    metaDescription: 'Custom stainless steel utility pen for corporate gifts, with glass breaker tip, substantial hand feel and logo marking.',
+    quickAnswer: 'The Stainless Steel Utility Pen with Glass Breaker is a custom branded metal writing tool made from stainless steel, combining daily ballpoint use with a tungsten-carbide glass breaker for operations and field teams.',
+    description: 'A stainless steel utility pen built for daily writing and substantial carry. The pen body gives a heavier hand feel than standard office pens, while the tail glass breaker adds a recognizable emergency-oriented function for teams working around vehicles, equipment, or physical sites.\n\nSuitable for logistics teams, service teams, operations programs, safety kits, and branded utility gift sets where the buyer wants a custom logo pen with a clear material and function story.',
     highlights: [
-      '303 stainless steel body - heavy metal writing tool for field carry',
+      '303 stainless steel body - substantial metal writing tool for daily and field carry',
       'Tungsten-carbide glass breaker - emergency-oriented tail function',
       '102.8g hand weight - substantial feel compared with office pens',
       'Ballpoint writing function - supports daily notes and site records',
@@ -168,37 +168,37 @@ async function main() {
       'Laser marking on pen body',
       'Finish selection by production spec',
       'Refill configuration by project requirement',
-      'Custom packaging for field or safety gift sets',
+      'Custom packaging for operations or premium gift sets',
     ],
     faqs: [
-      { q: 'Is this pen suitable for daily writing?', a: 'Yes. It is still a writing tool first, with a ballpoint function for notes and records. The stainless steel body and glass breaker make it better suited to field carry than standard office pen programs.' },
+      { q: 'Is this pen suitable for daily writing?', a: 'Yes. It is still a writing tool first, with a ballpoint function for notes and records. The stainless steel body and glass breaker make it well suited to daily and field carry alongside standard office pen programs.' },
       { q: 'Can the company logo be engraved on the pen?', a: 'Yes. The metal body supports laser marking for a company logo or short text. Placement should be checked against grip areas and clip position before production.' },
-      { q: 'Who should receive this product?', a: 'It fits logistics, construction-adjacent, vehicle, maintenance, and field service teams. It is less suitable for purely formal desk gifting because the weight and glass breaker are utility-led.' },
+      { q: 'Who should receive this product?', a: 'It fits operations, logistics, service teams, and any role where a substantial writing instrument is preferred. Also suitable for premium desk gifting where the glass breaker reads as a durable utility feature.' },
       { q: 'Is the glass breaker a safety certification?', a: 'It should be described as a tungsten-carbide glass breaker function. Buyers should verify requirements if the project has compliance or certification needs.' },
     ],
     sourcingNotes: [
-      { title: 'Hand weight and field carry expectation', body: 'At approx. 102.8g, the pen has a heavier hand feel than standard office pens. That weight suits field carry, vehicle-adjacent teams, and utility gift sets where the product is expected to feel substantial in hand.' },
+      { title: 'Hand weight and daily carry expectation', body: 'At approx. 102.8g, the pen has a heavier hand feel than standard office pens. That weight suits daily and field carry, operations teams, and utility gift sets where the product is expected to feel substantial in hand.' },
       { title: 'Glass breaker function and certification checks', body: 'The glass breaker is a recognizable utility feature. If a project requires certified safety performance, the selected sample and documentation should be reviewed before production.' },
-      { title: 'Where this product fits', body: 'This pen belongs in field and utility gift sets where writing and emergency-oriented functions make sense together.' },
+      { title: 'Where this product fits', body: 'This pen belongs in operations and utility gift sets where writing and emergency-oriented functions make sense together.' },
     ],
     comparisonTable: {
       columns: ['Pen type', 'Best for', 'Buyer note'],
       rows: [
-        ['Tactical stainless pen', 'Field and vehicle-adjacent teams', 'Heavy hand feel'],
+        ['Stainless utility pen', 'Operations and field teams', 'Substantial hand feel'],
         ['Standard metal pen', 'Office writing', 'Lower utility function'],
         ['Multi-tool pen', 'Setup tasks', 'More functions, less focused'],
       ],
     },
-    keyInsight: 'A tactical stainless steel pen works best in corporate gifting when it is positioned for field-facing teams, vehicle-adjacent teams, and utility gift sets.',
+    keyInsight: 'A stainless steel utility pen works best in corporate gifting when it is positioned for operations, field, and service teams, and for utility gift sets.',
     seoKeywords: [
-      'tactical stainless steel pen',
-      'custom tactical pen',
-      'engraved tactical pen',
+      'stainless steel utility pen',
+      'custom utility pen',
+      'engraved utility pen',
       'pen with glass breaker',
-      'corporate field team gift',
+      'corporate operations team gift',
       'branded utility pen',
       'stainless steel pen bulk order',
-      'safety team gift',
+      'service team gift',
     ],
   }).where(eq(products.id, 'wp-103-tactical-stainless-steel-pen'))
   console.log('WP-103 done.')

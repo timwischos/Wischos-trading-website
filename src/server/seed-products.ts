@@ -257,7 +257,7 @@ const newProducts = [
   },
   {
     id: 'tactical-stainless-steel-pen-01',
-    name: 'Tactical Stainless Steel Pen',
+    name: 'Stainless Steel Utility Pen',
     tagline: 'Engineered to write anywhere. Built to last forever.',
     highlights: [
       '316 Steel, Single Billet: Clip and barrel machined together — no welds, no failure points.',

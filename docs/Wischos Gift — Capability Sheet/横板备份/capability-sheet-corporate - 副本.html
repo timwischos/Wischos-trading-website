@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wischos Gift — Capability Sheet (Corporate)</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    @page { size: A4; margin: 0; }
+
+    html, body {
+      width: 210mm;
+      height: 297mm;
+      background: #fff;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      color: #111;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .page {
+      width: 210mm;
+      height: 297mm;
+      padding: 14mm 14mm 0;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    /* Top bar */
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #e0e0e0;
+      padding-bottom: 5mm;
+      margin-bottom: 8mm;
+      flex-shrink: 0;
+    }
+
+    .wordmark {
+      font-size: 14pt;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      color: #111;
+      text-transform: uppercase;
+    }
+
+    .top-label {
+      font-size: 7.5pt;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #B87333;
+    }
+
+    /* Two-column grid */
+    .body-grid {
+      display: grid;
+      grid-template-columns: 78mm 1fr;
+      gap: 12mm;
+      flex: 1;
+      min-height: 0;
+    }
+
+    /* LEFT COLUMN */
+    .left-col {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .headline {
+      font-size: 27pt;
+      font-weight: 300;
+      line-height: 1.2;
+      color: #111;
+      margin-bottom: 5mm;
+    }
+
+    .subline {
+      font-size: 9.5pt;
+      color: #888;
+      line-height: 1.65;
+      margin-bottom: 8mm;
+    }
+
+    .spec-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      flex: 1;
+    }
+
+    .spec-item {
+      border-top: 0.5pt solid #ddd;
+      padding-top: 4mm;
+      padding-bottom: 4mm;
+    }
+
+    .spec-item:first-child {
+      border-top-color: #B87333;
+    }
+
+    .spec-label {
+      font-size: 7.5pt;
+      letter-spacing: 0.08em;
+      color: #B87333;
+      margin-bottom: 2mm;
+      font-style: italic;
+    }
+
+    .spec-body {
+      font-size: 9.5pt;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .contact-block {
+      border-top: 0.5pt solid #e8e8e8;
+      padding-top: 5mm;
+      margin-top: 5mm;
+    }
+
+    .contact-line {
+      font-size: 9pt;
+      color: #aaa;
+      margin-bottom: 2mm;
+    }
+
+    /* RIGHT COLUMN */
+    .right-col {
+      display: flex;
+      flex-direction: column;
+      gap: 7mm;
+    }
+
+    .callout {
+      background: #faf8f5;
+      border-left: 2.5pt solid #B87333;
+      padding: 6mm 7mm;
+    }
+
+    .callout-heading {
+      font-size: 12pt;
+      font-weight: 600;
+      color: #111;
+      margin-bottom: 3mm;
+    }
+
+    .callout-body {
+      font-size: 9.5pt;
+      color: #777;
+      line-height: 1.7;
+    }
+
+    .sets-section {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .sets-label {
+      font-size: 7.5pt;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: #bbb;
+      margin-bottom: 5mm;
+    }
+
+    .sets-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 5mm;
+      flex: 1;
+    }
+
+    .set-item {
+      display: grid;
+      grid-template-columns: 42mm 1fr;
+      gap: 4mm;
+      align-items: center;
+    }
+
+    .set-item img {
+      width: 42mm;
+      height: 42mm;
+      object-fit: cover;
+      display: block;
+      background: #f0f0f0;
+    }
+
+    .set-text {}
+
+    .set-name {
+      font-size: 9.5pt;
+      font-weight: 600;
+      color: #222;
+      margin-bottom: 1.5mm;
+    }
+
+    .set-desc {
+      font-size: 8.5pt;
+      color: #999;
+      line-height: 1.5;
+    }
+
+    .catalog-link {
+      font-size: 8pt;
+      color: #ccc;
+      margin-top: 5mm;
+    }
+
+    /* Bottom strip */
+    .bottom-strip {
+      margin-top: 8mm;
+      border-top: 1px solid #ebebeb;
+      padding: 5mm 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .bottom-strip-text {
+      font-size: 8pt;
+      color: #ccc;
+      letter-spacing: 0.04em;
+    }
+
+    .bottom-strip-cta {
+      font-size: 8pt;
+      color: #B87333;
+      text-decoration: none;
+      letter-spacing: 0.04em;
+    }
+
+
+    /* Key Facts strip */
+    .key-facts {
+      margin-top: 6mm;
+      padding: 4mm 0;
+      border-top: 0.5pt solid #1a1a1a;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 4mm;
+      flex-shrink: 0;
+    }
+    .kf-item {}
+    .kf-label {
+      font-size: 6.5pt;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: #B87333;
+      margin-bottom: 1.5mm;
+    }
+    .kf-value {
+      font-size: 8.5pt;
+      color: #aaa;
+      line-height: 1.45;
+    }
+
+    @media print {
+      html, body { width: 210mm; height: 297mm; }
+      .page { page-break-after: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- Top bar -->
+    <div class="top-bar">
+      <div class="wordmark">Wischos Gift</div>
+      <div class="top-label">For Corporate Gifting</div>
+    </div>
+
+    <!-- Body grid -->
+    <div class="body-grid">
+
+      <!-- LEFT COLUMN -->
+      <div class="left-col">
+        <div class="headline">Curated metal gift sets, built to last</div>
+        <div class="subline">China-based sourcing partner for corporate gifting programs. We turn a brief into a finished set — materials, packaging, logo, delivery.</div>
+
+        <div class="spec-list">
+          <div class="spec-item">
+            <div class="spec-label">Built for onboarding, executive gifting, client appreciation, and wellness programs</div>
+            <div class="spec-body">Finished sets matched to the gifting moments procurement teams plan most often. Each set is a complete answer — recipient profile considered, materials selected, packaging specified, logo method confirmed.</div>
+          </div>
+          <div class="spec-item">
+            <div class="spec-label">Verified material specs — brass, titanium, stainless steel, aluminium, and adjacent alloys</div>
+            <div class="spec-body">Solid material, not coated impersonations. If the spec says brass, the piece is brass. Recipients can feel the difference — that's where the brand impression lasts beyond the unboxing.</div>
+          </div>
+          <div class="spec-item">
+            <div class="spec-label">Brief to direction in 24 hours</div>
+            <div class="spec-body">Tell us the occasion, recipient profile, and budget direction. We respond with set recommendation and materials direction the next business day — no sourcing experience required on your side.</div>
+          </div>
+          <div class="spec-item">
+            <div class="spec-label">Repeat-order pricing locked — your gifting program runs without restart</div>
+            <div class="spec-body">Onboarding intake, year-end recognition, milestone gifts. We keep set specs, pricing, and lead times consistent across repeat orders — your program continues without re-quoting and re-sampling each cycle.</div>
+          </div>
+        </div>
+
+        <div class="contact-block">
+          <div class="contact-line">inquiries@wischosgift.com</div>
+          <div class="contact-line">wischosgift.com</div>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <div class="right-col">
+        <div class="callout">
+          <div class="callout-heading">Give people something that reflects the thought behind it</div>
+          <div class="callout-body">A curated metal set is a finished answer — occasion considered, materials selected, packaging specified, logo method confirmed. The recipient opens something considered. You present it with confidence.</div>
+        </div>
+
+        <div class="sets-section">
+          <div class="sets-label">Example Sets</div>
+          <div class="sets-grid">
+            <div class="set-item">
+              <img
+                src="https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_400/products/WGS-005-3-The-Morning-Ritual/The-Morning-Ritual-cover"
+                alt="The Morning Ritual"
+              />
+              <div class="set-text">
+                <div class="set-name">The Morning Ritual</div>
+                <div class="set-desc"><strong style="color:#B87333">Executive Commute Gift Set</strong> — Titanium + brass for executive and client gifting</div>
+              </div>
+            </div>
+            <div class="set-item">
+              <img
+                src="https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_400/products/WGS-006-3-The-First-Day/The-First-Day-cover"
+                alt="The First Day"
+              />
+              <div class="set-text">
+                <div class="set-name">The First Day</div>
+                <div class="set-desc"><strong style="color:#B87333">New Employee Onboarding Kit</strong> — Aluminium + brass for new hire welcome programs</div>
+              </div>
+            </div>
+            <div class="set-item">
+              <img
+                src="https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_400/products/WGS-008-4-The-Quartet/The-Quartet-cover"
+                alt="The Quartet"
+              />
+              <div class="set-text">
+                <div class="set-name">The Quartet</div>
+                <div class="set-desc"><strong style="color:#B87333">VIP Executive Gift Set</strong> — Four-piece, four metals, magnetic rigid box. For client appreciation and milestones</div>
+              </div>
+            </div>
+          </div>
+          <div class="catalog-link">Full catalog: wischosgift.com/gift-sets</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Key Facts -->
+    <div class="key-facts">
+      <div class="kf-item">
+        <div class="kf-label">MOQ</div>
+        <div class="kf-value">50–500 sets per project</div>
+      </div>
+      <div class="kf-item">
+        <div class="kf-label">Lead Time</div>
+        <div class="kf-value">25–35 days production</div>
+      </div>
+      <div class="kf-item">
+        <div class="kf-label">Payment</div>
+        <div class="kf-value">T/T &middot; Wise</div>
+      </div>
+      <div class="kf-item">
+        <div class="kf-label">Response</div>
+        <div class="kf-value">Within 24 hours</div>
+      </div>
+    </div>
+
+    <!-- Bottom strip -->
+    <div class="bottom-strip">
+      <span class="bottom-strip-text">wischosgift.com &nbsp;·&nbsp; inquiries@wischosgift.com</span>
+      <a href="mailto:inquiries@wischosgift.com" class="bottom-strip-cta">Send us a brief →</a>
+    </div>
+
+  </div>
+</body>
+</html>

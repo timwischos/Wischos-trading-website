@@ -51,7 +51,7 @@ const notes: Record<string, ExpertNote[]> = {
   'WP-103-tactical-stainless-steel-pen': [
     {
       title: '303 vs 304 vs 316 Stainless Steel',
-      body: '303 SS contains added sulfur (0.15–0.35%) for improved machinability — critical for the precision CNC turning required for pen body threads and glass breaker housing. 304 is the food-grade standard but galls (seizes) during machining. 316 adds molybdenum for marine-grade corrosion resistance. For a tactical pen, 303 delivers the optimal balance of machinability, hardness (HRC 40–45), and corrosion resistance.',
+      body: '303 SS contains added sulfur (0.15–0.35%) for improved machinability — critical for the precision CNC turning required for pen body threads and glass breaker housing. 304 is the food-grade standard but galls (seizes) during machining. 316 adds molybdenum for marine-grade corrosion resistance. For a utility pen, 303 delivers the optimal balance of machinability, hardness (HRC 40–45), and corrosion resistance.',
     },
     {
       title: 'Tungsten Carbide Glass Breaker Physics',
@@ -241,8 +241,8 @@ const notes: Record<string, ExpertNote[]> = {
       body: 'Grade 5 titanium (Ti-6Al-4V) has a tensile strength of 950 MPa at 4.43 g/cm³ — a specific strength of 214 kN·m/kg. 303 stainless steel has 690 MPa at 8.0 g/cm³ — specific strength of 86 kN·m/kg. The titanium version delivers 2.5× more strength per gram. On a keychain where every gram is felt, this matters: same prying force, 45% less weight.',
     },
     {
-      title: 'Pry Bar Geometry: Tapered Tip Engineering',
-      body: 'The tapered pry tip follows a 15° included angle — thin enough to slide under packing tape and staple heads, but thick enough at the fulcrum point to resist bending. This geometry concentrates the user\'s hand force (typically 10–30N) into a tip area of approximately 2mm², generating 5–15 MPa of localized pressure — sufficient to separate adhesive bonds and deform thin metal staples.',
+      title: 'Compact Tool Geometry: Tapered Tip Engineering',
+      body: 'The tapered tip follows a 15° included angle — thin enough to slide under packing tape and staple heads, but thick enough at the fulcrum point to resist bending. This geometry concentrates the user\'s hand force (typically 10–30N) into a tip area of approximately 2mm², generating 5–15 MPa of localized pressure — sufficient to separate adhesive bonds and deform thin metal staples.',
     },
   ],
 

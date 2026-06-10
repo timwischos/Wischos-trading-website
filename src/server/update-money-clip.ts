@@ -17,7 +17,7 @@ async function main() {
     .insert(products)
     .values({
       id: 'stainless-steel-money-clip-01',
-      name: 'Industrial Stainless Steel Money Clip',
+      name: 'Slim Stainless Steel Money Clip',
       tagline: 'Slim 8mm Profile | High-Tension Steel | Silver / Brushed / Gold / Gunmetal',
       category: 'EDC Accessories',
       materials: ['Stainless Steel'],
@@ -86,7 +86,7 @@ async function main() {
     .onConflictDoUpdate({
       target: products.id,
       set: {
-        name: 'Industrial Stainless Steel Money Clip',
+        name: 'Slim Stainless Steel Money Clip',
         tagline: 'Slim 8mm Profile | High-Tension Steel | Silver / Brushed / Gold / Gunmetal',
         category: 'EDC Accessories',
         materials: ['Stainless Steel'],
@@ -102,7 +102,7 @@ async function main() {
         customizationOptions: ['Laser Engraving', 'Mirror Polish', 'Matte Electroplating', 'PVD Gold Finish'],
         highlights: [
           'Custom Laser Engraving: The flat steel surface is precision-etched with corporate logos — permanently crisp, never fading or peeling, making this an ideal premium engraved gift.',
-          'Four Finish Options: Available in Silver (mirror), Brushed Matte, PVD Gold, and Gunmetal — covering the full range of corporate aesthetics from classic to tactical.',
+          'Four Finish Options: Available in Silver (mirror), Brushed Matte, PVD Gold, and Gunmetal — covering the full range of corporate aesthetics from classic to industrial.',
           'Slim-Profile Efficiency: 8mm high-tension design ensures a secure hold for up to 8 cards or a stack of currency.',
           'Steel Resilience: Precision-tempered stainless steel with structural memory for a permanent, reliable grip.',
         ],
@@ -150,7 +150,7 @@ async function main() {
       },
     })
 
-  console.log('✓ Industrial Stainless Steel Money Clip inserted/updated.')
+  console.log('✓ Slim Stainless Steel Money Clip inserted/updated.')
   await sql.end()
 }
 
