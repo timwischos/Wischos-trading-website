@@ -45,9 +45,9 @@ Custom metal corporate gift sets organised by use case. Each set is paired with 
 - [All Gift Sets](https://wischosgift.com/gift-sets): Complete catalog of custom metal gift sets.
 - [The Desk Starter (Entry-Tier Desk Gift Set)](https://wischosgift.com/gift-sets/wgs-001-3-the-desk-starter): Anodised aluminium inkless pen + zinc letter opener + metal bookmark. Daily desk visibility for SME promotional programs. FOB USD 18–28.
 - [The Mechanical Desk (Executive Desk Gift Set)](https://wischosgift.com/gift-sets/wgs-002-3-the-mechanical-desk): Solid brass bolt-action pen + propeller letter opener + folding aluminium device stand. Mechanical-action desk set for technology, design, and creative agencies. FOB USD 28–42.
-- [The Pocket Three (EDC Daily Carry Gift Set)](https://wischosgift.com/gift-sets/wgs-003-3-the-pocket-three): Brass key organiser + stainless steel money clip + titanium comb. Three metals, three pocket actions. FOB USD 22–32.
+- [The Pocket Three (Daily Carry Gift Set)](https://wischosgift.com/gift-sets/wgs-003-3-the-pocket-three): Brass key organiser + stainless steel money clip + titanium comb. Three metals, three pocket actions. FOB USD 22–32.
 - [The Field EDC (Field Team Utility Gift Set)](https://wischosgift.com/gift-sets/wgs-004-3-the-field-edc): Tactical stainless steel pen + mini pry bar + folding scissors. Utility set for field service, construction, logistics, and mining. FOB USD 28–38.
-- [The Morning Ritual (Executive Commute Gift Set)](https://wischosgift.com/gift-sets/wgs-005-3-the-morning-ritual): Pure titanium capsule bottle + titanium EDC keychain + brass bolt-action pen. Premium executive commute set with titanium-brass material contrast. FOB USD 38–50.
+- [The Morning Ritual (Executive Commute Gift Set)](https://wischosgift.com/gift-sets/wgs-005-3-the-morning-ritual): Pure titanium capsule bottle + titanium carabiner keychain + brass bolt-action pen. Premium executive commute set with titanium-brass material contrast. FOB USD 38–50.
 - [The First Day (New Employee Onboarding Kit)](https://wischosgift.com/gift-sets/wgs-006-3-the-first-day): RFID aluminium badge holder + 6-in-1 metal tool pen + aluminium pen holder. Built for first-week onboarding access, setup, and meetings. FOB USD 25–38.
 - [The Thinking Desk (Client Appreciation Gift Set)](https://wischosgift.com/gift-sets/wgs-007-3-the-thinking-desk): Artisan brass rollerball + kinetic brass spinning top + double-wall stainless steel desk cup. Year-end appreciation and long-session desk gifts. FOB USD 32–42.
 - [The Quartet (VIP Executive Gift Set)](https://wischosgift.com/gift-sets/wgs-008-4-the-quartet): Four-piece set — solid brass ballpoint pen + slim push stainless steel business card case + folding aluminium device stand + titanium tea infuser business cup. Top-tier VIP and government engagement. FOB USD 44–58.
@@ -57,13 +57,13 @@ Custom metal corporate gift sets organised by use case. Each set is paired with 
 - [All Products](https://wischosgift.com/products): Full catalog of metal corporate gift products available as standalone SKUs or as gift set components.
 
 ### Pens (6 SKUs) — wp-101 to wp-106
-Solid brass, titanium, and stainless steel writing instruments. Bolt-action mechanism, inkless metal tip, tactical with glass breaker, 6-in-1 tool pen, brass rollerball, and brass ballpoint.
+Solid brass, titanium, and stainless steel writing instruments. Bolt-action mechanism, inkless metal tip, stainless utility pen with glass breaker, 6-in-1 tool pen, brass rollerball, and brass ballpoint.
 
 ### Desk Accessories (6 SKUs) — wp-201 series
 Anodised aluminium pen holder, zinc alloy letter opener, propeller-action letter opener, custom metal bookmark, kinetic brass spinning top, folding aluminium device stand.
 
-### EDC Tools (8 SKUs) — wp-301 to wp-309
-RFID aluminium wallet and badge holder, brass key organiser, stainless steel money clip, titanium comb, mini pry bar, folding metal scissors, titanium EDC keychain, slim push stainless steel business card case.
+### Daily Carry Tools (8 SKUs) — wp-301 to wp-309
+RFID aluminium wallet and badge holder, brass key organiser, stainless steel money clip, titanium anti-static comb, mini multi-function tool, folding metal scissors, titanium carabiner keychain, slim push stainless steel business card case.
 
 ### Drinkware (6 SKUs) — wp-401, wp-402, wp-403, wp-404, wp-407, wp-408
 WP-401 Pure titanium vacuum bottle: pure titanium inner liner with 316 stainless steel outer shell, double-wall vacuum insulated, integrated carry handle. WP-402 Pure titanium capsule bottle: 150ml pure titanium body with food-grade PP lid, shirt-pocket size. WP-403 Weighted vacuum insulated tumbler: 304 SUS stainless steel with protective polyester fabric sleeve, double-wall vacuum, 420ml. WP-404 Bamboo-groove stainless mug: food-grade 304 stainless steel with bamboo-pattern groove texture (surface pattern only — fully stainless steel). WP-407 Double-wall desk cup: 304 food-grade stainless steel, no-handle straight cylinder, 300ml. WP-408 Titanium tea infuser business cup: pure titanium inner liner and pure titanium removable infuser, titanium-gold PVD exterior shell, PP screw lid, double-wall vacuum, 480ml.
@@ -85,7 +85,7 @@ Practical guides for corporate buyers and procurement teams on materials, custom
 
 ## Key Facts
 
-- **Product category**: Custom metal corporate gift sets (pens, desk accessories, EDC tools, drinkware, and metal gift assemblies)
+- **Product category**: Custom metal corporate gift sets (pens, desk accessories, daily carry tools, drinkware, and metal gift assemblies)
 - **Materials**: Brass, titanium, stainless steel, aluminium, plus zinc alloys, copper, bronze on request
 - **Branding**: Laser engraving, screen printing, hot foil stamping on packaging, blind debossing, branded rigid gift boxes
 - **MOQ**: 50–100 sets depending on configuration; 100 pieces per SKU standard
