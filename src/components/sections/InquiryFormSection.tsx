@@ -2,7 +2,7 @@
 import { useState, useRef } from 'react'
 import { z } from 'zod'
 import { useForm } from '@tanstack/react-form'
-import { useSearch, useNavigate } from '@tanstack/react-router'
+import { useNavigate } from '@tanstack/react-router'
 import { inquiryInsertSchema } from '@/lib/schemas/inquiry'
 import { submitInquiry } from '@/server/submitInquiry'
 import { trackQualifyLead, trackFormStarted } from '@/lib/analytics'
@@ -19,53 +19,22 @@ import {
   SelectValue,
 } from '@/components/ui/select'
 
-// Extend schema with honeypot field for form-level validation
 const inquiryFormSchema = inquiryInsertSchema.extend({
   website: z.string().optional(),
 })
 
-const PRODUCT_OPTIONS = [
-  { value: 'Writing Instruments', label: 'Writing Instruments' },
-  { value: 'Desk Accessories', label: 'Desk Accessories' },
-  { value: 'EDC Accessories', label: 'EDC Accessories' },
-  { value: 'Drinkware', label: 'Drinkware' },
-  { value: 'Gift Sets', label: 'Gift Sets' },
-  { value: 'Other / Multiple Products', label: 'Other / Multiple Products' },
-]
-
-const DESTINATION_OPTIONS = [
-  { value: 'Australia', label: 'Australia' },
-  { value: 'New Zealand', label: 'New Zealand' },
-  { value: 'Singapore', label: 'Singapore' },
-  { value: 'United Arab Emirates', label: 'United Arab Emirates' },
-  { value: 'Hong Kong', label: 'Hong Kong' },
-  { value: 'Saudi Arabia', label: 'Saudi Arabia' },
-  { value: 'Switzerland', label: 'Switzerland' },
-  { value: 'United Kingdom', label: 'United Kingdom' },
-  { value: 'Other', label: 'Other (specify in message)' },
-]
-
-const INCOTERM_OPTIONS = [
-  { value: 'Not Sure', label: 'Not sure — advise me' },
-  { value: 'FOB China', label: 'FOB China (I arrange freight)' },
-  { value: 'CIF Port', label: 'CIF [destination port]' },
-  { value: 'DDP Door', label: 'DDP (delivered duty paid to door)' },
+const QUANTITY_OPTIONS = [
+  { value: '50-100 sets', label: '50–100 sets' },
+  { value: '100-300 sets', label: '100–300 sets' },
+  { value: '300-500 sets', label: '300–500 sets' },
+  { value: '500-1000 sets', label: '500–1,000 sets' },
+  { value: '1000+ sets', label: '1,000+ sets' },
+  { value: 'Not sure yet', label: 'Not sure yet — advise me' },
 ]
 
 export function InquiryFormSection() {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const search = useSearch({ strict: false }) as any
-  const productParam: string | undefined = search?.product
-
-  let initialProduct = ''
-  if (productParam !== undefined) {
-    const matched = PRODUCT_OPTIONS.find((opt) => opt.value === productParam)
-    initialProduct = matched ? matched.value : 'Other / Multiple Products'
-  }
-
   const navigate = useNavigate()
   const [submitError, setSubmitError] = useState<string | null>(null)
-  const [showDetails, setShowDetails] = useState(false)
   const formStartedFired = useRef(false)
 
   function handleFormFocus() {
@@ -82,13 +51,13 @@ export function InquiryFormSection() {
       role: '',
       email: '',
       phone: '',
-      productInterest: initialProduct,
+      productInterest: '',
       destinationCountry: '',
       incoterm: '',
       quantity: '',
       timeline: '',
       message: '',
-      website: '', // honeypot
+      website: '',
     },
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     validators: { onSubmit: inquiryFormSchema as any },
@@ -214,20 +183,20 @@ export function InquiryFormSection() {
           )}
         </form.Field>
 
-        {/* Product Interest — required feel but optional in schema */}
-        <form.Field name="productInterest">
+        {/* Estimated Quantity — optional */}
+        <form.Field name="quantity">
           {(field) => (
             <div className="space-y-1">
-              <Label>Product Interest</Label>
+              <Label htmlFor="quantity">Estimated Quantity</Label>
               <Select
-                value={field.state.value}
-                onValueChange={(val) => field.handleChange(val)}
+                value={field.state.value || ''}
+                onValueChange={(v) => field.handleChange(v)}
               >
-                <SelectTrigger>
-                  <SelectValue placeholder="Select a product category" />
+                <SelectTrigger id="quantity">
+                  <SelectValue placeholder="Select quantity range" />
                 </SelectTrigger>
                 <SelectContent>
-                  {PRODUCT_OPTIONS.map((opt) => (
+                  {QUANTITY_OPTIONS.map((opt) => (
                     <SelectItem key={opt.value} value={opt.value}>
                       {opt.label}
                     </SelectItem>
@@ -238,166 +207,22 @@ export function InquiryFormSection() {
           )}
         </form.Field>
 
-        {/* Destination Country */}
-        <form.Field name="destinationCountry">
+        {/* Message — optional */}
+        <form.Field name="message">
           {(field) => (
             <div className="space-y-1">
-              <Label>Destination Country</Label>
-              <Select
+              <Label htmlFor="message">Message / Requirements</Label>
+              <Textarea
+                id="message"
+                rows={4}
+                placeholder="Product, destination, logo / branding, timeline — anything that helps us quote."
                 value={field.state.value}
-                onValueChange={(val) => field.handleChange(val)}
-              >
-                <SelectTrigger>
-                  <SelectValue placeholder="Where should the order ship to?" />
-                </SelectTrigger>
-                <SelectContent>
-                  {DESTINATION_OPTIONS.map((opt) => (
-                    <SelectItem key={opt.value} value={opt.value}>
-                      {opt.label}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
+                onChange={(e) => field.handleChange(e.target.value)}
+                onBlur={field.handleBlur}
+              />
             </div>
           )}
         </form.Field>
-
-        {/* Incoterm Preference */}
-        <form.Field name="incoterm">
-          {(field) => (
-            <div className="space-y-1">
-              <Label>Quotation Type</Label>
-              <Select
-                value={field.state.value}
-                onValueChange={(val) => field.handleChange(val)}
-              >
-                <SelectTrigger>
-                  <SelectValue placeholder="How should we quote? (FOB / CIF / DDP)" />
-                </SelectTrigger>
-                <SelectContent>
-                  {INCOTERM_OPTIONS.map((opt) => (
-                    <SelectItem key={opt.value} value={opt.value}>
-                      {opt.label}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-            </div>
-          )}
-        </form.Field>
-
-        {/* Expandable additional details */}
-        <div>
-          <button
-            type="button"
-            onClick={() => setShowDetails(d => !d)}
-            style={{
-              background: 'none', border: 'none', cursor: 'pointer', padding: 0,
-              fontSize: '0.8rem', color: '#6b6b6b', display: 'flex', alignItems: 'center', gap: '0.35rem',
-              transition: 'color 150ms ease',
-            }}
-            onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = '#0a0a0a' }}
-            onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = '#6b6b6b' }}
-          >
-            <span style={{
-              display: 'inline-block', transition: 'transform 200ms ease',
-              transform: showDetails ? 'rotate(90deg)' : 'rotate(0deg)',
-              fontSize: '0.7rem',
-            }}>▶</span>
-            Add more details (optional)
-          </button>
-
-          <div style={{
-            overflow: 'hidden',
-            maxHeight: showDetails ? '40rem' : '0',
-            transition: 'max-height 300ms ease',
-            marginTop: showDetails ? '1rem' : '0',
-          }}>
-            <div className="space-y-6">
-              {/* Phone — optional */}
-              <form.Field name="phone">
-                {(field) => (
-                  <div className="space-y-1">
-                    <Label htmlFor="phone">Phone</Label>
-                    <Input
-                      id="phone"
-                      type="tel"
-                      value={field.state.value}
-                      onChange={(e) => field.handleChange(e.target.value)}
-                      onBlur={field.handleBlur}
-                    />
-                  </div>
-                )}
-              </form.Field>
-
-              {/* Job Title — optional */}
-              <form.Field name="role">
-                {(field) => (
-                  <div className="space-y-1">
-                    <Label htmlFor="role">Job Title</Label>
-                    <Input
-                      id="role"
-                      type="text"
-                      value={field.state.value}
-                      onChange={(e) => field.handleChange(e.target.value)}
-                      onBlur={field.handleBlur}
-                    />
-                  </div>
-                )}
-              </form.Field>
-
-              {/* Estimated Quantity — optional */}
-              <form.Field name="quantity">
-                {(field) => (
-                  <div className="space-y-1">
-                    <Label htmlFor="quantity">Estimated Quantity</Label>
-                    <Input
-                      id="quantity"
-                      type="text"
-                      placeholder="e.g. 100 sets"
-                      value={field.state.value}
-                      onChange={(e) => field.handleChange(e.target.value)}
-                      onBlur={field.handleBlur}
-                    />
-                  </div>
-                )}
-              </form.Field>
-
-              {/* Target Timeline — optional */}
-              <form.Field name="timeline">
-                {(field) => (
-                  <div className="space-y-1">
-                    <Label htmlFor="timeline">Target Timeline</Label>
-                    <Input
-                      id="timeline"
-                      type="text"
-                      placeholder="e.g. Q3 2026"
-                      value={field.state.value}
-                      onChange={(e) => field.handleChange(e.target.value)}
-                      onBlur={field.handleBlur}
-                    />
-                  </div>
-                )}
-              </form.Field>
-
-              {/* Message — optional */}
-              <form.Field name="message">
-                {(field) => (
-                  <div className="space-y-1">
-                    <Label htmlFor="message">Message / Requirements</Label>
-                    <Textarea
-                      id="message"
-                      rows={4}
-                      value={field.state.value}
-                      onChange={(e) => field.handleChange(e.target.value)}
-                      onBlur={field.handleBlur}
-                    />
-                  </div>
-                )}
-              </form.Field>
-            </div>
-          </div>
-        </div>
 
         {/* Submit error */}
         {submitError && <p className="text-sm text-destructive">{submitError}</p>}
