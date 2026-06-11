@@ -93,7 +93,7 @@
 #### ③ Precision Folding Aluminium Device Stand
 **SKU:** WP-208
 **Material:** Aluminium alloy body + silicone contact pads, sand-blasted + anodised
-**Dimensions / Weight:** 182 × 60 × 18mm (folded) | 150g
+**Dimensions / Weight:** 181.5 × 58 × 3.5mm (folded) | 150g
 **Logo Locations:** Base panel (flat aluminium surface)
 
 | Technique | Visual Effect | Image Gen Keywords (EN) |
@@ -232,7 +232,7 @@
 
 #### ② Pure Titanium Capsule Flask 150ml
 **Material:** Pure Titanium body, food-grade PP cap
-**Dimensions / Weight:** Shirt-pocket sized | 107 – 134g
+**Dimensions / Weight:** Ø51mm × 128mm | 107g
 **Logo Locations:** Titanium body
 
 | Technique | Visual Effect | Image Gen Keywords (EN) |

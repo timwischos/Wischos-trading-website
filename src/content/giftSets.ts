@@ -93,9 +93,23 @@ export const giftSetPageContent: GiftSetPageContent = {
       "coreUseCase": "Writing, tactile pause, drink placement",
       "materials": "Brass, stainless steel",
       "packaging": "Magnetic rigid gift box"
+    },
+    {
+      "giftSet": "WGS-008 The Quartet",
+      "bestFor": "VIP and executive gifting",
+      "coreUseCase": "Writing, warm drinks, device viewing, card exchange",
+      "materials": "Brass, titanium, aluminium, stainless steel",
+      "packaging": "Magnetic rigid gift box"
+    },
+    {
+      "giftSet": "WGS-009 The Meeting Kit",
+      "bestFor": "Sales and BD team gifting",
+      "coreUseCase": "Note-taking, writing, card exchange",
+      "materials": "Anodised aluminium, brass, stainless steel",
+      "packaging": "Magnetic rigid gift box"
     }
   ],
-  choosingGuide: "Choose a desk gift set when the recipient works mainly at one desk. Choose an everyday carry set when the recipient moves between meetings, offices, travel, or field locations. Choose an onboarding gift set when the goal is first-week usefulness for new hires. Choose an executive desk set when presentation, material feel, and client appreciation matter most.",
+  choosingGuide: "Choose a desk gift set when the recipient works mainly at one desk. Choose an everyday carry set when the recipient moves between meetings, offices, travel, or field locations. Choose an onboarding gift set when the goal is first-week usefulness for new hires. Choose an executive desk set when presentation, material feel, and client appreciation matter most. Choose a meeting kit when the recipient is in sales, BD, or client-facing roles where writing, note-taking, and card exchange happen daily.",
   faqs: [
     {
       "question": "What kind of corporate gift sets does Wischos make?",
@@ -111,11 +125,19 @@ export const giftSetPageContent: GiftSetPageContent = {
     },
     {
       "question": "Which gift set fits executives or clients?",
-      "answer": "WGS-002 The Mechanical Desk and WGS-007 The Thinking Desk are clear fits for executive and client appreciation programs. Both focus on desk use, material feel, presentation, and repeated hand interaction rather than one-time novelty."
+      "answer": "WGS-002 The Mechanical Desk and WGS-007 The Thinking Desk are clear fits for executive and client appreciation programs. Both focus on desk use, material feel, presentation, and repeated hand interaction rather than one-time novelty. WGS-008 The Quartet is suited to VIP and senior executive programs with a higher budget. WGS-009 The Meeting Kit fits sales and BD teams where writing, note-taking, and card exchange are daily actions."
     },
     {
       "question": "Can each item carry a custom logo?",
       "answer": "Most metal items in these sets can support laser engraving, with placement depending on product shape, surface area, and finish. Gift boxes can also support hot foil stamping, blind debossing, printed liners, or other branding options depending on the box type."
+    },
+    {
+      "question": "What materials are in The Meeting Kit?",
+      "answer": "The Meeting Kit uses three metals: anodised pure aluminium for the ring binder notebook cover (1mm plate), solid brass for the rollerball pen (30g, 140mm body), and brushed stainless steel for the business card case (thumb-push slide mechanism, holds 13–18 standard business cards)."
+    },
+    {
+      "question": "Which gift set suits sales teams or BD professionals?",
+      "answer": "WGS-009 The Meeting Kit combines an anodised aluminium ring binder notebook, a solid brass rollerball pen, and a stainless steel business card case. It covers the three actions of a standard business meeting: note-taking, writing, and card exchange. Suitable for sales onboarding kits, BD team recognition, and client-facing staff gifts."
     },
     {
       "question": "What packaging options are available?",
@@ -630,6 +652,74 @@ export const giftSets: GiftSet[] = [
       '/products/WGS-008-4-The-Quartet/The-Quartet-detail-2.avif',
       '/products/WGS-008-4-The-Quartet/The-Quartet-detail-3.avif',
       '/products/WGS-008-4-The-Quartet/The-Quartet-detail-4.avif',
+    ],
+  },
+  {
+    id: 'wgs-009-3-the-meeting-kit',
+    sku: 'WGS-009-3',
+    name: 'The Meeting Kit',
+    procurementCategory: 'Business Meeting Gift Set',
+    tagline: 'Record. Write. Introduce. Three metal objects. Every meeting.',
+    definition: 'The Meeting Kit is a three-piece custom engraved metal gift set for sales teams and client-facing professionals. It combines an anodised aluminium ring binder notebook, a solid brass rollerball pen, and a stainless steel business card case in a magnetic rigid gift box.',
+    heroCopy: 'A custom metal gift set built around the three actions of every business meeting: capture, write, and introduce. The anodised aluminium ring binder notebook holds A5 refill sheets and takes laser engraving on the cover face — the brand mark stays on the desk long after the first 100 sheets are filled. The brass rollerball writes with the weight of a 30g solid brass body, suited to signatures and long note-taking sessions. The stainless steel business card case uses a thumb-push slide mechanism to present a card at the start of a meeting without opening a hinged lid. All three pieces support laser engraving for company logos. Anodised aluminium, warm brass, and cool brushed steel — three metals in one cohesive set.',
+    sellingPoints: [
+      {
+        title: 'Notebook, Pen, Card Case — Three Actions, One Set',
+        body: 'The aluminium notebook captures. The brass pen writes. The steel card case introduces. Each piece covers a distinct action in a standard B2B meeting, so the set functions as a complete kit rather than a collection of branded objects.',
+      },
+      {
+        title: 'Refillable Notebook — Brand Mark Outlasts the Paper',
+        body: 'The anodised aluminium cover accepts standard A5 refill sheets from any stationery supplier. When the included 100 sheets are used, the notebook stays on the desk and is refilled. The laser-engraved company logo on the cover remains in daily use after the paper runs out.',
+      },
+      {
+        title: 'Three Metals, Three Surface Characters',
+        body: 'The 1mm anodised aluminium cover gives the notebook structural rigidity without bulk. The 30g brass rollerball sits at the grip — the weight is structural, not added. The brushed stainless steel card case holds 13–18 standard business cards and presents one card from the front edge with a single thumb press. Three metals, three surface characters, one cohesive set.',
+      },
+    ],
+    components: [
+      { sku: 'WP-209', name: 'Anodised Pure Aluminium Ring Binder Notebook', productId: 'wp-209-aluminium-ring-binder-notebook', imageIndex: 1 },
+      { sku: 'WP-105', name: 'Artisan Brass Rollerball', productId: 'wp-105-artisan-brass-rollerball', imageIndex: 2 },
+      { sku: 'WP-309', name: 'Slim Push Stainless Steel Business Card Case', productId: 'wp-309-slim-push-stainless-steel-business-card-case', imageIndex: 3 },
+    ],
+    targetBuyer: 'Sales and BD team onboarding kits, consulting and law firm client gifts, MBA and executive education program gifts, industry conference VIP sets, year-end recognition for client-facing staff',
+    packaging: 'Magnetic Rigid Gift Box + Flocked EVA Insert + Hot-Stamped Logo on Lid',
+    cta: 'Three metal objects for the three actions of every business meeting.',
+    fob: '$32–45',
+    sourcingNotes: [
+      {
+        title: 'Why an aluminium notebook replaces paper in a metal gift set',
+        body: 'A paper-cover notebook is a consumable — once the pages are filled, the branded cover leaves the desk. An aluminium ring binder cover stays in use after refill. The laser-engraved company logo on the anodised face remains visible through years of daily use, which is the characteristic that separates this format from a standard branded journal in a B2B gifting context.',
+      },
+      {
+        title: 'Notebook dimensions and ring spec',
+        body: 'The A5 version measures 180 × 235mm with a 6-ring mechanism. It accepts standard A5 loose-leaf sheets (148 × 210mm) from any office stationery supplier. The included 100 sheets are 100gsm Daolin paper. The 1mm aluminium cover plate is rigid enough to write against without a hard surface underneath. The notebook component supports A4, B5, A5, A6, or A7 if a project brief calls for a different size; A5 is the standard format for this set.',
+      },
+      {
+        title: 'Brass pen weight and writing position',
+        body: 'The WP-105 weighs 30g with a 140mm body and 9mm diameter. The centre of gravity sits at the grip, so the pen holds a writing position without pressure from the hand. For a meeting kit where the pen is used for signatures and long note-taking sessions, the weight distribution matters more than the specification number.',
+      },
+      {
+        title: 'Card case mechanism in a meeting context',
+        body: 'Traditional hinged card cases require a two-hand open-and-retrieve motion. The WP-309 thumb-push slide presents a card from the front edge with one hand, which suits the handshake-adjacent moment at the start of a meeting. At 103 × 60mm and approximately 80g, it fits a jacket pocket alongside the pen.',
+      },
+      {
+        title: 'What the standard packaging delivers',
+        body: 'The set ships in a magnetic rigid gift box with a flocked EVA insert. The notebook, pen, and card case each sit in a precision-cut recess. Hot-stamped logo on the box lid is standard for this set. A printed interior liner carrying a welcome note or brand message is available on request.',
+      },
+    ],
+    coverImage: '/products/WGS-009-3-The-Meeting-Kit/The-Meeting-Kit-cover.avif',
+    hoverImage: '/products/WGS-009-3-The-Meeting-Kit/The-Meeting-Kit-hover.avif',
+    images: [
+      '/products/WGS-009-3-The-Meeting-Kit/The-Meeting-Kit-cover.avif',
+      '/products/WGS-009-3-The-Meeting-Kit/The-Meeting-Kit-detail-1.avif',
+      '/products/WGS-009-3-The-Meeting-Kit/The-Meeting-Kit-detail-2.avif',
+      '/products/WGS-009-3-The-Meeting-Kit/The-Meeting-Kit-detail-3.avif',
+    ],
+    imageAlts: [
+      'Three-piece custom metal business meeting gift set — anodised aluminium ring binder notebook, brass rollerball pen, and stainless steel business card case in magnetic rigid gift box with black EVA foam insert',
+      'Anodised aluminium A5 ring binder notebook with laser-engraved logo — custom corporate gift set component',
+      'Solid brass rollerball pen with twist cap, 30g, laser-engraved barrel — custom corporate gift',
+      'Slim push stainless steel business card case, brushed finish, laser-engraved — custom corporate gift',
     ],
   },
 ]

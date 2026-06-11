@@ -246,6 +246,21 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://wischosgift.com/gift-sets/wgs-007-3-the-thinking-desk</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://wischosgift.com/gift-sets/wgs-008-4-the-quartet</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://wischosgift.com/gift-sets/wgs-009-3-the-meeting-kit</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 
   <!-- Markets country landing pages -->
   <url>
