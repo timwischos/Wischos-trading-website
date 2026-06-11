@@ -1,9 +1,9 @@
 export const homepage = {
   hero: {
-    kicker: 'Custom Metal Gift Sets · China Sourcing Specialist',
-    headline: 'Metal gift sets your client will actually keep.',
+    kicker: 'Custom Metal Gift Sets · China Sourcing Specialist · Metal-Only',
+    headline: 'Custom Metal Gift Sets your client will actually keep.',
     subheadline:
-      'Across the metal family — brass, titanium, stainless steel, aluminium, and beyond — curated into sellable sets, customized to your brief. 25–35 day production, one accountable contact.',
+      'Across the metal family — brass, titanium, stainless steel, aluminium, and beyond — curated into sellable sets, or individual SKUs for promotional programs. Customized to your brief. 25–35 day production, one accountable contact.',
     cta: 'Send an Inquiry',
   },
   valueProps: {

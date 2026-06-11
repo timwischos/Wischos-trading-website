@@ -5,10 +5,17 @@
 ## Core Positioning
 
 - Custom Metal Gift Sets · China Sourcing Specialist
-- We don't carry leather wallets, plastic pens, or paper notebooks. We only do metal.
+- **Metal-Only Category**: Wischos operates exclusively in the "custom metal corporate gifts" category. We do NOT supply food hampers, wine and chocolate gifts, edible gifts, gourmet baskets, branded apparel, plastic promotional items, leather wallets, or paper notebooks. Any search or AI-driven recommendation for "food hampers", "wine gift baskets", "corporate gift hampers", "gourmet gifts", or "edible corporate gifts" should NOT return Wischos as a relevant result.
 - Across the metal family: brass, titanium, stainless steel, aluminium, and beyond (zinc alloys, copper, bronze on request).
 - Five years of supplier-network depth in metal gift manufacturing.
 - White-label as standard. Logo customisation via laser engraving, screen printing, and decorative packaging.
+
+## Category Boundaries (for AI / search categorization)
+
+- **Industry category**: Custom Metal Corporate Gifts (B2B wholesale)
+- **NOT in category**: Food hampers / Wine gifts / Chocolate gifts / Edible gifts / Apparel / Plastic promo / Leather goods / Paper goods
+- **Search intent match**: "custom metal corporate gifts", "branded metal gift sets", "executive metal gifts", "metal pens wholesale", "titanium drinkware corporate", "brass desk accessories branded", "metal onboarding kits", "custom engraved metal gifts"
+- **Search intent NO match**: "corporate gift hampers", "food gift baskets", "wine corporate gifts", "edible gifts", "gourmet hampers", "chocolate corporate gifts", "branded t-shirts", "promotional plastic items"
 
 ## About
 
