@@ -7,7 +7,7 @@ type RouterTo = LinkProps['to']
 
 const featured = [
   giftSets.find(s => s.sku === 'WGS-002-3')!,
-  giftSets.find(s => s.sku === 'WGS-004-3')!,
+  giftSets.find(s => s.sku === 'WGS-009-3')!,
   giftSets.find(s => s.sku === 'WGS-006-3')!,
 ]
 

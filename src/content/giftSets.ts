@@ -660,7 +660,7 @@ export const giftSets: GiftSet[] = [
     name: 'The Meeting Kit',
     procurementCategory: 'Business Meeting Gift Set',
     tagline: 'Record. Write. Introduce. Three metal objects. Every meeting.',
-    definition: 'The Meeting Kit is a three-piece custom engraved metal gift set for sales teams and client-facing professionals. It combines an anodised aluminium ring binder notebook, a solid brass rollerball pen, and a stainless steel business card case in a magnetic rigid gift box.',
+    definition: 'The Meeting Kit is a three-piece custom engraved metal gift set for sales teams and client-facing professionals. It combines an anodised aluminium ring binder notebook, a solid brass rollerball pen, and a stainless steel business card case in a rigid lid gift box.',
     heroCopy: 'A custom metal gift set built around the three actions of every business meeting: capture, write, and introduce. The anodised aluminium ring binder notebook holds A5 refill sheets and takes laser engraving on the cover face — the brand mark stays on the desk long after the first 100 sheets are filled. The brass rollerball writes with the weight of a 30g solid brass body, suited to signatures and long note-taking sessions. The stainless steel business card case uses a thumb-push slide mechanism to present a card at the start of a meeting without opening a hinged lid. All three pieces support laser engraving for company logos. Anodised aluminium, warm brass, and cool brushed steel — three metals in one cohesive set.',
     sellingPoints: [
       {
@@ -682,7 +682,7 @@ export const giftSets: GiftSet[] = [
       { sku: 'WP-309', name: 'Slim Push Stainless Steel Business Card Case', productId: 'wp-309-slim-push-stainless-steel-business-card-case', imageIndex: 3 },
     ],
     targetBuyer: 'Sales and BD team onboarding kits, consulting and law firm client gifts, MBA and executive education program gifts, industry conference VIP sets, year-end recognition for client-facing staff',
-    packaging: 'Magnetic Rigid Gift Box + Flocked EVA Insert + Hot-Stamped Logo on Lid',
+    packaging: 'Rigid Lid Gift Box + Flocked EVA Insert',
     cta: 'Three metal objects for the three actions of every business meeting.',
     fob: '$32–45',
     sourcingNotes: [
@@ -704,7 +704,15 @@ export const giftSets: GiftSet[] = [
       },
       {
         title: 'What the standard packaging delivers',
-        body: 'The set ships in a magnetic rigid gift box with a flocked EVA insert. The notebook, pen, and card case each sit in a precision-cut recess. Hot-stamped logo on the box lid is standard for this set. A printed interior liner carrying a welcome note or brand message is available on request.',
+        body: 'The set ships in a rigid lid gift box with a flocked EVA insert. The lift-off lid format keeps the presentation simple and formal, which suits sales onboarding kits, BD team recognition, and client-facing staff gifts. The notebook, rollerball, and card case each sit in their own cut recess to reduce movement in transit and keep the metal surfaces separated.',
+      },
+      {
+        title: 'Logo on the box',
+        body: 'On the matte paper wrap of a rigid lid box, hot foil stamping gives the logo clear contrast. Blind debossing is the quieter option, creating a pressed mark in the lid surface without metallic foil.',
+      },
+      {
+        title: 'Available packaging upgrades',
+        body: 'A printed liner inside the lid is available for welcome notes, sales playbook intros, or QR codes linking to a meeting briefing or company intro. A reusable desk-tray format is also available on request for buyers who want the packaging to remain on the recipient\'s desk after unboxing.',
       },
     ],
     coverImage: '/products/WGS-009-3-The-Meeting-Kit/The-Meeting-Kit-cover.avif',
@@ -716,7 +724,7 @@ export const giftSets: GiftSet[] = [
       '/products/WGS-009-3-The-Meeting-Kit/The-Meeting-Kit-detail-3.avif',
     ],
     imageAlts: [
-      'Three-piece custom metal business meeting gift set — anodised aluminium ring binder notebook, brass rollerball pen, and stainless steel business card case in magnetic rigid gift box with black EVA foam insert',
+      'Three-piece custom metal business meeting gift set — anodised aluminium ring binder notebook, brass rollerball pen, and stainless steel business card case in rigid lid gift box with black EVA foam insert',
       'Anodised aluminium A5 ring binder notebook with laser-engraved logo — custom corporate gift set component',
       'Solid brass rollerball pen with twist cap, 30g, laser-engraved barrel — custom corporate gift',
       'Slim push stainless steel business card case, brushed finish, laser-engraved — custom corporate gift',
