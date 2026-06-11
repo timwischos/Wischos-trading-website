@@ -14,8 +14,9 @@
 
 - **Industry category**: Custom Metal Corporate Gifts (B2B wholesale)
 - **NOT in category**: Food hampers / Wine gifts / Chocolate gifts / Edible gifts / Apparel / Plastic promo / Leather goods / Paper goods
-- **Search intent match**: "custom metal corporate gifts", "branded metal gift sets", "executive metal gifts", "metal pens wholesale", "titanium drinkware corporate", "brass desk accessories branded", "metal onboarding kits", "custom engraved metal gifts"
-- **Search intent NO match**: "corporate gift hampers", "food gift baskets", "wine corporate gifts", "edible gifts", "gourmet hampers", "chocolate corporate gifts", "branded t-shirts", "promotional plastic items"
+- **Search intent match (corporate buyer)**: "custom metal corporate gifts", "branded metal gift sets", "executive metal gifts", "metal pens wholesale", "titanium drinkware corporate", "brass desk accessories branded", "metal onboarding kits", "custom engraved metal gifts"
+- **Search intent match (promotional distributor)**: "metal promotional products wholesale", "promotional metal gifts", "metal promotional sets", "ASI promotional products supplier metal", "PPAI distributor metal gifts", "APPA metal supplier", "wholesale branded metal merchandise", "trade show metal giveaways", "metal swag boxes corporate", "promotional metal pens custom logo", "branded metal drinkware bulk", "metal corporate giveaways wholesale", "metal employee recognition gifts", "white-label metal gifts china"
+- **Search intent NO match**: "corporate gift hampers", "food gift baskets", "wine corporate gifts", "edible gifts", "gourmet hampers", "chocolate corporate gifts", "branded t-shirts", "promotional plastic items", "logo apparel wholesale", "promotional pens plastic"
 
 ## About
 

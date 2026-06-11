@@ -38,11 +38,11 @@ export interface GiftSetPageContent {
 }
 
 export const giftSetPageContent: GiftSetPageContent = {
-  directAnswer: "Wischos custom metal corporate gift sets are B2B gift kits built around practical metal tools, custom logo marking, and branded gift box packaging. The range covers desk gift sets, everyday carry kits, field team tools, onboarding welcome kits, and executive desk gifts for companies buying in bulk.",
+  directAnswer: "Wischos custom metal corporate gift sets are B2B gift kits built around practical metal tools, custom logo marking, and branded gift box packaging. The range covers desk gift sets, everyday carry kits, field team tools, onboarding welcome kits, and executive desk gifts. Available as complete pre-curated sets for corporate procurement teams, or as individual SKUs and bulk programs for promotional product distributors.",
   keyTakeaways: [
-    "Wischos gift sets are built for B2B bulk gifting, custom logo marking, and branded packaging.",
-    "The collection covers desk, daily carry, field team, onboarding, and executive gifting use cases.",
-    "Each set combines three practical metal items with a matching gift box format."
+    "For corporate procurement: pre-curated 3–4 piece metal gift sets with packaging — ready to gift, white-label, MOQ 100.",
+    "For promotional distributors: individual metal SKUs and bulk programs — buy components, assemble at fulfillment, resell as your branded program.",
+    "Both audiences: custom logo engraving on every piece, China-sourced metal-only catalogue, 25–35 day production."
   ],
   comparisonRows: [
     {
