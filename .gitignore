@@ -24,3 +24,28 @@ public/products/
 public/images/
 public/how-it-works.mp4
 public/wischos-logo.png
+
+# Office files
+*.xlsx
+*.xls
+*.docx
+.~lock.*
+
+# AI tool files
+.superpowers/
+.planning/
+.codex
+GEMINI.md
+.dev_log
+.dev_pid
+
+# Content drafts
+content create/
+
+# Business docs & assets not part of website
+Wischos_*.md
+Wischos-logo-red*.png
+"Wischos_市场进入战略报告_2026.md"
+
+# Working notes & client research (private, not for repo)
+临时/
