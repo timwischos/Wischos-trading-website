@@ -49,3 +49,13 @@ Wischos-logo-red*.png
 
 # Working notes & client research (private, not for repo)
 临时/
+
+# Internal documentation, catalogues, prompts, prospect notes (not website code)
+docs/
+二次工作文件/
+outputs/
+scripts/wgs_packaging_excel_build/
+
+# Catalogue / brochure PDFs
+*.pdf
+

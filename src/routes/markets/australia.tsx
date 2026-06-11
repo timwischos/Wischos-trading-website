@@ -444,14 +444,6 @@ function AustraliaMarketPage() {
                 href: '/gift-sets/wgs-005-3-the-morning-ritual',
               },
               {
-                image: '/products/WGS-008-4-The-Quartet/The-Quartet-cover',
-                name: 'The Quartet',
-                sku: 'WGS-008',
-                tagline:
-                  'Four-piece precision set in a magnetic rigid box. A complete onboarding or milestone gift for Sydney and Melbourne-based corporate buyers.',
-                href: '/gift-sets/wgs-008-4-the-quartet',
-              },
-              {
                 image: '/products/WGS-009-3-The-Meeting-Kit/The-Meeting-Kit-cover',
                 name: 'The Meeting Kit',
                 sku: 'WGS-009',
