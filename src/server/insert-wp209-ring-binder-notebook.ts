@@ -19,11 +19,11 @@ async function main() {
     id: 'wp-209-aluminium-ring-binder-notebook',
     sku: 'WP-209',
     name: 'Anodised Pure Aluminium Ring Binder Notebook',
-    tagline: 'Anodised pure aluminium  |  1mm cover · A5 · 6 rings  |  100gsm refill paper included',
+    tagline: 'Anodised pure aluminium | 1mm cover · A4 to A7 · 4-9 rings | 100gsm refill paper included',
     metaDescription:
-      'Custom anodised aluminium ring binder notebook for corporate gifting. A5 · 6 rings · 1mm cover · 100gsm refill paper · laser engraving available.',
+      'Custom anodised aluminium ring binder notebook for corporate gifting. A4 to A7 · 4-9 rings · 1mm cover · 100gsm refill paper · laser engraving available.',
     quickAnswer:
-      'The WP-209 is an anodised pure aluminium ring binder notebook with a 1mm cover plate, available in A5 with a 6-ring mechanism and 100 sheets of 100gsm refill paper. It accepts laser engraving, embossed stamping, or single-colour printing for brand customisation, and is designed for custom corporate gifting.',
+      'The WP-209 is an anodised pure aluminium ring binder notebook with a 1mm cover plate, available in A4, B5, A5, A6, or A7 with 4-9 ring mechanism options and 100 sheets of 100gsm refill paper. It accepts laser engraving, embossed stamping, or single-colour printing for brand customisation, and is designed for custom corporate gifting.',
     category: 'Desk Accessories',
     materials: ['Anodised pure aluminium', 'Steel (ring mechanism)', '100gsm Daolin paper'],
     moq: 100,
@@ -41,10 +41,10 @@ async function main() {
       `/products/${FOLDER}/${PREFIX}-lifestyle.avif`,
     ],
     description:
-      'The WP-209 is an anodised pure aluminium ring binder notebook, designed for custom corporate gift sets and new employee desk kits. The cover is formed from 1mm pure aluminium plate with an anodised surface that resists moisture and daily wear. It comes loaded with 100 sheets of 100gsm Daolin paper. The six-ring A5 format holds standard refill sheets. Your company logo or brand mark is laser-engraved directly into the cover face. Available in six anodised colours.',
+      'The WP-209 is an anodised pure aluminium ring binder notebook, designed for custom corporate gift sets and new employee desk kits. The cover is formed from 1mm pure aluminium plate with an anodised surface that resists moisture and daily wear. It comes loaded with 100 sheets of 100gsm Daolin paper. Available in five formats — A4 (4 rings), B5 (9 rings), A5 (6 rings), A6 (6 rings), and A7 (6 rings) — holding standard loose-leaf refills. Your company logo or brand mark is laser-engraved directly into the cover face. Available in six anodised colours.',
     highlights: [
       '1mm anodised pure aluminium cover — lightweight, rigid, and resistant to deformation',
-      'Six-ring A5 format — accepts standard A5 refill sheets, compatible with any office stationery supplier',
+      'Five size formats — A4, B5, A5, A6, or A7 with 4-9 ring options, all accepting standard loose-leaf refills',
       '100gsm Daolin paper included — 100 sheets loaded at shipping, ready to use on arrival',
       'Laser engraving on cover face — logo, text, or pattern cut directly into the anodised surface',
       'Six anodised colours — Red, Blue, Black, Gold, Champagne Gold, Silver',
@@ -63,11 +63,10 @@ async function main() {
       { label: 'Dimensions — A5', value: '180 × 235 mm · 6 rings' },
       { label: 'Dimensions — A6', value: '128 × 188 mm · 6 rings' },
       { label: 'Dimensions — A7', value: '105 × 149 mm · 6 rings' },
-      { label: 'Weight', value: '~600g (with 100-sheet paper insert)' },
+      { label: 'Weight', value: 'Depends on size — A5 baseline ~600g' },
       { label: 'Paper', value: '100gsm Daolin paper, 100 sheets' },
       { label: 'Surface finish', value: 'Anodised' },
       { label: 'Colours', value: 'Red, Blue, Black, Gold, Champagne Gold, Silver' },
-      { label: 'Lead time', value: '10–15 days (production run)' },
     ],
     faqs: [
       {

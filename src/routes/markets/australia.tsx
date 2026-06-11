@@ -451,6 +451,14 @@ function AustraliaMarketPage() {
                   'Four-piece precision set in a magnetic rigid box. A complete onboarding or milestone gift for Sydney and Melbourne-based corporate buyers.',
                 href: '/gift-sets/wgs-008-4-the-quartet',
               },
+              {
+                image: '/products/WGS-009-3-The-Meeting-Kit/The-Meeting-Kit-cover',
+                name: 'The Meeting Kit',
+                sku: 'WGS-009',
+                tagline:
+                  'Three-piece meeting set — aluminium ring binder notebook, brass rollerball, steel card case. Built for sales and BD teams, consulting and law firms, and client-facing roles common to Sydney and Melbourne professional services.',
+                href: '/gift-sets/wgs-009-3-the-meeting-kit',
+              },
             ].map((set) => (
               <div key={set.sku}>
                 <img
