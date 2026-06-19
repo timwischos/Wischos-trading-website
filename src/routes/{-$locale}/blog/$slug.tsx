@@ -1549,7 +1549,7 @@ Packaging expectation:`}
 
       <h2 style={prose.h2}>Have a Custom Metal Gift Idea to Review?</h2>
       <p style={prose.p}>
-        Send what you already know to <a href="mailto:inquiries@wischosgift.com" style={prose.inlineLink}>inquiries@wischosgift.com</a>: product idea, quantity range, budget range, and deadline. We can review whether the project is better suited to a catalogue-adjacent item, semi-custom metal piece, <Link to={'/gift-sets' as RouterTo} style={prose.inlineLink}>curated gift set</Link>, or more developed custom sourcing path.
+        Send what you already know to <a href="mailto:johnlui@wischosgift.com" style={prose.inlineLink}>johnlui@wischosgift.com</a>: product idea, quantity range, budget range, and deadline. We can review whether the project is better suited to a catalogue-adjacent item, semi-custom metal piece, <Link to={'/gift-sets' as RouterTo} style={prose.inlineLink}>curated gift set</Link>, or more developed custom sourcing path.
       </p>
 
       <h2 style={prose.h2}>Frequently Asked Questions</h2>

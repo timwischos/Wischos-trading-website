@@ -47,7 +47,7 @@ export const about = {
     registrationLabel: 'Company Registration',
     registrationNumber: 'Anhui Wischos International Trading Co. Ltd',
     registrationNote: 'Registered trading company in Anhui, China. Established 2024. Full details available on request.',
-    email: 'inquiries@wischosgift.com',
+    email: 'johnlui@wischosgift.com',
     qualityStatement:
       'Every order includes pre-shipment quality photos and written QC specs. Nothing ships without your written sample approval.',
   },

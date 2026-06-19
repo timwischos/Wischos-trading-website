@@ -259,7 +259,7 @@ function DutyAndShippingPage() {
           <h2 style={{ fontSize: 'clamp(1.25rem, 2.5vw, 1.75rem)', fontWeight: 300, marginBottom: '1rem' }}>Need a landed cost for your specific program?</h2>
           <p style={{ fontSize: '0.85rem', color: '#555', lineHeight: 1.7, marginBottom: '1.25rem' }}>Tell us the destination, quantity, and target set configuration. We respond within 1–2 business days with a line-by-line landed cost breakdown including freight, duty, certificate handling, and Incoterm options.</p>
           <p style={{ fontSize: '0.82rem', color: '#555', lineHeight: 1.65, marginBottom: '0.5rem' }}>Prefer email?</p>
-          <a href="mailto:inquiries@wischosgift.com" style={{ fontSize: '0.85rem', color: '#B87333', textDecoration: 'none', fontWeight: 500, display: 'block', marginBottom: '0.5rem' }}>inquiries@wischosgift.com</a>
+          <a href="mailto:johnlui@wischosgift.com" style={{ fontSize: '0.85rem', color: '#B87333', textDecoration: 'none', fontWeight: 500, display: 'block', marginBottom: '0.5rem' }}>johnlui@wischosgift.com</a>
         </div>
         <div style={{ border: '1px solid #e5e5e5', padding: '2rem' }}>
           <Suspense fallback={<div style={{ height: '400px' }} />}><InquiryFormSection /></Suspense>
@@ -267,7 +267,7 @@ function DutyAndShippingPage() {
       </section>
 
       <footer style={{ borderTop: '1px solid #e5e5e5', padding: '1.5rem 2rem', display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: '0.5rem' }}>
-        <p style={{ fontSize: '0.72rem', color: '#888' }}>© {new Date().getFullYear()} Wischos Gift Trading Co. &nbsp;·&nbsp; inquiries@wischosgift.com &nbsp;·&nbsp; Page last reviewed: May 2026</p>
+        <p style={{ fontSize: '0.72rem', color: '#888' }}>© {new Date().getFullYear()} Wischos Gift Trading Co. &nbsp;·&nbsp; johnlui@wischosgift.com &nbsp;·&nbsp; Page last reviewed: May 2026</p>
         <a href="https://wischosgift.com" style={{ fontSize: '0.72rem', color: '#888', textDecoration: 'none' }}>wischosgift.com</a>
       </footer>
     </div>

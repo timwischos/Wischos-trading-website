@@ -25,7 +25,7 @@ export const privacy = {
     {
       id: 'exercising-rights',
       heading: 'How to exercise your rights',
-      body: 'To request access to, correction of, or deletion of your personal data, please send an email to inquiries@wischosgift.com with the subject line "Data Request". We will respond within 30 days. We may need to verify your identity before processing a request.',
+      body: 'To request access to, correction of, or deletion of your personal data, please send an email to johnlui@wischosgift.com with the subject line "Data Request". We will respond within 30 days. We may need to verify your identity before processing a request.',
     },
     {
       id: 'cookies',
@@ -33,5 +33,5 @@ export const privacy = {
       body: 'This website does not use advertising cookies or cross-site tracking. We may use minimal session-level functionality as required for the website to operate. No personal data is collected through cookies without your knowledge.',
     },
   ],
-  contactEmail: 'inquiries@wischosgift.com',
+  contactEmail: 'johnlui@wischosgift.com',
 } as const

@@ -338,10 +338,10 @@ function DistributorPage() {
             Prefer email?
           </p>
           <a
-            href="mailto:inquiries@wischosgift.com"
+            href="mailto:johnlui@wischosgift.com"
             style={{ fontSize: '0.85rem', color: '#B87333', textDecoration: 'none', fontWeight: 500, display: 'block', marginBottom: '0.5rem' }}
           >
-            inquiries@wischosgift.com
+            johnlui@wischosgift.com
           </a>
           <a
             href="https://www.linkedin.com/in/john-lui-4529a3102/"
@@ -361,7 +361,7 @@ function DistributorPage() {
 
       <footer style={{ borderTop: '1px solid #e5e5e5', padding: '1.5rem 2rem', display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: '0.5rem' }}>
         <p style={{ fontSize: '0.72rem', color: '#888' }}>
-          © {new Date().getFullYear()} Wischos Gift Trading Co. &nbsp;·&nbsp; inquiries@wischosgift.com
+          © {new Date().getFullYear()} Wischos Gift Trading Co. &nbsp;·&nbsp; johnlui@wischosgift.com
         </p>
         <a href="https://wischosgift.com" style={{ fontSize: '0.72rem', color: '#888', textDecoration: 'none' }}>
           wischosgift.com

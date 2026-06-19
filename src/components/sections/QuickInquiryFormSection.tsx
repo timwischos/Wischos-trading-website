@@ -85,7 +85,7 @@ export function QuickInquiryFormSection({
         navigate({ to: '/thank-you' })
       } catch {
         setSubmitError(
-          'Something went wrong. Please try again or email inquiries@wischosgift.com.',
+          'Something went wrong. Please try again or email johnlui@wischosgift.com.',
         )
       }
     },
@@ -267,10 +267,10 @@ export function QuickInquiryFormSection({
           <p style={{ marginBottom: '0.3rem' }}>
             ⏱️ Response within 1 business day · ✉️{' '}
             <a
-              href="mailto:inquiries@wischosgift.com"
+              href="mailto:johnlui@wischosgift.com"
               style={{ color: '#B87333', textDecoration: 'none' }}
             >
-              inquiries@wischosgift.com
+              johnlui@wischosgift.com
             </a>
           </p>
           <p style={{ marginBottom: '0.3rem' }}>

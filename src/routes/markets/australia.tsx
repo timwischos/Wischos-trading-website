@@ -664,7 +664,7 @@ function AustraliaMarketPage() {
             Prefer email?
           </p>
           <a
-            href="mailto:inquiries@wischosgift.com"
+            href="mailto:johnlui@wischosgift.com"
             style={{
               fontSize: '0.85rem',
               color: '#B87333',
@@ -674,7 +674,7 @@ function AustraliaMarketPage() {
               marginBottom: '0.5rem',
             }}
           >
-            inquiries@wischosgift.com
+            johnlui@wischosgift.com
           </a>
           <a
             href="https://www.linkedin.com/in/john-lui-4529a3102/"
@@ -709,7 +709,7 @@ function AustraliaMarketPage() {
       >
         <p style={{ fontSize: '0.72rem', color: '#888' }}>
           © {new Date().getFullYear()} Wischos Gift Trading Co. &nbsp;·&nbsp;
-          inquiries@wischosgift.com
+          johnlui@wischosgift.com
         </p>
         <a
           href="https://wischosgift.com"

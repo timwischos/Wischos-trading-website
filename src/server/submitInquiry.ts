@@ -32,7 +32,7 @@ export const submitInquiry = createServerFn({ method: 'POST' })
         InquiryEmail({ ...inquiry, submittedAt: new Date().toISOString() }),
       )
       await resend.emails.send({
-        from: 'Wischos Gift <inquiries@wischosgift.com>',
+        from: 'Wischos Gift <johnlui@wischosgift.com>',
         to: process.env.OPERATOR_EMAIL!,
         subject: `New Inquiry — ${inquiry.companyName}`,
         html,

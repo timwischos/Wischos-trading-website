@@ -365,7 +365,7 @@ function ExecutiveLandingPage() {
         gap: '0.5rem',
       }}>
         <p style={{ fontSize: '0.72rem', color: '#888' }}>
-          © {new Date().getFullYear()} Wischos Gift Trading Co. &nbsp;·&nbsp; inquiries@wischosgift.com
+          © {new Date().getFullYear()} Wischos Gift Trading Co. &nbsp;·&nbsp; johnlui@wischosgift.com
         </p>
         <a href="https://wischosgift.com" style={{ fontSize: '0.72rem', color: '#888', textDecoration: 'none' }}>
           wischosgift.com

@@ -208,7 +208,7 @@ function NewZealandMarketPage() {
           <h2 style={{ fontSize: 'clamp(1.25rem, 2.5vw, 1.75rem)', fontWeight: 300, marginBottom: '1rem' }}>Request a New Zealand-priced quote</h2>
           <p style={{ fontSize: '0.85rem', color: '#555', lineHeight: 1.7, marginBottom: '1.25rem' }}>Tell us the recipient profile, quantity range, target budget, branding requirements, and delivery timeline. We respond within 1–2 business days with a set direction, sample path, and indicative landed cost into Auckland or your nominated NZ port.</p>
           <p style={{ fontSize: '0.82rem', color: '#555', lineHeight: 1.65, marginBottom: '0.5rem' }}>Prefer email?</p>
-          <a href="mailto:inquiries@wischosgift.com" style={{ fontSize: '0.85rem', color: '#B87333', textDecoration: 'none', fontWeight: 500, display: 'block', marginBottom: '0.5rem' }}>inquiries@wischosgift.com</a>
+          <a href="mailto:johnlui@wischosgift.com" style={{ fontSize: '0.85rem', color: '#B87333', textDecoration: 'none', fontWeight: 500, display: 'block', marginBottom: '0.5rem' }}>johnlui@wischosgift.com</a>
           <a href="https://www.linkedin.com/in/john-lui-4529a3102/" target="_blank" rel="noopener noreferrer" style={{ fontSize: '0.8rem', color: '#B87333', textDecoration: 'none', fontWeight: 500 }}>Connect on LinkedIn →</a>
         </div>
         <div style={{ border: '1px solid #e5e5e5', padding: '2rem' }}>
@@ -217,7 +217,7 @@ function NewZealandMarketPage() {
       </section>
 
       <footer style={{ borderTop: '1px solid #e5e5e5', padding: '1.5rem 2rem', display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: '0.5rem' }}>
-        <p style={{ fontSize: '0.72rem', color: '#888' }}>© {new Date().getFullYear()} Wischos Gift Trading Co. &nbsp;·&nbsp; inquiries@wischosgift.com</p>
+        <p style={{ fontSize: '0.72rem', color: '#888' }}>© {new Date().getFullYear()} Wischos Gift Trading Co. &nbsp;·&nbsp; johnlui@wischosgift.com</p>
         <a href="https://wischosgift.com" style={{ fontSize: '0.72rem', color: '#888', textDecoration: 'none' }}>wischosgift.com</a>
       </footer>
     </div>
