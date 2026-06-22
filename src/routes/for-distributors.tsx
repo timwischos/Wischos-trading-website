@@ -39,6 +39,14 @@ export const Route = createFileRoute('/for-distributors')({
             mainEntity: [
               {
                 '@type': 'Question',
+                name: 'Can I order individual items instead of a full set?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Yes. Individual brass pens, titanium bottles, EDC pieces, and other metal items are available for bulk orders — same process as sets. Tell us the item, quantity, and branding requirements and we\'ll quote accordingly.',
+                },
+              },
+              {
+                '@type': 'Question',
                 name: 'Do you white-label?',
                 acceptedAnswer: {
                   '@type': 'Answer',
@@ -130,10 +138,10 @@ function DistributorPage() {
               For Promotional Products Distributors &amp; Gifting Agencies
             </p>
             <h1 style={{ fontSize: 'clamp(2rem, 5vw, 3.25rem)', fontWeight: 700, lineHeight: 1.15, marginBottom: '1.25rem', maxWidth: '22ch' }}>
-              Custom metal gift sets, built around your brief
+              Custom metal gifts — sets or individual items — built around your brief
             </h1>
             <p style={{ fontSize: '1.05rem', color: '#4a4a4a', lineHeight: 1.7, maxWidth: '52ch', marginBottom: '2rem' }}>
-              Wischos is a China-based metal gift sourcing partner. Tell us what your client needs — recipient profile, budget range, quantity, branding — and we'll recommend set direction, materials, and packaging.
+              Wischos is a China-based metal gift sourcing partner. We work across complete gift sets and individual items — brass pens, titanium drinkware, EDC carry pieces, and more. Tell us what your client needs and we'll advise on direction, materials, and packaging.
             </p>
             <a
               href="#inquiry-form"
@@ -212,6 +220,10 @@ function DistributorPage() {
             {
               label: 'Materials',
               body: "Brass, titanium, stainless steel, aluminium, and other metal alloys (zinc, copper, bronze on request) — each stated clearly, no vague 'premium metal' language. Your client's procurement brief can quote the spec directly.",
+            },
+            {
+              label: 'Sets or individual items',
+              body: 'Complete curated sets for clients who want a full gifting story. Individual items — brass pens, titanium bottles, EDC pieces — for programs where one well-chosen item is the brief. Both are handled through the same sourcing process.',
             },
             {
               label: 'Price tiers',
@@ -305,6 +317,10 @@ function DistributorPage() {
           Common questions
         </h2>
         {[
+          {
+            question: 'Can I order individual items instead of a full set?',
+            answer: "Yes. Individual brass pens, titanium bottles, EDC pieces, and other metal items are available for bulk orders — same process as sets. Tell us the item, quantity, and branding requirements and we'll quote accordingly.",
+          },
           {
             question: 'Do you white-label?',
             answer: "Yes. Wischos branding does not appear on products or packaging as standard. Every set ships with your client's identity — or unbranded, if preferred.",
