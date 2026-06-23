@@ -77,6 +77,8 @@ export function SiteFooter() {
           <img
             src={cloudinaryUrl('/wischos-logo')}
             alt="Wischos Gift Trading"
+            width={160}
+            height={40}
             style={{ height: '2.5rem', width: 'auto', marginBottom: '1.25rem', display: 'block' }}
           />
 

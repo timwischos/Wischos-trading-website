@@ -100,6 +100,7 @@ export const Route = createRootRoute({
     links: [
       { rel: 'preconnect', href: 'https://res.cloudinary.com' },
       { rel: 'dns-prefetch', href: 'https://res.cloudinary.com' },
+      { rel: 'preconnect', href: 'https://a.clarity.ms' },
       { rel: 'stylesheet', href: appCss },
       { rel: 'icon', href: '/favicon.ico' },
     ],
