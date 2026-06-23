@@ -39,7 +39,7 @@ export const siteMeta = {
   siteUrl: 'https://wischosgift.com',
   legalName: 'Anhui Wischos International Trading Co. Ltd',
   email: 'johnlui@wischosgift.com',
-  defaultOgImage: '/products/WP-401-pure-titanium-vacuum-insulated-bottle/pure-titanium-vacuum-insulated-bottle-lifestyle.avif',
+  defaultOgImage: 'https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_1200/products/WP-401-pure-titanium-vacuum-insulated-bottle/pure-titanium-vacuum-insulated-bottle-lifestyle',
   defaultTitle: 'Custom Metal Corporate Gifts & Promotional Sets | Brass · Titanium · Steel | Wischos Gift',
   defaultDescription: 'Metal-only B2B custom corporate gift programs — brass, titanium, stainless steel, aluminium. Curated sets and individual SKUs for promotional distributors and corporate procurement. Custom logo engraving, MOQ 100, 25-35 day production from China.',
   routes: {
