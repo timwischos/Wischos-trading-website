@@ -11,8 +11,8 @@ interface ProductCardProps {
 
 export function ProductCard({ product }: ProductCardProps) {
   const [hovered, setHovered] = useState(false)
-  const coverSrc = cloudinaryUrl(product.images[0] ?? '', { w: 600 })
-  const hoverSrc = cloudinaryUrl(product.images[1] ?? '', { w: 600 })
+  const coverSrc = cloudinaryUrl(product.images[0] ?? '', { w: 400 })
+  const hoverSrc = cloudinaryUrl(product.images[1] ?? '', { w: 400 })
   const hasHoverImage = Boolean(hoverSrc && hoverSrc !== coverSrc)
 
   const altText = `${product.name} — ${product.category}`
@@ -184,7 +184,7 @@ export function ProductGridSection({ products, category, searchQuery }: { produc
                 overflow: 'hidden',
               }}>
                 <img
-                  src={cloudinaryUrl('/images/more-coming-products', { w: 600 })}
+                  src={cloudinaryUrl('/images/more-coming-products', { w: 400 })}
                   alt="More products coming soon"
                   loading="lazy"
                   style={{

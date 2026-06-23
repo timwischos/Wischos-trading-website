@@ -60,7 +60,7 @@ export function SiteHeader() {
 
           {/* Logo */}
           <Link to="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
-            <img src={cloudinaryUrl('/wischos-logo')} alt="Wischos Gift Trading" style={{ height: '2rem', width: 'auto', display: 'block' }} />
+            <img src={cloudinaryUrl('/wischos-logo')} alt="Wischos Gift Trading" width={160} height={32} style={{ height: '2rem', width: 'auto', display: 'block' }} />
           </Link>
 
           {/* Desktop navigation */}
