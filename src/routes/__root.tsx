@@ -129,7 +129,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
       </head>
       <body className="min-h-screen bg-background font-sans antialiased">
         {!isLanding && <SiteHeader />}
-        {children}
+        <main>{children}</main>
         {!isLanding && <SiteFooter />}
         {!isLanding && <WhatsAppButton />}
 
