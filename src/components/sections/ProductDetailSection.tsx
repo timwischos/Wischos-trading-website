@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Dialog as DialogPrimitive } from 'radix-ui'
 import { Link, type LinkProps } from '@tanstack/react-router'
 import { X, ChevronLeft, ChevronRight } from 'lucide-react'
-import type { DbProduct } from '@/server/schema'
+import type { ProductSummary } from '@/server/schema'
 import type { ProductWithSeoGeo } from '@/content/productSeoGeoOverrides'
 import { cloudinaryUrl } from '@/lib/cloudinary'
 
@@ -12,7 +12,7 @@ type RouterTo = LinkProps['to']
 
 interface ProductDetailSectionProps {
   product: Product
-  relatedProducts?: DbProduct[]
+  relatedProducts?: ProductSummary[]
 }
 
 function AccordionSection({ title, children, defaultOpen = false }: { title: string; children: React.ReactNode; defaultOpen?: boolean }) {

@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { render, screen, act } from '@testing-library/react'
+import { render, screen, act, fireEvent } from '@testing-library/react'
 import {
   createMemoryHistory,
   createRootRoute,
@@ -52,6 +52,16 @@ describe('ProductCard', () => {
     render(<RouterProvider router={router} />)
     await act(() => router.load())
     expect(screen.getByText(product.category)).toBeTruthy()
+  })
+
+  it('defers the hover image until the card is hovered', async () => {
+    const router = createTestRouter(() => <ProductCard product={product} />)
+    const { container } = render(<RouterProvider router={router} />)
+    await act(() => router.load())
+
+    expect(container.querySelectorAll('img')).toHaveLength(1)
+    fireEvent.mouseEnter(screen.getByRole('link', { name: product.name }))
+    expect(container.querySelectorAll('img')).toHaveLength(2)
   })
 
   it('renders MOQ badge', async () => {

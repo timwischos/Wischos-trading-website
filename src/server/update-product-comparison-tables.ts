@@ -108,12 +108,12 @@ const tables: Record<string, ComparisonTable> = {
       ['General office giveaway', 'Secondary fit', 'Works best when paired with a pen or desk set'],
     ],
   },
-  'wp-207-carbon-fiber-magnetic-fidget-stick': {
-    columns: ['Desk object', 'Best fit', 'Buyer note'],
+  'wp-207-precision-brass-place-card-holder': {
+    columns: ['Format family', 'Best fit', 'Buyer note'],
     rows: [
-      ['Carbon fiber fidget stick', 'Kinetic desk interaction', 'Lightweight carbon fiber with magnetic movement'],
-      ['Standard metal pen', 'Daily writing', 'More familiar office function'],
-      ['Brass spinning top', 'Compact spin interaction', 'Smaller object with a brass material story'],
+      ['Small round or mini block', 'Price tags and compact desk labels', 'Lowest footprint for counters and retail display'],
+      ['Square or hex block', 'Business cards and short place cards', 'More visible mass and stronger logo face area'],
+      ['Long bar or cylinder bar', 'Menu strips, table cards, and wider signs', 'Better support for longer or landscape-format inserts'],
     ],
   },
   'wp-208-precision-folding-aluminium-device-stand': {

@@ -45,3 +45,7 @@ export const products = pgTable('products', {
 })
 
 export type DbProduct = typeof products.$inferSelect
+export type ProductSummary = Pick<
+  DbProduct,
+  'id' | 'name' | 'tagline' | 'description' | 'category' | 'materials' | 'heroImage' | 'images'
+>

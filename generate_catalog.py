@@ -243,9 +243,9 @@ CATEGORIES = [
             {'sku': 'WP-206', 'name': 'Precision Brass Spinning Top',
              'tagline': 'Solid brass  |  Tungsten carbide tip  |  3+ min spin',
              'folder': 'WP-206-precision-brass-spinning-top'},
-            {'sku': 'WP-207', 'name': 'Carbon Fiber Magnetic Fidget Stick',
-             'tagline': 'Carbon fiber  |  Neodymium magnets  |  Desk object',
-             'folder': 'WP-207-carbon-fiber-magnetic-fidget-stick'},
+            {'sku': 'WP-207', 'name': 'Precision Brass Place Card Holder',
+             'tagline': 'Solid brass  |  20-100mm range  |  Desk display',
+             'folder': 'WP-207-precision-brass-place-card-holder'},
         ],
     },
     {

@@ -1,8 +1,8 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { createFileRoute, notFound, redirect, Link, type LinkProps } from '@tanstack/react-router'
 import { ProductDetailSection } from '@/components/sections/ProductDetailSection'
 import { getProductById, getProducts } from '@/server/getProducts'
-import type { DbProduct } from '@/server/schema'
+import type { ProductSummary } from '@/server/schema'
 import { siteMeta, buildOgMeta, buildCanonical } from '@/content/meta'
 import {
   applyProductSeoGeoOverride,
@@ -14,6 +14,7 @@ import { trackViewItem } from '@/lib/analytics'
 type RouterTo = LinkProps['to']
 
 const PRODUCT_REDIRECTS: Record<string, string> = {
+  'wp-207-carbon-fiber-magnetic-fidget-stick': 'wp-207-precision-brass-place-card-holder',
   'wp-308-titanium-edc-carabiner': 'wp-308-titanium-edc-keychain',
   'wp-402-pure-titanium-capsule-flask-150ml': 'wp-402-pure-titanium-capsule-bottle-150ml',
   'wp-406-pure-titanium-capsule-flask-200ml': 'wp-406-pure-titanium-capsule-bottle-200ml',
@@ -30,16 +31,10 @@ export const Route = createFileRoute('/{-$locale}/products/$productId')({
       })
     }
 
-    const [product, allProducts] = await Promise.all([
-      getProductById({ data: params.productId }),
-      getProducts({ data: null }),
-    ])
+    const product = await getProductById({ data: params.productId })
     if (!product) throw notFound()
     const productWithSeoGeo = applyProductSeoGeoOverride(product)
-    const related = allProducts
-      .filter(p => p.category === productWithSeoGeo.category && p.id !== productWithSeoGeo.id)
-      .slice(0, 4)
-    return { product: productWithSeoGeo, related }
+    return { product: productWithSeoGeo }
   }) as any,
   head: ({ loaderData }) => {
     if (!loaderData?.product) return {}
@@ -121,7 +116,8 @@ export const Route = createFileRoute('/{-$locale}/products/$productId')({
 })
 
 function ProductDetailPage() {
-  const { product, related } = Route.useLoaderData() as { product: ProductWithSeoGeo; related: DbProduct[] }
+  const { product } = Route.useLoaderData() as { product: ProductWithSeoGeo }
+  const [related, setRelated] = useState<ProductSummary[]>([])
 
   useEffect(() => {
     trackViewItem({
@@ -130,6 +126,24 @@ function ProductDetailPage() {
       category: product.category ?? undefined,
     })
   }, [product.id, product.name, product.category])
+
+  useEffect(() => {
+    let cancelled = false
+
+    getProducts({ data: product.category })
+      .then(products => {
+        if (!cancelled) {
+          setRelated(products.filter(item => item.id !== product.id).slice(0, 4))
+        }
+      })
+      .catch(() => {
+        if (!cancelled) setRelated([])
+      })
+
+    return () => {
+      cancelled = true
+    }
+  }, [product.id, product.category])
 
   return <ProductDetailSection product={product} relatedProducts={related} />
 }

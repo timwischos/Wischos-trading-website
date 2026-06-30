@@ -1,12 +1,12 @@
 import { Link, type LinkProps } from '@tanstack/react-router'
 import { ProductCard } from '@/components/sections/ProductGridSection'
-import type { DbProduct } from '@/server/schema'
+import type { ProductSummary } from '@/server/schema'
 
 type RouterTo = LinkProps['to']
 
 const b = '1px solid var(--grid-color)'
 
-export function HomepageFeaturedProductsSection({ products }: { products: DbProduct[] }) {
+export function HomepageFeaturedProductsSection({ products }: { products: ProductSummary[] }) {
   return (
     <section style={{ borderTop: b }}>
       {/* Header */}

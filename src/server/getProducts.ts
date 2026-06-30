@@ -3,22 +3,39 @@ import { eq, and, asc, inArray } from 'drizzle-orm'
 import { db } from './db'
 import { products } from './schema'
 
+const productSummaryColumns = {
+  id: products.id,
+  name: products.name,
+  tagline: products.tagline,
+  description: products.description,
+  category: products.category,
+  materials: products.materials,
+  heroImage: products.heroImage,
+  images: products.images,
+}
+
 export const getProducts = createServerFn({ method: 'GET' })
   .inputValidator((category: unknown) => (category ?? null) as string | null)
   .handler(async ({ data: category }) => {
     const where = category
       ? and(eq(products.active, true), eq(products.category, category))
       : eq(products.active, true)
-    return db.select().from(products).where(where).orderBy(asc(products.sortOrder))
+    return db
+      .select(productSummaryColumns)
+      .from(products)
+      .where(where)
+      .orderBy(asc(products.sortOrder))
   })
 
 // Fetch a fixed list of products by ID (for homepage featured row)
 export const getProductsByIds = createServerFn({ method: 'GET' })
   .inputValidator((ids: unknown) => ids as string[])
   .handler(async ({ data: ids }) => {
-    return db.select().from(products).where(
-      and(eq(products.active, true), inArray(products.id, ids))
-    ).orderBy(asc(products.sortOrder))
+    return db
+      .select(productSummaryColumns)
+      .from(products)
+      .where(and(eq(products.active, true), inArray(products.id, ids)))
+      .orderBy(asc(products.sortOrder))
   })
 
 export const getProductById = createServerFn({ method: 'GET' })

@@ -24,7 +24,7 @@ const migrations: [string, string][] = [
   ['letter-opener-02',                                'WP-204-propeller-spinning-letter-opener'],
   ['metal-bookmark-01',                               'WP-205-precision-custom-metal-bookmark'],
   ['precision-brass-spinning-01',                     'WP-206-precision-brass-spinning-top'],
-  ['edc-carbon-fibre-magnetic-fidget-sticks-01',      'WP-207-carbon-fiber-magnetic-fidget-stick'],
+  ['edc-carbon-fibre-magnetic-fidget-sticks-01',      'wp-207-precision-brass-place-card-holder'],
   ['badge-holder-card-holder-with-metal-clip',        'WP-301-rfid-aluminum-wallet-badge-holder'],
   ['key-chain-organizer-holder-01',                   'WP-302-industrial-brass-key-organizer'],
   ['stainless-steel-money-clip-01',                   'WP-303-industrial-stainless-steel-money-clip'],

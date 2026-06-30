@@ -1,19 +1,28 @@
 import { useState } from 'react'
 import { Link, type LinkProps } from '@tanstack/react-router'
-import type { DbProduct } from '@/server/schema'
+import type { ProductSummary } from '@/server/schema'
 import { cloudinaryUrl } from '@/lib/cloudinary'
 
 type RouterTo = LinkProps['to']
 
 interface ProductCardProps {
-  product: DbProduct
+  product: ProductSummary
 }
 
 export function ProductCard({ product }: ProductCardProps) {
   const [hovered, setHovered] = useState(false)
-  const coverSrc = cloudinaryUrl(product.images[0] ?? '', { w: 400 })
-  const hoverSrc = cloudinaryUrl(product.images[1] ?? '', { w: 400 })
+  const coverImage = product.images[0] ?? ''
+  const hoverImage = product.images[1] ?? ''
+  const coverSrc = cloudinaryUrl(coverImage, { w: 400 })
+  const hoverSrc = cloudinaryUrl(hoverImage, { w: 400 })
   const hasHoverImage = Boolean(hoverSrc && hoverSrc !== coverSrc)
+  const cardSizes = '(max-width: 767px) 50vw, 25vw'
+  const coverSrcSet = [240, 320, 400, 520]
+    .map(width => `${cloudinaryUrl(coverImage, { w: width })} ${width}w`)
+    .join(', ')
+  const hoverSrcSet = [240, 320, 400, 520]
+    .map(width => `${cloudinaryUrl(hoverImage, { w: width })} ${width}w`)
+    .join(', ')
 
   const altText = `${product.name} — ${product.category}`
 
@@ -29,25 +38,28 @@ export function ProductCard({ product }: ProductCardProps) {
       <div style={{ overflow: 'hidden', background: '#f7f7f7', position: 'relative', aspectRatio: '1/1' }}>
         <img
           src={coverSrc}
+          srcSet={coverSrcSet}
+          sizes={cardSizes}
           alt={altText}
           loading="lazy"
+          width={520}
+          height={520}
           style={{
             width: '100%', height: '100%', objectFit: 'cover', display: 'block',
-            transition: 'opacity 0.4s ease',
-            opacity: hasHoverImage && hovered ? 0 : 1,
           }}
         />
-        {hasHoverImage && (
+        {hasHoverImage && hovered && (
           <img
             src={hoverSrc}
+            srcSet={hoverSrcSet}
+            sizes={cardSizes}
             alt=""
             aria-hidden="true"
-            loading="lazy"
+            width={520}
+            height={520}
             style={{
               position: 'absolute', inset: 0,
               width: '100%', height: '100%', objectFit: 'cover',
-              transition: 'opacity 0.4s ease',
-              opacity: hovered ? 1 : 0,
             }}
           />
         )}
@@ -76,7 +88,7 @@ const CATEGORY_DESCRIPTIONS: Record<string, string> = {
   'EDC Accessories': 'Everyday carry accessories made for professionals who value functional precision. This category includes titanium multi-tools, stainless steel key organisers, EDC pry bars, letter openers, and pocket tools designed for daily use and long-term durability. Each piece is compact, purposeful, and built to a standard that holds up over years of use. Suitable for high-value client gifts, executive welcome kits, and recognition awards where the recipient is expected to actually use what they receive. All pieces support laser engraving for personalisation.',
 }
 
-export function ProductGridSection({ products, category, searchQuery }: { products: DbProduct[]; category?: string; searchQuery?: string }) {
+export function ProductGridSection({ products, category, searchQuery }: { products: ProductSummary[]; category?: string; searchQuery?: string }) {
   const heading = searchQuery
     ? `Search: "${searchQuery}"`
     : category ?? 'Selected Metal Objects'

@@ -23,7 +23,7 @@ const FOLDER_MAP: Record<string, string> = {
   'aluminium-metal-pen-holder-01':                        'WP-202-precision-aluminum-pen-holder',
   'badge-holder-card-holder-with-metal-clip':             'WP-301-rfid-aluminum-wallet-badge-holder',
   'bolt-action-pen-01':                                   'WP-101-brass-crown-bolt-action-pen',
-  'edc-carbon-fibre-magnetic-fidget-sticks-01':           'WP-207-carbon-fiber-magnetic-fidget-stick',
+  'edc-carbon-fibre-magnetic-fidget-sticks-01':           'WP-207-precision-brass-place-card-holder',
   'key-chain-organizer-holder-01':                        'WP-302-industrial-brass-key-organizer',
   'letter-opener-01':                                     'WP-203-executive-zinc-alloy-letter-opener',
   'letter-opener-02':                                     'WP-204-propeller-spinning-letter-opener',

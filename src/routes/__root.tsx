@@ -100,7 +100,6 @@ export const Route = createRootRoute({
     links: [
       { rel: 'preconnect', href: 'https://res.cloudinary.com' },
       { rel: 'dns-prefetch', href: 'https://res.cloudinary.com' },
-      { rel: 'preconnect', href: 'https://a.clarity.ms' },
       { rel: 'stylesheet', href: appCss },
       { rel: 'icon', href: '/favicon.ico' },
     ],
@@ -133,23 +132,66 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         {!isLanding && <SiteFooter />}
         {!isLanding && <WhatsAppButton />}
 
-        {/* Third-party analytics - Non-blocking scripts */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-859CPYDHVK" />
+        {/* Queue analytics immediately, but keep third-party execution off the critical path. */}
         <script dangerouslySetInnerHTML={{ __html: `
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
           gtag('config', 'G-859CPYDHVK', { 'send_page_view': false });
         `}} />
-        <script dangerouslySetInnerHTML={{ __html: `
-          (function(c,l,a,r,i,t,y){
-              c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-              t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-              y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-          })(window, document, "clarity", "script", "w6z70dz6w4");
-        `}} />
+        <DeferredAnalytics />
         <Scripts />
       </body>
     </html>
   )
+}
+
+function DeferredAnalytics() {
+  useEffect(() => {
+    let loaded = false
+    let delay = 0
+    const events: Array<keyof WindowEventMap> = ['pointerdown', 'keydown', 'touchstart']
+
+    const removeTriggers = () => {
+      window.clearTimeout(delay)
+      for (const event of events) {
+        window.removeEventListener(event, load)
+      }
+    }
+
+    function load() {
+      if (loaded) return
+      loaded = true
+      removeTriggers()
+
+      const google = document.createElement('script')
+      google.async = true
+      google.src = 'https://www.googletagmanager.com/gtag/js?id=G-859CPYDHVK'
+      document.head.appendChild(google)
+
+      const clarityWindow = window as Window & {
+        clarity?: ((...args: unknown[]) => void) & { q?: unknown[][] }
+      }
+      clarityWindow.clarity = clarityWindow.clarity || function (...args: unknown[]) {
+        const clarity = clarityWindow.clarity!
+        clarity.q = clarity.q || []
+        clarity.q.push(args)
+      }
+
+      const clarity = document.createElement('script')
+      clarity.async = true
+      clarity.src = 'https://www.clarity.ms/tag/w6z70dz6w4'
+      document.head.appendChild(clarity)
+    }
+
+    delay = window.setTimeout(load, 8000)
+
+    for (const event of events) {
+      window.addEventListener(event, load, { once: true, passive: true })
+    }
+
+    return removeTriggers
+  }, [])
+
+  return null
 }

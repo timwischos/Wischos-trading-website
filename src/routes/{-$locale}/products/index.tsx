@@ -2,7 +2,7 @@ import { createFileRoute } from '@tanstack/react-router'
 import { ProductGridSection } from '@/components/sections/ProductGridSection'
 import { siteMeta, buildOgMeta, buildCanonical } from '@/content/meta'
 import { getProducts } from '@/server/getProducts'
-import type { DbProduct } from '@/server/schema'
+import type { ProductSummary } from '@/server/schema'
 
 export const Route = createFileRoute('/{-$locale}/products/')({
   validateSearch: (search: Record<string, unknown>) => ({
@@ -16,7 +16,7 @@ export const Route = createFileRoute('/{-$locale}/products/')({
       ...buildOgMeta({
         title: siteMeta.routes.products.title,
         description: siteMeta.routes.products.description,
-        image: '/products/WP-207-carbon-fiber-magnetic-fidget-stick/carbon-fiber-magnetic-fidget-stick-lifestyle.avif',
+        image: '/products/WP-207-precision-brass-place-card-holder/precision-brass-place-card-holder-lifestyle.avif',
         url: '/products',
       }),
     ],
@@ -27,7 +27,7 @@ export const Route = createFileRoute('/{-$locale}/products/')({
   component: ProductsPage,
 })
 
-function filterByQuery(products: DbProduct[], query: string | undefined): DbProduct[] {
+function filterByQuery(products: ProductSummary[], query: string | undefined): ProductSummary[] {
   if (!query) return products
   const q = query.toLowerCase()
   return products.filter(p =>

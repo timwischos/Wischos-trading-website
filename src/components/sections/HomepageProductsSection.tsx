@@ -19,6 +19,16 @@ export function HomepageProductsSection() {
   function CardImage({ set, large = false }: { set: typeof giftSets[0]; large?: boolean }) {
     const hovered = hoveredId === set.id
     const hasHover = Boolean(set.hoverImage)
+    const imageSizes = '(max-width: 767px) 100vw, 50vw'
+    const coverSrcSet = [400, 600, 800]
+      .map(width => `${cloudinaryUrl(set.coverImage, { w: width })} ${width}w`)
+      .join(', ')
+    const hoverSrcSet = set.hoverImage
+      ? [400, 600, 800]
+          .map(width => `${cloudinaryUrl(set.hoverImage!, { w: width })} ${width}w`)
+          .join(', ')
+      : undefined
+
     return (
       <Link
         to={`/gift-sets/${set.id}` as RouterTo}
@@ -29,16 +39,23 @@ export function HomepageProductsSection() {
       >
         <img
           src={cloudinaryUrl(set.coverImage, { w: large ? 800 : 600 })}
+          srcSet={coverSrcSet}
+          sizes={imageSizes}
           alt={set.name}
           loading={large ? 'eager' : 'lazy'}
-          style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', transition: 'opacity 0.4s ease', opacity: hasHover && hovered ? 0 : 1 }}
+          width={800}
+          height={800}
+          style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
         />
-        {hasHover && (
+        {hasHover && hovered && (
           <img
             src={cloudinaryUrl(set.hoverImage!, { w: large ? 800 : 600 })}
+            srcSet={hoverSrcSet}
+            sizes={imageSizes}
             alt=""
             aria-hidden="true"
-            loading="lazy"
+            width={800}
+            height={800}
             style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', transition: 'opacity 0.4s ease', opacity: hovered ? 1 : 0 }}
           />
         )}

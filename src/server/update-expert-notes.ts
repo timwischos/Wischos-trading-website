@@ -166,18 +166,18 @@ const notes: Record<string, ExpertNote[]> = {
     },
   ],
 
-  'WP-207-carbon-fiber-magnetic-fidget-stick': [
+  'wp-207-precision-brass-place-card-holder': [
     {
-      title: 'Carbon Fiber: Strength-to-Weight Champion',
-      body: 'Carbon fiber composite has a tensile strength of 3,500 MPa at just 1.6 g/cm³ density — giving it a specific strength 5× that of steel. In the fidget stick, the carbon fiber tubes provide the rigid structural spine while adding minimal weight, keeping the assembled 3-section piece at just 42g. The weave pattern (typically 3K twill) also provides the distinctive visual texture.',
+      title: 'Brass Density: Why Small Holders Stay Put',
+      body: 'Brass density sits around 8.4–8.7 g/cm³ — over three times that of aluminum. In a place card holder, that density matters more than nominal size because it creates a low center of gravity and enough base mass to keep lightweight cards upright without adding rubber feet or hidden ballast. A 24g mini block and a 367g cylinder bar can both work because the material itself provides the stability story.',
     },
     {
-      title: 'Neodymium Magnets: Silent Connection',
-      body: 'The magnetic joints use N35–N42 grade neodymium magnets (NdFeB) — the strongest permanent magnet type commercially available. The brass joint housings serve as magnetic field guides, concentrating flux at the connection points for a strong hold (typically 1–2kg pull force) while minimizing stray field that could affect nearby electronics. The brass also dampens the connection impact, producing a soft "thud" rather than a sharp click.',
+      title: 'Slot Width Controls Display Performance',
+      body: 'For place card holders, the slot geometry matters as much as the outer shape. A slot that is too narrow buckles coated cards; too wide and thin cards lean or wobble. In practice, these products perform best when the slot width is matched to the target insert stock rather than marketed as one universal format. That is why a multi-format brass holder range is more defensible than a single “fits all cards” claim.',
     },
     {
-      title: 'Why Brass Joints Specifically',
-      body: 'Brass is paramagnetic (not attracted to magnets) but an excellent conductor — it slows magnet movement through eddy current braking (Lenz\'s law). This creates the "controlled resistance" feeling when folding and unfolding the stick. Steel joints would stick to the magnets; aluminum would provide less damping. Brass delivers the precise tactile feedback that makes the fidget interaction satisfying rather than snappy.',
+      title: 'Patina vs Protected Finish: Two Different Buyer Stories',
+      body: 'Bare brass naturally oxidizes into a warmer, darker surface through exposure to oxygen, skin oils, and moisture. Some buyers want that living surface because it makes each holder age differently. Others need a more controlled appearance for hospitality, retail, or tightly managed brand environments. In those cases, brushed satin, glazing, oil coating, or plated finishes are not cosmetic extras — they are part of the product specification.',
     },
   ],
 

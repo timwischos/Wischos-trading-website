@@ -64,10 +64,12 @@ export function WhySection() {
         <div style={{ overflow: 'hidden', borderBottom: '1px solid var(--grid-color)' }}>
           <img
             src={cloudinaryUrl('/images/why-us-section', { w: 800 })}
-            srcSet={`${cloudinaryUrl('/images/why-us-section', { w: 400 })} 400w, ${cloudinaryUrl('/images/why-us-section', { w: 600 })} 600w, ${cloudinaryUrl('/images/why-us-section', { w: 800 })} 800w, ${cloudinaryUrl('/images/why-us-section', { w: 1200 })} 1200w`}
+            srcSet={`${cloudinaryUrl('/images/why-us-section', { w: 360 })} 360w, ${cloudinaryUrl('/images/why-us-section', { w: 480 })} 480w, ${cloudinaryUrl('/images/why-us-section', { w: 640 })} 640w, ${cloudinaryUrl('/images/why-us-section', { w: 800 })} 800w`}
             sizes="(max-width: 1024px) 100vw, 50vw"
             alt="Corporate gift set on office desk"
             loading="lazy"
+            width={800}
+            height={994}
             style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', display: 'block' }}
           />
         </div>

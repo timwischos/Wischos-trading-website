@@ -25,6 +25,7 @@ import { Route as MarketsSingaporeRouteImport } from './routes/markets/singapore
 import { Route as MarketsNewZealandRouteImport } from './routes/markets/new-zealand'
 import { Route as MarketsAustraliaRouteImport } from './routes/markets/australia'
 import { Route as LandingOnboardingGiftSetRouteImport } from './routes/landing/onboarding-gift-set'
+import { Route as LandingMetalGiftsWholesaleRouteImport } from './routes/landing/metal-gifts-wholesale'
 import { Route as LandingExecutiveGiftSetRouteImport } from './routes/landing/executive-gift-set'
 import { Route as Char123LocaleChar125ProductsIndexRouteImport } from './routes/{-$locale}/products/index'
 import { Route as Char123LocaleChar125GiftSetsIndexRouteImport } from './routes/{-$locale}/gift-sets/index'
@@ -118,6 +119,12 @@ const LandingOnboardingGiftSetRoute =
     path: '/landing/onboarding-gift-set',
     getParentRoute: () => rootRouteImport,
   } as any)
+const LandingMetalGiftsWholesaleRoute =
+  LandingMetalGiftsWholesaleRouteImport.update({
+    id: '/landing/metal-gifts-wholesale',
+    path: '/landing/metal-gifts-wholesale',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const LandingExecutiveGiftSetRoute = LandingExecutiveGiftSetRouteImport.update({
   id: '/landing/executive-gift-set',
   path: '/landing/executive-gift-set',
@@ -168,6 +175,7 @@ export interface FileRoutesByFullPath {
   '/thank-you': typeof ThankYouRoute
   '/{-$locale}': typeof Char123LocaleChar125RouteWithChildren
   '/landing/executive-gift-set': typeof LandingExecutiveGiftSetRoute
+  '/landing/metal-gifts-wholesale': typeof LandingMetalGiftsWholesaleRoute
   '/landing/onboarding-gift-set': typeof LandingOnboardingGiftSetRoute
   '/markets/australia': typeof MarketsAustraliaRoute
   '/markets/new-zealand': typeof MarketsNewZealandRoute
@@ -193,6 +201,7 @@ export interface FileRoutesByTo {
   '/thank-you': typeof ThankYouRoute
   '/{-$locale}': typeof Char123LocaleChar125RouteWithChildren
   '/landing/executive-gift-set': typeof LandingExecutiveGiftSetRoute
+  '/landing/metal-gifts-wholesale': typeof LandingMetalGiftsWholesaleRoute
   '/landing/onboarding-gift-set': typeof LandingOnboardingGiftSetRoute
   '/markets/australia': typeof MarketsAustraliaRoute
   '/markets/new-zealand': typeof MarketsNewZealandRoute
@@ -217,6 +226,7 @@ export interface FileRoutesById {
   '/thank-you': typeof ThankYouRoute
   '/{-$locale}': typeof Char123LocaleChar125RouteWithChildren
   '/landing/executive-gift-set': typeof LandingExecutiveGiftSetRoute
+  '/landing/metal-gifts-wholesale': typeof LandingMetalGiftsWholesaleRoute
   '/landing/onboarding-gift-set': typeof LandingOnboardingGiftSetRoute
   '/markets/australia': typeof MarketsAustraliaRoute
   '/markets/new-zealand': typeof MarketsNewZealandRoute
@@ -244,6 +254,7 @@ export interface FileRouteTypes {
     | '/thank-you'
     | '/{-$locale}'
     | '/landing/executive-gift-set'
+    | '/landing/metal-gifts-wholesale'
     | '/landing/onboarding-gift-set'
     | '/markets/australia'
     | '/markets/new-zealand'
@@ -269,6 +280,7 @@ export interface FileRouteTypes {
     | '/thank-you'
     | '/{-$locale}'
     | '/landing/executive-gift-set'
+    | '/landing/metal-gifts-wholesale'
     | '/landing/onboarding-gift-set'
     | '/markets/australia'
     | '/markets/new-zealand'
@@ -292,6 +304,7 @@ export interface FileRouteTypes {
     | '/thank-you'
     | '/{-$locale}'
     | '/landing/executive-gift-set'
+    | '/landing/metal-gifts-wholesale'
     | '/landing/onboarding-gift-set'
     | '/markets/australia'
     | '/markets/new-zealand'
@@ -318,6 +331,7 @@ export interface RootRouteChildren {
   ThankYouRoute: typeof ThankYouRoute
   Char123LocaleChar125Route: typeof Char123LocaleChar125RouteWithChildren
   LandingExecutiveGiftSetRoute: typeof LandingExecutiveGiftSetRoute
+  LandingMetalGiftsWholesaleRoute: typeof LandingMetalGiftsWholesaleRoute
   LandingOnboardingGiftSetRoute: typeof LandingOnboardingGiftSetRoute
   MarketsAustraliaRoute: typeof MarketsAustraliaRoute
   MarketsNewZealandRoute: typeof MarketsNewZealandRoute
@@ -437,6 +451,13 @@ declare module '@tanstack/react-router' {
       path: '/landing/onboarding-gift-set'
       fullPath: '/landing/onboarding-gift-set'
       preLoaderRoute: typeof LandingOnboardingGiftSetRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/landing/metal-gifts-wholesale': {
+      id: '/landing/metal-gifts-wholesale'
+      path: '/landing/metal-gifts-wholesale'
+      fullPath: '/landing/metal-gifts-wholesale'
+      preLoaderRoute: typeof LandingMetalGiftsWholesaleRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/landing/executive-gift-set': {
@@ -559,6 +580,7 @@ const rootRouteChildren: RootRouteChildren = {
   ThankYouRoute: ThankYouRoute,
   Char123LocaleChar125Route: Char123LocaleChar125RouteWithChildren,
   LandingExecutiveGiftSetRoute: LandingExecutiveGiftSetRoute,
+  LandingMetalGiftsWholesaleRoute: LandingMetalGiftsWholesaleRoute,
   LandingOnboardingGiftSetRoute: LandingOnboardingGiftSetRoute,
   MarketsAustraliaRoute: MarketsAustraliaRoute,
   MarketsNewZealandRoute: MarketsNewZealandRoute,
