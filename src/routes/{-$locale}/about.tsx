@@ -30,7 +30,7 @@ function AboutPage() {
       <AboutHeroSection />
       <WhyUsSection />
 
-      {/* Why Metal-Only — specialist positioning */}
+      {/* Why Metal — specialist positioning */}
       <section style={{ borderTop: '1px solid var(--grid-color)', background: '#fff', padding: 'clamp(3rem, 6vw, 5rem) 2rem' }}>
         <div style={{ maxWidth: '780px', margin: '0 auto' }}>
           <p style={{ fontSize: '0.72rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: '#B87333', fontWeight: 600, marginBottom: '1.25rem' }}>

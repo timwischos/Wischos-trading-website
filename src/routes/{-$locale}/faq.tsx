@@ -13,6 +13,11 @@ const faqItems = [
       'Any combination from our catalog can be included — writing instruments, desk accessories, daily carry tools, and drinkware. Standard sets contain 3 items. Custom configurations with different quantities or product mix are available on request.',
   },
   {
+    question: 'Do you only supply metal products?',
+    answer:
+      'Metal is our specialty — every hero piece in our sets is brass, titanium, stainless steel, aluminium, or another engineered alloy, and every material claim is stated accurately. Set companions such as notebooks, printed cards, and custom packaging are sourced within the same program, so you brief one partner instead of three. What we don\'t supply: apparel, food gifts, and plastic promotional items.',
+  },
+  {
     question: 'Can I add our company logo to the products?',
     answer:
       'Yes. Both laser engraving (permanent, monochrome) and UV color printing are available. Logo placement, sizing, and method are confirmed during the sample stage before bulk production begins, so you approve the exact result before any quantity is made.',

@@ -41,19 +41,19 @@ export const siteMeta = {
   email: 'johnlui@wischosgift.com',
   defaultOgImage: 'https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_1200/products/WP-401-pure-titanium-vacuum-insulated-bottle/pure-titanium-vacuum-insulated-bottle-lifestyle',
   defaultTitle: 'Custom Metal Corporate Gifts & Promotional Sets | Brass · Titanium · Steel | Wischos Gift',
-  defaultDescription: 'Metal-only B2B custom corporate gift programs — brass, titanium, stainless steel, aluminium. Curated sets and individual SKUs for promotional distributors and corporate procurement. Custom logo engraving, MOQ 100, 25-35 day production from China.',
+  defaultDescription: 'Metal-first B2B custom corporate gift programs — brass, titanium, stainless steel, aluminium. Curated sets and individual SKUs for promotional distributors and corporate procurement. Custom logo engraving, MOQ 100, 25-35 day production from China.',
   routes: {
     home: {
       title: 'Custom Metal Corporate Gifts & Promotional Sets | Brass · Titanium · Steel | Wischos Gift',
-      description: 'Metal-only B2B custom corporate gift programs — brass, titanium, stainless steel, aluminium. Curated sets and individual SKUs for promotional distributors and corporate procurement. Custom logo engraving, MOQ 100, 25-35 day production from China.',
+      description: 'Metal-first B2B custom corporate gift programs — brass, titanium, stainless steel, aluminium. Curated sets and individual SKUs for promotional distributors and corporate procurement. Custom logo engraving, MOQ 100, 25-35 day production from China.',
     },
     products: {
       title: 'Custom Metal Corporate Gift Catalog — Brass · Titanium · Steel | Wischos Gift',
-      description: 'Browse our metal-only B2B catalog: executive brass pens, titanium drinkware, daily carry tools, desk accessories. Available as curated gift sets or individual SKUs. Custom logo engraving, hot-foil packaging, MOQ 100.',
+      description: 'Browse our metal-first B2B catalog: executive brass pens, titanium drinkware, daily carry tools, desk accessories. Available as curated gift sets or individual SKUs. Custom logo engraving, hot-foil packaging, MOQ 100.',
     },
     about: {
-      title: 'About Wischos Gift — Metal-Only Custom Corporate Gift Specialist',
-      description: 'Wischos Gift is a China-based metal-only specialist for custom corporate gift sets and promotional programs. Exclusively brass, titanium, stainless steel, and aluminium. B2B sourcing for distributors and procurement teams worldwide.',
+      title: 'About Wischos Gift — Custom Metal Corporate Gift Specialist',
+      description: 'Wischos Gift is a China-based metal specialist for custom corporate gift sets and promotional programs. Specialising in brass, titanium, stainless steel, and aluminium, with set companions and packaging sourced within the same program. B2B sourcing for distributors and procurement teams worldwide.',
     },
     contact: {
       title: 'Contact Wischos Gift',

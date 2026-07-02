@@ -277,7 +277,7 @@ export function QuickInquiryFormSection({
             🔒 We only contact you about your inquiry. No marketing emails.
           </p>
           <p style={{ marginBottom: 0 }}>
-            🏭 Metal-only B2B sourcing · MOQ 100 · 25–35 day production from China
+            🏭 Metal specialist B2B sourcing · MOQ 100 · 25–35 day production from China
           </p>
         </div>
       </form>

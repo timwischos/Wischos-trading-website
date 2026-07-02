@@ -42,7 +42,7 @@ export const giftSetPageContent: GiftSetPageContent = {
   keyTakeaways: [
     "For corporate procurement: pre-curated 3–4 piece metal gift sets with packaging — ready to gift, white-label, MOQ 100.",
     "For promotional distributors: individual metal SKUs and bulk programs — buy components, assemble at fulfillment, resell as your branded program.",
-    "Both audiences: custom logo engraving on every piece, China-sourced metal-only catalogue, 25–35 day production."
+    "Both audiences: custom logo engraving on every piece, China-sourced metal-led catalogue, 25–35 day production."
   ],
   comparisonRows: [
     {

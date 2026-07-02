@@ -145,7 +145,7 @@ function FeaturedPage() {
               Featured Gift Sets
             </h1>
             <p style={{ fontSize: '0.78rem', color: '#666', lineHeight: 1.65, marginTop: '1rem', maxWidth: '40ch' }}>
-              Our curated gift sets are starting points for building your own branded corporate gift set. Each set combines practical metal pieces with matched packaging, with room to adjust logo placement, finish, and box details to your brief.
+              Our curated gift sets are starting points for building your own branded corporate gift set. Each set combines practical metal pieces with matched packaging — and any component can be swapped, added, or dropped to fit your brief. Supporting pieces such as notebooks, cards, and packaging upgrades can be sourced within the same program.
             </p>
             <p style={{ fontSize: '0.76rem', color: '#666', lineHeight: 1.65, marginTop: '1.25rem', maxWidth: '40ch', borderLeft: '2px solid var(--accent-brand)', paddingLeft: '0.75rem' }}>
               Branding shown is illustrative. Every piece leaves the factory marked with your logo — engraved to your specification, not ours.

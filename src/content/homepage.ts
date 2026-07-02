@@ -1,6 +1,6 @@
 export const homepage = {
   hero: {
-    kicker: 'Custom Metal Gift Sets & Promotional Programs · China Sourcing · Metal-Only',
+    kicker: 'Custom Metal Gift Sets & Promotional Programs · China Sourcing · Metal Specialist',
     headline: 'Custom Metal Gift Sets your client will actually keep.',
     subheadline:
       'Across the metal family — brass, titanium, stainless steel, aluminium, and beyond — curated into sellable sets and individual SKUs for promotional distributor programs. Customized to your brief. 25–35 day production, one accountable contact.',
@@ -80,7 +80,7 @@ export const homepage = {
         label: 'S',
         title: 'Substantial',
         subtitle: 'Material Integrity',
-        body: "Every product is machined from the stated material — brass, titanium, aluminium, or stainless steel. We don't carry zinc-plated plastic, chrome-coated resin, or anything that impersonates metal at a distance and disappoints up close. If the spec says brass, the piece is brass.",
+        body: "Every metal piece is machined from the stated material — brass, titanium, aluminium, or stainless steel. We don't carry zinc-plated plastic, chrome-coated resin, or anything that impersonates metal at a distance and disappoints up close. If the spec says brass, the piece is brass.",
       },
       {
         label: 'C',

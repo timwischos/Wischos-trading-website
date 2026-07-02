@@ -34,6 +34,7 @@ public/wischos-logo.png
 # AI tool files
 .superpowers/
 .planning/
+.firecrawl/
 .codex
 GEMINI.md
 .dev_log
@@ -58,4 +59,4 @@ scripts/wgs_packaging_excel_build/
 
 # Catalogue / brochure PDFs
 *.pdf
-
+临时/
