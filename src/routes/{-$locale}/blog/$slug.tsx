@@ -184,7 +184,7 @@ export const Route = createFileRoute('/{-$locale}/blog/$slug')({
                   '@context': 'https://schema.org',
                   '@type': 'HowTo',
                   name: 'How to Check Metal Corporate Gift Quality Before Ordering',
-                  description: 'A 7-point quality checklist for buyers reviewing custom metal corporate gifts before approving production.',
+                  description: 'The Wischos Pre-Production Review: a 7-point quality framework for buyers reviewing custom metal corporate gifts before approving production.',
                   inLanguage: 'en',
                   totalTime: 'PT30M',
                   tool: [
@@ -1733,10 +1733,10 @@ function ArticleQualityChecklistContent() {
         <a href="https://www.ppai.org/media-hub/product-power-2026-what-consumers-want-next-2/" style={prose.inlineLink} target="_blank" rel="noopener noreferrer">PPAI's Product Power 2026 consumer study</a>, covering more than 5,000 U.S. respondents, found that nearly two-thirds are likely to keep a branded product for six months or longer, with durability, design, and material cited as primary reasons. That changes the quality calculation. A gift that looks impressive on delivery but feels hollow or scratched by week two is not doing anyone's brand any favors.
       </p>
       <p style={prose.p}>
-        At Wischos, the same issues show up in very ordinary places: the crown of a bolt-action pen, the thread on a titanium capsule bottle, the edge of an aluminium notebook cover, or the insert that is supposed to stop three metal pieces from touching inside a gift box. The seven checks below should happen before production is confirmed, not after.
+        At Wischos, the same issues show up in very ordinary places: the crown of a bolt-action pen, the thread on a titanium capsule bottle, the edge of an aluminium notebook cover, or the insert that is supposed to stop three metal pieces from touching inside a gift box. The seven checks below — what we call the Wischos Pre-Production Review — should happen before production is confirmed, not after.
       </p>
 
-      <h2 style={prose.h2}>The 7-Point Checklist at a Glance</h2>
+      <h2 style={prose.h2}>The Wischos Pre-Production Review: 7 Checks at a Glance</h2>
       <div style={{ overflowX: 'auto', marginBottom: '1.5rem' }}>
         <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.88rem' }}>
           <thead>
@@ -1766,7 +1766,7 @@ function ArticleQualityChecklistContent() {
         </table>
       </div>
       <p style={prose.p}>
-        This checklist covers buyer-side review before order approval. It is not a substitute for product testing, compliance review, or legal advice.
+        The Pre-Production Review covers buyer-side checks before order approval. It is not a substitute for product testing, compliance review, or legal advice.
       </p>
 
       <h2 style={prose.h2}>1. Confirm What Metal the Product Actually Uses</h2>
@@ -2080,7 +2080,7 @@ Decision:
 - Reject`}
       </pre>
 
-      <h2 style={prose.h2}>How Wischos Uses This Checklist</h2>
+      <h2 style={prose.h2}>How Wischos Applies the Pre-Production Review</h2>
       <p style={prose.p}>
         Wischos focuses on custom metal corporate gifts and metal-led gift sets: brass pens, aluminium desk tools, titanium drinkware, stainless steel carry pieces, key organizers, card cases, and related packaging.
       </p>
