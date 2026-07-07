@@ -173,19 +173,28 @@ const prose = {
 function ArticleImage({
   src,
   alt,
+  caption,
 }: {
   src: string
   alt: string
+  caption?: string
 }) {
   return (
-    <div style={{ margin: '1.25rem 0 1.75rem', borderRadius: '2px', overflow: 'hidden', aspectRatio: '16/7' }}>
-      <img
-        src={src}
-        alt={alt}
-        loading="lazy"
-        style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
-      />
-    </div>
+    <figure style={{ margin: '1.25rem 0 1.75rem' }}>
+      <div style={{ borderRadius: '2px', overflow: 'hidden', aspectRatio: '16/7' }}>
+        <img
+          src={src}
+          alt={alt}
+          loading="lazy"
+          style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+        />
+      </div>
+      {caption ? (
+        <figcaption style={{ marginTop: '0.55rem', color: '#666', fontSize: '0.86rem', lineHeight: 1.55 }}>
+          {caption}
+        </figcaption>
+      ) : null}
+    </figure>
   )
 }
 
@@ -1583,6 +1592,427 @@ Packaging expectation:`}
   )
 }
 
+function ArticleQualityChecklistContent() {
+  return (
+    <div style={prose.wrapper}>
+      <p style={prose.p}>
+        Every buyer has a version of this story.
+      </p>
+      <p style={prose.p}>
+        A sample looks clean. The material says "premium metal." The logo mockup looks sharp. You approve production. Three weeks before the client event, 500 units arrive, and the first box you open has pen clips that feel like they might snap, a logo so faint it is barely visible in normal light, and surface scratches from pieces rubbing each other in transit.
+      </p>
+      <p style={prose.p}>
+        None of that was visible in the photos.
+      </p>
+      <p style={prose.p}>
+        This is the structural problem with specifying metal gifts remotely. Studio lighting flatters polished surfaces. White backgrounds make items look heavier than they are. Digital mockups are always sharper than the real engraving. And "premium metal" could describe solid brass, plated zinc alloy, anodised aluminium, or plastic with a metallic coating. The phrase tells you almost nothing about what the recipient is actually holding.
+      </p>
+      <p style={prose.p}>
+        PPAI's Product Power 2026 consumer study, covering more than 5,000 U.S. respondents, found that nearly two-thirds are likely to keep a branded product for six months or longer, with durability, design, and material cited as primary reasons. That changes the quality calculation. A gift that looks impressive on delivery but feels hollow or scratched by week two is not doing anyone's brand any favors.
+      </p>
+      <p style={prose.p}>
+        At Wischos, the same issues show up in very ordinary places: the crown of a bolt-action pen, the thread on a titanium capsule bottle, the edge of an aluminium notebook cover, or the insert that is supposed to stop three metal pieces from touching inside a gift box. The seven checks below should happen before production is confirmed, not after.
+      </p>
+
+      <h2 style={prose.h2}>The 7-Point Checklist at a Glance</h2>
+      <div style={{ overflowX: 'auto', marginBottom: '1.5rem' }}>
+        <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.88rem' }}>
+          <thead>
+            <tr style={{ borderBottom: '2px solid #e0e0e0' }}>
+              <th style={{ textAlign: 'left', padding: '0.6rem 0.75rem', fontWeight: 600, color: '#1a1a1a' }}>Quality check</th>
+              <th style={{ textAlign: 'left', padding: '0.6rem 0.75rem', fontWeight: 600, color: '#1a1a1a' }}>What to inspect</th>
+              <th style={{ textAlign: 'left', padding: '0.6rem 0.75rem', fontWeight: 600, color: '#1a1a1a' }}>Why it matters</th>
+            </tr>
+          </thead>
+          <tbody>
+            {[
+              ['Material honesty', 'Actual metal, alloy, plating, grade', '"Premium metal" tells buyers nothing. The spec should.'],
+              ['Weight and balance', 'Hand feel, balance point, use case fit', "Heavy isn't always better. Wrong weight reduces daily use."],
+              ['Edges and seams', 'Burrs, corners, clip ends, hinge gaps', 'A sharp edge makes a premium gift feel unfinished.'],
+              ['Surface finish', 'Fingerprints, scratches, coating consistency', 'Mirror polish looks great in photos. Less so after a week in a pocket.'],
+              ['Logo result', 'Depth, contrast, readability, position', 'A strong product looks cheap with a muddy or oversized mark.'],
+              ['Moving parts', 'Click, slide, fold, thread, hinge', 'The mechanism is the first place quality is actually felt.'],
+              ['Packaging', 'Individual protection, abrasion prevention', 'Metal surfaces can be damaged before the recipient opens the box.'],
+            ].map(([check, inspect, why], i) => (
+              <tr key={check} style={{ borderBottom: '1px solid #f0f0f0', background: i % 2 ? '#fafafa' : 'white' }}>
+                <td style={{ padding: '0.6rem 0.75rem', color: '#1a1a1a', fontWeight: 600 }}>{check}</td>
+                <td style={{ padding: '0.6rem 0.75rem', color: '#3a3a3a' }}>{inspect}</td>
+                <td style={{ padding: '0.6rem 0.75rem', color: '#3a3a3a' }}>{why}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p style={prose.p}>
+        This checklist covers buyer-side review before order approval. It is not a substitute for product testing, compliance review, or legal advice.
+      </p>
+
+      <h2 style={prose.h2}>1. Confirm What Metal the Product Actually Uses</h2>
+      <ArticleImage
+        src="https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_1200/blog/blog-016/material-samples"
+        alt="Metal material and surface samples beside calipers and a magnifying loupe for buyer-side material review"
+        caption="AI-generated editorial visual: material and finish samples used to illustrate why buyers should ask what metal, plating or coating is actually being supplied."
+      />
+      <p style={prose.p}>
+        The first question to ask is not "does this look like metal?" It is "what is this actually made from?"
+      </p>
+      <p style={prose.p}>
+        In practice, "metal" covers a lot of ground:
+      </p>
+      <ul style={prose.ul}>
+        <li style={prose.li}>solid brass</li>
+        <li style={prose.li}>stainless steel, where the grade matters</li>
+        <li style={prose.li}>anodised aluminium</li>
+        <li style={prose.li}>titanium</li>
+        <li style={prose.li}>zinc alloy with plating</li>
+        <li style={prose.li}>steel or brass plating over another substrate</li>
+        <li style={prose.li}>plastic with a metallic coating</li>
+      </ul>
+      <p style={prose.p}>
+        None of these is automatically wrong for every project. Zinc alloy, for example, handles complex molded shapes well and is a reasonable choice for keyrings, tokens, and campaign pieces where custom geometry and cost control both matter. The problem is not the material. The problem is when the material is described vaguely while being positioned as something more substantial.
+      </p>
+      <p style={prose.p}>
+        A product listed as "premium metal" on a quote does not tell a buyer whether the recipient is getting solid brass or plated zinc. Ask the supplier to state it plainly:
+      </p>
+      <ul style={prose.ul}>
+        <li style={prose.li}>Is the main body solid metal, or plated over something else?</li>
+        <li style={prose.li}>If plated, what is the base material?</li>
+        <li style={prose.li}>If stainless steel, what grade?</li>
+        <li style={prose.li}>If aluminium, is the colour anodised, painted, or coated?</li>
+        <li style={prose.li}>If titanium, which component is titanium, and how is that claim verified?</li>
+        <li style={prose.li}>Are clips, rings, caps, or accessories made from a different material?</li>
+      </ul>
+      <p style={prose.p}>
+        These questions take ten minutes by email. Finding out the answers after delivery takes considerably longer.
+      </p>
+
+      <h2 style={prose.h2}>2. Does the Weight Make Sense for How It Will Be Used?</h2>
+      <p style={prose.p}>
+        Weight is one of the fastest shortcuts the brain uses to judge quality. Heavy usually reads as substantial and well-made.
+      </p>
+      <p style={prose.p}>
+        But it is not a simple "heavier is better" equation. A brass desk pen can carry real weight because it lives on a surface and gets picked up deliberately. A key organizer or card case needs to be light enough that someone actually keeps it in their pocket every day. A tumbler that feels impressively solid when empty becomes inconvenient to carry to a meeting when full.
+      </p>
+      <p style={prose.p}>
+        The question during sample review is not "is this heavy?" It is "is this the right weight for what it is supposed to do?"
+      </p>
+      <div style={{ overflowX: 'auto', marginBottom: '1.5rem' }}>
+        <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.88rem' }}>
+          <thead>
+            <tr style={{ borderBottom: '2px solid #e0e0e0' }}>
+              <th style={{ textAlign: 'left', padding: '0.6rem 0.75rem', fontWeight: 600, color: '#1a1a1a' }}>Product type</th>
+              <th style={{ textAlign: 'left', padding: '0.6rem 0.75rem', fontWeight: 600, color: '#1a1a1a' }}>Weight should feel</th>
+              <th style={{ textAlign: 'left', padding: '0.6rem 0.75rem', fontWeight: 600, color: '#1a1a1a' }}>Watch for</th>
+            </tr>
+          </thead>
+          <tbody>
+            {[
+              ['Desk pen', 'Stable, balanced, substantial in writing grip', 'Too heavy at tip or crown'],
+              ['Card case', 'Slim, firm, pocketable without bulk', 'Sharp corners, pocket drag'],
+              ['Key organizer', 'Dense enough to feel durable, light enough to carry daily', 'Stiff key movement, bulky ring'],
+              ['Device stand', 'Stable under tablet or phone load', 'Too light at the base'],
+              ['Bottle or tumbler', 'Premium when empty, usable when full', 'Great empty, tiring at full capacity'],
+              ['Letter opener or desk tool', 'Comfortable, not toy-like', 'Over-polished grip, slippery under use'],
+            ].map(([type, feel, watch], i) => (
+              <tr key={type} style={{ borderBottom: '1px solid #f0f0f0', background: i % 2 ? '#fafafa' : 'white' }}>
+                <td style={{ padding: '0.6rem 0.75rem', color: '#1a1a1a', fontWeight: 600 }}>{type}</td>
+                <td style={{ padding: '0.6rem 0.75rem', color: '#3a3a3a' }}>{feel}</td>
+                <td style={{ padding: '0.6rem 0.75rem', color: '#3a3a3a' }}>{watch}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p style={prose.p}>
+        If possible, record the sample weight in grams. It makes comparisons between samples more consistent than "this one feels heavier."
+      </p>
+
+      <h2 style={prose.h2}>3. Run Your Fingers Along Every Edge</h2>
+      <ArticleImage
+        src="https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_1200/blog/blog-016/mechanism-logo-inspection"
+        alt="Close-up of metal corporate gift samples including brass pen, card case, folding stand, key organizer and calipers for edge, logo and mechanism inspection"
+        caption="AI-generated editorial visual: close-up inspection context for edges, logo areas, hinges, slides and other touch points."
+      />
+      <p style={prose.p}>
+        If material honesty is the first check, edge finishing is where quality becomes undeniable.
+      </p>
+      <p style={prose.p}>
+        A product can use exactly the right material and still feel cheap if the edges are rough, seams are uneven, or corners have not been properly finished. For products that live in pockets, hands, or bags, such as pens, key tools, card cases, and bottle openers, these are not just aesthetic issues. Burrs and sharp corners affect daily comfort and, in some cases, safety.
+      </p>
+      <p style={prose.p}>
+        Check these points on every sample:
+      </p>
+      <ul style={prose.ul}>
+        <li style={prose.li}>edges on card cases, bookmarks, openers, and metal tags</li>
+        <li style={prose.li}>clip ends on pens, badge holders, and key tools</li>
+        <li style={prose.li}>hinge lines and fold points on stands, scissors, or multi-tools</li>
+        <li style={prose.li}>seams on bottles and tube-formed parts</li>
+        <li style={prose.li}>corners on aluminium, steel, or zinc alloy pieces</li>
+        <li style={prose.li}>logo edges after engraving, debossing, or stamping</li>
+        <li style={prose.li}>holes, rings, chain slots, and carabiner gates</li>
+      </ul>
+      <p style={prose.p}>
+        The test is simple: run a fingertip around the full perimeter. You are not trying to make every edge soft or rounded. Some products need clean geometric lines, and that is fine. You are looking for anything that would feel unfinished or uncomfortable in normal handling.
+      </p>
+      <p style={prose.p}>
+        Product safety requirements vary by market and audience. The U.S. Consumer Product Safety Commission notes that promotional product suppliers and distributors have legal responsibilities under federal safety laws, particularly for products or decoration aimed at children 12 and under. Most executive desk gifts are not in that category, but the underlying principle applies regardless: who handles this, and how, should inform where you look.
+      </p>
+
+      <h2 style={prose.h2}>4. Pick a Surface Finish That Survives a Pocket</h2>
+      <p style={prose.p}>
+        Studio photos are a bad surface-finish test.
+      </p>
+      <p style={prose.p}>
+        Under controlled lighting, mirror polish looks extraordinary. After a week of daily carry, it looks like someone's thumbprint collection. The finish you choose determines how the gift looks after normal use, not how it looks in the sample photo.
+      </p>
+      <ul style={prose.ul}>
+        <li style={prose.li}><strong style={prose.strong}>Mirror polish</strong> catches light beautifully and signals effort. It also shows every fingerprint and fine scratch.</li>
+        <li style={prose.li}><strong style={prose.strong}>Brushed and matte finishes</strong> are more forgiving. Minor contact leaves less visible marks, which makes them better for pens, card cases, and daily-carry pieces.</li>
+        <li style={prose.li}><strong style={prose.strong}>Bead-blasted surfaces</strong> work similarly: the texture hides micro-damage that would be obvious on a smooth finish.</li>
+        <li style={prose.li}><strong style={prose.strong}>Anodised aluminium</strong> delivers stable colour when the process is well controlled. Quality varies between suppliers more than the spec sheet suggests.</li>
+        <li style={prose.li}><strong style={prose.strong}>PVD</strong> can create a premium dark or tonal look on the right metal substrate, but it depends on base material, process control, and real use.</li>
+      </ul>
+      <p style={prose.p}>
+        For coated, plated, or painted products going to EU markets, REACH is the relevant chemical regulation framework, and ECHA maintains the applicable legislation and substance restriction information. In practice, this means asking the supplier whether the finish has been tested against relevant substance lists for the destination market.
+      </p>
+
+      <h2 style={prose.h2}>5. Approve the Real Logo, Not the Mockup</h2>
+      <p style={prose.p}>
+        A digital mockup is always cleaner than the actual result. Mockups do not account for surface texture, engraving depth, the exact angle of a laser head, or what small text does when it is physically cut into metal.
+      </p>
+      <p style={prose.p}>
+        The same logo can produce very different outcomes depending on material, finish, surface shape, mark size, and method. A mark that reads cleanly on flat matte aluminium may disappear into the texture of brushed stainless or get lost in the reflections of polished brass. Curved surfaces shrink usable marking area and distort print registration. Laser engraving, screen print, enamel fill, debossing, and pad print all behave differently.
+      </p>
+      <p style={prose.p}>
+        Before approving production, get the size confirmed in millimetres, not just "small" or "large." Confirm exact placement on the product. If the project includes multiple items in a gift set, check each piece separately. The right logo size for a pen is not the right logo size for a bottle or card case.
+      </p>
+      <p style={prose.p}>
+        Laser engraving is usually the right call for metal gifts. It creates a permanent mark without adding an ink layer, and it ages well over years of handling. But exact Pantone colours, gradients, very fine illustration detail, or high-visibility event branding may need a different approach.
+      </p>
+      <p style={prose.p}>
+        The safest approval is the least glamorous one: the real mark on the real surface, checked before production is confirmed.
+      </p>
+
+      <h2 style={prose.h2}>6. Click It, Fold It, Slide It — Then Do It Again</h2>
+      <p style={prose.p}>
+        The first time someone uses a metal gift, they are not admiring the surface finish. They are feeling whether the mechanism works.
+      </p>
+      <p style={prose.p}>
+        For a bolt-action pen, that is the click. For a folding stand, the hinge. For a card case, the slide or spring release. For a key organizer, the movement of the keys. For a bottle, the cap thread. For folding scissors, the open-close resistance.
+      </p>
+      <p style={prose.p}>
+        During sample review, test:
+      </p>
+      <ul style={prose.ul}>
+        <li style={prose.li}><strong style={prose.strong}>Pens:</strong> click, twist, and cap action.</li>
+        <li style={prose.li}><strong style={prose.strong}>Threads:</strong> smooth engagement on bottles and capsule containers.</li>
+        <li style={prose.li}><strong style={prose.strong}>Hinges:</strong> consistent resistance on stands, scissors, and multi-tools.</li>
+        <li style={prose.li}><strong style={prose.strong}>Springs and slides:</strong> clean return action on card cases.</li>
+        <li style={prose.li}><strong style={prose.strong}>Clip tension:</strong> firm without being hard to use.</li>
+        <li style={prose.li}><strong style={prose.strong}>Rings and gates:</strong> smooth, positive engagement.</li>
+      </ul>
+      <p style={prose.p}>
+        Do not test it once. Open and close it. Click it repeatedly. Slide it back and forth. You are not running a lifecycle test; you are checking whether the product still feels controlled after the kind of use it will see in its first month.
+      </p>
+
+      <h2 style={prose.h2}>7. Packaging That Protects Before the Recipient Ever Sees It</h2>
+      <ArticleImage
+        src="https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_1200/blog/blog-016/protective-packaging"
+        alt="Open rigid gift box with separated metal gift items held in a fitted protective insert"
+        caption="AI-generated editorial visual: protective gift-set packaging with separated metal pieces to illustrate metal-on-metal abrasion control."
+      />
+      <p style={prose.p}>
+        Most metal gift damage happens in transit, not in production.
+      </p>
+      <p style={prose.p}>
+        A polished pen rubs against a card case. A bottle shifts inside a loose carton. A keyring scratches a fine surface finish. A heavier item compresses weak padding from underneath. The recipient opens what was supposed to be a premium gift and finds scuffs before they have even used the product. The packaging failed, not the factory.
+      </p>
+      <p style={prose.p}>
+        For sample review, the packaging should be treated as a product in its own right:
+      </p>
+      <ul style={prose.ul}>
+        <li style={prose.li}>Does every item have its own recess, sleeve, or bag?</li>
+        <li style={prose.li}>Can parts touch or rub during shipping?</li>
+        <li style={prose.li}>Is the insert material soft enough not to mark finished metal surfaces?</li>
+        <li style={prose.li}>Is the box structurally solid enough for the packed weight?</li>
+        <li style={prose.li}>Does the packaging volume fit the shipping cost assumptions in the budget?</li>
+        <li style={prose.li}>Does the outer export carton handle the final packed weight without folding?</li>
+      </ul>
+      <p style={prose.p}>
+        One practical test: pack the sample in its intended packaging, shake it for ten seconds, then open it. If anything has shifted or you can hear parts moving, the packaging is not finished.
+      </p>
+
+      <h2 style={prose.h2}>When You Need More Than a Visual Check</h2>
+      <p style={prose.p}>
+        Everything above is buyer-side quality review: visual inspection and hands-on sample assessment. Some projects need more.
+      </p>
+      <p style={prose.p}>
+        The relevant factors are destination market, product type, intended audience, decoration method, material, and any specific claims the product makes. An executive desk gift for a corporate client is a different compliance category from a drinkware product, a child-facing campaign piece, or anything making sustainability, food-contact, recycled-content, or RFID claims.
+      </p>
+      <div style={{ overflowX: 'auto', marginBottom: '1.5rem' }}>
+        <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.88rem' }}>
+          <thead>
+            <tr style={{ borderBottom: '2px solid #e0e0e0' }}>
+              <th style={{ textAlign: 'left', padding: '0.6rem 0.75rem', fontWeight: 600, color: '#1a1a1a' }}>If the project involves...</th>
+              <th style={{ textAlign: 'left', padding: '0.6rem 0.75rem', fontWeight: 600, color: '#1a1a1a' }}>Ask before production</th>
+            </tr>
+          </thead>
+          <tbody>
+            {[
+              ['Children or artwork likely to attract children', "Does it become a children's product? What testing does that require?"],
+              ['Drinkware or food-contact surfaces', 'What material, lining, coating, and destination-specific rules apply?'],
+              ['Coating, plating, paint, or ink', 'Are substance restrictions relevant in the destination market?'],
+              ['Electronics or batteries', 'Does it trigger electrical, battery, transport, or labeling requirements?'],
+              ['Sustainability claims', 'What documentation supports the claim?'],
+              ['Titanium, stainless grade, recycled content, or RFID', 'How is the claim verified by the supplier?'],
+              ['EU shipment', 'Who is the importer of record / responsible economic operator, and what documents are required?'],
+              ['U.S. shipment', 'What CPSC rules, testing obligations, or reporting duties apply?'],
+            ].map(([factor, ask], i) => (
+              <tr key={factor} style={{ borderBottom: '1px solid #f0f0f0', background: i % 2 ? '#fafafa' : 'white' }}>
+                <td style={{ padding: '0.6rem 0.75rem', color: '#1a1a1a', fontWeight: 600 }}>{factor}</td>
+                <td style={{ padding: '0.6rem 0.75rem', color: '#3a3a3a' }}>{ask}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p style={prose.p}>
+        For U.S. markets, CPSC publishes guidance specifically for promotional product suppliers and distributors on federal consumer safety law. For EU markets, the General Product Safety Regulation sets the baseline framework. For substance restrictions in the EU, ECHA is the reference point for REACH legislation and chemical restrictions.
+      </p>
+      <p style={prose.p}>
+        ISO 9001 certification can support supplier evaluation, but it is not proof that a specific sample is acceptable. It means the supplier has a documented quality management system, not that every product coming off their line will pass your review.
+      </p>
+
+      <h2 style={prose.h2}>Sample Approval Worksheet</h2>
+      <p style={prose.p}>
+        Use this worksheet when reviewing a custom metal corporate gift sample:
+      </p>
+      <pre style={{
+        background: '#f7f4f1',
+        border: '1px solid #e8ddd3',
+        borderRadius: '2px',
+        padding: '1rem',
+        overflowX: 'auto',
+        fontSize: '0.86rem',
+        lineHeight: 1.7,
+        color: '#2a2a2a',
+        marginBottom: '1.35rem',
+      }}>
+{`Project:
+Recipient:
+Destination market:
+Quantity:
+Target budget:
+Required in-hands date:
+
+1. Material
+- Supplier-stated material:
+- Plated/coated/solid:
+- Parts made from other materials:
+- Claim needs verification? Yes / No
+
+2. Weight and hand feel
+- Sample weight:
+- Balanced for use case? Yes / No
+- Too heavy / too light / acceptable:
+
+3. Edges and construction
+- Burrs or sharp corners:
+- Gaps, seams or misalignment:
+- Touch points comfortable? Yes / No
+
+4. Surface finish
+- Finish type:
+- Fingerprints visible? Yes / No
+- Scratch risk acceptable? Yes / No
+- Color or coating consistent? Yes / No
+
+5. Logo
+- Method:
+- Size:
+- Position:
+- Contrast/readability:
+- Approved on real sample? Yes / No
+
+6. Mechanism or interaction
+- Click / hinge / slide / thread / clip tested:
+- Repeated handling result:
+- Noise or looseness:
+
+7. Packaging
+- Individual protection:
+- Items separated:
+- Box strength:
+- Shipping abrasion risk:
+
+8. Documentation and compliance
+- Destination rules checked:
+- Testing needed:
+- Material or claim documents needed:
+- Importer/distributor responsibilities clarified:
+
+Decision:
+- Approve
+- Approve with changes
+- Re-sample required
+- Reject`}
+      </pre>
+
+      <h2 style={prose.h2}>How Wischos Uses This Checklist</h2>
+      <p style={prose.p}>
+        Wischos focuses on custom metal corporate gifts and metal-led gift sets: brass pens, aluminium desk tools, titanium drinkware, stainless steel carry pieces, key organizers, card cases, and related packaging.
+      </p>
+      <p style={prose.p}>
+        When reviewing a project, we look at the metal item as a complete buyer decision: material claim, use case, logo method, surface finish, packaging route, production timeline, and destination requirements.
+      </p>
+      <p style={prose.p}>
+        For distributors and gifting agencies, this helps turn a vague client request such as "premium metal gift" into a product route that can be quoted, sampled, branded, packed, and delivered.
+      </p>
+      <div style={prose.callout}>
+        Reviewing a metal gift idea?{' '}
+        <Link to={'/contact' as RouterTo} style={prose.inlineLink}>Send the product reference, quantity range, target budget, logo requirement, packaging expectation, and destination country</Link>.
+        We can help identify whether the project is better suited to an existing product family, semi-custom option, curated gift set, or more developed custom metal project.
+      </div>
+
+      <h2 style={prose.h2}>Frequently Asked Questions</h2>
+      <p style={{ ...prose.p, fontWeight: 600, color: '#1a1a1a', marginBottom: '0.4rem' }}>What is the most important quality check for metal corporate gifts?</p>
+      <p style={prose.p}>The first check is material honesty. Buyers should know whether the item is solid brass, stainless steel, aluminium, titanium, zinc alloy, plated metal, or coated plastic. Once the real material is clear, weight, finish, logo method, and packaging can be judged properly.</p>
+      <p style={{ ...prose.p, fontWeight: 600, color: '#1a1a1a', marginBottom: '0.4rem' }}>Does heavier always mean better for metal gifts?</p>
+      <p style={prose.p}>No. Weight should match the use case. A desk pen or letter opener may benefit from a substantial feel, but a key organizer, card case, or travel item can become inconvenient if it is too heavy. Good metal gift quality is about balance, not maximum weight.</p>
+      <p style={{ ...prose.p, fontWeight: 600, color: '#1a1a1a', marginBottom: '0.4rem' }}>Is laser engraving always the best logo method for metal gifts?</p>
+      <p style={prose.p}>Laser engraving is often strong for metal because it creates a durable mark without an added ink layer. It is not always best for exact brand colours, gradients, very small text, or high-visibility event branding. Buyers should approve the real mark on the real surface.</p>
+      <p style={{ ...prose.p, fontWeight: 600, color: '#1a1a1a', marginBottom: '0.4rem' }}>What surface finish is safest for daily-use metal gifts?</p>
+      <p style={prose.p}>For daily handling, brushed, matte, and bead-blasted finishes are usually more forgiving than mirror polish because they hide fingerprints and micro-scratches better. The right finish still depends on material, product shape, logo method, and whether the item is used on a desk, in a pocket, or with drinkware.</p>
+      <p style={{ ...prose.p, fontWeight: 600, color: '#1a1a1a', marginBottom: '0.4rem' }}>When should a metal corporate gift be tested?</p>
+      <p style={prose.p}>Testing should be considered when the product touches food or drink, may appeal to children, contains coatings or inks, includes electronics, makes sustainability or material claims, or ships to a market with specific safety and substance rules. Visual inspection alone is not enough for those cases.</p>
+      <p style={{ ...prose.p, fontWeight: 600, color: '#1a1a1a', marginBottom: '0.4rem' }}>What should I ask a supplier before ordering custom metal gifts?</p>
+      <p style={prose.p}>Ask for the material, finish, logo method, sample weight, MOQ, packaging route, production time, destination assumptions, and any testing or documentation needed. Also ask whether the sample you approve will match the mass-production process.</p>
+
+      <h2 style={prose.h2}>Related Reading</h2>
+      <ul style={prose.ul}>
+        <li style={prose.li}><Link to={'/blog/metal-surface-finishes-corporate-gifts' as RouterTo} style={prose.inlineLink}>Surface Finishes for Metal Corporate Gifts</Link></li>
+        <li style={prose.li}><Link to={'/blog/laser-engraving-vs-color-printing-corporate-gifts' as RouterTo} style={prose.inlineLink}>Laser Engraving vs. Color Printing</Link></li>
+        <li style={prose.li}><Link to={'/blog/what-we-need-to-review-a-custom-metal-gift-project' as RouterTo} style={prose.inlineLink}>What We Need to Review a Custom Metal Gift Project</Link></li>
+        <li style={prose.li}><Link to={'/gift-sets' as RouterTo} style={prose.inlineLink}>Custom Metal Gift Sets</Link></li>
+        <li style={prose.li}><Link to={'/for-distributors' as RouterTo} style={prose.inlineLink}>For Distributors</Link></li>
+      </ul>
+
+      <h2 style={prose.h2}>Sources</h2>
+      <ul style={prose.ul}>
+        <li style={prose.li}><a href="https://www.ppai.org/media-hub/product-power-2026-what-consumers-want-next-2/" style={prose.inlineLink}>PPAI, Product Power 2026: What Consumers Want Next</a></li>
+        <li style={prose.li}><a href="https://www.cpsc.gov/FAQ/Promotional-Products" style={prose.inlineLink}>U.S. Consumer Product Safety Commission, Promotional Products FAQ</a></li>
+        <li style={prose.li}><a href="https://www.cpsc.gov/Business--Manufacturing/Business-Education" style={prose.inlineLink}>U.S. Consumer Product Safety Commission, Business Education</a></li>
+        <li style={prose.li}><a href="https://commission.europa.eu/topics/business-and-industry/doing-business-eu/eu-product-safety-and-labelling/product-safety_en" style={prose.inlineLink}>European Commission, Product Safety</a></li>
+        <li style={prose.li}><a href="https://echa.europa.eu/legislation" style={prose.inlineLink}>ECHA, Legislation</a></li>
+        <li style={prose.li}><a href="https://www.iso.org/standards/popular/iso-9000-family" style={prose.inlineLink}>ISO, ISO 9000 family / quality management</a></li>
+      </ul>
+      <p style={{ ...prose.p, fontSize: '0.82rem', color: '#777' }}>
+        Image note: the visuals in this article are AI-generated editorial images created for explanation. They should not be read as Wischos production samples, QC evidence, or photographs from a specific customer project.
+      </p>
+    </div>
+  )
+}
+
 const articleContent: Record<string, () => React.JSX.Element> = {
   'aluminum-brass-steel-titanium-corporate-gifts': Article1Content,
   'laser-engraving-vs-color-printing-corporate-gifts': Article2Content,
@@ -1593,6 +2023,7 @@ const articleContent: Record<string, () => React.JSX.Element> = {
   'metal-surface-finishes-corporate-gifts': Article8Content,
   'standard-catalogue-to-custom-metal-projects': ArticleStandardCatalogueContent,
   'what-we-need-to-review-a-custom-metal-gift-project': ArticleProjectReviewContent,
+  'metal-corporate-gift-quality-checklist': ArticleQualityChecklistContent,
 }
 
 // ─── Page component ───────────────────────────────────────────────────────────

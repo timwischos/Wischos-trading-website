@@ -182,4 +182,22 @@ export const blogPosts: BlogPost[] = [
     heroImageAlt: 'Custom metal gift project review desk with metal samples, packaging, calendar and sourcing notes',
     heroImageCredit: 'Wischos Gift',
   },
+  {
+    slug: 'metal-corporate-gift-quality-checklist',
+    title: 'Metal Corporate Gift Quality Checklist: What Buyers Should Check Before Ordering',
+    metaTitle: 'Metal Corporate Gift Quality Checklist for Buyers',
+    metaDescription:
+      'A practical metal corporate gift quality checklist for buyers: material, weight, edges, finish, logo, moving parts, packaging and compliance.',
+    excerpt:
+      'Photos and mockups hide the details that decide whether a metal corporate gift feels premium in hand. Use this checklist before approving production.',
+    quickAnswer:
+      'A good metal corporate gift should pass seven checks before production approval: honest material description, appropriate weight, clean edges, durable finish, readable logo, reliable moving parts, and packaging that prevents metal-on-metal damage in transit.',
+    category: 'Quality Control',
+    readTime: '8 min read',
+    publishedAt: 'July 7, 2026',
+    isoDate: '2026-07-07',
+    heroImage: 'https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_1200/blog/blog-016/hero-quality-checklist',
+    heroImageAlt: 'Quality-control desk with metal corporate gift samples, calipers, inspection gloves and protective gift-box insert',
+    heroImageCredit: 'AI-generated editorial visual for Wischos Gift',
+  },
 ]
