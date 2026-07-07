@@ -118,6 +118,128 @@ export const Route = createFileRoute('/{-$locale}/blog/$slug')({
               }),
             }]
           : []),
+        // FAQPage + HowTo schema for the quality checklist article
+        ...(post.slug === 'metal-corporate-gift-quality-checklist'
+          ? [
+              {
+                type: 'application/ld+json',
+                children: JSON.stringify({
+                  '@context': 'https://schema.org',
+                  '@type': 'FAQPage',
+                  mainEntity: [
+                    {
+                      '@type': 'Question',
+                      name: 'What is the most important quality check for metal corporate gifts?',
+                      acceptedAnswer: {
+                        '@type': 'Answer',
+                        text: 'The first check is material honesty. Buyers should know whether the item is solid brass, stainless steel, aluminium, titanium, zinc alloy, plated metal, or coated plastic. Once the real material is clear, weight, finish, logo method, and packaging can be judged properly.',
+                      },
+                    },
+                    {
+                      '@type': 'Question',
+                      name: 'Does heavier always mean better for metal gifts?',
+                      acceptedAnswer: {
+                        '@type': 'Answer',
+                        text: 'No. Weight should match the use case. A desk pen or letter opener may benefit from a substantial feel, but a key organizer, card case, or travel item can become inconvenient if it is too heavy. Good metal gift quality is about balance, not maximum weight.',
+                      },
+                    },
+                    {
+                      '@type': 'Question',
+                      name: 'Is laser engraving always the best logo method for metal gifts?',
+                      acceptedAnswer: {
+                        '@type': 'Answer',
+                        text: 'Laser engraving is often strong for metal because it creates a durable mark without an added ink layer. It is not always best for exact brand colours, gradients, very small text, or high-visibility event branding. Buyers should approve the real mark on the real surface.',
+                      },
+                    },
+                    {
+                      '@type': 'Question',
+                      name: 'What surface finish is safest for daily-use metal gifts?',
+                      acceptedAnswer: {
+                        '@type': 'Answer',
+                        text: 'For daily handling, brushed, matte, and bead-blasted finishes are usually more forgiving than mirror polish because they hide fingerprints and micro-scratches better. The right finish depends on material, product shape, logo method, and whether the item is used on a desk, in a pocket, or with drinkware.',
+                      },
+                    },
+                    {
+                      '@type': 'Question',
+                      name: 'When should a metal corporate gift be tested?',
+                      acceptedAnswer: {
+                        '@type': 'Answer',
+                        text: 'Testing should be considered when the product touches food or drink, may appeal to children, contains coatings or inks, includes electronics, makes sustainability or material claims, or ships to a market with specific safety and substance rules. Visual inspection alone is not enough for those cases.',
+                      },
+                    },
+                    {
+                      '@type': 'Question',
+                      name: 'What should I ask a supplier before ordering custom metal gifts?',
+                      acceptedAnswer: {
+                        '@type': 'Answer',
+                        text: 'Ask for the material, finish, logo method, sample weight, MOQ, packaging route, production time, destination assumptions, and any testing or documentation needed. Also ask whether the sample you approve will match the mass-production process.',
+                      },
+                    },
+                  ],
+                }),
+              },
+              {
+                type: 'application/ld+json',
+                children: JSON.stringify({
+                  '@context': 'https://schema.org',
+                  '@type': 'HowTo',
+                  name: 'How to Check Metal Corporate Gift Quality Before Ordering',
+                  description: 'A 7-point quality checklist for buyers reviewing custom metal corporate gifts before approving production.',
+                  inLanguage: 'en',
+                  totalTime: 'PT30M',
+                  tool: [
+                    { '@type': 'HowToTool', name: 'Physical sample' },
+                    { '@type': 'HowToTool', name: 'Scale or weight measurement' },
+                    { '@type': 'HowToTool', name: 'Sample approval worksheet' },
+                  ],
+                  step: [
+                    {
+                      '@type': 'HowToStep',
+                      position: 1,
+                      name: 'Confirm what metal the product actually uses',
+                      text: 'Ask the supplier to state the material plainly in the quote: is the main body solid metal or plated? If plated, what is the base material? If stainless steel, what grade? If aluminium, is the colour anodised, painted, or coated? If titanium, which component and how is that verified?',
+                    },
+                    {
+                      '@type': 'HowToStep',
+                      position: 2,
+                      name: 'Check whether the weight fits the use case',
+                      text: 'Handle the sample and ask whether the weight suits the intended use. Record the sample weight in grams. A desk pen can carry real weight; a daily-carry key organizer or card case should be light enough that recipients keep it on them.',
+                    },
+                    {
+                      '@type': 'HowToStep',
+                      position: 3,
+                      name: 'Run your fingers along every edge',
+                      text: 'Run a fingertip around the full perimeter of the sample. Check edges on card cases, clip ends, hinge lines, seams on bottles, corners, logo edges after engraving, and holes or ring slots. Look for anything that feels unfinished or uncomfortable.',
+                    },
+                    {
+                      '@type': 'HowToStep',
+                      position: 4,
+                      name: 'Match the surface finish to real use',
+                      text: 'Handle the sample for a few minutes and check for fingerprints, coating consistency at edges and recesses, and whether the finish suits the use case. Mirror polish shows wear quickly under pocket carry; brushed and matte finishes are more forgiving.',
+                    },
+                    {
+                      '@type': 'HowToStep',
+                      position: 5,
+                      name: 'Approve the real logo on the real surface',
+                      text: 'Confirm logo size in millimetres and exact placement. Request a pre-production sample or engraving test on the actual surface and material. If the project is a gift set, check every item in the set separately.',
+                    },
+                    {
+                      '@type': 'HowToStep',
+                      position: 6,
+                      name: 'Test every moving part repeatedly',
+                      text: 'Click, fold, slide, or thread the mechanism repeatedly — not just once. Check pens for click or twist action, bottles for thread smoothness, hinges for consistent resistance, card cases for spring return, and clips for appropriate tension.',
+                    },
+                    {
+                      '@type': 'HowToStep',
+                      position: 7,
+                      name: 'Verify packaging prevents metal-on-metal damage',
+                      text: 'Pack the sample in its intended packaging, shake it for ten seconds, and open it. If anything has shifted or you can hear parts moving, the packaging is not finished. Check that each item has its own recess, sleeve, or separator.',
+                    },
+                  ],
+                }),
+              },
+            ]
+          : []),
       ],
     }
   },
@@ -1608,7 +1730,7 @@ function ArticleQualityChecklistContent() {
         This is the structural problem with specifying metal gifts remotely. Studio lighting flatters polished surfaces. White backgrounds make items look heavier than they are. Digital mockups are always sharper than the real engraving. And "premium metal" could describe solid brass, plated zinc alloy, anodised aluminium, or plastic with a metallic coating. The phrase tells you almost nothing about what the recipient is actually holding.
       </p>
       <p style={prose.p}>
-        PPAI's Product Power 2026 consumer study, covering more than 5,000 U.S. respondents, found that nearly two-thirds are likely to keep a branded product for six months or longer, with durability, design, and material cited as primary reasons. That changes the quality calculation. A gift that looks impressive on delivery but feels hollow or scratched by week two is not doing anyone's brand any favors.
+        <a href="https://www.ppai.org/media-hub/product-power-2026-what-consumers-want-next-2/" style={prose.inlineLink} target="_blank" rel="noopener noreferrer">PPAI's Product Power 2026 consumer study</a>, covering more than 5,000 U.S. respondents, found that nearly two-thirds are likely to keep a branded product for six months or longer, with durability, design, and material cited as primary reasons. That changes the quality calculation. A gift that looks impressive on delivery but feels hollow or scratched by week two is not doing anyone's brand any favors.
       </p>
       <p style={prose.p}>
         At Wischos, the same issues show up in very ordinary places: the crown of a bolt-action pen, the thread on a titanium capsule bottle, the edge of an aluminium notebook cover, or the insert that is supposed to stop three metal pieces from touching inside a gift box. The seven checks below should happen before production is confirmed, not after.
