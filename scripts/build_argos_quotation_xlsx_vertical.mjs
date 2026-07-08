@@ -292,7 +292,7 @@ setWidths(sheet);
 
 style(sheet.getRange("A1:L92"), { fill: palette.paper, size: 10, borders: undefined });
 
-merge(sheet, "A1:F3", "Wischos Gift\nChina-based sourcing partner for custom metal corporate gift sets\nwischosgift.com | inquiries@wischosgift.com");
+merge(sheet, "A1:F3", "Wischos Gift\nChina-based sourcing partner for custom metal corporate gift sets\nwischosgift.com | johnlui@wischosgift.com");
 style(sheet.getRange("A1:F3"), { fill: palette.paper, bold: true, size: 12, valign: "top" });
 sheet.getRange("A1").format.font = { name: "Arial", size: 16, color: palette.ink, bold: true };
 
@@ -354,7 +354,7 @@ style(sheet.getRange("A81:L81"), { fill: palette.line, borders: undefined });
 setRowHeight(sheet, 81, 3);
 merge(sheet, "A83:F85", "Wischos Gift Trading Co.\nCustom metal gift set sourcing and set development from China.");
 style(sheet.getRange("A83:F85"), { fill: palette.paper, size: 10, color: palette.ink, valign: "top" });
-merge(sheet, "H83:L85", "wischosgift.com\ninquiries@wischosgift.com");
+merge(sheet, "H83:L85", "wischosgift.com\njohnlui@wischosgift.com");
 style(sheet.getRange("H83:L85"), { fill: palette.paper, size: 10, color: palette.ink, align: "right", valign: "top" });
 setRows(sheet, 83, 85, 20);
 

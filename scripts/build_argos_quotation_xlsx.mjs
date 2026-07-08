@@ -119,7 +119,7 @@ quote.getRange("A4:B8").values = [
   ["Date", "2 June 2026"],
   ["Prepared for", "Argos Promo, New Zealand"],
   ["Validity", "14 days, subject to freight space"],
-  ["Contact", "inquiries@wischosgift.com"],
+  ["Contact", "johnlui@wischosgift.com"],
 ];
 quote.getRange("D4:E8").values = [
   ["Quantity basis", "100 sets per design"],

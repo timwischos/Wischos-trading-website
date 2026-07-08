@@ -170,7 +170,7 @@ def build() -> None:
                 [
                     p("WISCHOS GIFT", "Brand"),
                     p("China-based sourcing partner for custom metal corporate gift sets", "Muted"),
-                    p("wischosgift.com | inquiries@wischosgift.com", "Muted"),
+                    p("wischosgift.com | johnlui@wischosgift.com", "Muted"),
                 ],
                 [
                     p("<b>Quotation No.</b> WG-ARGOS-20260602-01", "QuoteMeta"),
@@ -472,7 +472,7 @@ def build() -> None:
     story.append(
         p(
             "<b>Wischos Gift Trading Co.</b><br/>Custom metal gift set sourcing and set development from China.<br/>"
-            "wischosgift.com | inquiries@wischosgift.com",
+            "wischosgift.com | johnlui@wischosgift.com",
             "Muted",
         )
     )

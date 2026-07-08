@@ -26,10 +26,17 @@ async function main() {
       description:
         'Bring precision to your daily document management with this aircraft-inspired letter opener. Designed for the modern executive desk, this tool combines a solid, weighted presence with a clever mechanical twist. The integrated bearing propeller is a high-quality interaction point that reflects a professional and organized workspace — not just a design choice, but a genuinely satisfying mechanism.\n\nUnlike flimsy plastic openers or thin sheet-metal blades, this zinc alloy tool is built for long-term reliability. The matte brushed electroplated surface provides a refined, fingerprint-resistant texture that complements modern office aesthetics — understated and professional without the glare of high-gloss alternatives. A reliable replacement for office disposables, perfect for professionals who value both form and function.',
       specifications: [
-        { label: 'Dimensions', value: '187mm × 19mm × 4mm' },
-        { label: 'Net Weight', value: '85g' },
-        { label: 'Material', value: 'Zinc Alloy' },
-        { label: 'Surface Finish', value: 'Matte Brushed Electroplating (Silver)' },
+        { label: 'Material', value: 'Zinc alloy' },
+        { label: 'Mechanism', value: 'Bearing-mounted spinning propeller' },
+        { label: 'Surface finish', value: 'Matte brushed electroplating (silver)' },
+        { label: 'Net weight', value: 'Approx. 85g' },
+        { label: 'Blade dimensions', value: '187 × 19 × 4mm' },
+        { label: 'Overall envelope (with propeller hub)', value: 'Approx. 190 × 24.5 × 21mm' },
+        { label: 'Single-piece packed weight', value: 'Approx. 90g' },
+        { label: 'Single-piece packed volume', value: 'Approx. 73 cm³' },
+        { label: 'Function', value: 'Letter and envelope opening' },
+        { label: 'Use context', value: 'Desk, office, conference gift' },
+        { label: 'Branding method', value: 'Laser marking on blade or hub by production spec' },
       ],
       faqs: [
         {
