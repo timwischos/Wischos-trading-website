@@ -69,6 +69,11 @@ export const Route = createFileRoute('/{-$locale}/products/$productId')({
             category: product.category,
             brand: { '@type': 'Brand', name: siteMeta.siteName },
             manufacturer: { '@type': 'Organization', name: siteMeta.legalName },
+            offers: {
+              '@type': 'Offer',
+              availability: 'https://schema.org/InStock',
+              seller: { '@type': 'Organization', name: siteMeta.siteName },
+            },
             ...(product.specifications?.length
               ? {
                   additionalProperty: product.specifications.map((spec: { label: string; value: string }) => ({

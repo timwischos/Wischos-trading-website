@@ -1294,7 +1294,7 @@ function ArticleStandardCatalogueContent() {
       </p>
 
       <ArticleImage
-        src="/images/blog/blog-008/hero-catalogue-to-custom-metal-projects.png"
+        src="https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_860/blog/blog-008-hero"
         alt="Standard catalogue products beside custom metal gift project components"
       />
 
@@ -1334,7 +1334,7 @@ function ArticleStandardCatalogueContent() {
       </div>
 
       <ArticleImage
-        src="/images/blog/blog-008/off-catalogue-custom-levels.png"
+        src="https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_860/blog/blog-008-off-catalogue-levels"
         alt="Three levels of off-catalogue custom metal product development"
       />
 
@@ -1387,7 +1387,7 @@ function ArticleStandardCatalogueContent() {
 
       <h2 style={prose.h2}>Catalogue or Custom Metal? A Decision Checklist</h2>
       <ArticleImage
-        src="/images/blog/blog-008/catalogue-vs-custom-decision-desk.png"
+        src="https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_860/blog/blog-008-decision-desk"
         alt="Distributor project planning desk for catalogue versus custom sourcing decisions"
       />
       <p style={prose.p}>Not every brief needs an off-catalogue solution. Use this checklist before moving into a custom metal quote.</p>
@@ -1424,7 +1424,7 @@ function ArticleStandardCatalogueContent() {
 
       <h2 style={prose.h2}>What to Include in a Custom Metal Gift Brief</h2>
       <ArticleImage
-        src="/images/blog/blog-008/custom-metal-gift-brief-components.png"
+        src="https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_860/blog/blog-008-brief-components"
         alt="Custom metal gift brief with material samples packaging and project planning tools"
       />
       <p style={prose.p}>

@@ -44,6 +44,11 @@ export const Route = createFileRoute('/{-$locale}/gift-sets/$setId')({
               ? [cloudinaryUrl(set.coverImage, { w: 800 })]
               : [],
             brand: { '@type': 'Brand', name: 'Wischos Gift' },
+            offers: {
+              '@type': 'Offer',
+              availability: 'https://schema.org/InStock',
+              seller: { '@type': 'Organization', name: 'Wischos Gift' },
+            },
             isRelatedTo: set.components.map((component) => ({
               '@type': 'Product',
               name: component.name,

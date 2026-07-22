@@ -60,7 +60,6 @@ const organizationJsonLd = {
   email: siteMeta.email,
   description: siteMeta.defaultDescription,
   foundingDate: '2024',
-  inLanguage: 'en',
   knowsLanguage: ['en', 'zh-CN'],
   areaServed: ['AU', 'NZ', 'SG', 'AE', 'HK', 'SA', 'CH', 'GB'],
   contactPoint: {
