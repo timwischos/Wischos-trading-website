@@ -149,7 +149,7 @@ export function SiteFooter() {
       {/* Bottom bar */}
       <div style={{ padding: '1rem 2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '0.5rem' }}>
         <p style={{ fontSize: '0.72rem', color: '#6b6b6b', letterSpacing: '0.04em' }}>
-          &copy; {new Date().getFullYear()} Wischos Gift Trading Co. All rights reserved.
+          &copy; {new Date().getFullYear()} Wischos Gift. All rights reserved.
         </p>
         <p style={{ fontSize: '0.72rem', color: '#6b6b6b' }}>
           B2B Custom Metal Gifts
