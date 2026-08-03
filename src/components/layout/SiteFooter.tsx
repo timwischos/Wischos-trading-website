@@ -145,23 +145,6 @@ export function SiteFooter() {
         </div>
       </div>
 
-      {/* Trust strip — practical signals for B2B buyers */}
-      <div style={{
-        borderTop: '1px solid var(--grid-color)',
-        padding: '1.25rem 2rem',
-        display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
-        gap: '1rem',
-        background: '#fafafa',
-        fontSize: '0.72rem',
-        color: '#555',
-        letterSpacing: '0.02em',
-      }}>
-        <span><strong style={{ color: '#0a0a0a' }}>Languages:</strong> English · 中文</span>
-        <span><strong style={{ color: '#0a0a0a' }}>Response:</strong> within 24h on your business day</span>
-        <span><strong style={{ color: '#0a0a0a' }}>Payment:</strong> T/T · Wise · USD / CNY / HKD / SGD</span>
-        <span><strong style={{ color: '#0a0a0a' }}>Documentation:</strong> FTA Certificate of Origin where applicable</span>
-      </div>
 
       {/* Bottom bar */}
       <div style={{ padding: '1rem 2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '0.5rem' }}>
