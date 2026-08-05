@@ -17,6 +17,25 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'metal-anchor-piece-corporate-gift-set',
+    title: 'Metal as the Anchor: How to Structure a Corporate Gift Set Around One Strong Piece',
+    metaTitle: 'Metal as the Anchor Piece: How to Structure a Corporate Gift Set',
+    metaDescription:
+      'Once you know which gift earns daily use and why metal holds up, the next question is structural: how do you design a set around the piece that carries it?',
+    excerpt:
+      'A set can contain good individual items and still feel incoherent. The solution is to decide which piece earns the lead role after the box, card, and consumables are gone.',
+    quickAnswer:
+      'A strong corporate gift set needs a clear anchor: the item the recipient is most likely to keep, use, or remember months later. Supporting, symbolic, and sample pieces should serve that role rather than compete with it.',
+    category: 'Gift Set Strategy',
+    readTime: '6 min read',
+    publishedAt: 'July 23, 2026',
+    isoDate: '2026-07-23',
+    heroImage:
+      'https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_1200/blog/blog-017/hero-metal-anchor-piece-gift-set',
+    heroImageAlt: 'Premium corporate gift set arranged around a central brushed metal anchor piece with notebook, pouch, fitted gift box and token',
+    heroImageCredit: '',
+  },
+  {
     slug: 'aluminum-brass-steel-titanium-corporate-gifts',
     title: 'Aluminum, Brass, Steel, or Titanium? How to Choose the Right Metal for Corporate Gifts',
     metaTitle: 'Aluminum, Brass, Steel or Titanium for Corporate Gifts',

@@ -2135,7 +2135,122 @@ Decision:
   )
 }
 
+function ArticleMetalAnchorPieceContent() {
+  return (
+    <div style={prose.wrapper}>
+      <p style={prose.p}>
+        The case for usefulness, material quality, and restrained branding is already made in our post on{' '}
+        <Link to={'/blog/what-makes-a-corporate-gift-worth-keeping' as RouterTo} style={prose.inlineLink}>what makes a corporate gift worth keeping</Link>{' '}
+        and in our{' '}
+        <Link to={'/blog/aluminum-brass-steel-titanium-corporate-gifts' as RouterTo} style={prose.inlineLink}>metals guide</Link>.
+        This piece is about a different question: not <em>which</em> gift to choose, but <em>how to structure the set around it</em>.
+      </p>
+
+      <h2 style={prose.h2}>The structural problem no one names</h2>
+      <p style={prose.p}>
+        A set can contain good individual items and still feel incoherent.
+      </p>
+      <p style={prose.p}>
+        The box is full: pen, notebook, pouch, card, food item. Each piece passes the usefulness test on its own. But when the recipient closes the box, nothing has clearly claimed the role of <em>the thing I am keeping</em>. Every item looks like an add-on to every other item. The set reads as assembled, not designed.
+      </p>
+      <p style={prose.p}>
+        This is a set-design problem, distinct from a product-quality problem. Solving it does not require better individual items. It requires one of those items to take a defined role. We call that piece the <strong style={prose.strong}>anchor</strong>.
+      </p>
+      <p style={prose.p}>
+        The anchor concept is Wischos-side working language, not an industry standard. But it maps onto a real decision that belongs in the brief early: after the packaging, food, card, and seasonal elements are gone, what is the recipient expected to keep?
+      </p>
+
+      <ArticleImage
+        src="https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_1200/blog/blog-017/role-taxonomy-gift-set"
+        alt="Metal pen arranged as the anchor piece with supporting notebook, pouch, symbolic token and finish sample"
+        caption="A clear hierarchy lets the anchor lead while supporting, symbolic, and sample pieces each serve a distinct purpose."
+      />
+
+      <h2 style={prose.h2}>The role taxonomy: anchor, supporting, symbolic, sample</h2>
+      <p style={prose.p}>
+        Not every piece in a set has the same job. Once you name the roles, the brief gets cleaner.
+      </p>
+      <p style={prose.p}>
+        <strong style={prose.strong}>The anchor piece</strong> is the item the recipient is most likely to keep, use, or recall six months later. Its job is to give the recipient a clear reason to hold onto the set. It benefits from physical properties that survive daily use, which is one reason a well-made metal piece often ends up here. A machined brass pen, a stainless card case, a compact EDC tool: these are anchor candidates when the brief supports them. But the anchor is defined by the brief, not the material. A high-quality leather notebook or a textile piece can anchor a set just as legitimately.
+      </p>
+      <p style={prose.p}>
+        <strong style={prose.strong}>The supporting piece</strong> exists to serve the anchor. Its job is not to stand alone. It is to make the anchor more usable or more complete. A notebook paired with a precision pen is not filler; it gives the pen something to write in. A slim pouch is not filler if it carries the two metal pieces the set is built around.
+      </p>
+      <p style={prose.p}>
+        <strong style={prose.strong}>The symbolic piece</strong> marks an occasion or membership rather than earning daily use. A custom-shaped token, a commemorative key tag, an event badge: these do not need to pass the desk-drawer test. Their job is to signal that something specific happened, and that the recipient was part of it.
+      </p>
+      <p style={prose.p}>
+        <strong style={prose.strong}>The sample piece</strong> is specifically functional for the distributor's sales process: a finish swatch, a small engraved demo piece, or a compact version of the anchor that travels with a quote. It exists to demonstrate what is achievable, not to be the hero of the recipient's experience.
+      </p>
+      <p style={prose.p}>
+        Most sets contain two or three of these roles. The mistake is building a set without deciding which is which.
+      </p>
+      <p style={prose.p}>
+        One exception worth naming: when every item in a set is a durable metal piece with its own daily-use function, a parallel structure is equally valid. Not every all-metal set needs a single anchor. It can be designed around two or three pieces that each address a different moment in the recipient's day. The anchor framework is most critical when a set contains consumables or non-durable items: the piece that will outlast everything else needs a defined lead role.
+      </p>
+
+      <h2 style={prose.h2}>How the anchor changes every other piece's job</h2>
+      <p style={prose.p}>
+        This is the part of set design that becomes obvious once you have named it and invisible until you do.
+      </p>
+      <p style={prose.p}>
+        Without an anchor, every item in the set is implicitly competing for the position. The pen, the notebook, the card case, the pouch: each one is trying to be <em>the thing</em>. None of them win. The result is a set that feels like a collection of candidates rather than a resolved design.
+      </p>
+      <p style={prose.p}>
+        Once the anchor is identified, the brief for every other piece gets clearer. The notebook's job is no longer "be impressive on its own"; it is "give the pen something to write in." The pouch's job is no longer "add bulk"; it is "carry the two metal pieces without scratching them." The symbolic piece's job is no longer "justify its own cost"; it is "mark the occasion." Roles replace ambiguity.
+      </p>
+      <p style={prose.p}>
+        This also concentrates perceived value in the right place. The retention logic we covered in{' '}
+        <Link to={'/blog/what-makes-a-corporate-gift-worth-keeping' as RouterTo} style={prose.inlineLink}>our earlier article</Link>{' '}
+        points consistently toward usefulness as the reason people hold onto branded objects. The anchor is where that usefulness lives. The rest of the set's job is to support it, not dilute it.
+      </p>
+
+      <ArticleImage
+        src="https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_1200/blog/blog-017/anchor-piece-daily-use"
+        alt="Brushed metal pen in daily use with a notebook, card case and pouch on an office desk"
+        caption="The anchor earns its role after unboxing: it should fit naturally into the recipient's real working day."
+      />
+
+      <h2 style={prose.h2}>Five questions before confirming the anchor</h2>
+      <p style={prose.p}>
+        Once a piece is on the shortlist for anchor, whether metal or otherwise, these five checks belong before sampling:
+      </p>
+      <ol style={prose.ul}>
+        <li style={prose.li}><strong style={prose.strong}>What does it do after unboxing?</strong> Not "what is it"; what action does it support, and how regularly?</li>
+        <li style={prose.li}><strong style={prose.strong}>Where will the recipient keep or carry it?</strong> The answer determines which material, finish, and size actually fits the use.</li>
+        <li style={prose.li}><strong style={prose.strong}>Does the material support that use?</strong> A mirror-polished surface that goes into a bag or pocket every day shows scratches within weeks. A brushed or PVD-coated piece in the same position holds up for years.</li>
+        <li style={prose.li}><strong style={prose.strong}>Can the logo be applied without making the object feel like an advertisement?</strong> As we have written in our{' '}
+          <Link to={'/blog/discreet-branding-corporate-gifts-smaller-logos' as RouterTo} style={prose.inlineLink}>discreet branding post</Link>, an oversized imprint on a professional tool can reduce the likelihood it ever leaves the drawer.</li>
+        <li style={prose.li}><strong style={prose.strong}>Can the packaging protect the surface within the total budget?</strong> A metal anchor that arrives scratched from transit has already failed its job.</li>
+      </ol>
+      <p style={prose.p}>
+        If those five questions are difficult to answer, the piece may not be ready to anchor the set, or the set may need a different anchor.
+      </p>
+
+      <ArticleImage
+        src="https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_1200/blog/blog-017/protective-gift-set-packaging"
+        alt="Open corporate gift box with metal items separated in fitted protective compartments"
+        caption="Fitted compartments protect the anchor's finish and prevent metal-on-metal contact during transit."
+      />
+
+      <h2 style={prose.h2}>Ready to scope the set?</h2>
+      <p style={prose.p}>
+        Our role is on the supply side: once you know what the anchor needs to do, we handle material selection, finish, engraving placement, companion sourcing, packaging fit, sampling, and production follow-through.
+      </p>
+      <p style={prose.p}>
+        If you are scoping a set and are not sure which piece should carry it, send us the recipient context, occasion, and budget direction. We will advise on what the metal side can realistically deliver, including whether a metal anchor is the right call at all. For the full list of inputs that make a custom metal brief workable, our{' '}
+        <Link to={'/blog/what-we-need-to-review-a-custom-metal-gift-project' as RouterTo} style={prose.inlineLink}>project review guide</Link>{' '}
+        covers what we need to get started.
+      </p>
+      <p style={{ ...prose.p, fontSize: '0.82rem', color: '#777' }}>
+        Note: the anchor piece concept and role taxonomy are Wischos-side working language, not industry standards.
+      </p>
+    </div>
+  )
+}
+
 const articleContent: Record<string, () => React.JSX.Element> = {
+  'metal-anchor-piece-corporate-gift-set': ArticleMetalAnchorPieceContent,
   'aluminum-brass-steel-titanium-corporate-gifts': Article1Content,
   'laser-engraving-vs-color-printing-corporate-gifts': Article2Content,
   'how-to-order-custom-corporate-gifts-from-china': Article3Content,
@@ -2230,9 +2345,11 @@ function ArticlePage() {
             style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
           />
         </div>
-        <p style={{ fontSize: '0.7rem', color: '#aaa', marginTop: '0.4rem', textAlign: 'right' }}>
-          {post.heroImageCredit}
-        </p>
+        {post.heroImageCredit ? (
+          <p style={{ fontSize: '0.7rem', color: '#aaa', marginTop: '0.4rem', textAlign: 'right' }}>
+            {post.heroImageCredit}
+          </p>
+        ) : null}
       </div>
 
       {/* Quick Answer */}

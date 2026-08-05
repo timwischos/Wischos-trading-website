@@ -33,6 +33,11 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://wischosgift.com/blog/metal-anchor-piece-corporate-gift-set</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://wischosgift.com/blog/aluminum-brass-steel-titanium-corporate-gifts</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -110,6 +115,26 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://wischosgift.com/products/wp-105-artisan-brass-rollerball</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wischosgift.com/products/wp-106-solid-brass-clip-ballpoint</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wischosgift.com/products/wp-107-hexagonal-brass-click-pen</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wischosgift.com/products/wp-108-solid-brass-bolt-action-pen</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://wischosgift.com/products/wp-201-professional-aluminum-mouse-pad</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -145,6 +170,36 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://wischosgift.com/products/wp-208-precision-folding-aluminium-device-stand</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wischosgift.com/products/wp-209-aluminium-ring-binder-notebook</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wischosgift.com/products/wp-210-weighted-brass-coaster</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wischosgift.com/products/wp-211-reversible-brass-coaster</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wischosgift.com/products/wp-212-brass-inlay-coaster</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wischosgift.com/products/wp-213-solid-brass-tealight-holder</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://wischosgift.com/products/wp-301-rfid-aluminum-wallet-badge-holder</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -170,7 +225,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://wischosgift.com/products/wp-306-executive-zinc-alloy-nail-clipper</loc>
+    <loc>https://wischosgift.com/products/wp-306-precision-dual-action-metal-edc-slider</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -180,7 +235,17 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://wischosgift.com/products/wp-308-titanium-edc-carabiner</loc>
+    <loc>https://wischosgift.com/products/wp-308-titanium-edc-keychain</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wischosgift.com/products/wp-309-slim-push-stainless-steel-business-card-case</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wischosgift.com/products/wp-310-titanium-alloy-keychain-capsule</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -214,8 +279,18 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://wischosgift.com/products/wp-407-double-wall-stainless-steel-desk-cup</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wischosgift.com/products/wp-408-titanium-tea-infuser-business-cup</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
-  <!-- Gift Sets (6) -->
+  <!-- Gift Sets (9) -->
   <url>
     <loc>https://wischosgift.com/gift-sets</loc>
     <changefreq>monthly</changefreq>
