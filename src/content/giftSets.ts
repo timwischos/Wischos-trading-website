@@ -687,7 +687,7 @@ export const giftSets: GiftSet[] = [
     fob: '$32–45',
     sourcingNotes: [
       {
-        title: 'Why an aluminium notebook replaces paper in a metal gift set',
+        title: 'Aluminium cover vs. paper notebook cover',
         body: 'A paper-cover notebook is a consumable — once the pages are filled, the branded cover leaves the desk. An aluminium ring binder cover stays in use after refill. The laser-engraved company logo on the anodised face remains visible through years of daily use, which is the characteristic that separates this format from a standard branded journal in a B2B gifting context.',
       },
       {
