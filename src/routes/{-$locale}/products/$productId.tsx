@@ -28,6 +28,7 @@ export const Route = createFileRoute('/{-$locale}/products/$productId')({
       throw redirect({
         to: '/products/$productId',
         params: { productId: redirectProductId },
+        statusCode: 301,
       })
     }
 
