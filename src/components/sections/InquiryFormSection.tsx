@@ -3,7 +3,7 @@ import { useState, useRef } from 'react'
 import { z } from 'zod'
 import { useForm } from '@tanstack/react-form'
 import { useNavigate } from '@tanstack/react-router'
-import { inquiryInsertSchema, BUYER_TYPE_OPTIONS } from '@/lib/schemas/inquiry'
+import { inquiryInsertSchema } from '@/lib/schemas/inquiry'
 import { submitInquiry } from '@/server/submitInquiry'
 import { trackQualifyLead, trackFormStarted } from '@/lib/analytics'
 import { contactContent } from '@/content/contact'
@@ -19,11 +19,8 @@ import {
   SelectValue,
 } from '@/components/ui/select'
 
-// buyerType is form-only; on submit it is prepended to the message field
-// so John can see the audience type in the email notification without a DB migration.
 const inquiryFormSchema = inquiryInsertSchema.extend({
   website: z.string().optional(),
-  buyerType: z.string().optional(),
 })
 
 const QUANTITY_OPTIONS = [
@@ -61,22 +58,13 @@ export function InquiryFormSection() {
       timeline: '',
       message: '',
       website: '',
-      buyerType: '',
     },
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     validators: { onSubmit: inquiryFormSchema as any },
     onSubmit: async ({ value }) => {
       setSubmitError(null)
       try {
-        // Strip buyerType (form-only) and prepend its label to the message body
-        // so it appears in the email notification and inquiry record.
-        const { buyerType, ...rest } = value
-        const buyerTypeLabel = BUYER_TYPE_OPTIONS.find((o) => o.value === buyerType)?.label
-        const messageWithBuyerType = buyerTypeLabel
-          ? `[Buyer type: ${buyerTypeLabel}]\n\n${rest.message || ''}`.trim()
-          : rest.message
-        const payload = { ...rest, message: messageWithBuyerType }
-        await submitInquiry({ data: payload })
+        await submitInquiry({ data: value })
         trackQualifyLead({
           productInterest: value.productInterest,
           companyName: value.companyName,
@@ -168,30 +156,6 @@ export function InquiryFormSection() {
                   {String(field.state.meta.errors[0])}
                 </p>
               )}
-            </div>
-          )}
-        </form.Field>
-
-        {/* Buyer Type — optional but routing-critical */}
-        <form.Field name="buyerType">
-          {(field) => (
-            <div className="space-y-1">
-              <Label htmlFor="buyerType">Are you?</Label>
-              <Select
-                value={field.state.value || ''}
-                onValueChange={(v) => field.handleChange(v)}
-              >
-                <SelectTrigger id="buyerType">
-                  <SelectValue placeholder="Select what best describes you" />
-                </SelectTrigger>
-                <SelectContent>
-                  {BUYER_TYPE_OPTIONS.map((opt) => (
-                    <SelectItem key={opt.value} value={opt.value}>
-                      {opt.label}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
             </div>
           )}
         </form.Field>
