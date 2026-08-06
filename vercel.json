@@ -1,16 +1,4 @@
 {
-  "redirects": [
-    {
-      "source": "/products/WP-201-professional-aluminum-desk-mat",
-      "destination": "/products/WP-201-professional-aluminum-mouse-pad",
-      "permanent": true
-    },
-    {
-      "source": "/products/WP-402-pure-titanium-capsule-flask-150ml",
-      "destination": "/products/WP-402-pure-titanium-capsule-bottle-150ml",
-      "permanent": true
-    }
-  ],
   "headers": [
     {
       "source": "/(.*)",
