@@ -100,7 +100,7 @@ export const Route = createRootRoute({
       { rel: 'preconnect', href: 'https://res.cloudinary.com' },
       { rel: 'dns-prefetch', href: 'https://res.cloudinary.com' },
       { rel: 'stylesheet', href: appCss },
-      { rel: 'icon', href: '/favicon.ico' },
+      { rel: 'icon', href: '/favicon.png', type: 'image/png' },
     ],
     scripts: [
       { type: 'application/ld+json', children: JSON.stringify(organizationJsonLd) },
