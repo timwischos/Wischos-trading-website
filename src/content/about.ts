@@ -39,7 +39,7 @@ export const about = {
       },
       {
         title: 'Custom sets beyond the website catalog',
-        body: 'The sets shown on the website are starting points, not fixed limits. Buyers can adjust product combinations, materials, colors, logo methods, packaging, and private-label details according to quantity, budget, and production feasibility. If you have a product idea outside the catalog, we can review it as a sourcing brief.',
+        body: 'The sets shown on the website are starting points, not fixed limits. You can adjust product combinations, materials, colors, logo methods, packaging, and private-label details according to quantity, budget, and production feasibility. If you have a product idea outside the catalog, we can review it as a sourcing brief.',
       },
     ],
   },

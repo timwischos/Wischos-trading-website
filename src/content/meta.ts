@@ -77,7 +77,7 @@ export const siteMeta = {
     },
     blog: {
       title: 'Corporate Gift Insights | Wischos Gift Blog',
-      description: 'Practical guides for corporate buyers — materials, customisation methods, sourcing from China, and lead time planning.',
+      description: 'Practical guides for promotional distributors and corporate buyers — materials, customisation methods, sourcing from China, and lead time planning.',
     },
   },
 } as const

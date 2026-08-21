@@ -13,7 +13,7 @@ export const Route = createFileRoute('/duty-and-shipping')({
       {
         name: 'description',
         content:
-          'A landed-cost reference for procurement teams planning a metal gift program. Import duty rates, FTA coverage, shipping options, and Incoterms for shipments from China.',
+          'A landed-cost reference for distributors and procurement teams planning a metal gift program. Import duty rates, FTA coverage, shipping options, and Incoterms for shipments from China.',
       },
       { property: 'og:title', content: 'Duty, Shipping & FTA Coverage Reference | Wischos Gift' },
       { property: 'og:description', content: 'Import duty rates, FTA coverage, shipping options, and Incoterms for metal gift shipments from China.' },
@@ -43,20 +43,20 @@ const DUTY_TABLE: Array<{
   duty: string
   certificate: string
 }> = [
-  { country: 'Australia', flag: '🇦🇺', fta: 'ChAFTA', duty: '0%', certificate: 'ChAFTA Certificate of Origin' },
-  { country: 'New Zealand', flag: '🇳🇿', fta: 'NZ–China FTA (2008 + 2022 Upgrade)', duty: '0%', certificate: 'NZ–China FTA Certificate' },
-  { country: 'Singapore', flag: '🇸🇬', fta: 'CSFTA', duty: '0%', certificate: 'Form X' },
-  { country: 'Hong Kong', flag: '🇭🇰', fta: 'CEPA / Free Port', duty: '0%', certificate: 'CEPA Certificate' },
-  { country: 'Switzerland', flag: '🇨🇭', fta: 'China–Switzerland FTA', duty: '0% on most lines', certificate: 'China–Switzerland FTA Certificate' },
-  { country: 'South Korea', flag: '🇰🇷', fta: 'China–Korea FTA + RCEP', duty: 'Phased to 0% on most lines', certificate: 'Form K' },
-  { country: 'Japan', flag: '🇯🇵', fta: 'RCEP', duty: 'Phased to 0% on 86% of lines', certificate: 'RCEP Certificate' },
-  { country: 'Chile', flag: '🇨🇱', fta: 'China–Chile FTA', duty: '0%', certificate: 'Form F' },
-  { country: 'Peru', flag: '🇵🇪', fta: 'China–Peru FTA', duty: '0%', certificate: 'Form R' },
-  { country: 'UAE', flag: '🇦🇪', fta: 'No FTA', duty: '5% (GCC unified)', certificate: 'General Certificate of Origin' },
-  { country: 'Saudi Arabia', flag: '🇸🇦', fta: 'No FTA', duty: '5% (GCC unified)', certificate: 'General Certificate of Origin' },
-  { country: 'United Kingdom', flag: '🇬🇧', fta: 'No FTA', duty: '2–6% MFN (varies by HS)', certificate: 'General Certificate of Origin' },
-  { country: 'Canada', flag: '🇨🇦', fta: 'No FTA', duty: '6.5–9.5% base + 25% surtax on certain steel/aluminium goods', certificate: 'General CoO + Melt-and-Pour declaration' },
-  { country: 'United States', flag: '🇺🇸', fta: 'No FTA', duty: 'Section 301 + 232 stacked; rates vary significantly', certificate: 'General Certificate of Origin' },
+  { country: 'Australia', flag: '🇦🇺', fta: 'ChAFTA', duty: '0% (qualifying goods)', certificate: 'ChAFTA Certificate of Origin' },
+  { country: 'New Zealand', flag: '🇳🇿', fta: 'NZ–China FTA (2008 + 2022 Upgrade)', duty: '0% (qualifying goods)', certificate: 'NZ–China FTA Certificate or origin declaration' },
+  { country: 'Singapore', flag: '🇸🇬', fta: 'CSFTA / MFN', duty: '0% (most metal goods are 0% MFN)', certificate: 'Form X if FTA claimed; generally not required' },
+  { country: 'Hong Kong', flag: '🇭🇰', fta: 'Free port', duty: '0%', certificate: 'No certificate required' },
+  { country: 'Switzerland', flag: '🇨🇭', fta: 'No FTA required', duty: '0% (all industrial goods, from 1 Jan 2024)', certificate: 'No certificate required' },
+  { country: 'South Korea', flag: '🇰🇷', fta: 'China–Korea FTA + RCEP', duty: 'Varies by HS code; phasing to 0% on most lines', certificate: 'Form K (China–Korea FTA) or RCEP Certificate' },
+  { country: 'Japan', flag: '🇯🇵', fta: 'RCEP', duty: 'Varies by HS code; phasing to 0% on majority of lines', certificate: 'RCEP Certificate or importer self-declaration' },
+  { country: 'Chile', flag: '🇨🇱', fta: 'China–Chile FTA', duty: '0% on most lines (small exclusion list applies)', certificate: 'Form F' },
+  { country: 'Peru', flag: '🇵🇪', fta: 'China–Peru FTA', duty: '0% on qualifying lines', certificate: 'Form R' },
+  { country: 'UAE', flag: '🇦🇪', fta: 'No FTA', duty: '5% (CIF value; verify by HS code)', certificate: 'General Certificate of Origin' },
+  { country: 'Saudi Arabia', flag: '🇸🇦', fta: 'No FTA', duty: 'Varies by HS code; typically 5–15%', certificate: 'General Certificate of Origin' },
+  { country: 'United Kingdom', flag: '🇬🇧', fta: 'No FTA', duty: 'Varies by HS code; typically 2–6% MFN', certificate: 'General Certificate of Origin' },
+  { country: 'Canada', flag: '🇨🇦', fta: 'No FTA', duty: 'Varies by HS code; base rate plus applicable steel/aluminium surtaxes — confirm per product', certificate: 'General CoO; additional declarations may apply' },
+  { country: 'United States', flag: '🇺🇸', fta: 'No FTA', duty: 'Section 301 + Section 232 stacked; rates vary significantly by HS code and product — confirm per shipment', certificate: 'General Certificate of Origin' },
   { country: 'Other destinations', flag: '—', fta: '—', duty: 'Quoted on request', certificate: '—' },
 ]
 
@@ -71,7 +71,7 @@ function DutyAndShippingPage() {
       <section style={{ maxWidth: '900px', margin: '0 auto', padding: '4rem 2rem 3rem' }}>
         <p style={{ fontSize: '0.75rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: '#888', marginBottom: '1rem' }}>Reference</p>
         <h1 style={{ fontSize: 'clamp(2rem, 4.5vw, 3rem)', fontWeight: 700, lineHeight: 1.15, marginBottom: '1.5rem', maxWidth: '24ch' }}>Duty, Shipping &amp; FTA Coverage</h1>
-        <p style={{ fontSize: '1.05rem', color: '#4a4a4a', lineHeight: 1.7, maxWidth: '60ch', marginBottom: '1rem' }}>A landed-cost reference for procurement teams planning a metal gift program.</p>
+        <p style={{ fontSize: '1.05rem', color: '#4a4a4a', lineHeight: 1.7, maxWidth: '60ch', marginBottom: '1rem' }}>A landed-cost reference for distributors and procurement teams planning a metal gift program.</p>
         <p style={{ fontSize: '0.9rem', color: '#666', lineHeight: 1.75, maxWidth: '64ch' }}>This page documents the import duty environment, shipping timelines, and Free Trade Agreement coverage for the destinations we currently ship to. It is intended as a planning reference — actual landed cost varies by HS classification, quantity, port pair, and prevailing freight rates, and is confirmed line-by-line in formal quotations.</p>
       </section>
 
@@ -106,7 +106,7 @@ function DutyAndShippingPage() {
           <div style={{ marginTop: '2rem', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.25rem' }}>
             {[
               'Duty rates above apply to qualifying metal gift goods correctly classified under their applicable HS tariff codes. Final classification is determined by customs in the destination country.',
-              'FTA Certificates of Origin enable the duty-free preferential rate. We arrange through CCPIT or Chinese Customs and include in standard shipping documents at no additional charge.',
+              'FTA Certificates of Origin enable the preferential duty rate where an FTA applies. We arrange through CCPIT or Chinese Customs and include in standard shipping documents at no additional charge. Hong Kong and Switzerland do not require a certificate — zero duty applies regardless of origin.',
               'General Certificates of Origin serve as proof of Chinese origin for customs and statistical purposes. They do not confer any duty preference where no FTA exists.',
               'Local sales tax, VAT, or GST (e.g. Australian GST 10%, NZ GST 15%, UK VAT 20%) applies independently of import duty and is generally recoverable by registered importers.',
             ].map((note, i) => (
@@ -187,7 +187,7 @@ function DutyAndShippingPage() {
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1.5rem' }}>
             {[
-              { term: 'FOB China', includes: 'Goods + export packaging + delivery to Chinese port + export clearance', when: 'You have a freight forwarder you trust and want full control over shipping and customs.' },
+              { term: 'FOB [Port]', includes: 'Goods + export packaging + export clearance. Risk transfers to buyer when goods are loaded onto the vessel at the named Chinese port.', when: 'You have a freight forwarder you trust and want full control over shipping and customs.' },
               { term: 'CIF [Port]', includes: 'FOB + sea freight + insurance to destination port', when: 'You want a single price to destination port but plan to clear customs yourself.' },
               { term: 'DDP [City]', includes: 'All-in price including duty, freight, clearance, and inland delivery to your client\'s door', when: 'Your client expects a fully-landed price and you don\'t want to handle customs at all.' },
             ].map((item) => (
@@ -201,7 +201,7 @@ function DutyAndShippingPage() {
             ))}
           </div>
 
-          <p style={{ fontSize: '0.83rem', color: '#555', lineHeight: 1.7, marginTop: '2rem', maxWidth: '60ch' }}>For destinations where FTA coverage applies (e.g. Australia, New Zealand, Singapore, Hong Kong, Switzerland), DDP pricing reflects the zero-duty advantage. For non-FTA destinations, DDP includes the applicable import duty calculated on your specific HS classification. We do not mark up customs duty or freight in DDP quotes — line items are visible in the quotation so you can verify each cost.</p>
+          <p style={{ fontSize: '0.83rem', color: '#555', lineHeight: 1.7, marginTop: '2rem', maxWidth: '60ch' }}>For destinations where zero duty applies (e.g. Australia and New Zealand under ChAFTA/NZ–China FTA, Singapore for most metal goods, Hong Kong as a free port, Switzerland for all industrial goods), DDP pricing reflects the zero-duty advantage. For non-zero-duty destinations, DDP includes the applicable import duty calculated on your specific HS classification. We do not mark up customs duty or freight in DDP quotes — line items are visible in the quotation so you can verify each cost.</p>
         </div>
       </section>
 
@@ -215,7 +215,7 @@ function DutyAndShippingPage() {
           {[
             { step: 'Step 1', title: 'You order, we produce', body: 'Normal production cycle. No FTA action needed at this stage.' },
             { step: 'Step 2', title: 'We arrange the Certificate of Origin', body: 'Once the shipment is ready, we apply for the relevant FTA Certificate of Origin through CCPIT or Chinese Customs. Processing time: 1–3 working days.' },
-            { step: 'Step 3', title: 'We ship with full documentation', body: 'Original Certificate of Origin is sent with the shipment alongside the Commercial Invoice, Packing List, and Bill of Lading or Airwaybill.' },
+            { step: 'Step 3', title: 'We ship with full documentation', body: 'Certificate of Origin is included with the shipping documents alongside the Commercial Invoice, Packing List, and Bill of Lading or Airwaybill. Original or scanned copy depending on destination customs requirements.' },
             { step: 'Step 4', title: 'Your customs broker claims the preference', body: 'At destination, your customs broker presents the Certificate of Origin during entry. Duty is assessed at the FTA preferential rate.' },
           ].map((item) => (
             <div key={item.step} style={{ display: 'grid', gridTemplateColumns: '80px 1fr', gap: '1.5rem', alignItems: 'start' }}>
@@ -267,7 +267,7 @@ function DutyAndShippingPage() {
       </section>
 
       <footer style={{ borderTop: '1px solid #e5e5e5', padding: '1.5rem 2rem', display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: '0.5rem' }}>
-        <p style={{ fontSize: '0.72rem', color: '#888' }}>© {new Date().getFullYear()} Wischos Gift Trading Co. &nbsp;·&nbsp; johnlui@wischosgift.com &nbsp;·&nbsp; Page last reviewed: May 2026</p>
+        <p style={{ fontSize: '0.72rem', color: '#888' }}>© {new Date().getFullYear()} Wischos Gift Trading Co. &nbsp;·&nbsp; johnlui@wischosgift.com &nbsp;·&nbsp; Page last reviewed: August 2026</p>
         <a href="https://wischosgift.com" style={{ fontSize: '0.72rem', color: '#888', textDecoration: 'none' }}>wischosgift.com</a>
       </footer>
     </div>

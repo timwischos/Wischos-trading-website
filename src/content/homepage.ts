@@ -56,6 +56,11 @@ export const homepage = {
         detail:
           'From sample review through logo approval, production progress, inspection photos, and shipment confirmation, you work through one accountable contact instead of chasing separate vendors.',
       },
+      {
+        claim: 'Your client relationship stays yours',
+        detail:
+          'We quote to you, not around you. Wischos does not contact your end clients directly — all recommendations, spec sheets, and pricing go through you to use in your own proposals. White-label is standard.',
+      },
     ],
   },
   selectionStandard: {
@@ -94,7 +99,7 @@ export const homepage = {
     kicker: 'At a Glance',
     heading: 'What to expect',
     stats: [
-      { value: '29 products', label: 'across 7 gift set concepts' },
+      { value: '39 products', label: 'across 9 gift set concepts' },
       { value: '25–35 days', label: 'Production lead time' },
       { value: 'Logo-ready', label: 'Engraving, printing, packaging' },
       { value: 'One contact', label: 'Inquiry to delivery' },
