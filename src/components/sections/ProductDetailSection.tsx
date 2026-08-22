@@ -395,6 +395,10 @@ export function ProductDetailSection({ product, relatedProducts }: ProductDetail
               <p style={{ marginTop: '0.75rem', fontSize: '0.75rem', color: '#6b6b6b', textAlign: 'center' }}>
                 Tell us your branding and quantity requirements.
               </p>
+              <p style={{ marginTop: '0.5rem', fontSize: '0.75rem', color: '#6b6b6b', textAlign: 'center' }}>
+                Looking for something different?{' '}
+                <Link to="/contact" style={{ color: 'var(--accent-brand)', textDecoration: 'none' }}>We source to brief.</Link>
+              </p>
             </div>
 
           </div>

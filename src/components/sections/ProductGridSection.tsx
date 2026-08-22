@@ -279,7 +279,7 @@ export function ProductGridSection({ products, category, searchQuery }: { produc
         justifyContent: 'space-between',
         gap: '1rem',
         flexWrap: 'wrap',
-        background: '#fafafa',
+        background: '#fdf8f4',
       }}>
         <p style={{ fontSize: '0.8rem', color: '#555', lineHeight: 1.55 }}>
           <strong style={{ color: '#0a0a0a', fontWeight: 600 }}>Don't see what you need?</strong>
