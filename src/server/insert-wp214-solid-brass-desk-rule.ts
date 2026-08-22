@@ -11,17 +11,17 @@ import { products } from './schema'
 const sql = postgres(process.env.DATABASE_URL!, { prepare: false, max: 1 })
 const db = drizzle(sql)
 
-const FOLDER = 'WP-214-solid-brass-desk-rule'
-const PREFIX = 'solid-brass-desk-rule'
+const FOLDER = 'WP-214-solid-brass-desk-ruler'
+const PREFIX = 'solid-brass-desk-ruler'
 
 async function main() {
   await db.insert(products).values({
-    id: 'wp-214-solid-brass-desk-rule',
+    id: 'wp-214-solid-brass-desk-ruler',
     sku: 'WP-214',
-    name: 'Solid Brass Desk Rule',
+    name: 'Solid Brass Ruler',
     tagline: 'Solid brass  |  CNC-etched dual scale  |  Beveled edge  |  15 / 20 / 30cm',
-    metaDescription: 'Custom engraved solid brass desk rule with CNC-etched metric and inch scale, available in three sizes. For corporate desk and stationery gifting programs. Inquire for pricing.',
-    quickAnswer: 'The Solid Brass Desk Rule is a CNC-machined solid brass ruler with etched metric and inch dual scale, available in 15cm (160×30×4.5mm, 125g), 20cm (210×30×4.5mm, 160g), and 30cm (310×30×4.5mm, 245g) for corporate desk accessory and custom gift programs.',
+    metaDescription: 'Custom engraved solid brass ruler with CNC-etched metric and inch scale, available in three sizes. For corporate desk and stationery gifting programs. Inquire for pricing.',
+    quickAnswer: 'The Solid Brass Ruler is CNC-machined from solid brass with an etched metric and inch dual scale, available in 15cm, 20cm, and 30cm for corporate desk accessory and custom gift programs.',
     category: 'Desk Accessories',
     materials: ['Solid brass'],
     moq: 100,
@@ -36,7 +36,7 @@ async function main() {
       `/products/${FOLDER}/${PREFIX}-detail-3.avif`,
       `/products/${FOLDER}/${PREFIX}-lifestyle.avif`,
     ],
-    description: 'A solid brass desk rule in three sizes. The body is CNC-machined from solid brass, finished with a brushed surface that develops natural patina with handling over time. The scale is machine-etched — not printed — with metric and inch markings on the same face. A trapezoidal cross-section creates a beveled lower edge that holds paper flat and keeps the scale line visible while drawing. At 125g for the 15cm and 245g for the 30cm, the weight registers as a desk object, not an office supply. The flat upper face accepts laser engraving for company logos and text.',
+    description: 'A solid brass desk ruler in three sizes. The body is CNC-machined from solid brass, finished with a brushed surface that develops natural patina with handling over time. The scale is machine-etched — not printed — with metric and inch markings on the same face. A trapezoidal cross-section creates a beveled lower edge that holds paper flat and keeps the scale line visible while drawing. At 125g for the 15cm and 245g for the 30cm, the weight registers as a desk object, not an office supply. The flat upper face accepts laser engraving for company logos and text.',
     highlights: [
       'Solid brass construction — develops natural patina with handling, not a plated finish',
       'CNC-etched dual scale — metric and inch on one face, machine-cut marks resist wear and fading',
@@ -69,9 +69,10 @@ async function main() {
       { title: 'Solid brass, not plated', body: 'The weight difference between solid brass and brass-plated alternatives is detectable immediately. The 15cm version runs ~125g; a brass-plated aluminium ruler of the same dimensions would be 30–40g. For corporate desk gifting, solid brass signals material commitment in a way a coating on base metal cannot. The CNC-etched scale lines are cut into the surface rather than printed, so they will not fade or peel with regular use — a relevant durability point for items carried or handled daily.' },
       { title: 'Beveled cross-section for functional use', body: 'The trapezoidal cross-section creates a lower beveled edge that contacts paper along a thin line rather than a flat face. This reduces ink spread under the edge when ruling lines — relevant for architects, designers, or executive stationery contexts where the ruler will be used, not only displayed. It also provides a visual grip cue without adding a separate texture treatment.' },
     ],
-    keyInsight: 'Solid brass mass and CNC-etched scales make this a desk rule that reads as a material object rather than office stationery — the primary B2B use case is design, architecture, or executive desk gifting where weight and patina development are part of the product story.',
+    keyInsight: 'Solid brass mass and CNC-etched scales make this a desk ruler that reads as a material object rather than office stationery — the primary B2B use case is design, architecture, or executive desk gifting where weight and patina development are part of the product story.',
     seoKeywords: [
-      'solid brass desk rule',
+      'solid brass ruler',
+      'solid brass desk ruler',
       'custom engraved brass ruler',
       'brass desk ruler corporate gift',
       'CNC etched brass ruler',
@@ -84,7 +85,7 @@ async function main() {
     ],
   })
 
-  console.log('✓ WP-214 Solid Brass Desk Rule inserted.')
+  console.log('✓ WP-214 Solid Brass Ruler inserted.')
   await sql.end()
 }
 

@@ -13,11 +13,17 @@ import { trackViewItem } from '@/lib/analytics'
 
 type RouterTo = LinkProps['to']
 
+const PRODUCT_TITLE_OVERRIDES: Record<string, string> = {
+  'wp-214-solid-brass-desk-ruler': 'Solid Brass Ruler | Custom Engraved | Corporate Gift',
+  'wp-311-aluminium-edc-torch': 'Aluminium EDC Torch | 400lm IPX6 | Corporate Gift',
+}
+
 const PRODUCT_REDIRECTS: Record<string, string> = {
   'wp-207-carbon-fiber-magnetic-fidget-stick': 'wp-207-precision-brass-place-card-holder',
   'wp-308-titanium-edc-carabiner': 'wp-308-titanium-edc-keychain',
   'wp-402-pure-titanium-capsule-flask-150ml': 'wp-402-pure-titanium-capsule-bottle-150ml',
   'wp-406-pure-titanium-capsule-flask-200ml': 'wp-406-pure-titanium-capsule-bottle-200ml',
+  'wp-214-solid-brass-desk-rule': 'wp-214-solid-brass-desk-ruler',
 }
 
 export const Route = createFileRoute('/{-$locale}/products/$productId')({
@@ -40,7 +46,7 @@ export const Route = createFileRoute('/{-$locale}/products/$productId')({
   head: ({ loaderData }) => {
     if (!loaderData?.product) return {}
     const { product } = loaderData
-    const title = `${product.name} | Corporate Gift`
+    const title = PRODUCT_TITLE_OVERRIDES[product.id] ?? `${product.name} | Corporate Gift`
     const description = product.metaDescription ?? product.tagline
     return {
       meta: [
