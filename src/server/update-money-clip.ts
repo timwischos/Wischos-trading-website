@@ -30,7 +30,7 @@ async function main() {
         '/products/Stainless-Steel money-clip-01/Stainless-Steel money-clip-01-detail-3.avif',
         '/products/Stainless-Steel money-clip-01/Stainless-Steel money-clip-01-detail-4.avif',
       ],
-      moq: 50,
+      moq: 100,
       customizationOptions: ['Laser Engraving', 'Mirror Polish', 'Matte Electroplating', 'PVD Gold Finish'],
       highlights: [
         'Slim-Profile Efficiency: 8mm high-tension design ensures a secure hold for up to 8 cards or a stack of currency.',

@@ -478,7 +478,7 @@ function Article2Content() {
       <h2 style={prose.h2}>Which to Choose</h2>
       <p style={prose.p}>
         <strong style={prose.strong}>Choose laser engraving</strong> when the gift is a premium metal item intended to last, when your logo works well in monochrome, and especially if you are running a small-batch program or want to add individual names to the gifts. This is the gold standard for{' '}
-        <Link to={'/products' as RouterTo} search={{ category: 'Pens' } as never} style={prose.inlineLink}>pens</Link>
+        <Link to={'/products' as RouterTo} search={{ category: 'Writing Instruments' } as never} style={prose.inlineLink}>pens</Link>
         , desk accessories,{' '}
         <Link to={'/products' as RouterTo} search={{ category: 'EDC Accessories' } as never} style={prose.inlineLink}>daily-carry tools</Link>
         , and premium{' '}
@@ -840,7 +840,7 @@ function Article8Content() {
         <li style={prose.li}><strong style={prose.strong}>Works on:</strong> Stainless steel, aluminum, titanium, brass</li>
         <li style={prose.li}><strong style={prose.strong}>Laser engraving result:</strong> High contrast, very clean — one of the best surfaces for logo engraving</li>
         <li style={prose.li}><strong style={prose.strong}>Best for:</strong>{' '}
-          <Link to={'/products' as RouterTo} search={{ category: 'Pens' } as never} style={prose.inlineLink}>Writing instruments</Link>,{' '}
+          <Link to={'/products' as RouterTo} search={{ category: 'Writing Instruments' } as never} style={prose.inlineLink}>Writing instruments</Link>,{' '}
           <Link to={'/products' as RouterTo} search={{ category: 'EDC Accessories' } as never} style={prose.inlineLink}>daily-carry tools</Link>, key organisers — anything carried daily
         </li>
         <li style={prose.li}><strong style={prose.strong}>Limitation:</strong> The directional grain reads lighter or darker depending on lighting angle — worth noting for photography-heavy programmes</li>
@@ -910,7 +910,7 @@ function Article8Content() {
         <li style={prose.li}><strong style={prose.strong}>Works on:</strong> Stainless steel, titanium, most ferrous metals</li>
         <li style={prose.li}><strong style={prose.strong}>Laser engraving result:</strong> Clean contrast — the silver-grey of the exposed steel reads clearly against a dark PVD background</li>
         <li style={prose.li}><strong style={prose.strong}>Best for:</strong> Executive tier gifts, premium{' '}
-          <Link to={'/products' as RouterTo} search={{ category: 'Pens' } as never} style={prose.inlineLink}>writing instruments</Link>,{' '}
+          <Link to={'/products' as RouterTo} search={{ category: 'Writing Instruments' } as never} style={prose.inlineLink}>writing instruments</Link>,{' '}
           <Link to={'/products' as RouterTo} search={{ category: 'EDC Accessories' } as never} style={prose.inlineLink}>daily-carry tools</Link> where a sophisticated dark aesthetic is the brief
         </li>
         <li style={prose.li}><strong style={prose.strong}>Limitation:</strong> Adds 15–30% to unit cost versus brushed steel. Longer production lead time. Less suitable for complex curved geometries where film adhesion can be uneven</li>
@@ -2135,6 +2135,152 @@ Decision:
   )
 }
 
+function ArticleAllMetalVsMetalLedContent() {
+  const comparisonRows = [
+    ['Main contents', 'Every key item is metal', 'One metal anchor with non-metal companions'],
+    ['Best for', 'A consistent, durable material story across the whole set', 'A strong premium item with useful supporting pieces'],
+    ['Budget pattern', 'Higher baseline across the range', 'Spend concentrated on the anchor'],
+    ['Weight and freight', 'Usually heavier', 'Usually lighter'],
+    ['Sourcing', 'Often several metal product sources', 'Mixed materials; the anchor is the critical item'],
+    ['Packaging priority', 'Separate metal pieces and account for total weight', 'Protect the anchor and keep companions neat and coherent'],
+    ['Common mistake', 'Treating every metal item as equally useful', 'Letting weak companions lower the perceived quality of the anchor'],
+  ]
+
+  return (
+    <div style={prose.wrapper}>
+      <p style={prose.p}>
+        “Metal gift set” sounds specific until it reaches a quote.
+      </p>
+      <p style={prose.p}>
+        Does the client mean that every main item should be metal? Or do they want one metal piece to give the set its weight and character, with paper, fabric, or other materials doing the rest of the work?
+      </p>
+      <p style={prose.p}>
+        Those are two different projects. They lead to different product choices, factories, shipping weights, packaging requirements, and ultimately different prices. It is worth settling the question before sample work begins, because changing direction later usually means revisiting the whole quote rather than swapping one item.
+      </p>
+      <p style={prose.p}>
+        At Wischos, we use two plain labels to make the choice easier to discuss: <strong style={prose.strong}>all-metal</strong> and <strong style={prose.strong}>metal-led</strong>.
+      </p>
+
+      <h2 style={prose.h2}>What changes between the two</h2>
+      <p style={prose.p}>
+        An <strong style={prose.strong}>all-metal set</strong> keeps the main contents in metal. Think of a brass pen, a stainless-steel card case, and an anodised-aluminium notebook cover. The box and insert do not need to be metal; the point is that the objects the recipient uses have a more consistent finish and feel.
+      </p>
+      <p style={prose.p}>
+        A <strong style={prose.strong}>metal-led set</strong> starts with one metal anchor, then adds companions that suit the job. A brass pen with a paper notebook and waxed-canvas pouch is a good example. The pen provides the permanence and hand-feel; the notebook and pouch make the set more useful without spending the budget on metal where metal adds little.
+      </p>
+      <p style={prose.p}>
+        Neither is automatically more premium. A well-resolved metal-led set can work better as a complete set than an all-metal set built from unrelated items. The better question is: what does this particular gift need to do?
+      </p>
+
+      <ArticleImage
+        src="https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_1200/blog/blog-018/all-metal-sourcing-quote-v2"
+        alt="A brass pen, stainless-steel card case and aluminium notebook cover arranged as an all-metal corporate gift set"
+        caption="An all-metal set can create a coherent material story, but it also changes the quote, weight, and packaging specification."
+      />
+
+      <h2 style={prose.h2}>When all-metal earns its extra cost</h2>
+      <p style={prose.p}>
+        All-metal works best when the material itself is part of the message. A leadership gift, a long-service presentation, or a desk set for a small VIP group may call for a family of objects with the same durable, engineered feel. In that situation, matching materials and finishes can be worth paying for. Each item contributes to the impression; there is no obvious supporting piece.
+      </p>
+      <ul style={prose.ul}>
+        <li style={prose.li}><strong style={prose.strong}>More money is tied up in every item.</strong> Metal brings material, machining, finishing, and marking costs to every main component.</li>
+        <li style={prose.li}><strong style={prose.strong}>The set gets heavier quickly.</strong> That affects freight, especially when sets are being sent one by one rather than delivered in bulk.</li>
+        <li style={prose.li}><strong style={prose.strong}>More coordination may be needed.</strong> A brass pen, stainless-steel card case, and aluminium desk accessory can come from separate production sources. Samples, colours, finishes, and production dates all need to meet in the same place.</li>
+        <li style={prose.li}><strong style={prose.strong}>Packaging also needs more attention.</strong> Metal surfaces cannot be allowed to knock together in transit, and a heavier set needs an insert and outer carton that suit its actual weight.</li>
+      </ul>
+      <p style={prose.p}>
+        That does not make all-metal difficult. It simply means the brief needs to make room for the result it is asking for.
+      </p>
+
+      <h2 style={prose.h2}>When metal-led is the smarter structure</h2>
+      <p style={prose.p}>
+        Metal-led sets work when one object should carry the lasting impression and the rest of the set has a different role to play.
+      </p>
+      <p style={prose.p}>
+        For an onboarding kit, a good pen may be the item that stays on the new employee’s desk. The notebook is there to be written in; a pouch might make the kit easier to carry home. For a direct-mail campaign, keeping two useful companions in paper or textile can make the package lighter and more economical to send.
+      </p>
+      <p style={prose.p}>
+        This is not a case for filling the box with cheap extras. The anchor raises the standard for everything around it. A solid brass pen beside a thin, flimsy notebook makes the mismatch obvious. The companions do not have to be metal, but they do need to feel intentional: good paper, sensible construction, and colours and textures that belong together.
+      </p>
+      <ul style={prose.ul}>
+        <li style={prose.li}>The budget should be concentrated on one memorable item.</li>
+        <li style={prose.li}>The recipient needs materials metal cannot replace, such as paper or a carry pouch.</li>
+        <li style={prose.li}>A lighter set matters for postal fulfilment, conferences, or multi-address deliveries.</li>
+        <li style={prose.li}>The brief needs a warmer, more welcoming feel than an all-hardware presentation provides.</li>
+      </ul>
+
+      <ArticleImage
+        src="https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_1200/blog/blog-018/metal-led-companion-quality-v2"
+        alt="Brass pen with paper notebook and textile pouch arranged as a metal-led corporate gift set"
+        caption="In a metal-led set, the companions need to support the anchor rather than make it look over-specified."
+      />
+
+      <h2 style={prose.h2}>All-metal vs metal-led at a glance</h2>
+      <div style={{ overflowX: 'auto', marginBottom: '1.5rem' }}>
+        <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.9rem', minWidth: '620px' }}>
+          <thead>
+            <tr style={{ borderBottom: '2px solid #e0e0e0' }}>
+              <th style={{ textAlign: 'left', padding: '0.6rem 0.75rem', fontWeight: 600, color: '#1a1a1a' }}> </th>
+              <th style={{ textAlign: 'left', padding: '0.6rem 0.75rem', fontWeight: 600, color: '#1a1a1a' }}>All-metal</th>
+              <th style={{ textAlign: 'left', padding: '0.6rem 0.75rem', fontWeight: 600, color: '#1a1a1a' }}>Metal-led</th>
+            </tr>
+          </thead>
+          <tbody>
+            {comparisonRows.map(([label, allMetal, metalLed], index) => (
+              <tr key={label} style={{ borderBottom: '1px solid #f0f0f0', background: index % 2 ? '#fafafa' : 'white' }}>
+                <td style={{ padding: '0.6rem 0.75rem', color: '#1a1a1a', fontWeight: 600 }}>{label}</td>
+                <td style={{ padding: '0.6rem 0.75rem', color: '#3a3a3a', lineHeight: 1.55 }}>{allMetal}</td>
+                <td style={{ padding: '0.6rem 0.75rem', color: '#3a3a3a', lineHeight: 1.55 }}>{metalLed}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <h2 style={prose.h2}>Put the decision in the brief, not in the sample meeting</h2>
+      <p style={prose.p}>
+        The clearest briefs state the structure upfront. It can be as simple as:
+      </p>
+      <div style={prose.callout}>
+        <strong style={prose.strong}>Metal-led:</strong> brass pen as the anchor; paper notebook and textile pouch as companions; target FOB around US$X.
+      </div>
+      <p style={prose.p}>Or:</p>
+      <div style={prose.callout}>
+        <strong style={prose.strong}>All-metal:</strong> brass pen, stainless-steel card case, and aluminium notebook cover; matching satin finishes; target FOB around US$X.
+      </div>
+      <p style={prose.p}>
+        That one sentence gives the sourcing team a usable direction. From there, the practical details can be confirmed: who will receive it, how many are needed, when it must arrive, where it is shipping, and how the logo should be applied.
+      </p>
+
+      <ArticleImage
+        src="https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_1200/blog/blog-018/packaging-routes-and-freight-v2"
+        alt="Metal gift set in a fitted protective insert with packaging and freight planning materials"
+        caption="Set structure affects both the inner protection and the freight assumptions that belong in the quote."
+      />
+
+      <h2 style={prose.h2}>Start with the recipient’s use</h2>
+      <p style={prose.p}>
+        Research on promotional products points to usefulness as the main reason people keep them. PPAI’s 2021 consumer study found that 75.4% of recipients kept a branded product because it was useful, and 48.7% kept branded products for more than five years. ASI’s 2026 Ad Impressions Study estimates that one promotional product can generate about 3,300 lifetime impressions.
+      </p>
+      <p style={prose.p}>
+        Neither study tells us whether all-metal or metal-led sets perform better. They do reinforce the more useful test: build the set around items the recipient will keep using, then choose the material mix that supports that outcome.
+      </p>
+      <div style={prose.callout}>
+        Have a direction but not a finished specification? <Link to={'/blog/what-we-need-to-review-a-custom-metal-gift-project' as RouterTo} style={prose.inlineLink}>Our project review guide</Link> shows what to include in the first brief — a use case, quantity range, budget direction, deadline, and destination are enough to begin.
+      </div>
+
+      <h2 style={prose.h2}>Sources</h2>
+      <ul style={prose.ul}>
+        <li style={prose.li}><a href="https://www.ppai.org/media-hub/new-ppai-research-shows-why-consumers-take-and-keep-promo-products/" style={prose.inlineLink}>PPAI Consumer Study, 2021</a> — usefulness and retention data.</li>
+        <li style={prose.li}><a href="https://www.prnewswire.com/news-releases/asi-research-promotional-products-deliver-impressions-at-a-fraction-of-a-cent-outrank-all-other-ad-channels-302767274.html" style={prose.inlineLink}>ASI 2026 Global Ad Impressions Study</a> — lifetime impressions and advertiser-recall data.</li>
+      </ul>
+      <p style={{ ...prose.p, fontSize: '0.82rem', color: '#777' }}>
+        Image note: the visuals in this article are AI-generated editorial images created for explanation. They are not Wischos production samples or photographs from a specific customer project.
+      </p>
+    </div>
+  )
+}
+
 function ArticleMetalAnchorPieceContent() {
   return (
     <div style={prose.wrapper}>
@@ -2250,6 +2396,7 @@ function ArticleMetalAnchorPieceContent() {
 }
 
 const articleContent: Record<string, () => React.JSX.Element> = {
+  'all-metal-vs-metal-led-gift-sets': ArticleAllMetalVsMetalLedContent,
   'metal-anchor-piece-corporate-gift-set': ArticleMetalAnchorPieceContent,
   'aluminum-brass-steel-titanium-corporate-gifts': Article1Content,
   'laser-engraving-vs-color-printing-corporate-gifts': Article2Content,

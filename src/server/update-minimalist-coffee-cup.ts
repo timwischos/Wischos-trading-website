@@ -32,7 +32,7 @@ async function main() {
       `${BASE}/weighted-vacuum-insulated-office-tumbler-detail-3.avif`,
       `${BASE}/weighted-vacuum-insulated-office-tumbler-detail-4.avif`,
     ],
-    moq: 50,
+    moq: 100,
     customizationOptions: [
       'Full-Wrap Digital Printing on Fabric Sleeve',
       'Laser Engraving on Steel Base',

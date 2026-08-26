@@ -22,7 +22,7 @@ async function main() {
     tagline: 'Solid brass  |  Ø100mm × 4mm  |  118g  |  Satin finish',
     category: 'Desk Accessories',
     materials: ['Solid brass'],
-    moq: 19,
+    moq: 100,
     sortOrder: 53,
     active: true,
     heroImage: `/products/${FOLDER}/${PREFIX}-cover.avif`,
@@ -34,9 +34,9 @@ async function main() {
       `/products/${FOLDER}/${PREFIX}-lifestyle.avif`,
     ],
     metaDescription:
-      'Solid brass desk coaster, 100mm, 118g, satin finish. Laser-engraved logo available. MOQ 19 units. For corporate desk gifting programs.',
+      'Solid brass desk coaster, 100mm, 118g, satin finish. Laser-engraved logo available. MOQ 100 units. For corporate desk gifting programs.',
     quickAnswer:
-      'The Weighted Brass Coaster is a 100mm solid brass desk coaster (118g, satin finish) designed for corporate gifting programs — laser-engravable with a company logo, available from MOQ 19 units.',
+      'The Weighted Brass Coaster is a 100mm solid brass desk coaster (118g, satin finish) designed for corporate gifting programs — laser-engravable with a company logo, available from MOQ 100 units.',
     description:
       'The Weighted Brass Coaster is a 100mm solid brass desk coaster with a satin finish. At 118g, the weight comes entirely from the brass — no substrate, no filler — giving it a desk presence that keeps it in place. The flat face laser-engraves cleanly, with enough area for a logo, initials, or a date. Suitable for desk gift programs, client welcome kits, and executive gifting where a branded object needs to hold its position on a working surface — a custom metal corporate gift built for the desk, not the drawer.',
     highlights: [

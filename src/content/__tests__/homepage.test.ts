@@ -25,6 +25,13 @@ describe('homepage content', () => {
     expect(homepage.credibility.stats.length).toBeGreaterThanOrEqual(3)
   })
 
+  it('shows the current product and gift set range', () => {
+    expect(homepage.credibility.stats).toContainEqual({
+      value: '41 products',
+      label: 'across 10 gift set concepts',
+    })
+  })
+
   it('productPreview has exactly 3 items', () => {
     expect(homepage.productPreview.items).toHaveLength(3)
   })

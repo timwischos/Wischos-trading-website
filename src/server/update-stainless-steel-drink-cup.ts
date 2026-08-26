@@ -31,7 +31,7 @@ async function main() {
       `${BASE}/Stainless-Steel-Drink-Cup-01-detail-4.avif`,
       `${BASE}/Stainless-Steel-Drink-Cup-01-detail-5.avif`,
     ],
-    moq: 50,
+    moq: 100,
     customizationOptions: [
       'Laser Engraving on Steel Body',
       'Custom Sandblast Color Coating',

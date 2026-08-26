@@ -30,7 +30,7 @@ async function main() {
       `${BASE}/Titanium-Double-Layer-Insulated-Anti-Scalding-Water-Cup-01-detail-8.avif`,
       `${BASE}/Titanium-Double-Layer-Insulated-Anti-Scalding-Water-Cup-01-detail-9.avif`,
     ],
-    moq: 50,
+    moq: 100,
     customizationOptions: [
       'Laser Engraving on Titanium Body',
       'Ice-Crystal Surface Treatment',

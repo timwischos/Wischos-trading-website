@@ -10,6 +10,7 @@ const productSummaryColumns = {
   description: products.description,
   category: products.category,
   materials: products.materials,
+  moq: products.moq,
   heroImage: products.heroImage,
   images: products.images,
 }

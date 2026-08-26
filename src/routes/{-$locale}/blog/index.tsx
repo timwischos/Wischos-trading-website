@@ -4,6 +4,8 @@ import { blogPosts } from '@/content/blog'
 
 type RouterTo = LinkProps['to']
 
+const sortedBlogPosts = [...blogPosts].sort((a, b) => b.isoDate.localeCompare(a.isoDate))
+
 export const Route = createFileRoute('/{-$locale}/blog/')({
   head: () => ({
     meta: [
@@ -149,7 +151,7 @@ function BlogPage() {
       {/* Article cards */}
       <section style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 1.5rem 6rem' }}>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-          {blogPosts.map((post, i) => (
+          {sortedBlogPosts.map((post, i) => (
             <ArticleCard key={post.slug} post={post} index={i} />
           ))}
         </div>

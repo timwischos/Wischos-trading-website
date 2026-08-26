@@ -22,7 +22,7 @@ async function main() {
     tagline: 'Solid brass  |  75mm × 8mm  |  79g  |  Double-sided  |  Satin finish',
     category: 'Desk Accessories',
     materials: ['Solid brass'],
-    moq: 30,
+    moq: 100,
     sortOrder: 54,
     active: true,
     heroImage: `/products/${FOLDER}/${PREFIX}-cover.avif`,

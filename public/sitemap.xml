@@ -33,6 +33,11 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://wischosgift.com/blog/all-metal-vs-metal-led-gift-sets</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://wischosgift.com/blog/metal-anchor-piece-corporate-gift-set</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -93,7 +98,7 @@
     <priority>0.3</priority>
   </url>
 
-  <!-- Products (25 active) -->
+  <!-- Products (27 active) -->
   <url>
     <loc>https://wischosgift.com/products/wp-101-brass-crown-bolt-action-pen</loc>
     <changefreq>monthly</changefreq>
@@ -131,6 +136,11 @@
   </url>
   <url>
     <loc>https://wischosgift.com/products/wp-108-solid-brass-bolt-action-pen</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wischosgift.com/products/wp-109-solid-brass-inkless-pen</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -196,6 +206,11 @@
   </url>
   <url>
     <loc>https://wischosgift.com/products/wp-213-solid-brass-tealight-holder</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wischosgift.com/products/wp-215-brass-measurement-set</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -290,7 +305,7 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Gift Sets (9) -->
+  <!-- Gift Sets (10) -->
   <url>
     <loc>https://wischosgift.com/gift-sets</loc>
     <changefreq>monthly</changefreq>
@@ -338,6 +353,11 @@
   </url>
   <url>
     <loc>https://wischosgift.com/gift-sets/wgs-009-3-the-meeting-kit</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://wischosgift.com/gift-sets/wgs-010-5-the-blueprint</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

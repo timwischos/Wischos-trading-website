@@ -14,7 +14,7 @@ const fixture: DbProduct = {
   materials: ['Brass', 'Steel'],
   heroImage: 'https://example.com/hero.jpg',
   images: ['https://example.com/img1.jpg'],
-  moq: 50,
+  moq: 100,
   customizationOptions: ['Logo engraving'],
   sortOrder: 0,
   active: true,

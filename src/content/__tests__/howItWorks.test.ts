@@ -11,13 +11,12 @@ describe('howItWorks content', () => {
     expect(typeof howItWorks.samplePolicy.reference).toBe('string')
   })
 
-  it('leadTimes.samples includes 7 or 10', () => {
-    const samplesStr = howItWorks.leadTimes.samples
-    expect(samplesStr.includes('7') || samplesStr.includes('10')).toBe(true)
+  it('leadTimes.samples states that timing is confirmed per project', () => {
+    expect(howItWorks.leadTimes.samples).toContain('Confirmed per project')
   })
 
-  it('leadTimes.bulk includes 30', () => {
-    expect(howItWorks.leadTimes.bulk).toContain('30')
+  it('leadTimes.bulk communicates the current 25–35 day range', () => {
+    expect(howItWorks.leadTimes.bulk).toContain('25–35')
   })
 
   it('paymentTerms.method includes T/T', () => {

@@ -17,6 +17,25 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'all-metal-vs-metal-led-gift-sets',
+    title: 'All-Metal vs Metal-Led Gift Sets: Which Structure Fits Your Brief?',
+    metaTitle: 'All-Metal vs Metal-Led Gift Sets | Wischos Gift',
+    metaDescription:
+      'Compare all-metal and metal-led gift sets before requesting a quote: cost, weight, sourcing, packaging and the role each item plays.',
+    excerpt:
+      'A “metal gift set” can mean two very different things: every key piece in metal, or one metal anchor with supporting paper and textile companions.',
+    quickAnswer:
+      'Choose an all-metal gift set when every key item needs a consistent, durable material story. Choose a metal-led set when one strong metal anchor should carry the premium feel while lighter, useful companions suit the budget and use case.',
+    category: 'Gift Set Design',
+    readTime: '7 min read',
+    publishedAt: 'August 12, 2026',
+    isoDate: '2026-08-12',
+    heroImage:
+      'https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_1200/blog/blog-018/hero-all-metal-vs-metal-led-gift-sets-v2',
+    heroImageAlt: 'All-metal and metal-led corporate gift set configurations arranged side by side with brass, stainless steel, aluminium, paper and textile pieces',
+    heroImageCredit: 'AI-generated editorial visual for Wischos Gift',
+  },
+  {
     slug: 'metal-anchor-piece-corporate-gift-set',
     title: 'Metal as the Anchor: How to Structure a Corporate Gift Set Around One Strong Piece',
     metaTitle: 'Metal as the Anchor Piece: How to Structure a Corporate Gift Set',

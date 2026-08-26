@@ -21,7 +21,7 @@ async function main() {
     name: 'Titanium Alloy Keychain Capsule',
     tagline: 'Titanium alloy  |  Threaded waterproof seal  |  Three sizes  |  Sandblasted or natural finish',
     metaDescription: 'Custom engraved titanium alloy keychain capsule, threaded waterproof seal, three sizes. For corporate wellness and EDC gifting programs. Inquire for pricing.',
-    quickAnswer: 'The Titanium Alloy Keychain Capsule is a machined titanium alloy sealed container with a threaded cap and keychain loop, available in small (12×32mm, 6g), medium (16×42mm, 15g), and large (20×51mm, 26g) sizes, offered by Wischos Gift for Everyday Carry (EDC) and corporate gift programs.',
+    quickAnswer: 'The Titanium Alloy Keychain Capsule is a machined titanium alloy sealed container with a threaded cap and keychain loop, available in small (12×32mm, 6g), medium (16×42mm, 15g), and large (20×51mm, 26g) sizes for Everyday Carry (EDC) and corporate gift programs.',
     category: 'EDC Accessories',
     materials: ['Titanium alloy'],
     moq: 100,

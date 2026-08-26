@@ -15,7 +15,7 @@ const mockProduct: DbProduct = {
   materials: ['Brass'],
   heroImage: 'https://example.com/hero.jpg',
   images: ['https://example.com/img1.jpg', 'https://example.com/img2.jpg'],
-  moq: 50,
+  moq: 100,
   customizationOptions: ['Logo engraving'],
   sortOrder: 0,
   active: true,

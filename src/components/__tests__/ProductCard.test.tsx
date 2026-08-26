@@ -31,7 +31,7 @@ const mockProduct: DbProduct = {
   materials: ['Brass'],
   heroImage: 'https://example.com/hero.jpg',
   images: ['https://example.com/img1.jpg', 'https://example.com/img2.jpg'],
-  moq: 50,
+  moq: 100,
   customizationOptions: ['Logo engraving'],
   sortOrder: 0,
   active: true,
@@ -68,6 +68,6 @@ describe('ProductCard', () => {
     const router = createTestRouter(() => <ProductCard product={product} />)
     render(<RouterProvider router={router} />)
     await act(() => router.load())
-    expect(screen.getByText(/MOQ 50/i)).toBeTruthy()
+    expect(screen.getByText(/MOQ 100/i)).toBeTruthy()
   })
 })

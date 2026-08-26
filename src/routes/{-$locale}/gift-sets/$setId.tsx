@@ -113,6 +113,8 @@ function GiftSetDetailPage() {
             <img
               src={cloudinaryUrl(galleryImages[activeImg], { w: 1200 })}
               alt={set.imageAlts?.[activeImg] ?? `${set.name} — custom metal corporate gift set`}
+              fetchPriority="high"
+              loading="eager"
               style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
             />
           </div>

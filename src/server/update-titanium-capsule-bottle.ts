@@ -99,7 +99,7 @@ async function main() {
       `${BASE_150}/pure-titanium-capsule-bottle-150ml-detail-4.avif`,
       `${BASE_150}/pure-titanium-capsule-bottle-150ml-detail-5.avif`,
     ],
-    moq: 50,
+    moq: 100,
     customizationOptions: sharedCustomizationOptions,
     highlights: sharedHighlights,
     description: sharedDescription,

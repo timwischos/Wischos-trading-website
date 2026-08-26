@@ -29,7 +29,7 @@ async function main() {
       `${BASE}/Industrial-Mini-EDC-Pry-Bar-Keychain-01-detail-2.avif`,
       `${BASE}/Industrial-Mini-EDC-Pry-Bar-Keychain-01-detail-3.avif`,
     ],
-    moq: 50,
+    moq: 100,
     customizationOptions: ['Laser Engraving', 'Custom Packaging'],
     highlights: [
       'Everyday Utility: Purpose-built for the small daily jobs — opening shipping boxes, removing staples, and light wedging — always within reach on your keychain.',

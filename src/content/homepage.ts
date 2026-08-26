@@ -99,7 +99,7 @@ export const homepage = {
     kicker: 'At a Glance',
     heading: 'What to expect',
     stats: [
-      { value: '39 products', label: 'across 9 gift set concepts' },
+      { value: '41 products', label: 'across 10 gift set concepts' },
       { value: '25–35 days', label: 'Production lead time' },
       { value: 'Logo-ready', label: 'Engraving, printing, packaging' },
       { value: 'One contact', label: 'Inquiry to delivery' },

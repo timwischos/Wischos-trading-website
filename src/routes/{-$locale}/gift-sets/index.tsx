@@ -55,7 +55,7 @@ export const Route = createFileRoute('/{-$locale}/gift-sets/')({
   component: FeaturedPage,
 })
 
-function GiftSetCard({ set }: { set: GiftSet }) {
+function GiftSetCard({ set, priority }: { set: GiftSet; priority?: boolean }) {
   const [hovered, setHovered] = useState(false)
   const hasHover = Boolean(set.hoverImage)
 
@@ -71,7 +71,8 @@ function GiftSetCard({ set }: { set: GiftSet }) {
         <img
           src={cloudinaryUrl(set.coverImage, { w: 700 })}
           alt={set.name}
-          loading="lazy"
+          loading={priority ? 'eager' : 'lazy'}
+          fetchPriority={priority ? 'high' : 'auto'}
           style={{
             width: '100%', height: '100%', objectFit: 'cover', display: 'block',
             transition: 'opacity 0.4s ease',
@@ -175,8 +176,8 @@ function FeaturedPage() {
           style={{ display: 'grid', borderLeft: '1px solid var(--grid-color)' }}
           className="grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
         >
-          {giftSets.map((set) => (
-            <GiftSetCard key={set.sku} set={set} />
+          {giftSets.map((set, i) => (
+            <GiftSetCard key={set.sku} set={set} priority={i === 0} />
           ))}
           {/* More coming card */}
           <div style={{ borderRight: '1px solid var(--grid-color)', borderBottom: '1px solid var(--grid-color)', display: 'flex', flexDirection: 'column' }}>

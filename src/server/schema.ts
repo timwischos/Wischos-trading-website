@@ -28,7 +28,7 @@ export const products = pgTable('products', {
   materials: text('materials').array().notNull(),
   heroImage: text('hero_image').notNull(),
   images: text('images').array().notNull(),
-  moq: integer('moq').notNull().default(50),
+  moq: integer('moq').notNull().default(100),
   highlights: text('highlights').array(),
   customizationOptions: text('customization_options').array().notNull(),
   specifications: jsonb('specifications').$type<Array<{ label: string; value: string }>>(),
@@ -47,5 +47,5 @@ export const products = pgTable('products', {
 export type DbProduct = typeof products.$inferSelect
 export type ProductSummary = Pick<
   DbProduct,
-  'id' | 'name' | 'tagline' | 'description' | 'category' | 'materials' | 'heroImage' | 'images'
+  'id' | 'name' | 'tagline' | 'description' | 'category' | 'materials' | 'moq' | 'heroImage' | 'images'
 >
