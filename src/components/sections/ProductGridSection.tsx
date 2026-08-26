@@ -76,9 +76,7 @@ export function ProductCard({ product }: ProductCardProps) {
         <p style={{ fontSize: '0.75rem', color: '#6b6b6b', letterSpacing: '0.04em', marginBottom: '0.5rem' }}>
           {product.tagline}
         </p>
-        <p style={{ fontSize: '0.68rem', color: '#888', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
-          MOQ {product.moq}
-        </p>
+
       </div>
     </Link>
   )
