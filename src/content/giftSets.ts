@@ -730,6 +730,79 @@ export const giftSets: GiftSet[] = [
       'Slim push stainless steel business card case, brushed finish, laser-engraved — custom corporate gift',
     ],
   },
+  {
+    id: 'wgs-010-5-the-blueprint',
+    sku: 'WGS-010-5',
+    name: 'The Blueprint',
+    procurementCategory: 'Brass Precision Desk Gift Set',
+    tagline: 'Five solid brass tools. Your mark on each.',
+    definition:
+      'The Blueprint is a five-piece solid brass desk gift set combining a brass measurement set — ruler, right-angle triangle, isosceles triangle, and semicircle protractor — with a solid brass inkless pen. All five pieces are unplated, laser-engravable H65/H62 brass, shipped in a magnetic rigid gift box for corporate desk gifting programs.',
+    heroCopy:
+      'A custom metal corporate gift set built around solid brass across five pieces. The measurement set covers the desk with four coordinated instruments: a 165mm ruler, a right-angle triangle, an isosceles triangle, and a semicircle protractor — each cut from solid H65 brass with laser-etched scales and a hand-brushed finish. The brass inkless pen writes without ink using a replaceable metal alloy tip, with vertical grip grooves machined into the H62 barrel. Both products are unplated solid brass. They arrive in the same tone and develop patina together with handling — consistent at delivery, distinct over time. Each of the five pieces accepts laser engraving for a company logo.',
+    sellingPoints: [
+      {
+        title: 'Laser-Etched Scales on All Four Measurement Pieces',
+        body: 'Scale markings on the ruler, both triangles, and protractor are laser-etched into the H65 brass surface — not silk-screened or printed. Printed scales fade with desk handling; etched marks cut into the material and maintain legibility in daily use. Each piece also has a flat face for a separate logo engraving, giving five distinct branded surfaces across the full set.',
+      },
+      {
+        title: 'Inkless Pen — No Cartridges, Replaceable Tip',
+        body: 'The brass inkless pen writes using a dense metal alloy tip that deposits trace particles on paper instead of ink. No refills, no caps, no cartridges to reorder. When the tip wears, it unscrews and replaces — for bulk programs, spare tip sets are available alongside the main order. The H62 brass barrel has machined vertical grip grooves and accepts laser engraving on the surface.',
+      },
+      {
+        title: 'Five Unplated Brass Pieces from One Production Batch',
+        body: 'All five pieces use unplated solid brass — H65 for the measurement set, H62 for the pen — sourced from a single production batch with the same hand-brushed finish. Unplated brass develops natural patina with handling; the full set arrives in a uniform warm tone and evolves together over months of desk use. Material consistency across five pieces is visible at the moment of unboxing.',
+      },
+    ],
+    components: [
+      {
+        sku: 'WP-215',
+        name: 'Solid Brass Measurement Set',
+        productId: 'wp-215-solid-brass-measurement-set',
+        imageIndex: 1,
+      },
+      {
+        sku: 'WP-109',
+        name: 'Solid Brass Inkless Pen',
+        productId: 'wp-109-solid-brass-inkless-pen',
+        imageIndex: 2,
+      },
+    ],
+    targetBuyer:
+      'Architecture practices, engineering consultancies, technology companies, financial services, and professional services firms — desk gift programs where material weight and precision workmanship carry client appreciation value.',
+    packaging: 'Magnetic Rigid Gift Box + Flocked EVA Insert',
+    cta: 'Five engravable brass surfaces. One program.',
+    fob: '$32–50',
+    sourcingNotes: [
+      {
+        title: 'Why a measurement set and inkless pen belong in the same program',
+        body: 'Desk gift sets perform best when pieces share a use-case context rather than coming from different product categories. The ruler, triangles, and protractor are instruments for working on a surface; the inkless pen records what those instruments define. Both categories serve the same desk workflow. Adding a writing tool to a measurement set avoids the scenario where a set of precision instruments sits as display objects — the pen gives the full set a daily writing function that keeps it in active use.',
+      },
+      {
+        title: 'Solid H65 and H62 brass without plating — what this means at delivery',
+        body: 'Most corporate desk gift sets use plated metals: brass-plated zinc, chrome-plated steel, or anodised aluminium. The Blueprint uses unplated H65 and H62 solid brass across all five pieces. At delivery, the tone is warmer and denser than plated alternatives. The surface develops a natural amber patina with daily handling rather than flaking or dulling at wear points. For buyers specifying desk items that recipients keep and use for months, solid brass is traceable in a way plated metals are not.',
+      },
+      {
+        title: 'What the standard packaging delivers',
+        body: 'The set ships in a magnetic rigid gift box with a flocked EVA insert. The insert has five precision-cut recesses — four for the measurement instruments and one for the inkless pen. The magnetic closure gives a clean opening action without a loose lid. The greyboard core wrapped in matte art paper holds its edges under normal shelf and transit conditions. All five pieces are seated separately in the insert, keeping brass surfaces unmarked in shipping.',
+      },
+      {
+        title: 'Logo on the box',
+        body: 'On a matte art-paper surface, hot foil stamping — gold, silver, or copper — creates strong contrast and holds under normal handling. The foil is applied under heat and pressure. For a quieter finish, blind debossing presses the logo into the surface for a tone-on-tone tactile mark. Both methods work on the lid face and can extend to the box sides. The magnetic closure box format means the lid face carries the most visual weight at the first moment of gifting.',
+      },
+      {
+        title: 'Upgrade options',
+        body: 'Soft-touch lamination replaces the standard matte surface with a velvet-feel coating. A printed interior liner can carry a welcome message, brand statement, or QR code at the first opening. A vegetable-tanned leather roll pouch is available as an alternative packaging format — the ruler, both triangles, and protractor seat in the roll slots, with the pen in the fourth position. If your brief calls for a different configuration, reach out and we\'ll advise.',
+      },
+    ],
+    coverImage: '/products/WGS-010-5-The-Blueprint/The-Blueprint-cover.avif',
+    hoverImage: '/products/WGS-010-5-The-Blueprint/The-Blueprint-hover.avif',
+    images: [
+      '/products/WGS-010-5-The-Blueprint/The-Blueprint-cover.avif',
+      '/products/WGS-010-5-The-Blueprint/The-Blueprint-detail-1.avif',
+      '/products/WGS-010-5-The-Blueprint/The-Blueprint-detail-2.avif',
+    ],
+  },
 ]
 
 export function getGiftSetById(id: string): GiftSet | undefined {
