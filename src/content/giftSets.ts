@@ -759,13 +759,13 @@ export const giftSets: GiftSet[] = [
         sku: 'WP-215',
         name: 'Solid Brass Measurement Set',
         productId: 'wp-215-solid-brass-measurement-set',
-        imageIndex: 1,
+        imageIndex: 2,
       },
       {
         sku: 'WP-109',
         name: 'Solid Brass Inkless Pen',
         productId: 'wp-109-solid-brass-inkless-pen',
-        imageIndex: 2,
+        imageIndex: 1,
       },
     ],
     targetBuyer:
