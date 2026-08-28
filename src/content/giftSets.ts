@@ -770,7 +770,7 @@ export const giftSets: GiftSet[] = [
     ],
     targetBuyer:
       'Architecture practices, engineering consultancies, technology companies, financial services, and professional services firms — desk gift programs where material weight and precision workmanship carry client appreciation value.',
-    packaging: 'Magnetic Rigid Gift Box + Flocked EVA Insert',
+    packaging: 'Crazy Horse Leather Roll Pouch',
     cta: 'Five engravable brass surfaces. One program.',
     fob: '$32–50',
     sourcingNotes: [
@@ -784,15 +784,15 @@ export const giftSets: GiftSet[] = [
       },
       {
         title: 'What the standard packaging delivers',
-        body: 'The set ships in a magnetic rigid gift box with a flocked EVA insert. The insert has five precision-cut recesses — four for the measurement instruments and one for the inkless pen. The magnetic closure gives a clean opening action without a loose lid. The greyboard core wrapped in matte art paper holds its edges under normal shelf and transit conditions. All five pieces are seated separately in the insert, keeping brass surfaces unmarked in shipping.',
+        body: 'The set ships in a crazy horse leather roll pouch with five individual slots — one for each brass piece. The ruler, both triangles, and semicircle protractor each seat in a dedicated slot; the inkless pen sits in the fifth position. The pouch rolls closed and secures with a leather strap tie. Crazy horse leather has a waxy pull-up surface: handling pressure creates lighter marks that contrast against the base tone. The pouch develops visible character with use, matching the natural patina behaviour of the unplated brass inside.',
       },
       {
-        title: 'Logo on the box',
-        body: 'On a matte art-paper surface, hot foil stamping — gold, silver, or copper — creates strong contrast and holds under normal handling. The foil is applied under heat and pressure. For a quieter finish, blind debossing presses the logo into the surface for a tone-on-tone tactile mark. Both methods work on the lid face and can extend to the box sides. The magnetic closure box format means the lid face carries the most visual weight at the first moment of gifting.',
+        title: 'Logo on the pouch',
+        body: 'On crazy horse leather, a company logo is blind-debossed into the front face of the pouch — pressed into the surface under heat and pressure for a permanent tone-on-tone tactile mark. No ink, no foil. The waxy surface holds debossed detail cleanly. Position and logo size confirmed at order stage.',
       },
       {
         title: 'Upgrade options',
-        body: 'Soft-touch lamination replaces the standard matte surface with a velvet-feel coating. A printed interior liner can carry a welcome message, brand statement, or QR code at the first opening. A vegetable-tanned leather roll pouch is available as an alternative packaging format — the ruler, both triangles, and protractor seat in the roll slots, with the pen in the fourth position. If your brief calls for a different configuration, reach out and we\'ll advise.',
+        body: 'A magnetic rigid gift box with flocked EVA insert is available as an alternative format for programs where display packaging takes priority over daily carry. If your brief calls for a different configuration, reach out and we\'ll advise.',
       },
     ],
     coverImage: '/products/WGS-010-5-The-Blueprint/The-Blueprint-cover.avif',
