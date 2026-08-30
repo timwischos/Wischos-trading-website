@@ -13,6 +13,7 @@ const productCategories = [
 
 const companyLinks = [
   { label: 'About', href: '/about' },
+  { label: 'Blog', href: '/blog' },
   { label: 'How It Works', href: '/about#how-it-works' },
   { label: 'Duty & Shipping', href: '/duty-and-shipping' },
   { label: 'FAQ', href: '/faq' },

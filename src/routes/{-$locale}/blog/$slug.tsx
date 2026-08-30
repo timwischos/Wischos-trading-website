@@ -2,6 +2,9 @@ import type { CSSProperties } from 'react'
 import { createFileRoute, notFound, Link, type LinkProps } from '@tanstack/react-router'
 import { buildOgMeta, buildCanonical } from '@/content/meta'
 import { blogPosts } from '@/content/blog'
+import { mdxComponents } from '@/components/blog/MdxComponents'
+
+const mdxArticles = import.meta.glob('../../../content/articles/*.mdx', { eager: true }) as Record<string, { default: React.FC<{ components?: Record<string, any> }> }>
 
 type RouterTo = LinkProps['to']
 
@@ -2521,9 +2524,12 @@ function ArticlePage() {
 
       {/* Article body */}
       <div style={{ maxWidth: '860px', margin: '0 auto', padding: '0 1.5rem' }}>
-        {ContentComponent ? <ContentComponent /> : (
-          <p style={prose.p}>Article content coming soon.</p>
-        )}
+        {(() => {
+          const MdxContent = mdxArticles[`../../../content/articles/${post.slug}.mdx`]?.default
+          if (MdxContent) return <MdxContent components={mdxComponents} />
+          if (ContentComponent) return <ContentComponent />
+          return <p style={prose.p}>Article content coming soon.</p>
+        })()}
       </div>
 
       {/* More articles */}
