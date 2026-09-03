@@ -64,7 +64,7 @@ export function SiteHeader() {
           </Link>
 
           {/* Desktop navigation */}
-          <nav style={{ display: 'flex', alignItems: 'center', gap: '2.5rem' }} className="hidden md:flex">
+          <nav style={{ alignItems: 'center', gap: '2.5rem' }} className="hidden md:flex">
             {navigation.links.map((link) =>
               link.label === 'Products' ? (
                 /* Products — hover dropdown */
@@ -172,7 +172,7 @@ export function SiteHeader() {
           </div>
 
           {/* Mobile: search + menu toggle */}
-          <div className="md:hidden" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+          <div className="flex md:hidden" style={{ alignItems: 'center', gap: '0.75rem' }}>
             <button
               onClick={() => setSearchOpen(o => !o)}
               style={{ background: 'none', border: 'none', cursor: 'pointer', padding: '0.25rem', lineHeight: 0, color: '#555' }}

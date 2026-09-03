@@ -31,9 +31,8 @@ export const blogPosts: BlogPost[] = [
     publishedAt: 'September 3, 2026',
     isoDate: '2026-09-03',
     heroImage:
-      'https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_1200/blog/blog-019/hero-gift-card-or-physical-gift',
-    heroImageAlt: 'Unbranded gift card and metal corporate gift set presented side by side on a modern office desk',
-    heroImageCredit: 'AI-generated editorial visual for Wischos Gift',
+      'https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_1200/blog/blog-019/hero-gift-card-or-physical-gift-v2',
+    heroImageAlt: 'An HR manager presenting a gift box to an employee, with a gift card envelope on the table',
   },
   {
     slug: 'all-metal-vs-metal-led-gift-sets',
