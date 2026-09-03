@@ -17,6 +17,25 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'end-of-year-staff-gifts-guide',
+    title: 'End-of-Year Staff Gifts: Gift Card or Physical Gift?',
+    metaTitle: 'End-of-Year Staff Gifts: A Guide for HR Teams',
+    metaDescription:
+      'Gift card or physical gift? Desk-based or field team? A decision guide for HR teams choosing year-end staff gifts before Q4.',
+    excerpt:
+      'The year-end staff gift decision comes down to two questions most teams skip: gift card or physical gift, and does the format match how your staff actually works?',
+    quickAnswer:
+      'Gift cards suit dispersed or field-based teams. For desk-based staff, a physical gift with daily utility earns long-term brand presence. Either way, if you want offshore custom production for December, the ordering window is open now.',
+    category: 'Gifting Operations',
+    readTime: '7 min read',
+    publishedAt: 'September 3, 2026',
+    isoDate: '2026-09-03',
+    heroImage:
+      'https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_1200/blog/blog-019/hero-gift-card-or-physical-gift',
+    heroImageAlt: 'Unbranded gift card and metal corporate gift set presented side by side on a modern office desk',
+    heroImageCredit: 'AI-generated editorial visual for Wischos Gift',
+  },
+  {
     slug: 'all-metal-vs-metal-led-gift-sets',
     title: 'All-Metal vs Metal-Led Gift Sets: Which Structure Fits Your Brief?',
     metaTitle: 'All-Metal vs Metal-Led Gift Sets | Wischos Gift',

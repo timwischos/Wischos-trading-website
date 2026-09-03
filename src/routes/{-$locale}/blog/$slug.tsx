@@ -243,6 +243,50 @@ export const Route = createFileRoute('/{-$locale}/blog/$slug')({
               },
             ]
           : []),
+        // FAQPage schema for the year-end staff gifts article
+        ...(post.slug === 'end-of-year-staff-gifts-guide'
+          ? [{
+              type: 'application/ld+json',
+              children: JSON.stringify({
+                '@context': 'https://schema.org',
+                '@type': 'FAQPage',
+                mainEntity: [
+                  {
+                    '@type': 'Question',
+                    name: 'Should we give employees a gift card or a physical gift?',
+                    acceptedAnswer: {
+                      '@type': 'Answer',
+                      text: 'Choose a gift card when flexibility and easy distribution matter most. Choose a physical gift when it has a clear use and the programme is intended to create longer-term recognition. For mixed workforces, using different formats for different working patterns may be more appropriate than sending everyone the same item.',
+                    },
+                  },
+                  {
+                    '@type': 'Question',
+                    name: 'Can we add each employee\'s name to the gift?',
+                    acceptedAnswer: {
+                      '@type': 'Answer',
+                      text: 'Yes. You will need to supply a verified name file before engraving begins. Check spelling, capitalisation, preferred names and special characters carefully. Changes made after artwork approval may delay production or require items to be remade.',
+                    },
+                  },
+                  {
+                    '@type': 'Question',
+                    name: 'Should everyone receive the same year-end gift?',
+                    acceptedAnswer: {
+                      '@type': 'Answer',
+                      text: 'For a first large-scale programme, one gift is easier to order, distribute and explain. If you divide the programme, do it for a reason recipients will understand — such as office-based versus field-based work. Tiers based purely on seniority or tenure can create comparisons that overshadow the gesture itself.',
+                    },
+                  },
+                  {
+                    '@type': 'Question',
+                    name: 'What are the tax implications of staff gifts?',
+                    acceptedAnswer: {
+                      '@type': 'Answer',
+                      text: 'Tax treatment depends on the recipient\'s jurisdiction, the value of the gift and how the programme is structured. Some markets provide exemptions for minor benefits below a threshold; others may treat the gift as taxable remuneration. Confirm the position with a qualified tax adviser before approving the final budget.',
+                    },
+                  },
+                ],
+              }),
+            }]
+          : []),
       ],
     }
   },
