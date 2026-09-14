@@ -256,7 +256,7 @@ export const Route = createFileRoute('/{-$locale}/blog/$slug')({
                     name: 'Should we give employees a gift card or a physical gift?',
                     acceptedAnswer: {
                       '@type': 'Answer',
-                      text: 'Choose a gift card when flexibility and easy distribution matter most. Choose a physical gift when it has a clear use and the programme is intended to create longer-term recognition. For mixed workforces, using different formats for different working patterns may be more appropriate than sending everyone the same item.',
+                      text: 'Choose a gift card when flexibility and easy distribution matter most. Choose a physical gift when it has a clear use and the programme is intended to create longer-term recognition. For mixed workforces, compare three routes: one broad-use item, one shared set with a useful anchor, or a small number of formats for different working patterns.',
                     },
                   },
                   {
@@ -272,7 +272,7 @@ export const Route = createFileRoute('/{-$locale}/blog/$slug')({
                     name: 'Should everyone receive the same year-end gift?',
                     acceptedAnswer: {
                       '@type': 'Answer',
-                      text: 'For a first large-scale programme, one gift is easier to order, distribute and explain. If you divide the programme, do it for a reason recipients will understand — such as office-based versus field-based work. Tiers based purely on seniority or tenure can create comparisons that overshadow the gesture itself.',
+                      text: 'For a first large-scale programme, one gift or one shared set is easier to order, distribute and explain. A shared set can work when it has a broad-use anchor and useful companion pieces; employees do not need to use every component. If working patterns are too different for one set, divide the programme for a reason recipients will understand, such as office-based versus field-based work. Tiers based purely on seniority or tenure can create comparisons that overshadow the gesture itself.',
                     },
                   },
                   {
