@@ -256,7 +256,7 @@ export const Route = createFileRoute('/{-$locale}/blog/$slug')({
                     name: 'Should we give employees a gift card or a physical gift?',
                     acceptedAnswer: {
                       '@type': 'Answer',
-                      text: 'Choose a gift card when flexibility and easy distribution matter most. Choose a physical gift when it has a clear use and the programme is intended to create longer-term recognition. For mixed workforces, compare three routes: one broad-use item, one shared set with a useful anchor, or a small number of formats for different working patterns.',
+                      text: 'Choose a gift card when recipient choice and easier distribution matter most, especially when no physical item has a credible shared use. Choose a physical gift when it fits the recipients\' daily routines and the programme is intended to create longer-term recognition. Having a fixed desk is not a requirement; the relevant question is where and how the item will be used. For mixed workforces, compare three routes: one broad-use item, one shared set with a useful anchor, or a small number of formats for different working patterns.',
                     },
                   },
                   {
@@ -264,7 +264,7 @@ export const Route = createFileRoute('/{-$locale}/blog/$slug')({
                     name: 'Can we add each employee\'s name to the gift?',
                     acceptedAnswer: {
                       '@type': 'Answer',
-                      text: 'Yes. You will need to supply a verified name file before engraving begins. Check spelling, capitalisation, preferred names and special characters carefully. Changes made after artwork approval may delay production or require items to be remade.',
+                      text: 'Yes. You will need to supply a verified name file before engraving begins. Check spelling, capitalisation, preferred names and special characters carefully. Agree how the name file will be transferred, who can access it and when it will be deleted after production. Changes made after artwork approval may delay production or require items to be remade.',
                     },
                   },
                   {
