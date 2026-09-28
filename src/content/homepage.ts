@@ -1,9 +1,9 @@
 export const homepage = {
   hero: {
     kicker: 'Custom Metal Gift Sets & Promotional Programs · China Sourcing · Metal Specialist',
-    headline: 'Custom Metal Gift Sets your client will actually keep.',
+    headline: 'Custom Metal Gift Sets Recipients Will Actually Keep.',
     subheadline:
-      'Across the metal family — brass, titanium, stainless steel, aluminium, and beyond — curated into sellable sets and individual SKUs for promotional distributor programs. Customized to your brief. 25–35 day production, one accountable contact.',
+      'Across the metal family — brass, titanium, stainless steel, aluminium, and beyond — curated into gift sets and individual SKUs for distributor programs and direct corporate procurement. Customized to your brief. 25–35 day production, one accountable contact.',
     cta: 'Send an Inquiry',
   },
   valueProps: {
@@ -125,7 +125,7 @@ export const homepage = {
     ],
   },
   cta: {
-    heading: "Let's build a gift program your client can approve",
+    heading: "Let's build a gift program worth presenting.",
     body: "Tell us the recipient profile, quantity, target budget, branding needs, and delivery timeline. We'll recommend a set direction, sample path, and production plan.",
     buttonLabel: 'Send an Inquiry',
   },
