@@ -13,6 +13,7 @@ import { Route as Char123LocaleChar125RouteImport } from './routes/{-$locale}'
 import { Route as ThankYouRouteImport } from './routes/thank-you'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as ForDistributorsRouteImport } from './routes/for-distributors'
+import { Route as SolutionsNewHireOnboardingRouteImport } from './routes/solutions/new-hire-onboarding'
 import { Route as DutyAndShippingRouteImport } from './routes/duty-and-shipping'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as Char123LocaleChar125GiftSetsRouteImport } from './routes/{-$locale}/gift-sets'
@@ -54,6 +55,12 @@ const ForDistributorsRoute = ForDistributorsRouteImport.update({
   path: '/for-distributors',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SolutionsNewHireOnboardingRoute =
+  SolutionsNewHireOnboardingRouteImport.update({
+    id: '/solutions/new-hire-onboarding',
+    path: '/solutions/new-hire-onboarding',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const DutyAndShippingRoute = DutyAndShippingRouteImport.update({
   id: '/duty-and-shipping',
   path: '/duty-and-shipping',
@@ -171,6 +178,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/duty-and-shipping': typeof DutyAndShippingRoute
   '/for-distributors': typeof ForDistributorsRoute
+  '/solutions/new-hire-onboarding': typeof SolutionsNewHireOnboardingRoute
   '/privacy': typeof PrivacyRoute
   '/thank-you': typeof ThankYouRoute
   '/{-$locale}': typeof Char123LocaleChar125RouteWithChildren
@@ -197,6 +205,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/duty-and-shipping': typeof DutyAndShippingRoute
   '/for-distributors': typeof ForDistributorsRoute
+  '/solutions/new-hire-onboarding': typeof SolutionsNewHireOnboardingRoute
   '/privacy': typeof PrivacyRoute
   '/thank-you': typeof ThankYouRoute
   '/{-$locale}': typeof Char123LocaleChar125RouteWithChildren
@@ -222,6 +231,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/duty-and-shipping': typeof DutyAndShippingRoute
   '/for-distributors': typeof ForDistributorsRoute
+  '/solutions/new-hire-onboarding': typeof SolutionsNewHireOnboardingRoute
   '/privacy': typeof PrivacyRoute
   '/thank-you': typeof ThankYouRoute
   '/{-$locale}': typeof Char123LocaleChar125RouteWithChildren
@@ -250,6 +260,7 @@ export interface FileRouteTypes {
     | '/'
     | '/duty-and-shipping'
     | '/for-distributors'
+    | '/solutions/new-hire-onboarding'
     | '/privacy'
     | '/thank-you'
     | '/{-$locale}'
@@ -276,6 +287,7 @@ export interface FileRouteTypes {
     | '/'
     | '/duty-and-shipping'
     | '/for-distributors'
+    | '/solutions/new-hire-onboarding'
     | '/privacy'
     | '/thank-you'
     | '/{-$locale}'
@@ -300,6 +312,7 @@ export interface FileRouteTypes {
     | '/'
     | '/duty-and-shipping'
     | '/for-distributors'
+    | '/solutions/new-hire-onboarding'
     | '/privacy'
     | '/thank-you'
     | '/{-$locale}'
@@ -327,6 +340,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   DutyAndShippingRoute: typeof DutyAndShippingRoute
   ForDistributorsRoute: typeof ForDistributorsRoute
+  SolutionsNewHireOnboardingRoute: typeof SolutionsNewHireOnboardingRoute
   PrivacyRoute: typeof PrivacyRoute
   ThankYouRoute: typeof ThankYouRoute
   Char123LocaleChar125Route: typeof Char123LocaleChar125RouteWithChildren
@@ -367,6 +381,13 @@ declare module '@tanstack/react-router' {
       path: '/for-distributors'
       fullPath: '/for-distributors'
       preLoaderRoute: typeof ForDistributorsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solutions/new-hire-onboarding': {
+      id: '/solutions/new-hire-onboarding'
+      path: '/solutions/new-hire-onboarding'
+      fullPath: '/solutions/new-hire-onboarding'
+      preLoaderRoute: typeof SolutionsNewHireOnboardingRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/duty-and-shipping': {
@@ -576,6 +597,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   DutyAndShippingRoute: DutyAndShippingRoute,
   ForDistributorsRoute: ForDistributorsRoute,
+  SolutionsNewHireOnboardingRoute: SolutionsNewHireOnboardingRoute,
   PrivacyRoute: PrivacyRoute,
   ThankYouRoute: ThankYouRoute,
   Char123LocaleChar125Route: Char123LocaleChar125RouteWithChildren,

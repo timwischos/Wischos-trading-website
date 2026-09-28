@@ -281,6 +281,19 @@ function GiftSetDetailPage() {
             <span style={{ letterSpacing: '0.1em', textTransform: 'uppercase', fontSize: '0.62rem' }}>Ideal for: </span>
             {set.targetBuyer}
           </p>
+
+          {/* Onboarding programme link — only for The First Day */}
+          {set.id === 'wgs-006-3-the-first-day' && (
+            <p style={{ fontSize: '0.75rem', color: '#888', lineHeight: 1.6, borderTop: '1px solid var(--grid-color)', paddingTop: '1rem' }}>
+              Planning a wider onboarding programme?{' '}
+              <a
+                href="/solutions/new-hire-onboarding"
+                style={{ color: '#B87333', textDecoration: 'none', fontWeight: 500 }}
+              >
+                See our full onboarding guide →
+              </a>
+            </p>
+          )}
         </div>
       </div>
 
