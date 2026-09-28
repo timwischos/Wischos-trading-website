@@ -367,6 +367,18 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- Solutions and partner pages -->
+  <url>
+    <loc>https://wischosgift.com/for-distributors</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wischosgift.com/solutions/new-hire-onboarding</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Markets country landing pages -->
   <url>
     <loc>https://wischosgift.com/markets/australia</loc>
