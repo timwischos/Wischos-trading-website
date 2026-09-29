@@ -21,7 +21,12 @@ agent-skills/export-customer-development/
 *.mp4
 *.mov
 public/products/
-public/images/
+public/images/*
+!public/images/blog/
+public/images/blog/*
+!public/images/blog/blog-020/
+public/images/blog/blog-020/*
+!public/images/blog/blog-020/*.svg
 public/how-it-works.mp4
 public/wischos-logo.png
 
@@ -50,6 +55,7 @@ Wischos-logo-red*.png
 
 # Working notes & client research (private, not for repo)
 临时/
+客户系统/
 
 # Internal documentation, catalogues, prompts, prospect notes (not website code)
 docs/

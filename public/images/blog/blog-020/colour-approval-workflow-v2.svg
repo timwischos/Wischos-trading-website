@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="700" viewBox="0 0 1600 700" role="img" aria-labelledby="title desc">
+  <title id="title">Four-stage colour approval workflow</title>
+  <desc id="desc">A line diagram showing the sequence from defining the finish brief to inspecting process samples, reviewing the assembled set and retaining an approved reference.</desc>
+  <defs>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#e9e4dc" stroke-width="1"/>
+    </pattern>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10Z" fill="#B87333"/>
+    </marker>
+    <style>
+      .eyebrow { font: 600 18px Arial, sans-serif; letter-spacing: 3px; fill: #B87333; }
+      .headline { font: 600 50px Georgia, serif; fill: #111111; }
+      .number { font: 700 16px Arial, sans-serif; fill: #ffffff; }
+      .step { font: 700 22px Arial, sans-serif; letter-spacing: 1.2px; fill: #171717; }
+      .copy { font: 18px Arial, sans-serif; fill: #625e58; }
+      .micro { font: 600 12px Arial, sans-serif; letter-spacing: 1px; fill: #77716a; }
+      .line { fill: none; stroke: #222222; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+      .soft { fill: none; stroke: #8e8880; stroke-width: 2; stroke-linecap: round; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="700" fill="#fbfaf7"/>
+  <rect x="0" y="0" width="1600" height="700" fill="url(#grid)" opacity="0.65"/>
+  <rect x="56" y="50" width="64" height="5" fill="#B87333"/>
+  <text x="56" y="91" class="eyebrow">APPROVAL WORKFLOW</text>
+  <text x="56" y="149" class="headline">From colour name to retained reference</text>
+  <text x="56" y="184" class="copy">Each stage answers a different question. Skipping one moves uncertainty into production.</text>
+
+  <path d="M358 387H438M742 387H822M1126 387H1206" stroke="#B87333" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <g transform="translate(56 245)">
+    <rect width="302" height="360" rx="8" fill="#ffffff" stroke="#d7d0c6"/>
+    <circle cx="34" cy="34" r="18" fill="#B87333"/><text x="29" y="40" class="number">1</text>
+    <rect x="72" y="44" width="158" height="178" rx="3" class="line"/>
+    <path d="M94 78H205M94 105H183M94 177H205M94 196H169" class="soft"/>
+    <rect x="94" y="127" width="28" height="28" fill="#252a2e"/>
+    <rect x="132" y="127" width="28" height="28" fill="#777b7d"/>
+    <rect x="170" y="127" width="28" height="28" fill="#171717"/>
+    <path d="M231 175l37-62M243 184l37-62" class="line"/>
+    <text x="28" y="267" class="step">DEFINE</text>
+    <text x="28" y="297" class="micro">MATERIAL + FINISH BRIEF</text>
+    <text x="28" y="329" class="copy">Name every substrate,</text>
+    <text x="28" y="352" class="copy">process and visual role.</text>
+  </g>
+
+  <g transform="translate(440 245)">
+    <rect width="302" height="360" rx="8" fill="#ffffff" stroke="#d7d0c6"/>
+    <circle cx="34" cy="34" r="18" fill="#B87333"/><text x="29" y="40" class="number">2</text>
+    <path d="M118 62h66l24 38H94zM151 100v34" class="line"/>
+    <path d="M95 135h112" stroke="#B87333" stroke-width="3"/>
+    <rect x="59" y="158" width="73" height="64" rx="3" fill="#252a2e"/>
+    <rect x="143" y="158" width="73" height="64" rx="3" fill="#0c0c0c"/>
+    <rect x="59" y="232" width="73" height="25" rx="3" fill="#858787"/>
+    <rect x="143" y="232" width="73" height="25" rx="3" fill="#191919"/>
+    <text x="28" y="267" class="step">SAMPLE</text>
+    <text x="28" y="297" class="micro">PROCESS-SPECIFIC PARTS</text>
+    <text x="28" y="329" class="copy">Review real surfaces</text>
+    <text x="28" y="352" class="copy">under consistent light.</text>
+  </g>
+
+  <g transform="translate(824 245)">
+    <rect width="302" height="360" rx="8" fill="#ffffff" stroke="#d7d0c6"/>
+    <circle cx="34" cy="34" r="18" fill="#B87333"/><text x="29" y="40" class="number">3</text>
+    <path d="M58 130l32-54h122l32 54" class="line"/>
+    <rect x="49" y="130" width="204" height="122" rx="5" class="line"/>
+    <rect x="70" y="151" width="86" height="76" rx="3" fill="#252a2e"/>
+    <rect x="168" y="151" width="57" height="35" rx="3" fill="#111111"/>
+    <path d="M178 207h36" stroke="#777b7d" stroke-width="12" stroke-linecap="round"/>
+    <text x="28" y="267" class="step">ASSEMBLE</text>
+    <text x="28" y="297" class="micro">SET-LEVEL REVIEW</text>
+    <text x="28" y="329" class="copy">Judge colour, gloss,</text>
+    <text x="28" y="352" class="copy">texture and hierarchy together.</text>
+  </g>
+
+  <g transform="translate(1208 245)">
+    <rect width="336" height="360" rx="8" fill="#ffffff" stroke="#d7d0c6"/>
+    <circle cx="34" cy="34" r="18" fill="#B87333"/><text x="29" y="40" class="number">4</text>
+    <path d="M66 92h143l38 38v120H66z" class="line"/>
+    <path d="M209 92v38h38" class="line"/>
+    <rect x="93" y="146" width="54" height="54" rx="3" fill="#252a2e"/>
+    <rect x="159" y="146" width="61" height="24" rx="3" fill="#111111"/>
+    <path d="M169 189h42" stroke="#858787" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="256" cy="216" r="34" fill="#B87333"/>
+    <path d="M239 217l11 11 23-27" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="28" y="267" class="step">RETAIN</text>
+    <text x="28" y="297" class="micro">APPROVED REFERENCE</text>
+    <text x="28" y="329" class="copy">Keep the assembled set</text>
+    <text x="28" y="352" class="copy">for bulk and final review.</text>
+  </g>
+
+  <text x="56" y="657" class="micro">EDITORIAL DIAGRAM · NOT A FACTORY TEST RECORD</text>
+</svg>

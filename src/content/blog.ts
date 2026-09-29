@@ -17,6 +17,26 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'corporate-black-metal-gift-set-colour-matching',
+    title: 'Why "Corporate Black" Rarely Matches Across a Metal Gift Set',
+    metaTitle: 'Why Black Looks Different Across Metal Gift Sets',
+    metaDescription:
+      'Why does black look different on aluminium, steel, titanium and packaging? Learn colour matching across materials for a coordinated corporate gift set.',
+    excerpt:
+      'A digital mockup makes black look consistent across every component. Physical samples tell a different story: one reads blue-black, another warm and reflective, the titanium looks grey, and the box absorbs light entirely.',
+    quickAnswer:
+      'Black rarely looks identical across anodised aluminium, coated steel, titanium and printed packaging because each surface reflects light differently. Approve components together, define acceptable variation by material, and aim for a coordinated set rather than an unsupported exact match.',
+    category: 'Gift Set Design',
+    readTime: '9 min read',
+    publishedAt: 'September 29, 2026',
+    isoDate: '2026-09-29',
+    heroImage:
+      'https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_1200/blog/blog-020/hero-corporate-black-material-mismatch-v1',
+    heroImageAlt:
+      'Open black corporate gift set showing a matte aluminium cover, dark reflective card case, natural titanium pen and soft-touch presentation box under one light',
+    heroImageCredit: 'AI-generated editorial visual for Wischos Gift',
+  },
+  {
     slug: 'end-of-year-staff-gifts-guide',
     title: 'End-of-Year Staff Gifts: Gift Card or Physical Gift?',
     metaTitle: 'End-of-Year Staff Gifts: A Guide for HR Teams',
