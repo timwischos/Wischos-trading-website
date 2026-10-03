@@ -2,6 +2,9 @@
   "name": "wischos-trading-website",
   "private": true,
   "type": "module",
+  "engines": {
+    "node": "22.x"
+  },
   "imports": {
     "#/*": "./src/*"
   },
