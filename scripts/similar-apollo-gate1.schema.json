@@ -1,0 +1,38 @@
+{
+  "type": "object",
+  "required": ["companies"],
+  "properties": {
+    "companies": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "company",
+          "official_website",
+          "official_website_verified",
+          "gate1_result",
+          "gate1_reason",
+          "core_business",
+          "source_urls"
+        ],
+        "properties": {
+          "id": {"type": "integer"},
+          "company": {"type": "string"},
+          "location_input": {"type": "string"},
+          "official_website": {"type": "string"},
+          "official_website_verified": {"type": "boolean"},
+          "website_match_evidence": {"type": "string"},
+          "gate1_result": {"type": "string", "enum": ["Pass", "Reject", "Review"]},
+          "gate1_reason": {"type": "string"},
+          "core_business": {"type": "string"},
+          "homepage_evidence": {"type": "string"},
+          "linkedin_company_url": {"type": "string"},
+          "linkedin_evidence": {"type": "string"},
+          "source_urls": {"type": "array", "items": {"type": "string"}},
+          "caveats": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    }
+  }
+}
