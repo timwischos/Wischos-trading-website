@@ -1,0 +1,4 @@
+interface:
+  display_name: "邮箱客户跟进"
+  short_description: "按需分析邮箱并结合 Vault 客户档案给出跟进建议"
+  default_prompt: "分析指定客户或邮件范围，并结合 Wischos Vault 客户档案给出下一步跟进建议；不要发送邮件。"

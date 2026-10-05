@@ -1,0 +1,182 @@
+{
+  "type": "object",
+  "properties": {
+    "companies": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "integer" },
+          "company": { "type": "string" },
+          "official_website": { "type": "string" },
+          "official_website_verified": { "type": "boolean" },
+          "website_match_evidence": { "type": "string" },
+          "gate1_result": { "type": "string", "enum": ["Pass", "Reject"] },
+          "gate1_reason": { "type": "string" },
+          "country": { "type": "string" },
+          "city_region": { "type": "string" },
+          "founded_year": { "type": ["integer", "null"] },
+          "employee_range": { "type": "string" },
+          "core_business": { "type": "string" },
+          "supply_chain_role": {
+            "type": "string",
+            "enum": ["End buyer", "Dealer/Decorator", "Distributor/Reseller", "Importer/Trader", "Brand owner", "Platform/Company store", "Manufacturer/OEM", "Service agency", "Unknown"]
+          },
+          "supply_chain_position_explanation": { "type": "string" },
+          "buys_from": { "type": "string" },
+          "sells_to": { "type": "string" },
+          "business_model_tags": { "type": "array", "items": { "type": "string" } },
+          "product_lines": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "category": { "type": "string" },
+                "materials": { "type": "string" },
+                "metal_presence": { "type": "string", "enum": ["Yes", "No", "Partial", "Unknown"] },
+                "procurement_model": { "type": "string" },
+                "evidence": { "type": "string" }
+              },
+              "required": ["category", "metal_presence"]
+            }
+          },
+          "metal_products": { "type": "array", "items": { "type": "string" } },
+          "executive_gift_sets": { "type": "string" },
+          "executive_gift_singles": { "type": "string" },
+          "client_industries": { "type": "array", "items": { "type": "string" } },
+          "named_clients_or_cases": { "type": "array", "items": { "type": "string" } },
+          "contact_hooks": { "type": "array", "items": { "type": "string" } },
+          "association_and_trade_show_evidence": { "type": "array", "items": { "type": "string" } },
+          "sourcing_import_signals": { "type": "array", "items": { "type": "string" } },
+          "customs_platform_checks": {
+            "type": "object",
+            "properties": {
+              "importyeti": { "type": "string" },
+              "customs_report": { "type": "string" },
+              "52wmb": { "type": "string" },
+              "volza": { "type": "string" },
+              "importgenius": { "type": "string" },
+              "panjiva": { "type": "string" },
+              "datamyne": { "type": "string" },
+              "tradesns": { "type": "string" }
+            }
+          },
+          "contacts": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": { "type": "string" },
+                "title": { "type": "string" },
+                "decision_power": { "type": "string" },
+                "email": { "type": "string" },
+                "phone": { "type": "string" },
+                "linkedin_url": { "type": "string" },
+                "evidence_strength": { "type": "string", "enum": ["Strong", "Medium", "Weak"] },
+                "source_url": { "type": "string" },
+                "contact_channel": { "type": "string" },
+                "verification": { "type": "string" }
+              },
+              "required": ["name", "title", "evidence_strength", "verification"]
+            }
+          },
+          "potential_procurement_needs": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "need": { "type": "string" },
+                "probability": { "type": "string", "enum": ["High", "Medium", "Low", "Unknown"] },
+                "evidence": { "type": "string" }
+              },
+              "required": ["need", "probability", "evidence"]
+            }
+          },
+          "pain_points": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "pain": { "type": "string" },
+                "evidence_or_inference": { "type": "string" },
+                "confidence": { "type": "string", "enum": ["High", "Medium", "Low"] }
+              },
+              "required": ["pain", "evidence_or_inference", "confidence"]
+            }
+          },
+          "china_supplier_entry_angles": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "rank": { "type": "integer" },
+                "angle": { "type": "string" },
+                "why": { "type": "string" },
+                "product_scene": { "type": "string" },
+                "risk": { "type": "string" }
+              },
+              "required": ["rank", "angle", "why", "product_scene", "risk"]
+            }
+          },
+          "supplier_switch_hypothesis": { "type": "string" },
+          "structural_risks": { "type": "array", "items": { "type": "string" } },
+          "gate2_grade": { "type": "string", "enum": ["A", "B", "B-", "C", "D", "Reject"] },
+          "target_customer": { "type": "boolean" },
+          "decision_reason": { "type": "string" },
+          "fit_score": { "type": "integer", "minimum": 0, "maximum": 100 },
+          "fit_breakdown": {
+            "type": "object",
+            "properties": {
+              "product_fit": { "type": "integer" },
+              "buyer_role_fit": { "type": "integer" },
+              "evidence_strength": { "type": "integer" },
+              "procurement_potential": { "type": "integer" },
+              "reachability": { "type": "integer" },
+              "market_value": { "type": "integer" },
+              "supplier_fit": { "type": "integer" },
+              "risk_adjustment": { "type": "integer" }
+            }
+          },
+          "value_score": { "type": "integer", "minimum": 0, "maximum": 100 },
+          "value_breakdown": {
+            "type": "object",
+            "properties": {
+              "annual_procurement": { "type": "integer" },
+              "margin_quality": { "type": "integer" },
+              "strategic_value": { "type": "integer" },
+              "cooperation_depth": { "type": "integer" },
+              "conversion_access": { "type": "integer" },
+              "capability_fit": { "type": "integer" },
+              "relationship_efficiency": { "type": "integer" },
+              "risk_adjustment": { "type": "integer" }
+            }
+          },
+          "value_tier": { "type": "string" },
+          "account_type": { "type": "string" },
+          "recommended_action": { "type": "string" },
+          "research_sources": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "title": { "type": "string" },
+                "url": { "type": "string" },
+                "supports": { "type": "string" }
+              },
+              "required": ["title", "url", "supports"]
+            }
+          },
+          "unknowns": { "type": "array", "items": { "type": "string" } }
+        },
+        "required": [
+          "id", "company", "official_website", "official_website_verified", "gate1_result", "gate1_reason",
+          "core_business", "supply_chain_role", "supply_chain_position_explanation", "product_lines",
+          "contacts", "potential_procurement_needs", "pain_points", "china_supplier_entry_angles",
+          "gate2_grade", "target_customer", "decision_reason", "fit_score", "fit_breakdown", "value_score", "value_breakdown",
+          "value_tier", "recommended_action", "research_sources", "unknowns"
+        ]
+      }
+    }
+  },
+  "required": ["companies"]
+}
