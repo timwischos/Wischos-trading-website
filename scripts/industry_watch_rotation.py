@@ -61,6 +61,22 @@ def hold_keys():
     return keys
 
 
+LI_RE = re.compile(r"https?://(?:[a-z]{2,3}\.)?linkedin\.com/company/[A-Za-z0-9%_\-.]+")
+
+
+def linkedin_url(profile_path):
+    """First company-page URL found in the customer's profile folder, if any."""
+    if not isinstance(profile_path, str) or not profile_path.strip():
+        return ""
+    p = Path(profile_path.replace("/mnt/d/", "D:/"))
+    files = [p] if p.is_file() else sorted(p.glob("*.md")) if p.is_dir() else []
+    for f in files:
+        m = LI_RE.search(f.read_text(encoding="utf-8", errors="ignore"))
+        if m:
+            return m.group(0).rstrip(".")
+    return ""
+
+
 def main():
     args = sys.argv[1:]
     n = int(args[0]) if args and args[0].isdigit() else 18
@@ -92,12 +108,13 @@ def main():
     pick = pd.concat([act, rest])
 
     print(f"池子 {len(df)} 家（其中跟进中 {int(df['active'].sum())}），今日 {len(pick)} 家\n")
-    print("| 公司 | ID | 级 | 市场 | 官网 | 阶段 | 上次扫描 | 限制 |")
-    print("|---|---|---|---|---|---|---|---|")
+    print("| 公司 | ID | 级 | 市场 | 官网 | LinkedIn 公司页 | 阶段 | 上次扫描 | 限制 |")
+    print("|---|---|---|---|---|---|---|---|---|")
     for _, r in pick.iterrows():
         stage = str(r["当前阶段"])[:30] if pd.notna(r["当前阶段"]) else ""
         dom = r["官网域名"] if pd.notna(r["官网域名"]) else "（无，需搜索）"
-        print(f"| {r['标准公司名']} | {r['客户ID']} | {r['评级']} | {str(r['国家/地区'])[:20]} | {dom} | {stage} "
+        li = linkedin_url(r["正式档案路径"]) or "（档案里没有，需查找）"
+        print(f"| {r['标准公司名']} | {r['客户ID']} | {r['评级']} | {str(r['国家/地区'])[:20]} | {dom} | {li} | {stage} "
               f"| {r['last'] or '从未'} | {'⚠️联系限制' if r['hold'] else ''} |")
 
 
