@@ -71,3 +71,8 @@ scripts/wgs_packaging_excel_build/
 tmp/
 __pycache__/
 .claude/
+
+# Customer research data and generated media (kept local)
+reports/pppc-natcon-2026-*
+scripts/build_similar_apollo_gate3_agent_a.mjs
+Claude outputs/
