@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="130mm" height="130mm" viewBox="0 0 130 130">
+  <title>Brass 45 degree drafting triangle 90 x 90 x 125 x 2.5 mm</title>
+  <desc>1:1 engineering SVG for a brass 45 degree drafting triangle with 90 millimeter legs, 125 millimeter hypotenuse, and 2.5 millimeter thickness.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="4" markerHeight="4" refX="2" refY="2" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L4,2 L0,4 Z" fill="#555"/>
+    </marker>
+    <style>
+      text { font-family: Arial, sans-serif; fill: #222; font-size: 4px; }
+      .label { font-size: 5px; font-weight: 700; }
+      .part { fill: #c99a3b; fill-opacity: 0.72; stroke: #222; stroke-width: 0.45; }
+      .inner { fill: none; stroke: #222; stroke-width: 0.3; stroke-dasharray: 1.5 1.5; }
+      .dim { stroke: #555; stroke-width: 0.3; fill: none; marker-start: url(#arrow); marker-end: url(#arrow); }
+      .leader { stroke: #555; stroke-width: 0.25; fill: none; }
+    </style>
+  </defs>
+
+  <text x="10" y="8" class="label">Brass 45 degree drafting triangle</text>
+  <text x="10" y="14">Size: 90 x 90 mm legs, 125 mm hypotenuse, 2.5 mm thick</text>
+
+  <path d="M25 25 L115 115 L25 115 Z" class="part"/>
+  <path d="M41 63 L77 99 L41 99 Z" class="inner"/>
+
+  <text x="44" y="86">45 degrees</text>
+  <text x="25" y="121">corner down orientation for pouch</text>
+
+  <line x1="25" y1="121" x2="115" y2="121" class="dim"/>
+  <line x1="25" y1="115" x2="25" y2="124" class="leader"/>
+  <line x1="115" y1="115" x2="115" y2="124" class="leader"/>
+  <text x="65" y="128">90 mm</text>
+
+  <line x1="18" y1="25" x2="18" y2="115" class="dim"/>
+  <line x1="21" y1="25" x2="25" y2="25" class="leader"/>
+  <line x1="21" y1="115" x2="25" y2="115" class="leader"/>
+  <text x="10" y="75" transform="rotate(-90 10 75)">90 mm</text>
+
+  <line x1="121" y1="31" x2="31" y2="121" class="dim"/>
+  <line x1="115" y1="25" x2="121" y2="31" class="leader"/>
+  <line x1="25" y1="115" x2="31" y2="121" class="leader"/>
+  <text x="82" y="62" transform="rotate(-45 82 62)">125 mm hypotenuse</text>
+</svg>

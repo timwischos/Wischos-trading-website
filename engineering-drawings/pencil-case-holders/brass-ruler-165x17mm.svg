@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="205mm" height="57mm" viewBox="0 0 205 57">
+  <title>Brass ruler 165 x 17 x 2.5 mm</title>
+  <desc>1:1 engineering SVG for a brass ruler measuring 165 millimeters long, 17 millimeters wide, and 2.5 millimeters thick.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="4" markerHeight="4" refX="2" refY="2" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L4,2 L0,4 Z" fill="#555"/>
+    </marker>
+    <style>
+      text { font-family: Arial, sans-serif; fill: #222; font-size: 4px; }
+      .label { font-size: 5px; font-weight: 700; }
+      .part { fill: #c99a3b; stroke: #222; stroke-width: 0.45; }
+      .mark { stroke: #222; stroke-width: 0.3; }
+      .dim { stroke: #555; stroke-width: 0.3; fill: none; marker-start: url(#arrow); marker-end: url(#arrow); }
+      .leader { stroke: #555; stroke-width: 0.25; fill: none; }
+    </style>
+  </defs>
+
+  <text x="10" y="8" class="label">Brass ruler</text>
+  <text x="10" y="14">Size: 165 x 17 x 2.5 mm</text>
+
+  <rect x="20" y="22" width="165" height="17" rx="1.2" class="part"/>
+
+  <g>
+    <line x1="28" y1="22" x2="28" y2="27" class="mark"/>
+    <line x1="36" y1="22" x2="36" y2="25" class="mark"/>
+    <line x1="44" y1="22" x2="44" y2="27" class="mark"/>
+    <line x1="52" y1="22" x2="52" y2="25" class="mark"/>
+    <line x1="60" y1="22" x2="60" y2="27" class="mark"/>
+    <line x1="68" y1="22" x2="68" y2="25" class="mark"/>
+    <line x1="76" y1="22" x2="76" y2="27" class="mark"/>
+    <line x1="84" y1="22" x2="84" y2="25" class="mark"/>
+    <line x1="92" y1="22" x2="92" y2="27" class="mark"/>
+    <line x1="100" y1="22" x2="100" y2="25" class="mark"/>
+    <line x1="108" y1="22" x2="108" y2="27" class="mark"/>
+    <line x1="116" y1="22" x2="116" y2="25" class="mark"/>
+    <line x1="124" y1="22" x2="124" y2="27" class="mark"/>
+    <line x1="132" y1="22" x2="132" y2="25" class="mark"/>
+    <line x1="140" y1="22" x2="140" y2="27" class="mark"/>
+    <line x1="148" y1="22" x2="148" y2="25" class="mark"/>
+    <line x1="156" y1="22" x2="156" y2="27" class="mark"/>
+    <line x1="164" y1="22" x2="164" y2="25" class="mark"/>
+    <line x1="172" y1="22" x2="172" y2="27" class="mark"/>
+  </g>
+
+  <line x1="20" y1="47" x2="185" y2="47" class="dim"/>
+  <line x1="20" y1="40" x2="20" y2="50" class="leader"/>
+  <line x1="185" y1="40" x2="185" y2="50" class="leader"/>
+  <text x="93" y="53">165 mm</text>
+
+  <line x1="193" y1="22" x2="193" y2="39" class="dim"/>
+  <line x1="185" y1="22" x2="196" y2="22" class="leader"/>
+  <line x1="185" y1="39" x2="196" y2="39" class="leader"/>
+  <text x="197" y="32" transform="rotate(90 197 32)">17 mm</text>
+
+  <text x="20" y="19">Thickness: 2.5 mm</text>
+</svg>

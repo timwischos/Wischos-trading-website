@@ -1,0 +1,420 @@
+{
+  "surface": "report",
+  "manifest": {
+    "version": 1,
+    "surface": "report",
+    "title": "Wischos U.I.S.C. 产品线扩充建议",
+    "description": "基于39款在售产品、9套礼盒、U.I.S.C.原则及五个目标市场信号的选品决策报告。",
+    "generatedAt": "2026-08-15T12:00:00+08:00",
+    "charts": [
+      {
+        "id": "candidate_priority_chart",
+        "title": "候选产品优先级",
+        "subtitle": "8款通过U.I.S.C.最低门槛的候选；满分25分并扣除重叠与执行风险",
+        "showDescription": true,
+        "type": "bar",
+        "dataset": "shortlist",
+        "sourceId": "selection_model",
+        "valueFormat": "number",
+        "layout": "full",
+        "maxRows": 8,
+        "encodings": {
+          "x": { "field": "chart_label", "type": "nominal", "label": "候选产品" },
+          "y": { "field": "priority", "type": "quantitative", "label": "优先级（分）" },
+          "tooltip": [
+            { "field": "useful", "type": "quantitative", "label": "Useful" },
+            { "field": "interesting", "type": "quantitative", "label": "Interesting" },
+            { "field": "substantial", "type": "quantitative", "label": "Substantial" },
+            { "field": "cohesive", "type": "quantitative", "label": "Cohesive" },
+            { "field": "market", "type": "quantitative", "label": "市场广度" },
+            { "field": "deductions", "type": "quantitative", "label": "扣分" },
+            { "field": "phase", "type": "text", "label": "建议阶段" }
+          ]
+        }
+      }
+    ],
+    "tables": [
+      {
+        "id": "category_mix",
+        "title": "现有产品结构",
+        "subtitle": "39款在售SKU；Desk Accessories与EDC合计占59.0%",
+        "dataset": "category_mix",
+        "sourceId": "live_catalog",
+        "defaultSort": { "field": "active_skus", "direction": "desc" },
+        "density": "spacious",
+        "layout": "full",
+        "columns": [
+          { "field": "category", "label": "现有分类", "type": "text" },
+          { "field": "active_skus", "label": "在售SKU", "format": "number" },
+          { "field": "share", "label": "产品占比", "format": "percent" },
+          { "field": "interpretation", "label": "扩充含义", "type": "text" }
+        ]
+      },
+      {
+        "id": "shortlist",
+        "title": "候选产品U.I.S.C.评估",
+        "subtitle": "每项1–5分；总分另扣现有重叠与执行风险，属于方向性优先级而非销量预测",
+        "dataset": "shortlist",
+        "sourceId": "selection_model",
+        "defaultSort": { "field": "priority", "direction": "desc" },
+        "density": "dense",
+        "layout": "full",
+        "columns": [
+          { "field": "product", "label": "候选产品", "type": "text" },
+          { "field": "useful", "label": "U", "format": "number" },
+          { "field": "interesting", "label": "I", "format": "number" },
+          { "field": "substantial", "label": "S", "format": "number" },
+          { "field": "cohesive", "label": "C", "format": "number" },
+          { "field": "market", "label": "市场广度", "format": "number" },
+          { "field": "deductions", "label": "扣分", "format": "number" },
+          { "field": "priority", "label": "优先级", "format": "number" },
+          { "field": "phase", "label": "建议", "type": "text" }
+        ]
+      },
+      {
+        "id": "roadmap",
+        "title": "分阶段产品家族",
+        "subtitle": "先用四款低重叠、低合规风险产品验证，再扩到四个清晰的使用场景",
+        "dataset": "roadmap",
+        "sourceId": "roadmap_model",
+        "defaultSort": { "field": "sequence", "direction": "asc" },
+        "density": "spacious",
+        "layout": "full",
+        "columns": [
+          { "field": "sequence", "label": "顺序", "format": "number" },
+          { "field": "family", "label": "产品家族", "type": "text" },
+          { "field": "products", "label": "新增选择", "type": "text" },
+          { "field": "buyer", "label": "主要客户场景", "type": "text" },
+          { "field": "existing_pairing", "label": "可带动的现有产品", "type": "text" }
+        ]
+      },
+      {
+        "id": "gift_set_paths",
+        "title": "新产品与现有SKU的礼盒路径",
+        "subtitle": "每个新产品至少要能与两款现有SKU讲出同一个使用故事",
+        "dataset": "gift_set_paths",
+        "sourceId": "gift_set_paths_model",
+        "defaultSort": { "field": "set_name", "direction": "asc" },
+        "density": "spacious",
+        "layout": "full",
+        "columns": [
+          { "field": "set_name", "label": "礼盒概念", "type": "text" },
+          { "field": "new_anchor", "label": "新增锚点", "type": "text" },
+          { "field": "current_skus", "label": "搭配现有SKU", "type": "text" },
+          { "field": "story", "label": "单一使用故事", "type": "text" }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "id": "live_catalog",
+        "label": "Wischos live product catalogue extract",
+        "path": "reports/product-line-expansion-usic-2026-08-15/category-mix.sql"
+      },
+      {
+        "id": "gift_sets",
+        "label": "Wischos current gift-set definitions",
+        "path": "src/content/giftSets.ts"
+      },
+      {
+        "id": "selection_standard",
+        "label": "Wischos U.I.S.C. selection standard",
+        "path": "src/content/homepage.ts"
+      },
+      {
+        "id": "selection_model",
+        "label": "U.I.S.C. candidate scoring and decision notes",
+        "path": "reports/product-line-expansion-usic-2026-08-15/candidate-priority.sql"
+      },
+      {
+        "id": "roadmap_model",
+        "label": "Product-family roadmap decision rows",
+        "path": "reports/product-line-expansion-usic-2026-08-15/product-family-roadmap.sql"
+      },
+      {
+        "id": "gift_set_paths_model",
+        "label": "Gift-set expansion decision rows",
+        "path": "reports/product-line-expansion-usic-2026-08-15/gift-set-paths.sql"
+      },
+      {
+        "id": "ppai_2026",
+        "label": "PPAI Product Power 2026",
+        "href": "https://www.ppai.org/media-hub/product-power-2026-what-consumers-want-next-2/"
+      },
+      {
+        "id": "au_travel",
+        "label": "Promotion Products Australia — travel products",
+        "href": "https://www.promotionproducts.com.au/category/outdoor/travel-products"
+      },
+      {
+        "id": "au_bag_hook",
+        "label": "Promotion Products Australia — foldable metal bag hook",
+        "href": "https://www.promotionproducts.com.au/product/table-bag-hooks"
+      },
+      {
+        "id": "nz_mirror",
+        "label": "Concept Partners New Zealand — stainless portable mirror",
+        "href": "https://conceptpartners.co.nz/category/main-category/mirrors/stainless-steel-portable-mirror"
+      },
+      {
+        "id": "ca_flashlights",
+        "label": "Dynamic Gift Canada — promotional flashlights",
+        "href": "https://www.dynamicgift.ca/tools-automotive/flashlights"
+      },
+      {
+        "id": "au_tape_measures",
+        "label": "Brand Republic Australia — promotional tape measures",
+        "href": "https://www.brandrepublic.com.au/tools-hardware/tape-measures/"
+      }
+    ],
+    "blocks": [
+      {
+        "id": "title",
+        "type": "markdown",
+        "body": "# Wischos U.I.S.C. 产品线扩充建议"
+      },
+      {
+        "id": "executive_summary",
+        "type": "markdown",
+        "body": "## Executive Summary\n\n- **先扩充四款，不要一次上线八款。** 第一轮应是配重式金属理线座、AAA铝合金手电、隐私铝合金行李牌、折叠金属包袋挂钩。它们补的是四个现有目录没有的动作：理线、照明、识别行李、安放包袋。\n- **第二轮再加入四款。** 模块化金属落物托盘、金属卷尺、铝合金眼镜盒、带滑套的不锈钢随身镜，把产品线扩展到桌面归置、现场测量和更中性的个人随身使用。\n- **扩充逻辑不是追热门品类。** 所有候选必须同时通过U.I.S.C.四项最低门槛、与现有39款的功能排重，并且能和至少两款现有SKU形成一个清楚的礼盒故事。\n- **本轮不建议线材套装、专注计时器、咖啡滤器和NFC名片。** 它们分别存在材料主角不足、桌面互动重复、饮具线继续加深或服务依赖等问题。"
+      },
+      {
+        "id": "portfolio_takeaway",
+        "type": "markdown",
+        "sourceId": "live_catalog",
+        "body": "## 现有产品的问题不是数量少，而是使用场景集中\n\n目前39款在售产品中，Desk Accessories有13款、EDC有10款，两类合计23款，占59.0%。9套礼盒只使用了24个不同SKU，还有15款没有进入现有礼盒。**因此新品必须增加新的使用动作，同时尽可能激活现有未组合产品，而不是继续增加钢笔、杯具、设备支架或桌面玩物。**"
+      },
+      {
+        "id": "category_mix_block",
+        "type": "table",
+        "tableId": "category_mix"
+      },
+      {
+        "id": "usic_gate",
+        "type": "markdown",
+        "sourceId": "selection_standard",
+        "body": "## U.I.S.C.采用“最低门槛”，不是平均分\n\n**Useful**要求产品改善一个重复发生的动作；**Interesting**要求有值得注意的触觉、结构或机制；**Substantial**要求真实金属结构和可信手感；**Cohesive**要求它在一个明确的收件人故事中与现有产品互补。每项至少3分，任何一项不及格都不能靠其他高分补回来。市场广度、现有重叠和执行风险只用于决定通过U.I.S.C.后的先后顺序。"
+      },
+      {
+        "id": "shortlist_takeaway",
+        "type": "markdown",
+        "body": "## 八款候选形成四个互补产品家族\n\n最高优先级并不是市场目录里最常见的商品，而是既有跨市场使用语境，又能填补Wischos现有动作空白的产品。前四款均避开锂电池、刀具和食品接触等第一轮不必要的合规负担。"
+      },
+      {
+        "id": "shortlist_block",
+        "type": "table",
+        "tableId": "shortlist"
+      },
+      {
+        "id": "shortlist_chart_context",
+        "type": "markdown",
+        "body": "总分用于排序，不用于替代U.I.S.C.最低门槛。图中前四款优先，是因为它们同时新增使用动作、跨市场易理解，并且第一轮可避开锂电、刀具和食品接触风险；相邻表格保留了每项分数和扣分，供逐项审查。"
+      },
+      {
+        "id": "shortlist_chart_block",
+        "type": "chart",
+        "chartId": "candidate_priority_chart"
+      },
+      {
+        "id": "candidate_definitions",
+        "type": "markdown",
+        "body": "## 产品定义决定它们能否真正通过U.I.S.C.\n\n- **配重式金属理线座：** CNC铝合金或黄铜主体，可替换硅胶线槽，单手抽取充电线且不随线移动；不要做成粘在桌面的塑料线夹。\n- **AAA铝合金手电：** 6061铝、机械旋钮或尾按、口袋夹、防泼水，使用可更换AAA电池并默认不随货附电池；它为Field EDC补上“照明”这一真实动作。\n- **隐私铝合金行李牌：** 滑盖遮挡地址、编织钢丝环、可更换纸卡；不加入蓝牙追踪器。\n- **折叠金属包袋挂钩：** 面向手提包、电脑包和公文包，采用可锁定旋转机构、真实承重测试和克制的平面雕刻，而不是贴水晶或滴胶的廉价女款赠品。\n- **模块化金属落物托盘：** 金属底座、可拆分区、毛毡接触面和理线缺口，使它承担手机、钥匙、门禁卡和钱包的固定归位，不做纯装饰盘。\n- **金属卷尺：** 3m或5m双制式刻度、金属壳或金属主框架、可靠锁止；定位工程、物业、仓储和现场团队。\n- **铝合金眼镜盒：** 加筋铝壳、静音铰链、可替换内衬，保护近视镜或太阳镜；它比又一个钱包更能扩大收件人覆盖。\n- **不锈钢随身镜：** 使用抛光不锈钢镜面和滑动式铝套，避免玻璃破裂；信用卡尺寸让它成为真正的随身物品。"
+      },
+      {
+        "id": "market_evidence",
+        "type": "markdown",
+        "body": "## 市场信号支持“耐用、设计完整、能反复使用”\n\n[PPAI Product Power 2026](https://www.ppai.org/media-hub/product-power-2026-what-consumers-want-next-2/)覆盖5,000多名美国消费者：65%表示很可能保留品牌产品至少六个月，耐用性、设计和材料是主要原因；38%认为科技配件让品牌显得现代。目标市场目录中也能找到[澳洲金属旅行用品](https://www.promotionproducts.com.au/category/outdoor/travel-products)、[澳洲折叠金属包袋挂钩](https://www.promotionproducts.com.au/product/table-bag-hooks)、[新西兰不锈钢随身镜](https://conceptpartners.co.nz/category/main-category/mirrors/stainless-steel-portable-mirror)、[加拿大铝合金手电](https://www.dynamicgift.ca/tools-automotive/flashlights)和[澳洲促销卷尺](https://www.brandrepublic.com.au/tools-hardware/tape-measures/)。这些只能证明采购语境和供应可识别性，不能当作销量。"
+      },
+      {
+        "id": "roadmap_takeaway",
+        "type": "markdown",
+        "body": "## 先验证四个动作，再扩成四个产品家族\n\n第一轮的目标是验证客户是否接受Wischos从“桌面金属礼品”向旅行五金、现场工具和工作台系统延伸。第二轮不是自动上线，而是在第一轮报价、样品和客户反馈通过后补齐每个家族。"
+      },
+      {
+        "id": "roadmap_block",
+        "type": "table",
+        "tableId": "roadmap"
+      },
+      {
+        "id": "gift_set_takeaway",
+        "type": "markdown",
+        "body": "## Cohesive的检验方式：新品能否激活现有SKU\n\n一个新品如果只能独立销售，就没有充分发挥Wischos的礼盒优势。以下组合优先使用当前尚未或较少进入礼盒的产品，例如WP-201、WP-310和WP-401。"
+      },
+      {
+        "id": "gift_set_block",
+        "type": "table",
+        "tableId": "gift_set_paths"
+      },
+      {
+        "id": "not_now",
+        "type": "markdown",
+        "sourceId": "selection_model",
+        "body": "## 暂不进入采购池\n\n- **USB-C线材套装：** Useful很强，但通常由线材承担主要价值，金属盒容易沦为装饰；还需要验证功率、E-marker和接口授权。\n- **机械专注计时器：** 与WP-206黄铜陀螺、WP-306机械滑块共同加深桌面触觉物件，产品线贡献不足。\n- **不锈钢咖啡滤器：** 有使用逻辑，但现有饮具已达8款，且需要食品接触和清洁性能验证。\n- **NFC金属名片：** 与WP-309商务名片盒共享会议角色，还引入编码、跳转服务所有权和隐私依赖。\n- **笔记本支架、通勤杯、螺丝刀套装：** 分别与WP-208、现有四款主要饮具以及WP-104/WGS-004功能重叠。"
+      },
+      {
+        "id": "next_steps",
+        "type": "markdown",
+        "body": "## 建议的下一步\n\n1. 为第一轮四款分别寻找3家可做MOQ 100的工厂，不先谈最低价，先确认结构、材料和现有模具。\n2. 每款只选一个清晰版本打样，并记录重量、材料证明、机构寿命、承重或防护测试、可雕刻面积和包装体积。\n3. 用四款样品重跑U.I.S.C.：任何一项低于3分即淘汰，不用市场热度保留。\n4. 向加拿大、澳洲、新西兰的5–10个现有或潜在经销商展示概念页，记录他们愿意拿给哪类终端客户，而不只问“喜不喜欢”。\n5. 只有在至少两种客户场景成立后，才建立正式SKU和礼盒。"
+      },
+      {
+        "id": "further_questions",
+        "type": "markdown",
+        "body": "## 仍需通过报价和客户访谈回答的问题\n\n- 第一轮产品能否在MOQ 100时保持真实金属结构，同时进入现有礼盒FOB价格带？\n- 客户更容易购买独立SKU，还是以旅行、现场、混合办公的三件套理解新品？\n- 个人随身类产品应作为新分类上线，还是先作为礼盒组件验证？\n- 加拿大客户对现场工具的需求是否明显高于桌面旅行用品？"
+      },
+      {
+        "id": "caveats",
+        "type": "markdown",
+        "sourceId": "selection_model",
+        "body": "## 限制与假设\n\n本报告使用15 August 2026的在售数据库和当前礼盒定义。外部证据包括美国消费者研究及加拿大、澳洲、新西兰的当前产品目录；目录存在不等于真实销量。评分用于保持选品逻辑一致，不是需求预测。尚未获得工厂报价、样品测试、客户询价记录或历史成交数据，因此最终上线顺序应在RFQ和样品阶段再次验证。"
+      }
+    ]
+  },
+  "snapshot": {
+    "version": 1,
+    "generatedAt": "2026-08-15T12:00:00+08:00",
+    "status": "ready",
+    "datasets": {
+      "category_mix": [
+        { "category": "Desk Accessories", "active_skus": 13, "share": 0.333, "interpretation": "当前最深；新品只能补真实缺失动作" },
+        { "category": "EDC Accessories", "active_skus": 10, "share": 0.256, "interpretation": "已有钥匙、钱包、剪刀和机械小物，避免再加相似随身件" },
+        { "category": "Writing Instruments", "active_skus": 8, "share": 0.205, "interpretation": "暂停增加钢笔" },
+        { "category": "Drinkware", "active_skus": 8, "share": 0.205, "interpretation": "暂停增加普通杯瓶" }
+      ],
+      "shortlist": [
+        { "product": "配重式金属理线座", "chart_label": "理线座", "useful": 5, "interesting": 4, "substantial": 5, "cohesive": 5, "market": 5, "deductions": 1, "priority": 23, "phase": "第一轮" },
+        { "product": "AAA铝合金手电", "chart_label": "AAA手电", "useful": 5, "interesting": 4, "substantial": 4, "cohesive": 5, "market": 5, "deductions": 1, "priority": 22, "phase": "第一轮" },
+        { "product": "隐私铝合金行李牌", "chart_label": "行李牌", "useful": 5, "interesting": 3, "substantial": 4, "cohesive": 5, "market": 5, "deductions": 1, "priority": 21, "phase": "第一轮" },
+        { "product": "折叠金属包袋挂钩", "chart_label": "包袋挂钩", "useful": 4, "interesting": 5, "substantial": 4, "cohesive": 5, "market": 4, "deductions": 1, "priority": 21, "phase": "第一轮" },
+        { "product": "模块化金属落物托盘", "chart_label": "落物托盘", "useful": 4, "interesting": 4, "substantial": 5, "cohesive": 5, "market": 4, "deductions": 2, "priority": 20, "phase": "第二轮" },
+        { "product": "金属卷尺", "chart_label": "金属卷尺", "useful": 5, "interesting": 3, "substantial": 4, "cohesive": 5, "market": 4, "deductions": 2, "priority": 19, "phase": "第二轮" },
+        { "product": "铝合金眼镜盒", "chart_label": "眼镜盒", "useful": 4, "interesting": 3, "substantial": 5, "cohesive": 4, "market": 4, "deductions": 1, "priority": 19, "phase": "第二轮" },
+        { "product": "不锈钢随身镜＋滑套", "chart_label": "随身镜", "useful": 4, "interesting": 3, "substantial": 4, "cohesive": 4, "market": 4, "deductions": 1, "priority": 18, "phase": "第二轮" }
+      ],
+      "roadmap": [
+        { "sequence": 1, "family": "Work Surface", "products": "配重式理线座；模块化落物托盘", "buyer": "混合办公、科技、入职和管理层礼赠", "existing_pairing": "WP-201鼠标垫、WP-208设备支架、WP-301门禁钱包" },
+        { "sequence": 2, "family": "Travel Hardware", "products": "隐私行李牌；折叠包袋/公文包挂钩", "buyer": "差旅、航空、咨询、销售、酒店和会议", "existing_pairing": "WP-310钥匙胶囊、WP-401保温瓶、WP-309名片盒" },
+        { "sequence": 3, "family": "Field Utility", "products": "AAA铝合金手电；金属卷尺", "buyer": "建筑、物业、仓储、采矿、维修和现场服务", "existing_pairing": "WP-103工具笔、WP-104多功能笔、WP-305迷你工具" },
+        { "sequence": 4, "family": "Personal Carry", "products": "铝合金眼镜盒；不锈钢随身镜", "buyer": "医疗、保险、美容、旅行和更广泛的员工群体", "existing_pairing": "WP-304钛梳、WP-310胶囊、WP-106黄铜笔" }
+      ],
+      "gift_set_paths": [
+        { "set_name": "Travel Hardware Set", "new_anchor": "行李牌＋包袋挂钩", "current_skus": "WP-310钛合金钥匙胶囊", "story": "识别行李、安放随身包、收纳小件" },
+        { "set_name": "Wired Desk Set", "new_anchor": "配重式理线座", "current_skus": "WP-201铝鼠标垫＋WP-208设备支架", "story": "屏幕、鼠标与充电线的固定工作台" },
+        { "set_name": "After-Dark Field Set", "new_anchor": "AAA铝合金手电", "current_skus": "WP-103不锈钢工具笔＋WP-305迷你工具", "story": "现场记录、照明和轻型处理" },
+        { "set_name": "Arrival Tray Set", "new_anchor": "模块化落物托盘", "current_skus": "WP-301门禁钱包＋WP-302钥匙整理器", "story": "到达办公桌或家中后的固定归位" },
+        { "set_name": "Personal Travel Set", "new_anchor": "眼镜盒＋随身镜", "current_skus": "WP-304钛梳或WP-310胶囊", "story": "保护眼镜并整理个人随身用品" }
+      ]
+    }
+  },
+  "sources": [
+    {
+      "id": "live_catalog",
+      "label": "Wischos live product catalogue extract",
+      "path": "reports/product-line-expansion-usic-2026-08-15/category-mix.sql",
+      "query": {
+        "engine": "Supabase PostgreSQL",
+        "sql": "WITH category_counts AS (SELECT category, COUNT(*)::integer AS active_skus FROM public.products WHERE active = TRUE GROUP BY category) SELECT category, active_skus, active_skus::numeric / SUM(active_skus) OVER () AS share FROM category_counts ORDER BY active_skus DESC, category ASC",
+        "id": "active_product_category_mix_2026_08_15",
+        "description": "Counts the current active products by catalogue category.",
+        "executed_at": "2026-08-15T12:25:00+08:00",
+        "language": "sql",
+        "filters": ["Active products only for the decision baseline"],
+        "metric_definitions": ["Active SKUs are rows where active is true", "Category share is active SKUs in category divided by 39 active SKUs"],
+        "tables_used": ["public.products"]
+      }
+    },
+    {
+      "id": "gift_sets",
+      "label": "Wischos current gift-set definitions",
+      "path": "src/content/giftSets.ts",
+      "query": {
+        "engine": "workspace file review",
+        "description": "Current nine gift sets and their component SKU references.",
+        "executed_at": "2026-08-15T11:40:00+08:00",
+        "language": "TypeScript"
+      }
+    },
+    {
+      "id": "selection_standard",
+      "label": "Wischos U.I.S.C. selection standard",
+      "path": "src/content/homepage.ts",
+      "query": {
+        "engine": "workspace file review",
+        "description": "Owner-defined Useful, Interesting, Substantial and Cohesive criteria.",
+        "executed_at": "2026-08-15T11:45:00+08:00",
+        "language": "TypeScript"
+      }
+    },
+    {
+      "id": "selection_model",
+      "label": "U.I.S.C. candidate scoring and decision notes",
+      "path": "reports/product-line-expansion-usic-2026-08-15/candidate-priority.sql",
+      "query": {
+        "engine": "PostgreSQL",
+        "sql": "SELECT candidate.product, candidate.chart_label, candidate.useful, candidate.interesting, candidate.substantial, candidate.cohesive, candidate.market, candidate.deductions, candidate.priority, candidate.phase FROM (VALUES ('配重式金属理线座', '理线座', 5, 4, 5, 5, 5, 1, 23, '第一轮'), ('AAA铝合金手电', 'AAA手电', 5, 4, 4, 5, 5, 1, 22, '第一轮'), ('隐私铝合金行李牌', '行李牌', 5, 3, 4, 5, 5, 1, 21, '第一轮'), ('折叠金属包袋挂钩', '包袋挂钩', 4, 5, 4, 5, 4, 1, 21, '第一轮'), ('模块化金属落物托盘', '落物托盘', 4, 4, 5, 5, 4, 2, 20, '第二轮'), ('金属卷尺', '金属卷尺', 5, 3, 4, 5, 4, 2, 19, '第二轮'), ('铝合金眼镜盒', '眼镜盒', 4, 3, 5, 4, 4, 1, 19, '第二轮'), ('不锈钢随身镜＋滑套', '随身镜', 4, 3, 4, 4, 4, 1, 18, '第二轮')) AS candidate(product, chart_label, useful, interesting, substantial, cohesive, market, deductions, priority, phase) ORDER BY candidate.priority DESC, candidate.product ASC",
+        "id": "product_line_candidate_priority_2026_08_15",
+        "description": "Reproduces the reviewed U.I.S.C. candidate score rows used by the priority chart.",
+        "executed_at": "2026-08-15T12:20:00+08:00",
+        "language": "sql",
+        "filters": ["Candidates must score at least 3 on every U.I.S.C. dimension", "Priority deducts overlap and execution risk"]
+      }
+    },
+    {
+      "id": "roadmap_model",
+      "label": "Product-family roadmap decision rows",
+      "path": "reports/product-line-expansion-usic-2026-08-15/product-family-roadmap.sql",
+      "query": {
+        "engine": "PostgreSQL",
+        "sql": "SELECT roadmap.sequence, roadmap.family, roadmap.products, roadmap.buyer, roadmap.existing_pairing FROM (VALUES (1, 'Work Surface', '配重式理线座；模块化落物托盘', '混合办公、科技、入职和管理层礼赠', 'WP-201鼠标垫、WP-208设备支架、WP-301门禁钱包'), (2, 'Travel Hardware', '隐私行李牌；折叠包袋/公文包挂钩', '差旅、航空、咨询、销售、酒店和会议', 'WP-310钥匙胶囊、WP-401保温瓶、WP-309名片盒'), (3, 'Field Utility', 'AAA铝合金手电；金属卷尺', '建筑、物业、仓储、采矿、维修和现场服务', 'WP-103工具笔、WP-104多功能笔、WP-305迷你工具'), (4, 'Personal Carry', '铝合金眼镜盒；不锈钢随身镜', '医疗、保险、美容、旅行和更广泛的员工群体', 'WP-304钛梳、WP-310胶囊、WP-106黄铜笔')) AS roadmap(sequence, family, products, buyer, existing_pairing) ORDER BY roadmap.sequence ASC",
+        "id": "product_family_roadmap_2026_08_15",
+        "description": "Reproduces the reviewed product-family roadmap rows.",
+        "executed_at": "2026-08-15T12:25:00+08:00",
+        "language": "sql",
+        "filters": ["Four families", "Two candidate products per family"]
+      }
+    },
+    {
+      "id": "gift_set_paths_model",
+      "label": "Gift-set expansion decision rows",
+      "path": "reports/product-line-expansion-usic-2026-08-15/gift-set-paths.sql",
+      "query": {
+        "engine": "PostgreSQL",
+        "sql": "SELECT path.set_name, path.new_anchor, path.current_skus, path.story FROM (VALUES ('Travel Hardware Set', '行李牌＋包袋挂钩', 'WP-310钛合金钥匙胶囊', '识别行李、安放随身包、收纳小件'), ('Wired Desk Set', '配重式理线座', 'WP-201铝鼠标垫＋WP-208设备支架', '屏幕、鼠标与充电线的固定工作台'), ('After-Dark Field Set', 'AAA铝合金手电', 'WP-103不锈钢工具笔＋WP-305迷你工具', '现场记录、照明和轻型处理'), ('Arrival Tray Set', '模块化落物托盘', 'WP-301门禁钱包＋WP-302钥匙整理器', '到达办公桌或家中后的固定归位'), ('Personal Travel Set', '眼镜盒＋随身镜', 'WP-304钛梳或WP-310胶囊', '保护眼镜并整理个人随身用品')) AS path(set_name, new_anchor, current_skus, story) ORDER BY path.set_name ASC",
+        "id": "gift_set_paths_2026_08_15",
+        "description": "Reproduces the reviewed new-to-existing gift-set pairing rows.",
+        "executed_at": "2026-08-15T12:25:00+08:00",
+        "language": "sql",
+        "filters": ["Every concept includes at least one new anchor", "Every concept reuses at least one active Wischos SKU"]
+      }
+    },
+    {
+      "id": "ppai_2026",
+      "label": "PPAI Product Power 2026",
+      "href": "https://www.ppai.org/media-hub/product-power-2026-what-consumers-want-next-2/"
+    },
+    {
+      "id": "au_travel",
+      "label": "Promotion Products Australia — travel products",
+      "href": "https://www.promotionproducts.com.au/category/outdoor/travel-products"
+    },
+    {
+      "id": "au_bag_hook",
+      "label": "Promotion Products Australia — foldable metal bag hook",
+      "href": "https://www.promotionproducts.com.au/product/table-bag-hooks"
+    },
+    {
+      "id": "nz_mirror",
+      "label": "Concept Partners New Zealand — stainless portable mirror",
+      "href": "https://conceptpartners.co.nz/category/main-category/mirrors/stainless-steel-portable-mirror"
+    },
+    {
+      "id": "ca_flashlights",
+      "label": "Dynamic Gift Canada — promotional flashlights",
+      "href": "https://www.dynamicgift.ca/tools-automotive/flashlights"
+    },
+    {
+      "id": "au_tape_measures",
+      "label": "Brand Republic Australia — promotional tape measures",
+      "href": "https://www.brandrepublic.com.au/tools-hardware/tape-measures/"
+    }
+  ]
+}

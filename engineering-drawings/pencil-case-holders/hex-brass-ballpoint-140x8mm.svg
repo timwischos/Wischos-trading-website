@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180mm" height="48mm" viewBox="0 0 180 48">
+  <title>Hexagonal brass ballpoint pen 140 x 8 mm</title>
+  <desc>1:1 engineering SVG for a hexagonal brass ballpoint pen, about 140 millimeters long and 8 millimeters diameter.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="4" markerHeight="4" refX="2" refY="2" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L4,2 L0,4 Z" fill="#555"/>
+    </marker>
+    <style>
+      text { font-family: Arial, sans-serif; fill: #222; font-size: 4px; }
+      .label { font-size: 5px; font-weight: 700; }
+      .part { fill: #c99a3b; stroke: #222; stroke-width: 0.45; }
+      .facet { stroke: #8c6a24; stroke-width: 0.3; }
+      .dim { stroke: #555; stroke-width: 0.3; fill: none; marker-start: url(#arrow); marker-end: url(#arrow); }
+      .leader { stroke: #555; stroke-width: 0.25; fill: none; }
+    </style>
+  </defs>
+
+  <text x="10" y="8" class="label">Hexagonal brass ballpoint pen</text>
+  <text x="10" y="14">Size: about 140 mm long x 8 mm diameter</text>
+
+  <path d="M20 22 L24 18 L152 18 L160 22 L152 26 L24 26 Z" class="part"/>
+  <line x1="24" y1="18" x2="152" y2="18" class="facet"/>
+  <line x1="24" y1="26" x2="152" y2="26" class="facet"/>
+  <line x1="20" y1="22" x2="160" y2="22" class="facet"/>
+  <path d="M160 22 L166 20 L166 24 Z" class="part"/>
+
+  <line x1="20" y1="36" x2="160" y2="36" class="dim"/>
+  <line x1="20" y1="27" x2="20" y2="39" class="leader"/>
+  <line x1="160" y1="27" x2="160" y2="39" class="leader"/>
+  <text x="82" y="43">140 mm</text>
+
+  <line x1="172" y1="18" x2="172" y2="26" class="dim"/>
+  <line x1="164" y1="18" x2="175" y2="18" class="leader"/>
+  <line x1="164" y1="26" x2="175" y2="26" class="leader"/>
+  <text x="176" y="23" transform="rotate(90 176 23)">8 mm</text>
+</svg>
