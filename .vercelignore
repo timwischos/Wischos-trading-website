@@ -1,0 +1,19 @@
+# Local source material, working notes, and generated build output
+.git
+.agents
+.claude
+.codex
+node_modules
+dist
+tmp
+临时
+调整
+content create
+*.bak
+*.bak2
+.env*
+
+# Product and editorial source images are served from Cloudinary in production.
+public/products
+public/images
+public/how-it-works.mp4
