@@ -60,7 +60,7 @@ const faqItems = [
   {
     question: 'What is the best branded drinkware gift for corporate hydration programs?',
     answer:
-      'For drinkware-focused programs, we are launching WGS-010 The Hydration — a three-piece set covering a 30oz (880ml) insulated tumbler with handle, a 500ml carry bottle, and the existing pure titanium 150ml capsule bottle. All vessels are 304 stainless steel or pure titanium, no plastic, no coatings. Ships under ChAFTA for duty-free entry into Australia. Standalone drinkware single-item programs are also supported via WP-402, WP-407, and WP-408 in the current catalog.',
+      'For drinkware-focused programs, our stainless steel and pure titanium range covers the main format needs: WP-403 is a 350ml weighted vacuum-insulated office tumbler; WP-407 is a double-wall stainless steel desk cup; WP-408 is a titanium tea infuser business cup; WP-402 is a pure titanium 150ml capsule bottle for carry use. All vessels are 304 stainless steel or pure titanium — no plastic, no coatings. Drinkware sets and custom multi-piece hydration programs are available on request; contact us with your brief.',
   },
   {
     question: 'Can you support distributor wholesale programs with white-label production?',

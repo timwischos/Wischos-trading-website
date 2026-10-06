@@ -92,6 +92,18 @@ export const Route = createFileRoute('/{-$locale}/products/$productId')({
               : {}),
           }),
         },
+        {
+          type: 'application/ld+json',
+          children: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://wischosgift.com/' },
+              { '@type': 'ListItem', position: 2, name: 'Products', item: 'https://wischosgift.com/products' },
+              { '@type': 'ListItem', position: 3, name: product.name, item: `https://wischosgift.com/products/${product.id}` },
+            ],
+          }),
+        },
         ...(product.faqs?.length
           ? [{
               type: 'application/ld+json',

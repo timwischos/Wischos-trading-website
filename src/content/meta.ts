@@ -45,7 +45,7 @@ export const siteMeta = {
   routes: {
     home: {
       title: 'Custom Metal Corporate Gifts & Promotional Sets | Brass · Titanium · Steel | Wischos Gift',
-      description: 'Metal-first B2B custom corporate gift programs — brass, titanium, stainless steel, aluminium. Curated sets and individual SKUs for promotional distributors and corporate procurement. Custom logo engraving, MOQ 100, 25-35 day production from China.',
+      description: 'Custom metal corporate gift sets — brass, titanium, steel. Curated programs for promotional distributors and procurement teams. MOQ 100, 25–35 day production from China.',
     },
     products: {
       title: 'Custom Metal Corporate Gift Catalog — Brass · Titanium · Steel | Wischos Gift',

@@ -61,7 +61,7 @@ const organizationJsonLd = {
   description: siteMeta.defaultDescription,
   foundingDate: '2024',
   knowsLanguage: ['en', 'zh-CN'],
-  areaServed: ['AU', 'NZ', 'SG', 'AE', 'HK', 'SA', 'CH', 'GB'],
+  areaServed: ['AU', 'NZ', 'CA', 'SG', 'AE', 'HK', 'SA', 'CH', 'GB'],
   contactPoint: {
     '@type': 'ContactPoint',
     contactType: 'sales',
