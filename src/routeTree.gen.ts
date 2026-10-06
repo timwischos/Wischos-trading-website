@@ -9,58 +9,38 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as Char123LocaleChar125RouteImport } from './routes/{-$locale}'
-import { Route as ThankYouRouteImport } from './routes/thank-you'
-import { Route as SolutionsRouteImport } from './routes/solutions'
-import { Route as PrivacyRouteImport } from './routes/privacy'
-import { Route as ForDistributorsRouteImport } from './routes/for-distributors'
-import { Route as DutyAndShippingRouteImport } from './routes/duty-and-shipping'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as Char123LocaleChar125GiftSetsRouteImport } from './routes/{-$locale}/gift-sets'
-import { Route as Char123LocaleChar125FaqRouteImport } from './routes/{-$locale}/faq'
-import { Route as Char123LocaleChar125ContactRouteImport } from './routes/{-$locale}/contact'
-import { Route as Char123LocaleChar125BlogRouteImport } from './routes/{-$locale}/blog'
-import { Route as Char123LocaleChar125AboutRouteImport } from './routes/{-$locale}/about'
-import { Route as SolutionsNewHireOnboardingRouteImport } from './routes/solutions/new-hire-onboarding'
-import { Route as SolutionsMilestoneAwardsRouteImport } from './routes/solutions/milestone-awards'
-import { Route as SolutionsAppreciationGiftsRouteImport } from './routes/solutions/appreciation-gifts'
-import { Route as MarketsUaeRouteImport } from './routes/markets/uae'
-import { Route as MarketsSingaporeRouteImport } from './routes/markets/singapore'
-import { Route as MarketsNewZealandRouteImport } from './routes/markets/new-zealand'
-import { Route as MarketsAustraliaRouteImport } from './routes/markets/australia'
-import { Route as LandingOnboardingGiftSetRouteImport } from './routes/landing/onboarding-gift-set'
-import { Route as LandingMetalGiftsWholesaleRouteImport } from './routes/landing/metal-gifts-wholesale'
+import { Route as DutyAndShippingRouteImport } from './routes/duty-and-shipping'
+import { Route as ForDistributorsRouteImport } from './routes/for-distributors'
+import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as SolutionsRouteImport } from './routes/solutions'
+import { Route as ThankYouRouteImport } from './routes/thank-you'
+import { Route as Char123LocaleChar125RouteImport } from './routes/{-$locale}'
 import { Route as LandingExecutiveGiftSetRouteImport } from './routes/landing/executive-gift-set'
-import { Route as Char123LocaleChar125ProductsIndexRouteImport } from './routes/{-$locale}/products/index'
-import { Route as Char123LocaleChar125GiftSetsIndexRouteImport } from './routes/{-$locale}/gift-sets/index'
+import { Route as LandingMetalGiftsWholesaleRouteImport } from './routes/landing/metal-gifts-wholesale'
+import { Route as LandingOnboardingGiftSetRouteImport } from './routes/landing/onboarding-gift-set'
+import { Route as MarketsAustraliaRouteImport } from './routes/markets/australia'
+import { Route as MarketsNewZealandRouteImport } from './routes/markets/new-zealand'
+import { Route as MarketsSingaporeRouteImport } from './routes/markets/singapore'
+import { Route as MarketsUaeRouteImport } from './routes/markets/uae'
+import { Route as SolutionsAppreciationGiftsRouteImport } from './routes/solutions/appreciation-gifts'
+import { Route as SolutionsMilestoneAwardsRouteImport } from './routes/solutions/milestone-awards'
+import { Route as SolutionsNewHireOnboardingRouteImport } from './routes/solutions/new-hire-onboarding'
+import { Route as Char123LocaleChar125AboutRouteImport } from './routes/{-$locale}/about'
+import { Route as Char123LocaleChar125BlogRouteImport } from './routes/{-$locale}/blog'
+import { Route as Char123LocaleChar125ContactRouteImport } from './routes/{-$locale}/contact'
+import { Route as Char123LocaleChar125FaqRouteImport } from './routes/{-$locale}/faq'
+import { Route as Char123LocaleChar125GiftSetsRouteImport } from './routes/{-$locale}/gift-sets'
 import { Route as Char123LocaleChar125BlogIndexRouteImport } from './routes/{-$locale}/blog/index'
-import { Route as Char123LocaleChar125ProductsProductIdRouteImport } from './routes/{-$locale}/products/$productId'
-import { Route as Char123LocaleChar125GiftSetsSetIdRouteImport } from './routes/{-$locale}/gift-sets/$setId'
 import { Route as Char123LocaleChar125BlogSlugRouteImport } from './routes/{-$locale}/blog/$slug'
+import { Route as Char123LocaleChar125GiftSetsIndexRouteImport } from './routes/{-$locale}/gift-sets/index'
+import { Route as Char123LocaleChar125GiftSetsSetIdRouteImport } from './routes/{-$locale}/gift-sets/$setId'
+import { Route as Char123LocaleChar125ProductsIndexRouteImport } from './routes/{-$locale}/products/index'
+import { Route as Char123LocaleChar125ProductsProductIdRouteImport } from './routes/{-$locale}/products/$productId'
 
-const Char123LocaleChar125Route = Char123LocaleChar125RouteImport.update({
-  id: '/{-$locale}',
-  path: '/{-$locale}',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ThankYouRoute = ThankYouRouteImport.update({
-  id: '/thank-you',
-  path: '/thank-you',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SolutionsRoute = SolutionsRouteImport.update({
-  id: '/solutions',
-  path: '/solutions',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PrivacyRoute = PrivacyRouteImport.update({
-  id: '/privacy',
-  path: '/privacy',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ForDistributorsRoute = ForDistributorsRouteImport.update({
-  id: '/for-distributors',
-  path: '/for-distributors',
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DutyAndShippingRoute = DutyAndShippingRouteImport.update({
@@ -68,44 +48,72 @@ const DutyAndShippingRoute = DutyAndShippingRouteImport.update({
   path: '/duty-and-shipping',
   getParentRoute: () => rootRouteImport,
 } as any)
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
+const ForDistributorsRoute = ForDistributorsRouteImport.update({
+  id: '/for-distributors',
+  path: '/for-distributors',
   getParentRoute: () => rootRouteImport,
 } as any)
-const Char123LocaleChar125GiftSetsRoute =
-  Char123LocaleChar125GiftSetsRouteImport.update({
-    id: '/gift-sets',
-    path: '/gift-sets',
-    getParentRoute: () => Char123LocaleChar125Route,
-  } as any)
-const Char123LocaleChar125FaqRoute = Char123LocaleChar125FaqRouteImport.update({
-  id: '/faq',
-  path: '/faq',
-  getParentRoute: () => Char123LocaleChar125Route,
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
+  getParentRoute: () => rootRouteImport,
 } as any)
-const Char123LocaleChar125ContactRoute =
-  Char123LocaleChar125ContactRouteImport.update({
-    id: '/contact',
-    path: '/contact',
-    getParentRoute: () => Char123LocaleChar125Route,
+const SolutionsRoute = SolutionsRouteImport.update({
+  id: '/solutions',
+  path: '/solutions',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ThankYouRoute = ThankYouRouteImport.update({
+  id: '/thank-you',
+  path: '/thank-you',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Char123LocaleChar125Route = Char123LocaleChar125RouteImport.update({
+  id: '/{-$locale}',
+  path: '/{-$locale}',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LandingExecutiveGiftSetRoute = LandingExecutiveGiftSetRouteImport.update({
+  id: '/landing/executive-gift-set',
+  path: '/landing/executive-gift-set',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LandingMetalGiftsWholesaleRoute =
+  LandingMetalGiftsWholesaleRouteImport.update({
+    id: '/landing/metal-gifts-wholesale',
+    path: '/landing/metal-gifts-wholesale',
+    getParentRoute: () => rootRouteImport,
   } as any)
-const Char123LocaleChar125BlogRoute =
-  Char123LocaleChar125BlogRouteImport.update({
-    id: '/blog',
-    path: '/blog',
-    getParentRoute: () => Char123LocaleChar125Route,
+const LandingOnboardingGiftSetRoute =
+  LandingOnboardingGiftSetRouteImport.update({
+    id: '/landing/onboarding-gift-set',
+    path: '/landing/onboarding-gift-set',
+    getParentRoute: () => rootRouteImport,
   } as any)
-const Char123LocaleChar125AboutRoute =
-  Char123LocaleChar125AboutRouteImport.update({
-    id: '/about',
-    path: '/about',
-    getParentRoute: () => Char123LocaleChar125Route,
-  } as any)
-const SolutionsNewHireOnboardingRoute =
-  SolutionsNewHireOnboardingRouteImport.update({
-    id: '/new-hire-onboarding',
-    path: '/new-hire-onboarding',
+const MarketsAustraliaRoute = MarketsAustraliaRouteImport.update({
+  id: '/markets/australia',
+  path: '/markets/australia',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MarketsNewZealandRoute = MarketsNewZealandRouteImport.update({
+  id: '/markets/new-zealand',
+  path: '/markets/new-zealand',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MarketsSingaporeRoute = MarketsSingaporeRouteImport.update({
+  id: '/markets/singapore',
+  path: '/markets/singapore',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MarketsUaeRoute = MarketsUaeRouteImport.update({
+  id: '/markets/uae',
+  path: '/markets/uae',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SolutionsAppreciationGiftsRoute =
+  SolutionsAppreciationGiftsRouteImport.update({
+    id: '/appreciation-gifts',
+    path: '/appreciation-gifts',
     getParentRoute: () => SolutionsRoute,
   } as any)
 const SolutionsMilestoneAwardsRoute =
@@ -114,60 +122,40 @@ const SolutionsMilestoneAwardsRoute =
     path: '/milestone-awards',
     getParentRoute: () => SolutionsRoute,
   } as any)
-const SolutionsAppreciationGiftsRoute =
-  SolutionsAppreciationGiftsRouteImport.update({
-    id: '/appreciation-gifts',
-    path: '/appreciation-gifts',
+const SolutionsNewHireOnboardingRoute =
+  SolutionsNewHireOnboardingRouteImport.update({
+    id: '/new-hire-onboarding',
+    path: '/new-hire-onboarding',
     getParentRoute: () => SolutionsRoute,
   } as any)
-const MarketsUaeRoute = MarketsUaeRouteImport.update({
-  id: '/markets/uae',
-  path: '/markets/uae',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const MarketsSingaporeRoute = MarketsSingaporeRouteImport.update({
-  id: '/markets/singapore',
-  path: '/markets/singapore',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const MarketsNewZealandRoute = MarketsNewZealandRouteImport.update({
-  id: '/markets/new-zealand',
-  path: '/markets/new-zealand',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const MarketsAustraliaRoute = MarketsAustraliaRouteImport.update({
-  id: '/markets/australia',
-  path: '/markets/australia',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const LandingOnboardingGiftSetRoute =
-  LandingOnboardingGiftSetRouteImport.update({
-    id: '/landing/onboarding-gift-set',
-    path: '/landing/onboarding-gift-set',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const LandingMetalGiftsWholesaleRoute =
-  LandingMetalGiftsWholesaleRouteImport.update({
-    id: '/landing/metal-gifts-wholesale',
-    path: '/landing/metal-gifts-wholesale',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const LandingExecutiveGiftSetRoute = LandingExecutiveGiftSetRouteImport.update({
-  id: '/landing/executive-gift-set',
-  path: '/landing/executive-gift-set',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const Char123LocaleChar125ProductsIndexRoute =
-  Char123LocaleChar125ProductsIndexRouteImport.update({
-    id: '/products/',
-    path: '/products/',
+const Char123LocaleChar125AboutRoute =
+  Char123LocaleChar125AboutRouteImport.update({
+    id: '/about',
+    path: '/about',
     getParentRoute: () => Char123LocaleChar125Route,
   } as any)
-const Char123LocaleChar125GiftSetsIndexRoute =
-  Char123LocaleChar125GiftSetsIndexRouteImport.update({
-    id: '/',
-    path: '/',
-    getParentRoute: () => Char123LocaleChar125GiftSetsRoute,
+const Char123LocaleChar125BlogRoute =
+  Char123LocaleChar125BlogRouteImport.update({
+    id: '/blog',
+    path: '/blog',
+    getParentRoute: () => Char123LocaleChar125Route,
+  } as any)
+const Char123LocaleChar125ContactRoute =
+  Char123LocaleChar125ContactRouteImport.update({
+    id: '/contact',
+    path: '/contact',
+    getParentRoute: () => Char123LocaleChar125Route,
+  } as any)
+const Char123LocaleChar125FaqRoute = Char123LocaleChar125FaqRouteImport.update({
+  id: '/faq',
+  path: '/faq',
+  getParentRoute: () => Char123LocaleChar125Route,
+} as any)
+const Char123LocaleChar125GiftSetsRoute =
+  Char123LocaleChar125GiftSetsRouteImport.update({
+    id: '/gift-sets',
+    path: '/gift-sets',
+    getParentRoute: () => Char123LocaleChar125Route,
   } as any)
 const Char123LocaleChar125BlogIndexRoute =
   Char123LocaleChar125BlogIndexRouteImport.update({
@@ -175,11 +163,17 @@ const Char123LocaleChar125BlogIndexRoute =
     path: '/',
     getParentRoute: () => Char123LocaleChar125BlogRoute,
   } as any)
-const Char123LocaleChar125ProductsProductIdRoute =
-  Char123LocaleChar125ProductsProductIdRouteImport.update({
-    id: '/products/$productId',
-    path: '/products/$productId',
-    getParentRoute: () => Char123LocaleChar125Route,
+const Char123LocaleChar125BlogSlugRoute =
+  Char123LocaleChar125BlogSlugRouteImport.update({
+    id: '/$slug',
+    path: '/$slug',
+    getParentRoute: () => Char123LocaleChar125BlogRoute,
+  } as any)
+const Char123LocaleChar125GiftSetsIndexRoute =
+  Char123LocaleChar125GiftSetsIndexRouteImport.update({
+    id: '/',
+    path: '/',
+    getParentRoute: () => Char123LocaleChar125GiftSetsRoute,
   } as any)
 const Char123LocaleChar125GiftSetsSetIdRoute =
   Char123LocaleChar125GiftSetsSetIdRouteImport.update({
@@ -187,11 +181,17 @@ const Char123LocaleChar125GiftSetsSetIdRoute =
     path: '/$setId',
     getParentRoute: () => Char123LocaleChar125GiftSetsRoute,
   } as any)
-const Char123LocaleChar125BlogSlugRoute =
-  Char123LocaleChar125BlogSlugRouteImport.update({
-    id: '/$slug',
-    path: '/$slug',
-    getParentRoute: () => Char123LocaleChar125BlogRoute,
+const Char123LocaleChar125ProductsIndexRoute =
+  Char123LocaleChar125ProductsIndexRouteImport.update({
+    id: '/products/',
+    path: '/products/',
+    getParentRoute: () => Char123LocaleChar125Route,
+  } as any)
+const Char123LocaleChar125ProductsProductIdRoute =
+  Char123LocaleChar125ProductsProductIdRouteImport.update({
+    id: '/products/$productId',
+    path: '/products/$productId',
+    getParentRoute: () => Char123LocaleChar125Route,
   } as any)
 
 export interface FileRoutesByFullPath {
@@ -393,39 +393,11 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/{-$locale}': {
-      id: '/{-$locale}'
-      path: '/{-$locale}'
-      fullPath: '/{-$locale}'
-      preLoaderRoute: typeof Char123LocaleChar125RouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/thank-you': {
-      id: '/thank-you'
-      path: '/thank-you'
-      fullPath: '/thank-you'
-      preLoaderRoute: typeof ThankYouRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/solutions': {
-      id: '/solutions'
-      path: '/solutions'
-      fullPath: '/solutions'
-      preLoaderRoute: typeof SolutionsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/privacy': {
-      id: '/privacy'
-      path: '/privacy'
-      fullPath: '/privacy'
-      preLoaderRoute: typeof PrivacyRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/for-distributors': {
-      id: '/for-distributors'
-      path: '/for-distributors'
-      fullPath: '/for-distributors'
-      preLoaderRoute: typeof ForDistributorsRouteImport
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/duty-and-shipping': {
@@ -435,109 +407,39 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DutyAndShippingRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
+    '/for-distributors': {
+      id: '/for-distributors'
+      path: '/for-distributors'
+      fullPath: '/for-distributors'
+      preLoaderRoute: typeof ForDistributorsRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/{-$locale}/gift-sets': {
-      id: '/{-$locale}/gift-sets'
-      path: '/gift-sets'
-      fullPath: '/{-$locale}/gift-sets'
-      preLoaderRoute: typeof Char123LocaleChar125GiftSetsRouteImport
-      parentRoute: typeof Char123LocaleChar125Route
-    }
-    '/{-$locale}/faq': {
-      id: '/{-$locale}/faq'
-      path: '/faq'
-      fullPath: '/{-$locale}/faq'
-      preLoaderRoute: typeof Char123LocaleChar125FaqRouteImport
-      parentRoute: typeof Char123LocaleChar125Route
-    }
-    '/{-$locale}/contact': {
-      id: '/{-$locale}/contact'
-      path: '/contact'
-      fullPath: '/{-$locale}/contact'
-      preLoaderRoute: typeof Char123LocaleChar125ContactRouteImport
-      parentRoute: typeof Char123LocaleChar125Route
-    }
-    '/{-$locale}/blog': {
-      id: '/{-$locale}/blog'
-      path: '/blog'
-      fullPath: '/{-$locale}/blog'
-      preLoaderRoute: typeof Char123LocaleChar125BlogRouteImport
-      parentRoute: typeof Char123LocaleChar125Route
-    }
-    '/{-$locale}/about': {
-      id: '/{-$locale}/about'
-      path: '/about'
-      fullPath: '/{-$locale}/about'
-      preLoaderRoute: typeof Char123LocaleChar125AboutRouteImport
-      parentRoute: typeof Char123LocaleChar125Route
-    }
-    '/solutions/new-hire-onboarding': {
-      id: '/solutions/new-hire-onboarding'
-      path: '/new-hire-onboarding'
-      fullPath: '/solutions/new-hire-onboarding'
-      preLoaderRoute: typeof SolutionsNewHireOnboardingRouteImport
-      parentRoute: typeof SolutionsRoute
-    }
-    '/solutions/milestone-awards': {
-      id: '/solutions/milestone-awards'
-      path: '/milestone-awards'
-      fullPath: '/solutions/milestone-awards'
-      preLoaderRoute: typeof SolutionsMilestoneAwardsRouteImport
-      parentRoute: typeof SolutionsRoute
-    }
-    '/solutions/appreciation-gifts': {
-      id: '/solutions/appreciation-gifts'
-      path: '/appreciation-gifts'
-      fullPath: '/solutions/appreciation-gifts'
-      preLoaderRoute: typeof SolutionsAppreciationGiftsRouteImport
-      parentRoute: typeof SolutionsRoute
-    }
-    '/markets/uae': {
-      id: '/markets/uae'
-      path: '/markets/uae'
-      fullPath: '/markets/uae'
-      preLoaderRoute: typeof MarketsUaeRouteImport
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/markets/singapore': {
-      id: '/markets/singapore'
-      path: '/markets/singapore'
-      fullPath: '/markets/singapore'
-      preLoaderRoute: typeof MarketsSingaporeRouteImport
+    '/solutions': {
+      id: '/solutions'
+      path: '/solutions'
+      fullPath: '/solutions'
+      preLoaderRoute: typeof SolutionsRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/markets/new-zealand': {
-      id: '/markets/new-zealand'
-      path: '/markets/new-zealand'
-      fullPath: '/markets/new-zealand'
-      preLoaderRoute: typeof MarketsNewZealandRouteImport
+    '/thank-you': {
+      id: '/thank-you'
+      path: '/thank-you'
+      fullPath: '/thank-you'
+      preLoaderRoute: typeof ThankYouRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/markets/australia': {
-      id: '/markets/australia'
-      path: '/markets/australia'
-      fullPath: '/markets/australia'
-      preLoaderRoute: typeof MarketsAustraliaRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/landing/onboarding-gift-set': {
-      id: '/landing/onboarding-gift-set'
-      path: '/landing/onboarding-gift-set'
-      fullPath: '/landing/onboarding-gift-set'
-      preLoaderRoute: typeof LandingOnboardingGiftSetRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/landing/metal-gifts-wholesale': {
-      id: '/landing/metal-gifts-wholesale'
-      path: '/landing/metal-gifts-wholesale'
-      fullPath: '/landing/metal-gifts-wholesale'
-      preLoaderRoute: typeof LandingMetalGiftsWholesaleRouteImport
+    '/{-$locale}': {
+      id: '/{-$locale}'
+      path: '/{-$locale}'
+      fullPath: '/{-$locale}'
+      preLoaderRoute: typeof Char123LocaleChar125RouteImport
       parentRoute: typeof rootRouteImport
     }
     '/landing/executive-gift-set': {
@@ -547,19 +449,103 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LandingExecutiveGiftSetRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/{-$locale}/products/': {
-      id: '/{-$locale}/products/'
-      path: '/products'
-      fullPath: '/{-$locale}/products/'
-      preLoaderRoute: typeof Char123LocaleChar125ProductsIndexRouteImport
+    '/landing/metal-gifts-wholesale': {
+      id: '/landing/metal-gifts-wholesale'
+      path: '/landing/metal-gifts-wholesale'
+      fullPath: '/landing/metal-gifts-wholesale'
+      preLoaderRoute: typeof LandingMetalGiftsWholesaleRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/landing/onboarding-gift-set': {
+      id: '/landing/onboarding-gift-set'
+      path: '/landing/onboarding-gift-set'
+      fullPath: '/landing/onboarding-gift-set'
+      preLoaderRoute: typeof LandingOnboardingGiftSetRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/markets/australia': {
+      id: '/markets/australia'
+      path: '/markets/australia'
+      fullPath: '/markets/australia'
+      preLoaderRoute: typeof MarketsAustraliaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/markets/new-zealand': {
+      id: '/markets/new-zealand'
+      path: '/markets/new-zealand'
+      fullPath: '/markets/new-zealand'
+      preLoaderRoute: typeof MarketsNewZealandRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/markets/singapore': {
+      id: '/markets/singapore'
+      path: '/markets/singapore'
+      fullPath: '/markets/singapore'
+      preLoaderRoute: typeof MarketsSingaporeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/markets/uae': {
+      id: '/markets/uae'
+      path: '/markets/uae'
+      fullPath: '/markets/uae'
+      preLoaderRoute: typeof MarketsUaeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solutions/appreciation-gifts': {
+      id: '/solutions/appreciation-gifts'
+      path: '/appreciation-gifts'
+      fullPath: '/solutions/appreciation-gifts'
+      preLoaderRoute: typeof SolutionsAppreciationGiftsRouteImport
+      parentRoute: typeof SolutionsRoute
+    }
+    '/solutions/milestone-awards': {
+      id: '/solutions/milestone-awards'
+      path: '/milestone-awards'
+      fullPath: '/solutions/milestone-awards'
+      preLoaderRoute: typeof SolutionsMilestoneAwardsRouteImport
+      parentRoute: typeof SolutionsRoute
+    }
+    '/solutions/new-hire-onboarding': {
+      id: '/solutions/new-hire-onboarding'
+      path: '/new-hire-onboarding'
+      fullPath: '/solutions/new-hire-onboarding'
+      preLoaderRoute: typeof SolutionsNewHireOnboardingRouteImport
+      parentRoute: typeof SolutionsRoute
+    }
+    '/{-$locale}/about': {
+      id: '/{-$locale}/about'
+      path: '/about'
+      fullPath: '/{-$locale}/about'
+      preLoaderRoute: typeof Char123LocaleChar125AboutRouteImport
       parentRoute: typeof Char123LocaleChar125Route
     }
-    '/{-$locale}/gift-sets/': {
-      id: '/{-$locale}/gift-sets/'
-      path: '/'
-      fullPath: '/{-$locale}/gift-sets/'
-      preLoaderRoute: typeof Char123LocaleChar125GiftSetsIndexRouteImport
-      parentRoute: typeof Char123LocaleChar125GiftSetsRoute
+    '/{-$locale}/blog': {
+      id: '/{-$locale}/blog'
+      path: '/blog'
+      fullPath: '/{-$locale}/blog'
+      preLoaderRoute: typeof Char123LocaleChar125BlogRouteImport
+      parentRoute: typeof Char123LocaleChar125Route
+    }
+    '/{-$locale}/contact': {
+      id: '/{-$locale}/contact'
+      path: '/contact'
+      fullPath: '/{-$locale}/contact'
+      preLoaderRoute: typeof Char123LocaleChar125ContactRouteImport
+      parentRoute: typeof Char123LocaleChar125Route
+    }
+    '/{-$locale}/faq': {
+      id: '/{-$locale}/faq'
+      path: '/faq'
+      fullPath: '/{-$locale}/faq'
+      preLoaderRoute: typeof Char123LocaleChar125FaqRouteImport
+      parentRoute: typeof Char123LocaleChar125Route
+    }
+    '/{-$locale}/gift-sets': {
+      id: '/{-$locale}/gift-sets'
+      path: '/gift-sets'
+      fullPath: '/{-$locale}/gift-sets'
+      preLoaderRoute: typeof Char123LocaleChar125GiftSetsRouteImport
+      parentRoute: typeof Char123LocaleChar125Route
     }
     '/{-$locale}/blog/': {
       id: '/{-$locale}/blog/'
@@ -568,12 +554,19 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof Char123LocaleChar125BlogIndexRouteImport
       parentRoute: typeof Char123LocaleChar125BlogRoute
     }
-    '/{-$locale}/products/$productId': {
-      id: '/{-$locale}/products/$productId'
-      path: '/products/$productId'
-      fullPath: '/{-$locale}/products/$productId'
-      preLoaderRoute: typeof Char123LocaleChar125ProductsProductIdRouteImport
-      parentRoute: typeof Char123LocaleChar125Route
+    '/{-$locale}/blog/$slug': {
+      id: '/{-$locale}/blog/$slug'
+      path: '/$slug'
+      fullPath: '/{-$locale}/blog/$slug'
+      preLoaderRoute: typeof Char123LocaleChar125BlogSlugRouteImport
+      parentRoute: typeof Char123LocaleChar125BlogRoute
+    }
+    '/{-$locale}/gift-sets/': {
+      id: '/{-$locale}/gift-sets/'
+      path: '/'
+      fullPath: '/{-$locale}/gift-sets/'
+      preLoaderRoute: typeof Char123LocaleChar125GiftSetsIndexRouteImport
+      parentRoute: typeof Char123LocaleChar125GiftSetsRoute
     }
     '/{-$locale}/gift-sets/$setId': {
       id: '/{-$locale}/gift-sets/$setId'
@@ -582,12 +575,19 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof Char123LocaleChar125GiftSetsSetIdRouteImport
       parentRoute: typeof Char123LocaleChar125GiftSetsRoute
     }
-    '/{-$locale}/blog/$slug': {
-      id: '/{-$locale}/blog/$slug'
-      path: '/$slug'
-      fullPath: '/{-$locale}/blog/$slug'
-      preLoaderRoute: typeof Char123LocaleChar125BlogSlugRouteImport
-      parentRoute: typeof Char123LocaleChar125BlogRoute
+    '/{-$locale}/products/': {
+      id: '/{-$locale}/products/'
+      path: '/products'
+      fullPath: '/{-$locale}/products/'
+      preLoaderRoute: typeof Char123LocaleChar125ProductsIndexRouteImport
+      parentRoute: typeof Char123LocaleChar125Route
+    }
+    '/{-$locale}/products/$productId': {
+      id: '/{-$locale}/products/$productId'
+      path: '/products/$productId'
+      fullPath: '/{-$locale}/products/$productId'
+      preLoaderRoute: typeof Char123LocaleChar125ProductsProductIdRouteImport
+      parentRoute: typeof Char123LocaleChar125Route
     }
   }
 }
