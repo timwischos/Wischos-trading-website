@@ -11,9 +11,9 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as Char123LocaleChar125RouteImport } from './routes/{-$locale}'
 import { Route as ThankYouRouteImport } from './routes/thank-you'
+import { Route as SolutionsRouteImport } from './routes/solutions'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as ForDistributorsRouteImport } from './routes/for-distributors'
-import { Route as SolutionsNewHireOnboardingRouteImport } from './routes/solutions/new-hire-onboarding'
 import { Route as DutyAndShippingRouteImport } from './routes/duty-and-shipping'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as Char123LocaleChar125GiftSetsRouteImport } from './routes/{-$locale}/gift-sets'
@@ -21,6 +21,9 @@ import { Route as Char123LocaleChar125FaqRouteImport } from './routes/{-$locale}
 import { Route as Char123LocaleChar125ContactRouteImport } from './routes/{-$locale}/contact'
 import { Route as Char123LocaleChar125BlogRouteImport } from './routes/{-$locale}/blog'
 import { Route as Char123LocaleChar125AboutRouteImport } from './routes/{-$locale}/about'
+import { Route as SolutionsNewHireOnboardingRouteImport } from './routes/solutions/new-hire-onboarding'
+import { Route as SolutionsMilestoneAwardsRouteImport } from './routes/solutions/milestone-awards'
+import { Route as SolutionsAppreciationGiftsRouteImport } from './routes/solutions/appreciation-gifts'
 import { Route as MarketsUaeRouteImport } from './routes/markets/uae'
 import { Route as MarketsSingaporeRouteImport } from './routes/markets/singapore'
 import { Route as MarketsNewZealandRouteImport } from './routes/markets/new-zealand'
@@ -45,6 +48,11 @@ const ThankYouRoute = ThankYouRouteImport.update({
   path: '/thank-you',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SolutionsRoute = SolutionsRouteImport.update({
+  id: '/solutions',
+  path: '/solutions',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PrivacyRoute = PrivacyRouteImport.update({
   id: '/privacy',
   path: '/privacy',
@@ -55,12 +63,6 @@ const ForDistributorsRoute = ForDistributorsRouteImport.update({
   path: '/for-distributors',
   getParentRoute: () => rootRouteImport,
 } as any)
-const SolutionsNewHireOnboardingRoute =
-  SolutionsNewHireOnboardingRouteImport.update({
-    id: '/solutions/new-hire-onboarding',
-    path: '/solutions/new-hire-onboarding',
-    getParentRoute: () => rootRouteImport,
-  } as any)
 const DutyAndShippingRoute = DutyAndShippingRouteImport.update({
   id: '/duty-and-shipping',
   path: '/duty-and-shipping',
@@ -99,6 +101,24 @@ const Char123LocaleChar125AboutRoute =
     id: '/about',
     path: '/about',
     getParentRoute: () => Char123LocaleChar125Route,
+  } as any)
+const SolutionsNewHireOnboardingRoute =
+  SolutionsNewHireOnboardingRouteImport.update({
+    id: '/new-hire-onboarding',
+    path: '/new-hire-onboarding',
+    getParentRoute: () => SolutionsRoute,
+  } as any)
+const SolutionsMilestoneAwardsRoute =
+  SolutionsMilestoneAwardsRouteImport.update({
+    id: '/milestone-awards',
+    path: '/milestone-awards',
+    getParentRoute: () => SolutionsRoute,
+  } as any)
+const SolutionsAppreciationGiftsRoute =
+  SolutionsAppreciationGiftsRouteImport.update({
+    id: '/appreciation-gifts',
+    path: '/appreciation-gifts',
+    getParentRoute: () => SolutionsRoute,
   } as any)
 const MarketsUaeRoute = MarketsUaeRouteImport.update({
   id: '/markets/uae',
@@ -178,8 +198,8 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/duty-and-shipping': typeof DutyAndShippingRoute
   '/for-distributors': typeof ForDistributorsRoute
-  '/solutions/new-hire-onboarding': typeof SolutionsNewHireOnboardingRoute
   '/privacy': typeof PrivacyRoute
+  '/solutions': typeof SolutionsRouteWithChildren
   '/thank-you': typeof ThankYouRoute
   '/{-$locale}': typeof Char123LocaleChar125RouteWithChildren
   '/landing/executive-gift-set': typeof LandingExecutiveGiftSetRoute
@@ -189,6 +209,9 @@ export interface FileRoutesByFullPath {
   '/markets/new-zealand': typeof MarketsNewZealandRoute
   '/markets/singapore': typeof MarketsSingaporeRoute
   '/markets/uae': typeof MarketsUaeRoute
+  '/solutions/appreciation-gifts': typeof SolutionsAppreciationGiftsRoute
+  '/solutions/milestone-awards': typeof SolutionsMilestoneAwardsRoute
+  '/solutions/new-hire-onboarding': typeof SolutionsNewHireOnboardingRoute
   '/{-$locale}/about': typeof Char123LocaleChar125AboutRoute
   '/{-$locale}/blog': typeof Char123LocaleChar125BlogRouteWithChildren
   '/{-$locale}/contact': typeof Char123LocaleChar125ContactRoute
@@ -205,8 +228,8 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/duty-and-shipping': typeof DutyAndShippingRoute
   '/for-distributors': typeof ForDistributorsRoute
-  '/solutions/new-hire-onboarding': typeof SolutionsNewHireOnboardingRoute
   '/privacy': typeof PrivacyRoute
+  '/solutions': typeof SolutionsRouteWithChildren
   '/thank-you': typeof ThankYouRoute
   '/{-$locale}': typeof Char123LocaleChar125RouteWithChildren
   '/landing/executive-gift-set': typeof LandingExecutiveGiftSetRoute
@@ -216,6 +239,9 @@ export interface FileRoutesByTo {
   '/markets/new-zealand': typeof MarketsNewZealandRoute
   '/markets/singapore': typeof MarketsSingaporeRoute
   '/markets/uae': typeof MarketsUaeRoute
+  '/solutions/appreciation-gifts': typeof SolutionsAppreciationGiftsRoute
+  '/solutions/milestone-awards': typeof SolutionsMilestoneAwardsRoute
+  '/solutions/new-hire-onboarding': typeof SolutionsNewHireOnboardingRoute
   '/{-$locale}/about': typeof Char123LocaleChar125AboutRoute
   '/{-$locale}/contact': typeof Char123LocaleChar125ContactRoute
   '/{-$locale}/faq': typeof Char123LocaleChar125FaqRoute
@@ -231,8 +257,8 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/duty-and-shipping': typeof DutyAndShippingRoute
   '/for-distributors': typeof ForDistributorsRoute
-  '/solutions/new-hire-onboarding': typeof SolutionsNewHireOnboardingRoute
   '/privacy': typeof PrivacyRoute
+  '/solutions': typeof SolutionsRouteWithChildren
   '/thank-you': typeof ThankYouRoute
   '/{-$locale}': typeof Char123LocaleChar125RouteWithChildren
   '/landing/executive-gift-set': typeof LandingExecutiveGiftSetRoute
@@ -242,6 +268,9 @@ export interface FileRoutesById {
   '/markets/new-zealand': typeof MarketsNewZealandRoute
   '/markets/singapore': typeof MarketsSingaporeRoute
   '/markets/uae': typeof MarketsUaeRoute
+  '/solutions/appreciation-gifts': typeof SolutionsAppreciationGiftsRoute
+  '/solutions/milestone-awards': typeof SolutionsMilestoneAwardsRoute
+  '/solutions/new-hire-onboarding': typeof SolutionsNewHireOnboardingRoute
   '/{-$locale}/about': typeof Char123LocaleChar125AboutRoute
   '/{-$locale}/blog': typeof Char123LocaleChar125BlogRouteWithChildren
   '/{-$locale}/contact': typeof Char123LocaleChar125ContactRoute
@@ -260,8 +289,8 @@ export interface FileRouteTypes {
     | '/'
     | '/duty-and-shipping'
     | '/for-distributors'
-    | '/solutions/new-hire-onboarding'
     | '/privacy'
+    | '/solutions'
     | '/thank-you'
     | '/{-$locale}'
     | '/landing/executive-gift-set'
@@ -271,6 +300,9 @@ export interface FileRouteTypes {
     | '/markets/new-zealand'
     | '/markets/singapore'
     | '/markets/uae'
+    | '/solutions/appreciation-gifts'
+    | '/solutions/milestone-awards'
+    | '/solutions/new-hire-onboarding'
     | '/{-$locale}/about'
     | '/{-$locale}/blog'
     | '/{-$locale}/contact'
@@ -287,8 +319,8 @@ export interface FileRouteTypes {
     | '/'
     | '/duty-and-shipping'
     | '/for-distributors'
-    | '/solutions/new-hire-onboarding'
     | '/privacy'
+    | '/solutions'
     | '/thank-you'
     | '/{-$locale}'
     | '/landing/executive-gift-set'
@@ -298,6 +330,9 @@ export interface FileRouteTypes {
     | '/markets/new-zealand'
     | '/markets/singapore'
     | '/markets/uae'
+    | '/solutions/appreciation-gifts'
+    | '/solutions/milestone-awards'
+    | '/solutions/new-hire-onboarding'
     | '/{-$locale}/about'
     | '/{-$locale}/contact'
     | '/{-$locale}/faq'
@@ -312,8 +347,8 @@ export interface FileRouteTypes {
     | '/'
     | '/duty-and-shipping'
     | '/for-distributors'
-    | '/solutions/new-hire-onboarding'
     | '/privacy'
+    | '/solutions'
     | '/thank-you'
     | '/{-$locale}'
     | '/landing/executive-gift-set'
@@ -323,6 +358,9 @@ export interface FileRouteTypes {
     | '/markets/new-zealand'
     | '/markets/singapore'
     | '/markets/uae'
+    | '/solutions/appreciation-gifts'
+    | '/solutions/milestone-awards'
+    | '/solutions/new-hire-onboarding'
     | '/{-$locale}/about'
     | '/{-$locale}/blog'
     | '/{-$locale}/contact'
@@ -340,8 +378,8 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   DutyAndShippingRoute: typeof DutyAndShippingRoute
   ForDistributorsRoute: typeof ForDistributorsRoute
-  SolutionsNewHireOnboardingRoute: typeof SolutionsNewHireOnboardingRoute
   PrivacyRoute: typeof PrivacyRoute
+  SolutionsRoute: typeof SolutionsRouteWithChildren
   ThankYouRoute: typeof ThankYouRoute
   Char123LocaleChar125Route: typeof Char123LocaleChar125RouteWithChildren
   LandingExecutiveGiftSetRoute: typeof LandingExecutiveGiftSetRoute
@@ -369,6 +407,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ThankYouRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/solutions': {
+      id: '/solutions'
+      path: '/solutions'
+      fullPath: '/solutions'
+      preLoaderRoute: typeof SolutionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/privacy': {
       id: '/privacy'
       path: '/privacy'
@@ -381,13 +426,6 @@ declare module '@tanstack/react-router' {
       path: '/for-distributors'
       fullPath: '/for-distributors'
       preLoaderRoute: typeof ForDistributorsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/solutions/new-hire-onboarding': {
-      id: '/solutions/new-hire-onboarding'
-      path: '/solutions/new-hire-onboarding'
-      fullPath: '/solutions/new-hire-onboarding'
-      preLoaderRoute: typeof SolutionsNewHireOnboardingRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/duty-and-shipping': {
@@ -438,6 +476,27 @@ declare module '@tanstack/react-router' {
       fullPath: '/{-$locale}/about'
       preLoaderRoute: typeof Char123LocaleChar125AboutRouteImport
       parentRoute: typeof Char123LocaleChar125Route
+    }
+    '/solutions/new-hire-onboarding': {
+      id: '/solutions/new-hire-onboarding'
+      path: '/new-hire-onboarding'
+      fullPath: '/solutions/new-hire-onboarding'
+      preLoaderRoute: typeof SolutionsNewHireOnboardingRouteImport
+      parentRoute: typeof SolutionsRoute
+    }
+    '/solutions/milestone-awards': {
+      id: '/solutions/milestone-awards'
+      path: '/milestone-awards'
+      fullPath: '/solutions/milestone-awards'
+      preLoaderRoute: typeof SolutionsMilestoneAwardsRouteImport
+      parentRoute: typeof SolutionsRoute
+    }
+    '/solutions/appreciation-gifts': {
+      id: '/solutions/appreciation-gifts'
+      path: '/appreciation-gifts'
+      fullPath: '/solutions/appreciation-gifts'
+      preLoaderRoute: typeof SolutionsAppreciationGiftsRouteImport
+      parentRoute: typeof SolutionsRoute
     }
     '/markets/uae': {
       id: '/markets/uae'
@@ -533,6 +592,22 @@ declare module '@tanstack/react-router' {
   }
 }
 
+interface SolutionsRouteChildren {
+  SolutionsAppreciationGiftsRoute: typeof SolutionsAppreciationGiftsRoute
+  SolutionsMilestoneAwardsRoute: typeof SolutionsMilestoneAwardsRoute
+  SolutionsNewHireOnboardingRoute: typeof SolutionsNewHireOnboardingRoute
+}
+
+const SolutionsRouteChildren: SolutionsRouteChildren = {
+  SolutionsAppreciationGiftsRoute: SolutionsAppreciationGiftsRoute,
+  SolutionsMilestoneAwardsRoute: SolutionsMilestoneAwardsRoute,
+  SolutionsNewHireOnboardingRoute: SolutionsNewHireOnboardingRoute,
+}
+
+const SolutionsRouteWithChildren = SolutionsRoute._addFileChildren(
+  SolutionsRouteChildren,
+)
+
 interface Char123LocaleChar125BlogRouteChildren {
   Char123LocaleChar125BlogSlugRoute: typeof Char123LocaleChar125BlogSlugRoute
   Char123LocaleChar125BlogIndexRoute: typeof Char123LocaleChar125BlogIndexRoute
@@ -597,8 +672,8 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   DutyAndShippingRoute: DutyAndShippingRoute,
   ForDistributorsRoute: ForDistributorsRoute,
-  SolutionsNewHireOnboardingRoute: SolutionsNewHireOnboardingRoute,
   PrivacyRoute: PrivacyRoute,
+  SolutionsRoute: SolutionsRouteWithChildren,
   ThankYouRoute: ThankYouRoute,
   Char123LocaleChar125Route: Char123LocaleChar125RouteWithChildren,
   LandingExecutiveGiftSetRoute: LandingExecutiveGiftSetRoute,

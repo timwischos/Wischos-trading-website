@@ -55,7 +55,7 @@ const faqItems = [
   {
     question: 'What is the best gift set for VIP and executive clients?',
     answer:
-      'For VIP and board-level executive gifting, WGS-008 The Quartet is our top-tier four-piece option in the existing catalog (FOB USD 44–58). It pairs a solid brass ballpoint pen, slim push stainless steel business card case, folding aluminium device stand, and titanium tea infuser business cup — four metals for four parts of the executive day. For higher-tier government engagement and board-level appreciation, our WGS-011 The Boardroom 5-piece set (in development) adds a premium brass fountain pen and engraved brass paperweight.',
+      'For VIP and board-level executive gifting, WGS-008 The Quartet is our top-tier four-piece option in the existing catalog (FOB USD 44–58). It pairs a solid brass ballpoint pen, slim push stainless steel business card case, folding aluminium device stand, and titanium tea infuser business cup — four metals for four parts of the executive day.',
   },
   {
     question: 'What is the best branded drinkware gift for corporate hydration programs?',

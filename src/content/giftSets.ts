@@ -107,6 +107,13 @@ export const giftSetPageContent: GiftSetPageContent = {
       "coreUseCase": "Note-taking, writing, card exchange",
       "materials": "Anodised aluminium, brass, stainless steel",
       "packaging": "Magnetic rigid gift box"
+    },
+    {
+      "giftSet": "WGS-011 The Aurora Duet",
+      "bestFor": "Hospitality, client lounges, and shared table gifting",
+      "coreUseCase": "Branded coaster placement for meeting tables, guest rooms, and reception surfaces",
+      "materials": "Satin brass, resin",
+      "packaging": "Rigid lid gift box"
     }
   ],
   choosingGuide: "Choose a desk gift set when the recipient works mainly at one desk. Choose an everyday carry set when the recipient moves between meetings, offices, travel, or field locations. Choose an onboarding gift set when the goal is first-week usefulness for new hires. Choose an executive desk set when presentation, material feel, and client appreciation matter most. Choose a meeting kit when the recipient is in sales, BD, or client-facing roles where writing, note-taking, and card exchange happen daily.",
@@ -801,6 +808,68 @@ export const giftSets: GiftSet[] = [
       '/products/WGS-010-5-The-Blueprint/The-Blueprint-cover.avif',
       '/products/WGS-010-5-The-Blueprint/The-Blueprint-detail-1.avif',
       '/products/WGS-010-5-The-Blueprint/The-Blueprint-detail-2.avif',
+    ],
+  },
+  {
+    id: 'wgs-011-4-aurora-duet',
+    sku: 'WGS-011-4',
+    name: 'The Aurora Duet',
+    procurementCategory: 'Custom Brass Coaster Gift Set',
+    tagline: 'Colour for the table. Brass at every edge.',
+    definition: 'The Aurora Duet is a four-piece brass coaster gift set with blue and blush resin inlays in engravable satin brass frames.',
+    heroCopy: 'A four-piece custom brass and resin coaster set built for tables shared by clients, colleagues, and guests. Two coasters use blue aurora-pattern resin inlays and two use blush. Each Ø75mm resin centre sits inside a satin brass frame, giving all four pieces the same material edge while retaining the paired colour arrangement. The brass rim supports laser engraving for a company logo, initials, or short text. Each coaster fits a standard coffee mug, teacup, or desk cup. Presented in separate recesses, the set is suited to meeting tables, client lounges, hotel rooms, reception areas, and shared offices where all four pieces can remain together in daily use.',
+    sellingPoints: [
+      {
+        title: 'Two Colour Pairs Across Four Coasters',
+        body: 'Two blue and two blush resin inlays create a paired four-piece arrangement for a meeting table, guest room, client lounge, or shared office. Buyers can retain the two-colour configuration or specify one resin colour across all four pieces, subject to material availability, sample approval, and production confirmation.',
+      },
+      {
+        title: 'Satin Brass Carries the Brand Mark',
+        body: 'Each WP-212 coaster uses a satin brass outer frame around the resin centre. The ring gives all four pieces a consistent material line and accepts laser engraving for a company logo, initials, or short text. The mark remains visible when the coasters are separated around a table.',
+      },
+      {
+        title: 'Four Coasters Serve One Shared Table',
+        body: 'The four-piece format places the same branded object at several seats on a small meeting table, guest setting, or reception surface. It suits client appreciation, property handovers, hotel rooms, and workplace gifting where the gift is intended to remain together and be used by more than one person.',
+      },
+    ],
+    components: [
+      { sku: 'WP-212', name: 'Brass Frame Resin Coaster', productId: 'wp-212-brass-inlay-coaster', imageIndex: 1 },
+    ],
+    targetBuyer: 'Corporate procurement teams, promotional product distributors, hospitality groups, property developers, interior design and architecture firms, and professional services companies planning client appreciation or meeting-room gifts.',
+    packaging: 'Rigid Lid Gift Box + Four-Recess Insert',
+    cta: 'Send your colour and branding brief.',
+    fob: '$22–34',
+    sourcingNotes: [
+      {
+        title: 'Why four coasters for a client-facing setting',
+        body: 'A four-piece coaster format moves naturally into spaces used by more than one person: a meeting table, client lounge, hotel room, reception area, or shared office. Each piece performs the same job, keeping use consistent across the set. The paired blue and blush configuration gives procurement teams a ready colour direction while leaving room to specify one colour or another coordinated pairing for a particular program.',
+      },
+      {
+        title: 'Brass frames and resin inlays: what to approve',
+        body: 'Brass and resin create two approval points. Review the four satin brass frames together for tone consistency, then compare the resin centres for colour, pattern, and gloss. Individual photographs help with initial selection; an assembled physical sample shows how the four pieces relate side by side and provides the reference for final colour and finish approval.',
+      },
+      {
+        title: 'What the standard packaging delivers',
+        body: 'The standard format uses a rigid lid gift box with four separate recesses. Each coaster sits flat with space at the edge for removal, keeping the satin brass frames separated during transit and aligned at first opening. The lift-off lid provides a broad exterior branding area, while the compact four-piece layout keeps the box footprint tied to the diameter of the coasters.',
+      },
+      {
+        title: 'Logo on the box',
+        body: 'For a matte paper-wrapped rigid lid, hot foil stamping gives the logo clear contrast and can echo the warm tone of the brass frames. Gold, copper, or another approved foil colour can be specified against the box wrap. Blind debossing provides a tone-on-tone alternative. Final logo size, position, foil, and paper combination should be approved on a packaging proof.',
+      },
+      {
+        title: 'Alternative resin and presentation configurations',
+        body: 'The blue-and-blush configuration can be changed to one resin colour across all four pieces, two colours arranged as pairs, or another coordinated colour brief, subject to material availability and sample confirmation. A printed interior lid message or card can add program context. For a different four-piece arrangement or packaging finish, send the colour reference, branding file, quantity, and destination for review.',
+      },
+    ],
+    coverImage: '/products/WGS-011-4-Aurora-Duet/Aurora-Duet-cover.avif',
+    hoverImage: '/products/WGS-011-4-Aurora-Duet/Aurora-Duet-hover.avif',
+    images: [
+      '/products/WGS-011-4-Aurora-Duet/Aurora-Duet-cover.avif',
+      '/products/WGS-011-4-Aurora-Duet/Aurora-Duet-detail-1.avif',
+    ],
+    imageAlts: [
+      'The Aurora Duet four-piece custom brass coaster gift set with two blue and two blush resin inlays in a presentation box',
+      'Brass frame resin coaster colour options in blue, blush, violet, green, and white',
     ],
   },
 ]
