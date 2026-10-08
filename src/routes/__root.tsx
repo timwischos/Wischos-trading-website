@@ -72,6 +72,7 @@ const organizationJsonLd = {
     'https://www.linkedin.com/company/wischosgift',
     'https://www.instagram.com/wischosgift',
     'https://www.tiktok.com/@wischos',
+    'https://www.facebook.com/share/1ae7ttk2Db/?mibextid=wwXIfr',
   ],
 }
 
