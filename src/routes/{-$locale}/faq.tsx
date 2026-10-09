@@ -43,6 +43,11 @@ const faqItems = [
       'We regularly ship to Australia, New Zealand, Singapore, the UAE, Hong Kong, the UK, and Switzerland. Other destinations are available on request — contact us with your location and we will confirm shipping options, applicable trade agreements, and lead times.',
   },
   {
+    question: 'What shipping terms (Incoterms) do you offer — and is DDP available?',
+    answer:
+      'We quote on three Incoterms. FOB [Port]: goods loaded at the named Chinese port — you arrange freight and customs from there. CIF [Port]: we include sea freight and insurance to destination port — you handle customs clearance on arrival. DDP [City]: all-in price including freight, import duty, customs clearance, and inland delivery to your nominated address — no customs involvement on your side. DDP is available for all destinations we ship to. Full details are on our Duty, Shipping & FTA Coverage page.',
+  },
+  {
     question: 'How is quality checked before shipment?',
     answer:
       'We conduct a pre-shipment inspection at the factory before goods are packed for export. We send photos and video of randomly selected samples for your review and approval. Third-party inspection by an independent agency is also available on request.',

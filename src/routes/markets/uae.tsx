@@ -50,6 +50,11 @@ export const Route = createFileRoute('/markets/uae')({
                 name: 'Do you work with UAE gifting agencies like Merchlist or Belfast Gifts?',
                 acceptedAnswer: { '@type': 'Answer', text: 'Yes. We work with UAE-based gifting agencies, corporate gifting consultants, and direct corporate procurement teams. All production is white-labelled — your agency or brand identity is what appears on products and packaging, not ours.' },
               },
+              {
+                '@type': 'Question',
+                name: 'Can you quote DDP (Delivered Duty Paid) for UAE delivery?',
+                acceptedAnswer: { '@type': 'Answer', text: 'Yes. For buyers who prefer a fully-landed price without managing customs themselves, we quote DDP [city] — covering production, export, sea freight to Jebel Ali, UAE customs clearance, 5% GCC import duty, and inland delivery to your nominated UAE address. UAE VAT (5%) is assessed at import and recoverable by VAT-registered importers. DDP removes the need to engage a local customs broker. Request a DDP quotation when you submit your inquiry.' },
+              },
             ],
           },
         ]),
@@ -188,6 +193,10 @@ function UAEMarketPage() {
             </div>
           ))}
         </div>
+        <p style={{ fontSize: '0.82rem', color: '#666', lineHeight: 1.65, marginTop: '2rem', paddingTop: '1.5rem', borderTop: '1px solid #e5e5e5' }}>
+          We quote <strong>FOB</strong>, <strong>CIF</strong>, or <strong>DDP</strong>. For buyers who prefer a fully-landed price with duty and delivery included, DDP to any UAE address is available —{' '}
+          <a href="/duty-and-shipping" style={{ color: '#B87333', textDecoration: 'none' }}>see shipping &amp; duty details</a>.
+        </p>
       </section>
 
       {/* FAQ */}
@@ -200,6 +209,7 @@ function UAEMarketPage() {
           { question: 'Can you handle Ramadan and year-end gifting peaks?', answer: 'Yes, with planning. UAE corporate gifting concentrates around Ramadan (varies by year), UAE National Day (early December), and Western year-end. We recommend confirming Ramadan programs by January, and year-end programs by July, to avoid Chinese factory peak season constraints.' },
           { question: 'Can you ship onward to Saudi Arabia, Qatar, Kuwait, or other GCC countries?', answer: 'Yes. UAE-cleared goods can move within the GCC under unified customs rules with minimal additional friction. Alternatively, we can ship directly to other GCC destinations from China. Tell us your end-destination and we will quote the most efficient route.' },
           { question: 'Can you quote in AED, USD, or another currency?', answer: 'We quote FOB in USD as standard. For DDP quotations to UAE we can express the total in AED at the prevailing spot rate. Payment is typically received in USD via T/T or Wise; AED payments are accepted on request.' },
+          { question: 'Can you quote DDP (Delivered Duty Paid) for UAE delivery?', answer: 'Yes. For buyers who prefer a fully-landed price without managing customs themselves, we quote DDP [city] — covering production, export, sea freight to Jebel Ali, UAE customs clearance, 5% GCC import duty, and inland delivery to your nominated UAE address. UAE VAT (5%) is assessed at import and recoverable by VAT-registered importers. DDP removes the need to engage a local customs broker. Request a DDP quotation when you submit your inquiry.' },
         ].map((item) => <Accordion key={item.question} question={item.question} answer={item.answer} />)}
       </section>
 

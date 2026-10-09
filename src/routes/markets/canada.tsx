@@ -79,6 +79,14 @@ export const Route = createFileRoute('/markets/canada')({
                   text: 'We quote FOB in USD as standard since production costs are USD-denominated. For landed cost estimates into Canadian ports, we can express the total in CAD at the prevailing spot rate. Payment is typically USD via T/T or Wise.',
                 },
               },
+              {
+                '@type': 'Question',
+                name: 'Can you quote DDP (Delivered Duty Paid) for Canadian delivery?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Yes. For buyers who prefer a fully-landed price without managing customs themselves, we quote DDP [city] — covering production, export, sea freight, Canadian customs clearance and duty, and inland delivery to your nominated Canadian address. Canadian MFN duty rates on finished metal gift categories are typically low. Canadian GST/HST is assessed at import and generally recoverable by registered importers. Request a DDP quotation when you submit your inquiry.',
+                },
+              },
             ],
           },
         ]),
@@ -580,6 +588,10 @@ function CanadaMarketPage() {
             </div>
           ))}
         </div>
+        <p style={{ fontSize: '0.82rem', color: '#666', lineHeight: 1.65, marginTop: '2rem', paddingTop: '1.5rem', borderTop: '1px solid #e5e5e5' }}>
+          We quote <strong>FOB</strong>, <strong>CIF</strong>, or <strong>DDP</strong>. For buyers who prefer a fully-landed price with duty and delivery included, DDP to any Canadian address is available —{' '}
+          <a href="/duty-and-shipping" style={{ color: '#B87333', textDecoration: 'none' }}>see shipping &amp; duty details</a>.
+        </p>
       </section>
 
       {/* FAQ */}
@@ -618,6 +630,11 @@ function CanadaMarketPage() {
             question: 'How is Canadian GST/HST handled?',
             answer:
               'Canadian GST or HST applies at the point of import and is generally recoverable via input tax credits for GST/HST-registered importers. We provide commercial invoices and packing lists structured to support smooth customs valuation. Your customs broker or tax adviser can confirm the treatment for your specific program.',
+          },
+          {
+            question: 'Can you quote DDP (Delivered Duty Paid) for Canadian delivery?',
+            answer:
+              'Yes. For buyers who prefer a fully-landed price without managing customs themselves, we quote DDP [city] — covering production, export, sea freight, Canadian customs clearance and duty, and inland delivery to your nominated Canadian address. Canadian MFN duty rates on finished metal gift categories are typically low. Canadian GST/HST is assessed at import and generally recoverable by registered importers. Request a DDP quotation when you submit your inquiry.',
           },
           {
             question: 'Do the 2024 Canadian tariffs on Chinese goods affect metal gifts?',

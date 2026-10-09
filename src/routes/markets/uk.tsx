@@ -79,6 +79,14 @@ export const Route = createFileRoute('/markets/uk')({
                   text: 'We quote FOB in USD as standard since production costs are USD-denominated. For landed cost estimates into UK ports we can express the total in GBP at the prevailing spot rate. Payment is typically USD via T/T or Wise.',
                 },
               },
+              {
+                '@type': 'Question',
+                name: 'Can you quote DDP (Delivered Duty Paid) for UK delivery?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Yes. For buyers who prefer a fully-landed price without managing customs themselves, we quote DDP [city] — covering production, export, sea freight, UK customs clearance and duty, and inland delivery to your nominated UK address. UKGT rates on finished metal gift categories are typically 0–4%. UK VAT (20%) is assessed at import and recoverable by VAT-registered importers. Request a DDP quotation when you submit your inquiry.',
+                },
+              },
             ],
           },
         ]),
@@ -489,6 +497,10 @@ function UKMarketPage() {
             </div>
           ))}
         </div>
+        <p style={{ fontSize: '0.82rem', color: '#666', lineHeight: 1.65, marginTop: '2rem', paddingTop: '1.5rem', borderTop: '1px solid #e5e5e5' }}>
+          We quote <strong>FOB</strong>, <strong>CIF</strong>, or <strong>DDP</strong>. For buyers who prefer a fully-landed price with duty and delivery included, DDP to any UK address is available —{' '}
+          <a href="/duty-and-shipping" style={{ color: '#B87333', textDecoration: 'none' }}>see shipping &amp; duty details</a>.
+        </p>
       </section>
 
       {/* FAQ */}
@@ -521,6 +533,11 @@ function UKMarketPage() {
             question: 'How is UK VAT handled on imports from China?',
             answer:
               'UK VAT (currently 20%) applies at import and is recoverable by VAT-registered importers via their VAT return. We provide commercial invoices and packing lists structured to support accurate customs valuation and smooth VAT reclaim.',
+          },
+          {
+            question: 'Can you quote DDP (Delivered Duty Paid) for UK delivery?',
+            answer:
+              'Yes. For buyers who prefer a fully-landed price without managing customs themselves, we quote DDP [city] — covering production, export, sea freight, UK customs clearance and duty, and inland delivery to your nominated UK address. UKGT rates on finished metal gift categories are typically 0–4%. UK VAT (20%) is assessed at import and recoverable by VAT-registered importers. Request a DDP quotation when you submit your inquiry.',
           },
           {
             question: 'Do you ship to the Republic of Ireland as well?',
