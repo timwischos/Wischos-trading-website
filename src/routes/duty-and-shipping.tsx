@@ -1,6 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { lazy, Suspense, useState } from 'react'
 import { cloudinaryUrl } from '@/lib/cloudinary'
+import { EmailLink } from '@/components/ui/EmailLink'
 
 const InquiryFormSection = lazy(() =>
   import('@/components/sections/InquiryFormSection').then(m => ({ default: m.InquiryFormSection }))
@@ -259,7 +260,7 @@ function DutyAndShippingPage() {
           <h2 style={{ fontSize: 'clamp(1.25rem, 2.5vw, 1.75rem)', fontWeight: 300, marginBottom: '1rem' }}>Need a landed cost for your specific program?</h2>
           <p style={{ fontSize: '0.85rem', color: '#555', lineHeight: 1.7, marginBottom: '1.25rem' }}>Tell us the destination, quantity, and target set configuration. We respond within 1–2 business days with a line-by-line landed cost breakdown including freight, duty, certificate handling, and Incoterm options.</p>
           <p style={{ fontSize: '0.82rem', color: '#555', lineHeight: 1.65, marginBottom: '0.5rem' }}>Prefer email?</p>
-          <a href="mailto:johnlui@wischosgift.com" style={{ fontSize: '0.85rem', color: '#B87333', textDecoration: 'none', fontWeight: 500, display: 'block', marginBottom: '0.5rem' }}>johnlui@wischosgift.com</a>
+          <EmailLink email="johnlui@wischosgift.com" location="duty_shipping" style={{ fontSize: '0.85rem', color: '#B87333', textDecoration: 'none', fontWeight: 500, display: 'block', marginBottom: '0.5rem' }}>johnlui@wischosgift.com</EmailLink>
         </div>
         <div style={{ border: '1px solid #e5e5e5', padding: '2rem' }}>
           <Suspense fallback={<div style={{ height: '400px' }} />}><InquiryFormSection /></Suspense>

@@ -1,6 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { siteMeta, buildOgMeta, buildCanonical } from '@/content/meta'
 import { privacy } from '@/content/privacy'
+import { EmailLink } from '@/components/ui/EmailLink'
 
 export const Route = createFileRoute('/privacy')({
   head: () => ({
@@ -36,7 +37,7 @@ function PrivacyPage() {
         <hr />
         <p className="text-sm">
           For data requests, contact:{' '}
-          <a href={`mailto:${privacy.contactEmail}`}>{privacy.contactEmail}</a>
+          <EmailLink email={privacy.contactEmail} location="privacy_page">{privacy.contactEmail}</EmailLink>
         </p>
       </article>
     </div>

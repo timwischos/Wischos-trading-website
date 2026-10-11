@@ -1,6 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { lazy, Suspense, useState } from 'react'
 import { cloudinaryUrl } from '@/lib/cloudinary'
+import { EmailLink } from '@/components/ui/EmailLink'
 
 const InquiryFormSection = lazy(() =>
   import('@/components/sections/InquiryFormSection').then(m => ({ default: m.InquiryFormSection }))
@@ -574,12 +575,13 @@ function UKMarketPage() {
           <p style={{ fontSize: '0.82rem', color: '#555', lineHeight: 1.65, marginBottom: '0.5rem' }}>
             Prefer email?
           </p>
-          <a
-            href="mailto:johnlui@wischosgift.com"
+          <EmailLink
+            email="johnlui@wischosgift.com"
+            location="market_uk"
             style={{ fontSize: '0.85rem', color: '#B87333', textDecoration: 'none', fontWeight: 500, display: 'block', marginBottom: '0.5rem' }}
           >
             johnlui@wischosgift.com
-          </a>
+          </EmailLink>
           <a
             href="https://www.linkedin.com/in/john-lui-4529a3102/"
             target="_blank"

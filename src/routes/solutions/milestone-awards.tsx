@@ -1,6 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { lazy, Suspense, useState } from 'react'
 import { cloudinaryUrl } from '@/lib/cloudinary'
+import { EmailLink } from '@/components/ui/EmailLink'
 
 const InquiryFormSection = lazy(() =>
   import('@/components/sections/InquiryFormSection').then(m => ({ default: m.InquiryFormSection }))
@@ -427,12 +428,13 @@ function MilestoneAwardsPage() {
           <p style={{ fontSize: '0.85rem', color: '#555', lineHeight: 1.7, marginBottom: '1.25rem' }}>
             Share your tenure tiers, cohort sizes, timing and logo. We will recommend a set structure and send a quotation within 1–2 business days.
           </p>
-          <a
-            href="mailto:johnlui@wischosgift.com"
+          <EmailLink
+            email="johnlui@wischosgift.com"
+            location="solution_milestone"
             style={{ fontSize: '0.85rem', color: '#B87333', textDecoration: 'none', fontWeight: 500, display: 'block', marginBottom: '1.5rem' }}
           >
             johnlui@wischosgift.com
-          </a>
+          </EmailLink>
           <p style={{ fontSize: '0.78rem', color: '#888', lineHeight: 1.6, paddingTop: '1rem', borderTop: '1px solid #e5e5e5' }}>
             Buying on behalf of a client?{' '}
             <a href="/for-distributors" style={{ color: '#B87333', textDecoration: 'none', fontWeight: 500 }}>

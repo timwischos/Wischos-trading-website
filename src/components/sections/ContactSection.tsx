@@ -1,4 +1,5 @@
 import { contactContent } from '@/content/contact'
+import { EmailLink } from '@/components/ui/EmailLink'
 
 const NEXT_STEPS = [
   {
@@ -51,12 +52,13 @@ export function ContactSection({ dark = false, headingAs: Heading = 'h1' }: { da
             {contactContent.emailLabel}
           </span>
           <div style={{ marginTop: '0.25rem' }}>
-            <a
-              href={`mailto:${contactContent.email}`}
+            <EmailLink
+              email={contactContent.email}
+              location="contact_section"
               style={{ fontSize: '0.875rem', color: fg, textDecoration: 'none' }}
             >
               {contactContent.email}
-            </a>
+            </EmailLink>
           </div>
         </div>
 

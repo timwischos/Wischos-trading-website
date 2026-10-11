@@ -1,6 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { lazy, Suspense } from 'react'
 import { cloudinaryUrl } from '@/lib/cloudinary'
+import { EmailLink } from '@/components/ui/EmailLink'
 
 const InquiryFormSection = lazy(() =>
   import('@/components/sections/InquiryFormSection').then(m => ({ default: m.InquiryFormSection }))
@@ -269,12 +270,13 @@ function MetalGiftsWholesalePage() {
           <p style={{ fontSize: '0.85rem', color: '#555', lineHeight: 1.7, marginBottom: '1.25rem' }}>
             Tell us the item (or brief), quantity, logo requirements, and delivery timeline. We'll respond within 1–2 business days with availability and indicative pricing.
           </p>
-          <a
-            href="mailto:johnlui@wischosgift.com"
+          <EmailLink
+            email="johnlui@wischosgift.com"
+            location="landing_wholesale"
             style={{ fontSize: '0.85rem', color: '#B87333', textDecoration: 'none', fontWeight: 500, display: 'block', marginBottom: '0.5rem' }}
           >
             johnlui@wischosgift.com
-          </a>
+          </EmailLink>
           <a
             href="https://www.linkedin.com/in/john-lui-4529a3102/"
             target="_blank"

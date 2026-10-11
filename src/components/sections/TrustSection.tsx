@@ -1,5 +1,6 @@
 import { about } from '@/content/about'
 import { useFadeIn } from './useFadeIn'
+import { EmailLink } from '@/components/ui/EmailLink'
 
 export function TrustSection() {
   const ref = useFadeIn<HTMLElement>()
@@ -22,14 +23,15 @@ export function TrustSection() {
           <p style={{ fontSize: '0.75rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: '#767676', marginBottom: '1rem' }}>
             Contact
           </p>
-          <a
-            href={`mailto:${about.trust.email}`}
+          <EmailLink
+            email={about.trust.email}
+            location="trust_section"
             style={{ fontSize: '0.95rem', color: '#0a0a0a', textDecoration: 'none', display: 'block', marginBottom: '1.5rem', fontWeight: 500 }}
             onMouseEnter={e => { (e.currentTarget as HTMLElement).style.textDecoration = 'underline' }}
             onMouseLeave={e => { (e.currentTarget as HTMLElement).style.textDecoration = 'none' }}
           >
             {about.trust.email}
-          </a>
+          </EmailLink>
           <p style={{ fontSize: '0.85rem', color: '#555', lineHeight: 1.75 }}>
             {about.trust.qualityStatement}
           </p>

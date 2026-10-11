@@ -6,6 +6,7 @@ import { useNavigate } from '@tanstack/react-router'
 import { inquiryInsertSchema } from '@/lib/schemas/inquiry'
 import { submitInquiry } from '@/server/submitInquiry'
 import { trackQualifyLead, trackFormStarted } from '@/lib/analytics'
+import { EmailLink } from '@/components/ui/EmailLink'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { Label } from '@/components/ui/label'
@@ -266,12 +267,13 @@ export function QuickInquiryFormSection({
         >
           <p style={{ marginBottom: '0.3rem' }}>
             ⏱️ Response within 1 business day · ✉️{' '}
-            <a
-              href="mailto:johnlui@wischosgift.com"
+            <EmailLink
+              email="johnlui@wischosgift.com"
+              location="quick_inquiry"
               style={{ color: '#B87333', textDecoration: 'none' }}
             >
               johnlui@wischosgift.com
-            </a>
+            </EmailLink>
           </p>
           <p style={{ marginBottom: '0.3rem' }}>
             🔒 We only contact you about your inquiry. No marketing emails.

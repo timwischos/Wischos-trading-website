@@ -33,6 +33,14 @@ export function trackWhatsAppClick() {
   })
 }
 
+/** Fired when a user clicks any mailto: link */
+export function trackEmailClick(params: { location: string }) {
+  safeGtag('email_click', {
+    location: params.location,
+    method: 'email',
+  })
+}
+
 /** Fired when a user navigates to a product detail page */
 export function trackViewItem(params: {
   productId: string

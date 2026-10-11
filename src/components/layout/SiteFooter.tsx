@@ -1,6 +1,7 @@
 import { Link } from '@tanstack/react-router'
 import { Mail } from 'lucide-react'
 import { cloudinaryUrl } from '@/lib/cloudinary'
+import { trackEmailClick } from '@/lib/analytics'
 
 const productCategories = [
   { label: 'Featured Gift Sets', href: '/gift-sets' },
@@ -40,11 +41,12 @@ const linkStyle: React.CSSProperties = {
 }
 
 
-function SocialIconButton({ href, label, children }: { href: string; label: string; children: React.ReactNode }) {
+function SocialIconButton({ href, label, children, onClick }: { href: string; label: string; children: React.ReactNode; onClick?: React.MouseEventHandler<HTMLAnchorElement> }) {
   return (
     <a
       href={href}
       aria-label={label}
+      onClick={onClick}
       target={href.startsWith('http') ? '_blank' : undefined}
       rel={href.startsWith('http') ? 'nofollow noopener noreferrer' : undefined}
       style={{
@@ -88,6 +90,7 @@ export function SiteFooter() {
           </p>
           <a
             href="mailto:johnlui@wischosgift.com"
+            onClick={() => trackEmailClick({ location: 'footer_text' })}
             style={{ fontSize: '0.75rem', color: '#6b6b6b', display: 'block', marginBottom: '1.75rem', textDecoration: 'none', transition: 'color 150ms ease' }}
             onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = '#0a0a0a' }}
             onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = '#6b6b6b' }}
@@ -117,7 +120,7 @@ export function SiteFooter() {
                 <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.313 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.267h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/>
               </svg>
             </SocialIconButton>
-            <SocialIconButton href="mailto:johnlui@wischosgift.com" label="Email us">
+            <SocialIconButton href="mailto:johnlui@wischosgift.com" label="Email us" onClick={() => trackEmailClick({ location: 'footer_social' })}>
               <Mail size={16} />
             </SocialIconButton>
           </div>
