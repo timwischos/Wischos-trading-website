@@ -87,7 +87,7 @@ function MetalGiftsWholesalePage() {
               For Promotional Distributors &amp; Gifting Agencies
             </p>
             <h1 style={{ fontSize: 'clamp(2rem, 5vw, 3.25rem)', fontWeight: 700, lineHeight: 1.15, marginBottom: '1.25rem', maxWidth: '22ch' }}>
-              Custom brass pens and titanium gifts — bulk orders, logo engraved
+              Metal corporate gifts, sourced direct, from 100 sets
             </h1>
             <p style={{ fontSize: '1.05rem', color: '#4a4a4a', lineHeight: 1.7, maxWidth: '52ch', marginBottom: '1.75rem' }}>
               Wischos is a China-based metal gift sourcing partner. We supply individual metal items — brass pens, titanium bottles, stainless steel EDC — for promotional programs and client gifting. Minimum quantities are flexible; reach out and we'll advise.

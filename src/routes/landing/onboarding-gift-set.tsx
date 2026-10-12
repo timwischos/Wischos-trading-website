@@ -187,7 +187,7 @@ function OnboardingLandingPage() {
               Corporate Gifting · New Hire Welcome Kits
             </p>
             <h1 style={{ fontSize: 'clamp(2rem, 5vw, 3.25rem)', fontWeight: 700, lineHeight: 1.15, marginBottom: '1.25rem', maxWidth: '18ch' }}>
-              Custom Metal Gift Sets for Employee Onboarding
+              Onboarding kits new hires still use in month three
             </h1>
             <p style={{ fontSize: '1.05rem', color: '#4a4a4a', lineHeight: 1.7, maxWidth: '55ch', marginBottom: '2rem' }}>
               Turn day one into a brand moment. Laser-engraved metal tools, premium packaging, ready for your logo. We handle sourcing, customization, and quality control — you ship a gift worth remembering.

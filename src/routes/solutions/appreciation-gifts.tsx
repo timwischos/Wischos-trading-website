@@ -150,7 +150,7 @@ function AppreciationGiftsPage() {
               Corporate Gifting · Employee & Client Appreciation
             </p>
             <h1 style={{ fontSize: 'clamp(2rem, 5vw, 3.25rem)', fontWeight: 700, lineHeight: 1.15, marginBottom: '1.25rem', maxWidth: '20ch' }}>
-              Appreciation gifts they will actually use
+              Appreciation gifts staff and clients still carry a year later
             </h1>
             <p style={{ fontSize: '1.05rem', color: '#4a4a4a', lineHeight: 1.7, maxWidth: '52ch', marginBottom: '2rem' }}>
               Recognition lands differently when the gift has weight to it. Solid metal sets — engraved with your logo — stay on desks, in bags and in pockets long after the moment has passed.

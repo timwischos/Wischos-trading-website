@@ -158,7 +158,7 @@ function MilestoneAwardsPage() {
               Corporate Gifting · Long Service & Milestone Awards
             </p>
             <h1 style={{ fontSize: 'clamp(2rem, 5vw, 3.25rem)', fontWeight: 700, lineHeight: 1.15, marginBottom: '1.25rem', maxWidth: '20ch' }}>
-              Awards that last as long as the tenure they mark
+              Long service awards 25-year veterans actually keep
             </h1>
             <p style={{ fontSize: '1.05rem', color: '#4a4a4a', lineHeight: 1.7, maxWidth: '52ch', marginBottom: '2rem' }}>
               A decade of service deserves something solid. Engraved solid brass and titanium tools that carry a name, a date and a logo — used daily, not stored in a drawer.

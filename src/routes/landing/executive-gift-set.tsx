@@ -179,7 +179,7 @@ function ExecutiveLandingPage() {
               Premium Corporate Gifting · Executive & Client Gifts
             </p>
             <h1 style={{ fontSize: 'clamp(2rem, 5vw, 3.25rem)', fontWeight: 700, lineHeight: 1.15, marginBottom: '1.25rem', maxWidth: '20ch' }}>
-              Custom Executive Gift Sets in Titanium and Brass
+              Executive gifts that aren't another branded pen
             </h1>
             <p style={{ fontSize: '1.05rem', color: '#4a4a4a', lineHeight: 1.7, maxWidth: '55ch', marginBottom: '2rem' }}>
               A gift that holds its own in any boardroom or briefcase. Pure titanium capsule bottle, titanium keychain, and bolt-action brass pen — all three laser-engraved with your logo. The set for clients and executives who notice material quality.
