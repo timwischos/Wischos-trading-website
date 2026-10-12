@@ -7,6 +7,8 @@ const InquiryFormSection = lazy(() =>
   import('@/components/sections/InquiryFormSection').then(m => ({ default: m.InquiryFormSection }))
 )
 
+const HERO_IMG = '/products/WGS-006-3-The-First-Day/The-First-Day-cover'
+
 export const Route = createFileRoute('/solutions/new-hire-onboarding')({
   head: () => ({
     meta: [
@@ -15,6 +17,20 @@ export const Route = createFileRoute('/solutions/new-hire-onboarding')({
         name: 'description',
         content:
           'Custom metal welcome packs and onboarding kits your new hires will use from day one. Logo-engraved, gift-boxed, from 100 sets. Samples in 7–10 days.',
+      },
+    ],
+    links: [
+      {
+        rel: 'preload',
+        as: 'image',
+        href: cloudinaryUrl(HERO_IMG, { w: 800 }),
+        imageSrcSet: [
+          `${cloudinaryUrl(HERO_IMG, { w: 640 })} 640w`,
+          `${cloudinaryUrl(HERO_IMG, { w: 800 })} 800w`,
+          `${cloudinaryUrl(HERO_IMG, { w: 1200 })} 1200w`,
+        ].join(', '),
+        imageSizes: '(min-width: 768px) 550px, 100vw',
+        fetchPriority: 'high',
       },
     ],
     scripts: [

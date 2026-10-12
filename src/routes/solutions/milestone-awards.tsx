@@ -7,6 +7,8 @@ const InquiryFormSection = lazy(() =>
   import('@/components/sections/InquiryFormSection').then(m => ({ default: m.InquiryFormSection }))
 )
 
+const HERO_IMG = '/products/WGS-010-5-The-Blueprint/The-Blueprint-cover'
+
 export const Route = createFileRoute('/solutions/milestone-awards')({
   head: () => ({
     meta: [
@@ -15,6 +17,20 @@ export const Route = createFileRoute('/solutions/milestone-awards')({
         name: 'description',
         content:
           'Custom solid metal long service awards, work anniversary gifts and milestone gifts. Logo and name engraved, gift-boxed, from 100 sets. Samples in 7–10 days.',
+      },
+    ],
+    links: [
+      {
+        rel: 'preload',
+        as: 'image',
+        href: cloudinaryUrl(HERO_IMG, { w: 800 }),
+        imageSrcSet: [
+          `${cloudinaryUrl(HERO_IMG, { w: 640 })} 640w`,
+          `${cloudinaryUrl(HERO_IMG, { w: 800 })} 800w`,
+          `${cloudinaryUrl(HERO_IMG, { w: 1200 })} 1200w`,
+        ].join(', '),
+        imageSizes: '(min-width: 768px) 550px, 100vw',
+        fetchPriority: 'high',
       },
     ],
     scripts: [

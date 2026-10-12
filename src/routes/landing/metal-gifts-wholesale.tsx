@@ -7,6 +7,8 @@ const InquiryFormSection = lazy(() =>
   import('@/components/sections/InquiryFormSection').then(m => ({ default: m.InquiryFormSection }))
 )
 
+const HERO_IMG = '/products/WP-101-brass-crown-bolt-action-pen/brass-crown-bolt-action-pen-lifestyle'
+
 export const Route = createFileRoute('/landing/metal-gifts-wholesale')({
   head: () => ({
     meta: [
@@ -17,6 +19,20 @@ export const Route = createFileRoute('/landing/metal-gifts-wholesale')({
           'Bulk custom brass pens, titanium bottles, and metal gifts for promotional distributors and gifting agencies. Laser engraving, white-label, 25–35 day production. China-based sourcing.',
       },
       { name: 'robots', content: 'noindex, nofollow' },
+    ],
+    links: [
+      {
+        rel: 'preload',
+        as: 'image',
+        href: cloudinaryUrl(HERO_IMG, { w: 800 }),
+        imageSrcSet: [
+          `${cloudinaryUrl(HERO_IMG, { w: 640 })} 640w`,
+          `${cloudinaryUrl(HERO_IMG, { w: 800 })} 800w`,
+          `${cloudinaryUrl(HERO_IMG, { w: 1200 })} 1200w`,
+        ].join(', '),
+        imageSizes: '(min-width: 768px) 550px, 100vw',
+        fetchPriority: 'high',
+      },
     ],
   }),
   component: MetalGiftsWholesalePage,

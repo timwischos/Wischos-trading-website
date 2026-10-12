@@ -136,12 +136,28 @@ const InquiryFormSection = lazy(() =>
   import('@/components/sections/InquiryFormSection').then(m => ({ default: m.InquiryFormSection }))
 )
 
+const HERO_IMG = WGS006_IMAGES[0]
+
 export const Route = createFileRoute('/landing/onboarding-gift-set')({
   head: () => ({
     meta: [
       { title: 'Custom Employee Onboarding Gift Sets | Wischos Gift' },
       { name: 'description', content: 'Branded metal gift sets for new hire welcome kits. Laser engraving included. Sample available.' },
       { name: 'robots', content: 'noindex, nofollow' },
+    ],
+    links: [
+      {
+        rel: 'preload',
+        as: 'image',
+        href: cloudinaryUrl(HERO_IMG, { w: 800 }),
+        imageSrcSet: [
+          `${cloudinaryUrl(HERO_IMG, { w: 640 })} 640w`,
+          `${cloudinaryUrl(HERO_IMG, { w: 800 })} 800w`,
+          `${cloudinaryUrl(HERO_IMG, { w: 1200 })} 1200w`,
+        ].join(', '),
+        imageSizes: '(min-width: 768px) 550px, 100vw',
+        fetchPriority: 'high',
+      },
     ],
   }),
   component: OnboardingLandingPage,

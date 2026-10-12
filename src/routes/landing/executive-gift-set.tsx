@@ -8,6 +8,15 @@ const InquiryFormSection = lazy(() =>
   import('@/components/sections/InquiryFormSection').then(m => ({ default: m.InquiryFormSection }))
 )
 
+const WGS005_IMAGES = [
+  '/products/WGS-005-3-The-Morning-Ritual/The-Morning-Ritual-cover',
+  '/products/WGS-005-3-The-Morning-Ritual/The-Morning-Ritual-detail-1',
+  '/products/WGS-005-3-The-Morning-Ritual/The-Morning-Ritual-detail-2',
+  '/products/WGS-005-3-The-Morning-Ritual/The-Morning-Ritual-detail-3',
+]
+
+const HERO_IMG = WGS005_IMAGES[0]
+
 export const Route = createFileRoute('/landing/executive-gift-set')({
   head: () => ({
     meta: [
@@ -15,16 +24,23 @@ export const Route = createFileRoute('/landing/executive-gift-set')({
       { name: 'description', content: 'Premium metal gift sets for executive gifting and high-value client retention. Pure titanium and brass. Laser engraving included. FOB from $38.' },
       { name: 'robots', content: 'noindex, nofollow' },
     ],
+    links: [
+      {
+        rel: 'preload',
+        as: 'image',
+        href: cloudinaryUrl(HERO_IMG, { w: 800 }),
+        imageSrcSet: [
+          `${cloudinaryUrl(HERO_IMG, { w: 640 })} 640w`,
+          `${cloudinaryUrl(HERO_IMG, { w: 800 })} 800w`,
+          `${cloudinaryUrl(HERO_IMG, { w: 1200 })} 1200w`,
+        ].join(', '),
+        imageSizes: '(min-width: 768px) 550px, 100vw',
+        fetchPriority: 'high',
+      },
+    ],
   }),
   component: ExecutiveLandingPage,
 })
-
-const WGS005_IMAGES = [
-  '/products/WGS-005-3-The-Morning-Ritual/The-Morning-Ritual-cover',
-  '/products/WGS-005-3-The-Morning-Ritual/The-Morning-Ritual-detail-1',
-  '/products/WGS-005-3-The-Morning-Ritual/The-Morning-Ritual-detail-2',
-  '/products/WGS-005-3-The-Morning-Ritual/The-Morning-Ritual-detail-3',
-]
 
 function ImageGallery({ images }: { images: string[] }) {
   const [selectedIdx, setSelectedIdx] = useState(0)
