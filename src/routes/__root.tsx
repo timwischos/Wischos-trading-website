@@ -116,12 +116,6 @@ function RootDocument({ children }: { children: React.ReactNode }) {
   const location = useRouterState({ select: (s) => s.location.pathname })
   const isLanding = location.startsWith('/landing/')
 
-  useEffect(() => {
-    if (typeof (window as any).gtag === 'function') {
-      ;(window as any).gtag('event', 'page_view', { page_path: location })
-    }
-  }, [location])
-
   return (
     <html lang="en">
       <head>
@@ -138,7 +132,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', 'G-859CPYDHVK', { 'send_page_view': false });
+          gtag('config', 'G-859CPYDHVK');
         `}} />
         <DeferredAnalytics />
         <Scripts />
@@ -160,15 +154,17 @@ function DeferredAnalytics() {
       }
     }
 
+    // GA loads immediately so fast-bouncing ad visitors are still counted.
+    // Only Clarity is deferred until first interaction (or 8s) to keep it off the critical path.
+    const google = document.createElement('script')
+    google.async = true
+    google.src = 'https://www.googletagmanager.com/gtag/js?id=G-859CPYDHVK'
+    document.head.appendChild(google)
+
     function load() {
       if (loaded) return
       loaded = true
       removeTriggers()
-
-      const google = document.createElement('script')
-      google.async = true
-      google.src = 'https://www.googletagmanager.com/gtag/js?id=G-859CPYDHVK'
-      document.head.appendChild(google)
 
       const clarityWindow = window as Window & {
         clarity?: ((...args: unknown[]) => void) & { q?: unknown[][] }
