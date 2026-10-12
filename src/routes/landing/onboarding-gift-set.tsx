@@ -246,16 +246,20 @@ function OnboardingLandingPage() {
         }}>
           {[
             {
-              label: 'One Contact, Full Coverage',
-              body: 'We handle supplier selection, customization, and quality inspection — sourcing from metal manufacturers across Guangdong and Zhejiang. You deal with one person from first inquiry to delivered sets.',
+              label: 'Sample first, credit toward bulk',
+              body: 'Custom sample with your logo ships in 7–10 business days. The sample fee may be credited against your bulk order — credit depends on final quantity, confirmed in your quote.',
             },
             {
-              label: '24-Hour Reply',
-              body: 'Every inquiry gets a response within one business day with product availability and indicative pricing. No waiting a week for a quote.',
+              label: 'Photo + video approval before shipment',
+              body: 'Every order is inspected at the factory. You approve photos and video of randomly selected sets before anything leaves the port.',
             },
             {
-              label: '25-35 Day Lead Time',
-              body: 'Standard production timeline for laser-engraved metal sets. We confirm the schedule before you commit — no surprises at the delivery stage.',
+              label: 'Material specs stated, not implied',
+              body: 'Solid brass, titanium, stainless steel — stated by material and finish, not vague "premium metal" language. The spec is written accurately so your procurement brief can reference it as-is.',
+            },
+            {
+              label: 'One contact, 24-hour reply',
+              body: 'Supplier selection, customization, QC, shipment — one person from Guangdong/Zhejiang manufacturers through to delivery. Every inquiry gets a response within one business day.',
             },
           ].map((item) => (
             <div key={item.label}>

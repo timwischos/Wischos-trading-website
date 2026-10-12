@@ -82,7 +82,7 @@ export const Route = createFileRoute('/solutions/milestone-awards')({
                 name: 'Can I see a sample before ordering?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Yes. We can send up to 5 reference sets (you cover shipping). Custom samples with your logo are quoted per project, and the fee is credited against your bulk order.',
+                  text: 'Yes. We can send up to 5 reference sets (you cover shipping). Custom samples with your logo are quoted per project. The fee may be credited against your bulk order, depending on final quantity — confirmed in your quote.',
                 },
               },
               {
@@ -180,7 +180,7 @@ function MilestoneAwardsPage() {
               </a>
             </div>
             <p style={{ fontSize: '0.78rem', color: '#888', lineHeight: 1.6 }}>
-              From 100 sets · Name & logo engraved · Samples in 7–10 business days
+              From 100 sets · Name & logo engraved · Photo + video approval before ship
             </p>
           </div>
           <img
@@ -409,7 +409,7 @@ function MilestoneAwardsPage() {
           },
           {
             question: 'Can I see a sample before ordering?',
-            answer: 'Yes. We can send up to 5 reference sets (you cover shipping). Custom samples with your logo are quoted per project, and the fee is credited against your bulk order.',
+            answer: 'Yes. We can send up to 5 reference sets (you cover shipping). Custom samples with your logo are quoted per project. The fee may be credited against your bulk order, depending on final quantity — confirmed in your quote.',
           },
           {
             question: 'How far ahead do I need to order?',

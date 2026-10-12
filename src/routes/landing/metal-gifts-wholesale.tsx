@@ -135,20 +135,20 @@ function MetalGiftsWholesalePage() {
         }}>
           {[
             {
-              title: 'Material specs you can quote directly',
-              body: 'Brass is solid brass. Titanium is solid titanium. No vague "premium metal" language. Our specs are written accurately so your procurement brief or client proposal can reference them as-is.',
+              title: 'Sample first, credit toward bulk',
+              body: 'Custom sample with your logo ships in 7–10 business days. The sample fee may be credited against your bulk order — credit depends on final quantity, confirmed in your quote.',
             },
             {
-              title: 'One contact from quote to shipment',
-              body: 'No coordinating across multiple suppliers. One Wischos contact handles item selection, engraving specs, production updates, QC, and shipment confirmation.',
+              title: 'Photo + video approval before shipment',
+              body: 'Every order is inspected at the factory. You approve photos and video of randomly selected sets before anything leaves the port.',
             },
             {
-              title: '24-hour reply',
-              body: 'Every inquiry gets a response within one business day — product availability, indicative pricing, and lead time. No waiting a week for a quote.',
+              title: 'Material specs stated, not implied',
+              body: 'Brass is solid brass. Titanium is solid titanium. Stainless is stated by grade and finish — the spec is written accurately so your procurement brief or client proposal can reference it as-is.',
             },
             {
-              title: 'White-label as standard',
-              body: 'Wischos branding does not appear on products or packaging. Items ship with your client\'s identity — or unbranded, if preferred.',
+              title: 'One contact, 24-hour reply',
+              body: 'Item selection, engraving, production updates, QC, shipment — one person. Every inquiry gets a response within one business day.',
             },
           ].map((item) => (
             <div key={item.title}>
