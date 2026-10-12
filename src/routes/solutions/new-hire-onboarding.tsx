@@ -178,6 +178,16 @@ function NewHireOnboardingPage() {
           <img
             className="ob-sol-img"
             src={cloudinaryUrl('/products/WGS-006-3-The-First-Day/The-First-Day-cover', { w: 800 })}
+            srcSet={[
+              `${cloudinaryUrl('/products/WGS-006-3-The-First-Day/The-First-Day-cover', { w: 640 })} 640w`,
+              `${cloudinaryUrl('/products/WGS-006-3-The-First-Day/The-First-Day-cover', { w: 800 })} 800w`,
+              `${cloudinaryUrl('/products/WGS-006-3-The-First-Day/The-First-Day-cover', { w: 1200 })} 1200w`,
+            ].join(', ')}
+            sizes="(min-width: 768px) 550px, 100vw"
+            width={800}
+            height={600}
+            loading="eager"
+            fetchPriority="high"
             alt="The First Day — Custom Employee Onboarding Gift Set"
           />
         </div>

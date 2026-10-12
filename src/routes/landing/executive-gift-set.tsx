@@ -217,6 +217,16 @@ function ExecutiveLandingPage() {
           <img
             className="exec-hero-img"
             src={cloudinaryUrl(WGS005_IMAGES[0], { w: 800 })}
+            srcSet={[
+              `${cloudinaryUrl(WGS005_IMAGES[0], { w: 640 })} 640w`,
+              `${cloudinaryUrl(WGS005_IMAGES[0], { w: 800 })} 800w`,
+              `${cloudinaryUrl(WGS005_IMAGES[0], { w: 1200 })} 1200w`,
+            ].join(', ')}
+            sizes="(min-width: 768px) 550px, 100vw"
+            width={800}
+            height={600}
+            loading="eager"
+            fetchPriority="high"
             alt="The Morning Ritual — Custom Executive Gift Set"
           />
         </div>

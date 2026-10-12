@@ -122,6 +122,16 @@ function MetalGiftsWholesalePage() {
           <img
             className="mgw-hero-img"
             src={cloudinaryUrl('/products/WP-101-brass-crown-bolt-action-pen/brass-crown-bolt-action-pen-lifestyle', { w: 800 })}
+            srcSet={[
+              `${cloudinaryUrl('/products/WP-101-brass-crown-bolt-action-pen/brass-crown-bolt-action-pen-lifestyle', { w: 640 })} 640w`,
+              `${cloudinaryUrl('/products/WP-101-brass-crown-bolt-action-pen/brass-crown-bolt-action-pen-lifestyle', { w: 800 })} 800w`,
+              `${cloudinaryUrl('/products/WP-101-brass-crown-bolt-action-pen/brass-crown-bolt-action-pen-lifestyle', { w: 1200 })} 1200w`,
+            ].join(', ')}
+            sizes="(min-width: 768px) 550px, 100vw"
+            width={800}
+            height={600}
+            loading="eager"
+            fetchPriority="high"
             alt="Brass Crown Bolt-Action Pen — custom engraved bulk order"
           />
         </div>

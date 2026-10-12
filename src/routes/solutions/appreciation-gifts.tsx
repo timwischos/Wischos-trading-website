@@ -178,6 +178,16 @@ function AppreciationGiftsPage() {
           <img
             className="ap-sol-img"
             src={cloudinaryUrl('/products/WGS-005-3-The-Morning-Ritual/The-Morning-Ritual-cover', { w: 800 })}
+            srcSet={[
+              `${cloudinaryUrl('/products/WGS-005-3-The-Morning-Ritual/The-Morning-Ritual-cover', { w: 640 })} 640w`,
+              `${cloudinaryUrl('/products/WGS-005-3-The-Morning-Ritual/The-Morning-Ritual-cover', { w: 800 })} 800w`,
+              `${cloudinaryUrl('/products/WGS-005-3-The-Morning-Ritual/The-Morning-Ritual-cover', { w: 1200 })} 1200w`,
+            ].join(', ')}
+            sizes="(min-width: 768px) 550px, 100vw"
+            width={800}
+            height={600}
+            loading="eager"
+            fetchPriority="high"
             alt="The Morning Ritual — Custom Corporate Appreciation Gift Set"
           />
         </div>

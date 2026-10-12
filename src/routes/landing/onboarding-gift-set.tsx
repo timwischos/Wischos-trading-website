@@ -225,6 +225,16 @@ function OnboardingLandingPage() {
           <img
             className="ob-hero-img"
             src={cloudinaryUrl(WGS006_IMAGES[0], { w: 800 })}
+            srcSet={[
+              `${cloudinaryUrl(WGS006_IMAGES[0], { w: 640 })} 640w`,
+              `${cloudinaryUrl(WGS006_IMAGES[0], { w: 800 })} 800w`,
+              `${cloudinaryUrl(WGS006_IMAGES[0], { w: 1200 })} 1200w`,
+            ].join(', ')}
+            sizes="(min-width: 768px) 550px, 100vw"
+            width={800}
+            height={600}
+            loading="eager"
+            fetchPriority="high"
             alt="The First Day — Custom Employee Onboarding Gift Set"
           />
         </div>
