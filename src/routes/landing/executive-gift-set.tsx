@@ -185,7 +185,7 @@ function ExecutiveLandingPage() {
               A gift that holds its own in any boardroom or briefcase. Pure titanium capsule bottle, titanium keychain, and bolt-action brass pen — all three laser-engraved with your logo. The set for clients and executives who notice material quality.
             </p>
             <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap', marginBottom: '0.75rem' }}>
-              {['Pure Titanium · No Coating', 'Laser Engraving Included', '25-35 Day Lead Time'].map((badge) => (
+              {['Pure Titanium · No Coating', 'Laser Engraving Included', '25-35 Day Production'].map((badge) => (
                 <span key={badge} style={{
                   fontSize: '0.78rem', letterSpacing: '0.06em',
                   border: '1px solid #d4956a', color: '#B87333',

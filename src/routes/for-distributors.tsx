@@ -14,7 +14,7 @@ export const Route = createFileRoute('/for-distributors')({
       {
         name: 'description',
         content:
-          'Custom metal gift sets built around your client brief. White-label, clear material specs, sales materials included. China-based sourcing, 25–35 day lead time.',
+          'Custom metal gift sets built around your client brief. White-label, clear material specs, sales materials included. China-based sourcing, 25–35 day production.',
       },
     ],
     scripts: [
@@ -32,7 +32,7 @@ export const Route = createFileRoute('/for-distributors')({
             },
             areaServed: ['AU', 'NZ', 'SG', 'AE', 'HK', 'GB'],
             description:
-              'Custom metal gift sets built around your client brief. White-label, clear material specs, sales materials included. China-based sourcing, 25–35 day lead time.',
+              'Custom metal gift sets built around your client brief. White-label, clear material specs, sales materials included. China-based sourcing, 25–35 day production.',
           },
           {
             '@context': 'https://schema.org',

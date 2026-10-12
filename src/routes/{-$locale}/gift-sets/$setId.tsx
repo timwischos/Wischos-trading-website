@@ -248,7 +248,7 @@ function GiftSetDetailPage() {
               <p style={{ fontSize: '0.7rem', color: '#999', lineHeight: 1.5 }}>Packaging upgrades vary by set and are detailed in the sourcing notes below.</p>
             </div>
             <div>
-              <p style={{ fontSize: '0.62rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: '#767676', marginBottom: '0.3rem' }}>Lead Time</p>
+              <p style={{ fontSize: '0.62rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: '#767676', marginBottom: '0.3rem' }}>Production Time</p>
               <p style={{ fontSize: '0.85rem', color: '#0a0a0a' }}>25–35 days</p>
               <p style={{ fontSize: '0.7rem', color: '#999', lineHeight: 1.5, marginTop: '0.25rem' }}>Subject to customization details</p>
             </div>

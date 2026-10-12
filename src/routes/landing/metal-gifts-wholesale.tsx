@@ -14,7 +14,7 @@ export const Route = createFileRoute('/landing/metal-gifts-wholesale')({
       {
         name: 'description',
         content:
-          'Bulk custom brass pens, titanium bottles, and metal gifts for promotional distributors and gifting agencies. Laser engraving, white-label, 25–35 day lead time. China-based sourcing.',
+          'Bulk custom brass pens, titanium bottles, and metal gifts for promotional distributors and gifting agencies. Laser engraving, white-label, 25–35 day production. China-based sourcing.',
       },
       { name: 'robots', content: 'noindex, nofollow' },
     ],
@@ -93,7 +93,7 @@ function MetalGiftsWholesalePage() {
               Wischos is a China-based metal gift sourcing partner. We supply individual metal items — brass pens, titanium bottles, stainless steel EDC — for promotional programs and client gifting. Minimum quantities are flexible; reach out and we'll advise.
             </p>
             <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginBottom: '2rem' }}>
-              {['Solid Brass & Titanium', 'Laser Engraving Included', '25–35 Day Lead Time', 'White-Label'].map((badge) => (
+              {['Solid Brass & Titanium', 'Laser Engraving Included', '25–35 Day Production', 'White-Label'].map((badge) => (
                 <span key={badge} style={{
                   fontSize: '0.78rem', letterSpacing: '0.06em',
                   border: '1px solid #d4956a', color: '#B87333',

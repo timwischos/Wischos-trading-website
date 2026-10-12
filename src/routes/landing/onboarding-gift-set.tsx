@@ -193,7 +193,7 @@ function OnboardingLandingPage() {
               Turn day one into a brand moment. Laser-engraved metal tools, premium packaging, ready for your logo. We handle sourcing, customization, and quality control — you ship a gift worth remembering.
             </p>
             <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap', marginBottom: '0.75rem' }}>
-              {['Laser Engraving Included', 'Branded Packaging Included', '25-35 Day Lead Time'].map((badge) => (
+              {['Laser Engraving Included', 'Branded Packaging Included', '25-35 Day Production'].map((badge) => (
                 <span key={badge} style={{
                   fontSize: '0.78rem', letterSpacing: '0.06em',
                   border: '1px solid #d4956a', color: '#B87333',
