@@ -171,8 +171,8 @@ function OnboardingLandingPage() {
       <section>
         <style>{`
           .ob-hero { display: grid; grid-template-columns: 1fr; }
-          .ob-hero-img { order: 1; width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block; background: #f7f7f7; }
-          .ob-hero-text { order: 2; padding: 2rem 1.25rem 2.5rem; }
+          .ob-hero-img { order: 2; width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; background: #f7f7f7; }
+          .ob-hero-text { order: 1; padding: 1.5rem 1.25rem 2rem; }
           .ob-cta { display: block; text-align: center; }
           @media (min-width: 768px) {
             .ob-hero { grid-template-columns: 1fr 1fr; max-width: 1100px; margin: 0 auto; }

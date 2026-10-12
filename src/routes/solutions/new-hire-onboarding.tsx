@@ -134,8 +134,8 @@ function NewHireOnboardingPage() {
       <section>
         <style>{`
           .ob-sol-hero { display: grid; grid-template-columns: 1fr; }
-          .ob-sol-img { order: 1; width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block; background: #f7f7f7; }
-          .ob-sol-text { order: 2; padding: 2rem 1.25rem 2.5rem; }
+          .ob-sol-img { order: 2; width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; background: #f7f7f7; }
+          .ob-sol-text { order: 1; padding: 1.5rem 1.25rem 2rem; }
           .ob-sol-cta { display: block; text-align: center; }
           @media (min-width: 768px) {
             .ob-sol-hero { grid-template-columns: 1fr 1fr; max-width: 1100px; margin: 0 auto; }

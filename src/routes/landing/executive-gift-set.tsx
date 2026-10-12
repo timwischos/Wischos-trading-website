@@ -163,8 +163,8 @@ function ExecutiveLandingPage() {
       <section>
         <style>{`
           .exec-hero { display: grid; grid-template-columns: 1fr; }
-          .exec-hero-img { order: 1; width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block; background: #f7f7f7; }
-          .exec-hero-text { order: 2; padding: 2rem 1.25rem 2.5rem; }
+          .exec-hero-img { order: 2; width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; background: #f7f7f7; }
+          .exec-hero-text { order: 1; padding: 1.5rem 1.25rem 2rem; }
           .exec-cta { display: block; text-align: center; }
           @media (min-width: 768px) {
             .exec-hero { grid-template-columns: 1fr 1fr; max-width: 1100px; margin: 0 auto; }
