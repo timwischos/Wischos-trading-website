@@ -238,16 +238,20 @@ function ExecutiveLandingPage() {
         }}>
           {[
             {
-              label: 'Pure Titanium — Stated, Not Implied',
-              body: 'The bottle and keychain are solid titanium — no inner lining, no coating, no metallic taste. The material difference is apparent the moment you pick them up. We state the spec clearly so your procurement brief can too.',
+              label: 'Sample first, credit toward bulk',
+              body: 'Custom sample with your logo ships in 7–10 business days. The sample fee may be credited against your bulk order — credit depends on final quantity, confirmed in your quote.',
             },
             {
-              label: 'One Contact, Full Coverage',
-              body: 'We handle supplier selection, customization, and quality inspection — sourcing from metal manufacturers across Guangdong and Zhejiang. You deal with one person from first inquiry to delivered sets.',
+              label: 'Photo + video approval before shipment',
+              body: 'Every order is inspected at the factory. You approve photos and video of randomly selected sets before anything leaves the port.',
             },
             {
-              label: '24-Hour Reply',
-              body: 'Every inquiry gets a response within one business day with product availability and indicative pricing. No waiting a week for a quote.',
+              label: 'Material specs stated, not implied',
+              body: 'The bottle and keychain are solid titanium. The pen is solid brass. No "premium metal" fluff — the spec is written accurately so your procurement brief can reference it as-is.',
+            },
+            {
+              label: 'One contact, 24-hour reply',
+              body: 'Supplier selection, customization, QC, shipment — one person from first inquiry to delivered sets. Every inquiry gets a response within one business day.',
             },
           ].map((item) => (
             <div key={item.label}>
