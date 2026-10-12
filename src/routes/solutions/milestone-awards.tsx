@@ -10,11 +10,11 @@ const InquiryFormSection = lazy(() =>
 export const Route = createFileRoute('/solutions/milestone-awards')({
   head: () => ({
     meta: [
-      { title: 'Long Service & Milestone Awards in Solid Metal | Wischos Gift' },
+      { title: 'Long Service Awards & Work Anniversary Gifts | Wischos Gift' },
       {
         name: 'description',
         content:
-          'Custom metal long service awards and milestone gifts that last as long as the tenure they mark. Logo and name engraved, gift-boxed, from 100 sets. Samples in 7–10 business days.',
+          'Custom solid metal long service awards, work anniversary gifts and milestone gifts. Logo and name engraved, gift-boxed, from 100 sets. Samples in 7–10 days.',
       },
     ],
     scripts: [
@@ -24,14 +24,14 @@ export const Route = createFileRoute('/solutions/milestone-awards')({
           {
             '@context': 'https://schema.org',
             '@type': 'Service',
-            name: 'Custom Long Service & Milestone Award Gift Sets',
+            name: 'Custom Long Service Award & Work Anniversary Gift Sets',
             provider: {
               '@type': 'Organization',
               name: 'Wischos Gift',
               url: 'https://wischosgift.com',
             },
             description:
-              'Custom metal long service awards and milestone gifts. Logo and name engraved, gift-boxed, from 100 sets.',
+              'Custom solid metal long service awards, work anniversary gifts and milestone gifts. Logo and name engraved, gift-boxed, from 100 sets.',
           },
           {
             '@context': 'https://schema.org',
@@ -59,6 +59,14 @@ export const Route = createFileRoute('/solutions/milestone-awards')({
                 acceptedAnswer: {
                   '@type': 'Answer',
                   text: 'Trophies are displayed. Metal tools are used. A brass pen or titanium bottle that someone reaches for daily is a more persistent reminder of the recognition than something that sits on a shelf. The material itself — solid brass, titanium, stainless steel — communicates substance in a way that coated or plated items do not.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What is the difference between service awards and recognition awards?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: "A service award marks length of tenure, such as 5, 10 or 25 years. A recognition award marks a specific contribution or achievement at any point in someone's career. The same solid metal pieces work for both; only the engraving changes — years of service for one, the achievement or project name for the other.",
                 },
               },
               {
@@ -390,6 +398,10 @@ function MilestoneAwardsPage() {
           {
             question: 'Why is solid metal more appropriate for a service award than a trophy or plaque?',
             answer: "Trophies are displayed. Metal tools are used. A brass pen or titanium bottle that someone reaches for daily is a more persistent reminder of the recognition than something that sits on a shelf. The material itself — solid brass, titanium, stainless steel — communicates substance in a way that coated or plated items do not.",
+          },
+          {
+            question: 'What is the difference between service awards and recognition awards?',
+            answer: "A service award marks length of tenure, such as 5, 10 or 25 years. A recognition award marks a specific contribution or achievement at any point in someone's career. The same solid metal pieces work for both; only the engraving changes — years of service for one, the achievement or project name for the other.",
           },
           {
             question: "What's the minimum order?",

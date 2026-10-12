@@ -10,11 +10,11 @@ const InquiryFormSection = lazy(() =>
 export const Route = createFileRoute('/solutions/new-hire-onboarding')({
   head: () => ({
     meta: [
-      { title: 'New Employee Welcome Kits in Solid Metal | Wischos Gift' },
+      { title: 'Metal Welcome Packs & Onboarding Kits | Wischos Gift' },
       {
         name: 'description',
         content:
-          'Custom metal onboarding kits your new hires will use from day one. Logo-engraved, gift-boxed, from 100 sets. Samples in 7–10 business days.',
+          'Custom metal welcome packs and onboarding kits your new hires will use from day one. Logo-engraved, gift-boxed, from 100 sets. Samples in 7–10 days.',
       },
     ],
     scripts: [
@@ -24,14 +24,14 @@ export const Route = createFileRoute('/solutions/new-hire-onboarding')({
           {
             '@context': 'https://schema.org',
             '@type': 'Service',
-            name: 'Custom Employee Onboarding Gift Sets',
+            name: 'Custom Employee Welcome Pack & Onboarding Gift Sets',
             provider: {
               '@type': 'Organization',
               name: 'Wischos Gift',
               url: 'https://wischosgift.com',
             },
             description:
-              'Custom metal onboarding kits your new hires will use from day one. Logo-engraved, gift-boxed, from 100 sets.',
+              'Custom metal welcome packs and onboarding kits your new hires will use from day one. Logo-engraved, gift-boxed, from 100 sets.',
           },
           {
             '@context': 'https://schema.org',
@@ -67,6 +67,14 @@ export const Route = createFileRoute('/solutions/new-hire-onboarding')({
                 acceptedAnswer: {
                   '@type': 'Answer',
                   text: 'We inspect goods at the factory before packing and send you photos and video of randomly selected sets for approval before shipment.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Do you make induction packs for new starters?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Yes. Induction pack and new starter pack are what many Australian and New Zealand teams call an onboarding kit. It is the same product: solid metal pieces engraved with your logo, gift-boxed, from 100 sets.',
                 },
               },
               {
@@ -373,6 +381,10 @@ function NewHireOnboardingPage() {
           {
             question: 'How do you check quality?',
             answer: 'We inspect goods at the factory before packing and send you photos and video of randomly selected sets for approval before shipment.',
+          },
+          {
+            question: 'Do you make induction packs for new starters?',
+            answer: 'Yes. Induction pack and new starter pack are what many Australian and New Zealand teams call an onboarding kit. It is the same product: solid metal pieces engraved with your logo, gift-boxed, from 100 sets.',
           },
           {
             question: 'Which countries do you deliver to?',

@@ -10,11 +10,11 @@ const InquiryFormSection = lazy(() =>
 export const Route = createFileRoute('/solutions/appreciation-gifts')({
   head: () => ({
     meta: [
-      { title: 'Employee & Client Appreciation Gifts in Solid Metal | Wischos Gift' },
+      { title: 'Staff & Client Appreciation Gifts in Solid Metal | Wischos Gift' },
       {
         name: 'description',
         content:
-          'Custom metal appreciation gifts your employees and clients will actually keep. Logo-engraved, gift-boxed, from 100 sets. Samples in 7–10 business days.',
+          'Custom metal staff appreciation gifts and client gifts they will actually keep. Logo-engraved, gift-boxed, from 100 sets. Samples in 7–10 days.',
       },
     ],
     scripts: [
@@ -24,14 +24,14 @@ export const Route = createFileRoute('/solutions/appreciation-gifts')({
           {
             '@context': 'https://schema.org',
             '@type': 'Service',
-            name: 'Custom Employee & Client Appreciation Gift Sets',
+            name: 'Custom Staff & Client Appreciation Gift Sets',
             provider: {
               '@type': 'Organization',
               name: 'Wischos Gift',
               url: 'https://wischosgift.com',
             },
             description:
-              'Custom metal appreciation gifts your employees and clients will actually keep. Logo-engraved, gift-boxed, from 100 sets.',
+              'Custom metal staff appreciation gifts and client gifts they will actually keep. Logo-engraved, gift-boxed, from 100 sets.',
           },
           {
             '@context': 'https://schema.org',
@@ -47,7 +47,7 @@ export const Route = createFileRoute('/solutions/appreciation-gifts')({
               },
               {
                 '@type': 'Question',
-                name: 'Can we order different sets for employees and clients?',
+                name: 'Can we order different staff appreciation and client gift sets in one order?',
                 acceptedAnswer: {
                   '@type': 'Answer',
                   text: 'Yes. Each set has its own minimum quantity. Tell us your planned split — for example, 150 employee sets and 80 client sets — and we will confirm what is workable.',
@@ -371,7 +371,7 @@ function AppreciationGiftsPage() {
             answer: "Our standard minimum is 100 sets. For smaller programmes or single products, get in touch and we'll advise.",
           },
           {
-            question: 'Can we order different sets for employees and clients?',
+            question: 'Can we order different staff appreciation and client gift sets in one order?',
             answer: "Yes. Each set has its own minimum quantity. Tell us your planned split — for example, 150 employee sets and 80 client sets — and we'll confirm what's workable.",
           },
           {
