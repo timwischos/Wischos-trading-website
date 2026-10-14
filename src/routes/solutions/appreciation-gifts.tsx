@@ -150,8 +150,8 @@ function AppreciationGiftsPage() {
       <section>
         <style>{`
           .ap-sol-hero { display: grid; grid-template-columns: 1fr; }
-          .ap-sol-img { order: 2; width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; background: #f7f7f7; }
-          .ap-sol-text { order: 1; padding: 1.5rem 1.25rem 2rem; }
+          .ap-sol-img { order: 1; width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; background: #f7f7f7; }
+          .ap-sol-text { order: 2; padding: 1.5rem 1.25rem 2rem; }
           .ap-sol-cta { display: block; text-align: center; }
           @media (min-width: 768px) {
             .ap-sol-hero { grid-template-columns: 1fr 1fr; max-width: 1100px; margin: 0 auto; }
@@ -165,7 +165,7 @@ function AppreciationGiftsPage() {
             <p style={{ fontSize: '0.75rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: '#888', marginBottom: '1rem' }}>
               Corporate Gifting · Employee & Client Appreciation
             </p>
-            <h1 style={{ fontSize: 'clamp(2rem, 5vw, 3.25rem)', fontWeight: 700, lineHeight: 1.15, marginBottom: '1.25rem', maxWidth: '20ch' }}>
+            <h1 style={{ fontSize: 'clamp(1.55rem, 5vw, 3.25rem)', fontWeight: 700, lineHeight: 1.15, marginBottom: '1.25rem', maxWidth: '20ch' }}>
               Appreciation gifts staff and clients still carry a year later
             </h1>
             <p style={{ fontSize: '1.05rem', color: '#4a4a4a', lineHeight: 1.7, maxWidth: '52ch', marginBottom: '2rem' }}>
