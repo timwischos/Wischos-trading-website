@@ -314,6 +314,9 @@ function OnboardingLandingPage() {
         {/* Left — product details */}
         <div>
           <ImageGallery images={WGS006_IMAGES} />
+          <a href="/gift-sets/wgs-006-3-the-first-day" style={{ display: 'inline-block', fontSize: '0.85rem', color: '#B87333', textDecoration: 'none', fontWeight: 500, marginBottom: '1rem' }}>
+            View full set details →
+          </a>
 
           <h2 style={{ fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.5rem' }}>
             The First Day Set — WGS-006

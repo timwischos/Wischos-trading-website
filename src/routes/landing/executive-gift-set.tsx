@@ -306,6 +306,9 @@ function ExecutiveLandingPage() {
         {/* Left — product details */}
         <div>
           <ImageGallery images={WGS005_IMAGES} />
+          <a href="/gift-sets/wgs-005-3-the-morning-ritual" style={{ display: 'inline-block', fontSize: '0.85rem', color: '#B87333', textDecoration: 'none', fontWeight: 500, marginBottom: '1rem' }}>
+            View full set details →
+          </a>
 
           <h2 style={{ fontSize: '1.25rem', fontWeight: 600, marginBottom: '0.5rem' }}>
             The Morning Ritual Set — WGS-005
