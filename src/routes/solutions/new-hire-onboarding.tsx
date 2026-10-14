@@ -4,7 +4,7 @@ import { cloudinaryUrl } from '@/lib/cloudinary'
 import { EmailLink } from '@/components/ui/EmailLink'
 
 const InquiryFormSection = lazy(() =>
-  import('@/components/sections/InquiryFormSection').then(m => ({ default: m.InquiryFormSection }))
+  import('@/components/sections/QuickInquiryFormSection').then(m => ({ default: m.QuickInquiryFormSection }))
 )
 
 const HERO_IMG = '/products/WGS-006-3-The-First-Day/The-First-Day-cover'
