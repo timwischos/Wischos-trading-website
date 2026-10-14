@@ -2,12 +2,64 @@ import { createFileRoute } from '@tanstack/react-router'
 import { lazy, Suspense, useState } from 'react'
 import { cloudinaryUrl } from '@/lib/cloudinary'
 import { EmailLink } from '@/components/ui/EmailLink'
+import { Dialog as DialogPrimitive } from 'radix-ui'
+import { X, ChevronLeft, ChevronRight } from 'lucide-react'
 
 const InquiryFormSection = lazy(() =>
   import('@/components/sections/QuickInquiryFormSection').then(m => ({ default: m.QuickInquiryFormSection }))
 )
 
-const HERO_IMG = '/products/WGS-010-5-The-Blueprint/The-Blueprint-cover'
+const WGS010_IMAGES = [
+  '/products/WGS-010-5-The-Blueprint/The-Blueprint-cover',
+  '/products/WGS-010-5-The-Blueprint/The-Blueprint-detail-1',
+  '/products/WGS-010-5-The-Blueprint/The-Blueprint-detail-2',
+]
+const HERO_IMG = WGS010_IMAGES[0]
+
+function ImageGallery({ images, setName }: { images: string[]; setName: string }) {
+  const [selectedIdx, setSelectedIdx] = useState(0)
+  const [lightboxIdx, setLightboxIdx] = useState(0)
+  const [zoomed, setZoomed] = useState(false)
+  const total = images.length
+  function openLightbox(idx: number) { setLightboxIdx(idx); setZoomed(false) }
+  return (
+    <DialogPrimitive.Root onOpenChange={() => setZoomed(false)}>
+      <DialogPrimitive.Trigger asChild>
+        <button onClick={() => openLightbox(selectedIdx)} style={{ cursor: 'zoom-in', border: 'none', padding: 0, background: 'none', display: 'block', width: '100%' }} aria-label="View full size">
+          <img src={cloudinaryUrl(images[selectedIdx], { w: 700, h: 700, fill: 'pad' })} alt={`${setName} — gift set image`} style={{ width: '100%', display: 'block', background: '#f7f7f7', aspectRatio: '1/1', objectFit: 'contain' }} />
+        </button>
+      </DialogPrimitive.Trigger>
+      <div style={{ display: 'flex', gap: '0.5rem', marginTop: '0.5rem', marginBottom: '1.25rem' }}>
+        {images.map((src, i) => (
+          <button key={i} onClick={() => setSelectedIdx(i)} style={{ flex: '1 1 0', aspectRatio: '1', padding: 0, border: 'none', outline: selectedIdx === i ? '2px solid #060606' : '2px solid transparent', outlineOffset: 2, cursor: 'pointer', background: 'none', overflow: 'hidden' }}>
+            <img src={cloudinaryUrl(src, { w: 200 })} alt={`View ${i + 1}`} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', background: '#f7f7f7' }} />
+          </button>
+        ))}
+      </div>
+      <DialogPrimitive.Portal>
+        <DialogPrimitive.Overlay style={{ position: 'fixed', inset: 0, zIndex: 9998, background: 'rgba(250,250,250,0.97)' }} />
+        <DialogPrimitive.Content data-slot="dialog-content" style={{ position: 'fixed', inset: 0, zIndex: 9999, display: 'flex', flexDirection: 'column', outline: 'none' }}>
+          <DialogPrimitive.Title style={{ position: 'absolute', width: 1, height: 1, overflow: 'hidden', clip: 'rect(0,0,0,0)' }}>{setName}</DialogPrimitive.Title>
+          <DialogPrimitive.Close style={{ position: 'absolute', top: '1.25rem', right: '1.25rem', background: 'none', border: 'none', cursor: 'pointer', padding: '0.5rem', zIndex: 10, lineHeight: 0 }} aria-label="Close"><X size={22} /></DialogPrimitive.Close>
+          {total > 1 && (<>
+            <button onClick={(e) => { e.stopPropagation(); setZoomed(false); setLightboxIdx((i) => (i - 1 + total) % total) }} aria-label="Previous image" style={{ position: 'absolute', left: '1.25rem', top: '50%', transform: 'translateY(-50%)', background: 'none', border: 'none', cursor: 'pointer', padding: '0.5rem', zIndex: 10, lineHeight: 0 }}><ChevronLeft size={28} /></button>
+            <button onClick={(e) => { e.stopPropagation(); setZoomed(false); setLightboxIdx((i) => (i + 1) % total) }} aria-label="Next image" style={{ position: 'absolute', right: '3.5rem', top: '50%', transform: 'translateY(-50%)', background: 'none', border: 'none', cursor: 'pointer', padding: '0.5rem', zIndex: 10, lineHeight: 0 }}><ChevronRight size={28} /></button>
+          </>)}
+          <div onClick={() => setZoomed((z) => !z)} style={{ flex: 1, overflow: zoomed ? 'auto' : 'hidden', display: 'flex', alignItems: zoomed ? 'flex-start' : 'center', justifyContent: zoomed ? 'flex-start' : 'center', cursor: zoomed ? 'zoom-out' : 'zoom-in' }}>
+            <img src={cloudinaryUrl(images[lightboxIdx], { w: 1600 })} alt={`${setName} — image ${lightboxIdx + 1}`} style={{ maxHeight: zoomed ? 'none' : '88vh', maxWidth: zoomed ? 'none' : '72vw', width: zoomed ? '160%' : 'auto', objectFit: 'contain', userSelect: 'none' }} />
+          </div>
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '0.5rem', padding: '1rem', flexShrink: 0 }}>
+            {images.map((src, i) => (
+              <button key={i} onClick={(e) => { e.stopPropagation(); setZoomed(false); setLightboxIdx(i) }} style={{ width: 48, height: 48, padding: 0, border: i === lightboxIdx ? '2px solid #060606' : '2px solid transparent', cursor: 'pointer', background: 'none', overflow: 'hidden', borderRadius: 2 }}>
+                <img src={cloudinaryUrl(src, { w: 96 })} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              </button>
+            ))}
+          </div>
+        </DialogPrimitive.Content>
+      </DialogPrimitive.Portal>
+    </DialogPrimitive.Root>
+  )
+}
 
 export const Route = createFileRoute('/solutions/milestone-awards')({
   head: () => ({
@@ -215,6 +267,14 @@ function MilestoneAwardsPage() {
             alt="The Blueprint — Five Solid Brass Tools for Long Service Awards"
           />
         </div>
+      </section>
+
+      {/* Product gallery */}
+      <section style={{ maxWidth: '1100px', margin: '0 auto', padding: '2rem 1.25rem 0' }}>
+        <ImageGallery images={WGS010_IMAGES} setName="The Blueprint" />
+        <a href="/gift-sets/wgs-010-5-the-blueprint" style={{ display: 'inline-block', fontSize: '0.85rem', color: '#B87333', textDecoration: 'none', fontWeight: 500, marginBottom: '2.5rem' }}>
+          View full set details →
+        </a>
       </section>
 
       {/* Why metal */}
