@@ -125,7 +125,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         {!isLanding && <SiteHeader />}
         <main>{children}</main>
         {!isLanding && <SiteFooter />}
-        {!isLanding && <WhatsAppButton />}
+        <WhatsAppButton />
 
         {/* Queue analytics immediately, but keep third-party execution off the critical path. */}
         <script dangerouslySetInnerHTML={{ __html: `
