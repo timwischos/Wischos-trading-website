@@ -5,6 +5,8 @@ const WHATSAPP_MESSAGE = encodeURIComponent(
   "Hi, I'm interested in your custom metal gift sets. Could you share more details?"
 )
 
+export const WHATSAPP_HREF = `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`
+
 export function WhatsAppButton() {
   return (
     <>
@@ -48,7 +50,7 @@ export function WhatsAppButton() {
       `}</style>
       <a
         className="wa-btn"
-        href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`}
+        href={WHATSAPP_HREF}
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat on WhatsApp"

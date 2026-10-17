@@ -33,6 +33,15 @@ export function trackWhatsAppClick() {
   })
 }
 
+/** Fired when a user clicks a primary call-to-action (hero button, sticky bar) */
+export function trackCtaClick(params: { location: string; label: string }) {
+  safeGtag('cta_click', {
+    location: params.location,
+    label: params.label,
+    page_path: typeof window !== 'undefined' ? window.location.pathname : undefined,
+  })
+}
+
 /** Fired when a user clicks any mailto: link */
 export function trackEmailClick(params: { location: string }) {
   safeGtag('email_click', {

@@ -2,6 +2,9 @@ import { createFileRoute } from '@tanstack/react-router'
 import { lazy, Suspense, useState } from 'react'
 import { cloudinaryUrl } from '@/lib/cloudinary'
 import { EmailLink } from '@/components/ui/EmailLink'
+import { SolutionHeroCtas } from '@/components/sections/SolutionHeroCtas'
+import { MobileStickyCta } from '@/components/sections/MobileStickyCta'
+import { buildCanonical } from '@/content/meta'
 import { Dialog as DialogPrimitive } from 'radix-ui'
 import { X, ChevronLeft, ChevronRight } from 'lucide-react'
 
@@ -73,6 +76,7 @@ export const Route = createFileRoute('/solutions/appreciation-gifts')({
       },
     ],
     links: [
+      buildCanonical('/solutions/appreciation-gifts'),
       {
         rel: 'preload',
         as: 'image',
@@ -198,48 +202,35 @@ function Accordion({ question, answer }: { question: string; answer: string }) {
 function AppreciationGiftsPage() {
   return (
     <div style={{ fontFamily: 'inherit', color: '#0a0a0a', background: '#fff' }}>
+      <MobileStickyCta />
 
       {/* Hero */}
       <section>
         <style>{`
           .ap-sol-hero { display: grid; grid-template-columns: 1fr; }
-          .ap-sol-img { order: 1; width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; background: #f7f7f7; }
-          .ap-sol-text { order: 2; padding: 1.5rem 1.25rem 2rem; }
-          .ap-sol-cta { display: block; text-align: center; }
+          .ap-sol-img { order: 2; width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; background: #f7f7f7; }
+          .ap-sol-text { order: 1; padding: 1rem 1.25rem 1.25rem; }
           @media (min-width: 768px) {
             .ap-sol-hero { grid-template-columns: 1fr 1fr; max-width: 1100px; margin: 0 auto; }
             .ap-sol-img { order: 2; aspect-ratio: auto; height: 100%; min-height: 480px; }
             .ap-sol-text { order: 1; padding: 4rem 2rem 3rem; }
-            .ap-sol-cta { display: inline-block; }
           }
         `}</style>
         <div className="ap-sol-hero">
           <div className="ap-sol-text">
-            <p style={{ fontSize: '0.75rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: '#888', marginBottom: '1rem' }}>
+            <p className="sol-eyebrow" style={{ fontSize: '0.75rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: '#888', marginBottom: '1rem' }}>
               Corporate Gifting · Employee & Client Appreciation
             </p>
-            <h1 style={{ fontSize: 'clamp(1.55rem, 5vw, 3.25rem)', fontWeight: 700, lineHeight: 1.15, marginBottom: '1.25rem', maxWidth: '20ch' }}>
+            <h1 className="sol-h1" style={{ fontSize: 'clamp(1.55rem, 5vw, 3.25rem)', fontWeight: 700, lineHeight: 1.15, marginBottom: '1.25rem', maxWidth: '20ch' }}>
               Appreciation gifts staff and clients still carry a year later
             </h1>
-            <p style={{ fontSize: '1.05rem', color: '#4a4a4a', lineHeight: 1.7, maxWidth: '52ch', marginBottom: '2rem' }}>
+            <p className="sol-d-only" style={{ fontSize: '1.05rem', color: '#4a4a4a', lineHeight: 1.7, maxWidth: '52ch', marginBottom: '2rem' }}>
               Recognition lands differently when the gift has weight to it. Solid metal sets — engraved with your logo — stay on desks, in bags and in pockets long after the moment has passed.
             </p>
-            <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginBottom: '2rem' }}>
-              <a
-                href="#inquiry-form"
-                className="ap-sol-cta"
-                style={{ background: '#B87333', color: '#fff', fontSize: '0.9rem', fontWeight: 600, letterSpacing: '0.04em', padding: '0.85rem 2rem', textDecoration: 'none' }}
-              >
-                Request a Quote →
-              </a>
-              <a
-                href="#sets"
-                className="ap-sol-cta"
-                style={{ background: 'none', color: '#0a0a0a', fontSize: '0.9rem', fontWeight: 600, letterSpacing: '0.04em', padding: '0.85rem 2rem', textDecoration: 'none', border: '1px solid #0a0a0a' }}
-              >
-                Browse the Sets ↓
-              </a>
-            </div>
+            <p className="sol-m-only sol-lede-short" style={{ fontSize: '0.95rem', color: '#4a4a4a', lineHeight: 1.5 }}>
+              Solid metal sets, engraved with your logo. Used daily, not kept in a drawer.
+            </p>
+            <SolutionHeroCtas />
             <p style={{ fontSize: '0.78rem', color: '#888', lineHeight: 1.6 }}>
               From 100 sets · Sample in 7–10 days, credit toward bulk · Photo + video approval before ship
             </p>
@@ -295,7 +286,7 @@ function AppreciationGiftsPage() {
               },
               {
                 title: 'Presented as a whole',
-                body: 'Each set ships in a branded gift box. The packaging matches the quality of the contents and carries your mark consistently.',
+                body: 'Each set ships in a branded gift box, with the insert and branding specified together with the pieces, so the whole set reads as one gift.',
               },
             ].map((item) => (
               <div key={item.title} style={{ borderTop: '2px solid #B87333', paddingTop: '1rem' }}>
@@ -387,7 +378,7 @@ function AppreciationGiftsPage() {
             Make It Yours
           </p>
           <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.25rem)', fontWeight: 300, lineHeight: 1.15, marginBottom: '2rem', maxWidth: '28ch' }}>
-            Your mark on every piece
+            Your brand on every piece, and the box
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '2rem' }}>
             {[
@@ -400,12 +391,12 @@ function AppreciationGiftsPage() {
                 body: 'Individual names or initials on each item. We handle the engraving file per recipient. Ask for a quote when you send your brief.',
               },
               {
-                label: 'Branded box',
-                body: 'Hot foil stamping or blind debossing on the lid. Rigid gift boxes, drawer boxes, and custom inserts available.',
+                label: 'The box, made to match',
+                body: 'Lid finished with hot foil stamping or blind debossing. Choose a rigid lid, drawer or magnetic box, with an insert cut for each piece. Printed interior liners and branded tissue paper are also available.',
               },
               {
-                label: 'Sample first',
-                body: 'Logo placement, size and method are confirmed on a physical sample before production starts.',
+                label: 'One brief, approved before production',
+                body: 'Pieces, insert, box and branding are specified together. You approve the design files and a physical sample before production starts.',
               },
             ].map((item) => (
               <div key={item.label} style={{ borderTop: '2px solid #B87333', paddingTop: '1rem' }}>

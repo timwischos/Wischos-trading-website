@@ -2,6 +2,9 @@ import { createFileRoute } from '@tanstack/react-router'
 import { lazy, Suspense, useState } from 'react'
 import { cloudinaryUrl } from '@/lib/cloudinary'
 import { EmailLink } from '@/components/ui/EmailLink'
+import { SolutionHeroCtas } from '@/components/sections/SolutionHeroCtas'
+import { MobileStickyCta } from '@/components/sections/MobileStickyCta'
+import { buildCanonical } from '@/content/meta'
 import { Dialog as DialogPrimitive } from 'radix-ui'
 import { X, ChevronLeft, ChevronRight } from 'lucide-react'
 
@@ -72,6 +75,7 @@ export const Route = createFileRoute('/solutions/milestone-awards')({
       },
     ],
     links: [
+      buildCanonical('/solutions/milestone-awards'),
       {
         rel: 'preload',
         as: 'image',
@@ -205,48 +209,35 @@ function Accordion({ question, answer }: { question: string; answer: string }) {
 function MilestoneAwardsPage() {
   return (
     <div style={{ fontFamily: 'inherit', color: '#0a0a0a', background: '#fff' }}>
+      <MobileStickyCta />
 
       {/* Hero */}
       <section>
         <style>{`
           .ms-sol-hero { display: grid; grid-template-columns: 1fr; }
-          .ms-sol-img { order: 1; width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; background: #f7f7f7; }
-          .ms-sol-text { order: 2; padding: 1.5rem 1.25rem 2rem; }
-          .ms-sol-cta { display: block; text-align: center; }
+          .ms-sol-img { order: 2; width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; background: #f7f7f7; }
+          .ms-sol-text { order: 1; padding: 1rem 1.25rem 1.25rem; }
           @media (min-width: 768px) {
             .ms-sol-hero { grid-template-columns: 1fr 1fr; max-width: 1100px; margin: 0 auto; }
             .ms-sol-img { order: 2; aspect-ratio: auto; height: 100%; min-height: 480px; }
             .ms-sol-text { order: 1; padding: 4rem 2rem 3rem; }
-            .ms-sol-cta { display: inline-block; }
           }
         `}</style>
         <div className="ms-sol-hero">
           <div className="ms-sol-text">
-            <p style={{ fontSize: '0.75rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: '#888', marginBottom: '1rem' }}>
+            <p className="sol-eyebrow" style={{ fontSize: '0.75rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: '#888', marginBottom: '1rem' }}>
               Corporate Gifting · Long Service & Milestone Awards
             </p>
-            <h1 style={{ fontSize: 'clamp(1.55rem, 5vw, 3.25rem)', fontWeight: 700, lineHeight: 1.15, marginBottom: '1.25rem', maxWidth: '20ch' }}>
+            <h1 className="sol-h1" style={{ fontSize: 'clamp(1.55rem, 5vw, 3.25rem)', fontWeight: 700, lineHeight: 1.15, marginBottom: '1.25rem', maxWidth: '20ch' }}>
               Long service awards 25-year veterans actually keep
             </h1>
-            <p style={{ fontSize: '1.05rem', color: '#4a4a4a', lineHeight: 1.7, maxWidth: '52ch', marginBottom: '2rem' }}>
+            <p className="sol-d-only" style={{ fontSize: '1.05rem', color: '#4a4a4a', lineHeight: 1.7, maxWidth: '52ch', marginBottom: '2rem' }}>
               A decade of service deserves something solid. Engraved solid brass and titanium tools that carry a name, a date and a logo — used daily, not stored in a drawer.
             </p>
-            <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginBottom: '2rem' }}>
-              <a
-                href="#inquiry-form"
-                className="ms-sol-cta"
-                style={{ background: '#B87333', color: '#fff', fontSize: '0.9rem', fontWeight: 600, letterSpacing: '0.04em', padding: '0.85rem 2rem', textDecoration: 'none' }}
-              >
-                Request a Quote →
-              </a>
-              <a
-                href="#sets"
-                className="ms-sol-cta"
-                style={{ background: 'none', color: '#0a0a0a', fontSize: '0.9rem', fontWeight: 600, letterSpacing: '0.04em', padding: '0.85rem 2rem', textDecoration: 'none', border: '1px solid #0a0a0a' }}
-              >
-                Browse the Sets ↓
-              </a>
-            </div>
+            <p className="sol-m-only sol-lede-short" style={{ fontSize: '0.95rem', color: '#4a4a4a', lineHeight: 1.5 }}>
+              Engraved solid brass and titanium tools with a name, date and logo. Used daily, not stored.
+            </p>
+            <SolutionHeroCtas />
             <p style={{ fontSize: '0.78rem', color: '#888', lineHeight: 1.6 }}>
               From 100 sets · Name & logo engraved · Photo + video approval before ship
             </p>
