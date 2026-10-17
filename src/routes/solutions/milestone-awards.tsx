@@ -510,7 +510,8 @@ function MilestoneAwardsPage() {
           alignItems: 'start',
         }}
       >
-        <div style={{ position: 'sticky', top: '2rem' }}>
+        <div className="inq-side">
+          <style>{`@media (min-width: 768px) { .inq-side { position: sticky; top: 2rem; } }`}</style>
           <h2 style={{ fontSize: 'clamp(1.25rem, 2.5vw, 1.75rem)', fontWeight: 300, marginBottom: '1rem' }}>
             Tell us about your programme
           </h2>
