@@ -8,6 +8,7 @@ import { ProcessPreviewSection } from '@/components/sections/ProcessPreviewSecti
 import { ExpertNotesTeaser } from '@/components/sections/ExpertNotesTeaser'
 import { WhySection } from '@/components/sections/WhySection'
 import { SelectionStandardSection } from '@/components/sections/SelectionStandardSection'
+import { CustomProjectsBand } from '@/components/sections/CustomProjectsBand'
 import { getProductsByIds } from '@/server/getProducts'
 
 const FEATURED_PRODUCT_IDS = [
@@ -47,6 +48,9 @@ function HomePage() {
 
       {/* I — Featured individual products */}
       <HomepageFeaturedProductsSection products={featuredProducts} />
+
+      {/* I — Custom projects entry */}
+      <CustomProjectsBand />
 
       {/* I — Selection standard (UIS) */}
       <SelectionStandardSection />

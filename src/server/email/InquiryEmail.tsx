@@ -32,7 +32,7 @@ export function InquiryEmail({
   return (
     <Html>
       <Body style={{ fontFamily: 'sans-serif' }}>
-        <Heading>New Inquiry from {companyName}</Heading>
+        <Heading>New Inquiry from {companyName || contactName}</Heading>
 
         <Section>
           <Text>

@@ -2,6 +2,7 @@ export const navigation = {
   links: [
     { label: 'Home', href: '/' },
     { label: 'Products', href: '/products' },
+    { label: 'Custom Projects', href: '/custom-projects' },
     { label: 'About', href: '/about' },
     { label: 'Blog', href: '/blog' },
     { label: 'Contact', href: '/contact' },

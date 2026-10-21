@@ -6,6 +6,7 @@ import { trackEmailClick } from '@/lib/analytics'
 const productCategories = [
   { label: 'Featured Gift Sets', href: '/gift-sets' },
   { label: 'Our Products', href: '/products' },
+  { label: 'Custom Projects', href: '/custom-projects' },
   { label: 'Writing Instruments', href: '/products?category=Writing+Instruments' },
   { label: 'Desk Accessories', href: '/products?category=Desk+Accessories' },
   { label: 'EDC Accessories', href: '/products?category=EDC+Accessories' },

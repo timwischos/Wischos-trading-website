@@ -81,6 +81,12 @@ function ContactPage() {
 
         {/* Right panel: form */}
         <div style={{ padding: '2.5rem 1.5rem', background: '#fff' }} className="md:px-12 md:py-14">
+          <p style={{ fontSize: '0.85rem', color: '#555', lineHeight: 1.6, margin: '0 0 1.5rem', paddingBottom: '1rem', borderBottom: '1px solid #e5e5e5' }}>
+            Have your own design you want made in metal?{' '}
+            <a href="/custom-projects#inquiry-form" style={{ color: '#B87333', textDecoration: 'none', fontWeight: 500 }}>
+              Use the custom project brief →
+            </a>
+          </p>
           <Suspense fallback={<div style={{ minHeight: '400px' }} />}>
             <InquiryFormSection />
           </Suspense>

@@ -5,6 +5,7 @@ import { render } from '@react-email/render'
 import { db } from '@/server/db'
 import { inquiries } from '@/server/schema'
 import { inquiryInsertSchema } from '@/lib/schemas/inquiry'
+import { CUSTOM_PROJECT_INTEREST, customProjectInquirySchema } from '@/lib/schemas/customProject'
 import { InquiryEmail } from '@/server/email/InquiryEmail'
 
 // Extend with honeypot field — validated and stripped server-side
@@ -13,7 +14,11 @@ const submitInquirySchema = inquiryInsertSchema.extend({
 })
 
 export const submitInquiry = createServerFn({ method: 'POST' })
-  .inputValidator((data: unknown) => submitInquirySchema.parse(data))
+  .inputValidator((data: unknown) => {
+    const isCustom = typeof data === 'object' && data !== null
+      && 'productInterest' in data && data.productInterest === CUSTOM_PROJECT_INTEREST
+    return (isCustom ? customProjectInquirySchema : submitInquirySchema).parse(data)
+  })
   .handler(async ({ data }) => {
     // Honeypot check — silent fake success for bots
     if (data.website) {
@@ -34,7 +39,7 @@ export const submitInquiry = createServerFn({ method: 'POST' })
       await resend.emails.send({
         from: 'Wischos Gift <johnlui@wischosgift.com>',
         to: process.env.OPERATOR_EMAIL!,
-        subject: `New Inquiry — ${inquiry.companyName}`,
+        subject: `${inquiry.productInterest === CUSTOM_PROJECT_INTEREST ? '[Custom] ' : ''}New Inquiry — ${inquiry.companyName || inquiry.contactName}`,
         html,
       })
     } catch (emailErr) {
