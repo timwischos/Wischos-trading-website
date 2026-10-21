@@ -155,6 +155,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://wischosgift.com/products/wp-110-solid-brass-hexagonal-ballpoint-pen</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://wischosgift.com/products/wp-201-professional-aluminum-mouse-pad</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -220,6 +225,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://wischosgift.com/products/wp-214-solid-brass-desk-ruler</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://wischosgift.com/products/wp-215-brass-measurement-set</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -276,6 +286,16 @@
   </url>
   <url>
     <loc>https://wischosgift.com/products/wp-310-titanium-alloy-keychain-capsule</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wischosgift.com/products/wp-311-aluminium-edc-torch</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wischosgift.com/products/wp-312-titanium-bolt-action-inkless-pencil</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
