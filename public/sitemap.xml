@@ -240,6 +240,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://wischosgift.com/products/wp-217-solid-brass-round-storage-canister</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://wischosgift.com/products/wp-301-rfid-aluminum-wallet-badge-holder</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -296,6 +301,21 @@
   </url>
   <url>
     <loc>https://wischosgift.com/products/wp-312-titanium-bolt-action-inkless-pencil</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wischosgift.com/products/wp-313-solid-brass-quick-release-swivel-keychain</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wischosgift.com/products/wp-314-solid-brass-spring-belt-hook</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://wischosgift.com/products/wp-315-solid-brass-slide-lock-key-hook</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
