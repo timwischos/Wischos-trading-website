@@ -17,6 +17,26 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'choosing-corporate-gifts-that-fit-your-brand',
+    title: 'Choosing Corporate Gifts That Fit Your Brand',
+    metaTitle: 'Choosing Corporate Gifts That Fit Your Brand',
+    metaDescription:
+      'Choose corporate gifts that fit your brand: start from a real brand reference, compare finish and weight, and give each piece in the set a reason to be there.',
+    excerpt:
+      'A gift fits your brand when you can point to the connection: this finish, because of that detail; this object, because of what you did together. A brass pen and desk clip show how to build that case.',
+    quickAnswer:
+      'To choose corporate gifts that fit your brand, start with one specific brand reference, such as a material, finish or shape. Then pick objects whose form, weight and engraving carry it, and a card that names the occasion.',
+    category: 'Gifting Strategy',
+    readTime: '6 min read',
+    publishedAt: 'October 28, 2026',
+    isoDate: '2026-10-28',
+    heroImage:
+      'https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_1200/blog/blog-022/hero-brass-clip-card-pen-v5',
+    heroImageAlt:
+      'Solid brass desk clip gripping the edge of a handwritten thank-you card on an oak desk, with a capped solid brass ballpoint pen lying in front',
+    heroImageCredit: 'AI-generated editorial visual for Wischos Gift',
+  },
+  {
     slug: 'corporate-black-metal-gift-set-colour-matching',
     title: 'Why "Corporate Black" Rarely Matches Across a Metal Gift Set',
     metaTitle: 'Why Black Looks Different Across Metal Gift Sets',
@@ -53,6 +73,7 @@ export const blogPosts: BlogPost[] = [
     heroImage:
       'https://res.cloudinary.com/dcivh8ovs/image/upload/f_auto,q_auto,w_1200/blog/blog-019/hero-gift-card-or-physical-gift-v2',
     heroImageAlt: 'An HR manager presenting a gift box to an employee, with a gift card envelope on the table',
+    heroImageCredit: '', // Source not confirmed; do not invent an attribution.
   },
   {
     slug: 'all-metal-vs-metal-led-gift-sets',
